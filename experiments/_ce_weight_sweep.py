@@ -1,4 +1,4 @@
-"""CE weight ablation — test ce_weight = 0.0, 0.2, 0.4, 0.6 for emission rerank."""
+"""CE weight ablation -- test ce_weight = 0.0, 0.2, 0.4, 0.6 for emission rerank."""
 import json, sys
 from pathlib import Path
 

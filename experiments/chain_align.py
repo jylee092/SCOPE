@@ -1,17 +1,10 @@
 """
 Chain alignment metric: pred Viterbi chain vs reference attack flow.
 
-각 시나리오의 reference attack flow (attack_flows.ATTACK_FLOWS) 와
-파이프라인의 viterbi_breakdown 을 비교.
 
 Metric
 ------
-- **step_coverage**: ref 의 step (technique 또는 tactic) 중 pred 에 등장한 비율
-- **order_accuracy**: ref 와 pred 모두 등장하는 step pair 의 순서 일치율
-- **lcs_norm**: LCS 길이 / max(len(ref), len(pred))
-- **tactic_chain_match**: tactic 시퀀스의 LCS / |ref tactic seq|
 
-각 step 매칭 시 alts 도 인정 (e.g., T1003 ≡ T1003.001).
 """
 from __future__ import annotations
 import csv, sys
@@ -23,7 +16,7 @@ from experiments.attack_flows import ATTACK_FLOWS, get_flow
 
 
 def step_match(ref_step: dict, pred_tid: str) -> bool:
-    """ref_step 의 tid 또는 alts 와 pred_tid 매칭. 부모/자식도 인정."""
+    """ref_step ...tid ...alts ...pred_tid ..."""
     if not pred_tid: return False
     cands = {ref_step["tid"], *ref_step.get("alts", [])}
     if pred_tid in cands: return True
@@ -62,7 +55,6 @@ def evaluate_chain_alignment(
     ref_tids    = [s["tid"]          for s in ref_flow]
     ref_tactics = [s["tactic"]       for s in ref_flow]
 
-    # step_coverage: ref step 중 pred 에 (순서 무시) 매칭된 비율
     matched = sum(
         1 for r in ref_flow
         if any(step_match(r, p) for p in pred_tids)
@@ -73,16 +65,13 @@ def evaluate_chain_alignment(
     rs = set(ref_tactics); ps = set(pred_tactics)
     tac_jaccard = len(rs & ps) / len(rs | ps) if (rs | ps) else 0
 
-    # tactic LCS (순서 보존, 중복 허용)
     tac_lcs = lcs_length(ref_tactics, pred_tactics)
     tac_lcs_norm = tac_lcs / len(ref_tactics) if ref_tactics else 0
 
-    # technique LCS (alts/parent 인정)
     def tech_eq(r_step, p_tid): return step_match(r_step, p_tid)
     tech_lcs = lcs_length(ref_flow, pred_tids, eq=tech_eq)
     tech_lcs_norm = tech_lcs / len(ref_flow) if ref_flow else 0
 
-    # order_accuracy: matched ref step 들이 pred 안에서 ref 순서대로 등장하는가
     matched_indices_in_pred = []
     for r in ref_flow:
         for i, p in enumerate(pred_tids):

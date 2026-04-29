@@ -1,4 +1,4 @@
-# SCOPE — Artifact
+# SCOPE -- Artifact
 
 This repository accompanies the CCS 2026 submission *SCOPE: Rethinking Attack Analysis as Uncertainty-Aware Security Reasoning under Incomplete Observations* and contains the complete pipeline, four reproduced baselines, the on-disk LLM description cache, and pre-computed evaluation outputs sufficient to reproduce every number reported in the paper without making any LLM API call.
 
@@ -37,9 +37,9 @@ Final_Code/
 Two large public datasets are **not** included in this repository and are
 fetched by `scripts/setup_data.sh` at install time:
 
-- **OTRF Security-Datasets (Mordor)** — 35 attack scenarios, ~800 MB
+- **OTRF Security-Datasets (Mordor)** -- 35 attack scenarios, ~800 MB
   ([github.com/OTRF/Security-Datasets](https://github.com/OTRF/Security-Datasets)).
-- **SigmaHQ rules** — ~2,140 Windows rules, ~40 MB
+- **SigmaHQ rules** -- ~2,140 Windows rules, ~40 MB
   ([github.com/SigmaHQ/sigma](https://github.com/SigmaHQ/sigma)).
 
 ---

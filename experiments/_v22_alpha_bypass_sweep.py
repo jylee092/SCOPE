@@ -1,8 +1,6 @@
 """
 v22 α × bypass sweep (emission-priority).
 
-사용자 원칙: emission 이 증거에 기반한 primary signal. Viterbi 는 tie-breaker.
-α (transition weight) 를 낮춰서 emission 을 우선.
 """
 from __future__ import annotations
 import json, sys
@@ -142,7 +140,7 @@ def main():
     faiss = next((r["faiss_mic"] for r in results), 0.7849)
     for r in results:
         t = r["bypass_thr"]
-        t_str = "—" if t is None else f"{t:.2f}"
+        t_str = "--" if t is None else f"{t:.2f}"
         delta = r["viterbi_mic"] - faiss
         sign = "+" if delta >= 0 else ""
         print(f"{r['variant']:<28} {r['alpha']:>5.2f} {t_str:>6} "

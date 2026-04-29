@@ -2,7 +2,7 @@
 DeepAG (TID-adapted) baseline adapter.
 
 Pipeline at inference time:
-  1. Read the corresponding Sigma result.json — Sigma's per-alert top-1
+  1. Read the corresponding Sigma result.json -- Sigma's per-alert top-1
      TID gives us the chronological log-vector-equivalent input stream.
   2. For each alert position t, slide a window of (window-1) past TIDs
      into the trained Transformer + bi-LSTM and read off the forward-
@@ -50,7 +50,7 @@ WINDOW = 10                 # h in DeepAG §5.1.2
 #                          replaced by DeepAG when prob ≥ THRESHOLD (Li et al. §5.1.2
 #                          spirit; the standalone DeepAG behaviour).
 #   "sigma-priority"   → Sigma top-K first, DeepAG augments empty slots; chain top-1
-#                          stays Sigma — measures DeepAG's *additive* refinement.
+#                          stays Sigma -- measures DeepAG's *additive* refinement.
 MERGE_STRATEGY = "deepag-priority"
 
 
@@ -143,7 +143,7 @@ class DeepAGAdapter(BaselineAdapter):
     def predict(self, scenario_json_path: Path) -> BaselinePrediction:
         sigma_path = _find_sigma_result(scenario_json_path)
         if not sigma_path:
-            print(f"  [deepag] no sigma result for {scenario_json_path.stem} — empty")
+            print(f"  [deepag] no sigma result for {scenario_json_path.stem} -- empty")
             return BaselinePrediction(scenario=scenario_json_path.stem,
                                         notes={"error": "no sigma input"})
         with open(sigma_path, encoding="utf-8") as f:

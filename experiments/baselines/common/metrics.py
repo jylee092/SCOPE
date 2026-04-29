@@ -1,7 +1,5 @@
 """
-Baseline 공용 평가 metrics.
 
-GLIDE의 evaluator.py와 일관되지만 입력 형식이 다름 (per-group annotation이 아닌
 per-scenario tactic/technique sequence).
 """
 from __future__ import annotations
@@ -23,7 +21,7 @@ def _lcs(a: list, b: list) -> int:
 
 
 def load_gt_sequences(annotation_path: Path) -> tuple[list[str], list[str]]:
-    """full variant의 annotation JSON에서 GT tactic/technique 시퀀스 추출."""
+    """full variant...annotation JSON...GT tactic/technique ..."""
     with open(annotation_path, encoding="utf-8") as f:
         data = json.load(f)
 

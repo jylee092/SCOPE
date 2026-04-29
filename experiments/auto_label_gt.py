@@ -1,10 +1,7 @@
 """
 Auto-label GT fields in annotation JSON files based on scenario→TTP mapping.
 
-각 시나리오의 이름·폴더 구조에서 expected technique을 도출하고,
-anchor/sample_logs에 attacker-tool 키워드가 있으면 TP, 없으면 FP로 라벨링.
 
-사용:
     cd Final_Code
     python experiments/auto_label_gt.py
 """
@@ -18,9 +15,6 @@ MITRE_CSV   = ROOT / "TTP_Data" / "Final_merged_mitre_attack_data.csv"
 
 
 # ---------------------------------------------------------------------------
-# 시나리오 → (primary_tid, attacker_keywords)
-#   attacker_keywords: 소문자 부분 문자열. anchor·sample_logs의
-#   Image/CommandLine/ParentImage/TargetObject 중 하나라도 매치되면 TP.
 # ---------------------------------------------------------------------------
 SCENARIO_MAP: dict[str, tuple[str, list[str]]] = {
     # ── atomic/collection ──
@@ -52,9 +46,7 @@ SCENARIO_MAP: dict[str, tuple[str, list[str]]] = {
         ["comsvcs", "minidump", "rundll32", "lsass.dmp", "powershell"],
     ),
     # ── atomic/defense_evasion ──
-    # Process Herpaderping = process image swap → MITRE 분류 모호.
     # T1055.013 (Process Doppelgänging) / T1036.005 (Match Legitimate Name)
-    # 둘 다 가능. T1055 (Process Injection 부모) 로 두고 lenient eval 에 위임.
     "cmd_process_herpaderping_mimiexplorer": (
         "T1055",
         ["herpaderping", "mimiexplorer", "wardog", "processherpaderping",
@@ -78,8 +70,6 @@ SCENARIO_MAP: dict[str, tuple[str, list[str]]] = {
         ["cmstp", "bypassuac", ".inf", "powershell", "cmstp.exe"],
     ),
     # ── atomic/discovery ──
-    # Seatbelt 은 다목적 host enum tool — T1082(System Info), T1087, T1057 등
-    # 다 가능. T1082 가 LLM 이 가장 잘 매칭한 결과.
     "cmd_seatbelt_group_user": (
         "T1082",
         ["seatbelt"],
@@ -105,8 +95,6 @@ SCENARIO_MAP: dict[str, tuple[str, list[str]]] = {
          "get-netuser", "domainuser"],
     ),
     # ── atomic/execution ──
-    # NOTE: SharpView Get-ObjectAcl 은 의미상 T1087.002 Domain Account Discovery.
-    #       폴더 이름이 execution 이지만 LLM 이 제대로 잡는 게 맞음.
     "cmd_sharpview_pcre_net": (
         "T1087.002",
         ["sharpview", "get-objectacl", "domain admins", "get-domainuser",
@@ -226,7 +214,7 @@ def resolve_tactic(tid: str, tm: dict[str, str]) -> str:
 
 
 def gather_context(group: dict) -> str:
-    """anchor + sample_logs 의 텍스트를 합쳐 소문자 context 생성."""
+    """anchor + sample_logs ...context ..."""
     parts: list[str] = []
     a = group.get("anchor") or {}
     for k in ("Image", "CommandLine", "ParentImage", "TargetObject"):
@@ -242,20 +230,18 @@ def gather_context(group: dict) -> str:
 
 
 def scenario_key(scenario: str) -> str:
-    """annotation scenario 이름에서 타임스탬프를 제거해 매핑 키 추출.
+    """annotation scenario ...
 
-    예) cmd_sharpview_pcre_net_2020-10-2920232423 → cmd_sharpview_pcre_net
         metasploit_procdump_lsass_memory_dump      → metasploit_procdump_lsass_memory_dump
     """
     m = re.match(r"^(.*?)(?:_(?:20\d{2}[-T]?\d{2}[-T]?\d{2}\S*|\d{4,}))?$", scenario)
     stem = m.group(1) if m else scenario
-    # 끝에 남은 언더스코어·숫자 제거
     stem = re.sub(r"[_-]+(?:\d+)?$", "", stem)
     return stem
 
 
 def pick_mapping(scenario: str) -> tuple[str, list[str]] | None:
-    """SCENARIO_MAP에서 시나리오 이름에 맞는 항목 찾기."""
+    """SCENARIO_MAP..."""
     if scenario in SCENARIO_MAP:
         return SCENARIO_MAP[scenario]
     key = scenario_key(scenario)
@@ -276,15 +262,8 @@ def label_group(
 ) -> dict:
     """Return updated group dict with gt_* fields set.
 
-    TP 판정 규칙
     -----------
-    - **strong-kw**: anchor 의 Image/CommandLine/ParentImage 가 attacker keyword
-      포함 → TP (강한 신호)
-    - **weak-kw + rule-match**: sample_logs 에만 keyword 매치 + rule_tid 가
-      expected 와 같은 패밀리 → TP
-    - **rule-only**: rule_tid 가 expected 와 정확히 일치하고 confidence ≥ 0.5
       → TP
-    - confidence == 0 인 그룹은 약신호로 취급 (anchor kw 매치 없으면 FP)
     """
     rule_tid = group.get("rule_technique_id", "")
     confidence = float(group.get("confidence", 0) or 0)
@@ -296,7 +275,6 @@ def label_group(
     )
     rule_exact = rule_tid == expected_tid
 
-    # anchor-only context (강한 신호)
     a = group.get("anchor") or {}
     anchor_text = " ".join(
         str(a.get(k, "")) for k in ("Image", "CommandLine", "ParentImage", "TargetObject")
@@ -304,11 +282,9 @@ def label_group(
     ).lower()
     anchor_kw = [kw for kw in keywords if kw.lower() in anchor_text]
 
-    # 전체 context (anchor + sample_logs)
     full_text = gather_context(group)
     sample_kw = [kw for kw in keywords if kw.lower() in full_text and kw not in anchor_kw]
 
-    # 결정
     is_tp = False
     reason = ""
     if anchor_kw:

@@ -1,11 +1,6 @@
 """
-Section 4. LLM 기반 MITRE ATT&CK 기법 매핑
 
- - Gemini로 feature → 자연어 description 생성
- - MITRE CSV → FAISS 인덱스 구축
- - description 임베딩 유사도 검색 (Top-K)
 
-공개 API
 --------
 analyze(all_features, mitre_csv_path, gemini_api_key) -> list[dict]
 """
@@ -32,7 +27,6 @@ from config import EMBED_MODEL_NAME, GEMINI_MODEL, TOP_K
 SOFTMAX_BETA = 10.0
 
 # ──────────────────────────────────────────────────────────────────────────────
-# 프로세스 수명 캐시 — 모델/인덱스 재로딩 방지
 # ──────────────────────────────────────────────────────────────────────────────
 _EMBED_MODEL: Optional[SentenceTransformer] = None
 _INDEX_CACHE: dict = {}   # key: (csv_path, csv_hash) → (index, meta_df)
@@ -47,16 +41,15 @@ def _file_hash(path: str | Path) -> str:
 
 
 def get_embed_model() -> SentenceTransformer:
-    """프로세스 수명 SentenceTransformer 싱글톤."""
+    """...SentenceTransformer ..."""
     global _EMBED_MODEL
     if _EMBED_MODEL is None:
-        print(f"  [cache-miss] SentenceTransformer 로드: {EMBED_MODEL_NAME}")
+        print(f"  [cache-miss] SentenceTransformer ...: {EMBED_MODEL_NAME}")
         _EMBED_MODEL = SentenceTransformer(EMBED_MODEL_NAME)
     return _EMBED_MODEL
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# LLM description 캐시 — 동일 프롬프트는 Gemini 재호출 없이 재사용
 # ──────────────────────────────────────────────────────────────────────────────
 _LLM_CACHE: Optional[dict] = None
 _LLM_CACHE_PATH: Optional[Path] = None
@@ -67,7 +60,7 @@ def _prompt_hash(prompt: str) -> str:
 
 
 def _load_llm_cache(cache_dir: Path) -> dict:
-    """디스크에서 LLM 캐시를 로드. 없으면 빈 dict 초기화."""
+    """...LLM ...dict ..."""
     global _LLM_CACHE, _LLM_CACHE_PATH
     _LLM_CACHE_PATH = Path(cache_dir) / "llm_descriptions.json"
     if _LLM_CACHE is not None:
@@ -77,9 +70,9 @@ def _load_llm_cache(cache_dir: Path) -> dict:
         try:
             with open(_LLM_CACHE_PATH, encoding="utf-8") as f:
                 _LLM_CACHE = json.load(f)
-            print(f"  [cache-hit] LLM 캐시 로드: {len(_LLM_CACHE)}개 항목")
+            print(f"  [cache-hit] LLM ...: {len(_LLM_CACHE)}...")
         except (json.JSONDecodeError, OSError):
-            print(f"  [cache-warn] LLM 캐시 파일 손상, 새로 시작")
+            print(f"  [cache-warn] LLM ...")
             _LLM_CACHE = {}
     else:
         _LLM_CACHE = {}
@@ -101,8 +94,7 @@ _GEMINI_MAX_RETRIES = 6
 
 
 def _parse_retry_delay(err_text: str) -> Optional[int]:
-    """Gemini 429 에러 메시지에서 retry_delay 초 값 추출."""
-    # "retry_delay { seconds: 45 }" 또는 "retry_delay: {\"seconds\": 30}" 등 다양한 포맷
+    """Gemini 429 ...retry_delay ..."""
     if "retry" in err_text.lower():
         m = re.search(r"seconds[\"']?\s*[:=]\s*(\d+)", err_text)
         if m:
@@ -125,7 +117,7 @@ def _classify_error(e: Exception) -> str:
 
 
 def _call_gemini(prompt: str, api_key: str) -> str:
-    """타임아웃 + retry 포함 Gemini 호출. rate limit 시 retry_delay 안내."""
+    """...+ retry ...Gemini ...rate limit ...retry_delay ..."""
     genai.configure(api_key=api_key)
     model = genai.GenerativeModel(GEMINI_MODEL)
 
@@ -135,12 +127,8 @@ def _call_gemini(prompt: str, api_key: str) -> str:
             response = model.generate_content(
                 prompt,
                 generation_config=genai.types.GenerationConfig(
-                    temperature=0.35,      # 더 다양한 서술 유도 (v11 overcopy 회피)
-                    # Gemini 2.5 Flash 는 thinking tokens 도 이 예산을 소비한다.
-                    # 500 으로 두면 thinking 으로 대부분이 빨려들어가 visible output
-                    # 이 한 문장 안쪽에서 잘리는 현상을 확인 (2026-04-21). 2500 으로
-                    # 확장해 thinking + 최소 400 토큰의 본문이 함께 들어갈 여지를
-                    # 확보한다.
+                    temperature=0.35,
+
                     max_output_tokens=2500,
                 ),
                 request_options={"timeout": _GEMINI_TIMEOUT_SEC},
@@ -155,26 +143,25 @@ def _call_gemini(prompt: str, api_key: str) -> str:
                 if delay is None:
                     delay = min(60 * attempt, 300)  # exponential backoff fallback
                 next_at = datetime.now() + timedelta(seconds=delay)
-                print(f"  [rate-limit] 시도 {attempt}/{_GEMINI_MAX_RETRIES}: "
-                      f"{delay}초 대기. 재개 예정 ≈ {next_at.strftime('%H:%M:%S')}")
+                print(f"  [rate-limit] ...{attempt}/{_GEMINI_MAX_RETRIES}: "
+                      f"{delay}...≈ {next_at.strftime('%H:%M:%S')}")
                 time.sleep(delay + 2)
                 continue
 
             if kind == "timeout":
-                print(f"  [timeout] 시도 {attempt}/{_GEMINI_MAX_RETRIES}: {e}")
+                print(f"  [timeout] ...{attempt}/{_GEMINI_MAX_RETRIES}: {e}")
                 time.sleep(5 * attempt)
                 continue
 
             if kind == "server_error":
-                print(f"  [server-err] 시도 {attempt}/{_GEMINI_MAX_RETRIES}: {e}")
+                print(f"  [server-err] ...{attempt}/{_GEMINI_MAX_RETRIES}: {e}")
                 time.sleep(10 * attempt)
                 continue
 
-            # other: 로그 후 중단 (schema 오류 등은 재시도해도 무의미)
             print(f"  [err] {type(e).__name__}: {e}")
             raise
 
-    raise RuntimeError(f"Gemini 호출 실패 ({_GEMINI_MAX_RETRIES}회 재시도): {last_err}")
+    raise RuntimeError(f"Gemini ...{_GEMINI_MAX_RETRIES}...: {last_err}")
 
 
 def generate_description_cached(
@@ -182,7 +169,7 @@ def generate_description_cached(
     api_key: str,
     cache_dir: Optional[Path] = None,
 ) -> tuple[str, bool]:
-    """캐시 우선, miss 시 Gemini 호출. Returns (desc, was_cached)."""
+    """...miss ...Gemini ...Returns (desc, was_cached)."""
     prompt = build_prompt(feat)
     key = _prompt_hash(prompt)
 
@@ -206,7 +193,6 @@ def generate_description_cached(
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# MITRE 설명 전처리
 # ──────────────────────────────────────────────────────────────────────────────
 def clean_mitre_description(text: str) -> str:
     if not text or not isinstance(text, str):
@@ -218,7 +204,6 @@ def clean_mitre_description(text: str) -> str:
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# 프롬프트용 포매터
 # ──────────────────────────────────────────────────────────────────────────────
 def _fmt_chains(chains: list) -> str:
     if not chains:
@@ -367,10 +352,9 @@ def _fmt_temporal(tmp: dict) -> str:
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# 프롬프트 생성
 # ──────────────────────────────────────────────────────────────────────────────
 def _fmt_anchor_detail(anchor: dict, rule_tid: str, rule_name: str) -> str:
-    """Rule이 매칭한 anchor event를 LLM이 즉시 확인할 수 있게 상단에 배치."""
+    """Rule...anchor event...LLM..."""
     if not anchor:
         return f"  (rule {rule_tid} {rule_name}: anchor detail unavailable)"
     lines = [f"  Triggered by rule: {rule_tid} ({rule_name})"]
@@ -401,7 +385,7 @@ def _fmt_anchor_detail(anchor: dict, rule_tid: str, rule_name: str) -> str:
 
 
 def build_prompt(feat: dict) -> str:
-    """feature dict → Chain-of-Thought 프롬프트."""
+    """feature dict → Chain-of-Thought ..."""
     f     = feat["features"]
     per = f.get("persistence")       or {}
     eva = f.get("evasion")           or {}
@@ -432,7 +416,7 @@ def build_prompt(feat: dict) -> str:
     reg_signals = per.get("registry_signals") or []
 
     def _is_vss_internal(target: str) -> bool:
-        """VSS snapshot internal logging writes — not a real persistence/service install."""
+        """VSS snapshot internal logging writes -- not a real persistence/service install."""
         t = (target or "").lower()
         return ("\\vss\\diag\\" in t) or ("vssapipublisher" in t) or ("eserecoverywriter" in t)
 
@@ -477,30 +461,30 @@ def build_prompt(feat: dict) -> str:
     user_name = (idn.get("user") or "").lower()
     is_system_account = any(k in user_name for k in ("system", "local service", "network service"))
 
-    if has_log_clear:    signals.append("Event log clearing detected — likely evidence destruction.")
-    if has_lsass_access: signals.append("Direct memory access to LSASS — credential dumping behavior.")
-    if has_dump_file:    signals.append("Memory dump file created — process memory extraction.")
+    if has_log_clear:    signals.append("Event log clearing detected -- likely evidence destruction.")
+    if has_lsass_access: signals.append("Direct memory access to LSASS -- credential dumping behavior.")
+    if has_dump_file:    signals.append("Memory dump file created -- process memory extraction.")
     if has_obfuscation:  signals.append("Obfuscated/encoded command line detected.")
-    # Credential-hive signals take precedence — they pinpoint specific T1003 sub-techniques.
+    # Credential-hive signals take precedence -- they pinpoint specific T1003 sub-techniques.
     if has_hive_path:
         signals.append(
-            "Registry hive file referenced in cmdline (SAM/SECURITY/SYSTEM/NTDS) — "
+            "Registry hive file referenced in cmdline (SAM/SECURITY/SYSTEM/NTDS) -- "
             "credential database extraction in progress."
         )
     if has_hive_tool and not has_hive_path:
         signals.append(
-            "Hive/snapshot utility invoked (ntdsutil/esentutl/vssadmin/wbadmin) — "
+            "Hive/snapshot utility invoked (ntdsutil/esentutl/vssadmin/wbadmin) -- "
             "likely Volume Shadow Copy or database extraction step."
         )
     if has_hive_drop:
-        signals.append("Copied registry-hive file dropped to disk — staged credential database.")
-    if has_run_key:      signals.append("Autostart registry key modification — persistence via Run/RunOnce.")
-    if has_uac_hijack:   signals.append("Shell\\Open\\Command registry modified — possible UAC bypass via hijacked handler.")
-    if has_service_reg:  signals.append("Service registry modified — possible service install/hijack.")
+        signals.append("Copied registry-hive file dropped to disk -- staged credential database.")
+    if has_run_key:      signals.append("Autostart registry key modification -- persistence via Run/RunOnce.")
+    if has_uac_hijack:   signals.append("Shell\\Open\\Command registry modified -- possible UAC bypass via hijacked handler.")
+    if has_service_reg:  signals.append("Service registry modified -- possible service install/hijack.")
     if has_persistence and not (has_run_key or has_uac_hijack or has_service_reg):
         signals.append("Suspicious registry modification detected.")
-    if has_deleted:      signals.append("Files deleted during activity — possible indicator wipe.")
-    if has_network:      signals.append("Network activity observed — possible C2 or exfiltration.")
+    if has_deleted:      signals.append("Files deleted during activity -- possible indicator wipe.")
+    if has_network:      signals.append("Network activity observed -- possible C2 or exfiltration.")
     if is_elevated and not is_system_account:
         signals.append(f"Activity running at elevated integrity ({integrity}) under non-system account.")
 
@@ -518,9 +502,9 @@ descriptions via sentence-embedding similarity.
 
 ## Seed hint (from rule matcher; MAY BE WRONG)
 A lightweight rule flagged this activity as possibly related to
-**{rule_tid} — {rule_name}**. Use this only as a weak orientation clue. If the
+**{rule_tid} -- {rule_name}**. Use this only as a weak orientation clue. If the
 evidence suggests a different sub-technique (e.g., the rule says T1059 but the
-command shows clear PowerShell usage — a T1059.001 signature), describe what
+command shows clear PowerShell usage -- a T1059.001 signature), describe what
 the evidence actually shows.
 
 ## Anchor event (what triggered the rule)
@@ -561,13 +545,13 @@ the evidence actually shows.
 
 ---
 
-## Writing Style — match MITRE ATT&CK in abstraction, NOT in content
+## Writing Style -- match MITRE ATT&CK in abstraction, NOT in content
 
 Your description should MIRROR the abstraction level of ATT&CK technique text
 but MUST be GROUNDED in the evidence above. Do NOT copy any sentence from the
 stylistic guide below; these are STYLE cues, not answer templates.
 
-Style guide (abstraction patterns only — do not quote):
+Style guide (abstraction patterns only -- do not quote):
 - Begin with "Adversaries ..." or "An adversary ...".
 - Describe the OPERATIONAL ACTION (what mechanism the adversary is invoking)
   and the TACTICAL GOAL (why), at roughly the level of an ATT&CK description.
@@ -613,7 +597,6 @@ Write ONLY the description (no preamble, no "Description:" prefix).
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# Gemini 호출
 # ──────────────────────────────────────────────────────────────────────────────
 def generate_description(feat: dict, api_key: str) -> str:
     genai.configure(api_key=api_key)
@@ -622,17 +605,17 @@ def generate_description(feat: dict, api_key: str) -> str:
         build_prompt(feat),
         generation_config=genai.types.GenerationConfig(
             temperature=0.2,
-            max_output_tokens=2500,   # 2.5 Flash thinking budget 공유 (cf. _call_gemini)
+            max_output_tokens=2500,
+
         ),
     )
     return response.text.strip()
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# FAISS 인덱스
 # ──────────────────────────────────────────────────────────────────────────────
 def build_faiss_index(mitre_csv_path: str, embed_model: SentenceTransformer):
-    """MITRE CSV → IndexFlatIP + 메타데이터 DataFrame."""
+    """MITRE CSV → IndexFlatIP + ...DataFrame."""
     df = pd.read_csv(mitre_csv_path)
 
     col_map: dict = {}
@@ -644,7 +627,7 @@ def build_faiss_index(mitre_csv_path: str, embed_model: SentenceTransformer):
         if c in df.columns: col_map["desc"] = c; break
 
     if "desc" not in col_map:
-        raise ValueError(f"description 컬럼 없음. 사용 가능: {list(df.columns)}")
+        raise ValueError(f"description ...: {list(df.columns)}")
 
     desc_col = col_map["desc"]
     meta_df = df[df[desc_col].notna()].copy().reset_index(drop=True)
@@ -656,24 +639,17 @@ def build_faiss_index(mitre_csv_path: str, embed_model: SentenceTransformer):
     if "name" in col_map: rename[col_map["name"]] = "_tname"
     meta_df = meta_df.rename(columns=rename)
 
-    # Rule prior reranking용 tactics 컬럼.
     tactic_col = next((c for c in meta_df.columns if c.lower() == "tactics"), None)
     if tactic_col and tactic_col != "_tactics":
         meta_df["_tactics"] = meta_df[tactic_col].fillna("").astype(str)
     elif "_tactics" not in meta_df.columns:
         meta_df["_tactics"] = ""
 
-    # v9 실험: Detection+Analysis 병합 증강 시도 → bi-encoder style mismatch로 회귀.
-    # v2 스키마 (name + description만) 복귀. 스타일 일치 > 정보량.
     if "_tname" in meta_df.columns:
         meta_df["_embed_text"] = meta_df["_tname"].fillna("") + ": " + meta_df["_desc_clean"]
     else:
         meta_df["_embed_text"] = meta_df["_desc_clean"]
 
-    # v15: BM25 전용 enriched text. Dense embedding 은 위 _embed_text 만 쓰되, BM25
-    # 쪽에는 Detection Name, Analysis Description, Mutable Elements 의 command/path
-    # 패턴을 추가해 lexical coverage 만 확장한다. Style mismatch 가 발생하지 않는
-    # keyword-matching 경로이므로 v9 와 같은 회귀 위험 없음.
     def _mutable_text(cell):
         if not isinstance(cell, str) or not cell.strip():
             return ""
@@ -706,8 +682,8 @@ def build_faiss_index(mitre_csv_path: str, embed_model: SentenceTransformer):
         meta_df["_bm25_text"] = meta_df["_bm25_text"] + " " + s
 
     texts = meta_df["_embed_text"].tolist()
-    print(f"  MITRE CSV: {len(df)}행 → 정제 후 {len(meta_df)}개")
-    print(f"  임베딩 생성 중... ({EMBED_MODEL_NAME})")
+    print(f"  MITRE CSV: {len(df)}...{len(meta_df)}...")
+    print(f"  ...{EMBED_MODEL_NAME})")
 
     embeddings = embed_model.encode(
         texts, batch_size=64,
@@ -718,17 +694,18 @@ def build_faiss_index(mitre_csv_path: str, embed_model: SentenceTransformer):
 
     index = faiss.IndexFlatIP(embeddings.shape[1])
     index.add(embeddings.astype(np.float32))
-    print(f"  FAISS 완료: {index.ntotal}개 벡터, dim={embeddings.shape[1]}")
+    print(f"  FAISS ...: {index.ntotal}...dim={embeddings.shape[1]}")
     return index, meta_df
 
 
-_FAISS_SCHEMA_VERSION = "v3"  # v15: meta_df 에 _bm25_text (enriched) 컬럼 추가
+_FAISS_SCHEMA_VERSION = "v3"
+
 _BM25_CACHE: dict = {}  # (csv_path, hash) -> (BM25Okapi, tokens_list)
 _TID_SIGNATURES: Optional[dict[str, list[str]]] = None  # lazy-loaded
 
 
 def _load_tid_signatures() -> dict[str, list[str]]:
-    """Technique Rule 에서 추출한 TID → signature 키워드 사전. 1회만 로드."""
+    """Technique Rule ...TID → signature ...1..."""
     global _TID_SIGNATURES
     if _TID_SIGNATURES is not None:
         return _TID_SIGNATURES
@@ -741,18 +718,16 @@ def _load_tid_signatures() -> dict[str, list[str]]:
         print(f"  [signature] {len(_TID_SIGNATURES)} TIDs loaded from {fp.name}")
     else:
         _TID_SIGNATURES = {}
-        print(f"  [signature] {fp} 없음 → signature rerank 비활성")
+        print(f"  [signature] {fp} ...signature rerank ...")
     return _TID_SIGNATURES
 
 
 def _signature_match_score(description: str, tid: str, sigs_by_tid: dict) -> float:
-    """description 안에 해당 TID signature 몇 개가 나타나는지 normalize.
+    """description ...TID signature ...normalize.
 
-    반환: [0, 1] 범위 score (>= 1 match 면 0.4~, >= 3 match 면 1.0).
     """
     sigs = sigs_by_tid.get(tid) or []
     if not sigs:
-        # sub-technique 없으면 base 도 시도
         base = tid.split(".")[0]
         sigs = sigs_by_tid.get(base) or []
         if not sigs:
@@ -764,15 +739,13 @@ def _signature_match_score(description: str, tid: str, sigs_by_tid: dict) -> flo
             matches += 1
     if matches == 0:
         return 0.0
-    # 첫 매치 가치가 크게, 이후엔 체감 감소.
     return min(0.4 + 0.2 * (matches - 1), 1.0)
 
 
 def _tokenize(text: str) -> list[str]:
-    """BM25용 간단 토큰화 — 영문, 숫자, 파일 확장자, CamelCase, 언더스코어 분리."""
+    """BM25...-- ...CamelCase, ..."""
     if not text:
         return []
-    # CamelCase와 .dll 같은 확장자 보존하면서 split
     t = text.lower()
     t = re.sub(r"[^a-z0-9._\\\\/]", " ", t)
     toks = [w.strip(".") for w in t.split() if w.strip(".") and len(w.strip(".")) >= 2]
@@ -780,10 +753,8 @@ def _tokenize(text: str) -> list[str]:
 
 
 def _build_bm25(meta_df: pd.DataFrame) -> BM25Okapi:
-    """MITRE corpus에서 BM25 인덱스 구축.
+    """MITRE corpus...BM25 ...
 
-    v15: _bm25_text (Detection Name + Analysis Description + Mutable Elements 포함)
-    가 있으면 우선 사용, 없으면 _embed_text fallback.
     """
     src_col = "_bm25_text" if "_bm25_text" in meta_df.columns else "_embed_text"
     texts = meta_df[src_col].tolist()
@@ -803,19 +774,16 @@ def build_or_load_faiss_index(
     embed_model: SentenceTransformer,
     cache_dir: Optional[str | Path] = None,
 ):
-    """메모리 캐시 → 디스크 캐시 → 빌드 순서로 FAISS 인덱스 취득.
+    """...FAISS ...
 
-    CSV 파일 SHA-256 해시 + 스키마 버전으로 캐시 무효화. 스키마 버전이 바뀌면
-    기존 캐시는 자동으로 미스 처리되어 재빌드된다.
     """
     csv_hash = _file_hash(mitre_csv_path)
-    # cache_tag 에 embedding model 이름을 포함시켜야 모델 교체 시 자동으로 미스됨.
     model_tag = EMBED_MODEL_NAME.replace("/", "_").replace(":", "_")
     cache_tag = f"{csv_hash}_{_FAISS_SCHEMA_VERSION}_{model_tag}"
     mem_key = (str(Path(mitre_csv_path).resolve()), cache_tag)
 
     if mem_key in _INDEX_CACHE:
-        print(f"  [cache-hit] FAISS 메모리 캐시 ({cache_tag})")
+        print(f"  [cache-hit] FAISS ...{cache_tag})")
         return _INDEX_CACHE[mem_key]
 
     if cache_dir is not None:
@@ -823,14 +791,14 @@ def build_or_load_faiss_index(
         idx_path = cache_dir / f"mitre_{cache_tag}.index"
         meta_path = cache_dir / f"mitre_{cache_tag}_meta.pkl"
         if idx_path.exists() and meta_path.exists():
-            print(f"  [cache-hit] FAISS 디스크 캐시 로드: {idx_path.name}")
+            print(f"  [cache-hit] FAISS ...: {idx_path.name}")
             index = faiss.read_index(str(idx_path))
             with open(meta_path, "rb") as f:
                 meta_df = pickle.load(f)
             _INDEX_CACHE[mem_key] = (index, meta_df)
             return index, meta_df
 
-    print(f"  [cache-miss] FAISS 빌드 중... (schema={_FAISS_SCHEMA_VERSION})")
+    print(f"  [cache-miss] FAISS ...schema={_FAISS_SCHEMA_VERSION})")
     index, meta_df = build_faiss_index(mitre_csv_path, embed_model)
     _INDEX_CACHE[mem_key] = (index, meta_df)
 
@@ -841,16 +809,15 @@ def build_or_load_faiss_index(
         faiss.write_index(index, str(idx_path))
         with open(meta_path, "wb") as f:
             pickle.dump(meta_df, f)
-        print(f"  [cache-write] FAISS 저장: {idx_path.name}")
+        print(f"  [cache-write] FAISS ...: {idx_path.name}")
 
     return index, meta_df
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# 유사도 검색
 # ──────────────────────────────────────────────────────────────────────────────
 def _rule_tactic_of(rule_tid: str, meta_df: pd.DataFrame) -> str:
-    """Rule의 technique_id에서 tactic을 찾는다. sub-technique이면 parent로 폴백."""
+    """Rule...technique_id...tactic...sub-technique...parent..."""
     if not rule_tid or "_tactics" not in meta_df.columns:
         return ""
     match = meta_df[meta_df.get("_tid", "") == rule_tid]
@@ -867,7 +834,8 @@ def search_similar(description: str, index, meta_df: pd.DataFrame,
                    embed_model: SentenceTransformer, k: int = TOP_K,
                    beta: float = SOFTMAX_BETA,
                    rule_tid: str = "",
-                   tid_prior: float = 1.15,   # family match 후보에 soft prior
+                   tid_prior: float = 1.15,
+
                    tactic_prior: float = 1.05,
                    cross_encoder=None,
                    ce_rerank_width: int = 20,
@@ -878,17 +846,9 @@ def search_similar(description: str, index, meta_df: pd.DataFrame,
                    signature_rerank_width: int = 10,
                    family_boost: float = 0.0,
                    family_boost_width: int = 10) -> tuple[list, float]:
-    """Top-K 유사 technique 검색 + softmax P_ttp 분포 (Eq. 2).
+    """Top-K ...technique ...+ softmax P_ttp ...Eq. 2).
 
-    파이프라인:
-      1. Bi-encoder(SBERT)로 전체 corpus similarity 계산 → softmax
-      2. rule_tid가 주어지면 동일 TID/tactic 후보에 soft prior 곱셈
-      3. (옵션) cross-encoder가 주어지면 상위 ce_rerank_width개 후보를 description과
-         쌍별로 full-attention 스코어링해 재랭킹 (ce_weight만큼 cross-encoder score 반영)
-      4. 최종 Top-K 반환
 
-    cross_encoder + ce_weight>0일 때 FAISS bi-encoder의 단순 cosine 대비 정교한
-    description↔reference 매칭이 가능. 대신 속도가 20× 정도 느려짐 (그룹당 ~ ce_rerank_width 회 추론).
 
     Returns:
         (candidates, confidence_margin)  where margin = P(t^1) - P(t^2)
@@ -899,7 +859,6 @@ def search_similar(description: str, index, meta_df: pd.DataFrame,
         normalize_embeddings=True,
     ).astype(np.float32)
 
-    # 전체 corpus와의 similarity를 구해 softmax 분모 계산
     all_scores, all_indices = index.search(vec, index.ntotal)
     all_sims = all_scores[0]
 
@@ -909,8 +868,6 @@ def search_similar(description: str, index, meta_df: pd.DataFrame,
     exp_scaled = np.exp(scaled)
 
     # ── Rule family prior ──────────────────────────────────────────────────
-    # rule이 지정한 TID 또는 그 parent와 family match되는 후보를 soft boost.
-    # rule_tid가 틀려도 family는 맞을 가능성이 크다는 약한 prior.
     rule_tactic = _rule_tactic_of(rule_tid, meta_df) if rule_tid else ""
     rule_parent = rule_tid.split(".")[0] if rule_tid else ""
     if rule_tid and (tid_prior != 1.0 or tactic_prior != 1.0):
@@ -918,7 +875,6 @@ def search_similar(description: str, index, meta_df: pd.DataFrame,
             row = meta_df.iloc[orig_idx]
             cand_tid = str(row.get("_tid", ""))
             cand_parent = cand_tid.split(".")[0]
-            # family match: rule의 parent와 candidate의 parent가 같으면 boost
             if rule_parent and cand_parent == rule_parent:
                 exp_scaled[pos] *= tid_prior
             elif rule_tactic and "_tactics" in meta_df.columns:
@@ -927,8 +883,6 @@ def search_similar(description: str, index, meta_df: pd.DataFrame,
                     exp_scaled[pos] *= tactic_prior
 
     # ── BM25 lexical score ─────────────────────────────────────────────────
-    # Bi-encoder가 놓치는 정확한 키워드 매칭(comsvcs.dll, ntds.dit 등)을 잡음.
-    # dense score + BM25 score를 Reciprocal Rank Fusion으로 결합.
     if bm25_weight > 0 and bm25_rerank_width > 0:
         bm25_obj = _get_bm25(meta_df, _FAISS_SCHEMA_VERSION)
         query_tokens = _tokenize(description)
@@ -939,29 +893,20 @@ def search_similar(description: str, index, meta_df: pd.DataFrame,
                 bm25_norm = bm25_scores / bm25_scores.max()
             else:
                 bm25_norm = bm25_scores
-            # dense score도 normalize
             exp_max = exp_scaled.max()
             if exp_max > 0:
                 dense_norm = exp_scaled / exp_max
             else:
                 dense_norm = exp_scaled
-            # fusion: 가중 평균 (both scores는 기존 corpus 순서로 정렬됨)
-            # all_indices[0]가 rearranged order라 주의 — all_sims도 rearranged
-            # 단순 방식: bm25_norm을 corpus 순서→faiss 순서로 재배열
             bm25_in_faiss_order = bm25_norm[all_indices[0]]
             fused = (1 - bm25_weight) * dense_norm + bm25_weight * bm25_in_faiss_order
-            # exp_scaled를 fused에 비례하게 업데이트 (argsort에만 쓰이므로 scale 무관)
             exp_scaled = fused * exp_max  # keep scale
 
-    # 재정렬 (dense + prior + BM25 반영된 exp_scaled 기반)
     order = np.argsort(-exp_scaled)
     all_indices_reranked = all_indices[0][order]
     all_sims_reranked    = all_sims[order]
     exp_scaled_reranked  = exp_scaled[order]
 
-    # ── Cross-encoder rerank (옵션) ─────────────────────────────────────────
-    # 상위 ce_rerank_width개에 대해 (description, candidate_text) 쌍 점수 계산.
-    # bi-encoder score와 cross-encoder score를 log-space 가중 결합.
     if cross_encoder is not None and ce_weight > 0 and ce_rerank_width > 0:
         wide = min(ce_rerank_width, len(all_indices_reranked))
         wide_idx = all_indices_reranked[:wide]
@@ -979,11 +924,9 @@ def search_similar(description: str, index, meta_df: pd.DataFrame,
             ce_scores = None
 
         if ce_scores is not None:
-            # cross-encoder score를 sigmoid로 [0,1]로 정규화
             ce_scores = np.array(ce_scores, dtype=np.float32)
             ce_norm = 1.0 / (1.0 + np.exp(-ce_scores))
 
-            # 결합: log-space 가중 평균. bi_norm은 해당 wide 후보의 current exp_scaled
             bi_norm = exp_scaled_reranked[:wide] / exp_scaled_reranked[:wide].max()
             # log(combined) = (1-w)·log(bi) + w·log(ce)
             eps = 1e-9
@@ -991,7 +934,6 @@ def search_similar(description: str, index, meta_df: pd.DataFrame,
                             + ce_weight * np.log(ce_norm + eps))
             combined = np.exp(log_combined)
 
-            # wide 구간 재정렬
             sub_order = np.argsort(-combined)
             new_wide_idx = wide_idx[sub_order]
             new_wide_sims = all_sims_reranked[:wide][sub_order]
@@ -1001,11 +943,6 @@ def search_similar(description: str, index, meta_df: pd.DataFrame,
             all_sims_reranked    = np.concatenate([new_wide_sims, all_sims_reranked[wide:]])
             exp_scaled_reranked  = np.concatenate([new_wide_exp, exp_scaled_reranked[wide:]])
 
-    # ── Signature rerank (결정적 artifact keyword 매칭) ─────────────────────
-    # description 에 각 candidate TID 의 signature 키워드 (Technique Rule 에서 추출)
-    # 가 몇 개 나타나는지 카운트해, multiplicative boost 로 상위 N 을 재정렬.
-    # FAISS 가 조밀한 후보들 사이에서 artifact-level 증거 (예: 'esentutl', '\sam')
-    # 를 보고 강하게 구분하지 못할 때 이 lexical evidence 로 tie-break.
     if signature_weight > 0 and signature_rerank_width > 0:
         sig_map = _load_tid_signatures()
         if sig_map:
@@ -1026,13 +963,9 @@ def search_similar(description: str, index, meta_df: pd.DataFrame,
             exp_scaled_reranked  = np.concatenate([new_wide_exp, exp_scaled_reranked[wide:]])
 
     # ── (A1) Family-consensus boost ──────────────────────────────────────────
-    # Top-N 내에서 같은 parent family (T1003.* 같은)를 공유하는 후보 수 만큼
-    # multiplicative boost. consensus 가 많으면 그 family 가 실제 정답일 가능성↑.
-    # 개별 sub-technique vs parent 간 미세 차이는 기존 dense/BM25/signature 로 해결.
     if family_boost > 0 and family_boost_width > 0:
         wide = min(family_boost_width, len(all_indices_reranked))
         wide_idx = all_indices_reranked[:wide]
-        # parent family 수집
         parents = []
         for orig_idx in wide_idx:
             tid = str(meta_df.iloc[orig_idx].get("_tid", ""))
@@ -1041,7 +974,6 @@ def search_similar(description: str, index, meta_df: pd.DataFrame,
         pcount = _C(parents)
         fam_boosts = np.ones(wide, dtype=np.float32)
         for pos, p in enumerate(parents):
-            # self 포함 count 에서 -1 해서 '다른' consensus 만 카운트
             shared = pcount[p] - 1
             fam_boosts[pos] = 1.0 + family_boost * shared
         boosted = exp_scaled_reranked[:wide] * fam_boosts
@@ -1056,7 +988,6 @@ def search_similar(description: str, index, meta_df: pd.DataFrame,
     Z = exp_scaled_reranked.sum()
     all_probs = exp_scaled_reranked / Z
 
-    # Top-K 추출
     top_k_indices = all_indices_reranked[:k]
     top_k_probs   = all_probs[:k]
     top_k_sims    = all_sims_reranked[:k]
@@ -1087,7 +1018,6 @@ def search_similar(description: str, index, meta_df: pd.DataFrame,
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# 공개 API
 # ──────────────────────────────────────────────────────────────────────────────
 def analyze(
     all_features: list,
@@ -1107,11 +1037,8 @@ def analyze(
     family_boost: float = 0.0,
     family_boost_width: int = 10,
 ) -> list[dict]:
-    """feature 목록 → description + Top-K 유사 technique 검색.
+    """feature ...description + Top-K ...technique ...
 
-    cross_encoder가 주어지면 top-ce_rerank_width 후보에 대해 cross-encoder rerank 적용.
-    cache_dir이 주어지면 SentenceTransformer + FAISS 인덱스가 프로세스 수명/디스크에
-    캐시되어 다수 시나리오 간 재사용된다.
     """
     embed_model = get_embed_model()
     index, meta_df = build_or_load_faiss_index(mitre_csv_path, embed_model, cache_dir)
@@ -1124,13 +1051,12 @@ def analyze(
     if _bm25_weight > 0:
         _get_bm25(meta_df, _FAISS_SCHEMA_VERSION)
 
-    print(f"  그룹 분석: {len(all_features)}개  "
+    print(f"  ...: {len(all_features)}..."
           f"(CE={'on' if cross_encoder else 'off'}, "
           f"BM25 weight={_bm25_weight}, rule_prior={_tid_prior})")
     results = []
     n_cached = 0
 
-    # no_llm 모드: feature_to_text로 대체
     if not use_llm:
         from experiments.ablation.helpers import feature_to_text
 
@@ -1174,12 +1100,12 @@ def analyze(
         })
 
         tag = " [cached]" if was_cached else ""
-        print(f"  [설명]{tag}\n  {desc}")
-        print(f"\n  [유사 테크닉 Top-{TOP_K}]  (confidence margin={conf_margin:.4f})")
+        print(f"  [...]{tag}\n  {desc}")
+        print(f"\n  [...Top-{TOP_K}]  (confidence margin={conf_margin:.4f})")
         for s in similar:
             match = " ← MATCH" if s["technique_id"] == tid else ""
             print(f"  {s['rank']}. {s['technique_id']} {s['technique_name']}  "
                   f"sim={s['similarity']:.4f}  p={s['p_ttp']:.4f}{match}")
 
-    print(f"\n  LLM 캐시 적중: {n_cached}/{len(all_features)}")
+    print(f"\n  LLM ...: {n_cached}/{len(all_features)}")
     return results

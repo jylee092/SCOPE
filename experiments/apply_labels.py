@@ -1,7 +1,5 @@
 """
-LLM-라벨링 결과를 annotation.json 에 적용.
 
-사용:
     from experiments.apply_labels import apply_decisions
     apply_decisions("scenario_name_substring", {
         "group_id_1": {"tid": "T1003.001", "is_attack": True, "step": 2, "reason": "..."},
@@ -9,8 +7,6 @@ LLM-라벨링 결과를 annotation.json 에 적용.
         ...
     })
 
-`step` 은 attack_flows 의 step index (1-based) — chain alignment 평가 용.
-None 이면 attack flow 와 무관한 부수 활동.
 """
 from __future__ import annotations
 import csv, json, sys
@@ -50,7 +46,6 @@ def apply_decisions(
 ) -> dict:
     """Apply decisions dict to matching scenario's annotation file.
 
-    decisions 형식:
         { group_id: {
             "is_attack": bool,
             "tid": str | None,        # None if benign
@@ -83,7 +78,6 @@ def apply_decisions(
             continue
         if g.get("gt_is_true_positive") is not None and \
            g.get("gt_label_source", "").startswith("auto-anchor-tool"):
-            # anchor-tool 라벨이 있어도 LLM 결정이 우선 (anchor-tool 은 prior)
             pass
         d = decisions[gid]
         is_atk = bool(d.get("is_attack", False))
@@ -115,7 +109,7 @@ def apply_decisions(
 
 
 def status() -> None:
-    """현재 모든 시나리오의 라벨링 상태 요약."""
+    """..."""
     from collections import Counter
     print(f"{'scenario':<60} {'tot':>4} {'TP':>4} {'FP':>4} {'PEND':>5}")
     print("-" * 80)

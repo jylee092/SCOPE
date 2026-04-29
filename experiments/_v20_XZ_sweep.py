@@ -1,7 +1,6 @@
 """
 v20 X+Z hybrid sweep.
 
-FAISS top-1 기본 존중, sim(top-1) 이 임계치 이하면 Viterbi 선택 유지.
 sim_threshold sweep.
 """
 from __future__ import annotations
@@ -105,13 +104,15 @@ def read_metrics():
 # sim distribution: p25=0.654, p50=0.699, p75=0.743, p90=0.809
 VARIANTS = [
     ("vanilla_no_bypass",  None),
-    ("bypass_sim_0.60",    0.60),  # 10% 그룹이 bypass
+    ("bypass_sim_0.60",    0.60),
+
     ("bypass_sim_0.65",    0.65),  # ~25% bypass
     ("bypass_sim_0.70",    0.70),  # ~50% bypass
     ("bypass_sim_0.75",    0.75),  # ~75% bypass
     ("bypass_sim_0.80",    0.80),  # ~85% bypass
     ("bypass_sim_0.85",    0.85),  # ~95% bypass
-    ("bypass_sim_1.00",    1.00),  # 모두 bypass = FAISS-only
+    ("bypass_sim_1.00",    1.00),
+
 ]
 
 
@@ -136,7 +137,7 @@ def main():
     print(f"{'variant':<22} {'thr':>6} {'tech':>8} {'tac':>8} {'step':>8} {'order':>8} {'vit_mic':>10} {'faiss_mic':>10}")
     for r in results:
         t = r["sim_threshold"]
-        t_str = "—" if t is None else f"{t:.2f}"
+        t_str = "--" if t is None else f"{t:.2f}"
         print(f"{r['variant']:<22} {t_str:>6} {r['tech_lcs']:>8.4f} {r['tac_lcs']:>8.4f} "
               f"{r['step_cov']:>8.4f} {r['order']:>8.4f} "
               f"{r['viterbi_mic']:>10.4f} {r['faiss_mic']:>10.4f}")

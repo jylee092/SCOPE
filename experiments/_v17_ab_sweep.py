@@ -4,7 +4,6 @@ v17 A+B ablation sweep.
 A = per-tactic self-loop + per-target wildcard-IN weight (TacticalScorer)
 B = fine-grained entity types + graded overlap (CausalScorer + technique_io)
 
-지금 코드 상태는 A+B 둘 다 ON. 각각을 OFF 하려면 런타임에 attribute 를 패치한다.
 """
 from __future__ import annotations
 import json, sys
@@ -30,18 +29,14 @@ from experiments.run_eval_v2 import main as eval_v2
 def make_tac_scorer(use_a: bool) -> TacticalScorer:
     t = TacticalScorer(anomaly_threshold=config.TACTIC_ANOMALY_THRESHOLD)
     if not use_a:
-        # v15 baseline: self-loop 일괄 0.5, wildcard-IN 일괄 0.8.
         t._self_loop_w = {}
         t._wildcard_in_w = {}
     return t
 
 
 def make_cau_scorer(use_b_io: bool, use_b_graded: bool) -> CausalScorer:
-    """Causal scorer with B 변형.
+    """Causal scorer with B ...
 
-    use_b_io=True  → 현재 fine-grained technique_io_cache.json 사용 (이미 재빌드됨)
-    use_b_io=False → v16 coarse 백업 캐시 사용
-    use_b_graded=True → graded overlap (현재 구현)
     use_b_graded=False → exact overlap (legacy). monkey-patch score()
     """
     cache_fp = (config.OUTPUT_BASE_DIR / "technique_io_cache.json"
@@ -65,7 +60,6 @@ def make_cau_scorer(use_b_io: bool, use_b_graded: bool) -> CausalScorer:
 def run_viterbi_all(use_a: bool, use_b_io: bool, use_b_graded: bool, use_b_entity: bool):
     """Run Viterbi over all 35 scenarios with given variant flags.
 
-    use_b_entity: False 면 extract_entity_types 결과를 {process, file, ...} coarse 로 다운캐스트.
     """
     _SEM_SCORER_CACHE.clear()
     tactic_map = load_tactic_map(str(config.MITRE_CSV_PATH))
@@ -159,12 +153,18 @@ def read_metrics():
 
 # (A, B_io, B_graded, B_entity)
 VARIANTS = [
-    ("baseline_v15",  False, False, False, False),  # legacy 전체
-    ("A_only",        True,  False, False, False),  # tactic retune 단독
-    ("B_io_only",     False, True,  False, False),  # fine I/O 만
-    ("B_graded_only", False, False, True,  False),  # graded overlap 만
-    ("B_entity_only", False, False, False, True),   # fine entity 만 (legacy I/O)
-    ("B_full",        False, True,  True,  True),   # B 전부
+    ("baseline_v15",  False, False, False, False),
+
+    ("A_only",        True,  False, False, False),
+
+    ("B_io_only",     False, True,  False, False),
+
+    ("B_graded_only", False, False, True,  False),
+
+    ("B_entity_only", False, False, False, True),
+
+    ("B_full",        False, True,  True,  True),
+
     ("AB_full",       True,  True,  True,  True),   # A+B
 ]
 

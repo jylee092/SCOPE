@@ -85,7 +85,7 @@ def _load_json(p: Path):
 
 
 # ---------------------------------------------------------------------------
-# SCOPE — measured directly from ttp_mapping + viterbi outputs
+# SCOPE -- measured directly from ttp_mapping + viterbi outputs
 # ---------------------------------------------------------------------------
 
 def scope_novelty(margin_mu: float = MARGIN_MU,
@@ -95,7 +95,7 @@ def scope_novelty(margin_mu: float = MARGIN_MU,
     by `similarity` rather than by the post-boost `p_ttp`). This isolates
     the bare-model "what would the embedding alone choose?" from SCOPE's
     rule-TID prior multiplicative boost (RULE_TID_PRIOR=1.15), which by
-    design pushes the rule-anticipated TID to the top in p_ttp space — and
+    design pushes the rule-anticipated TID to the top in p_ttp space -- and
     therefore makes the post-boost top-1 trivially equal to the rule prior
     in nearly every group. The raw-similarity top-1 captures the meaningful
     case: a behavior whose embedding *most-resembles* a different technique
@@ -265,7 +265,7 @@ def main(margin_mus: list[float] | None = None,
     tau2s = tau2s or [0.30, 0.50]
 
     print("=" * 70)
-    print(f"SCOPE — sweep over (μ, τ_2)")
+    print(f"SCOPE -- sweep over (μ, τ_2)")
     print("=" * 70)
     for mu in margin_mus:
         for t2 in tau2s:

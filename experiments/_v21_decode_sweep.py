@@ -2,10 +2,7 @@
 v21 decoding-mode sweep.
 
 Viterbi (globally optimal path, backtrace) vs Posterior (forward-backward
-max-marginal, per-step argmax). 각각에 X+Z bypass 적용/미적용.
 
-목적: per-step 정확도가 FAISS top-1 이상으로 회복되면서 chain 지표도
-유지/개선되는 decoder 조합 찾기.
 """
 from __future__ import annotations
 import json, sys
@@ -147,7 +144,7 @@ def main():
     print(f"{'variant':<26} {'mode':>10} {'bp':>6} {'tech':>8} {'tac':>8} {'step':>8} {'order':>8} {'vit_mic':>10}")
     for r in results:
         t = r["bypass_thr"]
-        t_str = "—" if t is None else f"{t:.2f}"
+        t_str = "--" if t is None else f"{t:.2f}"
         print(f"{r['variant']:<26} {r['decode_mode']:>10} {t_str:>6} "
               f"{r['tech_lcs']:>8.4f} {r['tac_lcs']:>8.4f} "
               f"{r['step_cov']:>8.4f} {r['order']:>8.4f} "

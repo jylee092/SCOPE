@@ -1,13 +1,7 @@
 """
-Ablation 결과 집계.
 
-각 variant별 평가 결과(evaluator.py 재사용)를 읽어 비교 테이블 생성.
 
-전제: full variant의 annotation JSON을 GT로 공유하여 평가.
-  - full, no_llm, top1_only: 같은 그룹 → 같은 group_id → annotation 재사용 가능
-  - no_grouping: 그룹이 다름 → tactic chain metrics만 비교 가능 (Hit@K 제외)
 
-사용:
     python experiments/ablation/aggregate.py
 """
 from __future__ import annotations
@@ -37,7 +31,7 @@ def _variant_output_dir(variant: str, dataset_rel: Path) -> Path:
 
 
 def _full_annotation_path(dataset_rel: Path, stem: str) -> Path:
-    """full variant의 annotation JSON (GT 공용)."""
+    """full variant...annotation JSON (GT ..."""
     return config.OUTPUT_BASE_DIR / dataset_rel / f"{stem}_annotation.json"
 
 
@@ -59,7 +53,6 @@ def evaluate_variant(variant: str, datasets: list[Path]) -> list[dict]:
 
         entry = {"variant": variant, "scenario": stem}
 
-        # TTP Hit@K — no_grouping은 그룹이 달라서 스킵
         if variant != "no_grouping" and ttp_path.exists():
             with open(ttp_path, encoding="utf-8") as f:
                 ttp = json.load(f)
@@ -76,7 +69,7 @@ def evaluate_variant(variant: str, datasets: list[Path]) -> list[dict]:
 
 
 def build_comparison(by_variant: dict[str, list[dict]]) -> dict:
-    """variant별 macro 평균 지표 정리."""
+    """variant...macro ..."""
     out: dict[str, dict] = {}
     for variant, entries in by_variant.items():
         ttp_m = [e["ttp"] for e in entries if "ttp" in e]
@@ -127,7 +120,7 @@ def print_comparison_table(comparison: dict) -> None:
         values = []
         for v in variants:
             val = comparison.get(v, {}).get(cat, {}).get(key)
-            values.append(f"{val:>12.4f}" if isinstance(val, (int, float)) else f"{'—':>12s}")
+            values.append(f"{val:>12.4f}" if isinstance(val, (int, float)) else f"{'--':>12s}")
         print(f"  {label:<20s} " + "  ".join(values))
 
     print(f"\n  {'# scenarios':<20s} " + "  ".join(
@@ -152,7 +145,7 @@ def main():
                   ensure_ascii=False, indent=2)
 
     print_comparison_table(comparison)
-    print(f"\n  저장: {out_path}")
+    print(f"\n  ...: {out_path}")
 
 
 if __name__ == "__main__":

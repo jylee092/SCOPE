@@ -150,14 +150,14 @@ class MagicAdapter(BaselineAdapter):
         else:
             guid_norm = {}
 
-        # Fetch Sigma alerts for this scenario — MAGIC RE-RANKS the existing
+        # Fetch Sigma alerts for this scenario -- MAGIC RE-RANKS the existing
         # Sigma alert stream rather than filtering it. For each alert we pair
         # its event row with the corresponding ProcessGuid and look up the
         # MAGIC anomaly score; alerts whose process is more anomalous get
         # their top-5 TIDs surfaced first in the merged ordering. This
         # preserves Sigma's coverage envelope (so chain-LCS is comparable to
         # other event-level baselines) while letting MAGIC's contribution be
-        # the *prioritization* of attack-related processes — its actual claim
+        # the *prioritization* of attack-related processes -- its actual claim
         # in Jia et al. ("identifying APT-related entities").
         sigma_data = _load_sigma(scenario_stem, scenario_json_path)
         sigma_alerts: list[dict] = (sigma_data or {}).get("notes", {}).get("alerts", [])

@@ -1,8 +1,4 @@
 """
-Section 0. 데이터 전처리
- - JSONL 이벤트 로그 로드
- - Message 필드 파싱 → 구조화 컬럼 확장
- - ProcessId / LogonId / TimeCreated 정규화
 """
 from __future__ import annotations
 
@@ -16,7 +12,6 @@ warnings.filterwarnings("ignore")
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# 1. 이벤트 로드
 # ──────────────────────────────────────────────────────────────────────────────
 _WINLOGBEAT_RENAME = {
     "event_id": "EventID",
@@ -33,10 +28,8 @@ _WINLOGBEAT_RENAME = {
 
 
 def _normalize_winlogbeat(obj: dict) -> dict:
-    """winlogbeat 스키마(`event_id` + 중첩 `event_data`)를 nxlog flat 스키마로 평탄화.
+    """winlogbeat ...`event_id` + ...`event_data`)...nxlog flat ...
 
-    event_data 내부 필드(Image, ProcessId, TargetObject 등)를 top-level로 올리고,
-    lowercase 공통 필드(event_id, source_name, ...)를 PascalCase로 rename.
     """
     if "event_id" not in obj or "EventID" in obj:
         return obj  # already nxlog-style or unrelated
@@ -53,7 +46,7 @@ def _normalize_winlogbeat(obj: dict) -> dict:
 
 
 def load_events(file_path: str) -> pd.DataFrame:
-    """JSONL 형식 이벤트 로그 → DataFrame."""
+    """JSONL ...DataFrame."""
     events = []
     with open(file_path, "r", encoding="utf-8") as f:
         for line in f:
@@ -71,10 +64,9 @@ def load_events(file_path: str) -> pd.DataFrame:
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# 2. Message 파싱
 # ──────────────────────────────────────────────────────────────────────────────
 def _scalar(v):
-    """Series/list → 첫 스칼라. NaN/None → None."""
+    """Series/list → ...NaN/None → None."""
     if isinstance(v, pd.Series):
         v = v.iloc[0] if len(v) > 0 else None
     if isinstance(v, list):
@@ -90,7 +82,7 @@ def _scalar(v):
 
 
 def parse_message(message, row_data: dict) -> dict:
-    """EventLog Message 필드를 description + additional_info dict로 분해."""
+    """EventLog Message ...description + additional_info dict..."""
     if isinstance(message, pd.Series):
         message = message.iloc[0] if len(message) > 0 else None
     if message is None:
@@ -126,7 +118,7 @@ def parse_message(message, row_data: dict) -> dict:
 
 
 def process_messages(df: pd.DataFrame) -> pd.DataFrame:
-    """Message 컬럼을 파싱하여 description으로 교체 + 추가 컬럼 확장."""
+    """Message ...description...+ ..."""
     df = df.reset_index(drop=True)
 
     print("Parsing messages...")
@@ -161,10 +153,9 @@ def process_messages(df: pd.DataFrame) -> pd.DataFrame:
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# 3. 정규화
 # ──────────────────────────────────────────────────────────────────────────────
 def _to_int(val):
-    """hex/decimal/float 문자열 → int. 실패 시 None."""
+    """hex/decimal/float ...int. ...None."""
     if pd.isna(val):
         return None
     s = str(val).strip()
@@ -177,7 +168,7 @@ def _to_int(val):
 
 
 def normalize_process_ids(df: pd.DataFrame) -> pd.DataFrame:
-    """ProcessId 계열 필드를 nullable Int64로 _int suffix 컬럼에 저장."""
+    """ProcessId ...nullable Int64..._int suffix ..."""
     pid_fields = [
         "ProcessId", "NewProcessId", "ParentProcessId",
         "SourceProcessId", "TargetProcessId",
@@ -192,7 +183,7 @@ def normalize_process_ids(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def _norm_logon_id_val(val):
-    """단일 LogonId → 소문자 hex. 0x0/NaN → None."""
+    """...LogonId → ...hex. 0x0/NaN → None."""
     if isinstance(val, pd.Series):
         val = val.iloc[0] if len(val) > 0 else None
     if val is None:
@@ -209,7 +200,7 @@ def _norm_logon_id_val(val):
 
 
 def normalize_logon_ids(df: pd.DataFrame) -> pd.DataFrame:
-    """EID별 LogonId 필드를 norm_logon_id 컬럼으로 통합."""
+    """EID...LogonId ...norm_logon_id ..."""
     df["norm_logon_id"] = None
 
     if "LogonId" in df.columns:
@@ -228,8 +219,6 @@ def normalize_logon_ids(df: pd.DataFrame) -> pd.DataFrame:
 
 def normalize_timestamps(df: pd.DataFrame) -> pd.DataFrame:
     """
-    @timestamp > TimeCreated > EventTime 우선순위로 시간 컬럼 결정 후
-    TimeCreated 컬럼명으로 통일, datetime(UTC)으로 변환 + 정렬.
     """
     if "@timestamp" in df.columns:
         target = "@timestamp"
@@ -238,7 +227,7 @@ def normalize_timestamps(df: pd.DataFrame) -> pd.DataFrame:
     elif "EventTime" in df.columns:
         target = "EventTime"
     else:
-        raise ValueError("시간 컬럼(@timestamp, TimeCreated, EventTime) 없음.")
+        raise ValueError("...@timestamp, TimeCreated, EventTime) ...")
 
     print(f"Using '{target}' as the primary timestamp.")
     df[target] = pd.to_datetime(df[target], format="mixed", utc=True)
@@ -252,12 +241,11 @@ def normalize_timestamps(df: pd.DataFrame) -> pd.DataFrame:
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# 4. 공개 API
 # ──────────────────────────────────────────────────────────────────────────────
 def load_and_normalize(file_path: str) -> pd.DataFrame:
-    """JSONL 로드 → Message 파싱 → 정규화까지 일괄 실행."""
+    """JSONL ...Message ..."""
     df = load_events(file_path)
-    print(f"총 이벤트 수: {len(df):,}")
+    print(f"...: {len(df):,}")
     df = process_messages(df)
     df = normalize_timestamps(df)
     df = normalize_process_ids(df)

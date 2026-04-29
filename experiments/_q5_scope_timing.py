@@ -1,5 +1,5 @@
 """
-Q5 — SCOPE end-to-end timing harness.
+Q5 -- SCOPE end-to-end timing harness.
 
 Times each pipeline stage on a representative sample of scenarios and
 reports throughput (events/sec), per-stage breakdown, and peak resident

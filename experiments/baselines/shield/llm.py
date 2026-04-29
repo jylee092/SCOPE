@@ -1,8 +1,8 @@
 """
-SHIELD §3 — LLM Analyzer (3-stage Chain-of-Thought).
+SHIELD §3 -- LLM Analyzer (3-stage Chain-of-Thought).
 
 Implements Algorithm 1 from Gandhi et al. (SHIELD 2025): for each Louvain
-community, run three sequential LLM calls — (S1) identify suspicious
+community, run three sequential LLM calls -- (S1) identify suspicious
 processes, (S2) per-process behavioral check, (S3) chain analysis →
 `(confidence_score, attack_summary, malicious_processes, kill_chain_stages,
 tids)`.
@@ -173,10 +173,10 @@ def serialize_community(g: nx.MultiDiGraph, members: list[str],
 
     The serialization explicitly surfaces:
       1. Process list (process names)
-      2. **Notable command lines** — distinct fork-edge cmdlines with the
+      2. **Notable command lines** -- distinct fork-edge cmdlines with the
          spawning process; this is the most reliable signal of attack
          tooling, so we promote it to the top of the prompt.
-      3. **Notable artifacts** — file paths, registry keys, pipes, external
+      3. **Notable artifacts** -- file paths, registry keys, pipes, external
          sockets that the community touches.
       4. Chronological event list (truncated).
 
@@ -279,7 +279,7 @@ sophisticated attacks are recognizable by their command-line arguments
 /vss' for SAM hive copy, 'ntdsutil ifm create full' for NTDS.dit dump,
 'wevtutil cl' or 'reg add ... MININT' for log tampering, encoded
 PowerShell launchers, 'sc config ... binPath' for service mod, 'schtasks
-/create' for persistence, etc.) — even when the parent binary is a
+/create' for persistence, etc.) -- even when the parent binary is a
 legitimate Windows utility.
 
 Other suspicious indicators (non-exhaustive): unauthorized writes to
@@ -536,7 +536,7 @@ def analyze_community(g: nx.MultiDiGraph,
     res.summary = s3.get("attack_summary") or ""
 
     if res.confidence < confidence_threshold:
-        # Below δ — SHIELD only "tags + traces" without raising alert.
+        # Below δ -- SHIELD only "tags + traces" without raising alert.
         # We still keep the result for downstream chain assembly because we
         # want to recover *as much* attack signal as possible across the whole
         # scenario, mirroring SHIELD's reduced-graph attack set T.
@@ -556,7 +556,7 @@ def _safe(label: str) -> str:
 
 
 def _parse_json(text: str, default: dict | None = None) -> dict:
-    """Robust JSON extraction — handles ```json``` fences and trailing prose."""
+    """Robust JSON extraction -- handles ```json``` fences and trailing prose."""
     if not text:
         return dict(default or {})
     s = text.strip()

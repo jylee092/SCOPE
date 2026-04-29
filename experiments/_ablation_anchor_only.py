@@ -1,5 +1,5 @@
 """
-"anchor_only" ablation — replace each Full SCOPE behavior group with a
+"anchor_only" ablation -- replace each Full SCOPE behavior group with a
 single-event group anchored at exactly that group's anchor row. Same group
 count, same anchor selection, no supporting-event aggregation.
 
@@ -78,7 +78,7 @@ def run_one(dataset_path: Path) -> dict | None:
     all_features = extract_all(groups, final_df)
     all_features_sanitized = [sanitize(f) for f in all_features]
 
-    # No per-TID cap — anchor count is already small
+    # No per-TID cap -- anchor count is already small
     sampled = all_features_sanitized
 
     results = analyze(

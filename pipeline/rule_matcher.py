@@ -1,7 +1,5 @@
 """
-Section 2. 그룹 생성 (Rule JSON 기반 자동 그룹핑)
 
-공개 API
 --------
 load_rules(rule_folder)             -> list[dict]
 run_grouping(df, rule_list, ...)    -> list[dict]
@@ -21,10 +19,9 @@ import pandas as pd
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# 1. 유틸
 # ──────────────────────────────────────────────────────────────────────────────
 def _str_val(val) -> Optional[str]:
-    """NaN/None → None, 그 외 → strip된 소문자 문자열."""
+    """NaN/None → None, ...strip..."""
     if val is None:
         return None
     if isinstance(val, float) and pd.isna(val):
@@ -34,10 +31,9 @@ def _str_val(val) -> Optional[str]:
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# Shared Entity 추출 — file path / registry key / network / pipe
 # ──────────────────────────────────────────────────────────────────────────────
 def _normalize_reg(path: str) -> str:
-    """레지스트리 경로 정규화 (HKLM/HKCU 축약 통일)."""
+    """...HKLM/HKCU ..."""
     lp = path.lower().strip()
     lp = re.sub(r"^\\registry\\machine", "hklm", lp)
     lp = re.sub(r"^\\registry\\user\\[^\\]+", "hkcu", lp)
@@ -47,14 +43,11 @@ def _normalize_reg(path: str) -> str:
 
 
 def _collect_artifacts(row: pd.Series) -> dict[str, set[str]]:
-    """이벤트 row에서 공유 가능한 artifact 추출.
+    """...row...artifact ...
 
-    카테고리:
-      file_written — TargetFilename (drop한 파일)
-      image_run    — Image (실행된 바이너리)
-      registry     — TargetObject
-      network      — DestinationIp / DestinationHostname
-      pipe         — PipeName
+      registry     -- TargetObject
+      network      -- DestinationIp / DestinationHostname
+      pipe         -- PipeName
     """
     arts: dict[str, set[str]] = {
         "file_written": set(),
@@ -93,17 +86,13 @@ def _collect_artifacts(row: pd.Series) -> dict[str, set[str]]:
 
 
 def _artifacts_overlap(a: dict[str, set[str]], b: dict[str, set[str]]) -> bool:
-    """두 artifact 집합 간 entity 공유 여부.
-    cross-field 매칭 포함: file_written ↔ image_run (drop-then-execute).
+    """...artifact ...entity ...
     """
-    # 같은 타입 공유
     for key in ("registry", "network", "pipe"):
         if a[key] & b[key]:
             return True
-    # 같은 파일 touch
     if a["file_written"] & b["file_written"]:
         return True
-    # drop-then-execute (양방향)
     if a["file_written"] & b["image_run"]:
         return True
     if a["image_run"] & b["file_written"]:
@@ -113,8 +102,6 @@ def _artifacts_overlap(a: dict[str, set[str]], b: dict[str, set[str]]) -> bool:
 
 def _match_filter(row: pd.Series, filters: dict) -> bool:
     """
-    Rule의 filters 블록 하나를 row에 적용 (AND).
-    지원 연산자: contains, contains_any, endswith, in, not_contains, equals
     """
     for field, cond in filters.items():
         if field in ("note", "direction_note"):
@@ -151,7 +138,6 @@ def _match_filter(row: pd.Series, filters: dict) -> bool:
                     return False
 
             elif op == "equals":
-                # 동적 참조(e.g. "Anchor.ProcessGuid")는 런타임 처리 — skip
                 pass
 
         elif isinstance(cond, list):
@@ -162,7 +148,6 @@ def _match_filter(row: pd.Series, filters: dict) -> bool:
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# 2. Rule 파싱
 # ──────────────────────────────────────────────────────────────────────────────
 def _parse_anchor_specs(rule: dict) -> list[dict]:
     """Rule Anchor Event → [{'eids':[...], 'filters':{...}}, ...]"""
@@ -192,12 +177,8 @@ def _parse_supporting_eids(rule: dict) -> list[int]:
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# 3. Anchor 탐색
 # ──────────────────────────────────────────────────────────────────────────────
 
-# Windows 시스템 프로세스 — 정당한 공격 행위가 이 이미지를 직접 anchor로 찍는 경우는 드묾.
-# 프로세스 injection / LSASS 접근 등은 이 필터가 적용되기 전에 이미 별도 룰이 잡는다.
-# 공격자가 living-off-the-land(rundll32, mshta, regsvr32 등)를 쓰는 경우엔 제외 대상 아님.
 _NOISE_ANCHOR_IMAGES = {
     "svchost.exe", "lsass.exe", "wmiprvse.exe", "backgroundtaskhost.exe",
     "msmpeng.exe", "mpcmdrun.exe", "services.exe", "csrss.exe", "smss.exe",
@@ -210,7 +191,6 @@ _NOISE_ANCHOR_IMAGES = {
     "securityhealthservice.exe", "securityhealthsystray.exe",
     "compattelrunner.exe", "trustedinstaller.exe", "tiworker.exe",
     "usoclient.exe", "siemensindustrialdcs.exe", "defender.exe",
-    # "System"은 EID 3 network anchor 에서만 노이즈 — 여기서 같이 처리.
     "system",
 }
 
@@ -226,12 +206,8 @@ def _basename_lower(path) -> str:
 
 
 def _is_noise_anchor(row: pd.Series) -> bool:
-    """anchor row가 시스템 프로세스에서 발생한 노이즈인지 판정.
+    """anchor row...
 
-    - EID 1 (process create): NewProcessName / Image 기준
-    - EID 3 (network): Image 기준 (svchost/System 네트워크 노이즈 필터)
-    - EID 13/14 (registry): Image (레지스트리 수정한 프로세스) 기준
-    - EID 10 (process access): SourceImage 기준
     """
     for fld in ("Image", "NewProcessName", "SourceImage", "Application"):
         img = _basename_lower(row.get(fld))
@@ -241,7 +217,7 @@ def _is_noise_anchor(row: pd.Series) -> bool:
 
 
 def _find_anchors(df: pd.DataFrame, rule: dict) -> pd.Index:
-    """Rule Anchor 스펙 일치 인덱스 (OR 합집합). 노이즈 프로세스 anchor 제외."""
+    """Rule Anchor ...OR ...anchor ..."""
     specs = _parse_anchor_specs(rule)
     all_eids = [e for spec in specs for e in spec["eids"]]
 
@@ -263,10 +239,9 @@ def _find_anchors(df: pd.DataFrame, rule: dict) -> pd.Index:
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# 4. ProcessGuid 그래프
 # ──────────────────────────────────────────────────────────────────────────────
 def _build_guid_graph(df: pd.DataFrame):
-    """ParentProcessGuid → ProcessGuid 방향 그래프 + guid→row idx 맵."""
+    """ParentProcessGuid → ProcessGuid ...+ guid→row idx ..."""
     children: dict[str, list[str]] = defaultdict(list)
     parents:  dict[str, list[str]] = defaultdict(list)
     guid_to_idxs: dict[str, list[int]] = defaultdict(list)
@@ -287,7 +262,7 @@ def _build_guid_graph(df: pd.DataFrame):
 
 def _bfs_guids(start_guid: str, children: dict, parents: dict,
                hop_up: int, hop_down: int) -> set[str]:
-    """start_guid 기준 위 hop_up / 아래 hop_down 방문 집합."""
+    """start_guid ...hop_up / ...hop_down ..."""
     visited = {start_guid}
 
     frontier = {start_guid}
@@ -315,12 +290,11 @@ def _bfs_guids(start_guid: str, children: dict, parents: dict,
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# 5. Supporting / 필터 / 신뢰도
 # ──────────────────────────────────────────────────────────────────────────────
 def _collect_supporting(df: pd.DataFrame, anchor_idx: int,
                         supporting_eids: list[int], core_idxs: set[int],
                         before_sec: int, after_sec: int) -> list[int]:
-    """Anchor ±time_window 내 Supporting EID 수집 (core 제외)."""
+    """Anchor ±time_window ...Supporting EID ...core ..."""
     if not supporting_eids:
         return []
 
@@ -340,7 +314,7 @@ def _collect_supporting(df: pd.DataFrame, anchor_idx: int,
 
 
 def _apply_rule_filters(df: pd.DataFrame, anchor_idx: int, rule: dict) -> bool:
-    """Anchor conditions 중 하나라도 통과하면 True."""
+    """Anchor conditions ...True."""
     specs = _parse_anchor_specs(rule)
     row = df.loc[anchor_idx]
     eid = int(row["EventID"])
@@ -362,10 +336,9 @@ def _calc_confidence(df: pd.DataFrame, all_idxs: list[int],
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# 6. 공개 API
 # ──────────────────────────────────────────────────────────────────────────────
 def load_rules(rule_folder) -> list[dict]:
-    """폴더 내 *.json 룰 파일 모두 로드."""
+    """...*.json ..."""
     folder = Path(rule_folder)
     rule_list = []
     for path in folder.glob("*.json"):
@@ -383,21 +356,19 @@ def run_grouping(df: pd.DataFrame,
                  apply_filters: bool = True,
                  use_shared_entity: bool = True,
                  max_anchors_per_rule: int = 80) -> list[dict]:
-    """Rule 목록 기반 이벤트 그룹핑. max_anchors_per_rule로 폭발 방지."""
-    print("ProcessGuid 그래프 구축 중...")
+    """Rule ...max_anchors_per_rule..."""
+    print("ProcessGuid ...")
     children, parents, guid_to_idxs = _build_guid_graph(df)
-    print(f"  그래프 노드 수: {len(guid_to_idxs):,}개 고유 ProcessGuid")
+    print(f"  ...: {len(guid_to_idxs):,}...ProcessGuid")
 
-    # Artifact 사전 계산 — shared_entity 확장에서 중복 호출 제거 (anchor × window 이벤트 조합마다
-    # 같은 row가 반복 조회되던 O(N²) 패턴 방지).
-    print(f"Artifact 캐시 구축 중... ({len(df):,} 행)")
+    print(f"Artifact ...{len(df):,} ...")
     artifacts_by_idx: dict[int, dict[str, set[str]]] = {}
     if use_shared_entity:
         for idx, row in df.iterrows():
             arts = _collect_artifacts(row)
             if any(arts.values()):
                 artifacts_by_idx[idx] = arts
-        print(f"  artifact 보유 이벤트: {len(artifacts_by_idx):,}개")
+        print(f"  artifact ...: {len(artifacts_by_idx):,}...")
 
     groups: list[dict] = []
 
@@ -407,18 +378,17 @@ def run_grouping(df: pd.DataFrame,
 
         anchor_idxs = _find_anchors(df, rule)
         if anchor_idxs.empty:
-            print(f"[SKIP] {tid}: Anchor 없음")
+            print(f"[SKIP] {tid}: Anchor ...")
             continue
 
-        # per-rule anchor 상한 (0 = 비활성). 0이면 모든 anchor 유지.
         if max_anchors_per_rule > 0 and len(anchor_idxs) > max_anchors_per_rule:
             orig = len(anchor_idxs)
             step = max(1, orig // max_anchors_per_rule)
             anchor_idxs = anchor_idxs[::step][:max_anchors_per_rule]
-            print(f"[{tid}] Anchor {orig} → {len(anchor_idxs)}개 샘플링 (cap={max_anchors_per_rule})")
+            print(f"[{tid}] Anchor {orig} → {len(anchor_idxs)}...cap={max_anchors_per_rule})")
 
         supporting_eids = _parse_supporting_eids(rule)
-        print(f"[{tid}] Anchor {len(anchor_idxs)}개  |  Supporting EID: {supporting_eids}")
+        print(f"[{tid}] Anchor {len(anchor_idxs)}...|  Supporting EID: {supporting_eids}")
 
         for anchor_idx in anchor_idxs:
             anchor_row  = df.loc[anchor_idx]
@@ -452,7 +422,6 @@ def run_grouping(df: pd.DataFrame,
                     t_start <= df.loc[i, "TimeCreated"] <= t_end)
             }
 
-            # Shared Entity 확장 — 윈도우 내 anchor와 artifact 공유하는 이벤트 추가
             if use_shared_entity:
                 anchor_arts = artifacts_by_idx.get(anchor_idx) or _collect_artifacts(anchor_row)
                 if any(anchor_arts.values()):
@@ -465,7 +434,8 @@ def run_grouping(df: pd.DataFrame,
                         if idx in core_idxs:
                             continue
                         event_arts = artifacts_by_idx.get(idx)
-                        if event_arts is None:  # artifact 없는 이벤트는 캐시에서 누락됨
+                        if event_arts is None:
+
                             continue
                         if _artifacts_overlap(anchor_arts, event_arts):
                             core_idxs.add(idx)
@@ -494,14 +464,12 @@ def run_grouping(df: pd.DataFrame,
 
     total    = len(groups)
     filtered = sum(1 for g in groups if g["filter_passed"])
-    print(f"\n총 {total}개 그룹 생성  |  필터 통과: {filtered}개")
+    print(f"\n...{total}...|  ...: {filtered}...")
     return groups
 
 
 def merge_same_anchor(groups: list[dict]) -> list[dict]:
     """
-    같은 anchor_idx를 가진 그룹을 병합 — 서로 다른 룰이 같은 이벤트를 anchor로
-    지목한 경우 중복 제거. matched_techniques 필드에 모든 매칭 룰 id를 기록.
     """
     by_anchor: dict[int, list[dict]] = defaultdict(list)
     for g in groups:
@@ -513,7 +481,6 @@ def merge_same_anchor(groups: list[dict]) -> list[dict]:
             merged.append({**glist[0], "matched_techniques": [glist[0]["technique_id"]]})
             continue
 
-        # 대표: 가장 높은 confidence. technique_id는 대표의 것 유지 (downstream 호환).
         rep = max(glist, key=lambda g: g.get("confidence", 0))
         all_tids = sorted({g["technique_id"] for g in glist})
         all_core = sorted(set(i for g in glist for i in g["core_idxs"]))
@@ -536,8 +503,6 @@ def merge_same_anchor(groups: list[dict]) -> list[dict]:
 def merge_shared_supporting(groups: list[dict], df: pd.DataFrame,
                             overlap_threshold: float = 1.0) -> list[dict]:
     """
-    같은 technique_id 내에서 supporting_idxs가 overlap_threshold 이상
-    겹치는 그룹을 Union-Find로 병합.
     """
     by_tech: dict[str, list[dict]] = defaultdict(list)
     for g in groups:
@@ -599,9 +564,9 @@ def print_groups(groups: list[dict], show_filtered: bool = False) -> None:
         status = "✓" if g["filter_passed"] else "✗(filtered)"
         print(f"[{g['group_id']}]  {status}")
         print(f"  Anchor      : EID {g['anchor_eid']}  (idx={g['anchor_idx']})")
-        print(f"  Core        : {len(g['core_idxs'])}개  {g['core_idxs']}")
-        print(f"  Supporting  : {len(g['supporting_idxs'])}개  {g['supporting_idxs']}")
-        print(f"  All         : {len(g['all_idxs'])}개")
+        print(f"  Core        : {len(g['core_idxs'])}...{g['core_idxs']}")
+        print(f"  Supporting  : {len(g['supporting_idxs'])}...{g['supporting_idxs']}")
+        print(f"  All         : {len(g['all_idxs'])}...")
         print(f"  Support hit : {g['supporting_hit']}  / def: {g['supporting_def']}")
         print(f"  Confidence  : {g['confidence']}")
         print()

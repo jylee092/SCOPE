@@ -1,7 +1,5 @@
 """
-v2 평가 드라이버 — chain alignment 포함.
 
-Group-level: TTP Hit@1/H@5/MRR strict & lenient (per-group GT 기반)
 Tactic-level: per-tactic P/R/F1
 Chain-level: vs reference attack flow (LCS, step coverage, order accuracy)
 """

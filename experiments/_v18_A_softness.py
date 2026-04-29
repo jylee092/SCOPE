@@ -1,14 +1,9 @@
 """
 v18 A-softness sweep.
 
-Task A (per-tactic self-loop / per-target wildcard-IN) 의 공격성을 단계별로 완화해
-tech/tac-LCS + Viterbi micro 의 sweet spot 찾기.
 
-baseline_legacy    : A 비활성 (self-loop 일괄 0.5, wildcard-IN 일괄 0.8)
-A_aggressive       : 현재 config (Exec 0.20, DE self 0.70, DE-in 0.55)
 A_mild             : Exec 0.35, DE self 0.60, DE-in 0.65
 A_soft             : Exec 0.40, DE self 0.55, DE-in 0.70
-A_exec_only        : Exec self-loop 만 0.35 로, 나머지 legacy default
 """
 from __future__ import annotations
 import json, sys
@@ -115,7 +110,8 @@ def read_metrics():
 
 VARIANTS = [
     # (name, self_loop_dict, wildcard_in_dict)
-    ("baseline_legacy", {}, {}),  # 전통적 uniform
+    ("baseline_legacy", {}, {}),
+
     ("A_aggressive", {
         "Execution": 0.20, "Defense Evasion": 0.70, "Discovery": 0.60,
         "Credential Access": 0.60, "Collection": 0.55, "Persistence": 0.40,

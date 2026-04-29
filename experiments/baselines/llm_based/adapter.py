@@ -1,7 +1,5 @@
 """
-LLM-based baseline — SHIELD 스타일 순수 LLM 공격 체인 요약.
 
-Gemini에 원시 로그 시퀀스를 주고 tactic/technique 시퀀스 추출을 요청.
 """
 from __future__ import annotations
 
@@ -61,7 +59,7 @@ def _summarize_event(row: dict) -> str:
 
 
 class ShieldLikeAdapter(BaselineAdapter):
-    """SHIELD 스타일: 원시 로그 → Gemini → attack chain JSON."""
+    """SHIELD ...: ...Gemini → attack chain JSON."""
     name = "llm_shield"
 
     def __init__(self, model_name: str = None):
@@ -80,7 +78,6 @@ class ShieldLikeAdapter(BaselineAdapter):
         if "EventID" in df.columns:
             df = df[df["EventID"].isin(_MEANINGFUL_EIDS)]
         if len(df) > _MAX_EVENTS:
-            # 균등 샘플링
             df = df.iloc[::len(df)//_MAX_EVENTS].head(_MAX_EVENTS)
 
         event_lines = [_summarize_event(r.to_dict()) for _, r in df.iterrows()]
@@ -94,7 +91,6 @@ class ShieldLikeAdapter(BaselineAdapter):
         )
         text = response.text.strip()
 
-        # JSON 추출 (```json ... ``` 또는 순수 JSON)
         m = re.search(r"\{[\s\S]*\}", text)
         parsed = {"tactic_sequence": [], "technique_sequence": [], "reasoning": ""}
         if m:

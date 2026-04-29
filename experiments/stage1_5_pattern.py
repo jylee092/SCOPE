@@ -1,43 +1,29 @@
 """
 Stage 1.5: Feature-based pattern classifier.
 
-feature_result.json 의 구조화된 feature(process_chains, command_script,
-persistence.registry_signals 등)를 읽어 ATT&CK technique 으로 분류.
 
-Stage 1 의 'pending' 그룹 중 패턴이 명확한 것을 사전 처리.
-나머지만 Stage 2 (Claude LLM) 가 검토.
 
-규칙 카테고리
 ------------
-LSASS_ACCESS  — process_chain target=lsass + GrantedAccess high → T1003.001
-LSASS_LOW     — process_chain target=lsass + GrantedAccess low (0x1000/0x400)
-                 → benign (Windows 자체 housekeeping)
-NTDS          — cmdline 에 ntdsutil + ifm/snapshot → T1003.003
-SAM_COPY      — esentutl + (sam|/y/vss|shadowcopy) → T1003.002
-COMSVCS       — rundll32 + comsvcs.dll + MiniDump → T1003.001
-MIMIKATZ      — cmdline 에 mimikatz/sekurlsa/Invoke-Mimikatz → T1003.001
-RUBEUS        — cmdline 에 Rubeus/asktgt → T1558
-SCHTASKS_NEW  — schtasks + /create → T1053.005
-WEVTUTIL_MOD  — wevtutil + sl/cl → T1562.002
-REG_EVENTLOG  — reg add/delete + EventLog 경로 → T1562.002
-REG_RUN       — registry signals \\Run\\ → T1547.001
-WMI_SUB       — registry __EventFilter / __EventConsumer → T1546.003
-NET_USER      — net.exe + user|localgroup|group → T1087.001/.002
-SAMR          — cmdline 에 samr/EnumDomainUsers → T1087.002
-WINRM_NET     — connections 5985/5986 → T1021.006
-SMB_NET       — connections 445 outbound from svchost/services → T1021.002
-DLLINJECT     — VirtualAllocEx/CreateRemoteThread/LoadLibrary 패턴 → T1055.001
-SHARPVIEW     — sharpview.exe Get-ObjectAcl → T1087.002
-SEATBELT      — seatbelt.exe → T1082
-PYTHON_WS     — python.exe http.server/SimpleHTTPServer → T1059.006
-CMSTP         — cmstp + .inf → T1218.003
-FODHELPER     — fodhelper + ms-settings → T1548.002
-PSEXEC        — services.exe parent + admin\\$\\ + remote → T1021.002
-PSREMOTING    — wsmprovhost.exe child → T1021.006
-NOISE         — empty features + conf=0 → benign
+LSASS_ACCESS  -- process_chain target=lsass + GrantedAccess high → T1003.001
+LSASS_LOW     -- process_chain target=lsass + GrantedAccess low (0x1000/0x400)
+SAM_COPY      -- esentutl + (sam|/y/vss|shadowcopy) → T1003.002
+COMSVCS       -- rundll32 + comsvcs.dll + MiniDump → T1003.001
+SCHTASKS_NEW  -- schtasks + /create → T1053.005
+WEVTUTIL_MOD  -- wevtutil + sl/cl → T1562.002
+REG_RUN       -- registry signals \\Run\\ → T1547.001
+WMI_SUB       -- registry __EventFilter / __EventConsumer → T1546.003
+NET_USER      -- net.exe + user|localgroup|group → T1087.001/.002
+WINRM_NET     -- connections 5985/5986 → T1021.006
+SMB_NET       -- connections 445 outbound from svchost/services → T1021.002
+SHARPVIEW     -- sharpview.exe Get-ObjectAcl → T1087.002
+SEATBELT      -- seatbelt.exe → T1082
+PYTHON_WS     -- python.exe http.server/SimpleHTTPServer → T1059.006
+CMSTP         -- cmstp + .inf → T1218.003
+FODHELPER     -- fodhelper + ms-settings → T1548.002
+PSEXEC        -- services.exe parent + admin\\$\\ + remote → T1021.002
+PSREMOTING    -- wsmprovhost.exe child → T1021.006
+NOISE         -- empty features + conf=0 → benign
 
-각 분류는 (technique_id, confidence, evidence) 반환.
-confidence 가 0.9 이상이면 자동 라벨, 미만이면 pending 유지.
 """
 from __future__ import annotations
 import csv, json, re, sys
@@ -51,7 +37,6 @@ sys.path.insert(0, str(ROOT))
 
 
 # ---------------------------------------------------------------------------
-# 유틸
 # ---------------------------------------------------------------------------
 LSASS_DUMP_ACCESS = {
     "0x1010", "0x1410", "0x1438", "0x143a", "0x1fffff",
@@ -90,7 +75,6 @@ def _basename(p: str) -> str:
 
 
 # ---------------------------------------------------------------------------
-# 패턴 분류 (각 함수: features → (tid, conf, evidence) | None)
 # ---------------------------------------------------------------------------
 def cls_lsass_access(features: dict) -> tuple[str, float, str] | None:
     chains = features.get("execution_context",{}).get("process_chains") or []
@@ -123,7 +107,6 @@ def cls_cmdline(features: dict, scenario: str) -> tuple[str, float, str] | None:
         f"{(e.get('image') or '').lower()} {(e.get('cmdline') or '').lower()}"
         for e in entries
     )
-    # ── 우선순위 패턴 ──
     if "ntdsutil" in full and any(k in full for k in (" ifm ","snapshot","create full","ac i ntds"," ntds ")):
         return ("T1003.003", 0.95, "ntdsutil + ifm/snapshot")
     if "esentutl" in full and any(k in full for k in ("sam"," /y","vss","\\windows\\system32\\sam","shadowcopy")):
@@ -243,7 +226,8 @@ def main() -> None:
     totals = defaultdict(int)
     per_scen = {}
 
-    CONF_THRESHOLD = 0.85   # 이 이상이면 자동 라벨, 미만이면 pending 유지
+    CONF_THRESHOLD = 0.85
+
 
     for ann in files:
         ftr = ann.with_name(ann.name.replace("_annotation.json","_feature_result.json"))
@@ -289,7 +273,7 @@ def main() -> None:
         per_scen[scenario] = dict(cnt)
         for k,v in cnt.items(): totals[k] += v
 
-    print("Stage 1.5 결과:")
+    print("Stage 1.5 ...:")
     for k,v in sorted(totals.items()):
         print(f"  {k}: {v}")
     print("\nper-scenario:")

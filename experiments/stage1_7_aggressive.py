@@ -1,20 +1,8 @@
 """
 Stage 1.7: Aggressive system/consumer-process noise filter.
 
-Stage 1.6 은 has_cmd=False 일 때만 noise 판정했지만, 많은 consumer/system
-프로세스가 자식 프로세스를 spawn 하면서 cmd entries 가 채워짐. 이 경우에도
-attacker-tool 키워드가 없으면 benign noise 로 처리.
 
-추가 대상:
-- networkwatcheragent.exe (Azure 모니터링)
-- powershell_ise.exe (단순 IDE 실행만)
-- conhost.exe (콘솔 호스트, 의미 없음)
-- explorer.exe / dsregcmd.exe / trustedinstaller.exe / 기타 OS 컴포넌트
 
-규칙:
-A. anchor가 EXTENDED_NOISE_PROCS 이고, cmd entries 가 모두 정상 OS 활동
-   (powershell/cmd/cscript/wscript/rundll32 등 attacker-tool 명령 없음) → benign
-B. anchor가 nan 이고 rule 이 generic-noise rule 이며 features 가 빈약 → benign
 """
 from __future__ import annotations
 import json, sys
@@ -26,7 +14,6 @@ OUTPUT_DIR = ROOT / "output"
 sys.path.insert(0, str(ROOT))
 
 EXTENDED_NOISE_PROCS = {
-    # Stage 1.6 에 있던 것들
     "svchost.exe", "lsass.exe", "services.exe", "system",
     "wininit.exe", "csrss.exe", "smss.exe", "winlogon.exe",
     "dfsrs.exe", "spoolsv.exe", "wmiprvse.exe", "dllhost.exe",
@@ -43,15 +30,14 @@ EXTENDED_NOISE_PROCS = {
     "wuauclt.exe", "trustedinstaller.exe",
     "applicationframehost.exe", "ngentask.exe", "ngen.exe",
     "lockapp.exe", "lsm.exe",
-    # Stage 1.7 추가
     "networkwatcheragent.exe", "networkwatc",  # azure
     "dsregcmd.exe", "officeclicktorun.exe",
-    "powershell_ise.exe",  # 단순 ISE 실행
+    "powershell_ise.exe",
+
     "lpremove.exe", "lpkinstall.exe",
     "tiworker.exe", "tiworker.", "tihost.exe",
     "vssvc.exe",
     "splwow64.exe",
-    # Stage 1.7b 추가 (singleton system components)
     "sppsvc.exe", "backgroundtransferhost.exe", "usoclient.exe",
     "logonui.exe", "searchui.exe", "officec2rclient.exe",
     "comppkgsrv.exe", "route.exe", "wmiadap.exe",
@@ -106,7 +92,7 @@ def is_benign_extended(group: dict, features: dict) -> tuple[bool, str]:
 
     # If anchor in noise procs → benign UNLESS anchor's own cmdline has
     # attacker keyword (sample logs are not attributable to the anchor's
-    # intent — they may just be temporally co-occurring events grouped by
+    # intent -- they may just be temporally co-occurring events grouped by
     # rule).
     if img in EXTENDED_NOISE_PROCS or img.startswith("networkwatc"):
         if cmd and has_attacker_kw(cmd):
@@ -153,7 +139,7 @@ def main() -> None:
         with open(ann,"w",encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
 
-    print("Stage 1.7 결과:")
+    print("Stage 1.7 ...:")
     for k,v in cnt.items():
         print(f"  {k}: {v}")
 

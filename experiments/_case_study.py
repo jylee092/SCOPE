@@ -1,9 +1,9 @@
 """
 Case Study (§7.6) numbers for the msf_record_mic running example:
 
-  normalized δ̃(S*)  — the Viterbi joint score normalized to [0,1]
+  normalized δ̃(S*)  -- the Viterbi joint score normalized to [0,1]
                      by chain length (geometric-mean per-step score).
-  n(S*)              — chain-level novelty against the 53-campaign library.
+  n(S*)              -- chain-level novelty against the 53-campaign library.
 """
 from __future__ import annotations
 
@@ -35,7 +35,7 @@ def main() -> None:
     chain_len = len(breakdown)
     print(f"Chain length: {chain_len}")
 
-    # δ̃(S*) ∈ [0, 1] — geometric mean of (per-step similarity × per-step
+    # δ̃(S*) ∈ [0, 1] -- geometric mean of (per-step similarity × per-step
     # transition compatibility). Both factors live in [0, 1] natively
     # (cosine similarity in the embedding space, geometric-mean fused
     # transition compatibility), so their geometric mean is interpretable as

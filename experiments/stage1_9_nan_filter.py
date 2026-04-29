@@ -1,11 +1,5 @@
 """
-Stage 1.9: nan-anchor 그룹의 cmd entries 분석으로 자동 라벨.
 
-규칙:
-- anchor 가 nan/empty 이고 cmd entries 의 image 가 모두 system/agent 프로세스
-  이며 attacker 키워드 없음 → benign
-- cmd entries 가 비어있고 process_chains 도 attacker 패턴 없음 → benign
-- attacker keyword 매치 → leave pending (Claude 직접 검토)
 """
 from __future__ import annotations
 import json, sys, csv
@@ -21,7 +15,6 @@ from experiments.stage1_7_aggressive import (
     _basename, _norm,
 )
 
-# nan-anchor 인 경우 추가로 허용할 system/agent 프로세스
 SYSTEM_CMD_IMAGES = EXTENDED_NOISE_PROCS | {
     "collectguestlogs.exe", "windowsazureguestagent.exe", "waappagent.exe",
     "mpcmdrun.exe", "msmpeng.exe", "mssense.exe",
@@ -66,12 +59,12 @@ def is_nan_benign(group: dict, features: dict) -> tuple[bool, str]:
             f"{e.get('image','')} {e.get('cmdline','')}" for e in entries
         )
         if has_attacker_kw(all_cmds):
-            return (False, "")  # pending — has attacker keyword
+            return (False, "")  # pending -- has attacker keyword
         non_system = [e for e in entries if not _is_system_cmd(e.get("image",""), e.get("cmdline",""))]
         if not non_system:
             return (True, f"all-system-cmd ({len(entries)} entries)")
 
-    # no cmd entries — check process_chains for attacker patterns
+    # no cmd entries -- check process_chains for attacker patterns
     chains = features.get("execution_context",{}).get("process_chains") or []
     if chains:
         chain_text = " ".join(

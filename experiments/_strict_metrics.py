@@ -4,11 +4,11 @@ Strict-metric supplement for §7 (CCS reviewer defense).
 Computes three additional metrics that complement the plausibility-based
 chain-LCS already reported:
 
-  1. Strict-TID LCS — same as technique-LCS but with exact-string matching
+  1. Strict-TID LCS -- same as technique-LCS but with exact-string matching
      (no parent/sub-technique collapse). Pessimistic counterpart.
-  2. Per-step Precision / Recall / F1 — set-based agreement between the
+  2. Per-step Precision / Recall / F1 -- set-based agreement between the
      predicted chain's TID multi-set and the reference flow's TID set.
-  3. False chain rate — fraction of scenarios whose predicted chain has
+  3. False chain rate -- fraction of scenarios whose predicted chain has
      NO matched reference step (i.e., where SCOPE produces a chain that
      does not overlap with any reference TTP at all).
 

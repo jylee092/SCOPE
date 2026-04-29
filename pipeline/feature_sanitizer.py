@@ -1,9 +1,5 @@
 """
-Section 3-(2). LLM 호출 전 feature dict 정제
 
-- 특정 값(경로, IP, 레지스트리, 파일명) → 추상 레이블
-- 노이즈(정상 시스템 프로세스, 임시 파일) 제거
-- 원본 불변, deepcopy로 반환
 """
 from __future__ import annotations
 
@@ -13,7 +9,6 @@ from typing import Optional
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# 상수
 # ──────────────────────────────────────────────────────────────────────────────
 _NOISE_PROCESSES = {
     "backgroundtaskhost.exe", "runtimebroker.exe", "browser_broker.exe",
@@ -40,10 +35,9 @@ _NOISE_DROP_IMAGES = {
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# 추상화 치환
 # ──────────────────────────────────────────────────────────────────────────────
 def _sanitize_path(path: Optional[str]) -> Optional[str]:
-    """사용자 경로 → 환경변수. 확장자별 파일명 치환."""
+    """..."""
     if not path:
         return path
     p = path
@@ -64,7 +58,7 @@ def _sanitize_path(path: Optional[str]) -> Optional[str]:
 
 
 def _sanitize_cmdline(cmdline: Optional[str]) -> Optional[str]:
-    """경로 치환 + 3~6자리 PID → [PID]."""
+    """...+ 3~6...PID → [PID]."""
     if not cmdline:
         return cmdline
     c = _sanitize_path(cmdline)
@@ -73,7 +67,7 @@ def _sanitize_cmdline(cmdline: Optional[str]) -> Optional[str]:
 
 
 def _sanitize_ip(ip: Optional[str]) -> Optional[str]:
-    """IP → 클래스 레이블."""
+    """IP → ..."""
     if not ip:
         return ip
     if re.match(r"^(10\.|172\.(1[6-9]|2\d|3[01])\.|192\.168\.)", ip):
@@ -94,7 +88,6 @@ def _sanitize_registry(key: Optional[str]) -> Optional[str]:
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# 카테고리별 정제
 # ──────────────────────────────────────────────────────────────────────────────
 def _clean_execution_context(ctx: dict) -> dict:
     cleaned: list[dict] = []
@@ -182,10 +175,9 @@ def _clean_evasion(eva: dict) -> dict:
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# 공개 API
 # ──────────────────────────────────────────────────────────────────────────────
 def sanitize(features: dict) -> dict:
-    """feature dict 정제 복사본 반환 (원본 불변)."""
+    """feature dict ..."""
     f    = deepcopy(features)
     feat = f["features"]
 
@@ -194,5 +186,4 @@ def sanitize(features: dict) -> dict:
     feat["network"]           = _clean_network(feat["network"])
     feat["persistence"]       = _clean_persistence(feat["persistence"])
     feat["evasion"]           = _clean_evasion(feat["evasion"])
-    # identity / temporal은 구조 값만 있어 추상화 불필요
     return f

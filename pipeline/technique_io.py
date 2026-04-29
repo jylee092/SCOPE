@@ -1,12 +1,9 @@
 """
 Technique-level In/Out Entity Type Signatures
 
-MITRE ATT&CK CSV의 Log Sources (Data Component) 필드에서
-각 technique이 소비(In)하고 생산(Out)하는 entity type을 자동 추출한다.
 
 Entity types: {process, file, registry, network, service, user}
 
-공개 API
 --------
 build_technique_io(mitre_csv_path) -> dict[str, dict]
 load_or_build_technique_io(mitre_csv_path, cache_path) -> dict[str, dict]
@@ -19,11 +16,7 @@ from pathlib import Path
 import pandas as pd
 
 # ──────────────────────────────────────────────────────────────────────────────
-# Data Component → (entity_type, direction) 매핑
 #
-# direction: "in"  = 기존 아티팩트를 읽거나 사용
-#            "out" = 새 아티팩트를 생성·변경·삭제
-#            "both"= 실행 과정에서 양쪽 모두
 # ──────────────────────────────────────────────────────────────────────────────
 _DC_MAP: dict[str, tuple[str, str]] = {
     # Process
@@ -110,7 +103,6 @@ def _parse_dc_name(dc_str: str) -> str:
 
 def build_technique_io(mitre_csv_path: str | Path) -> dict[str, dict]:
     """
-    MITRE CSV → technique별 In/Out entity type 매핑.
 
     Returns:
         {
@@ -127,7 +119,7 @@ def build_technique_io(mitre_csv_path: str | Path) -> dict[str, dict]:
     ls_col = next((c for c in df.columns if "log" in c.lower() and "source" in c.lower()), None)
 
     if not id_col or not ls_col:
-        raise ValueError(f"필요 컬럼 없음: {list(df.columns)}")
+        raise ValueError(f"...: {list(df.columns)}")
 
     result: dict[str, dict] = {}
     unmapped: set[str] = set()
@@ -172,9 +164,9 @@ def build_technique_io(mitre_csv_path: str | Path) -> dict[str, dict]:
             }
 
     if unmapped:
-        print(f"  [technique_io] 미매핑 Data Component {len(unmapped)}개: {unmapped}")
+        print(f"  [technique_io] ...Data Component {len(unmapped)}...: {unmapped}")
 
-    print(f"  [technique_io] {len(result)}개 technique In/Out 추출 완료")
+    print(f"  [technique_io] {len(result)}...technique In/Out ...")
     return result
 
 
@@ -182,13 +174,13 @@ def load_or_build_technique_io(
     mitre_csv_path: str | Path,
     cache_path: str | Path | None = None,
 ) -> dict[str, dict]:
-    """캐시가 있으면 로드, 없으면 빌드 후 저장."""
+    """..."""
     if cache_path:
         cache_path = Path(cache_path)
         if cache_path.exists():
             with open(cache_path, encoding="utf-8") as f:
                 data = json.load(f)
-            print(f"  [technique_io] 캐시 로드: {cache_path} ({len(data)}개)")
+            print(f"  [technique_io] ...: {cache_path} ({len(data)}...")
             return data
 
     result = build_technique_io(mitre_csv_path)
@@ -197,6 +189,6 @@ def load_or_build_technique_io(
         cache_path.parent.mkdir(parents=True, exist_ok=True)
         with open(cache_path, "w", encoding="utf-8") as f:
             json.dump(result, f, ensure_ascii=False, indent=2)
-        print(f"  [technique_io] 캐시 저장: {cache_path}")
+        print(f"  [technique_io] ...: {cache_path}")
 
     return result

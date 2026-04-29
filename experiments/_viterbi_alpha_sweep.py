@@ -1,10 +1,7 @@
 """
 Viterbi transition_weight (α) sweep.
 
-TTP_MAPPING + features 캐시를 그대로 두고, α 값만 바꿔가며 Viterbi만 재계산 →
-per-group TTP hit rate를 측정하고 결과 테이블을 출력한다.
 
-사용:
   python experiments/_viterbi_alpha_sweep.py
 """
 from __future__ import annotations

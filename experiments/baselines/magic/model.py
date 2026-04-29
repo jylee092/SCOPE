@@ -1,9 +1,9 @@
 """
-MAGIC (Masked GAT Autoencoder) — PyG re-implementation.
+MAGIC (Masked GAT Autoencoder) -- PyG re-implementation.
 
 Faithful to the architecture of Jia et al., "MAGIC: Detecting Advanced
 Persistent Threats via Masked Graph Representation Learning" (USENIX
-Security 2024) — see also FDUDSDE/MAGIC. We re-implement the model in
+Security 2024) -- see also FDUDSDE/MAGIC. We re-implement the model in
 PyTorch Geometric instead of DGL because DGL 1.x does not ship wheels for
 the Python version of our environment; the architecture, masking strategy,
 loss, and downstream KNN-based anomaly scoring all match the reference
@@ -69,7 +69,7 @@ class MagicConfig:
 
 
 # ---------------------------------------------------------------------------
-# GMAE — Graph Masked Auto-Encoder (PyG implementation)
+# GMAE -- Graph Masked Auto-Encoder (PyG implementation)
 # ---------------------------------------------------------------------------
 
 class GMAE(nn.Module):

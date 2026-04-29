@@ -1,8 +1,6 @@
 """
 v19 A1 (family-consensus boost on emission) + A2 (hard tactic filter) sweep.
 
-A1 는 _rerun_viterbi_only.py 의 preprocess 로 적용 (cached ttp_mapping 재순위).
-A2 는 topk_viterbi(hard_tactic_filter=True) 로 적용.
 """
 from __future__ import annotations
 import json, sys, copy

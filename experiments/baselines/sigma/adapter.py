@@ -1,5 +1,5 @@
 """
-Sigma baseline adapter — runs SigmaHQ Windows rules over a Mordor scenario
+Sigma baseline adapter -- runs SigmaHQ Windows rules over a Mordor scenario
 and emits a BaselinePrediction compatible with the common evaluator.
 
 Per-alert representation:
@@ -35,7 +35,7 @@ from experiments.baselines.sigma.evaluator import (
 TOP_K = 5
 RULES_DIR = _FINAL_CODE / "_sigma_rules" / "rules" / "windows"
 
-# EID allow-list — only events that any Sigma category covers are worth checking,
+# EID allow-list -- only events that any Sigma category covers are worth checking,
 # and many rules are noisy on common Windows utilities. We filter to those that
 # the Sigma corpus actually inspects on Mordor logs.
 _CHECKABLE_EIDS = {

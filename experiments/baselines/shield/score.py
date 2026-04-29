@@ -2,7 +2,7 @@
 Score the SHIELD baseline against SCOPE's plausibility-based GT.
 
 Identical metric definitions as the Sigma scorer (Hit@5, tech-LCS, tac-LCS,
-step coverage) — only the input directory and the alert→group alignment
+step coverage) -- only the input directory and the alert→group alignment
 key change.
 
 SHIELD alerts carry community-level event_indices in their `notes.alerts`
@@ -113,7 +113,7 @@ def score_scenario(result_path: Path, k: int = 5) -> dict | None:
                 hit_k_count += 1
     hit_k = (hit_k_count / tp_count) if tp_count else None
 
-    # Expand each alert's full kill-chain into the chronological sequence —
+    # Expand each alert's full kill-chain into the chronological sequence --
     # SHIELD emits an *ordered list* of techniques per community (Stage 3
     # output), so collapsing to top-1 per alert would discard the very
     # capability that distinguishes LLM chain reasoning. We dedup

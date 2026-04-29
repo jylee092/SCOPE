@@ -1,8 +1,5 @@
 """
-Baseline 공용 인터페이스.
 
-각 baseline은 BaselineAdapter를 상속하여 predict()만 구현하면
-aggregate.py가 GT와 대조해 metrics 계산.
 """
 from __future__ import annotations
 
@@ -13,7 +10,7 @@ from typing import Optional
 
 @dataclass
 class BaselinePrediction:
-    """Baseline의 시나리오 단위 예측 결과."""
+    """Baseline..."""
     scenario: str
     tactic_sequence: list[str] = field(default_factory=list)
     technique_sequence: list[str] = field(default_factory=list)
@@ -22,15 +19,15 @@ class BaselinePrediction:
 
 
 class BaselineAdapter:
-    """모든 baseline이 구현해야 하는 공통 인터페이스."""
+    """...baseline..."""
     name: str = "base"
 
     def predict(self, scenario_json_path: Path) -> BaselinePrediction:
-        """시나리오 JSON을 입력받아 예측 결과 반환."""
+        """...JSON..."""
         raise NotImplementedError
 
     def save_result(self, pred: BaselinePrediction, out_dir: Path) -> Path:
-        """예측 결과를 result.json으로 저장."""
+        """...result.json..."""
         import json
         out_dir.mkdir(parents=True, exist_ok=True)
         out_path = out_dir / "result.json"
@@ -46,7 +43,7 @@ class BaselineAdapter:
 
 
 def load_prediction(path: Path) -> BaselinePrediction:
-    """저장된 result.json → BaselinePrediction."""
+    """...result.json → BaselinePrediction."""
     import json
     with open(path, encoding="utf-8") as f:
         data = json.load(f)

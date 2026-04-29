@@ -1,8 +1,5 @@
 """
-Unconstrained LLM judge: LLM은 top-5를 보지 않고 로그만 보고 ATT&CK technique을 자유롭게 예측.
-그 예측이 우리 FAISS top-5 안에 포함되는지 측정.
 
-→ "LLM이 정답이라 생각하는 TID가 top-5 안에 있을 확률"의 진짜 값.
 """
 from __future__ import annotations
 import csv, hashlib, json, re, sys, time
@@ -98,7 +95,7 @@ trace, identify the MITRE ATT&CK technique that best characterizes what the
 adversary is doing in this group.
 
 IMPORTANT: Use your own MITRE ATT&CK knowledge. Do NOT restrict yourself to
-any candidate list — return whichever technique ID fits best.
+any candidate list -- return whichever technique ID fits best.
 
 ## Forensic Evidence
 

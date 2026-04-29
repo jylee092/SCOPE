@@ -1,10 +1,7 @@
 """
 Annotation Template Generator
 
-파이프라인 실행 후 그룹별 요약을 JSON으로 덤프하여
-수동 라벨링(Ground Truth)을 위한 템플릿을 생성한다.
 
-공개 API
 --------
 generate_template(groups, df, output_path)
 """
@@ -76,10 +73,9 @@ _GT_FIELDS = ("gt_technique_id", "gt_technique_name", "gt_tactic",
 
 
 def _load_existing_labels(path: Path) -> dict[str, dict]:
-    """기존 annotation 파일에서 group_id → gt_* 매핑을 추출.
-
-    파일이 없거나 파싱 실패 시 빈 dict 반환. gt_is_true_positive가 None인
-    그룹은 "미라벨"로 간주해 매핑에서 제외 (blank 템플릿은 덮어쓰기 가능)."""
+    """Load any existing annotation file and return a {group_id: gt_*}
+    mapping. Groups marked as ``...`` are treated as blank templates and
+    excluded from the mapping so a fresh template overwrites them."""
     if not path.exists():
         return {}
     try:
@@ -107,7 +103,6 @@ def generate_template(
     output_path = Path(output_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
-    # 기존 GT 라벨 보존: 재실행 시 수작업 라벨이 빈 템플릿으로 덮어쓰이지 않도록.
     existing = _load_existing_labels(output_path)
 
     entries = [_summarize_group(g, df) for g in groups if g.get("filter_passed", True)]
@@ -123,11 +118,11 @@ def generate_template(
         "scenario": scenario_name,
         "total_groups": len(entries),
         "instruction": (
-            "각 그룹의 sample_logs와 anchor를 확인한 뒤 gt_ 필드를 채워주세요. "
-            "gt_is_true_positive: 해당 그룹이 실제 공격 행위인지 (true/false). "
-            "gt_technique_id: 실제 MITRE technique ID (예: T1059.001). "
-            "gt_tactic: 실제 tactic 이름 (예: Execution). "
-            "gt_notes: 판단 근거나 메모."
+            "...sample_logs...anchor...gt_ ..."
+            "gt_is_true_positive: ...true/false). "
+            "gt_technique_id: ...MITRE technique ID (...: T1059.001). "
+            "gt_tactic: ...tactic ...: Execution). "
+            "gt_notes: ..."
         ),
         "groups": entries,
     }
@@ -135,9 +130,9 @@ def generate_template(
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(template, f, ensure_ascii=False, indent=2)
 
-    msg = f"  Annotation 템플릿 저장: {output_path} ({len(entries)}개 그룹"
+    msg = f"  Annotation ...: {output_path} ({len(entries)}..."
     if preserved:
-        msg += f", GT 라벨 {preserved}개 유지"
+        msg += f", GT ...{preserved}..."
     msg += ")"
     print(msg)
     return output_path

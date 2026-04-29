@@ -4,9 +4,9 @@ Convert SHIELD's NetworkX MultiDiGraph → PyG `Data` for MAGIC.
 Node feature  = [type one-hot (6) | hashed identity (16) | type-specific flags (4)]
                 identity hash gives per-process / per-file discriminative signal so
                 the GAT autoencoder can learn meaningful KNN distances; pure type
-                one-hot was too coarse — all processes ended up with identical
+                one-hot was too coarse -- all processes ended up with identical
                 embeddings, collapsing the anomaly-score distribution.
-Edge feature  = one-hot of edge verb (used as initial weight only — basic
+Edge feature  = one-hot of edge verb (used as initial weight only -- basic
                 GATConv does not consume edge attributes; the type information
                 propagates via the structural masking objective).
 """
@@ -101,15 +101,15 @@ def _type_flags(attrs: dict, t: str) -> torch.Tensor:
     f = torch.zeros(_FLAG_DIM, dtype=torch.float32)
     if t == "process":
         img = (attrs.get("image") or "").lower()
-        # flag 0 — system process path
+        # flag 0 -- system process path
         if "\\windows\\" in img: f[0] = 1.0
-        # flag 1 — known interpreter
+        # flag 1 -- known interpreter
         if any(x in img for x in ("powershell", "cmd.exe", "wscript",
                                        "cscript", "rundll32", "regsvr32")):
             f[1] = 1.0
     elif t == "file":
         path = (attrs.get("path") or "").lower()
-        # flag 2 — sensitive directory (Temp, Public, AppData)
+        # flag 2 -- sensitive directory (Temp, Public, AppData)
         if any(x in path for x in ("\\temp\\", "\\public\\",
                                        "\\appdata\\", "\\downloads\\")):
             f[2] = 1.0
@@ -158,7 +158,7 @@ def nx_to_pyg(g: nx.MultiDiGraph) -> tuple[Data, list[str]]:
 def benign_subgraph(g: nx.MultiDiGraph, anom_process_guids: set[str]) -> nx.MultiDiGraph:
     """Return a copy of `g` with the LOF-flagged anomalous process nodes
     REMOVED ENTIRELY (along with their incident edges). This matches MAGIC's
-    "benign-only training" assumption — the anomalous processes' embeddings
+    "benign-only training" assumption -- the anomalous processes' embeddings
     must not appear in the benign reference pool, otherwise the KNN distance
     at test time collapses for the very nodes we want to detect."""
     if not anom_process_guids:

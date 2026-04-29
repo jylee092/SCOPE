@@ -1,5 +1,5 @@
 """
-Native-task metrics for DeepAG and MAGIC — what each model is *natively*
+Native-task metrics for DeepAG and MAGIC -- what each model is *natively*
 designed to do, on its own terms (i.e., without Sigma in the loop).
 
 DeepAG: next-token top-K accuracy on a held-out 20% slice of the 53 CTI
@@ -205,14 +205,14 @@ def magic_native() -> dict:
 
 if __name__ == "__main__":
     print("=" * 70)
-    print("DeepAG native — next-TID top-K accuracy on held-out CTI campaigns")
+    print("DeepAG native -- next-TID top-K accuracy on held-out CTI campaigns")
     print("=" * 70)
     deep = deepag_native()
     print(json.dumps(deep, indent=2))
 
     print()
     print("=" * 70)
-    print("MAGIC native — entity-level anomaly AUC on 35 Mordor scenarios")
+    print("MAGIC native -- entity-level anomaly AUC on 35 Mordor scenarios")
     print("=" * 70)
     mg = magic_native()
     print(json.dumps(mg, indent=2))

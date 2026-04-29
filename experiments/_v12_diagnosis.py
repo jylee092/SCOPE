@@ -1,8 +1,4 @@
 """
-v12 심층 진단:
-(1) Description 품질 샘플 — 시나리오별 다양성
-(2) Top-5 miss 20% 실패 패턴 분석
-(3) Viterbi chain 엉뚱하게 고르는 원인 분석
 """
 import json, sys
 from pathlib import Path

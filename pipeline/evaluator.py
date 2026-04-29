@@ -1,16 +1,12 @@
 """
 Evaluation Harness
 
-라벨링된 annotation JSON + 파이프라인 결과(ttp_mapping, viterbi)를 읽어
-실험 지표를 계산한다.
 
-지표
 ----
 - Group-level: TTP Hit@1, Hit@K, MRR, Tactic accuracy
 - Scenario-level: Tactic-sequence Jaccard, Edit distance
 - Aggregate: macro-averaged precision/recall/F1 per tactic
 
-공개 API
 --------
 load_ground_truth(annotation_path)
 evaluate_ttp_mapping(gt, ttp_results)
@@ -47,7 +43,7 @@ def evaluate_ttp_mapping(
     ttp_results: list[dict],
     k: int = 5,
 ) -> dict:
-    """그룹별 TTP 매핑 정확도 계산."""
+    """...TTP ..."""
     metrics = []
     for r in ttp_results:
         gid = r["group_id"]
@@ -125,7 +121,7 @@ def evaluate_tactic_chain(
     gt: dict,
     viterbi_breakdown: list[dict],
 ) -> dict:
-    """Viterbi 결과 tactic 시퀀스를 GT와 비교."""
+    """Viterbi ...tactic ...GT..."""
     gt_tactics = []
     pred_tactics = []
 
@@ -166,7 +162,7 @@ def evaluate_tactic_chain(
 
 
 def aggregate_report(eval_list: list[dict], output_path: str | Path | None = None) -> dict:
-    """여러 시나리오의 evaluate 결과를 취합하여 aggregate metrics 생성."""
+    """...evaluate ...aggregate metrics ..."""
     n = len(eval_list)
     if n == 0:
         return {}
@@ -247,7 +243,7 @@ def aggregate_report(eval_list: list[dict], output_path: str | Path | None = Non
 
 
 def print_report(agg: dict) -> None:
-    """Aggregate report를 콘솔에 요약 출력."""
+    """Aggregate report..."""
     print("\n" + "═" * 75)
     print("  EVALUATION REPORT")
     print("═" * 75)

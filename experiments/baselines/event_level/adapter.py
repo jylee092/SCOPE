@@ -1,7 +1,5 @@
 """
-Event-Level Baseline — 이벤트 단위 FAISS 분류.
 
-GLIDE의 SentenceTransformer + FAISS 인덱스 재사용, 그룹 없이 개별 이벤트를 쿼리.
 """
 from __future__ import annotations
 
@@ -20,7 +18,7 @@ _MEANINGFUL_EIDS = {1, 4688, 4104, 10, 11, 12, 13, 22, 23, 8, 4698, 7045}
 
 
 def _event_to_text(obj: dict) -> str:
-    """이벤트 하나를 FAISS 쿼리용 텍스트로 직렬화."""
+    """...FAISS ..."""
     eid = obj.get("EventID") or obj.get("event_id")
     parts: list[str] = []
     if eid == 1 or eid == 4688:

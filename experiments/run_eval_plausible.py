@@ -1,21 +1,10 @@
 """
 Plausibility-based TTP evaluation.
 
-Per-group TTP 평가에서 scenario-fixed single GT 대신, 해당 시나리오의 attack flow
-(primary + alts + parent/child)에 속하는 모든 TID를 허용 집합으로 삼아 채점한다.
 
-즉 "anchor rule이 지정한 단일 TID"가 아니라 "로그가 보여주는 어느 공격 단계든 타당한
-매핑이면 정답"으로 인정한다. 같은 시나리오 안에서 다단계 공격이 섞여있는 경우에 의미 있음.
 
-지표
 ----
-- plausible_H@1 : pred top-1이 acceptable set에 들어가면 1
-- plausible_H@5 : pred top-5 중 하나라도 acceptable set에 들어가면 1
-- plausible_MRR : acceptable set 첫 매칭 rank의 reciprocal
 
-비교:
-- strict (evaluate_ttp_lenient): pred top-1 == auto_label의 단일 GT
-- plausible (여기): pred top-K 중 acceptable set 중 어느 것과도 매칭
 """
 from __future__ import annotations
 import csv, json, sys
@@ -35,7 +24,7 @@ MITRE_CSV = ROOT / "TTP_Data" / "Final_merged_mitre_attack_data.csv"
 
 
 def tid_family_match(pred: str, target: str) -> bool:
-    """pred와 target이 parent/child/동일 패밀리면 True."""
+    """pred...target...parent/child/...True."""
     if not pred or not target:
         return False
     if pred == target:
@@ -44,7 +33,7 @@ def tid_family_match(pred: str, target: str) -> bool:
 
 
 def plausibility_hit(pred_tids: list[str], acceptable: set[str], k: int) -> tuple[int, int, float]:
-    """pred top-K 중 acceptable set 어느 것과도 match하면 hit."""
+    """pred top-K ...acceptable set ...match...hit."""
     h1 = 0
     hk = 0
     rr = 0.0
@@ -63,10 +52,8 @@ _STRONG_REASONS = ("anchor-kw", "rule-exact", "rule-fam-strong")
 
 
 def _is_strong_tp(gt_note: str) -> bool:
-    """annotation의 gt_notes에서 강한 TP 카테고리 여부 판정.
+    """annotation...gt_notes...TP ...
 
-    strong = anchor에 공격 키워드 직접 매칭 or rule TID가 scenario expected와 정확/패밀리 일치.
-    weak   = supporting event에만 공격 키워드 있는 경우 (정황상 TP지만 anchor 자체는 모호).
     """
     if not gt_note:
         return False

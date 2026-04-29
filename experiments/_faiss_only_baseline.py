@@ -1,11 +1,7 @@
 """
 FAISS-only chain metrics baseline.
 
-목적: Viterbi 를 완전히 끄고 (각 그룹 = FAISS top-1 candidate) chain metrics
-측정. Viterbi 가 실제로 가치를 더하는지 비교하기 위한 냉정한 baseline.
 
-구현: viterbi_*.json 을 "each step = FAISS top-1" 로 덮어쓴 뒤 기존 eval 스크립트
-실행. 다른 파이프라인 변경 없음.
 """
 from __future__ import annotations
 import json, sys

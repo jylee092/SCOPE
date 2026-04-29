@@ -1,26 +1,12 @@
 """
-Stage 1: 자명 그룹 사전 라벨링.
 
-다음 두 부류는 LLM 검토 없이 자동 결정:
 
-1. **trivial-noise**: confidence==0 AND anchor 의 Image/CommandLine/ParentImage/
-   TargetObject 가 모두 nan/null AND sample_logs 중 의미 있는 텍스트 없음
    → gt_is_true_positive=False, gt_label_source="auto-trivial"
 
-2. **anchor-attacker-tool**: anchor.Image 에 시나리오의 명확한 attacker tool 이
-   포함 (e.g., esentutl.exe, ntdsutil.exe, mimikatz.exe, sharpview.exe)
-   → 임시로 시나리오의 primary technique 부여, gt_label_source="auto-anchor-tool"
-   (Stage 2 에서 LLM 이 검증·세분화 가능)
 
-나머지 그룹은 gt_*=None 으로 두고 Stage 2 (Claude LLM) 가 처리.
 
-산출
 ----
-- annotation.json 의 gt_* 필드를 위 결과로 갱신
-- gt_label_source, gt_step_index, gt_confidence 메타 필드 추가
-- output/labeling_state.json: 시나리오별 (n_trivial, n_anchor_tool, n_pending) 통계
 
-사용:
     cd Final_Code
     python experiments/stage1_prelabel.py
 """
@@ -37,12 +23,8 @@ sys.path.insert(0, str(ROOT))
 
 
 # ---------------------------------------------------------------------------
-# 시나리오 → primary attacker-tool anchor (실행 파일 이름) 매핑
-#   - anchor.Image basename 이 매치되면 high-confidence TP
-#   - 시나리오의 expected primary technique 으로 라벨
 # ---------------------------------------------------------------------------
 ATTACKER_TOOLS: dict[str, list[tuple[str, str]]] = {
-    # (basename, technique_id) — anchor 매치 시 부여
     "msf_record_mic": [
         ("payload.exe",   "T1123"),
     ],
@@ -196,7 +178,7 @@ def resolve_tactic(tid: str, tm: dict[str, str]) -> str:
 
 
 def scenario_key(scenario: str) -> str:
-    """annotation scenario 이름에서 timestamp 제거."""
+    """annotation scenario ...timestamp ..."""
     m = re.match(r"^(.*?)(?:_(?:20\d{2}[-T]?\d{2}[-T]?\d{2}\S*|\d{4,}))?$", scenario)
     stem = m.group(1) if m else scenario
     return re.sub(r"[_-]+(?:\d+)?$", "", stem)
@@ -221,7 +203,7 @@ def _norm(v) -> str:
 
 
 def is_trivial_noise(group: dict) -> bool:
-    """confidence==0 + anchor 텅 + sample_logs 무내용."""
+    """confidence==0 + anchor ...+ sample_logs ..."""
     if float(group.get("confidence") or 0) > 0:
         return False
     a = group.get("anchor") or {}
@@ -237,7 +219,7 @@ def is_trivial_noise(group: dict) -> bool:
 
 
 def matched_attacker_tool(group: dict, tools: list[tuple[str, str]]) -> tuple[str, str] | None:
-    """anchor.Image basename 이 attacker tool list 와 매치되면 (tool, tid) 반환."""
+    """anchor.Image basename ...attacker tool list ...tool, tid) ..."""
     a = group.get("anchor") or {}
     img = _norm(a.get("Image"))
     if not img:

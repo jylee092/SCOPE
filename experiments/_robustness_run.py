@@ -1,5 +1,5 @@
 """
-Q2 robustness — random log-drop experiment.
+Q2 robustness -- random log-drop experiment.
 
 For each scenario × drop_rate ∈ {0.10, 0.25, 0.50} × seed:
   1. Load the raw JSONL scenario file.
@@ -64,7 +64,7 @@ def make_dropped_scenarios(drop_rates: list[float], seeds: list[int],
                 kept = [l for l in lines
                         if rng.random() >= drop]
                 if not kept:
-                    # avoid empty scenarios — keep at least 1 event
+                    # avoid empty scenarios -- keep at least 1 event
                     kept = [lines[0]] if lines else []
                 with open(dst, "w", encoding="utf-8") as f:
                     f.writelines(kept)
@@ -73,7 +73,7 @@ def make_dropped_scenarios(drop_rates: list[float], seeds: list[int],
 
 
 # ---------------------------------------------------------------------------
-# Method runners — each returns dict {(scenario, drop, seed): tech_lcs}
+# Method runners -- each returns dict {(scenario, drop, seed): tech_lcs}
 # ---------------------------------------------------------------------------
 
 def _score_alerts_chain_lcs(result_path: Path) -> tuple[str, float] | None:
@@ -217,7 +217,7 @@ def run_shield(drop: float, seed: int) -> dict[str, float]:
 
 
 def run_scope(drop: float, seed: int) -> dict[str, float]:
-    """SCOPE — full pipeline with VITERBI_MAX_SKIP=2 (hole-bridging).
+    """SCOPE -- full pipeline with VITERBI_MAX_SKIP=2 (hole-bridging).
     Full LLM mode: cache hits use cached descriptions, misses call Gemini."""
     # We use main.py-equivalent steps inline so we can write to a custom dir.
     from pipeline.data_loader       import load_and_normalize

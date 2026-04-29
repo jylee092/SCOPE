@@ -1,5 +1,5 @@
 """
-Sigma rule evaluator — in-memory matching of SigmaHQ YAML rules against
+Sigma rule evaluator -- in-memory matching of SigmaHQ YAML rules against
 normalized Mordor/winlogbeat events.
 
 Scope: only Windows rules (rules/windows/**), supporting the modifiers and
@@ -218,7 +218,7 @@ def load_rules(rules_dir: Path,
 # ----------------------------------------------------------------------------
 
 def _logsource_matches(logsource: dict, event: dict) -> bool:
-    """Quick coarse filter — discard events that the rule's logsource cannot
+    """Quick coarse filter -- discard events that the rule's logsource cannot
     possibly produce. We are deliberately permissive on missing fields."""
     if not logsource:
         return True

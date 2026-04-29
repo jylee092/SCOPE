@@ -1,7 +1,5 @@
 """
-모든 baseline을 전체 시나리오에 대해 실행.
 
-사용:
     python experiments/baselines/run_all.py
     python experiments/baselines/run_all.py --baselines event_level llm_shield
     python experiments/baselines/run_all.py --scenarios atomic/collection
@@ -46,7 +44,7 @@ def main():
     ap.add_argument("--baselines", nargs="+", default=list(BASELINES.keys()),
                     choices=list(BASELINES.keys()))
     ap.add_argument("--scenarios", type=str, default=None,
-                    help="시나리오 경로 prefix 필터")
+                    help="...prefix ...")
     args = ap.parse_args()
 
     datasets = sorted(config.DATASET_FOLDER.rglob("*.json"))

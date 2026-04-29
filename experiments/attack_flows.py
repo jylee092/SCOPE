@@ -1,12 +1,7 @@
 """
 Reference attack flow per scenario.
 
-각 Mordor scenario 의 실제 공격 단계를 ordered list 로 정의.
-chain alignment 평가의 reference.
 
-각 step: (technique_id, tactic, optional_alternative_tids)
-- alternative_tids: 같은 단계가 다른 ATT&CK ID 로도 매핑될 수 있는 경우
-  (예: WMI persistence 는 T1546.003 이지만 T1047 으로 분류해도 인정)
 
 Mordor docs: https://github.com/OTRF/Security-Datasets
 """
@@ -294,7 +289,7 @@ ATTACK_FLOWS: dict[str, list[dict]] = {
 
 
 def get_flow(scenario: str) -> list[dict]:
-    """시나리오 이름 → attack flow. 정확히 일치 → prefix → contains 순으로 검색."""
+    """...attack flow. ...prefix → contains ..."""
     if scenario in ATTACK_FLOWS:
         return ATTACK_FLOWS[scenario]
     # try strip timestamp suffix
@@ -309,7 +304,7 @@ def get_flow(scenario: str) -> list[dict]:
 
 
 def all_acceptable_tids(flow: list[dict]) -> set[str]:
-    """flow 의 모든 단계에서 인정 가능한 tid (primary + alts)."""
+    """flow ...tid (primary + alts)."""
     tids: set[str] = set()
     for step in flow:
         tids.add(step["tid"])
@@ -324,4 +319,4 @@ if __name__ == "__main__":
         print(f"\n{name} ({len(flow)} steps):")
         for i, step in enumerate(flow, 1):
             alts = f" alts={step['alts']}" if step.get("alts") else ""
-            print(f"  {i}. {step['tid']:<12} ({step['tactic']:<22}) — {step['note']}{alts}")
+            print(f"  {i}. {step['tid']:<12} ({step['tactic']:<22}) -- {step['note']}{alts}")

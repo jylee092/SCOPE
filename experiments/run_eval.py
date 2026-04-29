@@ -1,17 +1,8 @@
 """
-Standalone evaluation driver for 1차 실험.
 
-main.py evaluate는 pandas가 필요한 전체 파이프라인을 import 하므로
-별도로 evaluator 모듈만 사용하는 드라이버.
 
-추가 기능
 ---------
-- candidate `tactic` 필드가 비어있으면 MITRE CSV에서 채움
-- **lenient Hit@K**: pred TID 가 GT TID 의 부모/자식이면 hit 인정
-  (e.g., pred=T1087, GT=T1087.001 → 인정)
-- per-scenario TTP Hit/MRR + chain F1 표 출력
 
-사용:
     cd Final_Code
     python experiments/run_eval.py
 """
@@ -76,7 +67,7 @@ def evaluate_ttp_lenient(
     k: int = 5,
     confidence_filter: float | None = None,
 ) -> dict:
-    """Strict + lenient Hit/MRR. 두 metric 동시 계산."""
+    """Strict + lenient Hit/MRR. ...metric ..."""
     metrics = []
     for r in ttp_results:
         gid = r["group_id"]
@@ -86,9 +77,6 @@ def evaluate_ttp_lenient(
         if not truth["is_tp"]:
             continue
 
-        # confidence_filter: rule confidence 컷오프 (auto_label 의 group confidence)
-        # ttp_results 에는 confidence 가 없으므로 group_id 로 매칭하기 어려움.
-        # 별도 처리 필요 시 호출자가 ttp_results 를 사전 필터.
 
         gt_tid = truth["technique_id"]
         candidates = r.get("similar_techniques", [])
@@ -147,7 +135,7 @@ def filter_ttp_by_confidence(
     annotation: dict,
     min_conf: float,
 ) -> list[dict]:
-    """annotation 의 confidence 필드로 ttp_results 필터."""
+    """annotation ...confidence ...ttp_results ..."""
     conf_map = {g["group_id"]: float(g.get("confidence") or 0)
                 for g in annotation.get("groups", [])}
     return [r for r in ttp_results if conf_map.get(r["group_id"], 0) >= min_conf]
@@ -201,7 +189,6 @@ def run_one(min_conf: float, label: str) -> None:
             "chain_f1":       c.get("f1", 0),
         })
 
-    # Aggregate (간이 계산)
     ttps = [r["ttp"] for r in eval_results if r.get("ttp", {}).get("n", 0) > 0]
     chains = [r["chain"] for r in eval_results if "chain" in r]
     n_groups = sum(t["n"] for t in ttps)
@@ -223,7 +210,6 @@ def run_one(min_conf: float, label: str) -> None:
           f"P={_avg(chains,'precision'):.4f}  R={_avg(chains,'recall'):.4f}  "
           f"F1={_avg(chains,'f1'):.4f}")
 
-    # 콘솔: 시나리오별 표 (strict + lenient)
     print()
     print("─" * 130)
     print(f"  {'scenario':<55s} {'nTP':>4s}  "
@@ -239,7 +225,6 @@ def run_one(min_conf: float, label: str) -> None:
               f"{row['chain_f1']:>5.2f}")
     print("─" * 130)
 
-    # 저장
     suffix = label.replace(" ", "_")
     out_json = OUTPUT_DIR / f"per_scenario_eval_{suffix}.json"
     out_csv  = OUTPUT_DIR / f"per_scenario_eval_{suffix}.csv"

@@ -1,5 +1,5 @@
 """
-SHIELD §3 — Graph Analyzer.
+SHIELD §3 -- Graph Analyzer.
 
 Implements the four steps of the graph analyzer (Gandhi et al., SHIELD 2025
 §3): (a) initial-infection-point detection on socket nodes, (b) suspicious
@@ -11,10 +11,10 @@ Adaptations for OTRF/Mordor:
   we treat **non-private** destination IPs as external. Since some OTRF
   scenarios are entirely local-only (cmd/ntdsutil/wevtutil), if no external
   sockets exist we fall back to anomalous *processes themselves* as the
-  propagation seed — this preserves the algorithm semantics ("information
+  propagation seed -- this preserves the algorithm semantics ("information
   flow originates from suspicious endpoints") rather than producing an empty
   graph.
-- Node types: process / file / registry / socket / pipe / module — broader
+- Node types: process / file / registry / socket / pipe / module -- broader
   than the paper's process/file/socket triple to fit Windows Sysmon.
 """
 from __future__ import annotations
@@ -155,7 +155,7 @@ def build_provenance_graph(df: pd.DataFrame) -> nx.MultiDiGraph:
                 if not g.has_node(nn): g.add_node(nn, **na)
                 g.add_edge(pn, nn, event_type="connect", ts=ts, eid=eid)
 
-        # DNS queries — treat as socket-like
+        # DNS queries -- treat as socket-like
         elif eid == 22:
             host = _str(row.get("QueryName"))
             if host:
@@ -203,7 +203,7 @@ def build_provenance_graph(df: pd.DataFrame) -> nx.MultiDiGraph:
 
 
 # ---------------------------------------------------------------------------
-# §3 Graph Analyzer (a) initial infection points — sockets external to host
+# §3 Graph Analyzer (a) initial infection points -- sockets external to host
 # ---------------------------------------------------------------------------
 
 def initial_infection_points(g: nx.MultiDiGraph) -> set[str]:
@@ -250,7 +250,7 @@ def propagate_tags(g: nx.MultiDiGraph, seeds: Iterable[str]) -> set[str]:
 
 
 # ---------------------------------------------------------------------------
-# §3 Graph Analyzer (c) prune untagged nodes — Eq. 4
+# §3 Graph Analyzer (c) prune untagged nodes -- Eq. 4
 # ---------------------------------------------------------------------------
 
 def prune_untagged(g: nx.MultiDiGraph, tagged: set[str]) -> nx.MultiDiGraph:
@@ -288,7 +288,7 @@ def louvain_communities(g: nx.MultiDiGraph, seed: int = 0) -> dict[int, list[str
 
 
 # ---------------------------------------------------------------------------
-# Public entry point — full graph-analyzer pipeline
+# Public entry point -- full graph-analyzer pipeline
 # ---------------------------------------------------------------------------
 
 @dataclass

@@ -1,8 +1,5 @@
 """
-Section 3-(1). 그룹 → 7개 카테고리 Feature 추출
 
-Rule 파라미터 없이 이벤트 로그 필드 존재 여부만으로 동작.
-카테고리: execution_context, command_script, identity, temporal,
           network, persistence, evasion
 """
 from __future__ import annotations
@@ -15,10 +12,9 @@ import pandas as pd
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# 유틸
 # ──────────────────────────────────────────────────────────────────────────────
 def _v(row: pd.Series, *keys) -> Optional[str]:
-    """여러 후보 필드명을 순서대로 시도해 첫 유효값."""
+    """..."""
     for k in keys:
         val = row.get(k)
         if val is None:
@@ -45,7 +41,6 @@ def _contains_any(text: Optional[str], patterns: list[str]) -> list[str]:
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# 공통 기준 상수
 # ──────────────────────────────────────────────────────────────────────────────
 _PERSISTENCE_REG_KEYWORDS = [
     "currentversion\\run", "currentversion\\runonce",
@@ -138,7 +133,6 @@ def _extract_execution_context(grp: pd.DataFrame) -> dict:
             })
             seen.add(key)
 
-    # fallback: 어느 것도 없으면 Image 필드로
     if not chains:
         seen_imgs: set[str] = set()
         for _, r in grp.iterrows():
@@ -433,10 +427,9 @@ def _extract_evasion(grp: pd.DataFrame) -> dict:
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# 공개 API
 # ──────────────────────────────────────────────────────────────────────────────
 def _extract_anchor_detail(df: pd.DataFrame, anchor_idx) -> dict:
-    """Anchor event의 핵심 필드를 뽑아 LLM이 rule 매칭 이유를 바로 볼 수 있게 한다."""
+    """Anchor event...LLM...rule ..."""
     if anchor_idx is None or anchor_idx not in df.index:
         return {}
     r = df.loc[anchor_idx]
@@ -459,7 +452,7 @@ def _extract_anchor_detail(df: pd.DataFrame, anchor_idx) -> dict:
 
 
 def extract_features(group: dict, df: pd.DataFrame) -> dict:
-    """그룹 하나에서 7개 카테고리 Feature 추출."""
+    """...7...Feature ..."""
     idxs       = group.get("all_idxs") or group.get("confirmed_idxs", [])
     anchor_idx = group.get("anchor_idx")
 
@@ -492,5 +485,5 @@ def extract_all(groups: list[dict], df: pd.DataFrame) -> list[dict]:
         feat = extract_features(g, df)
         results.append(feat)
         print(f"  [{feat['group_id']}] {feat['technique_id']}  confidence={feat['confidence']}")
-    print(f"\n총 {len(results)}개 그룹 특징 추출 완료")
+    print(f"\n...{len(results)}...")
     return results

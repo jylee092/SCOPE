@@ -1,11 +1,7 @@
 """
 Signature rerank weight (w_sig) sweep.
 
-search_similar 안의 signature-based multiplicative boost 가중치를 바꿔가며
-FAISS+BM25+signature → Viterbi → eval 을 반복 수행.
 
-LLM description 및 FAISS 인덱스는 캐시에서 재사용, 매 iter 는 search_similar
-의 rerank 만 다시 돈다.
 """
 from __future__ import annotations
 import csv, json, sys, time
@@ -29,8 +25,6 @@ WEIGHT_GRID = [0.0, 0.4, 0.8, 1.2, 1.6]
 
 def run_main_pipeline_for_all_scenarios() -> int:
     """
-    main.py run_all 과 동일한 iteration 이지만 in-process 로 수행하여
-    싱글톤 (FAISS index, embed model, semantic scorer) 을 공유한다.
     """
     from main import run_pipeline  # lazy import
     datasets = sorted(config.DATASET_FOLDER.rglob("*.json"))
@@ -77,7 +71,6 @@ def main():
         ok = run_main_pipeline_for_all_scenarios()
         print(f"  pipeline: {ok} scenarios OK ({time.time()-t0:.0f}s)")
 
-        # annotation 은 매 run 마다 재생성되므로 auto-label 로 GT 복구.
         print("  auto-labeling...")
         auto_label_main()
 

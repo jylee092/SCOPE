@@ -1,13 +1,7 @@
 """
-Ablation 변종 실행 함수들.
 
-각 변종은 main.py의 파이프라인을 재구성하지 않고 pipeline/* 모듈을 재조합하여
-독립적으로 실행한다. 출력은 variant별 subfolder로 분리되어 full과 충돌하지 않음.
 
 Variants:
-  full         : 전체 프레임워크 (baseline) — 참고용, 실제로는 main.py로 실행 권장
-  no_grouping  : 룰 우회, 단일 이벤트 그룹 → LLM → FAISS → Viterbi
-  no_llm       : LLM description 생략, feature_to_text로 FAISS 쿼리
   top1_only    : Viterbi beam_k=1, max_skip=0 (greedy)
 """
 from __future__ import annotations
@@ -16,7 +10,6 @@ import json
 import sys
 from pathlib import Path
 
-# Final_Code/를 sys.path에 추가
 _FINAL_CODE = Path(__file__).resolve().parent.parent.parent
 if str(_FINAL_CODE) not in sys.path:
     sys.path.insert(0, str(_FINAL_CODE))
@@ -41,21 +34,21 @@ VARIANT_NAMES = ["full", "no_grouping", "no_llm", "top1_only", "no_shared_entity
 
 
 def _variant_output_dir(variant: str, dataset_rel: Path) -> Path:
-    """변종별 출력 폴더: output/ablation_<variant>/<scenario_path>/."""
+    """...: output/ablation_<variant>/<scenario_path>/."""
     if variant == "full":
         return config.OUTPUT_BASE_DIR / dataset_rel
     return config.OUTPUT_BASE_DIR / f"ablation_{variant}" / dataset_rel
 
 
 def _make_groups(variant: str, final_df, rule_list) -> list[dict]:
-    """variant에 따라 그룹 생성 방식 분기."""
+    """variant..."""
     if variant == "no_grouping":
-        print("  [ablation] no_grouping — 단일 이벤트 그룹 생성")
+        print("  [ablation] no_grouping -- ...")
         return build_solo_groups(final_df)
 
     use_shared = (variant != "no_shared_entity") and config.GROUPING_USE_SHARED_ENTITY
     if variant == "no_shared_entity":
-        print("  [ablation] no_shared_entity — lineage-only grouping")
+        print("  [ablation] no_shared_entity -- lineage-only grouping")
 
     groups = run_grouping(
         df                = final_df,
@@ -74,7 +67,7 @@ def _make_groups(variant: str, final_df, rule_list) -> list[dict]:
 
 
 def run_variant_on_scenario(variant: str, dataset_path: Path) -> dict:
-    """하나의 (variant, scenario) 조합을 실행하고 결과 경로들을 dict로 반환."""
+    """...variant, scenario) ...dict..."""
     assert variant in VARIANT_NAMES
 
     rel = dataset_path.relative_to(config.DATASET_FOLDER).with_suffix("")
@@ -93,10 +86,10 @@ def run_variant_on_scenario(variant: str, dataset_path: Path) -> dict:
     # 2) Group
     rule_list = load_rules(config.RULE_FOLDER) if variant != "no_grouping" else []
     groups = _make_groups(variant, final_df, rule_list)
-    print(f"  그룹 수: {len(groups)}")
+    print(f"  ...: {len(groups)}")
 
     if not groups:
-        print("  (그룹 없음 — 스킵)")
+        print("  (...-- ...")
         return {"variant": variant, "scenario": stem, "groups": 0, "skipped": True}
 
     # 3) Feature
@@ -105,10 +98,9 @@ def run_variant_on_scenario(variant: str, dataset_path: Path) -> dict:
 
     # 4) TTP mapping
     if not config.GEMINI_API_KEY:
-        print("  ⚠ GEMINI_API_KEY 미설정 — TTP 매핑 스킵")
+        print("  ⚠ GEMINI_API_KEY ...-- TTP ...")
         return {"variant": variant, "scenario": stem, "groups": len(groups), "skipped": True}
 
-    # no_grouping 모드는 그룹 수가 많아 샘플 캡 무시
     cap = config.SAMPLE_PER_TECHNIQUE
     if cap > 0 and variant != "no_grouping":
         from collections import defaultdict

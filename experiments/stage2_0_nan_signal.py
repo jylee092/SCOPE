@@ -1,10 +1,5 @@
 """
-Stage 2.0: nan-anchor 그룹의 cmd entries 에 attack signal 이 있을 때 자동 라벨.
 
-규칙:
-1. cls_cmdline 패턴 매치 → TP with pattern's tid (Stage 1.5 재활용)
-2. attacker keyword 매치 + rule_tid 가 plausible → TP with rule_tid
-3. 그 외 → benign
 """
 from __future__ import annotations
 import json, sys, csv

@@ -1,7 +1,6 @@
 """
 Re-run Viterbi only using cached ttp_mapping + features. Skip LLM/FAISS stages.
 
-사용: python experiments/_rerun_viterbi_only.py
 """
 from __future__ import annotations
 import json, sys
@@ -60,11 +59,9 @@ def run_one(dataset_path: Path):
                 scored.append((boosted, i, c))
             scored.sort(key=lambda x: -x[0])
             reranked = [c for _, _, c in scored] + cands[wide:]
-            # rank 번호 갱신
             for new_rank, c in enumerate(reranked, 1):
                 c["rank"] = new_rank
             r["similar_techniques"] = reranked
-            # conf margin 도 재계산
             if len(reranked) >= 2:
                 r["confidence_margin"] = float(
                     reranked[0].get("p_ttp", 0) - reranked[1].get("p_ttp", 0)

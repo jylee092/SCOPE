@@ -1,9 +1,7 @@
 """
-Stage 1.8: 명확한 attack 도구 anchor 자동 라벨.
 
-남은 pending 의 anchor 가 다음과 같으면 시나리오 context 와 결합해 자동 TP.
 
-ANCHOR_TID_MAP — anchor.basename → (tid, tactic_step_hint)
+ANCHOR_TID_MAP -- anchor.basename → (tid, tactic_step_hint)
   - winx64_payload.exe / .*payload.exe → T1059 Execution
   - happy_image.jpeg.exe → T1036.005 Masquerading
   - whoami.exe → T1033 System Owner Discovery
@@ -14,7 +12,6 @@ ANCHOR_TID_MAP — anchor.basename → (tid, tactic_step_hint)
   - logman.exe → T1562.002 Disable Logging (only if used to clear)
   - cscript.exe → T1059.005 VBS Execution
 
-cmd.exe는 시나리오 context 가 필요해서 별도 처리.
 """
 from __future__ import annotations
 import json, sys, csv
@@ -40,7 +37,7 @@ ANCHOR_TID_MAP: dict[str, tuple[str, float]] = {
     "logman.exe":           ("T1562.002", 0.80),
     "netsh.exe":            ("T1059.003", 0.65),
     "consent.exe":          ("T1548.002", 0.70),
-    "cmd.exe":              ("T1059.003", 0.75),  # generic shell — assume attacker
+    "cmd.exe":              ("T1059.003", 0.75),  # generic shell -- assume attacker
 }
 
 

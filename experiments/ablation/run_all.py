@@ -1,7 +1,5 @@
 """
-4개 ablation variant를 모든 시나리오에 대해 순차 실행.
 
-사용:
     cd Final_Code
     python experiments/ablation/run_all.py
     python experiments/ablation/run_all.py --variants no_grouping no_llm
@@ -37,16 +35,16 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--variants", nargs="+", default=VARIANT_NAMES,
                     choices=VARIANT_NAMES,
-                    help="실행할 variant (기본: 전체)")
+                    help="...variant (...: ...")
     ap.add_argument("--scenarios", type=str, default=None,
-                    help="시나리오 경로 prefix 필터 (예: atomic/collection)")
+                    help="...prefix ...: atomic/collection)")
     ap.add_argument("--output", type=str, default="experiments/ablation/run_summary.json",
-                    help="실행 요약 저장 경로")
+                    help="...")
     args = ap.parse_args()
 
     datasets = discover_datasets(args.scenarios)
     if not datasets:
-        print("시나리오 없음")
+        print("...")
         return
 
     print(f"\n{'='*75}")
@@ -65,7 +63,7 @@ def main():
                 summary.append(r)
             except Exception as e:
                 err_msg = f"{type(e).__name__}: {e}"
-                print(f"\n  ✗ {variant}/{ds.name} 실패 — {err_msg}")
+                print(f"\n  ✗ {variant}/{ds.name} ...-- {err_msg}")
                 traceback.print_exc()
                 failed.append({"variant": variant, "scenario": ds.stem, "error": err_msg})
 
@@ -75,8 +73,8 @@ def main():
         json.dump({"runs": summary, "failed": failed}, f, ensure_ascii=False, indent=2)
 
     print(f"\n{'='*75}")
-    print(f"  완료: 성공 {len(summary)} / 실패 {len(failed)}")
-    print(f"  요약: {output_path}")
+    print(f"  ...: ...{len(summary)} / ...{len(failed)}")
+    print(f"  ...: {output_path}")
     print(f"{'='*75}")
 
 

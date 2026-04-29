@@ -1,5 +1,5 @@
 """
-DeepAG (TID-adapted) — Transformer encoder + bi-directional LSTM heads.
+DeepAG (TID-adapted) -- Transformer encoder + bi-directional LSTM heads.
 
 Faithful to the architecture of Li et al. "DeepAG: Attack Graph Construction
 and Threats Prediction with Bi-Directional Deep Learning" (TDSC 2023).

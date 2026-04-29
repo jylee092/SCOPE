@@ -3,12 +3,12 @@ Q4 ablation runner: re-runs SCOPE on all 35 scenarios with one component
 disabled at a time, then reports macro technique-LCS for each variant.
 
 Variants (matching Table tab:ablation in the paper):
-  no_causal      — W_CAU = 0 (only tactical + semantic in fusion)
-  no_semantic    — W_SEM = 0 (only tactical + causal)
-  no_tactical    — W_TAC = 0 (only semantic + causal)
-  top1_only      — VITERBI_BEAM_K = 1 (greedy, no distributional mapping)
-  no_shared_ent  — GROUPING_USE_SHARED_ENTITY = False (lineage only) — heavy
-  no_grouping    — single-event groups via build_solo_groups          — heavy
+  no_causal      -- W_CAU = 0 (only tactical + semantic in fusion)
+  no_semantic    -- W_SEM = 0 (only tactical + causal)
+  no_tactical    -- W_TAC = 0 (only semantic + causal)
+  top1_only      -- VITERBI_BEAM_K = 1 (greedy, no distributional mapping)
+  no_shared_ent  -- GROUPING_USE_SHARED_ENTITY = False (lineage only) -- heavy
+  no_grouping    -- single-event groups via build_solo_groups          -- heavy
 
 Output: output/_ablation/<variant>/<scenario>/<scenario>_viterbi.json
        + a single _ablation_scores.json summary at output/_ablation/.

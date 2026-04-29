@@ -3,7 +3,7 @@ LLM-as-judge per-group TTP evaluation.
 
 For each TP group, give the LLM the raw log evidence (anchor + sample_logs)
 plus (a) Viterbi's final technique pick, and (b) top-5 FAISS candidates.
-The LLM judges whether the prediction matches the evidence — this is the
+The LLM judges whether the prediction matches the evidence -- this is the
 ground-truth we actually care about, replacing the hardcoded attack_flows.py
 reference with a human-like semantic verdict.
 
@@ -35,12 +35,9 @@ import config
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# Gemini 호출 (mitre_mapper.py의 retry 로직 재사용)
 # ──────────────────────────────────────────────────────────────────────────────
 import google.generativeai as genai
 
-# Judge 전용 모델 — 파이프라인 LLM(gemini-2.0-flash)과 별도 quota 활용.
-# gemini-2.5-flash-lite는 빠르고 저렴해 대량 판정에 적합.
 _JUDGE_MODEL_NAME = "models/gemini-2.5-flash-lite"
 genai.configure(api_key=config.GEMINI_API_KEY)
 _JUDGE_MODEL = genai.GenerativeModel(_JUDGE_MODEL_NAME)
@@ -151,7 +148,6 @@ def build_judge_prompt(
     cands_block = "\n".join(_fmt_candidate(c) for c in top5_cands[:5])
     logs_block = "\n".join(_fmt_log(s) for s in sample_logs[:10]) or "  (none)"
 
-    # pred_tid name/desc 찾기
     pred_cand = next((c for c in top5_cands if c.get("technique_id") == pred_tid), None)
     if pred_cand:
         pred_name = pred_cand.get("technique_name", "")

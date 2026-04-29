@@ -115,7 +115,7 @@ reconstruct the most likely MITRE ATT&CK attack chain as an ordered list of
 (technique_id, tactic) pairs for the underlying attack steps.
 
 Rules:
-- You are NOT restricted to the order of groups — consolidate consecutive
+- You are NOT restricted to the order of groups -- consolidate consecutive
   groups that show the same attack step. Drop groups that appear to be benign
   system noise (don't include them in the chain).
 - Be specific with technique IDs (use sub-techniques when possible, e.g., T1003.001

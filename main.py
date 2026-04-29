@@ -1,14 +1,7 @@
 """
-EDR Agent Prototype — End-to-End Pipeline
+EDR Agent Prototype -- End-to-End Pipeline
 
-실행 순서:
-    1. 이벤트 로드 + 정규화 (pipeline.data_loader)
-    2. Rule 기반 그룹핑 + 병합 (pipeline.rule_matcher)
-    3. 7-카테고리 Feature 추출 + 정제 (pipeline.feature_extractor, feature_sanitizer)
-    4. LLM description 생성 + FAISS 유사도 검색 (pipeline.mitre_mapper)
-    5. 시간 정렬 + Viterbi Tactic 시퀀스 (pipeline.attack_chain)
 
-사용:
     cd "Final Code"
     export GEMINI_API_KEY=...
     python main.py
@@ -51,23 +44,20 @@ from pipeline.evaluator         import (
 def run_pipeline():
     config.OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    # 0. 이미 완료된 시나리오 스킵 ───────────────────────────────────────
     if (config.TTP_MAPPING_JSON_PATH.exists() and
             config.VITERBI_JSON_PATH.exists()):
-        print(f"  [skip] 이미 완료됨: {config.DATASET_NAME}")
+        print(f"  [skip] ...: {config.DATASET_NAME}")
         return
 
-    # 1. 데이터 로드 + 정규화 ────────────────────────────────────────────
     print("\n" + "═" * 75)
-    print("  [1/5] 데이터 로드 및 정규화")
+    print("  [1/5] ...")
     print("═" * 75)
     final_df = load_and_normalize(str(config.DATASET_FILE))
     final_df.to_csv(config.FINALE_CSV_PATH, index=False)
-    print(f"\n  저장: {config.FINALE_CSV_PATH}")
+    print(f"\n  ...: {config.FINALE_CSV_PATH}")
 
-    # 2. Rule 기반 그룹핑 ─────────────────────────────────────────────────
     print("\n" + "═" * 75)
-    print("  [2/5] Rule 기반 그룹핑")
+    print("  [2/5] Rule ...")
     print("═" * 75)
     rule_list = load_rules(config.RULE_FOLDER)
     groups = run_grouping(
@@ -83,22 +73,19 @@ def run_pipeline():
     )
     n_before = len(groups)
     groups = merge_same_anchor(groups)
-    print(f"  same-anchor 병합: {n_before} → {len(groups)}")
+    print(f"  same-anchor ...: {n_before} → {len(groups)}")
 
     groups = merge_shared_supporting(
         groups, final_df,
         overlap_threshold=config.MERGE_OVERLAP_THRESHOLD,
     )
 
-    # filter_passed=False 그룹 드롭 — rule anchor EID는 맞지만 filter 조건 미충족
-    # (e.g., T1112 registry anchor인데 TargetObject가 핵심 경로가 아님) 을 LLM 분석에서 제외.
     if getattr(config, "DROP_FILTER_FAILED_GROUPS", False):
         n_before = len(groups)
         groups = [g for g in groups if g.get("filter_passed", True)]
         if len(groups) < n_before:
-            print(f"  filter_passed=False 드롭: {n_before} → {len(groups)}")
+            print(f"  filter_passed=False ...: {n_before} → {len(groups)}")
 
-    # 하드 그룹 상한 — O(N²) 폭발 방지. 초과 시 technique별 라운드로빈 + confidence 내림차순.
     if len(groups) > config.MAX_GROUPS_PER_SCENARIO:
         by_tid: dict[str, list] = defaultdict(list)
         for g in groups:
@@ -119,37 +106,34 @@ def run_pipeline():
             if not added:
                 break
             i += 1
-        print(f"\n  ⚠ 그룹 {len(groups)} → {len(truncated)}개로 상한 적용 "
+        print(f"\n  ⚠ ...{len(groups)} → {len(truncated)}..."
               f"(cap={config.MAX_GROUPS_PER_SCENARIO})")
         groups = truncated
 
-    print(f"\n  최종 그룹 수: {len(groups)}")
+    print(f"\n  ...: {len(groups)}")
     print_groups(groups)
 
-    # 2.5. Annotation 템플릿 생성 ────────────────────────────────────────
     generate_template(
         groups, final_df,
         config.ANNOTATION_JSON_PATH,
         scenario_name=config.DATASET_NAME,
     )
 
-    # 3. Feature 추출 + 정제 ─────────────────────────────────────────────
     print("\n" + "═" * 75)
-    print("  [3/5] Feature 추출 + 정제")
+    print("  [3/5] Feature ...+ ...")
     print("═" * 75)
     all_features = extract_all(groups, final_df)
     with open(config.FEATURE_RESULT_JSON_PATH, "w", encoding="utf-8") as f:
         json.dump(all_features, f, ensure_ascii=False, indent=2)
-    print(f"  저장: {config.FEATURE_RESULT_JSON_PATH}")
+    print(f"  ...: {config.FEATURE_RESULT_JSON_PATH}")
 
     all_features_sanitized = [sanitize(f) for f in all_features]
 
-    # 4. LLM 분석 + MITRE 유사도 ─────────────────────────────────────────
     print("\n" + "═" * 75)
-    print("  [4/5] LLM description + FAISS MITRE 매핑")
+    print("  [4/5] LLM description + FAISS MITRE ...")
     print("═" * 75)
     if not config.GEMINI_API_KEY:
-        print("  ⚠ GEMINI_API_KEY 미설정 — 4단계 스킵")
+        print("  ⚠ GEMINI_API_KEY ...-- 4...")
         return
 
     cap = config.SAMPLE_PER_TECHNIQUE
@@ -163,9 +147,8 @@ def run_pipeline():
             if count_by_tid[tid] < cap:
                 sampled.append(f)
                 count_by_tid[tid] += 1
-    print(f"  전체 {len(all_features_sanitized)}개 → 샘플 {len(sampled)}개 (cap={cap})")
+    print(f"  ...{len(all_features_sanitized)}...{len(sampled)}...cap={cap})")
 
-    # Cross-encoder rerank는 attack_chain.get_semantic_scorer의 CE 모델을 재사용.
     ce_for_rerank = None
     if getattr(config, "USE_CE_EMISSION_RERANK", True):
         sem_scorer_for_ce = get_semantic_scorer(
@@ -174,7 +157,7 @@ def run_pipeline():
     )
         ce_for_rerank = getattr(sem_scorer_for_ce, "_model", None)
         if ce_for_rerank is None:
-            print("  [warn] CE 모델 핸들을 못 찾음 — emission rerank 비활성")
+            print("  [warn] CE ...-- emission rerank ...")
 
     results = analyze(
         sampled,
@@ -195,7 +178,7 @@ def run_pipeline():
     )
     with open(config.TTP_MAPPING_JSON_PATH, "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
-    print(f"\n  저장: {config.TTP_MAPPING_JSON_PATH}")
+    print(f"\n  ...: {config.TTP_MAPPING_JSON_PATH}")
 
     # 5. Top-K Viterbi + Hole-Bridging ─────────────────────────────────────
     print("\n" + "═" * 75)
@@ -204,7 +187,6 @@ def run_pipeline():
     sorted_results = sort_results_by_time(results, final_df)
 
     # ── Confidence gate ───────────────────────────────────────────────────
-    # Top-1 similarity가 낮은 "애매한" 그룹은 Viterbi 체인에서 제외 (노이즈 억제).
     min_sim_gate = getattr(config, "VITERBI_MIN_SIM_GATE", 0.0)
     max_after_gate = getattr(config, "VITERBI_MAX_GROUPS_AFTER_GATE", 0)
     if min_sim_gate > 0:
@@ -217,7 +199,6 @@ def run_pipeline():
                 filtered.append(r)
         print(f"  Confidence gate (sim>={min_sim_gate}): {n_before} → {len(filtered)}")
         if max_after_gate > 0 and len(filtered) > max_after_gate:
-            # top-1 sim 내림차순으로 상위 max_after_gate만 유지, 원래 시간 순서 보존
             scored = [(i, float(r.get("similar_techniques",[{}])[0].get("similarity",0)))
                       for i, r in enumerate(filtered)]
             scored.sort(key=lambda x: -x[1])
@@ -227,11 +208,9 @@ def run_pipeline():
         sorted_results = filtered
     tactic_map     = load_tactic_map(str(config.MITRE_CSV_PATH))
 
-    # feature dict를 group_id → features 맵으로 구성 (causal scoring용)
     features_by_gid = {f["group_id"]: f for f in all_features}
     group_nodes = build_group_nodes(sorted_results, tactic_map, features_by_gid)
 
-    # Multi-dimensional transition scorer 구성
     tac_scorer = TacticalScorer(anomaly_threshold=config.TACTIC_ANOMALY_THRESHOLD)
 
     sem_scorer = None
@@ -259,7 +238,6 @@ def run_pipeline():
         self_loop_tid_penalty=getattr(config, "SELF_LOOP_TID_PENALTY", 1.0),
     )
 
-    # Campaign library 로드 (novelty scoring)
     campaigns = load_campaign_library(str(config.CAMPAIGN_FOLDER), tactic_map)
 
     viterbi_result = topk_viterbi(
@@ -294,15 +272,15 @@ def run_pipeline():
 
     with open(config.VITERBI_JSON_PATH, "w", encoding="utf-8") as f:
         json.dump(viterbi_result.score_breakdown, f, ensure_ascii=False, indent=2)
-    print(f"  저장: {config.VITERBI_JSON_PATH}")
+    print(f"  ...: {config.VITERBI_JSON_PATH}")
 
 
 def run_all() -> None:
-    """DATASET_FOLDER 안의 모든 .json을 순회하며 파이프라인 실행.
-    실패한 데이터셋은 건너뛰고, 마지막에 실패 목록을 출력."""
+    """Iterate every *.json scenario under DATASET_FOLDER and run the
+    end-to-end pipeline. Failures are collected and reported at the end."""
     datasets = sorted(config.DATASET_FOLDER.rglob("*.json"))
     if not datasets:
-        print(f"데이터셋 없음: {config.DATASET_FOLDER}")
+        print(f"...: {config.DATASET_FOLDER}")
         return
 
     total = len(datasets)
@@ -319,25 +297,25 @@ def run_all() -> None:
             run_pipeline()
         except Exception as e:
             err = f"{type(e).__name__}: {e}"
-            print(f"\n  ✗ '{rel_label}' 실패 — {err}")
+            print(f"\n  ✗ '{rel_label}' ...-- {err}")
             traceback.print_exc()
             failed.append((rel_label, err))
 
     print("\n" + "═" * 75)
-    print("  전체 실행 요약")
+    print("  ...")
     print("═" * 75)
-    print(f"  총 {total}개 중 성공 {total - len(failed)}개 / 실패 {len(failed)}개")
+    print(f"  ...{total}...{total - len(failed)}...{len(failed)}...")
     if failed:
-        print("\n  실패 목록:")
+        print("\n  ...:")
         for name, err in failed:
             print(f"    - {name}  ({err})")
 
 
 def run_evaluate() -> None:
-    """라벨링 완료된 annotation + 파이프라인 결과를 읽어 평가 지표 계산."""
+    """...annotation + ..."""
     datasets = sorted(config.DATASET_FOLDER.rglob("*.json"))
     if not datasets:
-        print(f"데이터셋 없음: {config.DATASET_FOLDER}")
+        print(f"...: {config.DATASET_FOLDER}")
         return
 
     eval_results: list[dict] = []
@@ -353,7 +331,7 @@ def run_evaluate() -> None:
 
         gt = load_ground_truth(ann_path)
         if not gt:
-            print(f"  [SKIP] {config.DATASET_NAME}: annotation 라벨 없음")
+            print(f"  [SKIP] {config.DATASET_NAME}: annotation ...")
             continue
 
         scenario_eval = {"scenario": config.DATASET_NAME}
@@ -372,7 +350,7 @@ def run_evaluate() -> None:
 
         with open(config.EVAL_JSON_PATH, "w", encoding="utf-8") as f:
             json.dump(scenario_eval, f, ensure_ascii=False, indent=2)
-        print(f"  {config.DATASET_NAME}: 평가 완료 → {config.EVAL_JSON_PATH}")
+        print(f"  {config.DATASET_NAME}: ...{config.EVAL_JSON_PATH}")
 
     if eval_results:
         agg = aggregate_report(
@@ -381,7 +359,7 @@ def run_evaluate() -> None:
         )
         print_report(agg)
     else:
-        print("평가 가능한 시나리오 없음. annotation 라벨링을 먼저 완료하세요.")
+        print("...annotation ...")
 
 
 if __name__ == "__main__":
@@ -389,7 +367,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "mode", nargs="?", default="run",
         choices=["run", "evaluate"],
-        help="run: 파이프라인 실행 (기본), evaluate: 라벨링된 GT로 평가",
+        help="run: ...evaluate: ...GT...",
     )
     args = parser.parse_args()
 

@@ -116,7 +116,7 @@ class ShieldAdapter(BaselineAdapter):
         if filtered_df.empty or len(filtered_df) < 50 or len(df) < 1000:
             reason = ("empty" if filtered_df.empty
                       else f"too sparse (filtered={len(filtered_df)}, total={len(df)})")
-            print(f"  [shield] {scenario_stem}: {reason} — using full df")
+            print(f"  [shield] {scenario_stem}: {reason} -- using full df")
             filtered_df = df
 
         # ---- Graph + Louvain ----
@@ -153,7 +153,7 @@ class ShieldAdapter(BaselineAdapter):
                 print(f"    c{cid} ({len(members)}n): conf={res.confidence:.2f} "
                       f"stages={res.kill_chain_stages[:3]} tids={techs}")
             else:
-                print(f"    c{cid} ({len(members)}n): skipped — {res.skip_reason}")
+                print(f"    c{cid} ({len(members)}n): skipped -- {res.skip_reason}")
 
         # ---- Assemble chronological TID sequence ----
         # Order communities by earliest event timestamp.

@@ -1,27 +1,16 @@
 """
 Stage 1.6: Meta-noise pattern classifier (scenario-independent).
 
-Mordor 테스트 환경에서 Windows 시스템 프로세스가 일으키는 background noise
-패턴을 시나리오 독립적으로 benign-FP 처리.
 
-대상: command_script entries 가 비어있고 (= 사용자/공격자 의도 행위가 아님)
-      anchor 가 알려진 Windows 시스템 프로세스이며, rule_tid 가 노이즈 친화 rule
-      (T1112 registry, T1021.x lateral, T1003 credential, T1546.015 com 등).
 
-규칙
 ----
 A. SYSTEM_REG_NOISE: anchor in SYSTEM_PROCS, rule==T1112, no cmd
-   → benign (시스템의 일상적 registry 수정)
 B. SYSTEM_RPC_NOISE: anchor in SYSTEM_PROCS, rule in {T1021.002, T1021.003,
-   T1021.006}, no cmd → benign (시스템 RPC/DCOM/WinRM listen)
 C. SYSTEM_CRED_PROBE: anchor=lsass.exe AND chain target=lsass with
    GrantedAccess in BENIGN list → benign (Windows internal probing)
 D. NAN_RPC_NOISE: anchor=nan, rule in {T1021.002, T1021.003}, no cmd →
-   benign (식별 불가 RPC/SMB handle event)
 E. CONSUMER_APPS_NOISE: anchor in CONSUMER_PROCS (msedge, backgroundtaskhost
-   등) → benign (사용자 환경 noise)
 
-confidence threshold 없이 패턴 매치 시 자동 라벨.
 """
 from __future__ import annotations
 import json, sys
@@ -87,13 +76,11 @@ def is_noise(group: dict, features: dict) -> tuple[bool, str]:
 
     if img in SYSTEM_PROCS and rule in NOISY_RULES:
         chains = features.get("execution_context",{}).get("process_chains") or []
-        # LSASS 자체 접근이 high access 면 노이즈 아님 (실제 dump 가능)
         for c in chains:
             target = _basename(c.get("child_image","") or "")
             if "lsass" in target:
                 ga = (c.get("granted_access") or "").lower()
                 if ga and ga not in {x.lower() for x in LSASS_BENIGN_ACCESS}:
-                    # high-access lsass → 노이즈 아님
                     return (False, "")
         return (True, f"system-proc-noise: {img} + rule={rule}")
 
@@ -133,7 +120,7 @@ def main() -> None:
         with open(ann,"w",encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
 
-    print("Stage 1.6 결과:")
+    print("Stage 1.6 ...:")
     for k,v in totals.items():
         print(f"  {k}: {v}")
 

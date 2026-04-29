@@ -1,5 +1,5 @@
 """
-SHIELD §3 — Deviation Analyzer.
+SHIELD §3 -- Deviation Analyzer.
 
 Implements the Local Outlier Factor (LOF) anomaly detector that flags
 behavioral deviations in raw system logs, then extracts each anomalous
@@ -14,7 +14,7 @@ Adaptations for OTRF/Mordor:
   object identifier per event family (TargetFilename / TargetObject /
   DestinationIp:Port / TargetImage etc.).
 - LOF features are the *numerical encodings* of (process_id, event_type,
-  object_id) per Eq. 1 — categorical → integer codes via pandas factorize
+  object_id) per Eq. 1 -- categorical → integer codes via pandas factorize
   and StandardScaler.
 - We keep contamination=0.1 and k=20 from §3 deviation analyzer (b).
 """
@@ -87,10 +87,10 @@ def _object_id(row: pd.Series) -> str:
 
 
 # ---------------------------------------------------------------------------
-# LOF over (process_id, event_type, object_id) — Eq. 1
+# LOF over (process_id, event_type, object_id) -- Eq. 1
 # ---------------------------------------------------------------------------
 
-# Event IDs that the deviation analyzer should consider — SHIELD's LOF runs
+# Event IDs that the deviation analyzer should consider -- SHIELD's LOF runs
 # over system-call-equivalent events. We mirror Sysmon coverage of process /
 # file / registry / network / module / pipe / explicit-creds-logon families.
 _LOF_EIDS = {
@@ -168,7 +168,7 @@ def run_lof(df: pd.DataFrame,
     df_unique.rename(columns={"index": "_orig_idx"}, inplace=True)
 
     if len(df_unique) < n_neighbors + 1:
-        # Too few events for LOF — flag none, return.
+        # Too few events for LOF -- flag none, return.
         return DeviationResult(
             df_subset=df, is_anomalous=np.zeros(len(df), dtype=bool),
             anomalous_rows=df.iloc[0:0], log_tuples=df_unique[key_cols],
@@ -209,7 +209,7 @@ def run_lof(df: pd.DataFrame,
 
 
 # ---------------------------------------------------------------------------
-# 1-hop lineage extraction per Eq. 2 — anomalous process + its
+# 1-hop lineage extraction per Eq. 2 -- anomalous process + its
 # immediate ancestors and descendants
 # ---------------------------------------------------------------------------
 

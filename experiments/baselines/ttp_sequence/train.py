@@ -72,7 +72,7 @@ def load_tid_tactic_map(csv_path: Path) -> dict[str, str]:
     """Return {tid: kill-chain-ordered primary tactic display name}.
 
     Multi-tactic entries (e.g., "Defense Evasion, Privilege Escalation") are
-    resolved by picking the earliest tactic in kill-chain order — this gives
+    resolved by picking the earliest tactic in kill-chain order -- this gives
     each TID a deterministic position when serializing a campaign."""
     tid2tac: dict[str, str] = {}
     with open(csv_path, encoding="utf-8") as f:

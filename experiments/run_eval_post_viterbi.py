@@ -1,12 +1,7 @@
 """
 Post-Viterbi per-group TTP evaluation.
 
-Stage 1 (FAISS top-K)와 Stage 2 (Viterbi가 top-K 중 고른 최종 TID) 각각에 대해
-per-group TTP plausibility를 측정해 비교한다.
 
-목적: "Viterbi 전이확률이 실제로 top-1을 더 정답에 가깝게 rerank하는가?"
-  - FAISS_top1 plausibility   : FAISS 그대로의 top-1
-  - Viterbi_pick plausibility : Viterbi가 해당 그룹에서 최종 선택한 TID
   - improvement = Viterbi - FAISS_top1
 """
 from __future__ import annotations
@@ -115,7 +110,6 @@ def _run(strong_only: bool, label: str):
                 acceptable.add(anchor_tid)
                 acceptable.add(anchor_tid.split(".")[0])
 
-            # Viterbi가 skip해서 해당 group이 chain에 없으면 viterbi_pick=""
             faiss_hit   = _match_any(faiss_top1, acceptable)
             top5_hit    = any(_match_any(t, acceptable) for t in top5_tids)
             viterbi_hit = _match_any(viterbi_pick, acceptable) if viterbi_pick else False

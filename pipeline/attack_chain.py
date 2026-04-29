@@ -1,12 +1,10 @@
 """
 Section 5. Probabilistic Attack Chain Inference
 
-논문 구현:
  - Multi-dimensional transition (tactical + semantic + causal)
  - Top-K Viterbi with hole-bridging (Algorithm 1)
  - Campaign-level novelty scoring
 
-공개 API
 --------
 sort_results_by_time(results, final_df)
 load_tactic_map(mitre_csv_path)
@@ -29,10 +27,9 @@ import pandas as pd
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# (0) 그룹 시간 정렬
 # ──────────────────────────────────────────────────────────────────────────────
 def sort_results_by_time(results: list[dict], final_df: pd.DataFrame) -> list[dict]:
-    """analyze() 결과를 anchor TimeCreated 오름차순으로 정렬."""
+    """analyze() ...anchor TimeCreated ..."""
     enriched = []
     for r in results:
         try:
@@ -52,10 +49,9 @@ def sort_results_by_time(results: list[dict], final_df: pd.DataFrame) -> list[di
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# (A) Tactic 맵 로드
 # ──────────────────────────────────────────────────────────────────────────────
 def load_tactic_map(mitre_csv_path: str) -> dict:
-    """MITRE CSV에서 technique_id → [tactic, ...] 매핑 생성."""
+    """MITRE CSV...technique_id → [tactic, ...] ..."""
     df = pd.read_csv(mitre_csv_path)
 
     id_col = next(
@@ -64,7 +60,7 @@ def load_tactic_map(mitre_csv_path: str) -> dict:
     )
     tactic_col = next((c for c in df.columns if "tactic" in c.lower()), None)
     if not id_col or not tactic_col:
-        raise ValueError(f"필요 컬럼 없음. 사용 가능: {list(df.columns)}")
+        raise ValueError(f"...: {list(df.columns)}")
 
     tactic_map: dict[str, list[str]] = {}
     for _, row in df.iterrows():
@@ -75,12 +71,12 @@ def load_tactic_map(mitre_csv_path: str) -> dict:
         tactics = [t.strip() for t in re.split(r"[,;]", raw) if t.strip()]
         tactic_map[tid] = tactics
 
-    print(f"  Tactic 맵 로드 완료: {len(tactic_map)}개 기법")
+    print(f"  Tactic ...: {len(tactic_map)}...")
     return tactic_map
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# (B) Tactical Flow Compatibility — P_tac (Table 2, Section 4.4)
+# (B) Tactical Flow Compatibility -- P_tac (Table 2, Section 4.4)
 # ──────────────────────────────────────────────────────────────────────────────
 @dataclass
 class TransitionResult:
@@ -93,7 +89,7 @@ class TransitionResult:
 
 
 class TacticalScorer:
-    """R1~R9 규칙 기반 Tactic 전이 가중치 — M_tac 행렬."""
+    """R1~R9 ...Tactic ...-- M_tac ..."""
 
     _TACTICS = [
         "Reconnaissance", "Resource Development", "Initial Access",
@@ -116,17 +112,11 @@ class TacticalScorer:
         "R8A": {"name": "Backward Short",      "weight": 0.1 },
         "R8B": {"name": "Backward Long",       "weight": 0.05},
     }
-    # v17 (final, β=A_exec_40_de_60): Per-tactic self-loop 세 개만 override.
-    # 각 변경은 kill-chain 의미 해석에 기반:
-    #   Execution 0.5 → 0.4  : 동일 T1059 하위기법 연속 반복 < 컨텍스트 전환.
-    #   Defense Evasion 0.5 → 0.6  : 로그 삭제 → 타임스톰핑 → masquerading 등 DE 연속 군집 흔함.
-    # (다른 tactic 은 default R1 weight 0.5 유지 — Table 2 원칙 일관성)
     # fallback = _RULES['R1'] weight 0.5
     _SELF_LOOP_WEIGHTS = {
         "Execution":       0.40,
         "Defense Evasion": 0.60,
     }
-    # Per-target wildcard-IN: DE 진입 과포화 보정 (0.8 → 0.7). 나머지 default 0.8.
     _WILDCARD_IN_WEIGHTS = {
         "Defense Evasion": 0.70,
     }
@@ -163,9 +153,9 @@ class TacticalScorer:
         ]
     }
     _OVERRIDES = {
-        ("Execution",   "Privilege Escalation"): ("R2", 1.0, "R2/R4 충돌 → R2 우선"),
-        ("Execution",   "Defense Evasion"):      ("R2", 1.0, "R2/R4 충돌 → R2 우선"),
-        ("Persistence", "Privilege Escalation"): ("R2", 1.0, "R2/R4 충돌 → R2 우선"),
+        ("Execution",   "Privilege Escalation"): ("R2", 1.0, "R2/R4 ...R2 ..."),
+        ("Execution",   "Defense Evasion"):      ("R2", 1.0, "R2/R4 ...R2 ..."),
+        ("Persistence", "Privilege Escalation"): ("R2", 1.0, "R2/R4 ...R2 ..."),
     }
 
     def __init__(self, config_path=None, anomaly_threshold: float = 0.1):
@@ -224,7 +214,7 @@ class TacticalScorer:
                 return TransitionResult(from_tactic, to_tactic, w, "R1",
                                         self._rules["R1"]["name"],
                                         f"self-loop({from_tactic})")
-            return make("R1", "동일 Tactic 반복")
+            return make("R1", "...Tactic ...")
 
         fi = self._tactic_order.get(from_tactic, -1)
         ti = self._tactic_order.get(to_tactic,   -1)
@@ -234,36 +224,35 @@ class TacticalScorer:
         diff = ti - fi
 
         if from_tactic in self._forbidden_src:
-            return make("R9", f"{from_tactic} 이후 모든 전이 금지")
+            return make("R9", f"{from_tactic} ...")
         if pair in self._forbidden_pairs:
-            return make("R9", "Exfiltration 이후 초기단계 역전")
+            return make("R9", "Exfiltration ...")
         if pair in self._primary:
-            return make("R2", "ATT&CK Kill Chain 표준 인접 전이")
+            return make("R2", "ATT&CK Kill Chain ...")
         if pair in self._pe_direct:
-            return make("R3A", "CA / Discovery / Lateral Movement 삼각 루프")
+            return make("R3A", "CA / Discovery / Lateral Movement ...")
         if pair in self._pe_collect:
-            return make("R3B", "Post-Exploit Loop → Collection 수렴")
+            return make("R3B", "Post-Exploit Loop → Collection ...")
 
         is_from_wc = from_tactic in self._wildcard
         is_to_wc   = to_tactic   in self._wildcard
         if not is_from_wc and is_to_wc:
-            # v17: per-target wildcard-IN weight (DE 를 낮춤)
             w = self._wildcard_in_w.get(to_tactic)
             if w is not None:
                 return TransitionResult(from_tactic, to_tactic, w, "R4",
                                         self._rules["R4"]["name"],
                                         f"wildcard-in→{to_tactic}")
-            return make("R4", f"어느 단계에서나 {to_tactic}으로 전이 가능")
+            return make("R4", f"...{to_tactic}...")
         if is_from_wc and not is_to_wc:
-            return make("R5",  f"{from_tactic} → 이후 단계 (순방향)") if diff > 0 \
-              else make("R5B", f"{from_tactic} → 이전 단계 (역방향)")
+            return make("R5",  f"{from_tactic} → ...") if diff > 0 \
+              else make("R5B", f"{from_tactic} → ...")
 
         if diff > 0:
-            return make("R6", f"순방향 {diff}단계 점프") if diff <= 2 \
-              else make("R7", f"순방향 {diff}단계 점프 (원거리)")
+            return make("R6", f"...{diff}...") if diff <= 2 \
+              else make("R7", f"...{diff}...")
         abs_diff = abs(diff)
-        return make("R8A", f"역방향 {abs_diff}단계 (근거리)") if abs_diff <= 2 \
-          else make("R8B", f"역방향 {abs_diff}단계 (원거리)")
+        return make("R8A", f"...{abs_diff}...") if abs_diff <= 2 \
+          else make("R8B", f"...{abs_diff}...")
 
 
 # backward compat alias
@@ -271,18 +260,14 @@ TransitionScorer = TacticalScorer
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# (C) Semantic Continuity — P_sem (Section 4.4, Eq. 4)
+# (C) Semantic Continuity -- P_sem (Section 4.4, Eq. 4)
 # ──────────────────────────────────────────────────────────────────────────────
 _SEM_SCORER_CACHE: dict[str, "SemanticScorer"] = {}
 
 
 class SemanticScorer:
-    """Semantic 연속성 점수. Cross-encoder 또는 bi-encoder 백엔드 지원.
+    """Semantic ...Cross-encoder ...bi-encoder ...
 
-    - 'cross-encoder': 두 description을 concat 해 pair-scoring 후 sigmoid.
-    - 'bi-encoder':    각 description 을 독립적으로 embedding → cosine similarity
-                       → [0,1] 로 linear mapping. 보안 도메인 특화 모델(예:
-                       basel/ATTACK-BERT) 에 적합.
     """
 
     def __init__(
@@ -299,16 +284,15 @@ class SemanticScorer:
         self._sig_beta = float(sigmoid_scale)
         if backend == "cross-encoder":
             from sentence_transformers import CrossEncoder
-            print(f"  [cache-miss] CrossEncoder 로드: {model_name}")
+            print(f"  [cache-miss] CrossEncoder ...: {model_name}")
             self._model = CrossEncoder(model_name)
         elif backend == "bi-encoder":
             from sentence_transformers import SentenceTransformer
-            print(f"  [cache-miss] SentenceTransformer (bi-encoder) 로드: {model_name}")
+            print(f"  [cache-miss] SentenceTransformer (bi-encoder) ...: {model_name}")
             self._model = SentenceTransformer(model_name)
-            # description → 정규화된 embedding 캐시 (cosine = dot product).
             self._emb_cache: dict[str, object] = {}
         else:
-            raise ValueError(f"알 수 없는 semantic backend: {backend}")
+            raise ValueError(f"...semantic backend: {backend}")
         self._cache: dict[tuple, float] = {}
 
     def _encode(self, text: str):
@@ -332,10 +316,9 @@ class SemanticScorer:
         else:  # bi-encoder
             ei = self._encode(desc_i)
             ej = self._encode(desc_j)
-            cos = float((ei * ej).sum())   # 이미 normalized
+            cos = float((ei * ej).sum())
+
             if self._calibration == "sigmoid":
-                # sigmoid(β·(cos − c0)): ATTACK-BERT 의 좁은 코사인 분포
-                # ([0.3, 0.7])에서 중심 주변 gradient 를 키워 판별력 확보.
                 s = 1.0 / (1.0 + math.exp(-self._sig_beta * (cos - self._sig_c0)))
             else:
                 # legacy linear: cos ∈ [-1,1] → [0,1].
@@ -353,7 +336,7 @@ def get_semantic_scorer(
     sigmoid_center: float = 0.5,
     sigmoid_scale: float = 8.0,
 ) -> "SemanticScorer":
-    """프로세스 수명 SemanticScorer 싱글톤 (model+backend+calibration 단위)."""
+    """...SemanticScorer ...model+backend+calibration ..."""
     key = (model_name, backend, calibration, sigmoid_center, sigmoid_scale)
     if key not in _SEM_SCORER_CACHE:
         _SEM_SCORER_CACHE[key] = SemanticScorer(
@@ -366,7 +349,7 @@ def get_semantic_scorer(
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# (D) Causal Lineage — P_cau (Section 4.4, Eq. 5)
+# (D) Causal Lineage -- P_cau (Section 4.4, Eq. 5)
 # ──────────────────────────────────────────────────────────────────────────────
 _TACTIC_IO: dict[str, tuple[set, set]] = {
     "Reconnaissance":       (set(),                       {"network"}),
@@ -389,7 +372,7 @@ _EPS = 1e-6
 
 
 def extract_entity_types(features: dict) -> set[str]:
-    """그룹의 feature dict에서 관측된 entity type 집합 추출."""
+    """...feature dict...entity type ..."""
     types: set[str] = set()
     f = features.get("features", features)
 
@@ -419,17 +402,15 @@ def extract_entity_types(features: dict) -> set[str]:
 
 
 class CausalScorer:
-    """Entity type overlap 기반 causal lineage 점수 (Eq. 5).
+    """Entity type overlap ...causal lineage ...Eq. 5).
 
-    technique_io가 주어지면 technique-level In/Out 사용,
-    없으면 tactic-level fallback (_TACTIC_IO).
     """
 
     def __init__(self, technique_io: Optional[dict] = None):
         self._tech_io = technique_io or {}
 
     def _get_io(self, technique_id: str, tactic: str) -> tuple[set[str], set[str]]:
-        """technique → In/Out. 매핑이 없으면 tactic fallback."""
+        """technique → In/Out. ...tactic fallback."""
         t = self._tech_io.get(technique_id)
         if t:
             return set(t["in"]), set(t["out"])
@@ -450,7 +431,7 @@ class CausalScorer:
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# (E) Adaptive Multi-Dimensional Fusion — P_trans (Section 4.4, Eq. 6)
+# (E) Adaptive Multi-Dimensional Fusion -- P_trans (Section 4.4, Eq. 6)
 # ──────────────────────────────────────────────────────────────────────────────
 class MultiDimTransitionScorer:
     """P_trans = exp( Σ w_k · log P_k )  with data-adaptive weights."""
@@ -471,7 +452,6 @@ class MultiDimTransitionScorer:
         self._w_tac = w_tac
         self._w_sem = w_sem
         self._w_cau = w_cau
-        # 1.0 = 감점 없음. 0.3이면 동일 TID 연속 시 fused_score *= 0.3.
         self._self_loop_tid_penalty = self_loop_tid_penalty
 
     def score(
@@ -532,7 +512,6 @@ class MultiDimTransitionScorer:
         )
         fused = math.exp(log_fused)
 
-        # 동일 technique_id 연속 감점 — 체인의 consecutive duplication (T1124×7 같은) 억제.
         if (cand_i.technique_id == cand_j.technique_id
                 and self._self_loop_tid_penalty < 1.0):
             fused *= self._self_loop_tid_penalty
@@ -541,7 +520,6 @@ class MultiDimTransitionScorer:
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# (F) 데이터 구조
 # ──────────────────────────────────────────────────────────────────────────────
 @dataclass
 class Candidate:
@@ -563,8 +541,10 @@ class GroupNode:
     candidates:   list          # list[Candidate]
     description:  str = ""      # LLM-generated description
     entity_types: set = field(default_factory=set)
-    conf_margin:  float = 0.0   # p_ttp(top-1) - p_ttp(top-2); 분포 평탄 → gate 부적합
-    sim_margin:   float = 0.0   # sim(top-1) - sim(top-2); 더 뾰족 → gate 신호로 사용
+    conf_margin:  float = 0.0
+
+    sim_margin:   float = 0.0
+
 
 
 @dataclass
@@ -578,7 +558,6 @@ class ViterbiResult:
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# (G) 노드 구성 — Top-K 유지 (tactic 압축 안 함)
 # ──────────────────────────────────────────────────────────────────────────────
 def build_group_nodes(
     sorted_results: list[dict],
@@ -586,9 +565,6 @@ def build_group_nodes(
     features_by_gid: Optional[dict] = None,
 ) -> list[GroupNode]:
     """
-    sorted_results의 각 후보에 tactic 매핑.
-    Top-K candidate를 모두 유지한다 (기존 코드와 달리 tactic별 압축 안 함).
-    features_by_gid가 주어지면 entity type 추출 포함.
     """
     def resolve_tactic(tid: str) -> str:
         tactics = tactic_map.get(tid)
@@ -649,10 +625,10 @@ def load_campaign_library(
     campaign_folder: str | Path,
     tactic_map: dict,
 ) -> list[dict]:
-    """Campaign JSON 파일에서 tactic 시퀀스 추출."""
+    """Campaign JSON ...tactic ..."""
     folder = Path(campaign_folder)
     if not folder.exists():
-        print(f"  Campaign 폴더 없음: {folder}")
+        print(f"  Campaign ...: {folder}")
         return []
 
     campaigns: list[dict] = []
@@ -680,12 +656,12 @@ def load_campaign_library(
                 "tactics": tactics,
             })
 
-    print(f"  Campaign 라이브러리 로드: {len(campaigns)}개 캠페인")
+    print(f"  Campaign ...: {len(campaigns)}...")
     return campaigns
 
 
 def _lcs_length(a: list[str], b: list[str]) -> int:
-    """Longest Common Subsequence 길이."""
+    """Longest Common Subsequence ..."""
     m, n = len(a), len(b)
     dp = [[0] * (n + 1) for _ in range(m + 1)]
     for i in range(1, m + 1):
@@ -761,11 +737,9 @@ def topk_viterbi(
     α  = transition_weight
     T  = len(group_nodes)
     if T == 0:
-        raise ValueError("group_nodes가 비어 있습니다.")
+        raise ValueError("group_nodes...")
 
     def alpha_for(node: GroupNode) -> float:
-        # sim_gated 가 우선. raw similarity top1-top2 margin 으로 α 동적 조정.
-        # p_ttp margin (conf_margin) 은 softmax 평탄화 때문에 gate 가 안 먹혔음.
         if sim_gated:
             sm = node.sim_margin
             if sm < sim_margin_low:
@@ -816,8 +790,6 @@ def topk_viterbi(
                 for cand_i_tid, prev_score in delta[prev_s].items():
                     cand_i = cand_lookup[prev_s][cand_i_tid]
                     fused, tac_res = scorer.score(cand_i, cand_j, node_i, node_j)
-                    # (A2) Hard tactic-mismatch filter: R9 (Forbidden) 는 soft weight 0.02
-                    # 로 남기면 log 차이가 충분치 않아 beam 에서 살아남음. 완전 skip.
                     if hard_tactic_filter and tac_res.rule == "R9":
                         continue
                     log_trans = math.log(max(fused, _EPS))
@@ -916,21 +888,13 @@ def topk_posterior_decode(
 ) -> ViterbiResult:
     """Forward-Backward max-marginal decoding.
 
-    표준 Viterbi 와의 차이:
-      - Viterbi: globally optimal path (전체 경로 max), backtrace 로 중간 step 결정
-      - Posterior: 각 step 독립 argmax μ[s][t] = forward[s][t] + backward[s][t]
-                   — (s, t) 를 지나는 best path 점수.
 
-    각 step 선택이 "양쪽 chain context 를 본 최선" 이 됨. per-step 정확도가
-    단순 Viterbi backtrace 보다 높은 경향 (emission 이 강한 경우에 특히).
-    단점: 인접 step 간 transition 일관성이 보장되지 않을 수 있음.
 
-    Args 는 topk_viterbi 와 동일.
     """
     α = transition_weight
     T = len(group_nodes)
     if T == 0:
-        raise ValueError("group_nodes가 비어 있습니다.")
+        raise ValueError("group_nodes...")
     log_λ = math.log(max(skip_penalty, _EPS))
 
     # shared candidate lookup
@@ -966,10 +930,6 @@ def topk_posterior_decode(
                         best = v
             forward[s][cand_j.technique_id] = best
 
-    # ── Backward pass (대칭. emission/transition 을 다음 step 기준으로 가산) ─
-    #   backward[s][t] = max, (s, t) 부터 끝까지의 "추가 점수".
-    #   emission 은 (s, t) 것은 이미 forward 에 반영됨 → backward 는 next-step
-    #   emission 과 s→next transition 부터 포함.
     backward: list[dict[str, float]] = [{} for _ in range(T)]
     for tid in forward[T - 1]:
         backward[T - 1][tid] = 0.0
@@ -1061,7 +1021,7 @@ def topk_posterior_decode(
 
 
 def _logsumexp(values):
-    """수치 안정 logsumexp over iterable of log-space values."""
+    """...logsumexp over iterable of log-space values."""
     values = [v for v in values if v > _LOG_ZERO]
     if not values:
         return _LOG_ZERO
@@ -1081,9 +1041,6 @@ def topk_sumproduct_decode(
 ) -> ViterbiResult:
     """Sum-product (classical forward-backward) posterior decoding.
 
-    Max-product (Viterbi backtrace 와 동치) 가 "best path 를 지나는 state" 를
-    고른다면, sum-product 는 "모든 path 의 확률 합 기준 posterior marginal" 을
-    계산해 per-step 가장 probable 한 state 를 고른다.
 
     log-space:
       forward[s][t]  = log Σ_{paths 0..s ending at t} exp(score)
@@ -1091,13 +1048,11 @@ def topk_sumproduct_decode(
       posterior[s][t] ∝ forward[s][t] + backward[s][t]
       per-step pick = argmax_t posterior[s][t]
 
-    Transition 이 noisy 할 때 multiple paths 의 합산이 emission 쪽으로 치우쳐
-    per-step 정확도가 단일 best-path 보다 개선될 수 있음.
     """
     α = transition_weight
     T = len(group_nodes)
     if T == 0:
-        raise ValueError("group_nodes가 비어 있습니다.")
+        raise ValueError("group_nodes...")
     log_λ = math.log(max(skip_penalty, _EPS))
 
     cand_lookup: list[dict[str, Candidate]] = [{} for _ in range(T)]
@@ -1228,11 +1183,8 @@ def apply_emission_confidence_bypass(
     scorer: "MultiDimTransitionScorer",
     sim_threshold: float = 0.70,
 ) -> "ViterbiResult":
-    """X+Z 하이브리드: emission top-1 을 기본으로 존중, sim(top-1) 이 임계치 이하
-    인 그룹에서만 Viterbi 선택 유지.
+    """X+Z ...: emission top-1 ...sim(top-1) ...
 
-    - sim(top-1) >= sim_threshold  → FAISS top-1 사용 (emission 신뢰)
-    - sim(top-1) <  sim_threshold  → Viterbi 선택 유지 (emission 불확실 → 구조 활용)
     """
     groups = vit.groups
     path = list(vit.best_path)
@@ -1295,15 +1247,11 @@ def apply_minimum_regret_guard(
 ) -> "ViterbiResult":
     """Z: Minimum-regret post-hoc guard.
 
-    각 step 에서 Viterbi 선택과 emission top-1 후보를 비교.
-    net_gain = α · Δlog_trans − (1-α) · Δlog_emit  이 margin_threshold 이하면
-    emission top-1 으로 revert.
 
     - Δlog_trans: log P_trans(prev → vit_pick) − log P_trans(prev → emit_top1)
     - Δlog_emit: log_emission(emit_top1) − log_emission(vit_pick)
     - alpha = transition_weight
 
-    cascading 고려: 앞선 step 이 revert 되면 다음 step 의 prev 도 같이 바뀜.
     """
     α = transition_weight
     groups = vit.groups
@@ -1314,7 +1262,6 @@ def apply_minimum_regret_guard(
         return vit
 
     adjusted = list(path)
-    # Forward single-pass. adjusted[s-1] 은 revise 된 이전 스텝 reflect.
     for s in range(len(path)):
         node_s = groups[s]
         emit_top1 = node_s.candidates[0] if node_s.candidates else None
@@ -1327,7 +1274,6 @@ def apply_minimum_regret_guard(
         delta_emit = emit_top1.log_emission - vit_pick.log_emission  # ≥ 0 (top-1 has highest emission)
 
         if s == 0:
-            # 첫 step 은 transition 비교 없음. emit 이득이 있으면 revert.
             if delta_emit > margin_threshold:
                 adjusted[s] = emit_top1
             continue
@@ -1338,12 +1284,12 @@ def apply_minimum_regret_guard(
         fused_emit, _ = scorer.score(prev, emit_top1, node_prev, node_s)
         log_vit = math.log(max(fused_vit, _EPS))
         log_emit_trans = math.log(max(fused_emit, _EPS))
-        delta_trans = log_vit - log_emit_trans  # vit_pick 의 transition 이득
+        delta_trans = log_vit - log_emit_trans
+
         net_gain = α * delta_trans - (1 - α) * delta_emit
         if net_gain <= margin_threshold:
             adjusted[s] = emit_top1
 
-    # 재계산한 breakdown
     new_breakdown = []
     for s, c in enumerate(adjusted):
         entry = {
@@ -1376,7 +1322,8 @@ def apply_minimum_regret_guard(
     return ViterbiResult(
         groups           = groups,
         best_path        = adjusted,
-        best_score       = vit.best_score,   # note: score 는 재계산 안 함 (비교용 아님)
+        best_score       = vit.best_score,
+
         score_breakdown  = new_breakdown,
         novelty_score    = vit.novelty_score,
         closest_campaign = vit.closest_campaign,
@@ -1389,7 +1336,7 @@ def viterbi_best_path(
     scorer: TacticalScorer,
     transition_weight: float = 0.5,
 ) -> ViterbiResult:
-    """기존 API 호환 래퍼 — TacticalScorer만으로 실행."""
+    """...API ...-- TacticalScorer..."""
     multi = MultiDimTransitionScorer(tac_scorer=scorer)
     return topk_viterbi(
         group_nodes, multi,
@@ -1399,15 +1346,14 @@ def viterbi_best_path(
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# (J) 리포트 출력
 # ──────────────────────────────────────────────────────────────────────────────
 def print_viterbi_report(result: ViterbiResult) -> None:
     print("\n" + "═" * 80)
     print("  Top-K Viterbi Attack Chain (with hole-bridging)")
     print("═" * 80)
-    print(f"  총 그룹 수     : {len(result.groups)}개")
-    print(f"  체인 길이      : {len(result.best_path)}개 (스킵 포함)")
-    print(f"  최적 점수      : {result.best_score:.4f}  (log scale)")
+    print(f"  ...: {len(result.groups)}...")
+    print(f"  ...: {len(result.best_path)}...")
+    print(f"  ...: {result.best_score:.4f}  (log scale)")
     if result.novelty_score > 0:
         print(f"  Novelty score  : {result.novelty_score:.4f}")
         print(f"  Closest campaign: {result.closest_campaign}")
@@ -1432,7 +1378,7 @@ def print_viterbi_report(result: ViterbiResult) -> None:
               f"  {b['technique_id']:<14}"
               f"  sim={b['similarity']:.4f} {sim_bar}")
 
-    print(f"\n  ── 이상 전이 (weight < 0.1) ──")
+    print(f"\n  ── ...weight < 0.1) ──")
     anomalies = [b for b in result.score_breakdown
                  if b["transition_weight"] is not None and b["transition_weight"] < 0.1]
     if anomalies:
@@ -1440,6 +1386,6 @@ def print_viterbi_report(result: ViterbiResult) -> None:
             print(f"  ⚠  {b['transition_from']:25s} → {b['tactic']:25s}"
                   f"  w={b['transition_weight']:.4f}  ({b['transition_rule']})")
     else:
-        print("  ✓  없음")
+        print("  ✓  ...")
 
     print("═" * 80)

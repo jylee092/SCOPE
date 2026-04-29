@@ -1,11 +1,7 @@
 """
-Pending 그룹 검토 도구.
 
-사용:
     python experiments/_review_pending.py <scenario-substring>
 
-각 pending 그룹에 대해 컴팩트한 정보 (anchor, rule, key features, sample
-cmdlines, lsass access, registry signals 등) 출력.
 """
 from __future__ import annotations
 import json, sys

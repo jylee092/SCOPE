@@ -1,8 +1,5 @@
 """
-GLIDE(full) vs 모든 baseline 비교 테이블.
 
-평가 단위: 시나리오별 tactic/technique 시퀀스.
-GT: full variant의 annotation JSON에서 추출 (gt_is_true_positive=true 그룹들의 시퀀스).
 """
 from __future__ import annotations
 
@@ -24,7 +21,7 @@ from experiments.baselines.run_all import BASELINES, _output_dir
 
 
 def load_glide_full_sequence(dataset_rel: Path, stem: str) -> tuple[list[str], list[str]] | None:
-    """GLIDE full variant의 Viterbi 결과를 sequence 형태로 변환."""
+    """GLIDE full variant...Viterbi ...sequence ..."""
     vit_path = config.OUTPUT_BASE_DIR / dataset_rel / f"{stem}_viterbi.json"
     if not vit_path.exists():
         return None
@@ -116,7 +113,7 @@ def print_table(summary: dict) -> None:
         for m in methods:
             v = summary[m].get(key)
             if v is None:
-                vals.append(f"{'—':>16s}")
+                vals.append(f"{'--':>16s}")
             elif isinstance(v, int):
                 vals.append(f"{v:>16d}")
             else:
@@ -137,7 +134,7 @@ def main():
                   ensure_ascii=False, indent=2)
 
     print_table(summary)
-    print(f"\n  저장: {out_path}")
+    print(f"\n  ...: {out_path}")
 
 
 if __name__ == "__main__":

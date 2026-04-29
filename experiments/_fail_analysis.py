@@ -1,4 +1,4 @@
-"""Failure analysis — categorize TP labels by confidence and measure plausibility."""
+"""Failure analysis -- categorize TP labels by confidence and measure plausibility."""
 import json, sys
 from pathlib import Path
 from collections import Counter
@@ -108,16 +108,16 @@ for ann in sorted(OUT.rglob('*_annotation.json')):
             miss_by_pred[ranked[0] if ranked else 'NONE'] += 1
 
 
-print("=== TP 라벨 품질별 plausibility ===")
+print("=== TP ...plausibility ===")
 print(f"{'category':<22s} {'n_tp':>6s} {'hit':>6s} {'rate':>7s}")
 for cat, s in stats.items():
     rate = s['hit'] / s['tp'] if s['tp'] else 0.0
     print(f"{cat:<22s} {s['tp']:>6d} {s['hit']:>6d} {rate:>7.3f}")
 
 print()
-print(f"=== 노이즈 프로세스 anchor 그룹 ===")
-print(f"  노이즈 앵커 총 그룹: {noise_groups}")
-print(f"  중 TP 라벨된 것:    {noise_tp}")
+print(f"=== ...anchor ...===")
+print(f"  ...: {noise_groups}")
+print(f"  ...TP ...:    {noise_tp}")
 
 print()
 print("=== MISS rule TID TOP ===")

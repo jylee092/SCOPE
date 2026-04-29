@@ -1,12 +1,8 @@
 """
 v19 Z-guard threshold sweep.
 
-Viterbi 실행 후 minimum-regret guard 적용. margin_threshold 별로
-per-step Viterbi micro 와 chain metrics 변화 비교.
 
 baseline : FAISS-only  (α=0 equivalent)
-z_thr=0.0 : guard 활성. Viterbi 가 emit top-1 대비 net gain > 0 인 경우만 유지.
-z_thr>0   : 더 엄격한 guard.
 """
 from __future__ import annotations
 import json, sys
@@ -32,7 +28,6 @@ from experiments.run_eval_v2 import main as eval_v2
 def run_viterbi_all(z_margin: float | None):
     """Run Viterbi + optional Z guard (margin_threshold=z_margin).
 
-    z_margin=None → guard 비활성.
     """
     _SEM_SCORER_CACHE.clear()
     tactic_map = load_tactic_map(str(config.MITRE_CSV_PATH))
@@ -115,13 +110,17 @@ def read_metrics():
 
 
 VARIANTS = [
-    ("vanilla",       None),   # 현재 Viterbi (guard 비활성, α=0.5 + β tactic)
-    ("Z_thr_-0.5",    -0.5),   # 매우 관대 (Viterbi 거의 다 유지)
-    ("Z_thr_0.0",     0.0),    # standard: net gain > 0 인 경우만
+    ("vanilla",       None),
+
+    ("Z_thr_-0.5",    -0.5),
+
+    ("Z_thr_0.0",     0.0),
+
     ("Z_thr_0.1",     0.1),
     ("Z_thr_0.3",     0.3),
     ("Z_thr_0.5",     0.5),
-    ("Z_thr_1.0",     1.0),    # 매우 엄격 (대부분 emit top-1 로 revert)
+    ("Z_thr_1.0",     1.0),
+
 ]
 
 
@@ -146,7 +145,7 @@ def main():
     print(f"{'variant':<15} {'thr':>6} {'tech':>8} {'tac':>8} {'step':>8} {'order':>8} {'vit_mic':>10} {'faiss_mic':>10}")
     for r in results:
         t = r["threshold"]
-        t_str = "—" if t is None else f"{t:+.2f}"
+        t_str = "--" if t is None else f"{t:+.2f}"
         print(f"{r['variant']:<15} {t_str:>6} {r['tech_lcs']:>8.4f} {r['tac_lcs']:>8.4f} "
               f"{r['step_cov']:>8.4f} {r['order']:>8.4f} "
               f"{r['viterbi_mic']:>10.4f} {r['faiss_mic']:>10.4f}")

@@ -1,6 +1,4 @@
 """
-v16 ablation sweep — 3개 변경(P_sem sigmoid / P_cau empty-in fix / sim-gated α)을
-개별/조합 비교. tw=0.5 고정.
 """
 from __future__ import annotations
 import json, sys
@@ -116,17 +114,11 @@ def read_metrics():
 
 
 VARIANTS = [
-    # baseline = 2026-04-22 snapshot (causal 원상 복구 상태)
     ("baseline_orig",      "linear",  False, 0.5, 8.0),
-    # sim-gated alpha 단독
     ("simgate",            "linear",  True,  0.5, 8.0),
-    # P_sem sigmoid 단독: c0=0.5, β=8
     ("sem_c05_b8",         "sigmoid", False, 0.5, 8.0),
-    # P_sem sigmoid 단독: c0=0.62 (실측 median), β=8
     ("sem_c062_b8",        "sigmoid", False, 0.62, 8.0),
-    # P_sem sigmoid 단독: c0=0.62, β=6 (덜 공격적)
     ("sem_c062_b6",        "sigmoid", False, 0.62, 6.0),
-    # 조합
     ("simgate+sem_c062_b8","sigmoid", True,  0.62, 8.0),
     ("simgate+sem_c062_b6","sigmoid", True,  0.62, 6.0),
 ]

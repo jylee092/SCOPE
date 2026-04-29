@@ -1,27 +1,21 @@
 """
-Ablation helpers — no_grouping / no_llm 모드 전용 유틸.
 
-- no_grouping: 룰 매칭을 우회하여 의미 있는 EID(Process Create, PowerShell ScriptBlock 등)
-  마다 단일 이벤트 그룹 생성. technique_id는 "UNKNOWN"으로 지정되어 LLM+FAISS가 TTP를 결정.
 
-- no_llm: LLM description 생성을 건너뛰고 feature dict를 그대로 문자열로 직렬화하여
-  FAISS 쿼리에 사용.
 """
 from __future__ import annotations
 
 import pandas as pd
 
 
-# 그룹핑 우회 시 anchor로 쓸 의미 있는 EID 집합
 _SOLO_ANCHOR_EIDS = {1, 4688, 4104, 10, 11, 12, 13, 22, 23, 8, 4698, 7045}
 
 
 def build_solo_groups(df: pd.DataFrame, max_groups: int = 200,
                        anchor_idxs: list[int] | None = None) -> list[dict]:
-    """룰 매칭을 우회. 각 의미 이벤트를 1개짜리 그룹으로 구성.
+    """...1...
 
     If `anchor_idxs` is given, use exactly those event row indices as solo
-    anchors (one solo group per index) — used for the "anchor-only" ablation
+    anchors (one solo group per index) -- used for the "anchor-only" ablation
     that isolates grouping from anchor selection. Otherwise fall back to
     uniform sampling over the meaningful-EID candidate pool.
     """
@@ -54,7 +48,6 @@ def build_solo_groups(df: pd.DataFrame, max_groups: int = 200,
     mask = df["EventID"].isin(_SOLO_ANCHOR_EIDS)
     candidates = df[mask]
     if len(candidates) > max_groups:
-        # 균등 샘플링
         step = len(candidates) // max_groups
         candidates = candidates.iloc[::step].head(max_groups)
 
@@ -79,10 +72,8 @@ def build_solo_groups(df: pd.DataFrame, max_groups: int = 200,
 
 
 def feature_to_text(feat: dict) -> str:
-    """Feature dict → 자연어-유사 요약 텍스트 (LLM 우회 모드).
+    """Feature dict → ...LLM ...
 
-    FAISS가 쿼리로 받아 MITRE 설명과 코사인 유사도 비교.
-    LLM description 스타일을 모방하되 사실만 나열.
     """
     f = feat["features"]
     parts: list[str] = []
