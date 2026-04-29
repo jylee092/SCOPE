@@ -1,0 +1,1 @@
+{"text": "{\n  \"confidence_score\": 0.95,\n  \"attack_summary\": \"An attacker leveraged cmd.exe to execute ntdsutil, utilizing the Volume Shadow Copy Service (VSS) to create a snapshot of the Active Directory database (ntds.dit). This snapshot was written to a temporary file, C:\\\\Windows\\\\Temp\\\\ntds_T1003, indicating a clear attempt to dump"}

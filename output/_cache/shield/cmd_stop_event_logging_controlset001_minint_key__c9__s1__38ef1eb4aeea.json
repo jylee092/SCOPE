@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed registry modifications by svchost.exe to IdentityCRL and Notifications registry keys are consistent with normal Windows operating system behavior related to identity management and system notifications, with no unusual command lines or other indicators of compromise.\"\n}"}

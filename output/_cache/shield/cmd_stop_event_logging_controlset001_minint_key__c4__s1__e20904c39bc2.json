@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The process sihost.exe is performing registry operations on user-specific UI settings, which is consistent with its legitimate function and does not match any known attack patterns or suspicious indicators.\"\n}"}

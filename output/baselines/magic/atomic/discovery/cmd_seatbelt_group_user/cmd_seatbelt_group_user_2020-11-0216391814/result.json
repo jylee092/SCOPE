@@ -1,0 +1,43 @@
+{
+  "scenario": "cmd_seatbelt_group_user_2020-11-0216391814",
+  "tactic_sequence": [
+    "Discovery"
+  ],
+  "technique_sequence": [
+    "T1526"
+  ],
+  "per_group_topk": [
+    [
+      "T1526",
+      "T1087",
+      "T1083"
+    ]
+  ],
+  "notes": {
+    "n_graph_nodes": 129,
+    "n_graph_edges": 152,
+    "n_proc_nodes": 10,
+    "n_sigma_alerts": 1,
+    "n_alerts": 1,
+    "alerts": [
+      {
+        "ts": "2020-11-02 04:39:11.681000+00:00",
+        "event_index": 44,
+        "event_id": 1,
+        "process_guid": "{39e4a257-7c7f-5fa0-c34c-000000000700}",
+        "anomaly_score": 0.5101992667338643,
+        "topk_tids": [
+          "T1526",
+          "T1087",
+          "T1083"
+        ],
+        "topk_tactics": [
+          "Discovery",
+          "Discovery",
+          "Discovery"
+        ]
+      }
+    ],
+    "elapsed_sec": 0.2
+  }
+}

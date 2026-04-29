@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities, including DLL loads, file writes to Group Policy history, pipe connections, and LDAP network communication, are consistent with legitimate Windows Group Policy processing by svchost.exe and wmiprvse.exe.\"\n}"}

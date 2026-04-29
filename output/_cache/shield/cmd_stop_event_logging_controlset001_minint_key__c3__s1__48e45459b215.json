@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities, including the process (backgroundTaskHost.exe), loaded modules, and registry/file operations, are consistent with the normal functioning of the Windows Content Delivery Manager and do not match any known attack patterns or suspicious indicators.\"\n}"}

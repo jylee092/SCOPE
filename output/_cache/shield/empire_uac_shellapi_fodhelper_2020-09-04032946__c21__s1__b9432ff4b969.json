@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities by MsMpEng.exe, including registry modifications, file writes to its own history directories, pipe connections to wkssvc, and outbound HTTPS connections, are consistent with the normal operation of the Windows Defender Antimalware Service.\"\n}"}

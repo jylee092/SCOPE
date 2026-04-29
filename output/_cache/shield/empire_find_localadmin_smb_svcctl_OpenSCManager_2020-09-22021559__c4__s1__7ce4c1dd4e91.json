@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The process 'backgroundTaskHost.exe' is performing actions (file writes, registry modifications, DLL loads, and network connections to arc.msn.com) that are consistent with the legitimate Windows Content Delivery Manager, and no suspicious command lines were observed.\"\n}"}

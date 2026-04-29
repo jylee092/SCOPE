@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"The wevtutil.exe process is being used to redirect the 'Security' event log to a new file path, which is a common technique for log evasion used by attackers to hide their activities.\",\n  \"indicators\": [\n    \"wevtutil\",\n    \"set-log Security\",\n    \"/logfilename\",\n    \"log evasion\"\n  ]\n}"}

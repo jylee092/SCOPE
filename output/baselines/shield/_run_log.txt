@@ -1,0 +1,721 @@
+
+===========================================================================
+  Baseline Runner
+  Baselines: ['shield']
+  Scenarios: 35
+===========================================================================
+D:\Lab\EDR_Agent\Paper\CCS_Project-main\Final_Code\experiments\baselines\shield\llm.py:37: FutureWarning: 
+
+All support for the `google.generativeai` package has ended. It will no longer be receiving 
+updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+See README for more details:
+
+https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+
+  import google.generativeai as genai
+총 이벤트 수: 6,202
+Parsing messages...
+
+Added 9 new columns from Message.
+  ['Subject', 'Process', 'Object', 'Accesses', 'Group', 'Privileges', 'Reason', 'Type', 'O']
+Using '@timestamp' as the primary timestamp.
+  [shield] msf_record_mic_2020-06-09225055: 6202 events → 2575 filtered → 1337 nodes → 18 communities
+    c17 (421n): skipped — no suspicious processes found in S1
+    c6 (246n): skipped — no suspicious processes found in S1
+    c4 (232n): skipped — no suspicious processes found in S1
+    c5 (189n): skipped — no suspicious processes found in S1
+    c7 (86n): skipped — no suspicious processes found in S1
+    c2 (58n): skipped — no suspicious processes found in S1
+    c9 (42n): conf=0.00 stages=[] tids=[]
+    c16 (16n): skipped — no suspicious processes found in S1
+    c0 (10n): skipped — no suspicious processes found in S1
+    c1 (10n): skipped — S2 found no real deviations
+    c12 (7n): conf=0.00 stages=[] tids=[]
+    c8 (5n): skipped — no suspicious processes found in S1
+    c3 (3n): skipped — no suspicious processes found in S1
+    c11 (3n): skipped — no suspicious processes found in S1
+    c10 (3n): skipped — no suspicious processes found in S1
+    c13 (3n): skipped — no suspicious processes found in S1
+  [shield] msf_record_mic_2020-06-09225055: 0 alerts, 201s
+  [OK] shield/atomic\collection\msf_record_mic\msf_record_mic_2020-06-09225055 → D:\Lab\EDR_Agent\Paper\CCS_Project-main\Final_Code\output\baselines\shield\atomic\collection\msf_record_mic\msf_record_mic_2020-06-09225055\result.json
+총 이벤트 수: 11,184
+Parsing messages...
+  Processed 10000 rows...
+
+Added 27 new columns from Message.
+  ['DetailSequence', 'DetailTotal', 'SequenceNumber', 'UserId', 'HostName', 'HostVersion', 'HostId', 'HostApplication', 'EngineVersion', 'PipelineId', 'ScriptName', 'Context', 'Severity', 'Subject', 'Privileges', 'Accesses', 'SYNCHRONIZE', 'ReadAttributes', 'Object', 'ReadEA', 'Process', 'Group', 'dbv', 'cReInits', 'READ_CONTROL', 'WriteEA', 'WriteAttributes']
+Using '@timestamp' as the primary timestamp.
+  [shield] cmd_dumping_ntds_dit_file_ntdsutil: 11184 events → 1645 filtered → 718 nodes → 16 communities
+    c7 (163n): skipped — S2 found no real deviations
+    c10 (119n): skipped — no suspicious processes found in S1
+    c12 (97n): conf=0.95 stages=['Credential Access', 'Defense Evasion', 'Collection'] tids=['T1003.003', 'T1218.007', 'T1005']
+    c3 (96n): skipped — no suspicious processes found in S1
+    c5 (88n): skipped — S2 found no real deviations
+    c0 (36n): skipped — no suspicious processes found in S1
+    c9 (35n): skipped — no suspicious processes found in S1
+    c8 (33n): skipped — no suspicious processes found in S1
+    c4 (15n): skipped — no suspicious processes found in S1
+    c6 (15n): skipped — no suspicious processes found in S1
+    c2 (11n): skipped — no suspicious processes found in S1
+    c1 (4n): skipped — no suspicious processes found in S1
+    c11 (3n): skipped — S2 found no real deviations
+  [shield] cmd_dumping_ntds_dit_file_ntdsutil: 1 alerts, 158s
+  [OK] shield/atomic\credential_access\cmd_dumping_ntds_dit_file_ntdsutil\cmd_dumping_ntds_dit_file_ntdsutil → D:\Lab\EDR_Agent\Paper\CCS_Project-main\Final_Code\output\baselines\shield\atomic\credential_access\cmd_dumping_ntds_dit_file_ntdsutil\cmd_dumping_ntds_dit_file_ntdsutil\result.json
+  [skip existing] shield/atomic\credential_access\cmd_sam_copy_esentutl\cmd_sam_copy_esentutl_2020-10-1900290001
+총 이벤트 수: 6,026
+Parsing messages...
+
+Added 28 new columns from Message.
+  ['SequenceNumber', 'UserId', 'HostName', 'HostVersion', 'HostId', 'HostApplication', 'EngineVersion', 'RunspaceId', 'ScriptName', 'Context', 'Subject', 'Privileges', 'ProviderName', 'NewProviderState', 'PipelineId', 'CommandName', 'CommandType', 'CommandPath', 'NewEngineState', 'PreviousEngineState', 'Object', 'Accesses', 'READ_CONTROL', 'SYNCHRONIZE', 'ReadEA', 'ReadAttributes', 'Process', 'DetailTotal']
+Using '@timestamp' as the primary timestamp.
+  [shield] empire_mimikatz_logonpasswords_2020-08-07103224: 6026 events → 251 filtered → 97 nodes → 10 communities
+    c1 (26n): skipped — no suspicious processes found in S1
+    c0 (25n): conf=0.90 stages=['Discovery', 'Command and Control'] tids=['T1033', 'T1012', 'T1071.001']
+    c3 (13n): skipped — no suspicious processes found in S1
+    c5 (12n): skipped — S2 found no real deviations
+    c2 (5n): skipped — S2 found no real deviations
+    c6 (4n): skipped — no suspicious processes found in S1
+    c9 (4n): conf=0.00 stages=[] tids=[]
+    c7 (3n): skipped — no suspicious processes found in S1
+    c8 (3n): skipped — no suspicious processes found in S1
+  [shield] empire_mimikatz_logonpasswords_2020-08-07103224: 1 alerts, 128s
+  [OK] shield/atomic\credential_access\empire_mimikatz_logonpasswords\empire_mimikatz_logonpasswords_2020-08-07103224 → D:\Lab\EDR_Agent\Paper\CCS_Project-main\Final_Code\output\baselines\shield\atomic\credential_access\empire_mimikatz_logonpasswords\empire_mimikatz_logonpasswords_2020-08-07103224\result.json
+총 이벤트 수: 3,590
+Parsing messages...
+
+Added 27 new columns from Message.
+  ['SequenceNumber', 'UserId', 'HostName', 'HostVersion', 'HostId', 'HostApplication', 'EngineVersion', 'RunspaceId', 'ScriptName', 'Subject', 'Privileges', 'Object', 'Process', 'Accesses', 'Group', 'MBgbBmtyYnRndBsOdGhlc2hpcmUubG9jYWw', 'ServiceRealm', 'UserRealm', 'StartTime', 'EndTime', 'RenewTill', 'Flags', 'KeyType', 'READ_CONTROL', 'SYNCHRONIZE', 'ReadEA', 'ReadAttributes']
+Using '@timestamp' as the primary timestamp.
+  [shield] empire_shell_rubeus_asktgt_createnetonly_2020-09-21230246: 3590 events → 1603 filtered → 517 nodes → 20 communities
+    c18 (92n): skipped — no suspicious processes found in S1
+    c5 (91n): skipped — no suspicious processes found in S1
+    c8 (76n): skipped — no suspicious processes found in S1
+    c1 (53n): conf=0.00 stages=[] tids=[]
+    c3 (45n): skipped — no suspicious processes found in S1
+    c4 (36n): skipped — no suspicious processes found in S1
+    c10 (27n): skipped — no suspicious processes found in S1
+    c9 (26n): skipped — no suspicious processes found in S1
+    c17 (15n): skipped — no suspicious processes found in S1
+    c7 (10n): skipped — S2 found no real deviations
+    c6 (10n): skipped — no suspicious processes found in S1
+    c13 (8n): conf=0.85 stages=['Execution', 'Credential Access'] tids=['T1059', 'T1558.003']
+    c12 (7n): skipped — no suspicious processes found in S1
+    c2 (4n): skipped — no suspicious processes found in S1
+    c0 (3n): conf=0.95 stages=['Execution', 'Credential Access'] tids=['T1059.001', 'T1558.003']
+    c11 (3n): skipped — no suspicious processes found in S1
+    c14 (3n): skipped — S1 labels did not resolve to nodes
+    c15 (3n): skipped — S2 found no real deviations
+    c16 (3n): skipped — no suspicious processes found in S1
+  [shield] empire_shell_rubeus_asktgt_createnetonly_2020-09-21230246: 2 alerts, 222s
+  [OK] shield/atomic\credential_access\empire_shell_rubeus_asktgt_createnetonly\empire_shell_rubeus_asktgt_createnetonly_2020-09-21230246 → D:\Lab\EDR_Agent\Paper\CCS_Project-main\Final_Code\output\baselines\shield\atomic\credential_access\empire_shell_rubeus_asktgt_createnetonly\empire_shell_rubeus_asktgt_createnetonly_2020-09-21230246\result.json
+총 이벤트 수: 184
+Parsing messages...
+
+Added 3 new columns from Message.
+  ['Subject', 'Object', 'Accesses']
+Using 'TimeCreated' as the primary timestamp.
+  [shield] psh_lsass_memory_dump_comsvcs_2020-10-18T19500924: too sparse (filtered=36, total=184) — using full df
+  [shield] psh_lsass_memory_dump_comsvcs_2020-10-18T19500924: 184 events → 184 filtered → 73 nodes → 8 communities
+    c0 (31n): conf=0.95 stages=['Credential Access', 'Defense Evasion', 'Execution'] tids=['T1003.001', 'T1218.011', 'T1218.011']
+    c7 (23n): conf=0.00 stages=[] tids=[]
+    c4 (8n): skipped — no suspicious processes found in S1
+    c1 (3n): skipped — no suspicious processes found in S1
+    c3 (3n): conf=0.85 stages=['Persistence'] tids=['T1547.001']
+  [shield] psh_lsass_memory_dump_comsvcs_2020-10-18T19500924: 2 alerts, 93s
+  [OK] shield/atomic\credential_access\psh_lsass_memory_dump_comsvcs\psh_lsass_memory_dump_comsvcs_2020-10-18T19500924 → D:\Lab\EDR_Agent\Paper\CCS_Project-main\Final_Code\output\baselines\shield\atomic\credential_access\psh_lsass_memory_dump_comsvcs\psh_lsass_memory_dump_comsvcs_2020-10-18T19500924\result.json
+총 이벤트 수: 265
+Parsing messages...
+
+Added 4 new columns from Message.
+  ['Subject', 'Object', 'Accesses', 'Process']
+Using '@timestamp' as the primary timestamp.
+  [shield] cmd_process_herpaderping_mimiexplorer_2020-10-2623583501: too sparse (filtered=135, total=265) — using full df
+  [shield] cmd_process_herpaderping_mimiexplorer_2020-10-2623583501: 265 events → 265 filtered → 98 nodes → 4 communities
+    c1 (35n): conf=0.00 stages=[] tids=[]
+    c3 (35n): skipped — no suspicious processes found in S1
+    c0 (15n): skipped — no suspicious processes found in S1
+    c2 (13n): conf=0.00 stages=[] tids=[]
+  [shield] cmd_process_herpaderping_mimiexplorer_2020-10-2623583501: 0 alerts, 83s
+  [OK] shield/atomic\defense_evasion\cmd_process_herpaderping_mimiexplorer\cmd_process_herpaderping_mimiexplorer_2020-10-2623583501 → D:\Lab\EDR_Agent\Paper\CCS_Project-main\Final_Code\output\baselines\shield\atomic\defense_evasion\cmd_process_herpaderping_mimiexplorer\cmd_process_herpaderping_mimiexplorer_2020-10-2623583501\result.json
+총 이벤트 수: 16,010
+Parsing messages...
+  Processed 10000 rows...
+
+Added 21 new columns from Message.
+  ['Process', 'Subject', 'hr', 'RuleId', 'Privileges', 'Object', 'Group', 'Accesses', 'DetailSequence', 'DetailTotal', 'SequenceNumber', 'UserId', 'HostName', 'HostVersion', 'HostId', 'HostApplication', 'EngineVersion', 'PipelineId', 'ScriptName', 'Context', 'Severity']
+Using '@timestamp' as the primary timestamp.
+  [shield] cmd_stop_event_logging_controlset001_minint_key: 16010 events → 6757 filtered → 2108 nodes → 18 communities
+    c0 (795n): skipped — no suspicious processes found in S1
+    c2 (433n): skipped — no suspicious processes found in S1
+    c1 (283n): conf=0.00 stages=[] tids=[]
+    c12 (258n): skipped — no suspicious processes found in S1
+    c15 (141n): conf=0.00 stages=[] tids=[]
+    c3 (71n): skipped — no suspicious processes found in S1
+    c7 (40n): skipped — no suspicious processes found in S1
+    c14 (25n): skipped — no suspicious processes found in S1
+    c17 (11n): skipped — no suspicious processes found in S1
+    c16 (10n): skipped — no suspicious processes found in S1
+    c13 (8n): conf=0.95 stages=['Credential Access', 'Defense Evasion'] tids=['T1003.002', 'T1543.003']
+    c5 (7n): skipped — no suspicious processes found in S1
+    c9 (6n): skipped — no suspicious processes found in S1
+    c10 (6n): skipped — no suspicious processes found in S1
+    c6 (5n): skipped — no suspicious processes found in S1
+    c4 (4n): conf=0.00 stages=[] tids=[]
+    c8 (3n): skipped — no suspicious processes found in S1
+  [shield] cmd_stop_event_logging_controlset001_minint_key: 1 alerts, 254s
+  [OK] shield/atomic\defense_evasion\cmd_stop_event_logging_controlset001_minint_key\cmd_stop_event_logging_controlset001_minint_key → D:\Lab\EDR_Agent\Paper\CCS_Project-main\Final_Code\output\baselines\shield\atomic\defense_evasion\cmd_stop_event_logging_controlset001_minint_key\cmd_stop_event_logging_controlset001_minint_key\result.json
+총 이벤트 수: 25,208
+Parsing messages...
+  Processed 10000 rows...
+  Processed 20000 rows...
+
+Added 7 new columns from Message.
+  ['Subject', 'Object', 'Accesses', 'Process', 'SYNCHRONIZE', 'ReadEA', 'ReadAttributes']
+Using '@timestamp' as the primary timestamp.
+  [shield] cmd_wevtutil_modify_security_eventlog_path: 25208 events → 12513 filtered → 5126 nodes → 20 communities
+    c0 (2023n): skipped — no suspicious processes found in S1
+    c16 (1071n): skipped — no suspicious processes found in S1
+    c6 (530n): skipped — no suspicious processes found in S1
+    c2 (307n): conf=0.85 stages=['Defense Evasion', 'Discovery'] tids=['T1562.002', 'T1082']
+    c3 (282n): skipped — no suspicious processes found in S1
+    c5 (229n): conf=0.00 stages=[] tids=[]
+    c7 (212n): skipped — no suspicious processes found in S1
+    c18 (128n): skipped — no suspicious processes found in S1
+    c4 (89n): conf=0.00 stages=[] tids=[]
+    c12 (66n): skipped — no suspicious processes found in S1
+    c1 (44n): skipped — no suspicious processes found in S1
+    c23 (44n): conf=0.95 stages=['Defense Evasion'] tids=['T1562.002']
+    c19 (19n): skipped — no suspicious processes found in S1
+    c10 (18n): skipped — no suspicious processes found in S1
+    c13 (13n): skipped — S2 found no real deviations
+    c20 (13n): skipped — no suspicious processes found in S1
+    c15 (10n): skipped — no suspicious processes found in S1
+    c21 (8n): skipped — no suspicious processes found in S1
+    c14 (6n): skipped — no suspicious processes found in S1
+    c22 (4n): skipped — S2 found no real deviations
+  [shield] cmd_wevtutil_modify_security_eventlog_path: 2 alerts, 279s
+  [OK] shield/atomic\defense_evasion\cmd_wevtutil_modify_security_eventlog_path\cmd_wevtutil_modify_security_eventlog_path → D:\Lab\EDR_Agent\Paper\CCS_Project-main\Final_Code\output\baselines\shield\atomic\defense_evasion\cmd_wevtutil_modify_security_eventlog_path\cmd_wevtutil_modify_security_eventlog_path\result.json
+총 이벤트 수: 12,200
+Parsing messages...
+  Processed 10000 rows...
+
+Added 175 new columns from Message.
+  ['SequenceNumber', 'UserId', 'HostName', 'HostVersion', 'HostId', 'HostApplication', 'EngineVersion', 'RunspaceId', 'ScriptName', 'Context', 'Subject', 'Process', 'Mandatory', 'Object', 'Accesses', 'Privileges', 'READ_CONTROL', 'SYNCHRONIZE', 'ReadEA', 'ReadAttributes', 'Group', 'NewProviderState', 'PipelineId', 'CommandName', 'CommandType', 'CommandPath', 'NewEngineState', 'PreviousEngineState', 'SetTargetResourceUnInstallwhatIfMessage', 'FeatureNotFoundError', 'FeatureDiscoveryFailureError', 'FeatureInstallationFailureError', 'FeatureUnInstallationFailureError', 'QueryFeature', 'InstallFeature', 'UninstallFeature', 'RestartNeeded', 'GetTargetResourceStartVerboseMessage', 'GetTargetResourceEndVerboseMessage', 'SetTargetResourceStartVerboseMessage', 'SetTargetResourceEndVerboseMessage', 'TestTargetResourceStartVerboseMessage', 'TestTargetResourceEndVerboseMessage', 'ServerManagerModuleNotFoundDebugMessage', 'SkuNotSupported', 'SourcePropertyNotSupportedDebugMessage', 'EnableServerManagerPSHCmdletsFeature', 'UninstallSuccess', 'InstallSuccess', 'SetTargetResourceInstallwhatIfMessage', 'InValidResultFromGetScriptError', 'InValidResultFromTestScriptError', 'ScriptBlockProviderScriptExecutionFailureError', 'ExecutingScriptMessage', 'ResourceNotAllowedWhenDeviceGuardIsEnabled', 'WarningRunningScriptResourceInFullLanguageMode', 'SetScriptWhatIfMessage', 'ModuleVersion', 'GUID', 'Author', 'CompanyName', 'Copyright', 'PowerShellVersion', 'CLRVersion', 'FunctionsToExport', 'CmdletsToExport', 'Address', 'AddressFamily', 'InterfaceAlias', 'VariablesToExport', 'AliasesToExport', 'PrivateData', 'PSData', 'Tags', 'LicenseUri', 'ProjectUri', 'ReleaseNotes', 'DiskNumber', 'RetryIntervalSec', 'RetryCount', 'SettingWaitForDiskStatusMessage', 'CheckingForDiskStatusMessage', 'DiskFoundMessage', 'DiskNotFoundRetryingMessage', 'DiskNotFoundAfterError', 'TestingWaitForDiskStatusMessage', 'DiskNotFoundMessage', 'TypeName', 'ArgumentList', 'GettingWaitForDiskStatusMessage', 'InvalidAccessPathError', 'InvalidDriveLetterFormatError', 'SettingDiskMessage', 'SetDiskOnlineMessage', 'SetDiskReadwriteMessage', 'CheckingDiskPartitionStyleMessage', 'InitializingDiskMessage', 'DiskAlreadyInitializedMessage', 'CreatingPartitionMessage', 'FormattingVolumeMessage', 'SuccessfullyInitializedMessage', 'ChangingDriveLetterMessage', 'AssigningDriveLetterMessage', 'ChangingVolumeLabelMessage', 'NewPartitionIsReadOnlyMessage', 'TestingDiskMessage', 'CheckDiskInitializedMessage', 'DiskNotOnlineMessage', 'DiskReadOnlyMessage', 'DiskNotGPTMessage', 'DriveLetterNotFoundMessage', 'DriveSizeMismatchMessage', 'DriveAllocationUnitSizeMismatchMessage', 'FileSystemFormatMismatch', 'DriveLabelMismatch', 'DiskAlreadyInitializedError', 'NewParitionIsReadOnlyError', 'InvalidDomainError', 'ExistingDomainMemberError', 'InvalidCredentialError', 'QueryDomainWithLocalCredential', 'QueryDomainWithCredential', 'DomainFound', 'DomainNotFound', 'CreatingChildDomain', 'CreatedChildDomain', 'CreatingForest', 'CreatedForest', 'ResourcePropertyValueIncorrect', 'ResourceInDesiredState', 'ResourceNotInDesiredState', 'RetryingGetADDomain', 'UnhandledError', 'FaultExceptionAndDomainShouldExist', 'MembersAndIncludeExcludeError', 'MembersIsNullError', 'MembersIsEmptyError', 'IncludeAndExcludeConflictError', 'IncludeAndExcludeAreEmptyError', 'CheckingMembers', 'MembershipCountMismatch', 'MemberNotInDesiredState', 'RemovingDuplicateMember', 'MembershipInDesiredState', 'MembershipNotDesiredState', 'CheckingDomain', 'CheckingSite', 'GettingDiskMessage', 'ConfirmEnableMessage', 'ConfirmDisableMessage', 'ShouldProcessForUserMessage', 'ShouldProcessForUserMessageDisable', 'ErrorOnUsernameMessage', 'RoleNotFoundError', 'DomainName', 'ParentDomainName', 'DomainNetBIOSName', 'SafeModeAdministratorPassword', 'NoRebootOnCompletion', 'Force', 'http', 'eter', 'ter', 'e', 't', 'Name', 'ionHasBeenThrown', 'uePresent', 'dings', 'n_values', 'tName', 'ameterSetName', 'delWrapper', 'mdletization_defaultValue', 'tization_passThru']
+Using '@timestamp' as the primary timestamp.
+  [shield] empire_dllinjection_LoadLibrary_CreateRemoteThread_2020-07-22000048: 12200 events → 4494 filtered → 671 nodes → 15 communities
+    c8 (190n): skipped — no suspicious processes found in S1
+    c7 (154n): skipped — no suspicious processes found in S1
+    c13 (99n): skipped — no suspicious processes found in S1
+    c9 (54n): skipped — no suspicious processes found in S1
+    c4 (48n): skipped — no suspicious processes found in S1
+    c14 (44n): conf=0.00 stages=[] tids=[]
+    c0 (30n): skipped — no suspicious processes found in S1
+    c6 (15n): skipped — no suspicious processes found in S1
+    c12 (11n): skipped — no suspicious processes found in S1
+    c10 (8n): skipped — no suspicious processes found in S1
+    c2 (6n): conf=0.00 stages=[] tids=[]
+    c5 (4n): skipped — S2 found no real deviations
+    c3 (3n): skipped — no suspicious processes found in S1
+    c1 (3n): skipped — no suspicious processes found in S1
+  [shield] empire_dllinjection_LoadLibrary_CreateRemoteThread_2020-07-22000048: 0 alerts, 193s
+  [OK] shield/atomic\defense_evasion\empire_dllinjection_LoadLibrary_CreateRemoteThread\empire_dllinjection_LoadLibrary_CreateRemoteThread_2020-07-22000048 → D:\Lab\EDR_Agent\Paper\CCS_Project-main\Final_Code\output\baselines\shield\atomic\defense_evasion\empire_dllinjection_LoadLibrary_CreateRemoteThread\empire_dllinjection_LoadLibrary_CreateRemoteThread_2020-07-22000048\result.json
+총 이벤트 수: 1,166
+Parsing messages...
+
+Added 4 new columns from Message.
+  ['Subject', 'Object', 'Accesses', 'Process']
+Using '@timestamp' as the primary timestamp.
+  [shield] psh_cmstp_execution_bypassuac_2020-10-2201543213: 1166 events → 487 filtered → 352 nodes → 6 communities
+    c1 (206n): skipped — no suspicious processes found in S1
+    c5 (94n): skipped — no suspicious processes found in S1
+    c2 (32n): conf=0.00 stages=[] tids=[]
+    c0 (11n): skipped — no suspicious processes found in S1
+    c4 (5n): skipped — no suspicious processes found in S1
+    c3 (4n): skipped — no suspicious processes found in S1
+  [shield] psh_cmstp_execution_bypassuac_2020-10-2201543213: 0 alerts, 67s
+  [OK] shield/atomic\defense_evasion\psh_cmstp_execution_bypassuac\psh_cmstp_execution_bypassuac_2020-10-2201543213 → D:\Lab\EDR_Agent\Paper\CCS_Project-main\Final_Code\output\baselines\shield\atomic\defense_evasion\psh_cmstp_execution_bypassuac\psh_cmstp_execution_bypassuac_2020-10-2201543213\result.json
+총 이벤트 수: 451
+Parsing messages...
+
+Added 4 new columns from Message.
+  ['Subject', 'Object', 'Accesses', 'Process']
+Using '@timestamp' as the primary timestamp.
+  [shield] cmd_seatbelt_group_user_2020-11-0216391814: too sparse (filtered=164, total=451) — using full df
+  [shield] cmd_seatbelt_group_user_2020-11-0216391814: 451 events → 451 filtered → 117 nodes → 7 communities
+    c4 (55n): conf=0.85 stages=['Execution', 'Discovery'] tids=['T1059.003', 'T1082', 'T1012']
+    c2 (46n): skipped — no suspicious processes found in S1
+    c0 (9n): skipped — no suspicious processes found in S1
+  [shield] cmd_seatbelt_group_user_2020-11-0216391814: 1 alerts, 47s
+  [OK] shield/atomic\discovery\cmd_seatbelt_group_user\cmd_seatbelt_group_user_2020-11-0216391814 → D:\Lab\EDR_Agent\Paper\CCS_Project-main\Final_Code\output\baselines\shield\atomic\discovery\cmd_seatbelt_group_user\cmd_seatbelt_group_user_2020-11-0216391814\result.json
+총 이벤트 수: 4,570
+Parsing messages...
+
+Added 49 new columns from Message.
+  ['SequenceNumber', 'UserId', 'HostName', 'HostVersion', 'HostId', 'HostApplication', 'EngineVersion', 'RunspaceId', 'ScriptName', 'Subject', 'Privileges', 'Object', 'Accesses', 'NewProviderState', 'PipelineId', 'CommandName', 'CommandType', 'CommandPath', 'NewEngineState', 'PreviousEngineState', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thurs', 'Friday', 'Saturday', 'Position', 'Type', 'Offset', 'MarshalAs', 'DllName', 'FunctionName', 'ReturnType', 'Process', 'ComputerName', 'TimeCreated', 'EventId', 'TargetLogonGuid', 'TargetServerName', 'TargetInfo', 'Name', 'Expression', 'SupportsShouldProcess', 'SupportsTransactions', 'ConfirmImpact', 'PS', 'Output', 'Result']
+Using '@timestamp' as the primary timestamp.
+  [shield] empire_find_localadmin_smb_svcctl_OpenSCManager_2020-09-22021559: 4570 events → 1810 filtered → 606 nodes → 11 communities
+    c8 (223n): skipped — no suspicious processes found in S1
+    c10 (136n): skipped — no suspicious processes found in S1
+    c6 (105n): skipped — no suspicious processes found in S1
+    c4 (75n): skipped — no suspicious processes found in S1
+    c2 (33n): skipped — no suspicious processes found in S1
+    c0 (14n): conf=0.00 stages=[] tids=[]
+    c7 (5n): skipped — S2 found no real deviations
+    c3 (4n): skipped — no suspicious processes found in S1
+    c5 (4n): skipped — no suspicious processes found in S1
+    c1 (4n): skipped — no suspicious processes found in S1
+    c9 (3n): skipped — no suspicious processes found in S1
+  [shield] empire_find_localadmin_smb_svcctl_OpenSCManager_2020-09-22021559: 0 alerts, 123s
+  [OK] shield/atomic\discovery\empire_find_localadmin_smb_svcctl_OpenSCManager\empire_find_localadmin_smb_svcctl_OpenSCManager_2020-09-22021559 → D:\Lab\EDR_Agent\Paper\CCS_Project-main\Final_Code\output\baselines\shield\atomic\discovery\empire_find_localadmin_smb_svcctl_OpenSCManager\empire_find_localadmin_smb_svcctl_OpenSCManager_2020-09-22021559\result.json
+총 이벤트 수: 5,047
+Parsing messages...
+
+Added 111 new columns from Message.
+  ['SequenceNumber', 'UserId', 'HostName', 'HostVersion', 'HostId', 'HostApplication', 'EngineVersion', 'RunspaceId', 'ScriptName', 'NewProviderState', 'PipelineId', 'CommandName', 'CommandType', 'CommandPath', 'NewEngineState', 'PreviousEngineState', 'Subject', 'Object', 'Accesses', 'SetTargetResourceUnInstallwhatIfMessage', 'FeatureNotFoundError', 'FeatureDiscoveryFailureError', 'FeatureInstallationFailureError', 'FeatureUnInstallationFailureError', 'QueryFeature', 'InstallFeature', 'UninstallFeature', 'RestartNeeded', 'GetTargetResourceStartVerboseMessage', 'GetTargetResourceEndVerboseMessage', 'SetTargetResourceStartVerboseMessage', 'SetTargetResourceEndVerboseMessage', 'TestTargetResourceStartVerboseMessage', 'TestTargetResourceEndVerboseMessage', 'ServerManagerModuleNotFoundDebugMessage', 'SkuNotSupported', 'SourcePropertyNotSupportedDebugMessage', 'EnableServerManagerPSHCmdletsFeature', 'UninstallSuccess', 'InstallSuccess', 'SetTargetResourceInstallwhatIfMessage', 'Process', 'InValidResultFromGetScriptError', 'InValidResultFromTestScriptError', 'ScriptBlockProviderScriptExecutionFailureError', 'ExecutingScriptMessage', 'ResourceNotAllowedWhenDeviceGuardIsEnabled', 'WarningRunningScriptResourceInFullLanguageMode', 'SetScriptWhatIfMessage', 'ModuleVersion', 'GUID', 'Author', 'CompanyName', 'Copyright', 'PowerShellVersion', 'CLRVersion', 'FunctionsToExport', 'CmdletsToExport', 'InvalidDomainError', 'ExistingDomainMemberError', 'InvalidCredentialError', 'QueryDomainWithLocalCredential', 'QueryDomainWithCredential', 'DomainFound', 'DomainNotFound', 'CreatingChildDomain', 'CreatedChildDomain', 'CreatingForest', 'CreatedForest', 'ResourcePropertyValueIncorrect', 'ResourceInDesiredState', 'ResourceNotInDesiredState', 'RetryingGetADDomain', 'UnhandledError', 'FaultExceptionAndDomainShouldExist', 'Address', 'AddressFamily', 'InterfaceAlias', 'PrivateData', 'PSData', 'Tags', 'LicenseUri', 'ProjectUri', 'ReleaseNotes', 'RoleNotFoundError', 'DomainName', 'ParentDomainName', 'DomainNetBIOSName', 'SafeModeAdministratorPassword', 'NoRebootOnCompletion', 'Force', 'MembersAndIncludeExcludeError', 'MembersIsNullError', 'MembersIsEmptyError', 'IncludeAndExcludeConflictError', 'IncludeAndExcludeAreEmptyError', 'CheckingMembers', 'MembershipCountMismatch', 'MemberNotInDesiredState', 'RemovingDuplicateMember', 'MembershipInDesiredState', 'MembershipNotDesiredState', 'CheckingDomain', 'CheckingSite', 'http', 'ConfirmEnableMessage', 'ConfirmDisableMessage', 'ShouldProcessForUserMessage', 'ShouldProcessForUserMessageDisable', 'ErrorOnUsernameMessage', 'Privileges']
+Using '@timestamp' as the primary timestamp.
+  [shield] empire_getsession_dcerpc_smb_srvsvc_NetSessEnum_2020-09-22034513: 5047 events → 361 filtered → 188 nodes → 10 communities
+    c9 (84n): skipped — no suspicious processes found in S1
+    c1 (72n): skipped — no suspicious processes found in S1
+    c4 (12n): skipped — no suspicious processes found in S1
+    c2 (4n): skipped — no suspicious processes found in S1
+    c6 (4n): skipped — no suspicious processes found in S1
+    c5 (3n): skipped — S2 found no real deviations
+    c3 (3n): skipped — no suspicious processes found in S1
+  [shield] empire_getsession_dcerpc_smb_srvsvc_NetSessEnum_2020-09-22034513: 0 alerts, 54s
+  [OK] shield/atomic\discovery\empire_getsession_dcerpc_smb_srvsvc_NetSessEnum\empire_getsession_dcerpc_smb_srvsvc_NetSessEnum_2020-09-22034513 → D:\Lab\EDR_Agent\Paper\CCS_Project-main\Final_Code\output\baselines\shield\atomic\discovery\empire_getsession_dcerpc_smb_srvsvc_NetSessEnum\empire_getsession_dcerpc_smb_srvsvc_NetSessEnum_2020-09-22034513\result.json
+총 이벤트 수: 1,907
+Parsing messages...
+
+Added 15 new columns from Message.
+  ['Subject', 'Object', 'Accesses', 'SequenceNumber', 'UserId', 'HostName', 'HostVersion', 'HostId', 'HostApplication', 'EngineVersion', 'RunspaceId', 'ScriptName', 'Privileges', 'Process', 'Group']
+Using '@timestamp' as the primary timestamp.
+  [shield] empire_shell_net_local_users_2020-09-21192606: 1907 events → 143 filtered → 96 nodes → 8 communities
+    c7 (40n): skipped — no suspicious processes found in S1
+    c1 (17n): skipped — no suspicious processes found in S1
+    c2 (12n): skipped — no suspicious processes found in S1
+    c5 (9n): skipped — no suspicious processes found in S1
+    c4 (7n): skipped — no suspicious processes found in S1
+    c0 (4n): conf=0.00 stages=[] tids=[]
+    c6 (4n): conf=0.00 stages=[] tids=[]
+    c3 (3n): skipped — S2 found no real deviations
+  [shield] empire_shell_net_local_users_2020-09-21192606: 0 alerts, 110s
+  [OK] shield/atomic\discovery\empire_shell_net_local_users\empire_shell_net_local_users_2020-09-21192606 → D:\Lab\EDR_Agent\Paper\CCS_Project-main\Final_Code\output\baselines\shield\atomic\discovery\empire_shell_net_local_users\empire_shell_net_local_users_2020-09-21192606\result.json
+총 이벤트 수: 633
+Parsing messages...
+
+Added 13 new columns from Message.
+  ['SequenceNumber', 'UserId', 'HostName', 'HostVersion', 'HostId', 'HostApplication', 'EngineVersion', 'RunspaceId', 'ScriptName', 'Subject', 'Object', 'Accesses', 'Privileges']
+Using '@timestamp' as the primary timestamp.
+  [shield] empire_shell_samr_EnumDomainUsers_2020-09-21193527: too sparse (filtered=40, total=633) — using full df
+  [shield] empire_shell_samr_EnumDomainUsers_2020-09-21193527: 633 events → 633 filtered → 44 nodes → 7 communities
+    c3 (27n): conf=0.00 stages=[] tids=[]
+    c1 (4n): skipped — no suspicious processes found in S1
+    c5 (3n): conf=0.00 stages=[] tids=[]
+    c6 (3n): skipped — no suspicious processes found in S1
+    c4 (3n): conf=0.75 stages=['Execution', 'Discovery'] tids=['T1059.001', 'T1087.002']
+  [shield] empire_shell_samr_EnumDomainUsers_2020-09-21193527: 1 alerts, 92s
+  [OK] shield/atomic\discovery\empire_shell_samr_EnumDomainUsers\empire_shell_samr_EnumDomainUsers_2020-09-21193527 → D:\Lab\EDR_Agent\Paper\CCS_Project-main\Final_Code\output\baselines\shield\atomic\discovery\empire_shell_samr_EnumDomainUsers\empire_shell_samr_EnumDomainUsers_2020-09-21193527\result.json
+총 이벤트 수: 267
+Parsing messages...
+
+Added 4 new columns from Message.
+  ['Subject', 'Object', 'Accesses', 'Process']
+Using '@timestamp' as the primary timestamp.
+  [shield] cmd_sharpview_pcre_net_2020-10-2920232423: too sparse (filtered=116, total=267) — using full df
+  [shield] cmd_sharpview_pcre_net_2020-10-2920232423: 267 events → 267 filtered → 102 nodes → 4 communities
+    c3 (96n): conf=0.00 stages=[] tids=[]
+  [shield] cmd_sharpview_pcre_net_2020-10-2920232423: 0 alerts, 25s
+  [OK] shield/atomic\execution\cmd_sharpview_pcre_net\cmd_sharpview_pcre_net_2020-10-2920232423 → D:\Lab\EDR_Agent\Paper\CCS_Project-main\Final_Code\output\baselines\shield\atomic\execution\cmd_sharpview_pcre_net\cmd_sharpview_pcre_net_2020-10-2920232423\result.json
+총 이벤트 수: 2,067
+Parsing messages...
+
+Added 25 new columns from Message.
+  ['Subject', 'Privileges', 'Object', 'Accesses', 'SYNCHRONIZE', 'ReadEA', 'ReadAttributes', 'Process', 'ProviderName', 'NewProviderState', 'HostName', 'HostVersion', 'HostId', 'HostApplication', 'EngineVersion', 'RunspaceId', 'PipelineId', 'CommandName', 'CommandType', 'ScriptName', 'CommandPath', 'SequenceNumber', 'NewEngineState', 'PreviousEngineState', 'UserId']
+Using '@timestamp' as the primary timestamp.
+  [shield] empire_launcher_vbs_2020-09-04160940: 2067 events → 772 filtered → 273 nodes → 10 communities
+    c4 (126n): skipped — S2 found no real deviations
+    c5 (95n): conf=0.90 stages=['Execution', 'Defense Evasion', 'Command and Control'] tids=['T1059.001', 'T1027.001', 'T1564.003']
+    c7 (23n): skipped — no suspicious processes found in S1
+    c6 (7n): skipped — S2 found no real deviations
+    c8 (6n): skipped — no suspicious processes found in S1
+    c0 (4n): conf=0.00 stages=[] tids=[]
+    c2 (4n): skipped — no suspicious processes found in S1
+    c1 (3n): skipped — S2 found no real deviations
+    c9 (3n): skipped — no suspicious processes found in S1
+  [shield] empire_launcher_vbs_2020-09-04160940: 1 alerts, 130s
+  [OK] shield/atomic\execution\empire_launcher_vbs\empire_launcher_vbs_2020-09-04160940 → D:\Lab\EDR_Agent\Paper\CCS_Project-main\Final_Code\output\baselines\shield\atomic\execution\empire_launcher_vbs\empire_launcher_vbs_2020-09-04160940\result.json
+총 이벤트 수: 110
+Parsing messages...
+
+Added 1 new columns from Message.
+  ['Subject']
+Using '@timestamp' as the primary timestamp.
+  [shield] psh_powershell_httplistener_2020-11-0204130683: too sparse (filtered=16, total=110) — using full df
+  [shield] psh_powershell_httplistener_2020-11-0204130683: 110 events → 110 filtered → 10 nodes → 1 communities
+    c0 (10n): skipped — S2 found no real deviations
+  [shield] psh_powershell_httplistener_2020-11-0204130683: 0 alerts, 22s
+  [OK] shield/atomic\execution\psh_powershell_httplistener\psh_powershell_httplistener_2020-11-0204130683 → D:\Lab\EDR_Agent\Paper\CCS_Project-main\Final_Code\output\baselines\shield\atomic\execution\psh_powershell_httplistener\psh_powershell_httplistener_2020-11-0204130683\result.json
+총 이벤트 수: 2,395
+Parsing messages...
+
+Added 4 new columns from Message.
+  ['Subject', 'Object', 'Accesses', 'Type']
+Using '@timestamp' as the primary timestamp.
+  [shield] psh_python_webserver_2020-10-2900161507: 2395 events → 250 filtered → 129 nodes → 5 communities
+    c2 (111n): conf=0.00 stages=[] tids=[]
+    c1 (7n): skipped — no suspicious processes found in S1
+    c3 (5n): conf=0.95 stages=['Defense Evasion', 'Command and Control'] tids=['T1562.004', 'T1071']
+    c0 (4n): skipped — no suspicious processes found in S1
+  [shield] psh_python_webserver_2020-10-2900161507: 1 alerts, 83s
+  [OK] shield/atomic\execution\psh_python_webserver\psh_python_webserver_2020-10-2900161507 → D:\Lab\EDR_Agent\Paper\CCS_Project-main\Final_Code\output\baselines\shield\atomic\execution\psh_python_webserver\psh_python_webserver_2020-10-2900161507\result.json
+총 이벤트 수: 4,284
+Parsing messages...
+
+Added 28 new columns from Message.
+  ['Subject', 'Privileges', 'Accesses', 'SYNCHRONIZE', 'ReadAttributes', 'Object', 'Process', 'ProviderName', 'NewProviderState', 'HostName', 'HostVersion', 'HostId', 'HostApplication', 'EngineVersion', 'RunspaceId', 'PipelineId', 'CommandName', 'CommandType', 'ScriptName', 'CommandPath', 'SequenceNumber', 'NewEngineState', 'PreviousEngineState', 'UserId', 'Context', 'Operation', 'READ_CONTROL', 'ReadEA']
+Using '@timestamp' as the primary timestamp.
+  [shield] covenant_psremoting_command_2020-08-06115603: 4284 events → 1166 filtered → 568 nodes → 15 communities
+    c3 (182n): conf=0.00 stages=[] tids=[]
+    c4 (123n): skipped — no suspicious processes found in S1
+    c9 (97n): skipped — no suspicious processes found in S1
+    c13 (43n): skipped — no suspicious processes found in S1
+    c8 (39n): skipped — no suspicious processes found in S1
+    c0 (24n): skipped — no suspicious processes found in S1
+    c1 (12n): conf=0.00 stages=[] tids=[]
+    c6 (11n): skipped — no suspicious processes found in S1
+    c11 (10n): skipped — no suspicious processes found in S1
+    c12 (7n): skipped — S2 found no real deviations
+    c2 (5n): skipped — no suspicious processes found in S1
+    c10 (5n): skipped — no suspicious processes found in S1
+    c14 (4n): skipped — no suspicious processes found in S1
+    c5 (3n): skipped — no suspicious processes found in S1
+    c7 (3n): skipped — S2 found no real deviations
+  [shield] covenant_psremoting_command_2020-08-06115603: 0 alerts, 197s
+  [OK] shield/atomic\lateral_movement\covenant_psremoting_command\covenant_psremoting_command_2020-08-06115603 → D:\Lab\EDR_Agent\Paper\CCS_Project-main\Final_Code\output\baselines\shield\atomic\lateral_movement\covenant_psremoting_command\covenant_psremoting_command_2020-08-06115603\result.json
+총 이벤트 수: 4,348
+Parsing messages...
+
+Added 27 new columns from Message.
+  ['Subject', 'SequenceNumber', 'UserId', 'HostName', 'HostVersion', 'HostId', 'HostApplication', 'EngineVersion', 'RunspaceId', 'ScriptName', 'Privileges', 'Object', 'Accesses', 'Process', 'READ_CONTROL', 'SYNCHRONIZE', 'ReadEA', 'ReadAttributes', 'ProviderName', 'NewProviderState', 'PipelineId', 'CommandName', 'CommandType', 'CommandPath', 'NewEngineState', 'PreviousEngineState', 'Operation']
+Using '@timestamp' as the primary timestamp.
+  [shield] empire_psexec_dcerpc_tcp_svcctl_2020-09-20121608: 4348 events → 1099 filtered → 510 nodes → 17 communities
+    c2 (172n): conf=0.00 stages=[] tids=[]
+    c9 (94n): skipped — no suspicious processes found in S1
+    c3 (71n): skipped — no suspicious processes found in S1
+    c7 (66n): skipped — no suspicious processes found in S1
+    c6 (35n): skipped — no suspicious processes found in S1
+    c0 (21n): skipped — S2 found no real deviations
+    c14 (8n): skipped — no suspicious processes found in S1
+    c11 (7n): skipped — no suspicious processes found in S1
+    c8 (6n): conf=0.00 stages=[] tids=[]
+    c15 (6n): skipped — no suspicious processes found in S1
+    c16 (4n): skipped — no suspicious processes found in S1
+    c10 (4n): conf=0.00 stages=[] tids=[]
+    c12 (4n): skipped — no suspicious processes found in S1
+    c4 (3n): conf=0.00 stages=[] tids=[]
+    c13 (3n): skipped — S2 found no real deviations
+    c1 (3n): skipped — no suspicious processes found in S1
+    c5 (3n): skipped — no suspicious processes found in S1
+  [shield] empire_psexec_dcerpc_tcp_svcctl_2020-09-20121608: 0 alerts, 272s
+  [OK] shield/atomic\lateral_movement\empire_psexec_dcerpc_tcp_svcctl\empire_psexec_dcerpc_tcp_svcctl_2020-09-20121608 → D:\Lab\EDR_Agent\Paper\CCS_Project-main\Final_Code\output\baselines\shield\atomic\lateral_movement\empire_psexec_dcerpc_tcp_svcctl\empire_psexec_dcerpc_tcp_svcctl_2020-09-20121608\result.json
+총 이벤트 수: 2,744
+Parsing messages...
+
+Added 23 new columns from Message.
+  ['SequenceNumber', 'UserId', 'HostName', 'HostVersion', 'HostId', 'HostApplication', 'EngineVersion', 'RunspaceId', 'ScriptName', 'Subject', 'Privileges', 'Object', 'Accesses', 'Process', 'Group', 'ProviderName', 'NewProviderState', 'PipelineId', 'CommandName', 'CommandType', 'CommandPath', 'NewEngineState', 'PreviousEngineState']
+Using '@timestamp' as the primary timestamp.
+  [shield] empire_psremoting_stager_2020-09-20170827: 2744 events → 1134 filtered → 403 nodes → 14 communities
+    c4 (183n): conf=0.00 stages=[] tids=[]
+    c0 (73n): skipped — no suspicious processes found in S1
+    c2 (60n): skipped — no suspicious processes found in S1
+    c1 (22n): conf=0.00 stages=[] tids=[]
+    c12 (22n): skipped — no suspicious processes found in S1
+    c11 (9n): skipped — no suspicious processes found in S1
+    c10 (9n): skipped — no suspicious processes found in S1
+    c7 (6n): skipped — no suspicious processes found in S1
+    c5 (4n): skipped — S2 found no real deviations
+    c8 (4n): conf=0.00 stages=[] tids=[]
+    c6 (3n): skipped — no suspicious processes found in S1
+    c9 (3n): skipped — no suspicious processes found in S1
+    c13 (3n): skipped — no suspicious processes found in S1
+  [shield] empire_psremoting_stager_2020-09-20170827: 0 alerts, 245s
+  [OK] shield/atomic\lateral_movement\empire_psremoting_stager\empire_psremoting_stager_2020-09-20170827 → D:\Lab\EDR_Agent\Paper\CCS_Project-main\Final_Code\output\baselines\shield\atomic\lateral_movement\empire_psremoting_stager\empire_psremoting_stager_2020-09-20170827\result.json
+총 이벤트 수: 6,383
+Parsing messages...
+
+Added 113 new columns from Message.
+  ['Subject', 'Privileges', 'SequenceNumber', 'UserId', 'HostName', 'HostVersion', 'HostId', 'HostApplication', 'EngineVersion', 'RunspaceId', 'ScriptName', 'Accesses', 'SYNCHRONIZE', 'ReadAttributes', 'Object', 'Process', 'NewProviderState', 'PipelineId', 'CommandName', 'CommandType', 'CommandPath', 'NewEngineState', 'PreviousEngineState', 'SetTargetResourceUnInstallwhatIfMessage', 'FeatureNotFoundError', 'FeatureDiscoveryFailureError', 'FeatureInstallationFailureError', 'FeatureUnInstallationFailureError', 'QueryFeature', 'InstallFeature', 'UninstallFeature', 'RestartNeeded', 'GetTargetResourceStartVerboseMessage', 'GetTargetResourceEndVerboseMessage', 'SetTargetResourceStartVerboseMessage', 'SetTargetResourceEndVerboseMessage', 'TestTargetResourceStartVerboseMessage', 'TestTargetResourceEndVerboseMessage', 'ServerManagerModuleNotFoundDebugMessage', 'SkuNotSupported', 'SourcePropertyNotSupportedDebugMessage', 'EnableServerManagerPSHCmdletsFeature', 'UninstallSuccess', 'InstallSuccess', 'SetTargetResourceInstallwhatIfMessage', 'InValidResultFromGetScriptError', 'InValidResultFromTestScriptError', 'ScriptBlockProviderScriptExecutionFailureError', 'ExecutingScriptMessage', 'ResourceNotAllowedWhenDeviceGuardIsEnabled', 'WarningRunningScriptResourceInFullLanguageMode', 'SetScriptWhatIfMessage', 'ModuleVersion', 'GUID', 'Author', 'CompanyName', 'Copyright', 'PowerShellVersion', 'CLRVersion', 'FunctionsToExport', 'CmdletsToExport', 'InvalidDomainError', 'ExistingDomainMemberError', 'InvalidCredentialError', 'QueryDomainWithLocalCredential', 'QueryDomainWithCredential', 'DomainFound', 'DomainNotFound', 'CreatingChildDomain', 'CreatedChildDomain', 'CreatingForest', 'CreatedForest', 'ResourcePropertyValueIncorrect', 'ResourceInDesiredState', 'ResourceNotInDesiredState', 'RetryingGetADDomain', 'UnhandledError', 'FaultExceptionAndDomainShouldExist', 'Address', 'AddressFamily', 'InterfaceAlias', 'MembersAndIncludeExcludeError', 'MembersIsNullError', 'MembersIsEmptyError', 'IncludeAndExcludeConflictError', 'IncludeAndExcludeAreEmptyError', 'CheckingMembers', 'MembershipCountMismatch', 'MemberNotInDesiredState', 'RemovingDuplicateMember', 'MembershipInDesiredState', 'MembershipNotDesiredState', 'CheckingDomain', 'CheckingSite', 'PrivateData', 'PSData', 'Tags', 'LicenseUri', 'ProjectUri', 'ReleaseNotes', 'RoleNotFoundError', 'DomainName', 'ParentDomainName', 'DomainNetBIOSName', 'SafeModeAdministratorPassword', 'NoRebootOnCompletion', 'Force', 'http', 'ConfirmEnableMessage', 'ConfirmDisableMessage', 'ShouldProcessForUserMessage', 'ShouldProcessForUserMessageDisable', 'ErrorOnUsernameMessage']
+Using '@timestamp' as the primary timestamp.
+  [shield] empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod_2020-09-21001437: 6383 events → 630 filtered → 320 nodes → 11 communities
+    c8 (173n): skipped — no suspicious processes found in S1
+    c4 (48n): skipped — S2 found no real deviations
+    c6 (39n): skipped — no suspicious processes found in S1
+    c3 (16n): skipped — no suspicious processes found in S1
+    c10 (13n): skipped — no suspicious processes found in S1
+    c1 (8n): skipped — S2 found no real deviations
+    c2 (6n): skipped — no suspicious processes found in S1
+    c0 (5n): skipped — no suspicious processes found in S1
+    c5 (5n): skipped — no suspicious processes found in S1
+    c9 (4n): skipped — no suspicious processes found in S1
+    c7 (3n): skipped — no suspicious processes found in S1
+  [shield] empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod_2020-09-21001437: 0 alerts, 98s
+  [OK] shield/atomic\lateral_movement\empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod\empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod_2020-09-21001437 → D:\Lab\EDR_Agent\Paper\CCS_Project-main\Final_Code\output\baselines\shield\atomic\lateral_movement\empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod\empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod_2020-09-21001437\result.json
+총 이벤트 수: 25,993
+Parsing messages...
+  Processed 10000 rows...
+  Processed 20000 rows...
+
+Added 111 new columns from Message.
+  ['Subject', 'Object', 'Accesses', 'Process', 'Privileges', 'NewProviderState', 'HostName', 'HostVersion', 'HostId', 'HostApplication', 'EngineVersion', 'PipelineId', 'CommandName', 'CommandType', 'ScriptName', 'CommandPath', 'SequenceNumber', 'NewEngineState', 'PreviousEngineState', 'UserId', 'SetTargetResourceUnInstallwhatIfMessage', 'FeatureNotFoundError', 'FeatureDiscoveryFailureError', 'FeatureInstallationFailureError', 'FeatureUnInstallationFailureError', 'QueryFeature', 'InstallFeature', 'UninstallFeature', 'RestartNeeded', 'GetTargetResourceStartVerboseMessage', 'GetTargetResourceEndVerboseMessage', 'SetTargetResourceStartVerboseMessage', 'SetTargetResourceEndVerboseMessage', 'TestTargetResourceStartVerboseMessage', 'TestTargetResourceEndVerboseMessage', 'ServerManagerModuleNotFoundDebugMessage', 'SkuNotSupported', 'SourcePropertyNotSupportedDebugMessage', 'EnableServerManagerPSHCmdletsFeature', 'UninstallSuccess', 'InstallSuccess', 'SetTargetResourceInstallwhatIfMessage', 'InValidResultFromGetScriptError', 'InValidResultFromTestScriptError', 'ScriptBlockProviderScriptExecutionFailureError', 'ExecutingScriptMessage', 'ResourceNotAllowedWhenDeviceGuardIsEnabled', 'WarningRunningScriptResourceInFullLanguageMode', 'SetScriptWhatIfMessage', 'InvalidDomainError', 'ExistingDomainMemberError', 'InvalidCredentialError', 'QueryDomainWithLocalCredential', 'QueryDomainWithCredential', 'DomainFound', 'DomainNotFound', 'CreatingChildDomain', 'CreatedChildDomain', 'CreatingForest', 'CreatedForest', 'ResourcePropertyValueIncorrect', 'ResourceInDesiredState', 'ResourceNotInDesiredState', 'RetryingGetADDomain', 'UnhandledError', 'FaultExceptionAndDomainShouldExist', 'ModuleVersion', 'GUID', 'Author', 'CompanyName', 'Copyright', 'PowerShellVersion', 'CLRVersion', 'FunctionsToExport', 'CmdletsToExport', 'Address', 'AddressFamily', 'InterfaceAlias', 'PrivateData', 'PSData', 'Tags', 'LicenseUri', 'ProjectUri', 'ReleaseNotes', 'MembersAndIncludeExcludeError', 'MembersIsNullError', 'MembersIsEmptyError', 'IncludeAndExcludeConflictError', 'IncludeAndExcludeAreEmptyError', 'CheckingMembers', 'MembershipCountMismatch', 'MemberNotInDesiredState', 'RemovingDuplicateMember', 'MembershipInDesiredState', 'MembershipNotDesiredState', 'CheckingDomain', 'CheckingSite', 'RoleNotFoundError', 'DomainName', 'ParentDomainName', 'DomainNetBIOSName', 'SafeModeAdministratorPassword', 'NoRebootOnCompletion', 'Force', 'http', 'ConfirmEnableMessage', 'ConfirmDisableMessage', 'ShouldProcessForUserMessage', 'ShouldProcessForUserMessageDisable', 'ErrorOnUsernameMessage', 'Group']
+Using '@timestamp' as the primary timestamp.
+  [shield] purplesharp_ad_playbook_I_2020-10-22042947: 25993 events → 21689 filtered → 2070 nodes → 16 communities
+    c14 (828n): skipped — no suspicious processes found in S1
+    c8 (575n): skipped — no suspicious processes found in S1
+    c2 (253n): skipped — no suspicious processes found in S1
+    c4 (172n): skipped — no suspicious processes found in S1
+    c11 (96n): skipped — S2 found no real deviations
+    c1 (92n): skipped — no suspicious processes found in S1
+    c15 (12n): skipped — no suspicious processes found in S1
+    c9 (9n): skipped — no suspicious processes found in S1
+    c6 (7n): conf=0.00 stages=[] tids=[]
+    c0 (5n): skipped — no suspicious processes found in S1
+    c3 (5n): skipped — S2 found no real deviations
+    c5 (5n): skipped — no suspicious processes found in S1
+    c10 (4n): skipped — no suspicious processes found in S1
+    c7 (3n): skipped — no suspicious processes found in S1
+  [shield] purplesharp_ad_playbook_I_2020-10-22042947: 0 alerts, 169s
+  [OK] shield/atomic\lateral_movement\purplesharp_ad_playbook_I\purplesharp_ad_playbook_I_2020-10-22042947 → D:\Lab\EDR_Agent\Paper\CCS_Project-main\Final_Code\output\baselines\shield\atomic\lateral_movement\purplesharp_ad_playbook_I\purplesharp_ad_playbook_I_2020-10-22042947\result.json
+총 이벤트 수: 122
+Parsing messages...
+
+Added 1 new columns from Message.
+  ['Subject']
+Using 'TimeCreated' as the primary timestamp.
+  [shield] cmd_userinitmprlogonscript_batch_2020-10-1922471810: too sparse (filtered=20, total=122) — using full df
+  [shield] cmd_userinitmprlogonscript_batch_2020-10-1922471810: 122 events → 122 filtered → 19 nodes → 5 communities
+    c3 (11n): conf=0.00 stages=[] tids=[]
+    c0 (3n): conf=0.95 stages=['Execution', 'Persistence'] tids=['T1547.001', 'T1059.003']
+  [shield] cmd_userinitmprlogonscript_batch_2020-10-1922471810: 1 alerts, 47s
+  [OK] shield/atomic\persistence\cmd_userinitmprlogonscript_batch\cmd_userinitmprlogonscript_batch_2020-10-1922471810 → D:\Lab\EDR_Agent\Paper\CCS_Project-main\Final_Code\output\baselines\shield\atomic\persistence\cmd_userinitmprlogonscript_batch\cmd_userinitmprlogonscript_batch_2020-10-1922471810\result.json
+총 이벤트 수: 1,001
+Parsing messages...
+
+Added 14 new columns from Message.
+  ['RuleName', 'ProcessId', 'Subject', 'Privileges', 'Accesses', 'READ_CONTROL', 'SYNCHRONIZE', 'ReadEA', 'ReadAttributes', 'Process', 'CreatorSID', 'QueryLanguage', 'CommandLineTemplate', 'RunInteractively']
+Using '@timestamp' as the primary timestamp.
+  [shield] covenant_persistwmi_2019-12-05044734: too sparse (filtered=35, total=1001) — using full df
+  [shield] covenant_persistwmi_2019-12-05044734: 1001 events → 1001 filtered → 77 nodes → 9 communities
+    c2 (29n): skipped — no suspicious processes found in S1
+    c1 (12n): skipped — no suspicious processes found in S1
+    c6 (11n): skipped — no suspicious processes found in S1
+    c7 (7n): conf=0.95 stages=['Credential Access'] tids=['T1003.001']
+    c0 (6n): skipped — S2 found no real deviations
+    c3 (5n): skipped — no suspicious processes found in S1
+    c8 (3n): skipped — no suspicious processes found in S1
+  [shield] covenant_persistwmi_2019-12-05044734: 1 alerts, 71s
+  [OK] shield/atomic\persistence\covenant_persistwmi\covenant_persistwmi_2019-12-05044734 → D:\Lab\EDR_Agent\Paper\CCS_Project-main\Final_Code\output\baselines\shield\atomic\persistence\covenant_persistwmi\covenant_persistwmi_2019-12-05044734\result.json
+총 이벤트 수: 657
+Parsing messages...
+
+Added 15 new columns from Message.
+  ['SequenceNumber', 'UserId', 'HostName', 'HostVersion', 'HostId', 'HostApplication', 'EngineVersion', 'RunspaceId', 'ScriptName', 'CommandLine', 'Context', 'Subject', 'Accesses', 'Object', 'Privileges']
+Using '@timestamp' as the primary timestamp.
+  [shield] empire_persistence_registry_modification_run_keys_elevated_user_2020-07-22001847: too sparse (filtered=9, total=657) — using full df
+  [shield] empire_persistence_registry_modification_run_keys_elevated_user_2020-07-22001847: 657 events → 657 filtered → 18 nodes → 4 communities
+    c1 (7n): conf=0.00 stages=[] tids=[]
+    c2 (6n): skipped — S2 found no real deviations
+    c3 (3n): skipped — no suspicious processes found in S1
+  [shield] empire_persistence_registry_modification_run_keys_elevated_user_2020-07-22001847: 0 alerts, 81s
+  [OK] shield/atomic\persistence\empire_persistence_registry_modification_run_keys_elevated_user\empire_persistence_registry_modification_run_keys_elevated_user_2020-07-22001847 → D:\Lab\EDR_Agent\Paper\CCS_Project-main\Final_Code\output\baselines\shield\atomic\persistence\empire_persistence_registry_modification_run_keys_elevated_user\empire_persistence_registry_modification_run_keys_elevated_user_2020-07-22001847\result.json
+총 이벤트 수: 59,399
+Parsing messages...
+  Processed 10000 rows...
+  Processed 20000 rows...
+  Processed 30000 rows...
+  Processed 40000 rows...
+  Processed 50000 rows...
+
+Added 125 new columns from Message.
+  ['SequenceNumber', 'UserId', 'HostName', 'HostVersion', 'HostId', 'HostApplication', 'EngineVersion', 'RunspaceId', 'ScriptName', 'Subject', 'Process', 'Object', 'Accesses', 'Privileges', 'ReadAttributes', 'Type', 'READ_CONTROL', 'SYNCHRONIZE', 'ReadEA', 'NewProviderState', 'PipelineId', 'CommandName', 'CommandType', 'CommandPath', 'NewEngineState', 'PreviousEngineState', 'SetTargetResourceUnInstallwhatIfMessage', 'FeatureNotFoundError', 'FeatureDiscoveryFailureError', 'FeatureInstallationFailureError', 'FeatureUnInstallationFailureError', 'QueryFeature', 'InstallFeature', 'UninstallFeature', 'RestartNeeded', 'GetTargetResourceStartVerboseMessage', 'GetTargetResourceEndVerboseMessage', 'SetTargetResourceStartVerboseMessage', 'SetTargetResourceEndVerboseMessage', 'TestTargetResourceStartVerboseMessage', 'TestTargetResourceEndVerboseMessage', 'ServerManagerModuleNotFoundDebugMessage', 'SkuNotSupported', 'SourcePropertyNotSupportedDebugMessage', 'EnableServerManagerPSHCmdletsFeature', 'UninstallSuccess', 'InstallSuccess', 'SetTargetResourceInstallwhatIfMessage', 'InValidResultFromGetScriptError', 'InValidResultFromTestScriptError', 'ScriptBlockProviderScriptExecutionFailureError', 'ExecutingScriptMessage', 'ResourceNotAllowedWhenDeviceGuardIsEnabled', 'WarningRunningScriptResourceInFullLanguageMode', 'SetScriptWhatIfMessage', 'InvalidDomainError', 'ExistingDomainMemberError', 'InvalidCredentialError', 'QueryDomainWithLocalCredential', 'QueryDomainWithCredential', 'DomainFound', 'DomainNotFound', 'CreatingChildDomain', 'CreatedChildDomain', 'CreatingForest', 'CreatedForest', 'ResourcePropertyValueIncorrect', 'ResourceInDesiredState', 'ResourceNotInDesiredState', 'RetryingGetADDomain', 'UnhandledError', 'FaultExceptionAndDomainShouldExist', 'ModuleVersion', 'GUID', 'Author', 'CompanyName', 'Copyright', 'PowerShellVersion', 'CLRVersion', 'FunctionsToExport', 'CmdletsToExport', 'Address', 'AddressFamily', 'InterfaceAlias', 'PrivateData', 'PSData', 'Tags', 'LicenseUri', 'ProjectUri', 'ReleaseNotes', 'RoleNotFoundError', 'DomainName', 'ParentDomainName', 'DomainNetBIOSName', 'SafeModeAdministratorPassword', 'NoRebootOnCompletion', 'Force', 'MembersAndIncludeExcludeError', 'MembersIsNullError', 'MembersIsEmptyError', 'IncludeAndExcludeConflictError', 'IncludeAndExcludeAreEmptyError', 'CheckingMembers', 'MembershipCountMismatch', 'MemberNotInDesiredState', 'RemovingDuplicateMember', 'MembershipInDesiredState', 'MembershipNotDesiredState', 'CheckingDomain', 'CheckingSite', 'http', 'ConfirmEnableMessage', 'ConfirmDisableMessage', 'ShouldProcessForUserMessage', 'ShouldProcessForUserMessageDisable', 'ErrorOnUsernameMessage', 'CreatorSID', 'EventNamespace', 'Name', 'Query', 'QueryLanguage', 'NameOfUserSIDProperty', 'D', 'Rule', 'O']
+Using '@timestamp' as the primary timestamp.
+  [shield] empire_schtasks_creation_execution_elevated_user_2020-09-21175806: 59399 events → 31300 filtered → 15515 nodes → 20 communities
+    c9 (9937n): skipped — no suspicious processes found in S1
+    c11 (1205n): skipped — no suspicious processes found in S1
+    c2 (1066n): skipped — no suspicious processes found in S1
+    c7 (455n): skipped — no suspicious processes found in S1
+    c1 (422n): skipped — no suspicious processes found in S1
+    c13 (344n): skipped — no suspicious processes found in S1
+    c6 (323n): skipped — no suspicious processes found in S1
+    c12 (317n): skipped — no suspicious processes found in S1
+    c15 (270n): skipped — no suspicious processes found in S1
+    c5 (189n): skipped — S2 found no real deviations
+    c0 (182n): skipped — S2 found no real deviations
+    c16 (178n): skipped — no suspicious processes found in S1
+    c17 (140n): skipped — no suspicious processes found in S1
+    c4 (126n): skipped — no suspicious processes found in S1
+    c36 (126n): skipped — S2 found no real deviations
+    c32 (49n): skipped — no suspicious processes found in S1
+    c8 (36n): skipped — no suspicious processes found in S1
+    c10 (28n): skipped — no suspicious processes found in S1
+    c37 (20n): skipped — S2 found no real deviations
+    c18 (18n): skipped — no suspicious processes found in S1
+  [shield] empire_schtasks_creation_execution_elevated_user_2020-09-21175806: 0 alerts, 257s
+  [OK] shield/atomic\persistence\empire_schtasks_creation_execution_elevated_user\empire_schtasks_creation_execution_elevated_user_2020-09-21175806 → D:\Lab\EDR_Agent\Paper\CCS_Project-main\Final_Code\output\baselines\shield\atomic\persistence\empire_schtasks_creation_execution_elevated_user\empire_schtasks_creation_execution_elevated_user_2020-09-21175806\result.json
+총 이벤트 수: 79,896
+Parsing messages...
+  Processed 10000 rows...
+  Processed 20000 rows...
+  Processed 30000 rows...
+  Processed 40000 rows...
+  Processed 50000 rows...
+  Processed 60000 rows...
+  Processed 70000 rows...
+
+Added 34 new columns from Message.
+  ['SequenceNumber', 'UserId', 'HostName', 'HostVersion', 'HostId', 'HostApplication', 'EngineVersion', 'RunspaceId', 'ScriptName', 'Subject', 'Object', 'Accesses', 'Privileges', 'Process', 'CreatorSID', 'QueryLanguage', 'CommandLineTemplate', 'RunInteractively', 'READ_CONTROL', 'SYNCHRONIZE', 'ReadEA', 'ReadAttributes', 'NameOfUserSIDProperty', 'D', 'NewProviderState', 'PipelineId', 'CommandName', 'CommandType', 'CommandPath', 'NewEngineState', 'PreviousEngineState', 'Rule', 'O', 'Memory']
+Using '@timestamp' as the primary timestamp.
+  [shield] empire_wmi_local_event_subscriptions_elevated_user_2020-09-04164306: 79896 events → 41631 filtered → 19762 nodes → 20 communities
+    c33 (12798n): skipped — no suspicious processes found in S1
+    c1 (1431n): skipped — no suspicious processes found in S1
+    c20 (1315n): skipped — no suspicious processes found in S1
+    c14 (763n): skipped — no suspicious processes found in S1
+    c11 (447n): skipped — no suspicious processes found in S1
+    c15 (417n): skipped — no suspicious processes found in S1
+    c26 (357n): skipped — S2 found no real deviations
+    c10 (339n): skipped — no suspicious processes found in S1
+    c8 (332n): skipped — no suspicious processes found in S1
+    c2 (270n): skipped — no suspicious processes found in S1
+    c9 (226n): skipped — no suspicious processes found in S1
+    c31 (201n): skipped — no suspicious processes found in S1
+    c5 (177n): skipped — no suspicious processes found in S1
+    c3 (153n): skipped — no suspicious processes found in S1
+    c13 (136n): skipped — no suspicious processes found in S1
+    c25 (123n): skipped — no suspicious processes found in S1
+    c29 (84n): skipped — no suspicious processes found in S1
+    c32 (75n): skipped — no suspicious processes found in S1
+    c4 (53n): skipped — no suspicious processes found in S1
+    c6 (16n): skipped — no suspicious processes found in S1
+  [shield] empire_wmi_local_event_subscriptions_elevated_user_2020-09-04164306: 0 alerts, 240s
+  [OK] shield/atomic\persistence\empire_wmi_local_event_subscriptions_elevated_user\empire_wmi_local_event_subscriptions_elevated_user_2020-09-04164306 → D:\Lab\EDR_Agent\Paper\CCS_Project-main\Final_Code\output\baselines\shield\atomic\persistence\empire_wmi_local_event_subscriptions_elevated_user\empire_wmi_local_event_subscriptions_elevated_user_2020-09-04164306\result.json
+총 이벤트 수: 437
+Parsing messages...
+
+Added 4 new columns from Message.
+  ['Subject', 'Object', 'Process', 'Accesses']
+Using '@timestamp' as the primary timestamp.
+  [shield] cmd_service_mod_fax_2020-10-2120454410: too sparse (filtered=270, total=437) — using full df
+  [shield] cmd_service_mod_fax_2020-10-2120454410: 437 events → 437 filtered → 139 nodes → 5 communities
+    c4 (117n): skipped — no suspicious processes found in S1
+    c1 (11n): conf=0.00 stages=[] tids=[]
+    c0 (7n): skipped — no suspicious processes found in S1
+  [shield] cmd_service_mod_fax_2020-10-2120454410: 0 alerts, 52s
+  [OK] shield/atomic\privilege_escalation\cmd_service_mod_fax\cmd_service_mod_fax_2020-10-2120454410 → D:\Lab\EDR_Agent\Paper\CCS_Project-main\Final_Code\output\baselines\shield\atomic\privilege_escalation\cmd_service_mod_fax\cmd_service_mod_fax_2020-10-2120454410\result.json
+총 이벤트 수: 2,581
+Parsing messages...
+
+Added 18 new columns from Message.
+  ['DetailSequence', 'DetailTotal', 'SequenceNumber', 'UserId', 'HostName', 'HostVersion', 'HostId', 'HostApplication', 'EngineVersion', 'PipelineId', 'RuleName', 'Accesses', 'Privileges', 'SYNCHRONIZE', 'ReadEA', 'ReadAttributes', 'Path', 'READ_CONTROL']
+Using '@timestamp' as the primary timestamp.
+  [shield] empire_invoke_runas_2019-05-18204300: 2581 events → 906 filtered → 239 nodes → 8 communities
+    c7 (121n): conf=0.00 stages=[] tids=[]
+    c1 (72n): conf=0.00 stages=[] tids=[]
+    c3 (24n): skipped — S2 found no real deviations
+    c5 (11n): skipped — S2 found no real deviations
+    c0 (3n): conf=0.00 stages=[] tids=[]
+    c2 (3n): skipped — no suspicious processes found in S1
+    c4 (3n): skipped — S2 found no real deviations
+  [shield] empire_invoke_runas_2019-05-18204300: 0 alerts, 166s
+  [OK] shield/atomic\privilege_escalation\empire_invoke_runas\empire_invoke_runas_2019-05-18204300 → D:\Lab\EDR_Agent\Paper\CCS_Project-main\Final_Code\output\baselines\shield\atomic\privilege_escalation\empire_invoke_runas\empire_invoke_runas_2019-05-18204300\result.json
+총 이벤트 수: 4,139
+Parsing messages...
+
+Added 26 new columns from Message.
+  ['SequenceNumber', 'UserId', 'HostName', 'HostVersion', 'HostId', 'HostApplication', 'EngineVersion', 'RunspaceId', 'ScriptName', 'Subject', 'Process', 'ProviderName', 'NewProviderState', 'PipelineId', 'CommandName', 'CommandType', 'CommandPath', 'NewEngineState', 'PreviousEngineState', 'Object', 'Accesses', 'SYNCHRONIZE', 'ReadEA', 'ReadAttributes', 'Session', 'Privileges']
+Using '@timestamp' as the primary timestamp.
+  [shield] empire_uac_shellapi_fodhelper_2020-09-04032946: 4139 events → 1908 filtered → 671 nodes → 20 communities
+    c19 (164n): conf=0.00 stages=[] tids=[]
+    c15 (119n): skipped — no suspicious processes found in S1
+    c5 (89n): skipped — no suspicious processes found in S1
+    c12 (64n): skipped — no suspicious processes found in S1
+    c14 (49n): skipped — no suspicious processes found in S1
+    c17 (44n): skipped — no suspicious processes found in S1
+    c6 (40n): conf=0.00 stages=[] tids=[]
+    c18 (20n): skipped — no suspicious processes found in S1
+    c13 (14n): skipped — no suspicious processes found in S1
+    c1 (13n): skipped — no suspicious processes found in S1
+    c9 (10n): skipped — S2 found no real deviations
+    c2 (9n): skipped — no suspicious processes found in S1
+    c0 (7n): skipped — no suspicious processes found in S1
+    c8 (4n): skipped — no suspicious processes found in S1
+    c10 (4n): skipped — no suspicious processes found in S1
+    c4 (4n): skipped — no suspicious processes found in S1
+    c7 (4n): conf=0.90 stages=['Credential Access'] tids=['T1003.001']
+    c11 (3n): skipped — no suspicious processes found in S1
+    c20 (3n): skipped — S2 found no real deviations
+    c3 (3n): skipped — no suspicious processes found in S1
+  [shield] empire_uac_shellapi_fodhelper_2020-09-04032946: 1 alerts, 236s
+  [OK] shield/atomic\privilege_escalation\empire_uac_shellapi_fodhelper\empire_uac_shellapi_fodhelper_2020-09-04032946 → D:\Lab\EDR_Agent\Paper\CCS_Project-main\Final_Code\output\baselines\shield\atomic\privilege_escalation\empire_uac_shellapi_fodhelper\empire_uac_shellapi_fodhelper_2020-09-04032946\result.json
+총 이벤트 수: 53,698
+Parsing messages...
+  Processed 10000 rows...
+  Processed 20000 rows...
+  Processed 30000 rows...
+  Processed 40000 rows...
+  Processed 50000 rows...
+
+Added 39 new columns from Message.
+  ['DetailSequence', 'DetailTotal', 'SequenceNumber', 'UserId', 'HostName', 'HostVersion', 'HostId', 'HostApplication', 'EngineVersion', 'PipelineId', 'ScriptName', 'Context', 'Severity', 'Subject', 'Object', 'Process', 'Accesses', 'SYNCHRONIZE', 'ReadEA', 'ReadAttributes', 'Group', 'Operation', 'Privileges', 'NewEngineState', 'PreviousEngineState', 'CommandName', 'CommandType', 'CommandPath', 'ProviderName', 'NewProviderState', 'delWrapper', 's', 'alueFromPipelineByPropertyName', 'eByPropertyName', 'erationOption', 'defaultValue', 'rameterSetName', 'ype', 'tization_defaultValue']
+Using '@timestamp' as the primary timestamp.
+  [shield] metasploit_logonpasswords_lsass_memory_dump: 53698 events → 16943 filtered → 4992 nodes → 20 communities
+    c12 (2544n): skipped — no suspicious processes found in S1
+    c11 (418n): skipped — no suspicious processes found in S1
+    c8 (356n): skipped — no suspicious processes found in S1
+    c9 (330n): skipped — no suspicious processes found in S1
+    c5 (298n): skipped — no suspicious processes found in S1
+    c6 (281n): skipped — no suspicious processes found in S1
+    c7 (264n): skipped — no suspicious processes found in S1
+    c17 (160n): skipped — no suspicious processes found in S1
+    c4 (80n): skipped — no suspicious processes found in S1
+    c3 (74n): skipped — no suspicious processes found in S1
+    c19 (35n): skipped — no suspicious processes found in S1
+    c1 (34n): skipped — S2 found no real deviations
+    c10 (24n): conf=0.00 stages=[] tids=[]
+    c16 (18n): skipped — no suspicious processes found in S1
+    c2 (18n): skipped — no suspicious processes found in S1
+    c21 (15n): skipped — no suspicious processes found in S1
+    c24 (10n): skipped — no suspicious processes found in S1
+    c14 (9n): skipped — S2 found no real deviations
+    c15 (4n): skipped — no suspicious processes found in S1
+    c25 (4n): skipped — no suspicious processes found in S1
+  [shield] metasploit_logonpasswords_lsass_memory_dump: 0 alerts, 246s
+  [OK] shield/compound\lsass_campaign_01\metasploit_logonpasswords_lsass_memory_dump\metasploit_logonpasswords_lsass_memory_dump → D:\Lab\EDR_Agent\Paper\CCS_Project-main\Final_Code\output\baselines\shield\compound\lsass_campaign_01\metasploit_logonpasswords_lsass_memory_dump\metasploit_logonpasswords_lsass_memory_dump\result.json
+총 이벤트 수: 42,482
+Parsing messages...
+  Processed 10000 rows...
+  Processed 20000 rows...
+  Processed 30000 rows...
+  Processed 40000 rows...
+
+Added 48 new columns from Message.
+  ['DetailSequence', 'DetailTotal', 'SequenceNumber', 'UserId', 'HostName', 'HostVersion', 'HostId', 'HostApplication', 'EngineVersion', 'PipelineId', 'ScriptName', 'Subject', 'Context', 'Severity', 'Object', 'Process', 'Group', 'Response', 'P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P9', 'P10', 'Accesses', 'SYNCHRONIZE', 'ReadEA', 'ReadAttributes', 'Privileges', 'ProviderName', 'NewProviderState', 'CommandName', 'CommandType', 'CommandPath', 'NewEngineState', 'PreviousEngineState', 'rSetName', 'dletization_defaultValue', 'ctModelWrapper', '_values', 'rapper', 'ation_methodParameter', 'aultValue', 'ParameterSetName']
+Using '@timestamp' as the primary timestamp.
+  [shield] metasploit_procdump_lsass_memory_dump: 42482 events → 10073 filtered → 1605 nodes → 18 communities
+    c1 (282n): skipped — no suspicious processes found in S1
+    c6 (261n): skipped — S2 found no real deviations
+    c5 (254n): skipped — no suspicious processes found in S1
+    c8 (231n): skipped — no suspicious processes found in S1
+    c7 (139n): conf=0.00 stages=[] tids=[]
+    c16 (129n): skipped — no suspicious processes found in S1
+    c0 (87n): skipped — no suspicious processes found in S1
+    c9 (53n): skipped — no suspicious processes found in S1
+    c12 (42n): skipped — S2 found no real deviations
+    c14 (28n): skipped — no suspicious processes found in S1
+    c2 (24n): skipped — no suspicious processes found in S1
+    c10 (24n): skipped — no suspicious processes found in S1
+    c11 (16n): skipped — no suspicious processes found in S1
+    c17 (12n): skipped — no suspicious processes found in S1
+    c4 (10n): skipped — no suspicious processes found in S1
+    c3 (6n): skipped — no suspicious processes found in S1
+    c15 (5n): skipped — no suspicious processes found in S1
+  [shield] metasploit_procdump_lsass_memory_dump: 0 alerts, 206s
+  [OK] shield/compound\lsass_campaign_02\metasploit_procdump_lsass_memory_dump\metasploit_procdump_lsass_memory_dump → D:\Lab\EDR_Agent\Paper\CCS_Project-main\Final_Code\output\baselines\shield\compound\lsass_campaign_02\metasploit_procdump_lsass_memory_dump\metasploit_procdump_lsass_memory_dump\result.json

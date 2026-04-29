@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed registry activity by svchost.exe on DiagTrack keys is consistent with normal Windows diagnostic and telemetry service operations and does not indicate any known attack patterns.\"\n}"}

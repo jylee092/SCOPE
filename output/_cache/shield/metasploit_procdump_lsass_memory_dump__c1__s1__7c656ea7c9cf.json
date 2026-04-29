@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed registry modifications by svchost.exe are related to legitimate Windows components such as Scheduled Tasks (specifically the SoftwareProtectionPlatform's SvcRestartTask), StorageSense, and Ubpm, with no unusual command lines or other suspicious indicators present.\"\n}"}

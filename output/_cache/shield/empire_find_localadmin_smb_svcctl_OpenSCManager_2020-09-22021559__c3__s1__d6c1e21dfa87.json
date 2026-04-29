@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is performing registry operations and network connections consistent with the normal operation of a legitimate Windows service, likely the Diagnostic Tracking Service (DiagTrack), and no suspicious command lines or other indicators of compromise were observed.\"\n}"}

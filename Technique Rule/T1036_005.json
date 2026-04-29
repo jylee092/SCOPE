@@ -1,0 +1,59 @@
+{
+  "technique": { "id": "T1036.005", "name": "Match Legitimate Name or Location" },
+  "detection": { "id": "DET-T1036005" },
+  "analysis": { "id": "AN-T1036005" },
+  "log_sources": {
+    "Anchor Event": {
+      "data_component": { "id": "DC0032", "name": "Process Creation" },
+      "description": "정상 프로세스 이름으로 위장한 실행 (process herpaderping / hollowing 포함).",
+      "conditions": [
+        {
+          "type": "masquerade_process",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [1] },
+          "filters": {
+            "Image": { "contains_any": ["\\Temp\\", "\\AppData\\", "\\Public\\", "\\ProgramData\\"] },
+            "OriginalFileName": { "contains_any": ["svchost", "explorer", "lsass", "services", "csrss", "winlogon", "wininit", "conhost", "cmd", "powershell"] }
+          },
+          "description": "시스템 프로세스 OriginalFileName이지만 임시 경로에서 실행."
+        },
+        {
+          "type": "mimiexplorer",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [1] },
+          "filters": {
+            "CommandLine": { "contains_any": ["mimiexplorer", "herpaderp", "snippingtool"] }
+          },
+          "description": "알려진 process herpaderping 도구."
+        },
+        {
+          "type": "loaded_image_mismatch",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [7] },
+          "filters": {
+            "ImageLoaded": { "contains": "\\System32\\" },
+            "Image": { "contains_any": ["\\Temp\\", "\\AppData\\"] }
+          },
+          "description": "System32 DLL이 비표준 위치의 프로세스에 로드됨."
+        }
+      ]
+    },
+    "Supporting Events": [
+      { "data_component": { "id": "DC0039", "name": "File Creation" }, "source": "WinEventLog:Sysmon", "channel": { "event_codes": [11] }, "description": "위장 바이너리 드롭" }
+    ]
+  },
+  "mutable_elements": {
+    "grouping_logic": {
+      "primary_anchor_eids": [1, 7],
+      "correlation_key": { "primary": ["Hostname", "ProcessGuid"], "fallback": ["Hostname"] },
+      "time_window": { "before_seconds": 30, "after_seconds": 60 }
+    },
+    "feature_extraction_filters": {
+      "legitimate_system_names": ["svchost.exe", "explorer.exe", "lsass.exe", "services.exe", "csrss.exe"],
+      "valid_system_dirs": ["C:\\Windows\\System32\\", "C:\\Windows\\SysWOW64\\"]
+    },
+    "semantic_templates": {
+      "masquerade": "프로세스({Image})가 정상 시스템 이름({OriginalFileName})을 위장하지만 비정상 경로({Path})에서 실행됨."
+    }
+  }
+}

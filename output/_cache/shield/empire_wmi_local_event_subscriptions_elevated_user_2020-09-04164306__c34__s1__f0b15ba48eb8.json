@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[wevtutil.exe|{860ba2e3-a73}]\"\n  ],\n  \"rationale\": \"The process `wevtutil.exe` made extensive modifications to event log publishers and WMI autologger configurations, which, despite the Azure context, can be indicative of log tampering or defense evasion tactics.\"\n}"}

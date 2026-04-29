@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is making numerous connections to standard DNS (port 53), mDNS (port 5353), and LLMNR (port 5355) ports, which are legitimate for network services; without command-line arguments, destination IP addresses, or other behavioral indicators, this activity does not definitively match"}

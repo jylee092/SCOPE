@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed processes (lsass.exe, svchost.exe, services.exe) exhibit normal behavior consistent with Group Policy processing and Active Directory authentication, with no indicators of known attack patterns in their command lines, registry interactions, or network connections.\"\n}"}

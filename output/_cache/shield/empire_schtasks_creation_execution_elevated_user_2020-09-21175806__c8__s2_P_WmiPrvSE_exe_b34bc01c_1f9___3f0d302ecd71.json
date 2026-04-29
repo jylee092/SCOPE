@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": false,\n  \"deviation\": \"\",\n  \"indicators\": [\n    \"lsass\",\n    \"pipe_connect\"\n  ]\n}"}

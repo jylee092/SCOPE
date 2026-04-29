@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[Explorer.EXE|{860ba2e3-993]\"\n  ],\n  \"rationale\": \"Explorer.EXE performed extensive registry modifications related to VBScript file associations and WScript.exe shell extensions, which is a common technique used by malware for execution and persistence.\"\n}"}

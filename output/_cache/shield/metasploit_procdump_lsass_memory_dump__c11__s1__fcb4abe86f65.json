@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The process ApplicationFrameHost.exe is performing routine registry operations and loading a legitimate DLL (AppXDeploymentClient.dll) within a user's AppModel settings, with no command-line arguments or other indicators matching known attack patterns.\"\n}"}

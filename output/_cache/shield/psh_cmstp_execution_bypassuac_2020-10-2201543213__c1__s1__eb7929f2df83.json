@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities, including file writes, registry modifications, and numerous DNS queries, are consistent with the expected behavior of MsMpEng.exe (Windows Defender) and do not indicate any suspicious attack patterns.\"\n}"}

@@ -1,0 +1,449 @@
+[
+  {
+    "group_id": "T1037_001_75",
+    "technique_id": "T1037.001",
+    "technique_name": "Logon Script (Windows)",
+    "anchor_eid": 4688,
+    "anchor_detail": {
+      "eid": 4688,
+      "time": "2020-10-19 10:47:08.745000+00:00",
+      "image": "reg.exe",
+      "parent_image": "cmd.exe",
+      "cmdline": "REG.exe  ADD HKCU\\Environment /v UserInitMprLogonScript /t REG_SZ /d C:\\Users\\wardog\\AppData\\Local\\Temp\\art.bat /f",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": "wardog",
+      "integrity": null
+    },
+    "confidence": 0.6,
+    "all_idxs": [
+      69,
+      74,
+      75,
+      77,
+      81,
+      85,
+      86,
+      87,
+      89,
+      90,
+      91,
+      92,
+      93,
+      95,
+      96,
+      97,
+      98,
+      99,
+      111,
+      112,
+      116,
+      117,
+      118,
+      119
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "spawn",
+            "parent_image": "cmd.exe",
+            "child_image": "reg.exe",
+            "integrity_level": "High",
+            "parent_guid": "{39e4a257-4eb6-5f8e-0008-000000000700}",
+            "child_guid": "{39e4a257-4fac-5f8e-0208-000000000700}",
+            "cmdline": "REG.exe  ADD HKCU\\Environment /v UserInitMprLogonScript /t REG_SZ /d C:\\Users\\wardog\\AppData\\Local\\Temp\\art.bat /f",
+            "source_eid": 1
+          }
+        ],
+        "chain_depth": 1
+      },
+      "command_script": {
+        "entries": [
+          {
+            "source_eid": 4688,
+            "image": "reg.exe",
+            "cmdline": "REG.exe  ADD HKCU\\Environment /v UserInitMprLogonScript /t REG_SZ /d C:\\Users\\wardog\\AppData\\Local\\Temp\\art.bat /f",
+            "cmdline_length": 114,
+            "has_obfuscation": false,
+            "special_chars": []
+          }
+        ],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 1,
+        "user": "WORKSTATION5\\wardog",
+        "domain": null,
+        "logon_id": "0xc61d9",
+        "integrity_level": "High",
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-10-19T10:47:08.745000+00:00",
+        "window_start_delta_sec": -8.72,
+        "window_end_delta_sec": 5.2,
+        "span_sec": 13.93,
+        "total_events": 24,
+        "event_density_per_10sec": 17.23,
+        "eid_counts": {
+          "7": 10,
+          "13": 9,
+          "4688": 1,
+          "1": 1,
+          "12": 1,
+          "5": 1,
+          "11": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 8.723,
+          "mean_sec": 0.606
+        },
+        "burst_detected": [
+          {
+            "eid": 7,
+            "count": 10,
+            "window_sec": 0.02
+          },
+          {
+            "eid": 13,
+            "count": 9,
+            "window_sec": 9.28
+          }
+        ]
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Environment\\UserInitMprLogonScript",
+            "details": "C:\\Users\\wardog\\AppData\\Local\\Temp\\art.bat",
+            "process_guid": "{39e4a257-4fac-5f8e-0208-000000000700}",
+            "image": "reg.exe"
+          }
+        ],
+        "registry_noise": [
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\VFUProvider\\StartTime",
+            "details": "QWORD (0x01d6a68b-0x48722ab7)",
+            "process_guid": "{39e4a257-f137-5f8b-4c00-000000000700}",
+            "image": "svchost.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\SOFTWARE\\Microsoft\\Windows Defender\\Reporting\\SigUpdateTimestampsSinceLastHB",
+            "details": "(Empty)",
+            "process_guid": "{39e4a257-f138-5f8b-5600-000000000700}",
+            "image": "MsMpEng.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\\Count\\{1NP14R77-02R7-4R5Q-O744-2RO1NR5198O7}\\pzq.rkr",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f1b3-5f8b-a700-000000000700}",
+            "image": "Explorer.EXE"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\\Count\\HRZR_PGYFRFFVBA",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f1b3-5f8b-a700-000000000700}",
+            "image": "Explorer.EXE"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Software\\Microsoft\\Windows\\CurrentVersion\\ActivityDataModel\\ReaderRevisionInfo\\A972977C-95EC-9F21-DCC4-595CA3A0E033",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f1b3-5f8b-a700-000000000700}",
+            "image": "Explorer.EXE"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Software\\Microsoft\\Windows\\CurrentVersion\\ActivityDataModel\\ReaderRevisionInfo\\A972977C-95EC-9F21-DCC4-595CA3A0E033",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f1b3-5f8b-a700-000000000700}",
+            "image": "Explorer.EXE"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\\Count\\HRZR_PGYFRFFVBA",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f1b3-5f8b-a700-000000000700}",
+            "image": "Explorer.EXE"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\\Count\\{1NP14R77-02R7-4R5Q-O744-2RO1NR5198O7}\\JvaqbjfCbjreFuryy\\i1.0\\cbjrefuryy.rkr",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f1b3-5f8b-a700-000000000700}",
+            "image": "Explorer.EXE"
+          }
+        ],
+        "registry_noise_count": 8,
+        "dropped_files": [
+          {
+            "source_eid": 11,
+            "path": "C:\\Windows\\Prefetch\\REG.EXE-E7E8BD26.pf",
+            "image": "svchost.exe"
+          }
+        ]
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1070_001_0",
+    "technique_id": "T1070.001",
+    "technique_name": "Clear Windows Event Logs",
+    "anchor_eid": 1102,
+    "anchor_detail": {
+      "eid": 1102,
+      "time": "2020-10-19 10:46:42.027000+00:00",
+      "image": null,
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": null,
+      "integrity": null
+    },
+    "confidence": 0.75,
+    "all_idxs": [
+      0,
+      1,
+      75,
+      77
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "spawn",
+            "parent_image": "cmd.exe",
+            "child_image": "reg.exe",
+            "integrity_level": "High",
+            "parent_guid": "{39e4a257-4eb6-5f8e-0008-000000000700}",
+            "child_guid": "{39e4a257-4fac-5f8e-0208-000000000700}",
+            "cmdline": "REG.exe  ADD HKCU\\Environment /v UserInitMprLogonScript /t REG_SZ /d C:\\Users\\wardog\\AppData\\Local\\Temp\\art.bat /f",
+            "source_eid": 1
+          }
+        ],
+        "chain_depth": 1
+      },
+      "command_script": {
+        "entries": [
+          {
+            "source_eid": 4688,
+            "image": "reg.exe",
+            "cmdline": "REG.exe  ADD HKCU\\Environment /v UserInitMprLogonScript /t REG_SZ /d C:\\Users\\wardog\\AppData\\Local\\Temp\\art.bat /f",
+            "cmdline_length": 114,
+            "has_obfuscation": false,
+            "special_chars": []
+          }
+        ],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 1,
+        "user": "WORKSTATION5\\wardog",
+        "domain": null,
+        "logon_id": "0xc61d9",
+        "integrity_level": "High",
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-10-19T10:46:42.027000+00:00",
+        "window_start_delta_sec": 0.0,
+        "window_end_delta_sec": 26.72,
+        "span_sec": 26.72,
+        "total_events": 4,
+        "event_density_per_10sec": 1.5,
+        "eid_counts": {
+          "1102": 1,
+          "104": 1,
+          "4688": 1,
+          "1": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.004,
+          "max_sec": 26.671,
+          "mean_sec": 8.907
+        },
+        "burst_detected": []
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [
+          {
+            "source_eid": 1102,
+            "message": "The audit log was cleared.",
+            "user": null
+          },
+          {
+            "source_eid": 104,
+            "message": "The System log file was cleared.",
+            "user": null
+          }
+        ],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1112_96",
+    "technique_id": "T1112",
+    "technique_name": "Modify Registry",
+    "anchor_eid": 13,
+    "anchor_detail": {
+      "eid": 13,
+      "time": "2020-10-19 10:47:08.771000+00:00",
+      "image": "reg.exe",
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Environment\\UserInitMprLogonScript",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": null,
+      "integrity": null
+    },
+    "confidence": 1.0,
+    "all_idxs": [
+      74,
+      77,
+      81,
+      85,
+      86,
+      87,
+      89,
+      90,
+      91,
+      92,
+      93,
+      95,
+      96,
+      97
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "spawn",
+            "parent_image": "cmd.exe",
+            "child_image": "reg.exe",
+            "integrity_level": "High",
+            "parent_guid": "{39e4a257-4eb6-5f8e-0008-000000000700}",
+            "child_guid": "{39e4a257-4fac-5f8e-0208-000000000700}",
+            "cmdline": "REG.exe  ADD HKCU\\Environment /v UserInitMprLogonScript /t REG_SZ /d C:\\Users\\wardog\\AppData\\Local\\Temp\\art.bat /f",
+            "source_eid": 1
+          }
+        ],
+        "chain_depth": 1
+      },
+      "command_script": {
+        "entries": [
+          {
+            "source_eid": 1,
+            "image": "reg.exe",
+            "cmdline": "REG.exe  ADD HKCU\\Environment /v UserInitMprLogonScript /t REG_SZ /d C:\\Users\\wardog\\AppData\\Local\\Temp\\art.bat /f",
+            "cmdline_length": 114,
+            "has_obfuscation": false,
+            "special_chars": []
+          }
+        ],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 1,
+        "user": "WORKSTATION5\\wardog",
+        "domain": null,
+        "logon_id": "0xc61d9",
+        "integrity_level": "High",
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-10-19T10:47:08.771000+00:00",
+        "window_start_delta_sec": -0.03,
+        "window_end_delta_sec": 0.0,
+        "span_sec": 0.03,
+        "total_events": 14,
+        "event_density_per_10sec": null,
+        "eid_counts": {
+          "7": 10,
+          "1": 1,
+          "12": 1,
+          "13": 1,
+          "5": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 0.008,
+          "mean_sec": 0.002
+        },
+        "burst_detected": [
+          {
+            "eid": 7,
+            "count": 10,
+            "window_sec": 0.02
+          }
+        ]
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Environment\\UserInitMprLogonScript",
+            "details": "C:\\Users\\wardog\\AppData\\Local\\Temp\\art.bat",
+            "process_guid": "{39e4a257-4fac-5f8e-0208-000000000700}",
+            "image": "reg.exe"
+          }
+        ],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  }
+]

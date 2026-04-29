@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[whoami.exe|{3ddc5665-ed2]\"\n  ],\n  \"rationale\": \"The execution of 'whoami.exe' is a common reconnaissance step used by attackers to gather information about the current user's privileges and context on a compromised system.\"\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The Explorer.EXE process is performing routine registry operations related to user activity and feature usage within its standard HKU paths, with no notable command lines, child processes, or other indicators of compromise.\"\n}"}

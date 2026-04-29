@@ -1,0 +1,1 @@
+{"text": "{\n  \"confidence_score\": 0.95,\n  \"attack_summary\": \"A PowerShell process attempted a User Account Control (UAC) bypass by writing an .inf file named 'T1218.003_uacbypass.inf' to C:\\\\ProgramData, indicative of the CMSTP technique. Immediately following this, PowerShell established network connections to GitHub domains, likely to download additional"}

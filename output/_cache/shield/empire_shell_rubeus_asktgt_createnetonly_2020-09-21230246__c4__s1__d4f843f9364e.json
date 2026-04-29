@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed process activities, including the spawning of WmiPrvSE.exe by svchost.exe, its command line, loaded DLLs, and registry modifications, are consistent with the normal operation of the Windows Management Instrumentation (WMI) service and do not exhibit any known attack patterns.\"\n}"}

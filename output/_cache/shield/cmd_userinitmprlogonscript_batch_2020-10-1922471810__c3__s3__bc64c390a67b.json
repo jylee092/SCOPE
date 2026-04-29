@@ -1,0 +1,1 @@
+{"text": "{\n  \"confidence_score\": 0.95,\n  \"attack_summary\": \"The `reg.exe` utility was observed modifying a user's registry to establish persistence. Specifically, it set the 'UserInitMprLogonScript' key to execute a batch file named 'art.bat' from a temporary directory upon the user's logon, ensuring continued access.\",\n  \"malicious_"}

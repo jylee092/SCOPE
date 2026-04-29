@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The NetworkWatcherAgent.exe process is performing actions (disabling network capture settings and deleting a .cap file from its dedicated temporary cache directory) that are consistent with its legitimate function of managing network packet captures, and no other suspicious indicators were observed.\"\n}"}

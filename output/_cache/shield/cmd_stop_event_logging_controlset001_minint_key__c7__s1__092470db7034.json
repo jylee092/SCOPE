@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The provided community lacks command-line arguments, child processes, or file/registry operations, and the network connections to local or unspecified remote ports 1900 (SSDP) and 64218 do not, by themselves, indicate a known attack pattern for svchost.exe.\"\n}"}

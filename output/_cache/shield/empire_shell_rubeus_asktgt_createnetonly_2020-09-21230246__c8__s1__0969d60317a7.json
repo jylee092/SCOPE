@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities for MusNotification.exe, including DLL loads, registry modifications, and log file deletion, are consistent with its legitimate function as part of the Windows Update process and do not match known attack patterns.\"\n}"}

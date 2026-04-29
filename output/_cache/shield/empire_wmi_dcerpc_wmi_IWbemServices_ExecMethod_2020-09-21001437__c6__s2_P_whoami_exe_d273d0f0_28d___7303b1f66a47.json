@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": false,\n  \"deviation\": \"\",\n  \"indicators\": [\n    \"whoami.exe\",\n    \"legitimate utility\",\n    \"standard DLL loads\"\n  ]\n}"}

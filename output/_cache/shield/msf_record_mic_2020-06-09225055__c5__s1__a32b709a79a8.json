@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"No processes exhibit suspicious command-line arguments, unusual child processes, unauthorized file/registry writes, rare DLL loads, or unexpected network connections that would indicate malicious activity based on common attack patterns.\"\n}"}

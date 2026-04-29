@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed process activities, command lines, file writes, and registry modifications are consistent with the legitimate operation of Microsoft Office Click-to-Run update and telemetry services, and do not match known attack patterns.\"\n}"}

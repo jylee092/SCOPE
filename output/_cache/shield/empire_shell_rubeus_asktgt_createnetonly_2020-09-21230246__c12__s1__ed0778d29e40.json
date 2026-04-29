@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[svchost.exe|{d273d0f0-e86]\"\n  ],\n  \"rationale\": \"The process P[svchost.exe|{d273d0f0-e86] is suspicious because it wrote the prefetch file for Rubeus.exe, a known credential access tool, indicating its execution on the system.\"\n}"}

@@ -1,0 +1,58 @@
+{
+  "technique": { "id": "T1003", "name": "OS Credential Dumping" },
+  "detection": { "id": "DET0234" },
+  "analysis": { "id": "AN0648" },
+  "log_sources": {
+    "Anchor Event": {
+      "data_component": { "id": "DC0035", "name": "Process Access / Creation" },
+      "description": "LSASS 접근 또는 덤프 툴 실행",
+      "conditions": [
+        {
+          "type": "lsass_access",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [10] },
+          "filters": { "TargetImage": { "contains": ["lsass.exe"] } },
+          "description": "LSASS 프로세스 핸들 획득 (데이터셋 확인: 0x1000, 0x1fffff 등)"
+        },
+        {
+          "type": "dump_tool_execution",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [1] },
+          "filters": {
+            "CommandLine": {
+              "contains_any": [
+                "mimikatz", "procdump", "sekurlsa", "Invoke-Mimikatz",
+                "comsvcs.dll", "MiniDump", "-ma lsass", "lsass.dmp",
+                "lsass-", "ntdsutil", "ntds.dit", "reg save hklm\\sam",
+                "reg save hklm\\system", "reg save hklm\\security",
+                "esentutl", "vssadmin", "wbadmin",
+                "rubeus", "kerberoasting", "pwdump", "gsecdump",
+                "wce.exe", "cachedump", "secretsdump"
+              ],
+              "note": "자격증명 덤프 도구/수법 CommandLine 시그니처. 이 필터 없으면 모든 EID 1이 T1003 anchor로 잡혀 심각한 false positive 발생."
+            }
+          },
+          "description": "mimikatz, procdump 등 알려진 덤프 도구 실행"
+        }
+      ]
+    },
+    "Supporting Events": [
+      { "data_component": { "id": "DC0055", "name": "File Access" }, "source": "WinEventLog:Security", "channel": { "event_codes": [4663, 4670, 4656] }, "description": "SAM, NTDS.dit 등 자격 증명 파일에 대한 직접 접근" },
+      { "data_component": { "id": "DC0071", "name": "Active Directory Object Access" }, "source": "WinEventLog:Security", "channel": { "event_codes": [4662] } }
+    ]
+  },
+  "mutable_elements": {
+    "grouping_logic": {
+      "primary_anchor_eids": [10, 1],
+      "correlation_key": { "primary": ["Hostname", "SourceProcessGUID"], "secondary": ["ProcessGuid"], "fallback": ["Hostname"] },
+      "time_window": { "window_seconds": 60 }
+    },
+    "feature_extraction_filters": {
+      "access_mask": ["0x1F0FFF", "0x1010", "0x1fffff", "PROCESS_VM_READ"],
+      "parent_process_filter": ["MsMpEng.exe", "avp.exe", "csrss.exe", "wininit.exe", "taskmgr.exe"]
+    },
+    "semantic_templates": {
+      "credential_dumping": "프로세스({SourceImage})가 자격 증명 탈취를 위해 {TargetImage}에 접근함"
+    }
+  }
+}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is performing registry writes to legitimate Windows paths related to Identity Credential Manager and Notifications for various user contexts, which is consistent with normal system behavior and does not exhibit any known attack patterns based on the provided events.\"\n}"}

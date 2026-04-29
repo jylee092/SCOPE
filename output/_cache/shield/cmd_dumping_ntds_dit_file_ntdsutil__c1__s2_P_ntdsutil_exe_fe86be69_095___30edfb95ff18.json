@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": false,\n  \"deviation\": \"\",\n  \"indicators\": [\n    \"ntdsutil.exe\",\n    \"lsass pipe\",\n    \"VSS\",\n    \"LDAP port 389\"\n  ]\n}"}

@@ -1,0 +1,1830 @@
+{
+  "scenario": "empire_invoke_runas_2019-05-18204300",
+  "tactic_sequence": [
+    "Privilege Escalation",
+    "Initial Access",
+    "Privilege Escalation",
+    "Persistence",
+    "Execution",
+    "Persistence",
+    "Execution",
+    "Privilege Escalation",
+    "Execution",
+    "Privilege Escalation",
+    "Initial Access",
+    "Impact",
+    "Initial Access",
+    "Impact",
+    "Initial Access",
+    "Impact",
+    "Privilege Escalation",
+    "Impact",
+    "Privilege Escalation",
+    "Initial Access",
+    "Impact",
+    "Privilege Escalation"
+  ],
+  "technique_sequence": [
+    "T1055",
+    "T1133",
+    "T1055",
+    "T1112",
+    "T1059.001",
+    "T1112",
+    "T1059.001",
+    "T1055",
+    "T1059.001",
+    "T1055",
+    "T1133",
+    "T1531",
+    "T1133",
+    "T1531",
+    "T1133",
+    "T1531",
+    "T1055",
+    "T1531",
+    "T1055",
+    "T1133",
+    "T1531",
+    "T1055"
+  ],
+  "per_group_topk": [
+    [
+      "T1055",
+      "T1074.001",
+      "T1588.003",
+      "T0864",
+      "T1594"
+    ],
+    [
+      "T1055",
+      "T1587.003",
+      "T1553.002",
+      "T1656",
+      "T1027.013"
+    ],
+    [
+      "T1055",
+      "T1553",
+      "T1070",
+      "T1553.002",
+      "T1562"
+    ],
+    [
+      "T1055",
+      "T1070",
+      "T1562.001",
+      "T1562",
+      "T1553"
+    ],
+    [
+      "T1055",
+      "T1070",
+      "T1562.001",
+      "T1562",
+      "T1070.004"
+    ],
+    [
+      "T1055",
+      "T1070",
+      "T1562.001",
+      "T1027",
+      "T1562"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110",
+      "T1070",
+      "T1036.005"
+    ],
+    [
+      "T1055",
+      "T1071",
+      "T1027.013",
+      "T1082",
+      "T1562"
+    ],
+    [
+      "T1055",
+      "T1036.005",
+      "T1070.004",
+      "T1562.001",
+      "T1070"
+    ],
+    [
+      "T1055",
+      "T1070",
+      "T1070.004",
+      "T1036.005",
+      "T1562.001"
+    ],
+    [
+      "T1112",
+      "T1059.005",
+      "T1070",
+      "T1070.004",
+      "T1036.005"
+    ],
+    [
+      "T1112",
+      "T1059.005",
+      "T1562.001",
+      "T1562",
+      "T1070"
+    ],
+    [
+      "T1112",
+      "T1059.005",
+      "T1562.001",
+      "T1562",
+      "T1070.004"
+    ],
+    [
+      "T1112",
+      "T1059.005",
+      "T1562.001",
+      "T1562",
+      "T1070.004"
+    ],
+    [
+      "T1112",
+      "T1059.005",
+      "T1562",
+      "T1055",
+      "T1562.001"
+    ],
+    [
+      "T1112",
+      "T1059.005",
+      "T1055",
+      "T1136",
+      "T1036.010"
+    ],
+    [
+      "T1112",
+      "T1059.005",
+      "T1055",
+      "T1562",
+      "T1136"
+    ],
+    [
+      "T1112",
+      "T1059.005",
+      "T1055",
+      "T1136",
+      "T1562"
+    ],
+    [
+      "T1112",
+      "T1059.005",
+      "T1136",
+      "T1055",
+      "T1136.002"
+    ],
+    [
+      "T1112",
+      "T1059.005",
+      "T1136",
+      "T1055",
+      "T1136.002"
+    ],
+    [
+      "T1112",
+      "T1059.005",
+      "T1136",
+      "T1136.002",
+      "T1055"
+    ],
+    [
+      "T1112",
+      "T1059.005",
+      "T1136",
+      "T1136.002",
+      "T1055"
+    ],
+    [
+      "T1059.001",
+      "T1136",
+      "T1136.002",
+      "T1055",
+      "T1505.001"
+    ],
+    [
+      "T1112",
+      "T1059.005",
+      "T1548",
+      "T1136",
+      "T1574.011"
+    ],
+    [
+      "T1112",
+      "T1059.005",
+      "T1136",
+      "T1136.002",
+      "T1055"
+    ],
+    [
+      "T1112",
+      "T1059.005",
+      "T1136",
+      "T1136.002",
+      "T1055"
+    ],
+    [
+      "T1112",
+      "T1059.005",
+      "T1136",
+      "T1136.002",
+      "T1055"
+    ],
+    [
+      "T1112",
+      "T1059.005",
+      "T1136",
+      "T1136.002",
+      "T1055"
+    ],
+    [
+      "T1059.001",
+      "T1136",
+      "T1136.002",
+      "T1055",
+      "T1505.001"
+    ],
+    [
+      "T1055",
+      "T1548",
+      "T1136",
+      "T1574.011",
+      "T1112"
+    ],
+    [
+      "T1059.001",
+      "T1136",
+      "T1055",
+      "T1548",
+      "T1587.003"
+    ],
+    [
+      "T1059.001",
+      "T1562.001",
+      "T1112",
+      "T1574.011",
+      "T1027.013"
+    ],
+    [
+      "T1055",
+      "T1112",
+      "T1059.005",
+      "T1059.003",
+      "T1574.011"
+    ],
+    [
+      "T1055",
+      "T1136",
+      "T1505",
+      "T1112",
+      "T1505.004"
+    ],
+    [
+      "T1055",
+      "T1562",
+      "T1070",
+      "T1136",
+      "T1562.001"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110",
+      "T1036.005",
+      "T1562.001"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110",
+      "T1055",
+      "T1562"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110",
+      "T1059.001",
+      "T1055"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110",
+      "T1059.001",
+      "T1059"
+    ],
+    [
+      "T1531",
+      "T1059.001",
+      "T1055",
+      "T1059",
+      "T1027"
+    ],
+    [
+      "T1531",
+      "T1203",
+      "T1547.001",
+      "T1574.001",
+      "T1587.003"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110",
+      "T1574",
+      "T1543"
+    ],
+    [
+      "T1531",
+      "T1055",
+      "T1136",
+      "T1036.008",
+      "T1098"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110",
+      "T1521.001",
+      "T1098"
+    ],
+    [
+      "T1531",
+      "T1098",
+      "T1136.002",
+      "T1543",
+      "T1136"
+    ],
+    [
+      "T1531",
+      "T1521.001",
+      "T1098",
+      "T0815",
+      "T1656"
+    ],
+    [
+      "T1055",
+      "T0815",
+      "T0878",
+      "T0860",
+      "T0855"
+    ],
+    [
+      "T1055",
+      "T0815",
+      "T1589",
+      "T0838",
+      "T0879"
+    ],
+    [
+      "T1531",
+      "T1136",
+      "T1636.004",
+      "T1036.008",
+      "T1629"
+    ],
+    [
+      "T1055",
+      "T1421",
+      "T1585.001",
+      "T1584",
+      "T1532"
+    ],
+    [
+      "T1055",
+      "T1589",
+      "T0815",
+      "T1036.010",
+      "T0838"
+    ],
+    [
+      "T1055",
+      "T1136",
+      "T1036.008",
+      "T1036.010",
+      "T1136.002"
+    ],
+    [
+      "T1055",
+      "T1136",
+      "T1547.001",
+      "T1036.008",
+      "T1587.003"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110",
+      "T1036.008",
+      "T1136"
+    ],
+    [
+      "T1531",
+      "T1218.010",
+      "T1074",
+      "T1656",
+      "T1055"
+    ],
+    [
+      "T1055",
+      "T1583",
+      "T1587",
+      "T1589.002",
+      "T1587.003"
+    ],
+    [
+      "T1055",
+      "T1036.010",
+      "T1036.008",
+      "T1587",
+      "T1587.003"
+    ],
+    [
+      "T1055",
+      "T1036.008",
+      "T1218.011",
+      "T1553",
+      "T1036.005"
+    ],
+    [
+      "T1055",
+      "T1036.005",
+      "T1070",
+      "T1553",
+      "T1553.002"
+    ]
+  ],
+  "notes": {
+    "n_alerts": 59,
+    "n_sigma_alerts": 59,
+    "n_deepag_top1_used": 1,
+    "alerts": [
+      {
+        "ts": "2019-05-18 20:42:59.831000+00:00",
+        "event_index": 14,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055",
+          "T1074.001",
+          "T1588.003",
+          "T0864",
+          "T1594"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Collection",
+          "",
+          "",
+          ""
+        ],
+        "deepag_top1": "T1074.001",
+        "deepag_prob": 8.479971438646317e-05,
+        "chosen_top1": "T1055",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:05.019000+00:00",
+        "event_index": 68,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055",
+          "T1587.003",
+          "T1553.002",
+          "T1656",
+          "T1027.013"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "",
+          "Defense Evasion",
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "deepag_top1": "T1587.003",
+        "deepag_prob": 0.239118754863739,
+        "chosen_top1": "T1055",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:10.159000+00:00",
+        "event_index": 99,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055",
+          "T1553",
+          "T1070",
+          "T1553.002",
+          "T1562"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Defense Evasion",
+          "Defense Evasion",
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "deepag_top1": "T1055",
+        "deepag_prob": 0.20714901387691498,
+        "chosen_top1": "T1055",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:15.113000+00:00",
+        "event_index": 136,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055",
+          "T1070",
+          "T1562.001",
+          "T1562",
+          "T1553"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Defense Evasion",
+          "Defense Evasion",
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "deepag_top1": "T1070",
+        "deepag_prob": 0.15634088218212128,
+        "chosen_top1": "T1055",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:20.285000+00:00",
+        "event_index": 186,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055",
+          "T1070",
+          "T1562.001",
+          "T1562",
+          "T1070.004"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Defense Evasion",
+          "Defense Evasion",
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "deepag_top1": "T1070",
+        "deepag_prob": 0.1925441324710846,
+        "chosen_top1": "T1055",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:25.503000+00:00",
+        "event_index": 245,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055",
+          "T1070",
+          "T1562.001",
+          "T1027",
+          "T1562"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Defense Evasion",
+          "Defense Evasion",
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "deepag_top1": "T1070",
+        "deepag_prob": 0.1891692578792572,
+        "chosen_top1": "T1055",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:27.288000+00:00",
+        "event_index": 255,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110",
+          "T1070",
+          "T1036.005"
+        ],
+        "topk_tactics": [
+          "Initial Access",
+          "Initial Access",
+          "Credential Access",
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "deepag_top1": "T1070",
+        "deepag_prob": 0.13878244161605835,
+        "chosen_top1": "T1133",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:27.289000+00:00",
+        "event_index": 257,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1055",
+          "T1071",
+          "T1027.013",
+          "T1082",
+          "T1562"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Command and Control",
+          "Defense Evasion",
+          "Discovery",
+          "Defense Evasion"
+        ],
+        "deepag_top1": "T1055",
+        "deepag_prob": 0.5498747825622559,
+        "chosen_top1": "T1055",
+        "chosen_src": "deepag"
+      },
+      {
+        "ts": "2019-05-18 20:43:30.425000+00:00",
+        "event_index": 294,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055",
+          "T1036.005",
+          "T1070.004",
+          "T1562.001",
+          "T1070"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Defense Evasion",
+          "Defense Evasion",
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "deepag_top1": "T1036.005",
+        "deepag_prob": 0.11247201263904572,
+        "chosen_top1": "T1055",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:35.606000+00:00",
+        "event_index": 417,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055",
+          "T1070",
+          "T1070.004",
+          "T1036.005",
+          "T1562.001"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Defense Evasion",
+          "Defense Evasion",
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "deepag_top1": "T1070",
+        "deepag_prob": 0.1363193839788437,
+        "chosen_top1": "T1055",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:36.925000+00:00",
+        "event_index": 573,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005",
+          "T1070",
+          "T1070.004",
+          "T1036.005"
+        ],
+        "topk_tactics": [
+          "Persistence",
+          "Execution",
+          "Defense Evasion",
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "deepag_top1": "T1070",
+        "deepag_prob": 0.13274872303009033,
+        "chosen_top1": "T1112",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:36.925000+00:00",
+        "event_index": 574,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005",
+          "T1562.001",
+          "T1562",
+          "T1070"
+        ],
+        "topk_tactics": [
+          "Persistence",
+          "Execution",
+          "Defense Evasion",
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "deepag_top1": "T1562.001",
+        "deepag_prob": 0.1857483983039856,
+        "chosen_top1": "T1112",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:36.966000+00:00",
+        "event_index": 580,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005",
+          "T1562.001",
+          "T1562",
+          "T1070.004"
+        ],
+        "topk_tactics": [
+          "Persistence",
+          "Execution",
+          "Defense Evasion",
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "deepag_top1": "T1562.001",
+        "deepag_prob": 0.21014469861984253,
+        "chosen_top1": "T1112",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:37.266000+00:00",
+        "event_index": 593,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005",
+          "T1562.001",
+          "T1562",
+          "T1070.004"
+        ],
+        "topk_tactics": [
+          "Persistence",
+          "Execution",
+          "Defense Evasion",
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "deepag_top1": "T1562.001",
+        "deepag_prob": 0.1607157289981842,
+        "chosen_top1": "T1112",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:37.765000+00:00",
+        "event_index": 608,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005",
+          "T1562",
+          "T1055",
+          "T1562.001"
+        ],
+        "topk_tactics": [
+          "Persistence",
+          "Execution",
+          "Defense Evasion",
+          "Privilege Escalation",
+          "Defense Evasion"
+        ],
+        "deepag_top1": "T1562",
+        "deepag_prob": 0.10970015078783035,
+        "chosen_top1": "T1112",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:37.765000+00:00",
+        "event_index": 609,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005",
+          "T1055",
+          "T1136",
+          "T1036.010"
+        ],
+        "topk_tactics": [
+          "Persistence",
+          "Execution",
+          "Privilege Escalation",
+          "Persistence",
+          "Defense Evasion"
+        ],
+        "deepag_top1": "T1055",
+        "deepag_prob": 0.171457901597023,
+        "chosen_top1": "T1112",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:37.766000+00:00",
+        "event_index": 610,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005",
+          "T1055",
+          "T1562",
+          "T1136"
+        ],
+        "topk_tactics": [
+          "Persistence",
+          "Execution",
+          "Privilege Escalation",
+          "Defense Evasion",
+          "Persistence"
+        ],
+        "deepag_top1": "T1055",
+        "deepag_prob": 0.11848077923059464,
+        "chosen_top1": "T1112",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:37.849000+00:00",
+        "event_index": 615,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005",
+          "T1055",
+          "T1136",
+          "T1562"
+        ],
+        "topk_tactics": [
+          "Persistence",
+          "Execution",
+          "Privilege Escalation",
+          "Persistence",
+          "Defense Evasion"
+        ],
+        "deepag_top1": "T1055",
+        "deepag_prob": 0.28907009959220886,
+        "chosen_top1": "T1112",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:37.849000+00:00",
+        "event_index": 616,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005",
+          "T1136",
+          "T1055",
+          "T1136.002"
+        ],
+        "topk_tactics": [
+          "Persistence",
+          "Execution",
+          "Persistence",
+          "Privilege Escalation",
+          "Persistence"
+        ],
+        "deepag_top1": "T1136",
+        "deepag_prob": 0.26054367423057556,
+        "chosen_top1": "T1112",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:37.849000+00:00",
+        "event_index": 618,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005",
+          "T1136",
+          "T1055",
+          "T1136.002"
+        ],
+        "topk_tactics": [
+          "Persistence",
+          "Execution",
+          "Persistence",
+          "Privilege Escalation",
+          "Persistence"
+        ],
+        "deepag_top1": "T1136",
+        "deepag_prob": 0.3476875126361847,
+        "chosen_top1": "T1112",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:37.849000+00:00",
+        "event_index": 619,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005",
+          "T1136",
+          "T1136.002",
+          "T1055"
+        ],
+        "topk_tactics": [
+          "Persistence",
+          "Execution",
+          "Persistence",
+          "Persistence",
+          "Privilege Escalation"
+        ],
+        "deepag_top1": "T1136",
+        "deepag_prob": 0.4174203872680664,
+        "chosen_top1": "T1112",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:37.849000+00:00",
+        "event_index": 622,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005",
+          "T1136",
+          "T1136.002",
+          "T1055"
+        ],
+        "topk_tactics": [
+          "Persistence",
+          "Execution",
+          "Persistence",
+          "Persistence",
+          "Privilege Escalation"
+        ],
+        "deepag_top1": "T1136",
+        "deepag_prob": 0.4174203872680664,
+        "chosen_top1": "T1112",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:37.866000+00:00",
+        "event_index": 627,
+        "event_id": 4688,
+        "topk_tids": [
+          "T1059.001",
+          "T1136",
+          "T1136.002",
+          "T1055",
+          "T1505.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Persistence",
+          "Persistence",
+          "Privilege Escalation",
+          "Persistence"
+        ],
+        "deepag_top1": "T1136",
+        "deepag_prob": 0.4174203872680664,
+        "chosen_top1": "T1059.001",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:37.885000+00:00",
+        "event_index": 631,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005",
+          "T1548",
+          "T1136",
+          "T1574.011"
+        ],
+        "topk_tactics": [
+          "Persistence",
+          "Execution",
+          "Privilege Escalation",
+          "Persistence",
+          "Persistence"
+        ],
+        "deepag_top1": "T1548",
+        "deepag_prob": 0.1430780589580536,
+        "chosen_top1": "T1112",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:37.885000+00:00",
+        "event_index": 632,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005",
+          "T1136",
+          "T1136.002",
+          "T1055"
+        ],
+        "topk_tactics": [
+          "Persistence",
+          "Execution",
+          "Persistence",
+          "Persistence",
+          "Privilege Escalation"
+        ],
+        "deepag_top1": "T1136",
+        "deepag_prob": 0.41313108801841736,
+        "chosen_top1": "T1112",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:37.885000+00:00",
+        "event_index": 634,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005",
+          "T1136",
+          "T1136.002",
+          "T1055"
+        ],
+        "topk_tactics": [
+          "Persistence",
+          "Execution",
+          "Persistence",
+          "Persistence",
+          "Privilege Escalation"
+        ],
+        "deepag_top1": "T1136",
+        "deepag_prob": 0.4165286123752594,
+        "chosen_top1": "T1112",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:37.885000+00:00",
+        "event_index": 635,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005",
+          "T1136",
+          "T1136.002",
+          "T1055"
+        ],
+        "topk_tactics": [
+          "Persistence",
+          "Execution",
+          "Persistence",
+          "Persistence",
+          "Privilege Escalation"
+        ],
+        "deepag_top1": "T1136",
+        "deepag_prob": 0.40882834792137146,
+        "chosen_top1": "T1112",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:37.885000+00:00",
+        "event_index": 637,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005",
+          "T1136",
+          "T1136.002",
+          "T1055"
+        ],
+        "topk_tactics": [
+          "Persistence",
+          "Execution",
+          "Persistence",
+          "Persistence",
+          "Privilege Escalation"
+        ],
+        "deepag_top1": "T1136",
+        "deepag_prob": 0.4103945791721344,
+        "chosen_top1": "T1112",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:37.895000+00:00",
+        "event_index": 638,
+        "event_id": 1,
+        "topk_tids": [
+          "T1059.001",
+          "T1136",
+          "T1136.002",
+          "T1055",
+          "T1505.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Persistence",
+          "Persistence",
+          "Privilege Escalation",
+          "Persistence"
+        ],
+        "deepag_top1": "T1136",
+        "deepag_prob": 0.36828258633613586,
+        "chosen_top1": "T1059.001",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:40.589000+00:00",
+        "event_index": 746,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055",
+          "T1548",
+          "T1136",
+          "T1574.011",
+          "T1112"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Persistence",
+          "Persistence",
+          "Persistence"
+        ],
+        "deepag_top1": "T1548",
+        "deepag_prob": 0.1481446921825409,
+        "chosen_top1": "T1055",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:42.536000+00:00",
+        "event_index": 1025,
+        "event_id": 17,
+        "topk_tids": [
+          "T1059.001",
+          "T1136",
+          "T1055",
+          "T1548",
+          "T1587.003"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Persistence",
+          "Privilege Escalation",
+          "Privilege Escalation",
+          ""
+        ],
+        "deepag_top1": "T1136",
+        "deepag_prob": 0.21341826021671295,
+        "chosen_top1": "T1059.001",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:42.991000+00:00",
+        "event_index": 1051,
+        "event_id": 4104,
+        "topk_tids": [
+          "T1059.001",
+          "T1562.001",
+          "T1112",
+          "T1574.011",
+          "T1027.013"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Defense Evasion",
+          "Persistence",
+          "Persistence",
+          "Defense Evasion"
+        ],
+        "deepag_top1": "T1112",
+        "deepag_prob": 0.10598525404930115,
+        "chosen_top1": "T1059.001",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:45.765000+00:00",
+        "event_index": 1280,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055",
+          "T1112",
+          "T1059.005",
+          "T1059.003",
+          "T1574.011"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Persistence",
+          "Execution",
+          "Execution",
+          "Persistence"
+        ],
+        "deepag_top1": "T1112",
+        "deepag_prob": 0.16757601499557495,
+        "chosen_top1": "T1055",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:50.988000+00:00",
+        "event_index": 1480,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055",
+          "T1136",
+          "T1505",
+          "T1112",
+          "T1505.004"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Persistence",
+          "Persistence",
+          "Persistence",
+          "Persistence"
+        ],
+        "deepag_top1": "T1136",
+        "deepag_prob": 0.16796259582042694,
+        "chosen_top1": "T1055",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:55.909000+00:00",
+        "event_index": 1545,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055",
+          "T1562",
+          "T1070",
+          "T1136",
+          "T1562.001"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Defense Evasion",
+          "Defense Evasion",
+          "Persistence",
+          "Defense Evasion"
+        ],
+        "deepag_top1": "T1562",
+        "deepag_prob": 0.10871727019548416,
+        "chosen_top1": "T1055",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:56.869000+00:00",
+        "event_index": 1564,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110",
+          "T1036.005",
+          "T1562.001"
+        ],
+        "topk_tactics": [
+          "Initial Access",
+          "Initial Access",
+          "Credential Access",
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "deepag_top1": "T1036.005",
+        "deepag_prob": 0.13783694803714752,
+        "chosen_top1": "T1133",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:56.874000+00:00",
+        "event_index": 1567,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110",
+          "T1055",
+          "T1562"
+        ],
+        "topk_tactics": [
+          "Initial Access",
+          "Initial Access",
+          "Credential Access",
+          "Privilege Escalation",
+          "Defense Evasion"
+        ],
+        "deepag_top1": "T1055",
+        "deepag_prob": 0.28190281987190247,
+        "chosen_top1": "T1133",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:56.877000+00:00",
+        "event_index": 1572,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110",
+          "T1059.001",
+          "T1055"
+        ],
+        "topk_tactics": [
+          "Initial Access",
+          "Initial Access",
+          "Credential Access",
+          "Execution",
+          "Privilege Escalation"
+        ],
+        "deepag_top1": "T1059.001",
+        "deepag_prob": 0.3304896056652069,
+        "chosen_top1": "T1133",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:56.981000+00:00",
+        "event_index": 1580,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110",
+          "T1059.001",
+          "T1059"
+        ],
+        "topk_tactics": [
+          "Initial Access",
+          "Initial Access",
+          "Credential Access",
+          "Execution",
+          "Execution"
+        ],
+        "deepag_top1": "T1059.001",
+        "deepag_prob": 0.3093211054801941,
+        "chosen_top1": "T1133",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:56.986000+00:00",
+        "event_index": 1594,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531",
+          "T1059.001",
+          "T1055",
+          "T1059",
+          "T1027"
+        ],
+        "topk_tactics": [
+          "Impact",
+          "Execution",
+          "Privilege Escalation",
+          "Execution",
+          "Defense Evasion"
+        ],
+        "deepag_top1": "T1059.001",
+        "deepag_prob": 0.35184842348098755,
+        "chosen_top1": "T1531",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:56.986000+00:00",
+        "event_index": 1595,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531",
+          "T1203",
+          "T1547.001",
+          "T1574.001",
+          "T1587.003"
+        ],
+        "topk_tactics": [
+          "Impact",
+          "Execution",
+          "Persistence",
+          "Persistence",
+          ""
+        ],
+        "deepag_top1": "T1203",
+        "deepag_prob": 0.02271469309926033,
+        "chosen_top1": "T1531",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:57.014000+00:00",
+        "event_index": 1655,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110",
+          "T1574",
+          "T1543"
+        ],
+        "topk_tactics": [
+          "Initial Access",
+          "Initial Access",
+          "Credential Access",
+          "Persistence",
+          "Persistence"
+        ],
+        "deepag_top1": "T1574",
+        "deepag_prob": 0.0007390908431261778,
+        "chosen_top1": "T1133",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:57.024000+00:00",
+        "event_index": 1657,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531",
+          "T1055",
+          "T1136",
+          "T1036.008",
+          "T1098"
+        ],
+        "topk_tactics": [
+          "Impact",
+          "Privilege Escalation",
+          "Persistence",
+          "Defense Evasion",
+          "Persistence"
+        ],
+        "deepag_top1": "T1055",
+        "deepag_prob": 0.11831369251012802,
+        "chosen_top1": "T1531",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:57.025000+00:00",
+        "event_index": 1663,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110",
+          "T1521.001",
+          "T1098"
+        ],
+        "topk_tactics": [
+          "Initial Access",
+          "Initial Access",
+          "Credential Access",
+          "",
+          "Persistence"
+        ],
+        "deepag_top1": "T1521.001",
+        "deepag_prob": 0.004066640045493841,
+        "chosen_top1": "T1133",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:57.036000+00:00",
+        "event_index": 1664,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531",
+          "T1098",
+          "T1136.002",
+          "T1543",
+          "T1136"
+        ],
+        "topk_tactics": [
+          "Impact",
+          "Persistence",
+          "Persistence",
+          "Persistence",
+          "Persistence"
+        ],
+        "deepag_top1": "T1098",
+        "deepag_prob": 0.08897873759269714,
+        "chosen_top1": "T1531",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:43:57.116000+00:00",
+        "event_index": 1716,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531",
+          "T1521.001",
+          "T1098",
+          "T0815",
+          "T1656"
+        ],
+        "topk_tactics": [
+          "Impact",
+          "",
+          "Persistence",
+          "",
+          "Defense Evasion"
+        ],
+        "deepag_top1": "T1521.001",
+        "deepag_prob": 0.003190672490745783,
+        "chosen_top1": "T1531",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:44:01.066000+00:00",
+        "event_index": 1796,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055",
+          "T0815",
+          "T0878",
+          "T0860",
+          "T0855"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "deepag_top1": "T0815",
+        "deepag_prob": 0.0020642282906919718,
+        "chosen_top1": "T1055",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:44:06.003000+00:00",
+        "event_index": 1865,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055",
+          "T0815",
+          "T1589",
+          "T0838",
+          "T0879"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "deepag_top1": "T0815",
+        "deepag_prob": 0.04925983399152756,
+        "chosen_top1": "T1055",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:44:07.724000+00:00",
+        "event_index": 1893,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531",
+          "T1136",
+          "T1636.004",
+          "T1036.008",
+          "T1629"
+        ],
+        "topk_tactics": [
+          "Impact",
+          "Persistence",
+          "",
+          "Defense Evasion",
+          ""
+        ],
+        "deepag_top1": "T1136",
+        "deepag_prob": 0.07196813076734543,
+        "chosen_top1": "T1531",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:44:11.144000+00:00",
+        "event_index": 1911,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055",
+          "T1421",
+          "T1585.001",
+          "T1584",
+          "T1532"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "deepag_top1": "T1421",
+        "deepag_prob": 0.007599566597491503,
+        "chosen_top1": "T1055",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:44:16.284000+00:00",
+        "event_index": 1976,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055",
+          "T1589",
+          "T0815",
+          "T1036.010",
+          "T0838"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "",
+          "",
+          "Defense Evasion",
+          ""
+        ],
+        "deepag_top1": "T1589",
+        "deepag_prob": 0.016977086663246155,
+        "chosen_top1": "T1055",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:44:21.441000+00:00",
+        "event_index": 2023,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055",
+          "T1136",
+          "T1036.008",
+          "T1036.010",
+          "T1136.002"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Persistence",
+          "Defense Evasion",
+          "Defense Evasion",
+          "Persistence"
+        ],
+        "deepag_top1": "T1136",
+        "deepag_prob": 0.19272013008594513,
+        "chosen_top1": "T1055",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:44:26.394000+00:00",
+        "event_index": 2068,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055",
+          "T1136",
+          "T1547.001",
+          "T1036.008",
+          "T1587.003"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Persistence",
+          "Persistence",
+          "Defense Evasion",
+          ""
+        ],
+        "deepag_top1": "T1136",
+        "deepag_prob": 0.14518044888973236,
+        "chosen_top1": "T1055",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:44:27.288000+00:00",
+        "event_index": 2087,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110",
+          "T1036.008",
+          "T1136"
+        ],
+        "topk_tactics": [
+          "Initial Access",
+          "Initial Access",
+          "Credential Access",
+          "Defense Evasion",
+          "Persistence"
+        ],
+        "deepag_top1": "T1036.008",
+        "deepag_prob": 0.08547277748584747,
+        "chosen_top1": "T1133",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:44:27.289000+00:00",
+        "event_index": 2089,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531",
+          "T1218.010",
+          "T1074",
+          "T1656",
+          "T1055"
+        ],
+        "topk_tactics": [
+          "Impact",
+          "Defense Evasion",
+          "Collection",
+          "Defense Evasion",
+          "Privilege Escalation"
+        ],
+        "deepag_top1": "T1218.010",
+        "deepag_prob": 0.2050001323223114,
+        "chosen_top1": "T1531",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:44:31.581000+00:00",
+        "event_index": 2156,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055",
+          "T1583",
+          "T1587",
+          "T1589.002",
+          "T1587.003"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "deepag_top1": "T1583",
+        "deepag_prob": 0.003238184377551079,
+        "chosen_top1": "T1055",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:44:36.550000+00:00",
+        "event_index": 2227,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055",
+          "T1036.010",
+          "T1036.008",
+          "T1587",
+          "T1587.003"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Defense Evasion",
+          "Defense Evasion",
+          "",
+          ""
+        ],
+        "deepag_top1": "T1036.010",
+        "deepag_prob": 0.054730162024497986,
+        "chosen_top1": "T1055",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:44:41.762000+00:00",
+        "event_index": 2490,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055",
+          "T1036.008",
+          "T1218.011",
+          "T1553",
+          "T1036.005"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Defense Evasion",
+          "Defense Evasion",
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "deepag_top1": "T1036.008",
+        "deepag_prob": 0.10491207987070084,
+        "chosen_top1": "T1055",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2019-05-18 20:44:46.691000+00:00",
+        "event_index": 2551,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055",
+          "T1036.005",
+          "T1070",
+          "T1553",
+          "T1553.002"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Defense Evasion",
+          "Defense Evasion",
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "deepag_top1": "T1036.005",
+        "deepag_prob": 0.0966477170586586,
+        "chosen_top1": "T1055",
+        "chosen_src": "sigma"
+      }
+    ]
+  }
+}

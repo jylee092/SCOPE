@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The System process connecting to port 445 (SMB) and writing to an ETW log file in a standard log directory are normal operating system behaviors, and no suspicious command-line arguments or other indicators of compromise were observed.\"\n}"}

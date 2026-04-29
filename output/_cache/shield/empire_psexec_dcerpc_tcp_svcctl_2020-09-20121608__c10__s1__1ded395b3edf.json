@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed registry modifications by svchost.exe processes, primarily to StorageSense parameters and HKCR, are not inherently suspicious without additional context such as specific command-line arguments, unusual registry values, or other related malicious activity.\"\n}"}

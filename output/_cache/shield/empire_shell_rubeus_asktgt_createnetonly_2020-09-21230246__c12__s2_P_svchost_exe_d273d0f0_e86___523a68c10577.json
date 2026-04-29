@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"svchost.exe wrote a prefetch file for RUBEUS.EXE, a known credential access tool, indicating its execution on the system.\",\n  \"indicators\": [\n    \"RUBEUS.EXE\",\n    \"prefetch file\"\n  ]\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed activities of backgroundTaskHost.exe, including DLL loads and registry modifications, are consistent with its legitimate function of managing Windows Search and Cortana background tasks and feature flighting, with no notable command lines or other suspicious indicators present.\"\n}"}

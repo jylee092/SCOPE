@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[svchost.exe|{49a15388-5c3]\"\n  ],\n  \"rationale\": \"The svchost.exe process is directly creating and modifying registry keys within HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows NT\\\\CurrentVersion\\\\Schedule\\\\TaskCache\\\\Tasks, which is a common persistence mechanism for malware to establish scheduled tasks.\"\n}"}

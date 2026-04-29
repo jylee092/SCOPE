@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[lsass.exe|{625b42a0-6b3]\"\n  ],\n  \"rationale\": \"The lsass.exe process is observed writing to the HKLM\\\\SAM\\\\SAM\\\\Domains\\\\Account\\\\Users\\\\000003E9\\\\F registry key, which is highly abnormal behavior for this critical system process and strongly indicates credential tampering or system compromise.\"\n}"}

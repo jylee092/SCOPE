@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[WmiPrvSE.exe|{fddc55f3-430]\",\n    \"P[wsmprovhost.exe|{f3f7ca49-430]\",\n    \"P[powershell.exe|{4c9a7a20-430]\"\n  ],"}

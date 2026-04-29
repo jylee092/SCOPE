@@ -1,0 +1,45 @@
+{
+  "scenario": "empire_uac_shellapi_fodhelper_2020-09-04032946",
+  "tactic_sequence": [
+    "Credential Access"
+  ],
+  "technique_sequence": [
+    "T1003.001"
+  ],
+  "per_group_topk": [
+    [
+      "T1003.001"
+    ]
+  ],
+  "notes": {
+    "n_total_events": 4139,
+    "n_filtered_events": 1908,
+    "n_lof_anomalous": 145,
+    "n_communities": 20,
+    "n_alerts": 1,
+    "alerts": [
+      {
+        "ts": "2020-09-04 07:30:18",
+        "community_id": 7,
+        "n_members": 4,
+        "confidence": 0.9,
+        "topk_tids": [
+          "T1003.001"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ],
+        "kill_chain_stages": [
+          "Credential Access"
+        ],
+        "summary": "The dns.exe process, while also performing legitimate DNS functions, made a highly unusual connection to the \\lsass named pipe. This behavior is a strong indicator of an attempt to dump credentials from the Local Security Authority Subsystem Service (LSASS) memory. This activity represents a clear credential access attempt.",
+        "event_indices": [
+          2461,
+          2462,
+          3580
+        ]
+      }
+    ],
+    "elapsed_sec": 236.1
+  }
+}

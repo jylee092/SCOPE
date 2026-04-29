@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed registry operations by svchost.exe are consistent with legitimate Windows Content Delivery Manager and Background Activity Moderator functions, and no suspicious command lines or other indicators of compromise were present in the provided events.\"\n}"}

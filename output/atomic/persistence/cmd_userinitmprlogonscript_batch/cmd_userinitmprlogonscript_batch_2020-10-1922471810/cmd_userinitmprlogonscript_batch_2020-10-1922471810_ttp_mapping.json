@@ -1,0 +1,215 @@
+[
+  {
+    "group_id": "T1037_001_75",
+    "technique_id": "T1037.001",
+    "technique_name": "Logon Script (Windows)",
+    "confidence": 0.6,
+    "confidence_margin": 0.007033,
+    "generated_description": "Adversaries may establish persistence by modifying a user's environment settings to execute a script upon logon. This involves using the `reg add` command to set the `UserInitMprLogonScript` registry value within the `HKCU\\Environment` key. The adversary configures this value to point to a batch script, ensuring its execution whenever the user logs into the system.",
+    "similar_techniques": [
+      {
+        "rank": 1,
+        "technique_id": "T1037.001",
+        "technique_name": "Boot or Logon Initialization Scripts: Logon Script (Windows)",
+        "tactic": "Persistence",
+        "similarity": 0.7154,
+        "p_ttp": 0.022759,
+        "description": "Adversaries may use Windows logon scripts automatically executed at logon initialization to establish persistence. Windows allows logon scripts to be run whenever a specific user or group of users log into a system. This is done via adding a path to a script to the HKCU\\Environment\\UserInitMprLogonS"
+      },
+      {
+        "rank": 2,
+        "technique_id": "T1037",
+        "technique_name": "Boot or Logon Initialization Scripts",
+        "tactic": "Persistence",
+        "similarity": 0.7095,
+        "p_ttp": 0.015726,
+        "description": "Adversaries may use scripts automatically executed at boot or logon initialization to establish persistence. Initialization scripts can be used to perform administrative functions, which may often execute other programs or send information to an internal logging server. These scripts can vary based "
+      },
+      {
+        "rank": 3,
+        "technique_id": "T1547.014",
+        "technique_name": "Boot or Logon Autostart Execution: Active Setup",
+        "tactic": "Persistence",
+        "similarity": 0.7091,
+        "p_ttp": 0.015089,
+        "description": "Adversaries may achieve persistence by adding a Registry key to the Active Setup of the local machine. Active Setup is a Windows mechanism that is used to execute programs when a user logs in. The value stored in the Registry key will be executed after a user logs into the computer. These programs w"
+      },
+      {
+        "rank": 4,
+        "technique_id": "T1547.001",
+        "technique_name": "Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder",
+        "tactic": "Persistence",
+        "similarity": 0.654,
+        "p_ttp": 0.009984,
+        "description": "Adversaries may achieve persistence by adding a program to a startup folder or referencing it with a Registry run key. Adding an entry to the \"run keys\" in the Registry or startup folder will cause the program referenced to be executed when a user logs in. These programs will be executed under the c"
+      },
+      {
+        "rank": 5,
+        "technique_id": "T1547",
+        "technique_name": "Boot or Logon Autostart Execution",
+        "tactic": "Persistence",
+        "similarity": 0.6611,
+        "p_ttp": 0.009773,
+        "description": "Adversaries may configure system settings to automatically execute a program during system boot or logon to maintain persistence or gain higher-level privileges on compromised systems. Operating systems may have mechanisms for automatically running a program on system boot or account logon. These me"
+      }
+    ],
+    "all_idxs": [
+      69,
+      74,
+      75,
+      77,
+      81,
+      85,
+      86,
+      87,
+      89,
+      90,
+      91,
+      92,
+      93,
+      95,
+      96,
+      97,
+      98,
+      99,
+      111,
+      112,
+      116,
+      117,
+      118,
+      119
+    ]
+  },
+  {
+    "group_id": "T1070_001_0",
+    "technique_id": "T1070.001",
+    "technique_name": "Clear Windows Event Logs",
+    "confidence": 0.75,
+    "confidence_margin": 0.003626,
+    "generated_description": "Adversaries may establish persistence by modifying registry keys that execute scripts during user logon. An adversary, operating with elevated privileges, utilized `reg.exe` to add a value to `HKCU\\Environment\\UserInitMprLogonScript`, configuring it to launch a batch script from a temporary location. To impede detection and forensic analysis, the adversary subsequently cleared Windows event logs.",
+    "similar_techniques": [
+      {
+        "rank": 1,
+        "technique_id": "T1037.001",
+        "technique_name": "Boot or Logon Initialization Scripts: Logon Script (Windows)",
+        "tactic": "Persistence",
+        "similarity": 0.7115,
+        "p_ttp": 0.018188,
+        "description": "Adversaries may use Windows logon scripts automatically executed at logon initialization to establish persistence. Windows allows logon scripts to be run whenever a specific user or group of users log into a system. This is done via adding a path to a script to the HKCU\\Environment\\UserInitMprLogonS"
+      },
+      {
+        "rank": 2,
+        "technique_id": "T1547.014",
+        "technique_name": "Boot or Logon Autostart Execution: Active Setup",
+        "tactic": "Persistence",
+        "similarity": 0.7325,
+        "p_ttp": 0.014562,
+        "description": "Adversaries may achieve persistence by adding a Registry key to the Active Setup of the local machine. Active Setup is a Windows mechanism that is used to execute programs when a user logs in. The value stored in the Registry key will be executed after a user logs into the computer. These programs w"
+      },
+      {
+        "rank": 3,
+        "technique_id": "T1112",
+        "technique_name": "Modify Registry",
+        "tactic": "Defense Evasion",
+        "similarity": 0.6932,
+        "p_ttp": 0.013705,
+        "description": "Adversaries may interact with the Windows Registry as part of a variety of other techniques to aid in defense evasion, persistence, and execution. Access to specific areas of the Registry depends on account permissions, with some keys requiring administrator-level access. The built-in Windows comman"
+      },
+      {
+        "rank": 4,
+        "technique_id": "T1037",
+        "technique_name": "Boot or Logon Initialization Scripts",
+        "tactic": "Persistence",
+        "similarity": 0.6894,
+        "p_ttp": 0.010366,
+        "description": "Adversaries may use scripts automatically executed at boot or logon initialization to establish persistence. Initialization scripts can be used to perform administrative functions, which may often execute other programs or send information to an internal logging server. These scripts can vary based "
+      },
+      {
+        "rank": 5,
+        "technique_id": "T1547",
+        "technique_name": "Boot or Logon Autostart Execution",
+        "tactic": "Persistence",
+        "similarity": 0.6904,
+        "p_ttp": 0.010247,
+        "description": "Adversaries may configure system settings to automatically execute a program during system boot or logon to maintain persistence or gain higher-level privileges on compromised systems. Operating systems may have mechanisms for automatically running a program on system boot or account logon. These me"
+      }
+    ],
+    "all_idxs": [
+      0,
+      1,
+      75,
+      77
+    ]
+  },
+  {
+    "group_id": "T1112_96",
+    "technique_id": "T1112",
+    "technique_name": "Modify Registry",
+    "confidence": 1.0,
+    "confidence_margin": 0.013602,
+    "generated_description": "An adversary modified a user's registry environment settings using `reg.exe` to establish persistence. This involved adding a logon script path to the `HKCU\\Environment\\UserInitMprLogonScript` key, ensuring a batch script would execute upon subsequent user logons. The modification was performed with elevated privileges under a non-system user account.",
+    "similar_techniques": [
+      {
+        "rank": 1,
+        "technique_id": "T1112",
+        "technique_name": "Modify Registry",
+        "tactic": "Defense Evasion",
+        "similarity": 0.7389,
+        "p_ttp": 0.029274,
+        "description": "Adversaries may interact with the Windows Registry as part of a variety of other techniques to aid in defense evasion, persistence, and execution. Access to specific areas of the Registry depends on account permissions, with some keys requiring administrator-level access. The built-in Windows comman"
+      },
+      {
+        "rank": 2,
+        "technique_id": "T1037.001",
+        "technique_name": "Boot or Logon Initialization Scripts: Logon Script (Windows)",
+        "tactic": "Persistence",
+        "similarity": 0.6472,
+        "p_ttp": 0.015672,
+        "description": "Adversaries may use Windows logon scripts automatically executed at logon initialization to establish persistence. Windows allows logon scripts to be run whenever a specific user or group of users log into a system. This is done via adding a path to a script to the HKCU\\Environment\\UserInitMprLogonS"
+      },
+      {
+        "rank": 3,
+        "technique_id": "T1547.014",
+        "technique_name": "Boot or Logon Autostart Execution: Active Setup",
+        "tactic": "Persistence",
+        "similarity": 0.6872,
+        "p_ttp": 0.01288,
+        "description": "Adversaries may achieve persistence by adding a Registry key to the Active Setup of the local machine. Active Setup is a Windows mechanism that is used to execute programs when a user logs in. The value stored in the Registry key will be executed after a user logs into the computer. These programs w"
+      },
+      {
+        "rank": 4,
+        "technique_id": "T1012",
+        "technique_name": "Query Registry",
+        "tactic": "Discovery",
+        "similarity": 0.6727,
+        "p_ttp": 0.010416,
+        "description": "Adversaries may interact with the Windows Registry to gather information about the system, configuration, and installed software. The Registry contains a significant amount of information about the operating system, configuration, software, and security. Information can easily be queried using the ["
+      },
+      {
+        "rank": 5,
+        "technique_id": "T1574.011",
+        "technique_name": "Hijack Execution Flow: Services Registry Permissions Weakness",
+        "tactic": "Defense Evasion",
+        "similarity": 0.6534,
+        "p_ttp": 0.010149,
+        "description": "Adversaries may execute their own malicious payloads by hijacking the Registry entries used by services. Flaws in the permissions for Registry keys related to services can allow adversaries to redirect the originally specified executable to one they control, launching their own code when a service s"
+      }
+    ],
+    "all_idxs": [
+      74,
+      77,
+      81,
+      85,
+      86,
+      87,
+      89,
+      90,
+      91,
+      92,
+      93,
+      95,
+      96,
+      97
+    ]
+  }
+]

@@ -1,0 +1,198 @@
+{
+  "scenario": "cmd_service_mod_fax_2020-10-2120454410",
+  "tactic_sequence": [
+    "Persistence"
+  ],
+  "technique_sequence": [
+    "T1543.003"
+  ],
+  "per_group_topk": [
+    [
+      "T1543.003",
+      "T1574.011",
+      "T1074.001",
+      "T1588.003",
+      "T0864"
+    ],
+    [
+      "T1543.003",
+      "T1574.001",
+      "T1574",
+      "T1588.003",
+      "T1546.016"
+    ],
+    [
+      "T1543.003",
+      "T1574",
+      "T1574.001",
+      "T1554",
+      "T1546.016"
+    ],
+    [
+      "T1543.003",
+      "T1574",
+      "T1554",
+      "T1047",
+      "T1574.001"
+    ],
+    [
+      "T1543.003",
+      "T1574",
+      "T1047",
+      "T1554",
+      "T1190"
+    ],
+    [
+      "T1543.003",
+      "T1574",
+      "T1047",
+      "T1574.001",
+      "T1554"
+    ]
+  ],
+  "notes": {
+    "n_alerts": 6,
+    "n_sigma_alerts": 6,
+    "n_deepag_top1_used": 5,
+    "alerts": [
+      {
+        "ts": "2020-10-21 08:45:33.684000+00:00",
+        "event_index": 24,
+        "event_id": 4688,
+        "topk_tids": [
+          "T1543.003",
+          "T1574.011",
+          "T1074.001",
+          "T1588.003",
+          "T0864"
+        ],
+        "topk_tactics": [
+          "Persistence",
+          "Persistence",
+          "Collection",
+          "",
+          ""
+        ],
+        "deepag_top1": "T1074.001",
+        "deepag_prob": 8.479971438646317e-05,
+        "chosen_top1": "T1543.003",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-10-21 08:45:33.686000+00:00",
+        "event_index": 27,
+        "event_id": 1,
+        "topk_tids": [
+          "T1543.003",
+          "T1574.001",
+          "T1574",
+          "T1588.003",
+          "T1546.016"
+        ],
+        "topk_tactics": [
+          "Persistence",
+          "Persistence",
+          "Persistence",
+          "",
+          "Persistence"
+        ],
+        "deepag_top1": "T1543.003",
+        "deepag_prob": 0.7441756725311279,
+        "chosen_top1": "T1543.003",
+        "chosen_src": "deepag"
+      },
+      {
+        "ts": "2020-10-21 08:45:33.693000+00:00",
+        "event_index": 36,
+        "event_id": 13,
+        "topk_tids": [
+          "T1543.003",
+          "T1574",
+          "T1574.001",
+          "T1554",
+          "T1546.016"
+        ],
+        "topk_tactics": [
+          "Persistence",
+          "Persistence",
+          "Persistence",
+          "Persistence",
+          "Persistence"
+        ],
+        "deepag_top1": "T1543.003",
+        "deepag_prob": 0.9514211416244507,
+        "chosen_top1": "T1543.003",
+        "chosen_src": "deepag"
+      },
+      {
+        "ts": "2020-10-21 08:45:35.288000+00:00",
+        "event_index": 64,
+        "event_id": 1,
+        "topk_tids": [
+          "T1543.003",
+          "T1574",
+          "T1554",
+          "T1047",
+          "T1574.001"
+        ],
+        "topk_tactics": [
+          "Persistence",
+          "Persistence",
+          "Persistence",
+          "Execution",
+          "Persistence"
+        ],
+        "deepag_top1": "T1543.003",
+        "deepag_prob": 0.9748572707176208,
+        "chosen_top1": "T1543.003",
+        "chosen_src": "deepag"
+      },
+      {
+        "ts": "2020-10-21 08:45:41.335000+00:00",
+        "event_index": 402,
+        "event_id": 4688,
+        "topk_tids": [
+          "T1543.003",
+          "T1574",
+          "T1047",
+          "T1554",
+          "T1190"
+        ],
+        "topk_tactics": [
+          "Persistence",
+          "Persistence",
+          "Execution",
+          "Persistence",
+          "Initial Access"
+        ],
+        "deepag_top1": "T1543.003",
+        "deepag_prob": 0.9762921929359436,
+        "chosen_top1": "T1543.003",
+        "chosen_src": "deepag"
+      },
+      {
+        "ts": "2020-10-21 08:45:41.336000+00:00",
+        "event_index": 403,
+        "event_id": 1,
+        "topk_tids": [
+          "T1543.003",
+          "T1574",
+          "T1047",
+          "T1574.001",
+          "T1554"
+        ],
+        "topk_tactics": [
+          "Persistence",
+          "Persistence",
+          "Execution",
+          "Persistence",
+          "Persistence"
+        ],
+        "deepag_top1": "T1543.003",
+        "deepag_prob": 0.9511350393295288,
+        "chosen_top1": "T1543.003",
+        "chosen_src": "deepag"
+      }
+    ]
+  }
+}

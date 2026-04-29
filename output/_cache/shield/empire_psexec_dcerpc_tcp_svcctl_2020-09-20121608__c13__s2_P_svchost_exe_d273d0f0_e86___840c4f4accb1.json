@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": false,\n  \"deviation\": \"\",\n  \"indicators\": [\n    \"svchost.exe\",\n    \"OfficeC2RClient.exe\",\n    \"scheduled task\",\n    \"registry modification\"\n  ]\n}"}

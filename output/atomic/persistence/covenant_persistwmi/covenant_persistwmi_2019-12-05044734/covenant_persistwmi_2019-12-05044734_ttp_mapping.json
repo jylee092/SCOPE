@@ -1,0 +1,892 @@
+[
+  {
+    "group_id": "T1021_003_107",
+    "technique_id": "T1021.003",
+    "technique_name": "Distributed Component Object Model",
+    "confidence": 0.56,
+    "confidence_margin": 0.002344,
+    "generated_description": "Adversaries extracted credential material by staging a credential database file to disk within a protected system directory. This activity was accompanied by internal network communications utilizing DCOM and LDAP protocols, suggesting the use of remote services for interaction or lateral movement. These communications involved system processes engaging in DCOM over port 135, indicative of remote service abuse for command and control or data access.",
+    "similar_techniques": [
+      {
+        "rank": 1,
+        "technique_id": "T1021.003",
+        "technique_name": "Remote Services: Distributed Component Object Model",
+        "tactic": "Lateral Movement",
+        "similarity": 0.6536,
+        "p_ttp": 0.011854,
+        "description": "Adversaries may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to interact with remote machines by taking advantage of Distributed Component Object Model (DCOM). The adversary may then perform actions as the logged-on user. The Windows Component Object Model (COM) is a component of "
+      },
+      {
+        "rank": 2,
+        "technique_id": "T1003",
+        "technique_name": "OS Credential Dumping",
+        "tactic": "Credential Access",
+        "similarity": 0.6465,
+        "p_ttp": 0.00951,
+        "description": "Adversaries may attempt to dump credentials to obtain account login and credential material, normally in the form of a hash or a clear text password. Credentials can be obtained from OS caches, memory, or structures. Credentials can then be used to perform [Lateral Movement](https://attack.mitre.org"
+      },
+      {
+        "rank": 3,
+        "technique_id": "T1110.004",
+        "technique_name": "Brute Force: Credential Stuffing",
+        "tactic": "Credential Access",
+        "similarity": 0.6451,
+        "p_ttp": 0.009345,
+        "description": "Adversaries may use credentials obtained from breach dumps of unrelated accounts to gain access to target accounts through credential overlap. Occasionally, large numbers of username and password pairs are dumped online when a website or service is compromised and the user account credentials access"
+      },
+      {
+        "rank": 4,
+        "technique_id": "T1552",
+        "technique_name": "Unsecured Credentials",
+        "tactic": "Credential Access",
+        "similarity": 0.6422,
+        "p_ttp": 0.008612,
+        "description": "Adversaries may search compromised systems to find and obtain insecurely stored credentials. These credentials can be stored and/or misplaced in many locations on a system, including plaintext files (e.g. [Shell History](https://attack.mitre.org/techniques/T1552/003)), operating system or applicatio"
+      },
+      {
+        "rank": 5,
+        "technique_id": "T1003.001",
+        "technique_name": "OS Credential Dumping: LSASS Memory",
+        "tactic": "Credential Access",
+        "similarity": 0.6301,
+        "p_ttp": 0.00834,
+        "description": "Adversaries may attempt to access credential material stored in the process memory of the Local Security Authority Subsystem Service (LSASS). After a user logs on, the system generates and stores a variety of credential materials in LSASS process memory. These credential materials can be harvested b"
+      }
+    ],
+    "all_idxs": [
+      43,
+      44,
+      59,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      86,
+      88,
+      89,
+      90,
+      92,
+      93,
+      95,
+      96,
+      97,
+      98,
+      99,
+      107,
+      110,
+      118,
+      127,
+      148,
+      153,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      192,
+      193,
+      201,
+      265,
+      275,
+      277,
+      278,
+      287,
+      293,
+      298,
+      299,
+      300,
+      301,
+      302,
+      440,
+      441,
+      442,
+      460,
+      462,
+      517,
+      542,
+      543,
+      544,
+      587,
+      597,
+      601
+    ]
+  },
+  {
+    "group_id": "T1021_003_587",
+    "technique_id": "T1021.003",
+    "technique_name": "Distributed Component Object Model",
+    "confidence": 0.67,
+    "confidence_margin": 0.007355,
+    "generated_description": "An adversary is observed leveraging Windows Remote Management for network communication, indicated by outbound connections from a system service to an internal host on the WinRM port. This activity suggests remote execution or lateral movement within the environment. Concurrently, system processes associated with Active Directory services are making local LDAP queries, potentially for discovery of domain resources or credential access.",
+    "similar_techniques": [
+      {
+        "rank": 1,
+        "technique_id": "T1021.006",
+        "technique_name": "Remote Services: Windows Remote Management",
+        "tactic": "Lateral Movement",
+        "similarity": 0.7337,
+        "p_ttp": 0.016821,
+        "description": "Adversaries may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to interact with remote systems using Windows Remote Management (WinRM). The adversary may then perform actions as the logged-on user. WinRM is the name of both a Windows service and a protocol that allows a user to inte"
+      },
+      {
+        "rank": 2,
+        "technique_id": "T1021.001",
+        "technique_name": "Remote Services: Remote Desktop Protocol",
+        "tactic": "Lateral Movement",
+        "similarity": 0.666,
+        "p_ttp": 0.009466,
+        "description": "Adversaries may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to log into a computer using the Remote Desktop Protocol (RDP). The adversary may then perform actions as the logged-on user. Remote desktop is a common feature in operating systems. It allows a user to log into an inter"
+      },
+      {
+        "rank": 3,
+        "technique_id": "T1219",
+        "technique_name": "Remote Access Tools",
+        "tactic": "Command and Control",
+        "similarity": 0.6521,
+        "p_ttp": 0.00765,
+        "description": "An adversary may use legitimate remote access tools to establish an interactive command and control channel within a network. Remote access tools create a session between two trusted hosts through a graphical interface, a command line interaction, a protocol tunnel via development or management soft"
+      },
+      {
+        "rank": 4,
+        "technique_id": "T1021.002",
+        "technique_name": "Remote Services: SMB/Windows Admin Shares",
+        "tactic": "Lateral Movement",
+        "similarity": 0.6312,
+        "p_ttp": 0.007499,
+        "description": "Adversaries may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to interact with a remote network share using Server Message Block (SMB). The adversary may then perform actions as the logged-on user. SMB is a file, printer, and serial port sharing protocol for Windows machines on the"
+      },
+      {
+        "rank": 5,
+        "technique_id": "T1482",
+        "technique_name": "Domain Trust Discovery",
+        "tactic": "Discovery",
+        "similarity": 0.6473,
+        "p_ttp": 0.007414,
+        "description": "Adversaries may attempt to gather information on domain trust relationships that may be used to identify lateral movement opportunities in Windows multi-domain/forest environments. Domain trusts provide a mechanism for a domain to allow access to resources based on the authentication procedures of a"
+      }
+    ],
+    "all_idxs": [
+      542,
+      543,
+      544,
+      587,
+      597,
+      601,
+      631,
+      708,
+      710,
+      719,
+      748,
+      765
+    ]
+  },
+  {
+    "group_id": "T1021_003_846",
+    "technique_id": "T1021.003",
+    "technique_name": "Distributed Component Object Model",
+    "confidence": 0.67,
+    "confidence_margin": 5.7e-05,
+    "generated_description": "Adversaries may leverage legitimate system processes to establish network communications and interact with remote systems. An adversary spawned a `dns.exe` process which then initiated outbound UDP connections on high-numbered ports to internal hosts, potentially indicating a custom command and control channel or data exfiltration. Concurrently, the `System` process established an outbound Server Message Block (SMB) connection to an internal host, suggesting remote service interaction or lateral movement within the network.",
+    "similar_techniques": [
+      {
+        "rank": 1,
+        "technique_id": "T1018",
+        "technique_name": "Remote System Discovery",
+        "tactic": "Discovery",
+        "similarity": 0.6768,
+        "p_ttp": 0.010816,
+        "description": "Adversaries may attempt to get a listing of other systems by IP address, hostname, or other logical identifier on a network that may be used for Lateral Movement from the current system. Functionality could exist within remote access tools to enable this, but utilities available on the operating sys"
+      },
+      {
+        "rank": 2,
+        "technique_id": "T1557.001",
+        "technique_name": "Adversary-in-the-Middle: LLMNR/NBT-NS Poisoning and SMB Relay",
+        "tactic": "Collection",
+        "similarity": 0.6728,
+        "p_ttp": 0.01076,
+        "description": "By responding to LLMNR/NBT-NS network traffic, adversaries may spoof an authoritative source for name resolution to force communication with an adversary controlled system. This activity may be used to collect or relay authentication materials. Link-Local Multicast Name Resolution (LLMNR) and NetBIO"
+      },
+      {
+        "rank": 3,
+        "technique_id": "T1071.004",
+        "technique_name": "Application Layer Protocol: DNS",
+        "tactic": "Command and Control",
+        "similarity": 0.6644,
+        "p_ttp": 0.009705,
+        "description": "Adversaries may communicate using the Domain Name System (DNS) application layer protocol to avoid detection/network filtering by blending in with existing traffic. Commands to the remote system, and often the results of those commands, will be embedded within the protocol traffic between the client"
+      },
+      {
+        "rank": 4,
+        "technique_id": "T1210",
+        "technique_name": "Exploitation of Remote Services",
+        "tactic": "Lateral Movement",
+        "similarity": 0.6475,
+        "p_ttp": 0.009131,
+        "description": "Adversaries may exploit remote services to gain unauthorized access to internal systems once inside of a network. Exploitation of a software vulnerability occurs when an adversary takes advantage of a programming error in a program, service, or within the operating system software or kernel itself t"
+      },
+      {
+        "rank": 5,
+        "technique_id": "T1021.002",
+        "technique_name": "Remote Services: SMB/Windows Admin Shares",
+        "tactic": "Lateral Movement",
+        "similarity": 0.6383,
+        "p_ttp": 0.009099,
+        "description": "Adversaries may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to interact with a remote network share using Server Message Block (SMB). The adversary may then perform actions as the logged-on user. SMB is a file, printer, and serial port sharing protocol for Windows machines on the"
+      }
+    ],
+    "all_idxs": [
+      846,
+      853,
+      904,
+      910,
+      913,
+      993,
+      994,
+      997
+    ]
+  },
+  {
+    "group_id": "T1021_003_352",
+    "technique_id": "T1021.003",
+    "technique_name": "Distributed Component Object Model",
+    "confidence": 0.67,
+    "confidence_margin": 0.011131,
+    "generated_description": "Adversaries established remote access to internal systems by leveraging Windows Remote Management, with svchost.exe observed communicating over the WinRM port. This activity occurred alongside the execution of a WMI host process and suspicious outbound network connections from lsass.exe over Kerberos and LDAP ports, indicating attempts to interact with authentication and directory services. These actions were conducted under the NETWORK SERVICE account.",
+    "similar_techniques": [
+      {
+        "rank": 1,
+        "technique_id": "T1021.006",
+        "technique_name": "Remote Services: Windows Remote Management",
+        "tactic": "Lateral Movement",
+        "similarity": 0.7811,
+        "p_ttp": 0.019284,
+        "description": "Adversaries may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to interact with remote systems using Windows Remote Management (WinRM). The adversary may then perform actions as the logged-on user. WinRM is the name of both a Windows service and a protocol that allows a user to inte"
+      },
+      {
+        "rank": 2,
+        "technique_id": "T1021.002",
+        "technique_name": "Remote Services: SMB/Windows Admin Shares",
+        "tactic": "Lateral Movement",
+        "similarity": 0.6724,
+        "p_ttp": 0.008154,
+        "description": "Adversaries may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to interact with a remote network share using Server Message Block (SMB). The adversary may then perform actions as the logged-on user. SMB is a file, printer, and serial port sharing protocol for Windows machines on the"
+      },
+      {
+        "rank": 3,
+        "technique_id": "T1021.001",
+        "technique_name": "Remote Services: Remote Desktop Protocol",
+        "tactic": "Lateral Movement",
+        "similarity": 0.6779,
+        "p_ttp": 0.00787,
+        "description": "Adversaries may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to log into a computer using the Remote Desktop Protocol (RDP). The adversary may then perform actions as the logged-on user. Remote desktop is a common feature in operating systems. It allows a user to log into an inter"
+      },
+      {
+        "rank": 4,
+        "technique_id": "T1219",
+        "technique_name": "Remote Access Tools",
+        "tactic": "Command and Control",
+        "similarity": 0.6911,
+        "p_ttp": 0.007726,
+        "description": "An adversary may use legitimate remote access tools to establish an interactive command and control channel within a network. Remote access tools create a session between two trusted hosts through a graphical interface, a command line interaction, a protocol tunnel via development or management soft"
+      },
+      {
+        "rank": 5,
+        "technique_id": "T1047",
+        "technique_name": "Windows Management Instrumentation",
+        "tactic": "Execution",
+        "similarity": 0.6689,
+        "p_ttp": 0.007579,
+        "description": "Adversaries may abuse Windows Management Instrumentation (WMI) to execute malicious commands and payloads. WMI is designed for programmers and is the infrastructure for management data and operations on Windows systems. WMI is an administration feature that provides a uniform environment to access W"
+      }
+    ],
+    "all_idxs": [
+      295,
+      333,
+      339,
+      344,
+      347,
+      352,
+      357,
+      364,
+      368,
+      369,
+      379,
+      380,
+      424,
+      443,
+      444,
+      446
+    ]
+  },
+  {
+    "group_id": "T1021_002_349",
+    "technique_id": "T1021.002",
+    "technique_name": "SMB/Windows Admin Shares",
+    "confidence": 0.67,
+    "confidence_margin": 0.002962,
+    "generated_description": "An adversary copied a registry hive containing credential material to disk, leveraging a system process to stage this sensitive database in a backup-related directory. Subsequently, network connections were observed from `lsass.exe` to internal systems over Kerberos and LDAP, and from `svchost.exe` over WinRM. This activity suggests attempts to access and potentially use the extracted credentials for authentication, reconnaissance, or lateral movement within the environment.",
+    "similar_techniques": [
+      {
+        "rank": 1,
+        "technique_id": "T1003.004",
+        "technique_name": "OS Credential Dumping: LSA Secrets",
+        "tactic": "Credential Access",
+        "similarity": 0.7017,
+        "p_ttp": 0.01819,
+        "description": "Adversaries with SYSTEM access to a host may attempt to access Local Security Authority (LSA) secrets, which can contain a variety of different credential materials, such as credentials for service accounts. LSA secrets are stored in the registry at HKEY_LOCAL_MACHINE\\SECURITY\\Policy\\Secrets. LSA se"
+      },
+      {
+        "rank": 2,
+        "technique_id": "T1003.001",
+        "technique_name": "OS Credential Dumping: LSASS Memory",
+        "tactic": "Credential Access",
+        "similarity": 0.6584,
+        "p_ttp": 0.015228,
+        "description": "Adversaries may attempt to access credential material stored in the process memory of the Local Security Authority Subsystem Service (LSASS). After a user logs on, the system generates and stores a variety of credential materials in LSASS process memory. These credential materials can be harvested b"
+      },
+      {
+        "rank": 3,
+        "technique_id": "T1003",
+        "technique_name": "OS Credential Dumping",
+        "tactic": "Credential Access",
+        "similarity": 0.6514,
+        "p_ttp": 0.012191,
+        "description": "Adversaries may attempt to dump credentials to obtain account login and credential material, normally in the form of a hash or a clear text password. Credentials can be obtained from OS caches, memory, or structures. Credentials can then be used to perform [Lateral Movement](https://attack.mitre.org"
+      },
+      {
+        "rank": 4,
+        "technique_id": "T1003.002",
+        "technique_name": "OS Credential Dumping: Security Account Manager",
+        "tactic": "Credential Access",
+        "similarity": 0.6422,
+        "p_ttp": 0.011992,
+        "description": "Adversaries may attempt to extract credential material from the Security Account Manager (SAM) database either through in-memory techniques or through the Windows Registry where the SAM database is stored. The SAM is a database file that contains local accounts for the host, typically those found wi"
+      },
+      {
+        "rank": 5,
+        "technique_id": "T1552.002",
+        "technique_name": "Unsecured Credentials: Credentials in Registry",
+        "tactic": "Credential Access",
+        "similarity": 0.6777,
+        "p_ttp": 0.011415,
+        "description": "Adversaries may search the Registry on compromised systems for insecurely stored credentials. The Windows Registry stores configuration information that can be used by the system or other programs. Adversaries may query the Registry looking for credentials and passwords that have been stored for use"
+      }
+    ],
+    "all_idxs": [
+      295,
+      333,
+      334,
+      339,
+      344,
+      347,
+      349,
+      352,
+      357,
+      364,
+      367,
+      368,
+      369,
+      374,
+      379,
+      380,
+      382,
+      424,
+      425,
+      443,
+      444,
+      446
+    ]
+  },
+  {
+    "group_id": "T1021_002_849",
+    "technique_id": "T1021.002",
+    "technique_name": "SMB/Windows Admin Shares",
+    "confidence": 0.17,
+    "confidence_margin": 0.008885,
+    "generated_description": "Adversaries may leverage network shares to interact with remote systems. This activity is characterized by a successful logon event immediately preceding the access of a network share object. The observed access occurred under a system or anonymous identity, suggesting an adversary may be attempting to establish remote access or facilitate lateral movement by interacting with shared resources.",
+    "similar_techniques": [
+      {
+        "rank": 1,
+        "technique_id": "T1021.002",
+        "technique_name": "Remote Services: SMB/Windows Admin Shares",
+        "tactic": "Lateral Movement",
+        "similarity": 0.7368,
+        "p_ttp": 0.016625,
+        "description": "Adversaries may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to interact with a remote network share using Server Message Block (SMB). The adversary may then perform actions as the logged-on user. SMB is a file, printer, and serial port sharing protocol for Windows machines on the"
+      },
+      {
+        "rank": 2,
+        "technique_id": "T1187",
+        "technique_name": "Forced Authentication",
+        "tactic": "Credential Access",
+        "similarity": 0.6609,
+        "p_ttp": 0.00774,
+        "description": "Adversaries may gather credential material by invoking or forcing a user to automatically provide authentication information through a mechanism in which they can intercept. The Server Message Block (SMB) protocol is commonly used in Windows networks for authentication and communication between syst"
+      },
+      {
+        "rank": 3,
+        "technique_id": "T1135",
+        "technique_name": "Network Share Discovery",
+        "tactic": "Discovery",
+        "similarity": 0.6594,
+        "p_ttp": 0.007539,
+        "description": "Adversaries may look for folders and drives shared on remote systems as a means of identifying sources of information to gather as a precursor for Collection and to identify potential systems of interest for Lateral Movement. Networks often contain shared network drives and folders that enable users"
+      },
+      {
+        "rank": 4,
+        "technique_id": "T1210",
+        "technique_name": "Exploitation of Remote Services",
+        "tactic": "Lateral Movement",
+        "similarity": 0.6419,
+        "p_ttp": 0.007023,
+        "description": "Adversaries may exploit remote services to gain unauthorized access to internal systems once inside of a network. Exploitation of a software vulnerability occurs when an adversary takes advantage of a programming error in a program, service, or within the operating system software or kernel itself t"
+      },
+      {
+        "rank": 5,
+        "technique_id": "T1482",
+        "technique_name": "Domain Trust Discovery",
+        "tactic": "Discovery",
+        "similarity": 0.6527,
+        "p_ttp": 0.006927,
+        "description": "Adversaries may attempt to gather information on domain trust relationships that may be used to identify lateral movement opportunities in Windows multi-domain/forest environments. Domain trusts provide a mechanism for a domain to allow access to resources based on the authentication procedures of a"
+      }
+    ],
+    "all_idxs": [
+      846,
+      849
+    ]
+  },
+  {
+    "group_id": "T1047_431",
+    "technique_id": "T1047",
+    "technique_name": "Windows Management Instrumentation",
+    "confidence": 0.5,
+    "confidence_margin": 0.003593,
+    "generated_description": "Adversaries may utilize remote management protocols to interact with systems, as evidenced by `svchost.exe` establishing an outbound connection over the Windows Remote Management (WinRM) port. Simultaneously, the `lsass.exe` process initiated outbound network communications using Kerberos and LDAP protocols to other internal hosts. This behavior, observed under the `NETWORK SERVICE` account, suggests an adversary is performing reconnaissance or attempting lateral movement by leveraging authentication mechanisms within the network.",
+    "similar_techniques": [
+      {
+        "rank": 1,
+        "technique_id": "T1021.006",
+        "technique_name": "Remote Services: Windows Remote Management",
+        "tactic": "Lateral Movement",
+        "similarity": 0.7398,
+        "p_ttp": 0.014646,
+        "description": "Adversaries may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to interact with remote systems using Windows Remote Management (WinRM). The adversary may then perform actions as the logged-on user. WinRM is the name of both a Windows service and a protocol that allows a user to inte"
+      },
+      {
+        "rank": 2,
+        "technique_id": "T1219",
+        "technique_name": "Remote Access Tools",
+        "tactic": "Command and Control",
+        "similarity": 0.7082,
+        "p_ttp": 0.011053,
+        "description": "An adversary may use legitimate remote access tools to establish an interactive command and control channel within a network. Remote access tools create a session between two trusted hosts through a graphical interface, a command line interaction, a protocol tunnel via development or management soft"
+      },
+      {
+        "rank": 3,
+        "technique_id": "T1210",
+        "technique_name": "Exploitation of Remote Services",
+        "tactic": "Lateral Movement",
+        "similarity": 0.701,
+        "p_ttp": 0.01045,
+        "description": "Adversaries may exploit remote services to gain unauthorized access to internal systems once inside of a network. Exploitation of a software vulnerability occurs when an adversary takes advantage of a programming error in a program, service, or within the operating system software or kernel itself t"
+      },
+      {
+        "rank": 4,
+        "technique_id": "T1021.002",
+        "technique_name": "Remote Services: SMB/Windows Admin Shares",
+        "tactic": "Lateral Movement",
+        "similarity": 0.6901,
+        "p_ttp": 0.009644,
+        "description": "Adversaries may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to interact with a remote network share using Server Message Block (SMB). The adversary may then perform actions as the logged-on user. SMB is a file, printer, and serial port sharing protocol for Windows machines on the"
+      },
+      {
+        "rank": 5,
+        "technique_id": "T1021.001",
+        "technique_name": "Remote Services: Remote Desktop Protocol",
+        "tactic": "Lateral Movement",
+        "similarity": 0.685,
+        "p_ttp": 0.008914,
+        "description": "Adversaries may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to log into a computer using the Remote Desktop Protocol (RDP). The adversary may then perform actions as the logged-on user. Remote desktop is a common feature in operating systems. It allows a user to log into an inter"
+      }
+    ],
+    "all_idxs": [
+      295,
+      431,
+      432,
+      433,
+      443,
+      444,
+      446
+    ]
+  },
+  {
+    "group_id": "T1112_268",
+    "technique_id": "T1112",
+    "technique_name": "Modify Registry",
+    "confidence": 0.0,
+    "confidence_margin": 0.002371,
+    "generated_description": "Adversaries may modify registry keys associated with system services to alter their operational parameters or enable specific features. The Distributed File System Replication (DFSR) service modified its own registry configuration, updating paths to its XML-based configuration files within a system-protected directory. This activity also involved the creation of temporary configuration files and local network communication on standard service ports, consistent with service operation.",
+    "similar_techniques": [
+      {
+        "rank": 1,
+        "technique_id": "T1574.011",
+        "technique_name": "Hijack Execution Flow: Services Registry Permissions Weakness",
+        "tactic": "Defense Evasion",
+        "similarity": 0.7106,
+        "p_ttp": 0.015338,
+        "description": "Adversaries may execute their own malicious payloads by hijacking the Registry entries used by services. Flaws in the permissions for Registry keys related to services can allow adversaries to redirect the originally specified executable to one they control, launching their own code when a service s"
+      },
+      {
+        "rank": 2,
+        "technique_id": "T1112",
+        "technique_name": "Modify Registry",
+        "tactic": "Defense Evasion",
+        "similarity": 0.6828,
+        "p_ttp": 0.012967,
+        "description": "Adversaries may interact with the Windows Registry as part of a variety of other techniques to aid in defense evasion, persistence, and execution. Access to specific areas of the Registry depends on account permissions, with some keys requiring administrator-level access. The built-in Windows comman"
+      },
+      {
+        "rank": 3,
+        "technique_id": "T1574.010",
+        "technique_name": "Hijack Execution Flow: Services File Permissions Weakness",
+        "tactic": "Defense Evasion",
+        "similarity": 0.6412,
+        "p_ttp": 0.008463,
+        "description": "Adversaries may execute their own malicious payloads by hijacking the binaries used by services. Adversaries may use flaws in the permissions of Windows services to replace the binary that is executed upon service start. These service processes may automatically execute specific binaries as part of "
+      },
+      {
+        "rank": 4,
+        "technique_id": "T1569.002",
+        "technique_name": "System Services: Service Execution",
+        "tactic": "Execution",
+        "similarity": 0.6411,
+        "p_ttp": 0.008161,
+        "description": "Adversaries may abuse the Windows service control manager to execute malicious commands or payloads. The Windows service control manager (services.exe) is an interface to manage and manipulate services. The service control manager is accessible to users via GUI components as well as system utilities"
+      },
+      {
+        "rank": 5,
+        "technique_id": "T1012",
+        "technique_name": "Query Registry",
+        "tactic": "Discovery",
+        "similarity": 0.6222,
+        "p_ttp": 0.007188,
+        "description": "Adversaries may interact with the Windows Registry to gather information about the system, configuration, and installed software. The Registry contains a significant amount of information about the operating system, configuration, software, and security. Information can easily be queried using the ["
+      }
+    ],
+    "all_idxs": [
+      265,
+      266,
+      268,
+      269,
+      270,
+      274,
+      275,
+      277,
+      279,
+      293,
+      298,
+      301
+    ]
+  },
+  {
+    "group_id": "T1112_270",
+    "technique_id": "T1112",
+    "technique_name": "Modify Registry",
+    "confidence": 0.0,
+    "confidence_margin": 0.00488,
+    "generated_description": "An adversary may modify registry keys associated with system services to alter their configuration. This activity, observed under SYSTEM privileges, involved updating specific service registry values to reference XML configuration files within a system volume information directory. Concurrently, the process created temporary versions of these configuration files and engaged in local network communication over RPC and LDAP ports, likely for service initialization or configuration.",
+    "similar_techniques": [
+      {
+        "rank": 1,
+        "technique_id": "T1574.011",
+        "technique_name": "Hijack Execution Flow: Services Registry Permissions Weakness",
+        "tactic": "Defense Evasion",
+        "similarity": 0.74,
+        "p_ttp": 0.016365,
+        "description": "Adversaries may execute their own malicious payloads by hijacking the Registry entries used by services. Flaws in the permissions for Registry keys related to services can allow adversaries to redirect the originally specified executable to one they control, launching their own code when a service s"
+      },
+      {
+        "rank": 2,
+        "technique_id": "T1112",
+        "technique_name": "Modify Registry",
+        "tactic": "Defense Evasion",
+        "similarity": 0.6913,
+        "p_ttp": 0.011485,
+        "description": "Adversaries may interact with the Windows Registry as part of a variety of other techniques to aid in defense evasion, persistence, and execution. Access to specific areas of the Registry depends on account permissions, with some keys requiring administrator-level access. The built-in Windows comman"
+      },
+      {
+        "rank": 3,
+        "technique_id": "T1569.002",
+        "technique_name": "System Services: Service Execution",
+        "tactic": "Execution",
+        "similarity": 0.6903,
+        "p_ttp": 0.009934,
+        "description": "Adversaries may abuse the Windows service control manager to execute malicious commands or payloads. The Windows service control manager (services.exe) is an interface to manage and manipulate services. The service control manager is accessible to users via GUI components as well as system utilities"
+      },
+      {
+        "rank": 4,
+        "technique_id": "T1543.003",
+        "technique_name": "Create or Modify System Process: Windows Service",
+        "tactic": "Persistence",
+        "similarity": 0.6621,
+        "p_ttp": 0.008319,
+        "description": "Adversaries may create or modify Windows services to repeatedly execute malicious payloads as part of persistence. When Windows boots up, it starts programs or applications called services that perform background system functions. Windows service configuration information, including the file path to"
+      },
+      {
+        "rank": 5,
+        "technique_id": "T1569",
+        "technique_name": "System Services",
+        "tactic": "Execution",
+        "similarity": 0.6667,
+        "p_ttp": 0.008044,
+        "description": "Adversaries may abuse system services or daemons to execute commands or programs. Adversaries can execute malicious content by interacting with or creating services either locally or remotely. Many services are set to run at boot, which can aid in achieving persistence ([Create or Modify System Proc"
+      }
+    ],
+    "all_idxs": [
+      265,
+      266,
+      268,
+      269,
+      270,
+      274,
+      275,
+      277,
+      279,
+      293,
+      298,
+      301
+    ]
+  },
+  {
+    "group_id": "T1112_279",
+    "technique_id": "T1112",
+    "technique_name": "Modify Registry",
+    "confidence": 0.0,
+    "confidence_margin": 8.1e-05,
+    "generated_description": "Adversaries may modify registry keys associated with legitimate system services to alter their operational parameters. In this instance, the DFSRs.exe service, running with SYSTEM privileges, modified its own registry configuration, specifically updating paths for replication group and volume configuration files. This activity was accompanied by the creation of temporary XML configuration files in a system directory and local network communication on standard service ports.",
+    "similar_techniques": [
+      {
+        "rank": 1,
+        "technique_id": "T1574.011",
+        "technique_name": "Hijack Execution Flow: Services Registry Permissions Weakness",
+        "tactic": "Defense Evasion",
+        "similarity": 0.6596,
+        "p_ttp": 0.014551,
+        "description": "Adversaries may execute their own malicious payloads by hijacking the Registry entries used by services. Flaws in the permissions for Registry keys related to services can allow adversaries to redirect the originally specified executable to one they control, launching their own code when a service s"
+      },
+      {
+        "rank": 2,
+        "technique_id": "T1112",
+        "technique_name": "Modify Registry",
+        "tactic": "Defense Evasion",
+        "similarity": 0.6517,
+        "p_ttp": 0.014469,
+        "description": "Adversaries may interact with the Windows Registry as part of a variety of other techniques to aid in defense evasion, persistence, and execution. Access to specific areas of the Registry depends on account permissions, with some keys requiring administrator-level access. The built-in Windows comman"
+      },
+      {
+        "rank": 3,
+        "technique_id": "T1569.002",
+        "technique_name": "System Services: Service Execution",
+        "tactic": "Execution",
+        "similarity": 0.5916,
+        "p_ttp": 0.007822,
+        "description": "Adversaries may abuse the Windows service control manager to execute malicious commands or payloads. The Windows service control manager (services.exe) is an interface to manage and manipulate services. The service control manager is accessible to users via GUI components as well as system utilities"
+      },
+      {
+        "rank": 4,
+        "technique_id": "T1574.010",
+        "technique_name": "Hijack Execution Flow: Services File Permissions Weakness",
+        "tactic": "Defense Evasion",
+        "similarity": 0.5803,
+        "p_ttp": 0.007456,
+        "description": "Adversaries may execute their own malicious payloads by hijacking the binaries used by services. Adversaries may use flaws in the permissions of Windows services to replace the binary that is executed upon service start. These service processes may automatically execute specific binaries as part of "
+      },
+      {
+        "rank": 5,
+        "technique_id": "T1012",
+        "technique_name": "Query Registry",
+        "tactic": "Discovery",
+        "similarity": 0.5847,
+        "p_ttp": 0.007229,
+        "description": "Adversaries may interact with the Windows Registry to gather information about the system, configuration, and installed software. The Registry contains a significant amount of information about the operating system, configuration, software, and security. Information can easily be queried using the ["
+      }
+    ],
+    "all_idxs": [
+      265,
+      266,
+      268,
+      269,
+      270,
+      274,
+      275,
+      277,
+      279,
+      293,
+      298,
+      301
+    ]
+  },
+  {
+    "group_id": "T1134_330",
+    "technique_id": "T1134",
+    "technique_name": "Access Token Manipulation",
+    "confidence": 0.33,
+    "confidence_margin": 0.00651,
+    "generated_description": "Adversaries may utilize the `SeTcbPrivilege` from a Local System account to perform sensitive operations. This powerful privilege, also known as 'Act as part of the operating system', enables the creation or modification of access tokens. By leveraging this capability, an adversary can impersonate arbitrary users or services, facilitating privilege escalation and potentially enabling lateral movement within the environment.",
+    "similar_techniques": [
+      {
+        "rank": 1,
+        "technique_id": "T1134",
+        "technique_name": "Access Token Manipulation",
+        "tactic": "Defense Evasion",
+        "similarity": 0.7082,
+        "p_ttp": 0.020523,
+        "description": "Adversaries may modify access tokens to operate under a different user or system security context to perform actions and bypass access controls. Windows uses access tokens to determine the ownership of a running process. A user can manipulate access tokens to make a running process appear as though "
+      },
+      {
+        "rank": 2,
+        "technique_id": "T1134.003",
+        "technique_name": "Access Token Manipulation: Make and Impersonate Token",
+        "tactic": "Defense Evasion",
+        "similarity": 0.6657,
+        "p_ttp": 0.014013,
+        "description": "Adversaries may make new tokens and impersonate users to escalate privileges and bypass access controls. For example, if an adversary has a username and password but the user is not logged onto the system the adversary can then create a logon session for the user using the `LogonUser` function. The "
+      },
+      {
+        "rank": 3,
+        "technique_id": "T1134.002",
+        "technique_name": "Access Token Manipulation: Create Process with Token",
+        "tactic": "Defense Evasion",
+        "similarity": 0.648,
+        "p_ttp": 0.01172,
+        "description": "Adversaries may create a new process with an existing token to escalate privileges and bypass access controls. Processes can be created with the token and resulting security context of another user using features such as CreateProcessWithTokenW and runas. Creating processes with a token not associat"
+      },
+      {
+        "rank": 4,
+        "technique_id": "T1134.005",
+        "technique_name": "Access Token Manipulation: SID-History Injection",
+        "tactic": "Defense Evasion",
+        "similarity": 0.6339,
+        "p_ttp": 0.010935,
+        "description": "Adversaries may use SID-History Injection to escalate privileges and bypass access controls. The Windows security identifier (SID) is a unique value that identifies a user or group account. SIDs are used by Windows security in both security descriptors and access tokens. An account can hold addition"
+      },
+      {
+        "rank": 5,
+        "technique_id": "T1134.001",
+        "technique_name": "Access Token Manipulation: Token Impersonation/Theft",
+        "tactic": "Defense Evasion",
+        "similarity": 0.6285,
+        "p_ttp": 0.010303,
+        "description": "Adversaries may duplicate then impersonate another user's existing token to escalate privileges and bypass access controls. For example, an adversary can duplicate an existing token using `DuplicateToken` or `DuplicateTokenEx`. The token can then be used with `ImpersonateLoggedOnUser` to allow the c"
+      }
+    ],
+    "all_idxs": [
+      260,
+      262,
+      330,
+      362,
+      376,
+      378,
+      381,
+      410,
+      500,
+      501,
+      503,
+      504,
+      505,
+      506,
+      507,
+      508,
+      509,
+      510,
+      511,
+      512,
+      514,
+      539,
+      545,
+      604,
+      609
+    ]
+  },
+  {
+    "group_id": "T1546_003_351",
+    "technique_id": "T1546.003",
+    "technique_name": "Windows Management Instrumentation Event Subscription",
+    "confidence": 0.2,
+    "confidence_margin": 0.012739,
+    "generated_description": "Adversaries established a mechanism for persistence by creating a Windows Management Instrumentation (WMI) event subscription. This involved registering a WMI filter and a WMI consumer, subsequently binding them to trigger execution in response to specific system events. The activity, detected through WMI event log entries, occurred under the user context of NT AUTHORITY\\shire\\pgustavo, indicating the setup of a scheduled or event-driven execution without immediate observation of the intended payload.",
+    "similar_techniques": [
+      {
+        "rank": 1,
+        "technique_id": "T1546.003",
+        "technique_name": "Event Triggered Execution: Windows Management Instrumentation Event Subscription",
+        "tactic": "Persistence",
+        "similarity": 0.7917,
+        "p_ttp": 0.02384,
+        "description": "Adversaries may establish persistence and elevate privileges by executing malicious content triggered by a Windows Management Instrumentation (WMI) event subscription. WMI can be used to install event filters, providers, consumers, and bindings that execute code when a defined event occurs. Examples"
+      },
+      {
+        "rank": 2,
+        "technique_id": "T1047",
+        "technique_name": "Windows Management Instrumentation",
+        "tactic": "Execution",
+        "similarity": 0.7185,
+        "p_ttp": 0.011101,
+        "description": "Adversaries may abuse Windows Management Instrumentation (WMI) to execute malicious commands and payloads. WMI is designed for programmers and is the infrastructure for management data and operations on Windows systems. WMI is an administration feature that provides a uniform environment to access W"
+      },
+      {
+        "rank": 3,
+        "technique_id": "T1546",
+        "technique_name": "Event Triggered Execution",
+        "tactic": "Persistence",
+        "similarity": 0.6424,
+        "p_ttp": 0.007321,
+        "description": "Adversaries may establish persistence and/or elevate privileges using system mechanisms that trigger execution based on specific events. Various operating systems have means to monitor and subscribe to events such as logons or other user activity such as running specific applications/binaries. Cloud"
+      },
+      {
+        "rank": 4,
+        "technique_id": "T1546.015",
+        "technique_name": "Event Triggered Execution: Component Object Model Hijacking",
+        "tactic": "Persistence",
+        "similarity": 0.6531,
+        "p_ttp": 0.007059,
+        "description": "Adversaries may establish persistence by executing malicious content triggered by hijacked references to Component Object Model (COM) objects. COM is a system within Windows to enable interaction between software components through the operating system. References to various COM objects are stored i"
+      },
+      {
+        "rank": 5,
+        "technique_id": "T1546.007",
+        "technique_name": "Event Triggered Execution: Netsh Helper DLL",
+        "tactic": "Persistence",
+        "similarity": 0.6289,
+        "p_ttp": 0.006011,
+        "description": "Adversaries may establish persistence by executing malicious content triggered by Netsh Helper DLLs. Netsh.exe (also referred to as Netshell) is a command-line scripting utility used to interact with the network configuration of a system. It contains functionality to add helper DLLs for extending fu"
+      }
+    ],
+    "all_idxs": [
+      351,
+      358,
+      373,
+      431
+    ]
+  }
+]

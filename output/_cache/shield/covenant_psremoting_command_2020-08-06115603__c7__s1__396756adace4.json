@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed processes are legitimate Windows components, and their command lines, loaded modules, and registry interactions are consistent with their normal system functions, showing no indicators of compromise or malicious activity.\"\n}"}

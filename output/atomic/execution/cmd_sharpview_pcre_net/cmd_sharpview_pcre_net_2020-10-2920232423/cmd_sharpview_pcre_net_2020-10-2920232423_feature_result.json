@@ -1,0 +1,501 @@
+[
+  {
+    "group_id": "T1070_001_10",
+    "technique_id": "T1070.001",
+    "technique_name": "Clear Windows Event Logs",
+    "anchor_eid": 1102,
+    "anchor_detail": {
+      "eid": 1102,
+      "time": "2020-10-29 08:23:18.073000+00:00",
+      "image": null,
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": null,
+      "integrity": null
+    },
+    "confidence": 0.75,
+    "all_idxs": [
+      10,
+      34,
+      35,
+      235
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "spawn",
+            "parent_image": "cmd.exe",
+            "child_image": "SharpView.exe",
+            "integrity_level": "High",
+            "parent_guid": "{14475cd4-5cde-5f9b-7501-000000000500}",
+            "child_guid": "{14475cd4-5cf8-5f9b-7801-000000000500}",
+            "cmdline": "SharpView.exe  Get-ObjectAcl -SamAccountName \"Domain Admins\"",
+            "source_eid": 1
+          }
+        ],
+        "chain_depth": 1
+      },
+      "command_script": {
+        "entries": [
+          {
+            "source_eid": 4688,
+            "image": "SharpView.exe",
+            "cmdline": "SharpView.exe  Get-ObjectAcl -SamAccountName \"Domain Admins\"",
+            "cmdline_length": 60,
+            "has_obfuscation": false,
+            "special_chars": []
+          }
+        ],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 1,
+        "user": "THESHIRE\\pgustavo",
+        "domain": null,
+        "logon_id": "0x10276b",
+        "integrity_level": "High",
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-10-29T08:23:18.073000+00:00",
+        "window_start_delta_sec": 0.0,
+        "window_end_delta_sec": 3.55,
+        "span_sec": 3.55,
+        "total_events": 4,
+        "event_density_per_10sec": 11.27,
+        "eid_counts": {
+          "1102": 1,
+          "4688": 1,
+          "1": 1,
+          "23": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.001,
+          "max_sec": 2.46,
+          "mean_sec": 1.183
+        },
+        "burst_detected": []
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [
+          {
+            "source_eid": 1102,
+            "message": "The audit log was cleared.",
+            "user": null
+          }
+        ],
+        "deleted_files": [
+          {
+            "source_eid": 23,
+            "path": "C:\\Users\\pgustavo\\AppData\\Local\\Microsoft\\Windows\\SchCache\\MORDORDC.THESHIRE.LOCAL.sch",
+            "image": "SharpView.exe"
+          }
+        ],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1070_004_235",
+    "technique_id": "T1070.004",
+    "technique_name": "File Deletion",
+    "anchor_eid": 23,
+    "anchor_detail": {
+      "eid": 23,
+      "time": "2020-10-29 08:23:21.622000+00:00",
+      "image": "SharpView.exe",
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "C:\\Users\\pgustavo\\AppData\\Local\\Microsoft\\Windows\\SchCache\\MORDORDC.THESHIRE.LOCAL.sch",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": "THESHIRE\\pgustavo",
+      "integrity": null
+    },
+    "confidence": 0.5,
+    "all_idxs": [
+      33,
+      35,
+      38,
+      39,
+      40,
+      41,
+      42,
+      44,
+      45,
+      46,
+      47,
+      68,
+      71,
+      72,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      86,
+      95,
+      97,
+      98,
+      99,
+      100,
+      101,
+      110,
+      111,
+      112,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      134,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      149,
+      150,
+      151,
+      153,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      175,
+      177,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      190,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      200,
+      201,
+      202,
+      203,
+      204,
+      206,
+      207,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      224,
+      225,
+      228,
+      229,
+      230,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      243,
+      259,
+      260,
+      261,
+      266
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "spawn",
+            "parent_image": "cmd.exe",
+            "child_image": "SharpView.exe",
+            "integrity_level": "High",
+            "parent_guid": "{14475cd4-5cde-5f9b-7501-000000000500}",
+            "child_guid": "{14475cd4-5cf8-5f9b-7801-000000000500}",
+            "cmdline": "SharpView.exe  Get-ObjectAcl -SamAccountName \"Domain Admins\"",
+            "source_eid": 1
+          }
+        ],
+        "chain_depth": 1
+      },
+      "command_script": {
+        "entries": [
+          {
+            "source_eid": 1,
+            "image": "SharpView.exe",
+            "cmdline": "SharpView.exe  Get-ObjectAcl -SamAccountName \"Domain Admins\"",
+            "cmdline_length": 60,
+            "has_obfuscation": false,
+            "special_chars": []
+          }
+        ],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 1,
+        "user": "THESHIRE\\pgustavo",
+        "domain": null,
+        "logon_id": "0x10276b",
+        "integrity_level": "High",
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-10-29T08:23:21.622000+00:00",
+        "window_start_delta_sec": -1.09,
+        "window_end_delta_sec": 1.94,
+        "span_sec": 3.03,
+        "total_events": 115,
+        "event_density_per_10sec": 380.04,
+        "eid_counts": {
+          "7": 85,
+          "12": 10,
+          "13": 10,
+          "11": 3,
+          "22": 3,
+          "1": 1,
+          "23": 1,
+          "5": 1,
+          "3": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 0.875,
+          "mean_sec": 0.027
+        },
+        "burst_detected": [
+          {
+            "eid": 7,
+            "count": 85,
+            "window_sec": 0.0
+          },
+          {
+            "eid": 12,
+            "count": 10,
+            "window_sec": 0.05
+          },
+          {
+            "eid": 13,
+            "count": 10,
+            "window_sec": 0.0
+          },
+          {
+            "eid": 11,
+            "count": 3,
+            "window_sec": 0.12
+          },
+          {
+            "eid": 22,
+            "count": 3,
+            "window_sec": 1.0
+          }
+        ]
+      },
+      "network": {
+        "connections": [
+          {
+            "source_eid": 22,
+            "image": "SharpView.exe",
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null,
+            "protocol": null,
+            "direction": "dns_query",
+            "service_hint": null,
+            "query_name": "_ldap._tcp.Default-First-Site-Name._sites.MORDORDC.THESHIRE.LOCAL."
+          },
+          {
+            "source_eid": 22,
+            "image": "SharpView.exe",
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null,
+            "protocol": null,
+            "direction": "dns_query",
+            "service_hint": null,
+            "query_name": "_ldap._tcp.MORDORDC.THESHIRE.LOCAL."
+          },
+          {
+            "source_eid": 3,
+            "image": "SharpView.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "172.18.38.5",
+            "src_port": 50450,
+            "dst_port": 389,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 22,
+            "image": "SharpView.exe",
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null,
+            "protocol": null,
+            "direction": "dns_query",
+            "service_hint": null,
+            "query_name": "MORDORDC.THESHIRE.LOCAL"
+          }
+        ]
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\S-1-5-21-3140987116-517580383-2541594433-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\ProxyBypass",
+            "details": "DWORD (0x00000001)",
+            "process_guid": "{14475cd4-5cf8-5f9b-7801-000000000500}",
+            "image": "SharpView.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\S-1-5-21-3140987116-517580383-2541594433-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\UNCAsIntranet",
+            "details": "DWORD (0x00000001)",
+            "process_guid": "{14475cd4-5cf8-5f9b-7801-000000000500}",
+            "image": "SharpView.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\S-1-5-21-3140987116-517580383-2541594433-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\AutoDetect",
+            "details": "DWORD (0x00000000)",
+            "process_guid": "{14475cd4-5cf8-5f9b-7801-000000000500}",
+            "image": "SharpView.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\S-1-5-21-3140987116-517580383-2541594433-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\ProxyBypass",
+            "details": "DWORD (0x00000001)",
+            "process_guid": "{14475cd4-5cf8-5f9b-7801-000000000500}",
+            "image": "SharpView.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\S-1-5-21-3140987116-517580383-2541594433-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\IntranetName",
+            "details": "DWORD (0x00000001)",
+            "process_guid": "{14475cd4-5cf8-5f9b-7801-000000000500}",
+            "image": "SharpView.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\S-1-5-21-3140987116-517580383-2541594433-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\AutoDetect",
+            "details": "DWORD (0x00000000)",
+            "process_guid": "{14475cd4-5cf8-5f9b-7801-000000000500}",
+            "image": "SharpView.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\S-1-5-21-3140987116-517580383-2541594433-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\IntranetName",
+            "details": "DWORD (0x00000001)",
+            "process_guid": "{14475cd4-5cf8-5f9b-7801-000000000500}",
+            "image": "SharpView.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\S-1-5-21-3140987116-517580383-2541594433-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\UNCAsIntranet",
+            "details": "DWORD (0x00000001)",
+            "process_guid": "{14475cd4-5cf8-5f9b-7801-000000000500}",
+            "image": "SharpView.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\S-1-5-21-3140987116-517580383-2541594433-1104\\Software\\Microsoft\\ADs\\Providers\\LDAP\\CN=Aggregate,CN=Schema,CN=Configuration,DC=theshire,DC=local\\File",
+            "details": "%%LOCALAPPDATA%%\\Microsoft\\Windows\\SchCache\\MORDORDC.THESHIRE.LOCAL.sch",
+            "process_guid": "{14475cd4-5cf8-5f9b-7801-000000000500}",
+            "image": "SharpView.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\S-1-5-21-3140987116-517580383-2541594433-1104\\Software\\Microsoft\\ADs\\Providers\\LDAP\\CN=Aggregate,CN=Schema,CN=Configuration,DC=theshire,DC=local\\Time",
+            "details": "20201029210034.0Z",
+            "process_guid": "{14475cd4-5cf8-5f9b-7801-000000000500}",
+            "image": "SharpView.exe"
+          }
+        ],
+        "registry_noise_count": 10,
+        "dropped_files": [
+          {
+            "source_eid": 11,
+            "path": "C:\\Users\\pgustavo\\AppData\\Local\\Temp\\ba9ea7344a4a5f591d6e5dc32a13494b",
+            "image": "SharpView.exe"
+          },
+          {
+            "source_eid": 11,
+            "path": "C:\\Users\\pgustavo\\AppData\\Local\\Temp\\ba9ea7344a4a5f591d6e5dc32a13494b\\6c9254b82dc34bf3bcc88fa65afa41d3.dll",
+            "image": "SharpView.exe"
+          },
+          {
+            "source_eid": 11,
+            "path": "C:\\Users\\pgustavo\\AppData\\Local\\Microsoft\\Windows\\SchCache\\MORDORDC.THESHIRE.LOCAL.sch",
+            "image": "SharpView.exe"
+          }
+        ]
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [
+          {
+            "source_eid": 23,
+            "path": "C:\\Users\\pgustavo\\AppData\\Local\\Microsoft\\Windows\\SchCache\\MORDORDC.THESHIRE.LOCAL.sch",
+            "image": "SharpView.exe"
+          }
+        ],
+        "obfuscated_cmdlines": []
+      }
+    }
+  }
+]

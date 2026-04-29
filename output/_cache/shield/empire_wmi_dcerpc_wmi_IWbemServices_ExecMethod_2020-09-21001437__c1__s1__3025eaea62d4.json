@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed activity of svchost.exe writing to prefetch files for WMIPRVSE.EXE and CONHOST.EXE is a normal and expected system behavior, with no indicators of compromise based on the provided events.\"\n}"}

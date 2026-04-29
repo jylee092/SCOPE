@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[svchost.exe|{6a910b9d-a3d]\"\n  ],\n  \"rationale\": \"The svchost.exe process is creating and modifying registry keys related to audio capture capabilities (e.g., 'RemoteCapture', 'Audio\\\\Journal\\\\Capture'), which could be indicative of an attempt to enable or configure audio surveillance.\"\n}"}

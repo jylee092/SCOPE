@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed registry operations by svchost.exe on ProfileService, CloudStore, and IdentityStore keys are consistent with normal Windows system activity and do not present any immediate indicators of compromise without additional context such as suspicious command-line arguments or unusual values being set.\"\n}"}

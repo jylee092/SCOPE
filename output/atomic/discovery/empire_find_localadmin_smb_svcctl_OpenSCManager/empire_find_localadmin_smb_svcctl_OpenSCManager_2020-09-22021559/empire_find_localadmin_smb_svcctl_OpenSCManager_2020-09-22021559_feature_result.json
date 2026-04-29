@@ -1,0 +1,1570 @@
+[
+  {
+    "group_id": "T1021_002_1368",
+    "technique_id": "T1021.002",
+    "technique_name": "SMB/Windows Admin Shares",
+    "anchor_eid": 4624,
+    "anchor_detail": {
+      "eid": 4624,
+      "time": "2020-09-22 06:16:30.918000+00:00",
+      "image": null,
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": "-",
+      "integrity": null
+    },
+    "confidence": 0.11,
+    "all_idxs": [
+      1368,
+      1370,
+      1371,
+      1540
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [],
+        "chain_depth": 0
+      },
+      "command_script": {
+        "entries": [],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 4624,
+        "user": "-",
+        "domain": "-",
+        "logon_id": "0x0",
+        "integrity_level": null,
+        "user_sid": "S-1-0-0",
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-09-22T06:16:30.918000+00:00",
+        "window_start_delta_sec": 0.0,
+        "window_end_delta_sec": 23.15,
+        "span_sec": 23.15,
+        "total_events": 4,
+        "event_density_per_10sec": 1.73,
+        "eid_counts": {
+          "4624": 2,
+          "5140": 1,
+          "5145": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 23.146,
+          "mean_sec": 7.716
+        },
+        "burst_detected": []
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1021_002_56",
+    "technique_id": "T1021.002",
+    "technique_name": "SMB/Windows Admin Shares",
+    "anchor_eid": 4624,
+    "anchor_detail": {
+      "eid": 4624,
+      "time": "2020-09-22 06:16:02.937000+00:00",
+      "image": null,
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": "-",
+      "integrity": null
+    },
+    "confidence": 0.11,
+    "all_idxs": [
+      56,
+      64,
+      908,
+      1368
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [],
+        "chain_depth": 0
+      },
+      "command_script": {
+        "entries": [],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 4624,
+        "user": "-",
+        "domain": "-",
+        "logon_id": "0x0",
+        "integrity_level": null,
+        "user_sid": "S-1-0-0",
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-09-22T06:16:02.937000+00:00",
+        "window_start_delta_sec": 0.0,
+        "window_end_delta_sec": 27.98,
+        "span_sec": 27.98,
+        "total_events": 4,
+        "event_density_per_10sec": 1.43,
+        "eid_counts": {
+          "4624": 4
+        },
+        "inter_event_gap": {
+          "min_sec": 0.004,
+          "max_sec": 22.239,
+          "mean_sec": 9.327
+        },
+        "burst_detected": [
+          {
+            "eid": 4624,
+            "count": 4,
+            "window_sec": 5.74
+          }
+        ]
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1021_002_1068",
+    "technique_id": "T1021.002",
+    "technique_name": "SMB/Windows Admin Shares",
+    "anchor_eid": 4624,
+    "anchor_detail": {
+      "eid": 4624,
+      "time": "2020-09-22 06:16:09.804000+00:00",
+      "image": null,
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": "-",
+      "integrity": null
+    },
+    "confidence": 0.33,
+    "all_idxs": [
+      69,
+      1068,
+      1099,
+      1100
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "observed",
+            "child_image": "svchost.exe",
+            "parent_image": null,
+            "source_eid": 11
+          },
+          {
+            "relation": "observed",
+            "child_image": "services.exe",
+            "parent_image": null,
+            "source_eid": 3
+          }
+        ],
+        "chain_depth": 2
+      },
+      "command_script": {
+        "entries": [],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 4624,
+        "user": "-",
+        "domain": "-",
+        "logon_id": "0x0",
+        "integrity_level": null,
+        "user_sid": "S-1-0-0",
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-09-22T06:16:09.804000+00:00",
+        "window_start_delta_sec": -5.86,
+        "window_end_delta_sec": 2.0,
+        "span_sec": 7.87,
+        "total_events": 4,
+        "event_density_per_10sec": 5.08,
+        "eid_counts": {
+          "3": 2,
+          "11": 1,
+          "4624": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 5.863,
+          "mean_sec": 2.622
+        },
+        "burst_detected": []
+      },
+      "network": {
+        "connections": [
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "172.18.39.6",
+            "src_port": 54783,
+            "dst_port": 135,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "services.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "172.18.39.6",
+            "src_port": 54786,
+            "dst_port": 49726,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          }
+        ]
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": [
+          {
+            "source_eid": 11,
+            "path": "C:\\Windows\\ServiceState\\EventLog\\Data\\lastalive0.dat",
+            "image": "svchost.exe"
+          }
+        ]
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1021_002_1540",
+    "technique_id": "T1021.002",
+    "technique_name": "SMB/Windows Admin Shares",
+    "anchor_eid": 4624,
+    "anchor_detail": {
+      "eid": 4624,
+      "time": "2020-09-22 06:16:54.065000+00:00",
+      "image": null,
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": "-",
+      "integrity": null
+    },
+    "confidence": 0.17,
+    "all_idxs": [
+      1540,
+      1822
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [],
+        "chain_depth": 0
+      },
+      "command_script": {
+        "entries": [],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 4624,
+        "user": "-",
+        "domain": "-",
+        "logon_id": "0x0",
+        "integrity_level": null,
+        "user_sid": "S-1-0-0",
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-09-22T06:16:54.065000+00:00",
+        "window_start_delta_sec": 0.0,
+        "window_end_delta_sec": 23.16,
+        "span_sec": 23.16,
+        "total_events": 2,
+        "event_density_per_10sec": 0.86,
+        "eid_counts": {
+          "4624": 2
+        },
+        "inter_event_gap": {
+          "min_sec": 23.159,
+          "max_sec": 23.159,
+          "mean_sec": 23.159
+        },
+        "burst_detected": []
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1021_002_3455",
+    "technique_id": "T1021.002",
+    "technique_name": "SMB/Windows Admin Shares",
+    "anchor_eid": 4624,
+    "anchor_detail": {
+      "eid": 4624,
+      "time": "2020-09-22 06:17:54.215000+00:00",
+      "image": null,
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": "-",
+      "integrity": null
+    },
+    "confidence": 0.17,
+    "all_idxs": [
+      3455
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [],
+        "chain_depth": 0
+      },
+      "command_script": {
+        "entries": [],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 4624,
+        "user": "-",
+        "domain": "-",
+        "logon_id": "0x0",
+        "integrity_level": null,
+        "user_sid": "S-1-0-0",
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-09-22T06:17:54.215000+00:00",
+        "window_start_delta_sec": 0.0,
+        "window_end_delta_sec": 0.0,
+        "span_sec": 0.0,
+        "total_events": 1,
+        "event_density_per_10sec": null,
+        "eid_counts": {
+          "4624": 1
+        },
+        "inter_event_gap": {
+          "min_sec": null,
+          "max_sec": null,
+          "mean_sec": null
+        },
+        "burst_detected": []
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1021_003_1822",
+    "technique_id": "T1021.003",
+    "technique_name": "Distributed Component Object Model",
+    "anchor_eid": 4624,
+    "anchor_detail": {
+      "eid": 4624,
+      "time": "2020-09-22 06:17:17.224000+00:00",
+      "image": null,
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": "MORDORDC$",
+      "integrity": null
+    },
+    "confidence": 0.0,
+    "all_idxs": [
+      1822
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [],
+        "chain_depth": 0
+      },
+      "command_script": {
+        "entries": [],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 4624,
+        "user": "MORDORDC$",
+        "domain": "THESHIRE",
+        "logon_id": "0x3e7",
+        "integrity_level": null,
+        "user_sid": "S-1-5-18",
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-09-22T06:17:17.224000+00:00",
+        "window_start_delta_sec": 0.0,
+        "window_end_delta_sec": 0.0,
+        "span_sec": 0.0,
+        "total_events": 1,
+        "event_density_per_10sec": null,
+        "eid_counts": {
+          "4624": 1
+        },
+        "inter_event_gap": {
+          "min_sec": null,
+          "max_sec": null,
+          "mean_sec": null
+        },
+        "burst_detected": []
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1047_554",
+    "technique_id": "T1047",
+    "technique_name": "Windows Management Instrumentation",
+    "anchor_eid": 5857,
+    "anchor_detail": {
+      "eid": 5857,
+      "time": "2020-09-22 06:16:08.383000+00:00",
+      "image": null,
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": null,
+      "integrity": null
+    },
+    "confidence": 1.0,
+    "all_idxs": [
+      97,
+      526,
+      554,
+      1078,
+      1079,
+      1086,
+      1087,
+      1089,
+      1381
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "spawn",
+            "parent_image": "svchost.exe",
+            "child_image": "WmiPrvSE.exe",
+            "integrity_level": "System",
+            "parent_guid": "{b34bc01c-226b-5f69-1000-000000000900}",
+            "child_guid": "{b34bc01c-96a7-5f69-4702-000000000900}",
+            "cmdline": "C:\\windows\\system32\\wbem\\wmiprvse.exe -secured -Embedding",
+            "source_eid": 1
+          }
+        ],
+        "chain_depth": 1
+      },
+      "command_script": {
+        "entries": [
+          {
+            "source_eid": 1,
+            "image": "WmiPrvSE.exe",
+            "cmdline": "C:\\windows\\system32\\wbem\\wmiprvse.exe -secured -Embedding",
+            "cmdline_length": 57,
+            "has_obfuscation": false,
+            "special_chars": []
+          }
+        ],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 1,
+        "user": "NT AUTHORITY\\NETWORK SERVICE",
+        "domain": "NT AUTHORITY",
+        "logon_id": "0x3e4",
+        "integrity_level": "System",
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-09-22T06:16:08.383000+00:00",
+        "window_start_delta_sec": -2.42,
+        "window_end_delta_sec": 24.55,
+        "span_sec": 26.98,
+        "total_events": 9,
+        "event_density_per_10sec": 3.34,
+        "eid_counts": {
+          "3": 7,
+          "1": 1,
+          "5857": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.001,
+          "max_sec": 22.13,
+          "mean_sec": 3.372
+        },
+        "burst_detected": [
+          {
+            "eid": 3,
+            "count": 7,
+            "window_sec": 3.85
+          }
+        ]
+      },
+      "network": {
+        "connections": [
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "52.114.32.24",
+            "src_port": 54780,
+            "dst_port": 443,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": "HTTPS"
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "172.18.38.5",
+            "src_port": 53857,
+            "dst_port": 389,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "powershell.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "172.18.38.5",
+            "src_port": 54781,
+            "dst_port": 389,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "powershell.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "172.18.38.5",
+            "src_port": 54782,
+            "dst_port": 135,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "powershell.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "172.18.39.6",
+            "src_port": 54783,
+            "dst_port": 135,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "powershell.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "172.18.39.6",
+            "src_port": 54786,
+            "dst_port": 49726,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "System",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "172.18.38.5",
+            "src_port": 54796,
+            "dst_port": 445,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": "SMB"
+          }
+        ]
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1070_004_4519",
+    "technique_id": "T1070.004",
+    "technique_name": "File Deletion",
+    "anchor_eid": 23,
+    "anchor_detail": {
+      "eid": 23,
+      "time": "2020-09-22 06:18:36.826000+00:00",
+      "image": "NetworkWatcherAgent.exe",
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "C:\\Windows\\Temp\\Azure_AZNetCapture_GuestPacketCapture_Session_Cache\\I_AFADD6D4-2BE5-4AC5-8D57-50BFE5187E66\\DB4487CC-43CF-43C2-BEEF-E7C873A9888D.cap",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": "NT AUTHORITY\\SYSTEM",
+      "integrity": null
+    },
+    "confidence": 0.0,
+    "all_idxs": [
+      4368,
+      4371,
+      4519
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "observed",
+            "child_image": "NetworkWatcherAgent.exe",
+            "parent_image": null,
+            "source_eid": 13
+          }
+        ],
+        "chain_depth": 1
+      },
+      "command_script": {
+        "entries": [],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 23,
+        "user": "NT AUTHORITY\\SYSTEM",
+        "domain": "NT AUTHORITY",
+        "logon_id": null,
+        "integrity_level": null,
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-09-22T06:18:36.826000+00:00",
+        "window_start_delta_sec": -2.06,
+        "window_end_delta_sec": 0.0,
+        "span_sec": 2.06,
+        "total_events": 3,
+        "event_density_per_10sec": 14.59,
+        "eid_counts": {
+          "13": 2,
+          "23": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.001,
+          "max_sec": 2.055,
+          "mean_sec": 1.028
+        },
+        "burst_detected": []
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\NdisCap\\Parameters\\RefCount",
+            "details": "DWORD (0x00000000)",
+            "process_guid": "{b34bc01c-2271-5f69-4600-000000000900}",
+            "image": "NetworkWatcherAgent.exe"
+          }
+        ],
+        "registry_noise": [
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\.DEFAULT\\System\\CurrentControlSet\\Control\\NetTrace\\Session\\CaptureEnabled",
+            "details": "DWORD (0x00000000)",
+            "process_guid": "{b34bc01c-2271-5f69-4600-000000000900}",
+            "image": "NetworkWatcherAgent.exe"
+          }
+        ],
+        "registry_noise_count": 1,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [
+          {
+            "source_eid": 23,
+            "path": "C:\\Windows\\Temp\\Azure_AZNetCapture_GuestPacketCapture_Session_Cache\\I_AFADD6D4-2BE5-4AC5-8D57-50BFE5187E66\\DB4487CC-43CF-43C2-BEEF-E7C873A9888D.cap",
+            "image": "NetworkWatcherAgent.exe"
+          }
+        ],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1112_4368",
+    "technique_id": "T1112",
+    "technique_name": "Modify Registry",
+    "anchor_eid": 13,
+    "anchor_detail": {
+      "eid": 13,
+      "time": "2020-09-22 06:18:34.770000+00:00",
+      "image": "NetworkWatcherAgent.exe",
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "HKLM\\System\\CurrentControlSet\\Services\\NdisCap\\Parameters\\RefCount",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": null,
+      "integrity": null
+    },
+    "confidence": 0.0,
+    "all_idxs": [
+      4368,
+      4371,
+      4519
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "observed",
+            "child_image": "NetworkWatcherAgent.exe",
+            "parent_image": null,
+            "source_eid": 13
+          }
+        ],
+        "chain_depth": 1
+      },
+      "command_script": {
+        "entries": [],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 23,
+        "user": "NT AUTHORITY\\SYSTEM",
+        "domain": "NT AUTHORITY",
+        "logon_id": null,
+        "integrity_level": null,
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-09-22T06:18:34.770000+00:00",
+        "window_start_delta_sec": 0.0,
+        "window_end_delta_sec": 2.06,
+        "span_sec": 2.06,
+        "total_events": 3,
+        "event_density_per_10sec": 14.59,
+        "eid_counts": {
+          "13": 2,
+          "23": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.001,
+          "max_sec": 2.055,
+          "mean_sec": 1.028
+        },
+        "burst_detected": []
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\NdisCap\\Parameters\\RefCount",
+            "details": "DWORD (0x00000000)",
+            "process_guid": "{b34bc01c-2271-5f69-4600-000000000900}",
+            "image": "NetworkWatcherAgent.exe"
+          }
+        ],
+        "registry_noise": [
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\.DEFAULT\\System\\CurrentControlSet\\Control\\NetTrace\\Session\\CaptureEnabled",
+            "details": "DWORD (0x00000000)",
+            "process_guid": "{b34bc01c-2271-5f69-4600-000000000900}",
+            "image": "NetworkWatcherAgent.exe"
+          }
+        ],
+        "registry_noise_count": 1,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [
+          {
+            "source_eid": 23,
+            "path": "C:\\Windows\\Temp\\Azure_AZNetCapture_GuestPacketCapture_Session_Cache\\I_AFADD6D4-2BE5-4AC5-8D57-50BFE5187E66\\DB4487CC-43CF-43C2-BEEF-E7C873A9888D.cap",
+            "image": "NetworkWatcherAgent.exe"
+          }
+        ],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1134_2174",
+    "technique_id": "T1134",
+    "technique_name": "Access Token Manipulation",
+    "anchor_eid": 4673,
+    "anchor_detail": {
+      "eid": 4673,
+      "time": "2020-09-22 06:17:50.565000+00:00",
+      "image": null,
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": "pgustavo",
+      "integrity": null
+    },
+    "confidence": 0.67,
+    "all_idxs": [
+      2041,
+      2042,
+      2043,
+      2044,
+      2045,
+      2046,
+      2073,
+      2074,
+      2075,
+      2076,
+      2093,
+      2094,
+      2095,
+      2097,
+      2099,
+      2100,
+      2119,
+      2122,
+      2164,
+      2167,
+      2169,
+      2174,
+      2190,
+      2446,
+      2448,
+      2455,
+      2456,
+      2457,
+      2582,
+      2584,
+      2585,
+      2587,
+      2623,
+      2624,
+      2641,
+      2642,
+      2643,
+      2654,
+      2656,
+      2670,
+      2688,
+      2771,
+      2772,
+      2777,
+      2778,
+      2779,
+      2780,
+      2781,
+      2782,
+      2783,
+      2784,
+      2785,
+      2786,
+      2908,
+      2911,
+      2912,
+      2913,
+      2914,
+      2915,
+      2916,
+      2917,
+      2920,
+      2921,
+      2922,
+      2923,
+      2925,
+      2926,
+      2927,
+      2928,
+      2929,
+      2930,
+      2931,
+      2932,
+      2933,
+      2935,
+      3005,
+      3006,
+      3029,
+      3030,
+      3036,
+      3037,
+      3038,
+      3039,
+      3040,
+      3041,
+      3049,
+      3066,
+      3067,
+      3072,
+      3075,
+      3077,
+      3082,
+      3084,
+      3087,
+      3090,
+      3095,
+      3097,
+      3099,
+      3101,
+      3104,
+      3126,
+      3127,
+      3128,
+      3129,
+      3132,
+      3134,
+      3136,
+      3152,
+      3153,
+      3154,
+      3157,
+      3268,
+      3274,
+      3276,
+      3277,
+      3279,
+      3280,
+      3288,
+      3289,
+      3291,
+      3292,
+      3294,
+      3295,
+      3296,
+      3305,
+      3307,
+      3308,
+      3309,
+      3311,
+      3331,
+      3499,
+      3513,
+      3515,
+      3538,
+      3539,
+      3540,
+      3541,
+      3542,
+      3543,
+      3544,
+      3545,
+      3555,
+      3556,
+      3557,
+      3558,
+      3559,
+      3560,
+      3561,
+      3562,
+      3563,
+      3564,
+      3565,
+      3566,
+      3567,
+      3603,
+      3606,
+      3607,
+      3608,
+      3619,
+      3620,
+      3621,
+      3622,
+      3645,
+      3646,
+      3647,
+      3648,
+      3701,
+      3702,
+      3703,
+      3704,
+      3705,
+      3706,
+      3708,
+      3709,
+      3710,
+      3711,
+      3712,
+      3713,
+      3714,
+      3715,
+      3716,
+      3717,
+      3719,
+      3720,
+      3721,
+      3722,
+      3726,
+      3728,
+      3743,
+      3744,
+      3745,
+      3746
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "spawn",
+            "parent_image": "svchost.exe",
+            "child_image": "backgroundTaskHost.exe",
+            "integrity_level": "AppContainer",
+            "parent_guid": "{b34bc01c-226b-5f69-1000-000000000900}",
+            "child_guid": "{b34bc01c-970d-5f69-4802-000000000900}",
+            "cmdline": "\"C:\\windows\\system32\\backgroundTaskHost.exe\" -ServerName:App.AppXmtcan0h2tfbfy7k9kn8hbxb6dmzz1zh0.mca",
+            "source_eid": 1
+          },
+          {
+            "relation": "spawn",
+            "parent_image": "svchost.exe",
+            "child_image": "RuntimeBroker.exe",
+            "integrity_level": "Medium",
+            "parent_guid": "{b34bc01c-226b-5f69-1000-000000000900}",
+            "child_guid": "{b34bc01c-970e-5f69-4a02-000000000900}",
+            "cmdline": "C:\\Windows\\System32\\RuntimeBroker.exe -Embedding",
+            "source_eid": 1
+          },
+          {
+            "relation": "access",
+            "parent_image": "svchost.exe",
+            "child_image": "backgroundTaskHost.exe",
+            "granted_access": "0x1fffff",
+            "source_guid": "{b34bc01c-226b-5f69-1000-000000000900}",
+            "target_guid": "{b34bc01c-970d-5f69-4802-000000000900}",
+            "source_eid": 10
+          },
+          {
+            "relation": "access",
+            "parent_image": "csrss.exe",
+            "child_image": "backgroundTaskHost.exe",
+            "granted_access": "0x1fffff",
+            "source_guid": "{b34bc01c-226a-5f69-0600-000000000900}",
+            "target_guid": "{b34bc01c-970d-5f69-4802-000000000900}",
+            "source_eid": 10
+          },
+          {
+            "relation": "access",
+            "parent_image": "sihost.exe",
+            "child_image": "backgroundTaskHost.exe",
+            "granted_access": "0x101000",
+            "source_guid": "{b34bc01c-22aa-5f69-a100-000000000900}",
+            "target_guid": "{b34bc01c-970d-5f69-4902-000000000900}",
+            "source_eid": 10
+          },
+          {
+            "relation": "access",
+            "parent_image": "lsass.exe",
+            "child_image": "backgroundTaskHost.exe",
+            "granted_access": "0x1478",
+            "source_guid": "{b34bc01c-226a-5f69-0c00-000000000900}",
+            "target_guid": "{b34bc01c-970d-5f69-4902-000000000900}",
+            "source_eid": 10
+          },
+          {
+            "relation": "access",
+            "parent_image": "RuntimeBroker.exe",
+            "child_image": "backgroundTaskHost.exe",
+            "granted_access": "0x1000",
+            "source_guid": "{b34bc01c-22b9-5f69-be00-000000000900}",
+            "target_guid": "{b34bc01c-970d-5f69-4902-000000000900}",
+            "source_eid": 10
+          },
+          {
+            "relation": "access",
+            "parent_image": "svchost.exe",
+            "child_image": "RuntimeBroker.exe",
+            "granted_access": "0x1fffff",
+            "source_guid": "{b34bc01c-226b-5f69-1000-000000000900}",
+            "target_guid": "{b34bc01c-970e-5f69-4a02-000000000900}",
+            "source_eid": 10
+          },
+          {
+            "relation": "access",
+            "parent_image": "csrss.exe",
+            "child_image": "RuntimeBroker.exe",
+            "granted_access": "0x1fffff",
+            "source_guid": "{b34bc01c-226a-5f69-0600-000000000900}",
+            "target_guid": "{b34bc01c-970e-5f69-4a02-000000000900}",
+            "source_eid": 10
+          },
+          {
+            "relation": "access",
+            "parent_image": "lsass.exe",
+            "child_image": "RuntimeBroker.exe",
+            "granted_access": "0x1000",
+            "source_guid": "{b34bc01c-226a-5f69-0c00-000000000900}",
+            "target_guid": "{b34bc01c-970e-5f69-4a02-000000000900}",
+            "source_eid": 10
+          },
+          {
+            "relation": "access",
+            "parent_image": "svchost.exe",
+            "child_image": "lsass.exe",
+            "granted_access": "0x3000",
+            "source_guid": "{b34bc01c-226f-5f69-2e00-000000000900}",
+            "target_guid": "{b34bc01c-226a-5f69-0c00-000000000900}",
+            "source_eid": 10
+          }
+        ],
+        "chain_depth": 11
+      },
+      "command_script": {
+        "entries": [
+          {
+            "source_eid": 1,
+            "image": "backgroundTaskHost.exe",
+            "cmdline": "\"C:\\windows\\system32\\backgroundTaskHost.exe\" -ServerName:App.AppXmtcan0h2tfbfy7k9kn8hbxb6dmzz1zh0.mca",
+            "cmdline_length": 101,
+            "has_obfuscation": false,
+            "special_chars": []
+          },
+          {
+            "source_eid": 1,
+            "image": "backgroundTaskHost.exe",
+            "cmdline": "\"C:\\windows\\system32\\backgroundTaskHost.exe\" -ServerName:CortanaUI.AppXy7vb4pc2dr3kc93kfc509b1d0arkfb2x.mca",
+            "cmdline_length": 107,
+            "has_obfuscation": false,
+            "special_chars": []
+          },
+          {
+            "source_eid": 1,
+            "image": "RuntimeBroker.exe",
+            "cmdline": "C:\\Windows\\System32\\RuntimeBroker.exe -Embedding",
+            "cmdline_length": 48,
+            "has_obfuscation": false,
+            "special_chars": []
+          }
+        ],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 1,
+        "user": "THESHIRE\\pgustavo",
+        "domain": "NT AUTHORITY",
+        "logon_id": "0x10ac67",
+        "integrity_level": "AppContainer",
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-09-22T06:17:50.565000+00:00",
+        "window_start_delta_sec": -9.12,
+        "window_end_delta_sec": 26.83,
+        "span_sec": 35.95,
+        "total_events": 192,
+        "event_density_per_10sec": 53.4,
+        "eid_counts": {
+          "10": 186,
+          "1": 3,
+          "4673": 3
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 6.04,
+          "mean_sec": 0.188
+        },
+        "burst_detected": [
+          {
+            "eid": 10,
+            "count": 186,
+            "window_sec": 0.0
+          },
+          {
+            "eid": 1,
+            "count": 3,
+            "window_sec": 3.49
+          },
+          {
+            "eid": 4673,
+            "count": 3,
+            "window_sec": 1.26
+          }
+        ]
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1134_4132",
+    "technique_id": "T1134",
+    "technique_name": "Access Token Manipulation",
+    "anchor_eid": 4673,
+    "anchor_detail": {
+      "eid": 4673,
+      "time": "2020-09-22 06:18:24.621000+00:00",
+      "image": null,
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": "pgustavo",
+      "integrity": null
+    },
+    "confidence": 0.67,
+    "all_idxs": [
+      3726,
+      3728,
+      3743,
+      3744,
+      3745,
+      3746,
+      3774,
+      3776,
+      3782,
+      3784,
+      3785,
+      3790,
+      3808,
+      3809,
+      3810,
+      3923,
+      3925,
+      3926,
+      3927,
+      3928,
+      3931,
+      3932,
+      3941,
+      4001,
+      4002,
+      4004,
+      4005,
+      4006,
+      4007,
+      4051,
+      4052,
+      4053,
+      4054,
+      4059,
+      4060,
+      4062,
+      4063,
+      4068,
+      4069,
+      4076,
+      4077,
+      4079,
+      4080,
+      4091,
+      4092,
+      4094,
+      4096,
+      4132,
+      4144,
+      4178,
+      4196,
+      4204,
+      4217,
+      4225,
+      4233,
+      4241,
+      4249,
+      4257,
+      4265,
+      4273,
+      4279,
+      4289,
+      4299,
+      4312,
+      4313,
+      4314,
+      4315,
+      4316,
+      4317,
+      4318,
+      4319,
+      4320,
+      4321,
+      4322,
+      4323,
+      4324,
+      4325,
+      4326,
+      4327,
+      4363,
+      4365,
+      4366,
+      4367,
+      4496
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "spawn",
+            "parent_image": "svchost.exe",
+            "child_image": "backgroundTaskHost.exe",
+            "integrity_level": "AppContainer",
+            "parent_guid": "{b34bc01c-226b-5f69-1000-000000000900}",
+            "child_guid": "{b34bc01c-972f-5f69-4b02-000000000900}",
+            "cmdline": "\"C:\\windows\\system32\\backgroundTaskHost.exe\" -ServerName:App.AppXmtcan0h2tfbfy7k9kn8hbxb6dmzz1zh0.mca",
+            "source_eid": 1
+          },
+          {
+            "relation": "access",
+            "parent_image": "svchost.exe",
+            "child_image": "backgroundTaskHost.exe",
+            "granted_access": "0x1fffff",
+            "source_guid": "{b34bc01c-226b-5f69-1000-000000000900}",
+            "target_guid": "{b34bc01c-972f-5f69-4b02-000000000900}",
+            "source_eid": 10
+          },
+          {
+            "relation": "access",
+            "parent_image": "csrss.exe",
+            "child_image": "backgroundTaskHost.exe",
+            "granted_access": "0x1fffff",
+            "source_guid": "{b34bc01c-226a-5f69-0600-000000000900}",
+            "target_guid": "{b34bc01c-972f-5f69-4b02-000000000900}",
+            "source_eid": 10
+          },
+          {
+            "relation": "access",
+            "parent_image": "sihost.exe",
+            "child_image": "backgroundTaskHost.exe",
+            "granted_access": "0x101000",
+            "source_guid": "{b34bc01c-22aa-5f69-a100-000000000900}",
+            "target_guid": "{b34bc01c-972f-5f69-4b02-000000000900}",
+            "source_eid": 10
+          },
+          {
+            "relation": "access",
+            "parent_image": "lsass.exe",
+            "child_image": "backgroundTaskHost.exe",
+            "granted_access": "0x1000",
+            "source_guid": "{b34bc01c-226a-5f69-0c00-000000000900}",
+            "target_guid": "{b34bc01c-972f-5f69-4b02-000000000900}",
+            "source_eid": 10
+          },
+          {
+            "relation": "access",
+            "parent_image": "RuntimeBroker.exe",
+            "child_image": "backgroundTaskHost.exe",
+            "granted_access": "0x1000",
+            "source_guid": "{b34bc01c-970e-5f69-4a02-000000000900}",
+            "target_guid": "{b34bc01c-972f-5f69-4b02-000000000900}",
+            "source_eid": 10
+          }
+        ],
+        "chain_depth": 6
+      },
+      "command_script": {
+        "entries": [
+          {
+            "source_eid": 1,
+            "image": "backgroundTaskHost.exe",
+            "cmdline": "\"C:\\windows\\system32\\backgroundTaskHost.exe\" -ServerName:App.AppXmtcan0h2tfbfy7k9kn8hbxb6dmzz1zh0.mca",
+            "cmdline_length": 101,
+            "has_obfuscation": false,
+            "special_chars": []
+          }
+        ],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 1,
+        "user": "THESHIRE\\pgustavo",
+        "domain": "NT AUTHORITY",
+        "logon_id": "0x10ac67",
+        "integrity_level": "AppContainer",
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-09-22T06:18:24.621000+00:00",
+        "window_start_delta_sec": -8.24,
+        "window_end_delta_sec": 11.2,
+        "span_sec": 19.45,
+        "total_events": 84,
+        "event_density_per_10sec": 43.2,
+        "eid_counts": {
+          "10": 82,
+          "1": 1,
+          "4673": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 7.043,
+          "mean_sec": 0.234
+        },
+        "burst_detected": [
+          {
+            "eid": 10,
+            "count": 82,
+            "window_sec": 1.01
+          }
+        ]
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  }
+]

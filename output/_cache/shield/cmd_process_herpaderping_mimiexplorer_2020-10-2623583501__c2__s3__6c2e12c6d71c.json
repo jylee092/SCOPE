@@ -1,0 +1,1 @@
+{"text": "{\n  \"confidence_score\": 0.95,\n  \"attack_summary\": \"An attacker initiated a multi-stage attack using cmd.exe to launch a masqueraded process, 'ProcessHerpaderping.exe'. This process, designed to evade detection, explicitly referenced 'mimikatz.exe' for credential dumping. It then dropped and executed a malicious payload, 'wardog.exe', to the user'"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The process MsMpEng.exe is the legitimate Microsoft Antimalware Service Executable, and its observed write operations to standard Windows Defender history and local copy directories are consistent with normal antivirus operations, showing no signs of malicious activity.\"\n}"}

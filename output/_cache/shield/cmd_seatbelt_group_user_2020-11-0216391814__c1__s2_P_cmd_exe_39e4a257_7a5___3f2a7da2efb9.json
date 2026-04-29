@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"cmd.exe spawned Seatbelt.exe, a known offensive security enumeration tool.\",\n  \"indicators\": [\n    \"Seatbelt.exe\",\n    \"offensive security tool\",\n    \"enumeration tool\"\n  ]\n}"}

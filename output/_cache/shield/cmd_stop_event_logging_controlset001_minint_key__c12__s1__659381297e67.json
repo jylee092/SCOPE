@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is performing registry operations on audio-related keys, which is a normal system activity and does not match any known attack patterns without additional suspicious indicators like unusual command-line arguments or persistence attempts.\"\n}"}

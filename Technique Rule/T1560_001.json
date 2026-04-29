@@ -1,0 +1,59 @@
+{
+  "technique": { "id": "T1560.001", "name": "Archive via Utility" },
+  "detection": { "id": "DET-T1560001" },
+  "analysis": { "id": "AN-T1560001" },
+  "log_sources": {
+    "Anchor Event": {
+      "data_component": { "id": "DC0032", "name": "Process Creation" },
+      "description": "압축/아카이빙 유틸리티 실행 — exfiltration 전 collection 단계.",
+      "conditions": [
+        {
+          "type": "archive_binary",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [1] },
+          "filters": {
+            "Image": {
+              "contains_any": [
+                "7z.exe", "7za.exe", "WinRAR.exe", "rar.exe", "makecab.exe",
+                "tar.exe", "zip.exe", "pkzip.exe"
+              ]
+            }
+          },
+          "description": "압축 도구 프로세스 실행."
+        },
+        {
+          "type": "archive_cli",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [1] },
+          "filters": {
+            "CommandLine": {
+              "contains_any": [
+                "Compress-Archive", "New-Item -Type File.*\\.zip",
+                "7z a", "rar a", "makecab /f"
+              ]
+            }
+          },
+          "description": "PowerShell Compress-Archive 또는 CLI 압축 명령."
+        }
+      ]
+    },
+    "Supporting Events": [
+      { "data_component": { "id": "DC0039", "name": "File Creation" }, "source": "WinEventLog:Sysmon", "channel": { "event_codes": [11] }, "filters": { "TargetFilename": { "endswith": [".zip", ".rar", ".7z", ".cab", ".tar", ".gz"] } }, "description": "아카이브 파일 생성" }
+    ]
+  },
+  "mutable_elements": {
+    "grouping_logic": {
+      "primary_anchor_eids": [1],
+      "correlation_key": { "primary": ["Hostname", "ProcessGuid"], "fallback": ["Hostname"] },
+      "time_window": { "before_seconds": 30, "after_seconds": 120 }
+    },
+    "feature_extraction_filters": {
+      "archive_utilities": ["7z.exe", "WinRAR.exe", "rar.exe", "makecab.exe", "Compress-Archive"],
+      "suspicious_archive_paths": ["\\Temp\\", "\\AppData\\", "\\Public\\"],
+      "description": "Collection 단계 탐지 — 아카이브 경로 + 소스 파일 동시 관측 시 exfil 임박 신호."
+    },
+    "semantic_templates": {
+      "archive_collect": "프로세스({Image})가 {Archiver}로 {SourceDir}의 파일을 {ArchivePath}에 압축함 — 유출 준비."
+    }
+  }
+}

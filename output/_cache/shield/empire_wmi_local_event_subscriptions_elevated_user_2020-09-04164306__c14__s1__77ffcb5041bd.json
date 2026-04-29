@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is interacting with legitimate Windows AppModel State Repository files and registry keys, and no suspicious command-line arguments, child processes, or other malicious indicators were observed in this community.\"\n}"}

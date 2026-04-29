@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed file writes, registry modifications, and network connections to port 135 are consistent with the normal operation of the Distributed File System Replication (DFSR) service and related system processes, communicating with an internal domain controller or server.\"\n}"}

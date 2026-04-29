@@ -1,0 +1,230 @@
+{
+  "scenario": "psh_lsass_memory_dump_comsvcs_2020-10-18T19500924",
+  "tactic_sequence": [
+    "Defense Evasion",
+    "Credential Access"
+  ],
+  "technique_sequence": [
+    "T1036",
+    "T1003.001"
+  ],
+  "per_group_topk": [
+    [
+      "T1036",
+      "T1003.001",
+      "T1218.011",
+      "T1074.001",
+      "T1588.003"
+    ],
+    [
+      "T1036",
+      "T1003.001",
+      "T1218.011",
+      "T1583.006",
+      "T1583.003"
+    ],
+    [
+      "T1003.001",
+      "T1587",
+      "T1583.003",
+      "T1485",
+      "T1583.006"
+    ],
+    [
+      "T1003.001",
+      "T1587",
+      "T1583.006",
+      "T1608.001",
+      "T1074.001"
+    ],
+    [
+      "T1003.001",
+      "T1587",
+      "T1003",
+      "T1583.006",
+      "T1087"
+    ],
+    [
+      "T1003.001",
+      "T1003",
+      "T1087",
+      "T1021.001",
+      "T1046"
+    ],
+    [
+      "T1003.001",
+      "T1003",
+      "T1021.001",
+      "T1046",
+      "T1087"
+    ]
+  ],
+  "notes": {
+    "n_alerts": 7,
+    "n_sigma_alerts": 7,
+    "n_deepag_top1_used": 0,
+    "alerts": [
+      {
+        "ts": "2020-10-18 07:50:05.910000+00:00",
+        "event_index": 96,
+        "event_id": 4688,
+        "topk_tids": [
+          "T1036",
+          "T1003.001",
+          "T1218.011",
+          "T1074.001",
+          "T1588.003"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Credential Access",
+          "Defense Evasion",
+          "Collection",
+          ""
+        ],
+        "deepag_top1": "T1074.001",
+        "deepag_prob": 8.479971438646317e-05,
+        "chosen_top1": "T1036",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-10-18 07:50:05.917000+00:00",
+        "event_index": 97,
+        "event_id": 1,
+        "topk_tids": [
+          "T1036",
+          "T1003.001",
+          "T1218.011",
+          "T1583.006",
+          "T1583.003"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Credential Access",
+          "Defense Evasion",
+          "",
+          ""
+        ],
+        "deepag_top1": "T1583.006",
+        "deepag_prob": 0.0002327337715541944,
+        "chosen_top1": "T1036",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-10-18 07:50:06.001000+00:00",
+        "event_index": 134,
+        "event_id": 11,
+        "topk_tids": [
+          "T1003.001",
+          "T1587",
+          "T1583.003",
+          "T1485",
+          "T1583.006"
+        ],
+        "topk_tactics": [
+          "Credential Access",
+          "",
+          "",
+          "Impact",
+          ""
+        ],
+        "deepag_top1": "T1587",
+        "deepag_prob": 0.011486249975860119,
+        "chosen_top1": "T1003.001",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-10-18 07:50:06.001000+00:00",
+        "event_index": 136,
+        "event_id": 10,
+        "topk_tids": [
+          "T1003.001",
+          "T1587",
+          "T1583.006",
+          "T1608.001",
+          "T1074.001"
+        ],
+        "topk_tactics": [
+          "Credential Access",
+          "",
+          "",
+          "",
+          "Collection"
+        ],
+        "deepag_top1": "T1587",
+        "deepag_prob": 0.024634310975670815,
+        "chosen_top1": "T1003.001",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-10-18 07:50:06.009000+00:00",
+        "event_index": 141,
+        "event_id": 4663,
+        "topk_tids": [
+          "T1003.001",
+          "T1587",
+          "T1003",
+          "T1583.006",
+          "T1087"
+        ],
+        "topk_tactics": [
+          "Credential Access",
+          "",
+          "Credential Access",
+          "",
+          "Discovery"
+        ],
+        "deepag_top1": "T1003.001",
+        "deepag_prob": 0.13430242240428925,
+        "chosen_top1": "T1003.001",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-10-18 07:50:06.010000+00:00",
+        "event_index": 143,
+        "event_id": 4663,
+        "topk_tids": [
+          "T1003.001",
+          "T1003",
+          "T1087",
+          "T1021.001",
+          "T1046"
+        ],
+        "topk_tactics": [
+          "Credential Access",
+          "Credential Access",
+          "Discovery",
+          "Lateral Movement",
+          "Discovery"
+        ],
+        "deepag_top1": "T1003",
+        "deepag_prob": 0.2779940366744995,
+        "chosen_top1": "T1003.001",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-10-18 07:50:06.025000+00:00",
+        "event_index": 144,
+        "event_id": 10,
+        "topk_tids": [
+          "T1003.001",
+          "T1003",
+          "T1021.001",
+          "T1046",
+          "T1087"
+        ],
+        "topk_tactics": [
+          "Credential Access",
+          "Credential Access",
+          "Lateral Movement",
+          "Discovery",
+          "Discovery"
+        ],
+        "deepag_top1": "T1003",
+        "deepag_prob": 0.27832430601119995,
+        "chosen_top1": "T1003.001",
+        "chosen_src": "sigma"
+      }
+    ]
+  }
+}

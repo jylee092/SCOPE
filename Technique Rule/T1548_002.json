@@ -1,0 +1,39 @@
+{
+  "technique": { "id": "T1548.002", "name": "Bypass User Account Control (UAC)" },
+  "detection": { "id": "DET0388" },
+  "analysis": { "id": "AN1094" },
+  "log_sources": {
+    "Anchor Event": {
+      "data_component": { "id": "DC0063", "name": "Windows Registry Key Modification" },
+      "description": "UAC 우회를 위한 레지스트리 조작 (가장 직접적인 앵커)",
+      "conditions": [
+        {
+          "type": "registry_uac_tamper",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [13, 14] },
+          "filters": { "TargetObject": { "contains": ["ms-settings\\Shell\\Open\\command", "DelegateExecute"] } },
+          "description": "fodhelper 등을 이용한 UAC 우회 레지스트리 조작 (데이터셋 확인)"
+        }
+      ]
+    },
+    "Supporting Events": [
+      { "data_component": { "id": "DC0032", "name": "Process Creation" }, "source": "WinEventLog:Security", "channel": { "event_codes": [4688] }, "description": "권한이 상승된 프로세스 생성" },
+      { "data_component": { "id": "DC0088", "name": "Logon Session Metadata" }, "source": "WinEventLog:Security", "channel": { "event_codes": [4672] }, "description": "상승된 특권 로그온 확인" },
+      { "data_component": { "id": "DC0035", "name": "Process Access" }, "source": "WinEventLog:Sysmon", "channel": { "event_codes": [10] } }
+    ]
+  },
+  "mutable_elements": {
+    "grouping_logic": {
+      "primary_anchor_eids": [13, 14],
+      "correlation_key": { "primary": ["Hostname", "ProcessGuid"], "secondary": ["SubjectLogonId"], "fallback": ["Hostname"] },
+      "time_window": { "window_seconds": 30, "note": "레지스트리 조작과 프로세스 실행 간 상관관계" }
+    },
+    "feature_extraction_filters": {
+      "elevated_process_name_list": ["sdclt.exe", "eventvwr.exe", "computerdefaults.exe", "fodhelper.exe", "slui.exe"],
+      "parent_process_anomaly_threshold": { "anomaly_score_threshold": 0.7 }
+    },
+    "semantic_templates": {
+      "uac_bypass": "프로세스({Image})가 레지스트리({TargetObject})를 수정하여 UAC 우회를 시도하고 {elevated_process_name_list}를 실행함"
+    }
+  }
+}

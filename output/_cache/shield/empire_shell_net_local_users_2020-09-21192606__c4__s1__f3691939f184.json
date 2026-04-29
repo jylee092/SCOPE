@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[lsass.exe|{d273d0f0-e86]\"\n  ],\n  \"rationale\": \"The lsass.exe process making outbound network connections to Kerberos (port 88) and MSRPC (port 135) is highly suspicious, as lsass.exe typically handles inbound authentication requests and such outbound connections can indicate credential theft or lateral movement.\"\n}"}

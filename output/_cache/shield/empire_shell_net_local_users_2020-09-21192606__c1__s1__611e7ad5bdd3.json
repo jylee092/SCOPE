@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The 'net.exe' process is a legitimate Windows utility, and without any notable command-line arguments, child processes, file/registry writes, or network connections, and with only standard system DLLs loaded, there are no indicators to deem it suspicious in this community.\"\n}"}

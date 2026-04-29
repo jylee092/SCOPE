@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"Both HxTsr.exe and svchost.exe exhibit normal behavior for legitimate Windows processes, performing expected file and registry operations within their respective application and service contexts, with no suspicious command lines, unusual DLL loads, or other indicators of compromise observed.\"\n}"}

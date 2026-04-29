@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed registry modification to NdisCap parameters and the deletion of a .cap file from a temporary Azure Network Watcher cache directory are consistent with the legitimate functions of the NetworkWatcherAgent.exe for network monitoring and cleanup.\"\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed processes are legitimate Windows utilities, and their command lines, DLL loads, registry operations, and named pipe connections are consistent with normal system behavior for WMI and console hosting, with no indicators of malicious activity or common attack patterns.\"\n}"}

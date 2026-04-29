@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[reg.exe|{625b42a0-2f7]\"\n  ],\n  \"rationale\": \"The process P[reg.exe|{625b42a0-2f7] executed the command 'REG ADD HKEY_LOCAL_MACHINE\\\\SYSTEM\\\\ControlSet001\\\\Control\\\\MiniNt', which is a known technique used by attackers to disable event logging and tamper with system forensics.\"\n}"}

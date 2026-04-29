@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"Modifying internet connection settings followed by repeated connection attempts to the WinRM port (5985), a pattern consistent with remote access or lateral movement.\",\n  \"indicators\": [\n    \"svchost.exe\",\n    \"reg_create\",\n    \"Internet Settings\",\n    \"connect\",\n    \"5985\",\n    \"WinRM\"\n  ]\n}"}

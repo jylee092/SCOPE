@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[svchost.exe|{49a15388-5c3]\"\n  ],\n  \"rationale\": \"The process svchost.exe is creating new scheduled tasks in the registry, which is a common technique for establishing persistence (MITRE ATT&CK T1053.005).\"\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The process sppsvc.exe is a legitimate Windows service, and its observed DLL loads and registry write to its own ServiceSessionId key are all consistent with normal, expected behavior for the Software Protection Platform service.\"\n}"}

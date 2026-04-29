@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[ntdsutil.exe|{fe86be69-095]\"\n  ],\n  \"rationale\": \"The process ntdsutil.exe was observed creating a Volume Shadow Copy and then writing the ntds.dit file, SYSTEM hive, and SECURITY hive to the C:\\\\Windows\\\\Temp directory, which is a common technique for Active Directory credential dumping (T1003.003).\"\n}"}

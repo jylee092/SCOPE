@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is performing routine registry operations related to user profiles, cloud settings, and identity caching, which is normal system behavior and does not exhibit any known attack patterns or suspicious command-line arguments.\"\n}"}

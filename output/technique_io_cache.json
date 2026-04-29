@@ -1,0 +1,4024 @@
+{
+  "T1548": {
+    "in": [
+      "user"
+    ],
+    "out": [
+      "process",
+      "registry"
+    ]
+  },
+  "T1548.002": {
+    "in": [
+      "process",
+      "user"
+    ],
+    "out": [
+      "process",
+      "registry"
+    ]
+  },
+  "T1134": {
+    "in": [
+      "process",
+      "user"
+    ],
+    "out": [
+      "process",
+      "user"
+    ]
+  },
+  "T1134.002": {
+    "in": [
+      "process",
+      "user"
+    ],
+    "out": [
+      "process",
+      "user"
+    ]
+  },
+  "T1134.003": {
+    "in": [
+      "process",
+      "user"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1134.004": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1134.005": {
+    "in": [
+      "process",
+      "user"
+    ],
+    "out": [
+      "user"
+    ]
+  },
+  "T1134.001": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1531": {
+    "in": [],
+    "out": [
+      "process",
+      "user"
+    ]
+  },
+  "T1087": {
+    "in": [],
+    "out": [
+      "process"
+    ]
+  },
+  "T1087.002": {
+    "in": [
+      "network",
+      "process"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1087.003": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1087.001": {
+    "in": [],
+    "out": [
+      "process"
+    ]
+  },
+  "T1098": {
+    "in": [],
+    "out": [
+      "process",
+      "user"
+    ]
+  },
+  "T1098.002": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1098.007": {
+    "in": [],
+    "out": [
+      "user"
+    ]
+  },
+  "T1098.005": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "user"
+    ]
+  },
+  "T1557": {
+    "in": [],
+    "out": [
+      "network",
+      "registry"
+    ]
+  },
+  "T1557.002": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "network"
+    ]
+  },
+  "T1557.003": {
+    "in": [
+      "file",
+      "network"
+    ],
+    "out": [
+      "network"
+    ]
+  },
+  "T1557.001": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "network",
+      "registry",
+      "service"
+    ]
+  },
+  "T1071": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "network"
+    ]
+  },
+  "T1071.004": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "network"
+    ]
+  },
+  "T1071.002": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1071.003": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1071.005": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "network"
+    ]
+  },
+  "T1071.001": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "network"
+    ]
+  },
+  "T1010": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1560": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1560.003": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1560.002": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1560.001": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1123": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1119": {
+    "in": [],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1020": {
+    "in": [],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1197": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "network",
+      "process",
+      "service"
+    ]
+  },
+  "T1547": {
+    "in": [],
+    "out": [
+      "process",
+      "registry"
+    ]
+  },
+  "T1547.014": {
+    "in": [
+      "user"
+    ],
+    "out": [
+      "process",
+      "registry"
+    ]
+  },
+  "T1547.002": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "registry"
+    ]
+  },
+  "T1547.008": {
+    "in": [
+      "process",
+      "service"
+    ],
+    "out": [
+      "file",
+      "registry"
+    ]
+  },
+  "T1547.010": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "process",
+      "registry"
+    ]
+  },
+  "T1547.012": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "registry"
+    ]
+  },
+  "T1547.001": {
+    "in": [],
+    "out": [
+      "file",
+      "process",
+      "registry"
+    ]
+  },
+  "T1547.005": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process",
+      "registry"
+    ]
+  },
+  "T1547.009": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1547.003": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "process",
+      "registry"
+    ]
+  },
+  "T1547.004": {
+    "in": [
+      "process",
+      "registry"
+    ],
+    "out": [
+      "process",
+      "registry"
+    ]
+  },
+  "T1037": {
+    "in": [],
+    "out": [
+      "process",
+      "registry",
+      "service"
+    ]
+  },
+  "T1037.001": {
+    "in": [
+      "file",
+      "process"
+    ],
+    "out": [
+      "process",
+      "user"
+    ]
+  },
+  "T1037.003": {
+    "in": [
+      "network",
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1217": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1185": {
+    "in": [
+      "process",
+      "user"
+    ],
+    "out": [
+      "network",
+      "process",
+      "user"
+    ]
+  },
+  "T1110": {
+    "in": [
+      "user"
+    ],
+    "out": []
+  },
+  "T1110.004": {
+    "in": [
+      "user"
+    ],
+    "out": []
+  },
+  "T1110.002": {
+    "in": [
+      "file",
+      "process"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1110.001": {
+    "in": [
+      "user"
+    ],
+    "out": []
+  },
+  "T1110.003": {
+    "in": [
+      "user"
+    ],
+    "out": []
+  },
+  "T1115": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1059": {
+    "in": [],
+    "out": [
+      "process"
+    ]
+  },
+  "T1059.010": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1059.007": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1059.011": {
+    "in": [],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1059.001": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1059.006": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1059.005": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1059.003": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1092": {
+    "in": [],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1554": {
+    "in": [],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1659": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "file",
+      "network",
+      "process"
+    ]
+  },
+  "T1136": {
+    "in": [],
+    "out": [
+      "process",
+      "user"
+    ]
+  },
+  "T1136.002": {
+    "in": [],
+    "out": [
+      "process",
+      "user"
+    ]
+  },
+  "T1136.001": {
+    "in": [],
+    "out": [
+      "process",
+      "user"
+    ]
+  },
+  "T1543": {
+    "in": [],
+    "out": [
+      "process",
+      "registry",
+      "service"
+    ]
+  },
+  "T1543.003": {
+    "in": [
+      "service"
+    ],
+    "out": [
+      "process",
+      "registry",
+      "service"
+    ]
+  },
+  "T1555": {
+    "in": [
+      "file",
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1555.003": {
+    "in": [
+      "file",
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1555.005": {
+    "in": [
+      "file",
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1555.004": {
+    "in": [
+      "file",
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1485": {
+    "in": [],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1132": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1132.002": {
+    "in": [
+      "network",
+      "process"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1132.001": {
+    "in": [
+      "network",
+      "process"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1486": {
+    "in": [],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1565": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "file"
+    ]
+  },
+  "T1565.003": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "file",
+      "registry"
+    ]
+  },
+  "T1565.001": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "file"
+    ]
+  },
+  "T1565.002": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "network"
+    ]
+  },
+  "T1001": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "network"
+    ]
+  },
+  "T1001.001": {
+    "in": [
+      "network",
+      "process"
+    ],
+    "out": [
+      "network"
+    ]
+  },
+  "T1001.003": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "network"
+    ]
+  },
+  "T1001.002": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "file",
+      "network",
+      "process"
+    ]
+  },
+  "T1074": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1074.001": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1074.002": {
+    "in": [
+      "network",
+      "process"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1030": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "network"
+    ]
+  },
+  "T1213": {
+    "in": [
+      "network"
+    ],
+    "out": []
+  },
+  "T1213.006": {
+    "in": [],
+    "out": [
+      "file",
+      "network",
+      "process"
+    ]
+  },
+  "T1213.002": {
+    "in": [
+      "file",
+      "network"
+    ],
+    "out": [
+      "user"
+    ]
+  },
+  "T1005": {
+    "in": [],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1039": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "file"
+    ]
+  },
+  "T1025": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1622": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1491": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1491.002": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "file",
+      "network",
+      "process"
+    ]
+  },
+  "T1491.001": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1678": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1140": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1652": {
+    "in": [],
+    "out": [
+      "process",
+      "registry"
+    ]
+  },
+  "T1006": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1561": {
+    "in": [
+      "service",
+      "user"
+    ],
+    "out": [
+      "file"
+    ]
+  },
+  "T1561.001": {
+    "in": [
+      "service",
+      "user"
+    ],
+    "out": [
+      "file"
+    ]
+  },
+  "T1561.002": {
+    "in": [
+      "service",
+      "user"
+    ],
+    "out": [
+      "file"
+    ]
+  },
+  "T1482": {
+    "in": [
+      "process",
+      "user"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1484": {
+    "in": [],
+    "out": [
+      "file",
+      "process",
+      "user"
+    ]
+  },
+  "T1484.001": {
+    "in": [],
+    "out": [
+      "file",
+      "process",
+      "user"
+    ]
+  },
+  "T1484.002": {
+    "in": [],
+    "out": [
+      "process",
+      "user"
+    ]
+  },
+  "T1189": {
+    "in": [
+      "file",
+      "network"
+    ],
+    "out": [
+      "file",
+      "network",
+      "process",
+      "user"
+    ]
+  },
+  "T1568": {
+    "in": [],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1568.003": {
+    "in": [],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1568.002": {
+    "in": [],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1568.001": {
+    "in": [],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1667": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "file"
+    ]
+  },
+  "T1114": {
+    "in": [
+      "file",
+      "network",
+      "process"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1114.003": {
+    "in": [
+      "network",
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1114.001": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "file",
+      "network",
+      "process"
+    ]
+  },
+  "T1114.002": {
+    "in": [
+      "file",
+      "process"
+    ],
+    "out": [
+      "network",
+      "process",
+      "user"
+    ]
+  },
+  "T1672": {
+    "in": [
+      "file"
+    ],
+    "out": []
+  },
+  "T1573": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "network"
+    ]
+  },
+  "T1573.002": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "network"
+    ]
+  },
+  "T1573.001": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "network"
+    ]
+  },
+  "T1499": {
+    "in": [
+      "file",
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1499.003": {
+    "in": [
+      "file",
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1499.004": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "process",
+      "service"
+    ]
+  },
+  "T1499.001": {
+    "in": [
+      "network",
+      "process"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1499.002": {
+    "in": [
+      "file",
+      "process"
+    ],
+    "out": [
+      "network"
+    ]
+  },
+  "T1611": {
+    "in": [],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1546": {
+    "in": [],
+    "out": [
+      "process",
+      "registry",
+      "service"
+    ]
+  },
+  "T1546.008": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "file",
+      "process",
+      "registry"
+    ]
+  },
+  "T1546.009": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process",
+      "registry"
+    ]
+  },
+  "T1546.010": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process",
+      "registry"
+    ]
+  },
+  "T1546.011": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "process",
+      "registry"
+    ]
+  },
+  "T1546.001": {
+    "in": [
+      "user"
+    ],
+    "out": [
+      "process",
+      "registry"
+    ]
+  },
+  "T1546.015": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process",
+      "registry"
+    ]
+  },
+  "T1546.012": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process",
+      "registry"
+    ]
+  },
+  "T1546.016": {
+    "in": [],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1546.007": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process",
+      "registry"
+    ]
+  },
+  "T1546.013": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1546.002": {
+    "in": [],
+    "out": [
+      "process",
+      "registry"
+    ]
+  },
+  "T1546.003": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process",
+      "service"
+    ]
+  },
+  "T1668": {
+    "in": [],
+    "out": [
+      "process"
+    ]
+  },
+  "T1480": {
+    "in": [
+      "process",
+      "user"
+    ],
+    "out": [
+      "file",
+      "network",
+      "process",
+      "registry",
+      "service",
+      "user"
+    ]
+  },
+  "T1480.001": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "network",
+      "process",
+      "service",
+      "user"
+    ]
+  },
+  "T1480.002": {
+    "in": [],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1048": {
+    "in": [],
+    "out": [
+      "file",
+      "network",
+      "process"
+    ]
+  },
+  "T1048.002": {
+    "in": [
+      "file",
+      "network"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1048.001": {
+    "in": [],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1048.003": {
+    "in": [
+      "file",
+      "network"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1041": {
+    "in": [
+      "file",
+      "network"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1011": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "file",
+      "network"
+    ]
+  },
+  "T1011.001": {
+    "in": [],
+    "out": [
+      "file",
+      "network",
+      "process"
+    ]
+  },
+  "T1052": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1052.001": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1567": {
+    "in": [],
+    "out": [
+      "file",
+      "network",
+      "process"
+    ]
+  },
+  "T1567.004": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1567.002": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1567.001": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1567.003": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1190": {
+    "in": [
+      "file",
+      "process"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1203": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "file",
+      "network",
+      "process"
+    ]
+  },
+  "T1212": {
+    "in": [
+      "process",
+      "user"
+    ],
+    "out": []
+  },
+  "T1211": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1068": {
+    "in": [
+      "service",
+      "user"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1210": {
+    "in": [
+      "file",
+      "network",
+      "process"
+    ],
+    "out": [
+      "file",
+      "network",
+      "process"
+    ]
+  },
+  "T1133": {
+    "in": [
+      "file",
+      "user"
+    ],
+    "out": [
+      "network"
+    ]
+  },
+  "T1008": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "network"
+    ]
+  },
+  "T1083": {
+    "in": [],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1222": {
+    "in": [
+      "file",
+      "process"
+    ],
+    "out": [
+      "file",
+      "process",
+      "user"
+    ]
+  },
+  "T1222.001": {
+    "in": [
+      "file",
+      "process"
+    ],
+    "out": [
+      "file",
+      "process",
+      "service",
+      "user"
+    ]
+  },
+  "T1657": {
+    "in": [],
+    "out": [
+      "process",
+      "user"
+    ]
+  },
+  "T1495": {
+    "in": [
+      "service"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1187": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "file",
+      "network"
+    ]
+  },
+  "T1606": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "user"
+    ]
+  },
+  "T1606.002": {
+    "in": [],
+    "out": [
+      "user"
+    ]
+  },
+  "T1606.001": {
+    "in": [],
+    "out": [
+      "file",
+      "user"
+    ]
+  },
+  "T1615": {
+    "in": [
+      "network",
+      "process",
+      "user"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1200": {
+    "in": [
+      "file",
+      "network",
+      "process",
+      "service"
+    ],
+    "out": [
+      "file",
+      "network",
+      "process"
+    ]
+  },
+  "T1564": {
+    "in": [],
+    "out": [
+      "file",
+      "process",
+      "registry"
+    ]
+  },
+  "T1564.008": {
+    "in": [
+      "file",
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1564.012": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "file"
+    ]
+  },
+  "T1564.005": {
+    "in": [],
+    "out": [
+      "file",
+      "registry"
+    ]
+  },
+  "T1564.001": {
+    "in": [],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1564.002": {
+    "in": [],
+    "out": [
+      "registry",
+      "user"
+    ]
+  },
+  "T1564.003": {
+    "in": [],
+    "out": [
+      "process",
+      "registry"
+    ]
+  },
+  "T1564.011": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1564.004": {
+    "in": [
+      "file",
+      "process"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1564.010": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1564.006": {
+    "in": [],
+    "out": [
+      "process",
+      "registry",
+      "service"
+    ]
+  },
+  "T1564.007": {
+    "in": [],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1665": {
+    "in": [],
+    "out": [
+      "network"
+    ]
+  },
+  "T1574": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "process",
+      "registry"
+    ]
+  },
+  "T1574.014": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1574.012": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "process",
+      "registry"
+    ]
+  },
+  "T1574.001": {
+    "in": [
+      "file",
+      "process"
+    ],
+    "out": [
+      "file",
+      "process",
+      "registry"
+    ]
+  },
+  "T1574.005": {
+    "in": [
+      "file",
+      "process"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1574.013": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1574.007": {
+    "in": [],
+    "out": [
+      "file",
+      "process",
+      "registry"
+    ]
+  },
+  "T1574.008": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1574.009": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "file",
+      "process",
+      "registry"
+    ]
+  },
+  "T1574.010": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "file",
+      "process",
+      "service"
+    ]
+  },
+  "T1574.011": {
+    "in": [],
+    "out": [
+      "process",
+      "registry",
+      "service"
+    ]
+  },
+  "T1562": {
+    "in": [],
+    "out": [
+      "process",
+      "registry",
+      "service"
+    ]
+  },
+  "T1562.002": {
+    "in": [
+      "file",
+      "service"
+    ],
+    "out": [
+      "process",
+      "registry"
+    ]
+  },
+  "T1562.004": {
+    "in": [],
+    "out": [
+      "process",
+      "registry"
+    ]
+  },
+  "T1562.001": {
+    "in": [],
+    "out": [
+      "process",
+      "registry",
+      "service"
+    ]
+  },
+  "T1562.010": {
+    "in": [],
+    "out": [
+      "process",
+      "registry"
+    ]
+  },
+  "T1562.003": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1562.006": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "registry"
+    ]
+  },
+  "T1562.009": {
+    "in": [],
+    "out": [
+      "process",
+      "registry"
+    ]
+  },
+  "T1562.011": {
+    "in": [],
+    "out": [
+      "process",
+      "service"
+    ]
+  },
+  "T1656": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "user"
+    ]
+  },
+  "T1070": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "file",
+      "registry"
+    ]
+  },
+  "T1070.003": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1070.008": {
+    "in": [
+      "file",
+      "process"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1070.007": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "network",
+      "process",
+      "registry"
+    ]
+  },
+  "T1070.009": {
+    "in": [],
+    "out": [
+      "process",
+      "registry",
+      "service",
+      "user"
+    ]
+  },
+  "T1070.001": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1070.004": {
+    "in": [
+      "file",
+      "process"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1070.005": {
+    "in": [
+      "network",
+      "process"
+    ],
+    "out": [
+      "network",
+      "process",
+      "user"
+    ]
+  },
+  "T1070.010": {
+    "in": [],
+    "out": [
+      "file"
+    ]
+  },
+  "T1070.006": {
+    "in": [
+      "file",
+      "process"
+    ],
+    "out": []
+  },
+  "T1202": {
+    "in": [],
+    "out": [
+      "file",
+      "network",
+      "process"
+    ]
+  },
+  "T1105": {
+    "in": [],
+    "out": [
+      "file",
+      "network",
+      "process"
+    ]
+  },
+  "T1490": {
+    "in": [
+      "service"
+    ],
+    "out": [
+      "file",
+      "process",
+      "registry"
+    ]
+  },
+  "T1056": {
+    "in": [
+      "file",
+      "process"
+    ],
+    "out": []
+  },
+  "T1056.004": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1056.002": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1056.001": {
+    "in": [
+      "file",
+      "process"
+    ],
+    "out": [
+      "registry",
+      "service"
+    ]
+  },
+  "T1056.003": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "file",
+      "network"
+    ]
+  },
+  "T1674": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1559": {
+    "in": [
+      "process"
+    ],
+    "out": []
+  },
+  "T1559.001": {
+    "in": [
+      "process",
+      "registry"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1559.002": {
+    "in": [
+      "process",
+      "registry"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1534": {
+    "in": [
+      "file",
+      "user"
+    ],
+    "out": [
+      "process",
+      "user"
+    ]
+  },
+  "T1570": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1680": {
+    "in": [],
+    "out": [
+      "process"
+    ]
+  },
+  "T1654": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1036": {
+    "in": [],
+    "out": [
+      "process",
+      "service"
+    ]
+  },
+  "T1036.012": {
+    "in": [
+      "network",
+      "process"
+    ],
+    "out": [
+      "network"
+    ]
+  },
+  "T1036.007": {
+    "in": [],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1036.001": {
+    "in": [
+      "file",
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1036.010": {
+    "in": [
+      "user"
+    ],
+    "out": [
+      "user"
+    ]
+  },
+  "T1036.008": {
+    "in": [],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1036.004": {
+    "in": [],
+    "out": [
+      "process",
+      "service"
+    ]
+  },
+  "T1036.005": {
+    "in": [],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1036.003": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1036.002": {
+    "in": [
+      "file",
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1556": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "registry"
+    ]
+  },
+  "T1556.001": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "user"
+    ]
+  },
+  "T1556.007": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "user"
+    ]
+  },
+  "T1556.006": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process",
+      "user"
+    ]
+  },
+  "T1556.008": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "registry"
+    ]
+  },
+  "T1556.002": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "registry"
+    ]
+  },
+  "T1556.005": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process",
+      "user"
+    ]
+  },
+  "T1112": {
+    "in": [],
+    "out": [
+      "process",
+      "registry"
+    ]
+  },
+  "T1111": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "registry",
+      "user"
+    ]
+  },
+  "T1621": {
+    "in": [
+      "user"
+    ],
+    "out": []
+  },
+  "T1104": {
+    "in": [],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1106": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1498": {
+    "in": [],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1498.001": {
+    "in": [],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1498.002": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "network"
+    ]
+  },
+  "T1046": {
+    "in": [],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1135": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1040": {
+    "in": [],
+    "out": [
+      "process",
+      "service"
+    ]
+  },
+  "T1095": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "network"
+    ]
+  },
+  "T1571": {
+    "in": [],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1003": {
+    "in": [
+      "file",
+      "process",
+      "user"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1003.005": {
+    "in": [
+      "file",
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1003.006": {
+    "in": [
+      "network",
+      "user"
+    ],
+    "out": [
+      "network",
+      "user"
+    ]
+  },
+  "T1003.004": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1003.001": {
+    "in": [
+      "process",
+      "user"
+    ],
+    "out": [
+      "file",
+      "process",
+      "registry"
+    ]
+  },
+  "T1003.003": {
+    "in": [],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1003.002": {
+    "in": [],
+    "out": [
+      "file",
+      "process",
+      "registry"
+    ]
+  },
+  "T1027": {
+    "in": [],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1027.001": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1027.010": {
+    "in": [],
+    "out": [
+      "process"
+    ]
+  },
+  "T1027.004": {
+    "in": [],
+    "out": [
+      "file",
+      "network",
+      "process"
+    ]
+  },
+  "T1027.015": {
+    "in": [],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1027.007": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1027.009": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1027.013": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1027.011": {
+    "in": [],
+    "out": [
+      "registry",
+      "service"
+    ]
+  },
+  "T1027.006": {
+    "in": [
+      "file",
+      "network"
+    ],
+    "out": [
+      "file",
+      "network",
+      "process"
+    ]
+  },
+  "T1027.005": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1027.016": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1027.012": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1027.014": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1027.017": {
+    "in": [],
+    "out": [
+      "file",
+      "network",
+      "process"
+    ]
+  },
+  "T1027.002": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1027.003": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1027.008": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1137": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "file",
+      "process",
+      "registry"
+    ]
+  },
+  "T1137.006": {
+    "in": [],
+    "out": [
+      "file",
+      "process",
+      "registry"
+    ]
+  },
+  "T1137.001": {
+    "in": [
+      "file",
+      "process"
+    ],
+    "out": [
+      "file",
+      "process",
+      "registry"
+    ]
+  },
+  "T1137.002": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "process",
+      "registry"
+    ]
+  },
+  "T1137.003": {
+    "in": [
+      "file",
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1137.004": {
+    "in": [
+      "file",
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1137.005": {
+    "in": [
+      "file",
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1201": {
+    "in": [
+      "process",
+      "user"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1120": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1069": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1069.002": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1069.001": {
+    "in": [],
+    "out": [
+      "process"
+    ]
+  },
+  "T1566": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1566.001": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "file",
+      "network",
+      "process"
+    ]
+  },
+  "T1566.002": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1566.004": {
+    "in": [
+      "file"
+    ],
+    "out": []
+  },
+  "T1566.003": {
+    "in": [],
+    "out": [
+      "file",
+      "network",
+      "process"
+    ]
+  },
+  "T1653": {
+    "in": [],
+    "out": [
+      "process"
+    ]
+  },
+  "T1542": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1542.003": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "file"
+    ]
+  },
+  "T1542.002": {
+    "in": [
+      "service"
+    ],
+    "out": [
+      "file"
+    ]
+  },
+  "T1542.001": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1057": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1055": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1055.004": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1055.001": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1055.011": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1055.015": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1055.002": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1055.013": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1055.012": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1055.003": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1055.005": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1572": {
+    "in": [],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1090": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1090.004": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "network"
+    ]
+  },
+  "T1090.002": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1090.001": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1090.003": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1012": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process",
+      "registry"
+    ]
+  },
+  "T1620": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1219": {
+    "in": [],
+    "out": [
+      "file",
+      "network",
+      "process",
+      "registry",
+      "service"
+    ]
+  },
+  "T1219.001": {
+    "in": [],
+    "out": [
+      "file",
+      "network",
+      "process"
+    ]
+  },
+  "T1219.003": {
+    "in": [],
+    "out": [
+      "file"
+    ]
+  },
+  "T1219.002": {
+    "in": [],
+    "out": [
+      "file",
+      "network"
+    ]
+  },
+  "T1563": {
+    "in": [],
+    "out": [
+      "network",
+      "process",
+      "user"
+    ]
+  },
+  "T1563.002": {
+    "in": [],
+    "out": [
+      "network",
+      "process",
+      "service",
+      "user"
+    ]
+  },
+  "T1021": {
+    "in": [],
+    "out": [
+      "network",
+      "process",
+      "user"
+    ]
+  },
+  "T1021.003": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "network",
+      "process",
+      "user"
+    ]
+  },
+  "T1021.001": {
+    "in": [
+      "user"
+    ],
+    "out": [
+      "network",
+      "process",
+      "user"
+    ]
+  },
+  "T1021.002": {
+    "in": [],
+    "out": [
+      "network",
+      "process",
+      "user"
+    ]
+  },
+  "T1021.005": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "network",
+      "process",
+      "user"
+    ]
+  },
+  "T1021.006": {
+    "in": [
+      "network",
+      "service"
+    ],
+    "out": [
+      "network",
+      "process",
+      "user"
+    ]
+  },
+  "T1018": {
+    "in": [],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1091": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1496": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1496.002": {
+    "in": [],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1496.001": {
+    "in": [],
+    "out": [
+      "network",
+      "process",
+      "service"
+    ]
+  },
+  "T1207": {
+    "in": [
+      "network",
+      "user"
+    ],
+    "out": [
+      "network",
+      "user"
+    ]
+  },
+  "T1014": {
+    "in": [
+      "service"
+    ],
+    "out": [
+      "file",
+      "service"
+    ]
+  },
+  "T1053": {
+    "in": [],
+    "out": [
+      "file",
+      "process",
+      "service"
+    ]
+  },
+  "T1053.002": {
+    "in": [],
+    "out": [
+      "process",
+      "service"
+    ]
+  },
+  "T1053.005": {
+    "in": [],
+    "out": [
+      "file",
+      "process",
+      "registry",
+      "service"
+    ]
+  },
+  "T1029": {
+    "in": [
+      "service"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1113": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1679": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1505": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "process",
+      "service"
+    ]
+  },
+  "T1505.004": {
+    "in": [
+      "file",
+      "process"
+    ],
+    "out": [
+      "file",
+      "process",
+      "service"
+    ]
+  },
+  "T1505.001": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1505.005": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "process",
+      "registry"
+    ]
+  },
+  "T1505.002": {
+    "in": [
+      "file",
+      "process"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1505.003": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "file",
+      "network",
+      "process",
+      "user"
+    ]
+  },
+  "T1489": {
+    "in": [
+      "service",
+      "user"
+    ],
+    "out": [
+      "process",
+      "service"
+    ]
+  },
+  "T1129": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "network",
+      "process"
+    ]
+  },
+  "T1072": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1518": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1518.002": {
+    "in": [],
+    "out": [
+      "file",
+      "process",
+      "registry"
+    ]
+  },
+  "T1518.001": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1176": {
+    "in": [],
+    "out": [
+      "file",
+      "network",
+      "process",
+      "registry"
+    ]
+  },
+  "T1176.001": {
+    "in": [],
+    "out": [
+      "file",
+      "network",
+      "process",
+      "registry"
+    ]
+  },
+  "T1176.002": {
+    "in": [],
+    "out": [
+      "file",
+      "network",
+      "process"
+    ]
+  },
+  "T1539": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1649": {
+    "in": [
+      "registry",
+      "user"
+    ],
+    "out": []
+  },
+  "T1558": {
+    "in": [
+      "process",
+      "user"
+    ],
+    "out": []
+  },
+  "T1558.004": {
+    "in": [
+      "user"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1558.001": {
+    "in": [
+      "process",
+      "user"
+    ],
+    "out": []
+  },
+  "T1558.003": {
+    "in": [
+      "process",
+      "user"
+    ],
+    "out": [
+      "user"
+    ]
+  },
+  "T1558.002": {
+    "in": [
+      "process",
+      "user"
+    ],
+    "out": []
+  },
+  "T1553": {
+    "in": [],
+    "out": [
+      "file",
+      "process",
+      "registry"
+    ]
+  },
+  "T1553.002": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1553.006": {
+    "in": [],
+    "out": [
+      "process",
+      "registry"
+    ]
+  },
+  "T1553.004": {
+    "in": [],
+    "out": [
+      "process",
+      "registry"
+    ]
+  },
+  "T1553.005": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "file"
+    ]
+  },
+  "T1553.003": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "registry"
+    ]
+  },
+  "T1195": {
+    "in": [
+      "file",
+      "network",
+      "process"
+    ],
+    "out": [
+      "file",
+      "network",
+      "process"
+    ]
+  },
+  "T1195.003": {
+    "in": [
+      "file",
+      "process",
+      "service"
+    ],
+    "out": []
+  },
+  "T1195.001": {
+    "in": [
+      "file",
+      "network",
+      "process"
+    ],
+    "out": [
+      "file",
+      "network",
+      "process",
+      "registry"
+    ]
+  },
+  "T1195.002": {
+    "in": [
+      "file",
+      "network",
+      "process",
+      "service"
+    ],
+    "out": [
+      "file",
+      "network",
+      "process",
+      "registry"
+    ]
+  },
+  "T1218": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1218.003": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "network",
+      "process",
+      "registry"
+    ]
+  },
+  "T1218.001": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "network",
+      "process"
+    ]
+  },
+  "T1218.002": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "process",
+      "registry"
+    ]
+  },
+  "T1218.015": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "network",
+      "process"
+    ]
+  },
+  "T1218.004": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1218.014": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "network",
+      "process",
+      "registry"
+    ]
+  },
+  "T1218.013": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "network",
+      "process"
+    ]
+  },
+  "T1218.005": {
+    "in": [],
+    "out": [
+      "file",
+      "network",
+      "process"
+    ]
+  },
+  "T1218.007": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1218.008": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1218.009": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "network",
+      "process",
+      "registry"
+    ]
+  },
+  "T1218.010": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1218.011": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "network",
+      "process"
+    ]
+  },
+  "T1218.012": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "network",
+      "process",
+      "registry"
+    ]
+  },
+  "T1082": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1614": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1614.001": {
+    "in": [
+      "process",
+      "registry"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1016": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1016.001": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1016.002": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1049": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1033": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1216": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1216.001": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1216.002": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1007": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1569": {
+    "in": [],
+    "out": [
+      "process",
+      "registry",
+      "service"
+    ]
+  },
+  "T1569.002": {
+    "in": [],
+    "out": [
+      "network",
+      "process",
+      "registry",
+      "service"
+    ]
+  },
+  "T1529": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1124": {
+    "in": [
+      "process",
+      "service"
+    ],
+    "out": [
+      "file",
+      "process",
+      "service"
+    ]
+  },
+  "T1080": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "file"
+    ]
+  },
+  "T1221": {
+    "in": [],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1205": {
+    "in": [
+      "network",
+      "process"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1205.001": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1205.002": {
+    "in": [
+      "network",
+      "process",
+      "service"
+    ],
+    "out": [
+      "network",
+      "process",
+      "service"
+    ]
+  },
+  "T1127": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "network",
+      "process"
+    ]
+  },
+  "T1127.002": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1127.003": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "network",
+      "process"
+    ]
+  },
+  "T1127.001": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "network",
+      "process"
+    ]
+  },
+  "T1199": {
+    "in": [
+      "file",
+      "user"
+    ],
+    "out": [
+      "network",
+      "user"
+    ]
+  },
+  "T1552": {
+    "in": [],
+    "out": [
+      "file",
+      "process",
+      "registry"
+    ]
+  },
+  "T1552.001": {
+    "in": [],
+    "out": [
+      "file",
+      "process",
+      "user"
+    ]
+  },
+  "T1552.002": {
+    "in": [
+      "registry"
+    ],
+    "out": [
+      "process",
+      "registry"
+    ]
+  },
+  "T1552.006": {
+    "in": [
+      "network",
+      "process"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1552.004": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1550": {
+    "in": [],
+    "out": [
+      "process",
+      "user"
+    ]
+  },
+  "T1550.002": {
+    "in": [
+      "user"
+    ],
+    "out": [
+      "network",
+      "process",
+      "user"
+    ]
+  },
+  "T1550.003": {
+    "in": [
+      "process",
+      "user"
+    ],
+    "out": [
+      "user"
+    ]
+  },
+  "T1204": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "file",
+      "network",
+      "process"
+    ]
+  },
+  "T1204.004": {
+    "in": [
+      "network",
+      "process"
+    ],
+    "out": [
+      "file",
+      "network",
+      "process"
+    ]
+  },
+  "T1204.002": {
+    "in": [
+      "file"
+    ],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1204.005": {
+    "in": [],
+    "out": [
+      "file",
+      "process"
+    ]
+  },
+  "T1204.001": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "file",
+      "network",
+      "process"
+    ]
+  },
+  "T1078": {
+    "in": [
+      "user"
+    ],
+    "out": [
+      "process",
+      "user"
+    ]
+  },
+  "T1078.001": {
+    "in": [],
+    "out": [
+      "user"
+    ]
+  },
+  "T1078.002": {
+    "in": [
+      "user"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1078.003": {
+    "in": [
+      "user"
+    ],
+    "out": [
+      "user"
+    ]
+  },
+  "T1125": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "file",
+      "network",
+      "process"
+    ]
+  },
+  "T1673": {
+    "in": [],
+    "out": [
+      "process"
+    ]
+  },
+  "T1497": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1497.001": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1497.003": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1497.002": {
+    "in": [
+      "process",
+      "user"
+    ],
+    "out": [
+      "process"
+    ]
+  },
+  "T1102": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "network"
+    ]
+  },
+  "T1102.002": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "network",
+      "process"
+    ]
+  },
+  "T1102.001": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "network"
+    ]
+  },
+  "T1102.003": {
+    "in": [
+      "network"
+    ],
+    "out": [
+      "network"
+    ]
+  },
+  "T1669": {
+    "in": [
+      "user"
+    ],
+    "out": [
+      "network"
+    ]
+  },
+  "T1047": {
+    "in": [],
+    "out": [
+      "network",
+      "process",
+      "service"
+    ]
+  },
+  "T1220": {
+    "in": [
+      "process"
+    ],
+    "out": [
+      "process"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "technique": { "id": "T1218.003", "name": "CMSTP" },
+  "detection": { "id": "DET-T1218003" },
+  "analysis": { "id": "AN-T1218003" },
+  "log_sources": {
+    "Anchor Event": {
+      "data_component": { "id": "DC0032", "name": "Process Creation" },
+      "description": "cmstp.exe 기반 서명된 바이너리 프록시 실행.",
+      "conditions": [
+        {
+          "type": "cmstp_process",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [1] },
+          "filters": {
+            "Image": { "contains": "cmstp.exe" }
+          },
+          "description": "cmstp.exe 실행."
+        },
+        {
+          "type": "cmstp_security",
+          "source": "WinEventLog:Security",
+          "channel": { "event_codes": [4688] },
+          "filters": {
+            "NewProcessName": { "contains": "cmstp.exe" }
+          },
+          "description": "Security 채널 fallback."
+        }
+      ]
+    },
+    "Supporting Events": [
+      { "data_component": { "id": "DC0039", "name": "File Creation" }, "source": "WinEventLog:Sysmon", "channel": { "event_codes": [11] }, "filters": { "TargetFilename": { "contains_any": [".inf", ".sct"] } }, "description": "악성 INF/SCT 파일 드롭" },
+      { "data_component": { "id": "DC0032", "name": "Process Creation" }, "source": "WinEventLog:Sysmon", "channel": { "event_codes": [1] }, "filters": { "ParentImage": { "contains": "cmstp.exe" } }, "description": "cmstp가 부모인 자식 프로세스 (UAC 우회 결과)" }
+    ]
+  },
+  "mutable_elements": {
+    "grouping_logic": {
+      "primary_anchor_eids": [1, 4688],
+      "correlation_key": { "primary": ["Hostname", "ProcessGuid"], "fallback": ["Hostname"] },
+      "time_window": { "before_seconds": 30, "after_seconds": 60 }
+    },
+    "feature_extraction_filters": {
+      "malicious_inf_locations": ["\\Temp\\", "\\AppData\\", "\\Public\\"]
+    },
+    "semantic_templates": {
+      "cmstp_proxy": "프로세스({Image})가 cmstp.exe로 {InfPath} INF 파일을 처리하여 서명된 바이너리를 통해 명령을 실행함."
+    }
+  }
+}

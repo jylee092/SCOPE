@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is exhibiting normal behavior for Group Policy processing, including loading GPP-related DLLs (gpprefcl.dll, auditcse.dll), writing to Group Policy history files, connecting to the Workstation Service pipe, and communicating with a Domain Controller via LDAP (port 389).\"\n}"}

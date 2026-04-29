@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed processes (net.exe, net1.exe) are legitimate Windows utilities, and their DLL loads and named pipe connection to \\\\wkssvc are consistent with normal network-related operations; without command-line arguments or other indicators, no suspicious activity can be identified.\"\n}"}

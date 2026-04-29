@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[svchost.exe|{905CC552-204]\"\n  ],\n  \"rationale\": \"The svchost.exe process connected to the \\\\lsass named pipe, which is a common technique used by attackers to dump credentials from the Local Security Authority Subsystem Service (LSASS).\"\n}"}

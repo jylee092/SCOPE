@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is performing standard system operations, including creating a registry key under a legitimate Windows path and loading common system DLLs (EventAggregation.dll, SystemEventsBrokerClient.dll), with no notable command-line arguments or other indicators of compromise.\"\n}"}

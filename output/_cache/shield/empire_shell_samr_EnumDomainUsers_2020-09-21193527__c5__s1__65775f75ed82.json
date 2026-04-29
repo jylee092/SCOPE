@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[powershell.exe|{b34bc01c-2f9]\"\n  ],\n  \"rationale\": \"The powershell.exe process is repeatedly creating/modifying the 'Internet Settings\\\\Connections' registry key, which is a common technique for attackers to alter proxy settings or redirect network traffic for command and control or data exfiltration.\"\n}"}

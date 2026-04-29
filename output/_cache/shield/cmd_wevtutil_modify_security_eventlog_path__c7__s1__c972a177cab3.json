@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed svchost.exe activity involves numerous registry modifications related to Windows Update policies and settings, which appears to be standard system behavior for managing or resetting update functionality, with no command-line arguments or other indicators matching known attack patterns.\"\n}"}

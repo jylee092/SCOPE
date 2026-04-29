@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[reg.exe|{39e4a257-4fa]\"\n  ],\n  \"rationale\": \"The reg.exe process is used to modify the UserInitMprLogonScript registry key, a known persistence mechanism, to execute a batch file from a temporary directory upon user logon.\"\n}"}

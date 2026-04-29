@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[cmd.exe|{19de6d3b-0b0]\",\n    \"P[netsh.exe|{19de6d3b-1ad]\"\n  ],\n  \"rationale\": \"The 'cmd.exe' process launched 'netsh.exe' with the 'trace stop' command, which resulted in network trace data being written to the user's desktop, indicating potential reconnaissance or data collection.\"\n}"}

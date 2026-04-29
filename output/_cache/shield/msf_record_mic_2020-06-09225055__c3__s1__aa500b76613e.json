@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is performing registry operations exclusively related to the legitimate Windows Delivery Optimization service, and no command-line arguments or other suspicious indicators (e.g., unexpected child processes, unauthorized file writes, persistence attempts) are present.\"\n}"}

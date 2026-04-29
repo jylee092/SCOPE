@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed registry operations by OfficeClickToRun.exe are consistent with normal Microsoft Office telemetry and configuration activities, with no command-line arguments, file system writes, or network connections indicating malicious behavior.\"\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed file and registry operations by backgroundTaskHost.exe are confined to paths and keys associated with the legitimate Windows Content Delivery Manager, indicating normal system activity without any signs of malicious command lines, persistence attempts, or unauthorized access.\"\n}"}

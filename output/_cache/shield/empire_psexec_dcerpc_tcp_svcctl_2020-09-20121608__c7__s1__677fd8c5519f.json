@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed activities, including registry modifications to a standard notification key, connection to the legitimate wkssvc pipe, and loading of common network and storage-related DLLs by Explorer.EXE, are consistent with normal operating system behavior and do not indicate any known attack patterns.\"\n}"}

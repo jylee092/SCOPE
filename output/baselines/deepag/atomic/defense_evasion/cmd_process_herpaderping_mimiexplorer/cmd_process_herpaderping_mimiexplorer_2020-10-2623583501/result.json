@@ -1,0 +1,110 @@
+{
+  "scenario": "cmd_process_herpaderping_mimiexplorer_2020-10-2623583501",
+  "tactic_sequence": [
+    "Credential Access",
+    "Defense Evasion"
+  ],
+  "technique_sequence": [
+    "T1003.001",
+    "T1202"
+  ],
+  "per_group_topk": [
+    [
+      "T1003.001",
+      "T1003.002",
+      "T1003.004",
+      "T1003.005",
+      "T1003.006"
+    ],
+    [
+      "T1003.001",
+      "T1003.002",
+      "T1003.004",
+      "T1003.005",
+      "T1003.006"
+    ],
+    [
+      "T1202",
+      "T1587",
+      "T1585.002",
+      "T1587.003",
+      "T1583.006"
+    ]
+  ],
+  "notes": {
+    "n_alerts": 3,
+    "n_sigma_alerts": 3,
+    "n_deepag_top1_used": 0,
+    "alerts": [
+      {
+        "ts": "2020-10-26 11:58:30.366000+00:00",
+        "event_index": 28,
+        "event_id": 4688,
+        "topk_tids": [
+          "T1003.001",
+          "T1003.002",
+          "T1003.004",
+          "T1003.005",
+          "T1003.006"
+        ],
+        "topk_tactics": [
+          "Credential Access",
+          "Credential Access",
+          "Credential Access",
+          "Credential Access",
+          "Credential Access"
+        ],
+        "deepag_top1": "T1074.001",
+        "deepag_prob": 8.479971438646317e-05,
+        "chosen_top1": "T1003.001",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-10-26 11:58:30.396000+00:00",
+        "event_index": 31,
+        "event_id": 1,
+        "topk_tids": [
+          "T1003.001",
+          "T1003.002",
+          "T1003.004",
+          "T1003.005",
+          "T1003.006"
+        ],
+        "topk_tactics": [
+          "Credential Access",
+          "Credential Access",
+          "Credential Access",
+          "Credential Access",
+          "Credential Access"
+        ],
+        "deepag_top1": "T1587.003",
+        "deepag_prob": 0.0025579826906323433,
+        "chosen_top1": "T1003.001",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-10-26 11:58:30.634000+00:00",
+        "event_index": 55,
+        "event_id": 1,
+        "topk_tids": [
+          "T1202",
+          "T1587",
+          "T1585.002",
+          "T1587.003",
+          "T1583.006"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "deepag_top1": "T1587",
+        "deepag_prob": 0.007741705048829317,
+        "chosen_top1": "T1202",
+        "chosen_src": "sigma"
+      }
+    ]
+  }
+}

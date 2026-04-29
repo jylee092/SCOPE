@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"svchost.exe connecting to the LSASS named pipe, which is a common technique used by attackers for credential dumping or other malicious interaction with LSASS.\",\n  \"indicators\": [\n    \"svchost.exe\",\n    \"lsass\",\n    \"pipe_connect\",\n    \"credential dumping\"\n  ]\n}"}

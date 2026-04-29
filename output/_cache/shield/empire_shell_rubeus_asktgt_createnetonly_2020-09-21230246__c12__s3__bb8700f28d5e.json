@@ -1,0 +1,1 @@
+{"text": "{\n  \"confidence_score\": 0.85,\n  \"attack_summary\": \"A suspicious svchost.exe process was observed writing a prefetch file for RUBEUS.EXE, a known credential access tool. This activity strongly indicates the execution of Rubeus on the system, likely for Kerberos credential dumping. The simultaneous creation of prefetch files for CMD.EXE and CONHOST.EXE suggests"}

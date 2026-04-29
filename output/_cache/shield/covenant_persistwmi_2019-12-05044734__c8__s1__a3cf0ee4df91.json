@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed network connections from lsass.exe to ports 88 (Kerberos) and 389 (LDAP) are standard and expected behavior for a Windows system in an Active Directory environment, and no other suspicious indicators or command lines were provided.\"\n}"}

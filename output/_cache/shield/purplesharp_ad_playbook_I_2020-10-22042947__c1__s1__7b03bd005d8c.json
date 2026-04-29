@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[PurpleSharp.exe|{313fa531-430]\",\n    \"P[cmd.exe|{313fa531-42a]\"\n  ],\n  \"rationale\": \"PurpleSharp.exe is an adversary emulation tool explicitly launched with command-line arguments referencing MITRE ATT&CK techniques ("}

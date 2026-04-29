@@ -1,0 +1,600 @@
+{
+  "scenario": "empire_psremoting_stager_2020-09-20170827",
+  "tactic_sequence": [
+    "Privilege Escalation",
+    "Impact",
+    "Execution",
+    "Defense Evasion",
+    "Execution",
+    "Privilege Escalation",
+    "Impact",
+    "Privilege Escalation",
+    "Impact",
+    "Privilege Escalation",
+    "Impact",
+    "Privilege Escalation",
+    "Discovery",
+    "Impact"
+  ],
+  "technique_sequence": [
+    "T1133",
+    "T1531",
+    "T1059.001",
+    "T1202",
+    "T1059.001",
+    "T1133",
+    "T1531",
+    "T1133",
+    "T1531",
+    "T1133",
+    "T1531",
+    "T1133",
+    "T1033",
+    "T1531"
+  ],
+  "per_group_topk": [
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001",
+      "T1021.006"
+    ],
+    [
+      "T1059.001",
+      "T1021.003"
+    ],
+    [
+      "T1059.001",
+      "T1021.006"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001",
+      "T1190",
+      "T1021.006"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001",
+      "T1562.001"
+    ],
+    [
+      "T1202"
+    ],
+    [
+      "T1059.001",
+      "T1021.006"
+    ],
+    [
+      "T1059.001",
+      "T1021.006"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1033",
+      "T1087.001"
+    ],
+    [
+      "T1531"
+    ]
+  ],
+  "notes": {
+    "n_events_evaluated": 2076,
+    "n_alerts": 25,
+    "alerts": [
+      {
+        "ts": "2020-09-20 21:08:32.430000+00:00",
+        "event_index": 25,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-20 21:08:32.431000+00:00",
+        "event_index": 27,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-20 21:09:09.800000+00:00",
+        "event_index": 479,
+        "event_id": 5156,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "13acf386-b8c6-4fe0-9a6e-c4756b974698",
+          "title": "Remote PowerShell Sessions Network Connections (WinRM)",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-20 21:09:09.817000+00:00",
+        "event_index": 516,
+        "event_id": 1,
+        "topk_tids": [
+          "T1059.001",
+          "T1021.006"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "734f8d9b-42b8-41b2-bcf5-abaf49d5a3c8",
+          "title": "Remote PowerShell Session Host Process (WinRM)",
+          "level": "medium",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-20 21:09:09.835000+00:00",
+        "event_index": 559,
+        "event_id": 7,
+        "topk_tids": [
+          "T1059.001",
+          "T1021.003"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "ad1f4bb9-8dfb-4765-adb6-2a7cfb6c0f94",
+          "title": "Suspicious WSMAN Provider Image Loads",
+          "level": "medium",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-20 21:09:11.877000+00:00",
+        "event_index": 689,
+        "event_id": 3,
+        "topk_tids": [
+          "T1059.001",
+          "T1021.006"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "c539afac-c12a-46ed-b1bd-5a5567c9f045",
+          "title": "Potential Remote PowerShell Session Initiated",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-20 21:09:11.902000+00:00",
+        "event_index": 745,
+        "event_id": 5156,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "13acf386-b8c6-4fe0-9a6e-c4756b974698",
+          "title": "Remote PowerShell Sessions Network Connections (WinRM)",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-20 21:09:11.926000+00:00",
+        "event_index": 799,
+        "event_id": 17,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "ac7102b4-9e1e-4802-9b4f-17c5524c015c",
+          "title": "New PowerShell Instance Created",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-20 21:09:12.956000+00:00",
+        "event_index": 843,
+        "event_id": 1,
+        "topk_tids": [
+          "T1059.001",
+          "T1190",
+          "T1021.006"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Initial Access",
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "c86133ad-4725-4bd0-8170-210788e0a7ba",
+          "title": "Net WebClient Casing Anomalies",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-20 21:09:12.962000+00:00",
+        "event_index": 856,
+        "event_id": 5156,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "13acf386-b8c6-4fe0-9a6e-c4756b974698",
+          "title": "Remote PowerShell Sessions Network Connections (WinRM)",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-20 21:09:12.968000+00:00",
+        "event_index": 867,
+        "event_id": 4688,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "79f4ede3-402e-41c8-bc3e-ebbf5f162581",
+          "title": "HackTool - Empire PowerShell Launch Parameters",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-20 21:09:13.005000+00:00",
+        "event_index": 946,
+        "event_id": 4104,
+        "topk_tids": [
+          "T1059.001",
+          "T1562.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "ae7fbf8e-f3cb-49fd-8db4-5f3bed522c71",
+          "title": "Suspicious PowerShell Invocations - Specific",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-20 21:09:13.159000+00:00",
+        "event_index": 1206,
+        "event_id": 1,
+        "topk_tids": [
+          "T1202"
+        ],
+        "topk_tactics": [
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "3037d961-21e9-4732-b27a-637bcc7bf539",
+          "title": "Suspicious High IntegrityLevel Conhost Legacy Option",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-20 21:09:13.263000+00:00",
+        "event_index": 1415,
+        "event_id": 3,
+        "topk_tids": [
+          "T1059.001",
+          "T1021.006"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "c539afac-c12a-46ed-b1bd-5a5567c9f045",
+          "title": "Potential Remote PowerShell Session Initiated",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-20 21:09:13.264000+00:00",
+        "event_index": 1418,
+        "event_id": 3,
+        "topk_tids": [
+          "T1059.001",
+          "T1021.006"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "c539afac-c12a-46ed-b1bd-5a5567c9f045",
+          "title": "Potential Remote PowerShell Session Initiated",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-20 21:09:14.371000+00:00",
+        "event_index": 1641,
+        "event_id": 17,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "ac7102b4-9e1e-4802-9b4f-17c5524c015c",
+          "title": "New PowerShell Instance Created",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-20 21:09:15.539000+00:00",
+        "event_index": 2007,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-20 21:09:15.540000+00:00",
+        "event_index": 2011,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-20 21:09:15.542000+00:00",
+        "event_index": 2015,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-20 21:09:15.543000+00:00",
+        "event_index": 2017,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-20 21:09:33.604000+00:00",
+        "event_index": 2096,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-20 21:09:33.605000+00:00",
+        "event_index": 2098,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-20 21:09:36.607000+00:00",
+        "event_index": 2117,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-20 21:09:40.650000+00:00",
+        "event_index": 2171,
+        "event_id": 1,
+        "topk_tids": [
+          "T1033",
+          "T1087.001"
+        ],
+        "topk_tactics": [
+          "Discovery",
+          "Discovery"
+        ],
+        "top_rule": {
+          "rule_id": "502b42de-4306-40b4-9596-6f590c81f073",
+          "title": "Local Accounts Discovery",
+          "level": "low",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-20 21:09:46.695000+00:00",
+        "event_index": 2234,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      }
+    ]
+  }
+}

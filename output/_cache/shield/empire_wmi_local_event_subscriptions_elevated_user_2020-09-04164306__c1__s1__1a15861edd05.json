@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed activities, including svchost.exe interacting with Task Scheduler and WMI registry keys, and provtool.exe being launched for WMI tracing, are consistent with normal Windows system operations and do not show any known attack patterns or suspicious command-line arguments.\"\n}"}

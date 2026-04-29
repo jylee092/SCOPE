@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The System process connecting to ports 137 and 445 is normal behavior for Windows networking, and no other suspicious indicators like notable command lines or unusual file/registry activity were observed.\"\n}"}

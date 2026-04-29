@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"PowerShell executed with a hidden window (`-W Hidden`) and an encoded command (`-enc`), which are common techniques used by attackers to obfuscate and conceal malicious script execution.\",\n  \"indicators\": [\n    \"hidden window\",\n    \"encoded command\",\n    \"powershell\"\n  ]\n}"}

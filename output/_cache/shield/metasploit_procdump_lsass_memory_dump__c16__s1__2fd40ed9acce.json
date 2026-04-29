@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The PowerShell_ISE.exe process is performing normal operations, writing and deleting autosave files within its dedicated application data directory and loading legitimate system DLLs, with no suspicious command lines, child processes, or network activity observed.\"\n}"}

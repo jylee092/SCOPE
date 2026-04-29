@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The WmiPrvSE.exe process is performing standard WMI-related DLL loads and registry operations within its expected HKLM\\\\SOFTWARE\\\\Microsoft\\\\Wbem path, with no suspicious command lines, child processes, or network activity observed.\"\n}"}

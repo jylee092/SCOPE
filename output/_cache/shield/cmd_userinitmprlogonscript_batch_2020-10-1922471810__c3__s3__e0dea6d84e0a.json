@@ -1,0 +1,1 @@
+{"text": "{\n  \"confidence_score\": 0.95,\n  \"attack_summary\": \"The reg.exe process was observed modifying a user's registry to establish persistence. Specifically, it set the UserInitMprLogonScript to execute a batch file located in the user's temporary directory, which is a common malware technique. This indicates an attempt to maintain access to the system.\",\n  \"mal"}

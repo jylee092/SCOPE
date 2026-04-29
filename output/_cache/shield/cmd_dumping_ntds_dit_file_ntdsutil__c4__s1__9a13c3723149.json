@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The process SearchApp.exe is a legitimate Windows component, and its registry operations on keys related to Windows Search, Flighting, and Product Options are consistent with its normal functionality, with no suspicious command lines or other indicators observed.\"\n}"}

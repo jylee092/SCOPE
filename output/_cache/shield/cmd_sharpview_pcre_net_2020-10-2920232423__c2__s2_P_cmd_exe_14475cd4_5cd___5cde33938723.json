@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"cmd.exe spawned SharpView.exe, a known Active Directory reconnaissance tool, to query ACLs for the 'Domain Admins' group. This is highly suspicious behavior.\",\n  \"indicators\": [\n    \"cmd.exe\",\n    \"SharpView.exe\",\n    \"Get-ObjectAcl\",\n    \"Domain Admins\",\n    \"reconnaissance\"\n  ]\n}"}

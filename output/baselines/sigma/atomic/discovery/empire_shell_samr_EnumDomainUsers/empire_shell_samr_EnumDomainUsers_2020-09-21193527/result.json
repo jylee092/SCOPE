@@ -1,0 +1,235 @@
+{
+  "scenario": "empire_shell_samr_EnumDomainUsers_2020-09-21193527",
+  "tactic_sequence": [
+    "Privilege Escalation",
+    "Impact",
+    "Privilege Escalation",
+    "Impact",
+    "Privilege Escalation",
+    "Impact",
+    "Privilege Escalation",
+    "Impact"
+  ],
+  "technique_sequence": [
+    "T1133",
+    "T1531",
+    "T1133",
+    "T1531",
+    "T1133",
+    "T1531",
+    "T1133",
+    "T1531"
+  ],
+  "per_group_topk": [
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ]
+  ],
+  "notes": {
+    "n_events_evaluated": 538,
+    "n_alerts": 9,
+    "alerts": [
+      {
+        "ts": "2020-09-21 23:35:38.963000+00:00",
+        "event_index": 173,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 23:35:41.983000+00:00",
+        "event_index": 188,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 23:35:41.985000+00:00",
+        "event_index": 194,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 23:35:41.986000+00:00",
+        "event_index": 198,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 23:35:41.989000+00:00",
+        "event_index": 203,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 23:35:41.990000+00:00",
+        "event_index": 205,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 23:35:50.018000+00:00",
+        "event_index": 252,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 23:35:50.020000+00:00",
+        "event_index": 257,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 23:35:50.021000+00:00",
+        "event_index": 259,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      }
+    ]
+  }
+}

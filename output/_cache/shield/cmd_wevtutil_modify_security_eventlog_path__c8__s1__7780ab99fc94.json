@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed process activities, including network connections, file operations, and registry modifications by msedge.exe, svchost.exe, and Sysmon.exe, are consistent with normal operating system and application behavior, such as web browsing, Windows services, and system monitoring.\"\n}"}

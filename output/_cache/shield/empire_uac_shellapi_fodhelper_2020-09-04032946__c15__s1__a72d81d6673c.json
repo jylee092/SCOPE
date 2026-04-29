@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The process csrss.exe is a legitimate Windows system process, and its interactions with registry keys related to display configuration (AutoRotation, TSDDD) are considered normal system behavior, with no notable command lines or other suspicious indicators present in the community.\"\n}"}

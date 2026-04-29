@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[powershell.exe|{860ba2e3-9f1]\"\n  ],\n  \"rationale\": \"The powershell.exe process initiated an outbound network connection on port 80 (':80'), which is a common indicator of command and control (C2) communication or data exfiltration, even in the absence of specific command-line arguments.\"\n}"}

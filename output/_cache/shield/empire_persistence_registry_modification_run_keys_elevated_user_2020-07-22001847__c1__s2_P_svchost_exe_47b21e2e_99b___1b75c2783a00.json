@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"Repeated connections to WinRM port 5985, combined with modification of Internet Settings registry key, which could indicate remote administration or malicious activity.\",\n  \"indicators\": [\n    \"WinRM\",\n    \"port 5985\",\n    \"registry modification\",\n    \"Internet Settings\"\n  ]\n}"}

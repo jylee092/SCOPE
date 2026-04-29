@@ -1,0 +1,57 @@
+{
+  "scenario": "psh_python_webserver_2020-10-2900161507",
+  "tactic_sequence": [
+    "Defense Evasion"
+  ],
+  "technique_sequence": [
+    "T1562.004"
+  ],
+  "per_group_topk": [
+    [
+      "T1562.004"
+    ],
+    [
+      "T1562.004"
+    ]
+  ],
+  "notes": {
+    "n_events_evaluated": 1095,
+    "n_alerts": 2,
+    "alerts": [
+      {
+        "ts": "2020-10-29 12:16:09.918000+00:00",
+        "event_index": 35,
+        "event_id": 1,
+        "topk_tids": [
+          "T1562.004"
+        ],
+        "topk_tactics": [
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "cd5cfd80-aa5f-44c0-9c20-108c4ae12e3c",
+          "title": "New Firewall Rule Added Via Netsh.EXE",
+          "level": "medium",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-10-29 12:16:10.220000+00:00",
+        "event_index": 861,
+        "event_id": 1,
+        "topk_tids": [
+          "T1562.004"
+        ],
+        "topk_tactics": [
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "cd5cfd80-aa5f-44c0-9c20-108c4ae12e3c",
+          "title": "New Firewall Rule Added Via Netsh.EXE",
+          "level": "medium",
+          "status": "test"
+        }
+      }
+    ]
+  }
+}

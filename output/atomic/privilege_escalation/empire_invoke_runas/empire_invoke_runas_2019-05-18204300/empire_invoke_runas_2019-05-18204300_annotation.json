@@ -1,0 +1,3423 @@
+{
+  "scenario": "empire_invoke_runas_2019-05-18204300",
+  "total_groups": 21,
+  "instruction": "각 그룹의 sample_logs와 anchor를 확인한 뒤 gt_ 필드를 채워주세요. gt_is_true_positive: 해당 그룹이 실제 공격 행위인지 (true/false). gt_technique_id: 실제 MITRE technique ID (예: T1059.001). gt_tactic: 실제 tactic 이름 (예: Execution). gt_notes: 판단 근거나 메모.",
+  "groups": [
+    {
+      "group_id": "T1021_003_255",
+      "rule_technique_id": "T1021.003",
+      "rule_technique_name": "Distributed Component Object Model",
+      "confidence": 0.67,
+      "anchor": {
+        "idx": 255,
+        "EventID": 4624,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2019-05-18 20:43:27.288000+00:00"
+      },
+      "num_events": 43,
+      "event_id_distribution": {
+        "11": 11,
+        "3": 10,
+        "18": 8,
+        "4624": 7,
+        "7": 7
+      },
+      "sample_logs": [
+        {
+          "idx": 255,
+          "EventID": 4624,
+          "TimeCreated": "2019-05-18 20:43:27.288000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 260,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:28.302000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 261,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:28.302000+00:00",
+          "Image": "C:\\Windows\\ADWS\\Microsoft.ActiveDirectory.WebServices.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 262,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:28.302000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 263,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:28.302000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 264,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:28.302000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 366,
+          "EventID": 18,
+          "TimeCreated": "2019-05-18 20:43:35.176000+00:00",
+          "Image": "C:\\Windows\\system32\\wbem\\wmiprvse.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 367,
+          "EventID": 18,
+          "TimeCreated": "2019-05-18 20:43:35.176000+00:00",
+          "Image": "C:\\Windows\\system32\\wbem\\wmiprvse.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 368,
+          "EventID": 18,
+          "TimeCreated": "2019-05-18 20:43:35.177000+00:00",
+          "Image": "C:\\Windows\\system32\\wbem\\wmiprvse.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 510,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:36.552000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 509,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:36.552000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 508,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:36.552000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 507,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:36.552000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1450,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:46.942000+00:00",
+          "Image": "C:\\Windows\\System32\\dns.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1534,
+          "EventID": 18,
+          "TimeCreated": "2019-05-18 20:43:55.189000+00:00",
+          "Image": "C:\\Windows\\system32\\wbem\\wmiprvse.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "",
+      "gt_technique_name": "",
+      "gt_tactic": "",
+      "gt_is_true_positive": false,
+      "gt_notes": "EID 4624 generic logon — not remote svc (T1021.003) and not attack-relevant"
+    },
+    {
+      "group_id": "T1021_003_1564",
+      "rule_technique_id": "T1021.003",
+      "rule_technique_name": "Distributed Component Object Model",
+      "confidence": 0.56,
+      "anchor": {
+        "idx": 1564,
+        "EventID": 4624,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2019-05-18 20:43:56.869000+00:00"
+      },
+      "num_events": 58,
+      "event_id_distribution": {
+        "3": 25,
+        "11": 12,
+        "18": 8,
+        "7": 7,
+        "4624": 6
+      },
+      "sample_logs": [
+        {
+          "idx": 1450,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:46.942000+00:00",
+          "Image": "C:\\Windows\\System32\\dns.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1534,
+          "EventID": 18,
+          "TimeCreated": "2019-05-18 20:43:55.189000+00:00",
+          "Image": "C:\\Windows\\system32\\wbem\\wmiprvse.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1535,
+          "EventID": 18,
+          "TimeCreated": "2019-05-18 20:43:55.190000+00:00",
+          "Image": "C:\\Windows\\system32\\wbem\\wmiprvse.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1536,
+          "EventID": 18,
+          "TimeCreated": "2019-05-18 20:43:55.190000+00:00",
+          "Image": "C:\\Windows\\system32\\wbem\\wmiprvse.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1564,
+          "EventID": 4624,
+          "TimeCreated": "2019-05-18 20:43:56.869000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1567,
+          "EventID": 4624,
+          "TimeCreated": "2019-05-18 20:43:56.874000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1572,
+          "EventID": 4624,
+          "TimeCreated": "2019-05-18 20:43:56.877000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1574,
+          "EventID": 18,
+          "TimeCreated": "2019-05-18 20:43:56.879000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1580,
+          "EventID": 4624,
+          "TimeCreated": "2019-05-18 20:43:56.981000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1643,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:57.004000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1644,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:57.005000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1645,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:57.005000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1646,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:57.005000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1648,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:57.006000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1647,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:57.006000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "",
+      "gt_technique_name": "",
+      "gt_tactic": "",
+      "gt_is_true_positive": false,
+      "gt_notes": "EID 4624 generic logon — benign"
+    },
+    {
+      "group_id": "T1021_003_404",
+      "rule_technique_id": "T1021.003",
+      "rule_technique_name": "Distributed Component Object Model",
+      "confidence": 0.67,
+      "anchor": {
+        "idx": 404,
+        "EventID": 4648,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2019-05-18 20:43:35.598000+00:00"
+      },
+      "num_events": 395,
+      "event_id_distribution": {
+        "7": 356,
+        "3": 36,
+        "4624": 2,
+        "4648": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 246,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:25.753000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 247,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:25.753000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 293,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:29.915000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 294,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:30.425000+00:00",
+          "Image": "C:\\Windows\\System32\\notepad.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 295,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:30.941000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 346,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:35.107000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 404,
+          "EventID": 4648,
+          "TimeCreated": "2019-05-18 20:43:35.598000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 407,
+          "EventID": 4624,
+          "TimeCreated": "2019-05-18 20:43:35.599000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 408,
+          "EventID": 4624,
+          "TimeCreated": "2019-05-18 20:43:35.599000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 417,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:35.606000+00:00",
+          "Image": "C:\\Windows\\System32\\notepad.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 418,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.613000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 419,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.614000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 420,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.615000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 426,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.662000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 427,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.663000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1134.002",
+      "gt_technique_name": "",
+      "gt_tactic": "Privilege Escalation",
+      "gt_is_true_positive": true,
+      "gt_notes": "EID 4648 explicit-creds logon — Invoke-RunAs CreateProcessWithLogonW signature"
+    },
+    {
+      "group_id": "T1021_002_2087",
+      "rule_technique_id": "T1021.002",
+      "rule_technique_name": "SMB/Windows Admin Shares",
+      "confidence": 0.33,
+      "anchor": {
+        "idx": 2087,
+        "EventID": 4624,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2019-05-18 20:44:27.288000+00:00"
+      },
+      "num_events": 10,
+      "event_id_distribution": {
+        "3": 6,
+        "18": 3,
+        "4624": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 2087,
+          "EventID": 4624,
+          "TimeCreated": "2019-05-18 20:44:27.288000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2106,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:44:28.306000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2107,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:44:28.306000+00:00",
+          "Image": "C:\\Windows\\ADWS\\Microsoft.ActiveDirectory.WebServices.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2157,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:44:31.630000+00:00",
+          "Image": "System",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2198,
+          "EventID": 18,
+          "TimeCreated": "2019-05-18 20:44:35.190000+00:00",
+          "Image": "C:\\Windows\\system32\\wbem\\wmiprvse.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2199,
+          "EventID": 18,
+          "TimeCreated": "2019-05-18 20:44:35.190000+00:00",
+          "Image": "C:\\Windows\\system32\\wbem\\wmiprvse.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2202,
+          "EventID": 18,
+          "TimeCreated": "2019-05-18 20:44:35.191000+00:00",
+          "Image": "C:\\Windows\\system32\\wbem\\wmiprvse.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2209,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:44:35.270000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2210,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:44:35.270000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2211,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:44:35.270000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "",
+      "gt_technique_name": "",
+      "gt_tactic": "",
+      "gt_is_true_positive": false,
+      "gt_notes": "EID 4624 generic logon — benign"
+    },
+    {
+      "group_id": "T1027_627",
+      "rule_technique_id": "T1027",
+      "rule_technique_name": "Obfuscated Files or Information",
+      "confidence": 0.86,
+      "anchor": {
+        "idx": 627,
+        "EventID": 4688,
+        "Image": "nan",
+        "CommandLine": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -noP -sta -w 1 -enc  SQBGACgAJABQAFMAVgBlAHIAcwBJAE8AbgBUAEEAYgBMAGUALgBQAFMAVgBlAHIAcwBJAG8AbgAuAE0AYQBKAE8AcgAgAC0ARwBlACAAMwApAHsAJAA4AEQ",
+        "TimeCreated": "2019-05-18 20:43:37.866000+00:00"
+      },
+      "num_events": 1062,
+      "event_id_distribution": {
+        "12": 412,
+        "7": 356,
+        "4103": 140,
+        "10": 81,
+        "3": 37,
+        "600": 14,
+        "1": 6,
+        "4656": 4,
+        "13": 4,
+        "4663": 2,
+        "400": 2,
+        "11": 2,
+        "4688": 1,
+        "4105": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 271,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:28.676000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 272,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:28.677000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 273,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:28.687000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 274,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:28.690000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 275,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:28.690000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 277,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:28.709000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 279,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:29.325000+00:00",
+          "Image": "C:\\Windows\\system32\\notepad.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 286,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:29.863000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 287,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:29.864000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 288,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:29.875000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 289,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:29.877000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 290,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:29.878000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 292,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:29.899000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 293,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:29.915000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 294,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:30.425000+00:00",
+          "Image": "C:\\Windows\\System32\\notepad.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1027",
+      "gt_technique_name": "",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": true,
+      "gt_notes": "Base64-encoded PowerShell payload"
+    },
+    {
+      "group_id": "T1059_638",
+      "rule_technique_id": "T1059",
+      "rule_technique_name": "Command and Scripting Interpreter",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 638,
+        "EventID": 1,
+        "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "CommandLine": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -noP -sta -w 1 -enc  SQBGACgAJABQAFMAVgBlAHIAcwBJAE8AbgBUAEEAYgBMAGUALgBQAFMAVgBlAHIAcwBJAG8AbgAuAE0AYQBKAE8AcgAgAC0ARwBlACAAMwApAHsAJAA4AEQ",
+        "TimeCreated": "2019-05-18 20:43:37.895000+00:00"
+      },
+      "num_events": 940,
+      "event_id_distribution": {
+        "12": 376,
+        "7": 356,
+        "4103": 140,
+        "3": 37,
+        "600": 14,
+        "1": 6,
+        "13": 4,
+        "400": 2,
+        "5": 2,
+        "11": 2,
+        "17": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 271,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:28.676000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 272,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:28.677000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 273,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:28.687000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 274,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:28.690000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 275,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:28.690000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 286,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:29.863000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 287,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:29.864000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 288,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:29.875000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 289,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:29.877000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 290,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:29.878000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 293,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:29.915000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 294,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:30.425000+00:00",
+          "Image": "C:\\Windows\\System32\\notepad.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 295,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:30.941000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 307,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:33.785000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 308,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:33.786000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "Empire PowerShell stager (-noP -sta -w 1 -enc)"
+    },
+    {
+      "group_id": "T1059_415",
+      "rule_technique_id": "T1059",
+      "rule_technique_name": "Command and Scripting Interpreter",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 415,
+        "EventID": 1,
+        "Image": "C:\\Windows\\System32\\cmd.exe",
+        "CommandLine": "\"cmd.exe\" /c C:\\windows\\system32\\autoupdate.vbs",
+        "TimeCreated": "2019-05-18 20:43:35.605000+00:00"
+      },
+      "num_events": 705,
+      "event_id_distribution": {
+        "12": 384,
+        "7": 288,
+        "3": 17,
+        "1": 5,
+        "13": 4,
+        "5": 3,
+        "11": 2,
+        "10": 1,
+        "17": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 246,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:25.753000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 247,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:25.753000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 292,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:29.899000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 295,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:30.941000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 328,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:34.978000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 365,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:35.166000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 415,
+          "EventID": 1,
+          "TimeCreated": "2019-05-18 20:43:35.605000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "\"cmd.exe\" /c C:\\windows\\system32\\autoupdate.vbs",
+          "ParentImage": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 418,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.613000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 419,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.614000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 420,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.615000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 423,
+          "EventID": 1,
+          "TimeCreated": "2019-05-18 20:43:35.617000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 426,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.662000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 427,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.663000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 428,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.663000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 429,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.663000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.003",
+      "gt_technique_name": "",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "cmd.exe /c autoupdate.vbs — shell launches VBS"
+    },
+    {
+      "group_id": "T1059_539",
+      "rule_technique_id": "T1059",
+      "rule_technique_name": "Command and Scripting Interpreter",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 539,
+        "EventID": 1,
+        "Image": "C:\\Windows\\System32\\wscript.exe",
+        "CommandLine": "\"C:\\Windows\\System32\\WScript.exe\" \"C:\\windows\\system32\\autoupdate.vbs\" ",
+        "TimeCreated": "2019-05-18 20:43:36.801000+00:00"
+      },
+      "num_events": 799,
+      "event_id_distribution": {
+        "12": 411,
+        "7": 356,
+        "3": 15,
+        "1": 6,
+        "13": 4,
+        "5": 3,
+        "11": 2,
+        "10": 1,
+        "17": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 277,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:28.709000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 279,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:29.325000+00:00",
+          "Image": "C:\\Windows\\system32\\notepad.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 292,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:29.899000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 295,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:30.941000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 313,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:33.819000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 315,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:34.402000+00:00",
+          "Image": "C:\\Windows\\system32\\notepad.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 328,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:34.978000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 365,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:35.166000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 415,
+          "EventID": 1,
+          "TimeCreated": "2019-05-18 20:43:35.605000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "\"cmd.exe\" /c C:\\windows\\system32\\autoupdate.vbs",
+          "ParentImage": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 418,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.613000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 419,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.614000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 420,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.615000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 423,
+          "EventID": 1,
+          "TimeCreated": "2019-05-18 20:43:35.617000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 426,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.662000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 427,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.663000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.005",
+      "gt_technique_name": "",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "wscript.exe executing autoupdate.vbs"
+    },
+    {
+      "group_id": "T1140_1051",
+      "rule_technique_id": "T1140",
+      "rule_technique_name": "Deobfuscate/Decode Files or Information",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 1051,
+        "EventID": 4104,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2019-05-18 20:43:42.991000+00:00"
+      },
+      "num_events": 564,
+      "event_id_distribution": {
+        "7": 356,
+        "4103": 145,
+        "3": 38,
+        "600": 14,
+        "1": 6,
+        "400": 2,
+        "11": 2,
+        "4104": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 307,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:33.785000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 308,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:33.786000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 309,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:33.797000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 310,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:33.799000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 312,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:33.800000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 318,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:34.941000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 322,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:34.942000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 323,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:34.955000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 324,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:34.956000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 327,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:34.957000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 336,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:35.058000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 337,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:35.059000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 338,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:35.060000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 339,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:35.062000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 340,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:35.063000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1140",
+      "gt_technique_name": "",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": true,
+      "gt_notes": "PowerShell script-block decode (EID 4104)"
+    },
+    {
+      "group_id": "T1047_1063",
+      "rule_technique_id": "T1047",
+      "rule_technique_name": "Windows Management Instrumentation",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 1063,
+        "EventID": 5857,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2019-05-18 20:43:43.178000+00:00"
+      },
+      "num_events": 45,
+      "event_id_distribution": {
+        "3": 38,
+        "1": 6,
+        "5857": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 346,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:35.107000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 415,
+          "EventID": 1,
+          "TimeCreated": "2019-05-18 20:43:35.605000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "\"cmd.exe\" /c C:\\windows\\system32\\autoupdate.vbs",
+          "ParentImage": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 417,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:35.606000+00:00",
+          "Image": "C:\\Windows\\System32\\notepad.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 423,
+          "EventID": 1,
+          "TimeCreated": "2019-05-18 20:43:35.617000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 495,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:36.128000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 504,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:36.409000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 521,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:36.673000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 522,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:36.673000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 523,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:36.673000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 539,
+          "EventID": 1,
+          "TimeCreated": "2019-05-18 20:43:36.801000+00:00",
+          "Image": "C:\\Windows\\System32\\wscript.exe",
+          "CommandLine": "\"C:\\Windows\\System32\\WScript.exe\" \"C:\\windows\\system32\\autoupdate.vbs\" ",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 638,
+          "EventID": 1,
+          "TimeCreated": "2019-05-18 20:43:37.895000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -noP -sta -w 1 -enc  SQBGACgAJABQAFMAVgBlAHIAcwBJAE8AbgBUAEEAYgBMAGUALgBQAFMAVgBlAHIAcwBJAG8AbgAuAE0AYQBKAE8AcgAgAC0ARwBlACAAMwApAHsAJAA4AEQ",
+          "ParentImage": "C:\\Windows\\System32\\wscript.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 647,
+          "EventID": 1,
+          "TimeCreated": "2019-05-18 20:43:37.930000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1",
+          "ParentImage": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 746,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:40.589000+00:00",
+          "Image": "C:\\Windows\\System32\\notepad.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 747,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:40.589000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 971,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:42.052000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "",
+      "gt_technique_name": "",
+      "gt_tactic": "",
+      "gt_is_true_positive": false,
+      "gt_notes": "EID 5857 WMI provider load — background, not attack"
+    },
+    {
+      "group_id": "T1047_1597",
+      "rule_technique_id": "T1047",
+      "rule_technique_name": "Windows Management Instrumentation",
+      "confidence": 0.5,
+      "anchor": {
+        "idx": 1597,
+        "EventID": 5858,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2019-05-18 20:43:56.992000+00:00"
+      },
+      "num_events": 43,
+      "event_id_distribution": {
+        "3": 24,
+        "5858": 19
+      },
+      "sample_logs": [
+        {
+          "idx": 1597,
+          "EventID": 5858,
+          "TimeCreated": "2019-05-18 20:43:56.992000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1605,
+          "EventID": 5858,
+          "TimeCreated": "2019-05-18 20:43:56.993000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1607,
+          "EventID": 5858,
+          "TimeCreated": "2019-05-18 20:43:56.993000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1613,
+          "EventID": 5858,
+          "TimeCreated": "2019-05-18 20:43:56.994000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1615,
+          "EventID": 5858,
+          "TimeCreated": "2019-05-18 20:43:56.994000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1619,
+          "EventID": 5858,
+          "TimeCreated": "2019-05-18 20:43:56.995000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1622,
+          "EventID": 5858,
+          "TimeCreated": "2019-05-18 20:43:56.995000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1627,
+          "EventID": 5858,
+          "TimeCreated": "2019-05-18 20:43:56.996000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1630,
+          "EventID": 5858,
+          "TimeCreated": "2019-05-18 20:43:56.996000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1638,
+          "EventID": 5858,
+          "TimeCreated": "2019-05-18 20:43:56.997000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1636,
+          "EventID": 5858,
+          "TimeCreated": "2019-05-18 20:43:56.997000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1640,
+          "EventID": 5858,
+          "TimeCreated": "2019-05-18 20:43:56.998000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1686,
+          "EventID": 5858,
+          "TimeCreated": "2019-05-18 20:43:57.109000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1690,
+          "EventID": 5858,
+          "TimeCreated": "2019-05-18 20:43:57.110000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1692,
+          "EventID": 5858,
+          "TimeCreated": "2019-05-18 20:43:57.110000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "",
+      "gt_technique_name": "",
+      "gt_tactic": "",
+      "gt_is_true_positive": false,
+      "gt_notes": "EID 5858 WMI — background"
+    },
+    {
+      "group_id": "T1059_001_645",
+      "rule_technique_id": "T1059.001",
+      "rule_technique_name": "PowerShell",
+      "confidence": 0.77,
+      "anchor": {
+        "idx": 645,
+        "EventID": 7,
+        "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2019-05-18 20:43:37.928000+00:00"
+      },
+      "num_events": 1042,
+      "event_id_distribution": {
+        "12": 416,
+        "7": 356,
+        "4103": 155,
+        "10": 81,
+        "3": 8,
+        "1": 6,
+        "4656": 5,
+        "13": 4,
+        "4663": 3,
+        "400": 2,
+        "5": 2,
+        "11": 2,
+        "17": 1,
+        "4105": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 271,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:28.676000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 272,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:28.677000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 273,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:28.687000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 274,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:28.690000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 275,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:28.690000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 277,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:28.709000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 279,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:29.325000+00:00",
+          "Image": "C:\\Windows\\system32\\notepad.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 286,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:29.863000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 287,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:29.864000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 288,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:29.875000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 289,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:29.877000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 290,
+          "EventID": 4103,
+          "TimeCreated": "2019-05-18 20:43:29.878000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 292,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:29.899000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 296,
+          "EventID": 4656,
+          "TimeCreated": "2019-05-18 20:43:33.581000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 298,
+          "EventID": 4663,
+          "TimeCreated": "2019-05-18 20:43:33.581000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "powershell.exe image loaded — stager support"
+    },
+    {
+      "group_id": "T1059_003_410",
+      "rule_technique_id": "T1059.003",
+      "rule_technique_name": "Windows Command Shell",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 410,
+        "EventID": 4688,
+        "Image": "nan",
+        "CommandLine": "\"cmd.exe\" /c C:\\windows\\system32\\autoupdate.vbs",
+        "TimeCreated": "2019-05-18 20:43:35.600000+00:00"
+      },
+      "num_events": 365,
+      "event_id_distribution": {
+        "7": 356,
+        "1": 6,
+        "11": 2,
+        "4688": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 410,
+          "EventID": 4688,
+          "TimeCreated": "2019-05-18 20:43:35.600000+00:00",
+          "Image": "nan",
+          "CommandLine": "\"cmd.exe\" /c C:\\windows\\system32\\autoupdate.vbs",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 415,
+          "EventID": 1,
+          "TimeCreated": "2019-05-18 20:43:35.605000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "\"cmd.exe\" /c C:\\windows\\system32\\autoupdate.vbs",
+          "ParentImage": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 418,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.613000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 419,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.614000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 420,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.615000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 423,
+          "EventID": 1,
+          "TimeCreated": "2019-05-18 20:43:35.617000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 426,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.662000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 429,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.663000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 431,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.663000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 427,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.663000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 428,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.663000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 432,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.664000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 433,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.664000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 434,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.664000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 435,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.664000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.003",
+      "gt_technique_name": "",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "cmd.exe creates wscript autoupdate.vbs (EID 4688 dup of above)"
+    },
+    {
+      "group_id": "T1059_005_585",
+      "rule_technique_id": "T1059.005",
+      "rule_technique_name": "Visual Basic",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 585,
+        "EventID": 7,
+        "Image": "C:\\Windows\\System32\\wscript.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2019-05-18 20:43:37.223000+00:00"
+      },
+      "num_events": 800,
+      "event_id_distribution": {
+        "12": 412,
+        "7": 356,
+        "3": 15,
+        "1": 6,
+        "13": 4,
+        "5": 3,
+        "11": 2,
+        "10": 1,
+        "17": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 277,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:28.709000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 279,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:29.325000+00:00",
+          "Image": "C:\\Windows\\system32\\notepad.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 292,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:29.899000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 295,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:30.941000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 313,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:33.819000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 315,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:34.402000+00:00",
+          "Image": "C:\\Windows\\system32\\notepad.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 328,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:34.978000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 365,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:35.166000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 415,
+          "EventID": 1,
+          "TimeCreated": "2019-05-18 20:43:35.605000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "\"cmd.exe\" /c C:\\windows\\system32\\autoupdate.vbs",
+          "ParentImage": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 418,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.613000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 419,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.614000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 420,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.615000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 423,
+          "EventID": 1,
+          "TimeCreated": "2019-05-18 20:43:35.617000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 426,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.662000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 427,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.663000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.005",
+      "gt_technique_name": "",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "wscript.exe image load for VBS exec"
+    },
+    {
+      "group_id": "T1071_001_8",
+      "rule_technique_id": "T1071.001",
+      "rule_technique_name": "Web Protocols",
+      "confidence": 0.33,
+      "anchor": {
+        "idx": 8,
+        "EventID": 3,
+        "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2019-05-18 20:42:59.045000+00:00"
+      },
+      "num_events": 70,
+      "event_id_distribution": {
+        "5156": 24,
+        "12": 24,
+        "3": 22
+      },
+      "sample_logs": [
+        {
+          "idx": 8,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:42:59.045000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 11,
+          "EventID": 5156,
+          "TimeCreated": "2019-05-18 20:42:59.050000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 13,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:42:59.070000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 14,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:42:59.831000+00:00",
+          "Image": "C:\\Windows\\System32\\notepad.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 37,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:00.097000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 38,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:01.520000+00:00",
+          "Image": "C:\\Windows\\system32\\wbem\\wmiprvse.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Wbem\\CIMOM"
+        },
+        {
+          "idx": 50,
+          "EventID": 5156,
+          "TimeCreated": "2019-05-18 20:43:02.988000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 51,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:03.007000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 52,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:03.902000+00:00",
+          "Image": "C:\\Windows\\system32\\notepad.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 53,
+          "EventID": 5156,
+          "TimeCreated": "2019-05-18 20:43:03.902000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 65,
+          "EventID": 5156,
+          "TimeCreated": "2019-05-18 20:43:04.159000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 66,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:04.179000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 67,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:04.238000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 68,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:05.019000+00:00",
+          "Image": "C:\\Windows\\System32\\notepad.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 69,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:05.269000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1071.001",
+      "gt_technique_name": "",
+      "gt_tactic": "Command and Control",
+      "gt_is_true_positive": true,
+      "gt_notes": "PowerShell outbound HTTP — Empire agent C2"
+    },
+    {
+      "group_id": "T1071_001_100",
+      "rule_technique_id": "T1071.001",
+      "rule_technique_name": "Web Protocols",
+      "confidence": 0.83,
+      "anchor": {
+        "idx": 100,
+        "EventID": 3,
+        "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2019-05-18 20:43:10.425000+00:00"
+      },
+      "num_events": 339,
+      "event_id_distribution": {
+        "7": 213,
+        "12": 61,
+        "5156": 30,
+        "3": 23,
+        "1": 4,
+        "13": 4,
+        "5": 3,
+        "5158": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 38,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:01.520000+00:00",
+          "Image": "C:\\Windows\\system32\\wbem\\wmiprvse.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Wbem\\CIMOM"
+        },
+        {
+          "idx": 50,
+          "EventID": 5156,
+          "TimeCreated": "2019-05-18 20:43:02.988000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 51,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:03.007000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 52,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:03.902000+00:00",
+          "Image": "C:\\Windows\\system32\\notepad.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 53,
+          "EventID": 5156,
+          "TimeCreated": "2019-05-18 20:43:03.902000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 65,
+          "EventID": 5156,
+          "TimeCreated": "2019-05-18 20:43:04.159000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 66,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:04.179000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 67,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:04.238000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 68,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:05.019000+00:00",
+          "Image": "C:\\Windows\\System32\\notepad.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 69,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:05.269000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 80,
+          "EventID": 5156,
+          "TimeCreated": "2019-05-18 20:43:08.113000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 82,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:08.133000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 83,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:08.980000+00:00",
+          "Image": "C:\\Windows\\system32\\notepad.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 84,
+          "EventID": 5156,
+          "TimeCreated": "2019-05-18 20:43:08.980000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 85,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:09.144000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1071.001",
+      "gt_technique_name": "",
+      "gt_tactic": "Command and Control",
+      "gt_is_true_positive": true,
+      "gt_notes": "PowerShell outbound HTTP — Empire C2"
+    },
+    {
+      "group_id": "T1071_001_185",
+      "rule_technique_id": "T1071.001",
+      "rule_technique_name": "Web Protocols",
+      "confidence": 0.83,
+      "anchor": {
+        "idx": 185,
+        "EventID": 3,
+        "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2019-05-18 20:43:19.519000+00:00"
+      },
+      "num_events": 910,
+      "event_id_distribution": {
+        "12": 432,
+        "7": 356,
+        "5156": 62,
+        "3": 53,
+        "13": 4,
+        "5158": 3
+      },
+      "sample_logs": [
+        {
+          "idx": 99,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:10.159000+00:00",
+          "Image": "C:\\Windows\\System32\\notepad.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 100,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:10.425000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 113,
+          "EventID": 5156,
+          "TimeCreated": "2019-05-18 20:43:13.206000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 114,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:13.225000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 120,
+          "EventID": 5156,
+          "TimeCreated": "2019-05-18 20:43:14.058000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 121,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:14.058000+00:00",
+          "Image": "C:\\Windows\\system32\\notepad.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 133,
+          "EventID": 5156,
+          "TimeCreated": "2019-05-18 20:43:14.332000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 134,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:14.353000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 135,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:14.353000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 136,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:15.113000+00:00",
+          "Image": "C:\\Windows\\System32\\notepad.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 154,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:15.363000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 155,
+          "EventID": 5156,
+          "TimeCreated": "2019-05-18 20:43:16.302000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 167,
+          "EventID": 5156,
+          "TimeCreated": "2019-05-18 20:43:18.300000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 169,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:18.321000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 170,
+          "EventID": 5156,
+          "TimeCreated": "2019-05-18 20:43:19.167000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1071.001",
+      "gt_technique_name": "",
+      "gt_tactic": "Command and Control",
+      "gt_is_true_positive": true,
+      "gt_notes": "PowerShell outbound HTTP — Empire C2"
+    },
+    {
+      "group_id": "T1071_001_495",
+      "rule_technique_id": "T1071.001",
+      "rule_technique_name": "Web Protocols",
+      "confidence": 0.83,
+      "anchor": {
+        "idx": 495,
+        "EventID": 3,
+        "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2019-05-18 20:43:36.128000+00:00"
+      },
+      "num_events": 866,
+      "event_id_distribution": {
+        "12": 415,
+        "7": 356,
+        "5156": 43,
+        "3": 35,
+        "1": 4,
+        "13": 4,
+        "5158": 3,
+        "5": 3,
+        "11": 2,
+        "17": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 276,
+          "EventID": 5156,
+          "TimeCreated": "2019-05-18 20:43:28.691000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 277,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:28.709000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 278,
+          "EventID": 5156,
+          "TimeCreated": "2019-05-18 20:43:29.325000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 279,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:29.325000+00:00",
+          "Image": "C:\\Windows\\system32\\notepad.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 291,
+          "EventID": 5156,
+          "TimeCreated": "2019-05-18 20:43:29.878000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 292,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:29.899000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 293,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:29.915000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 294,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:30.425000+00:00",
+          "Image": "C:\\Windows\\System32\\notepad.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 295,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:30.941000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 311,
+          "EventID": 5156,
+          "TimeCreated": "2019-05-18 20:43:33.800000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 313,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:33.819000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 315,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:34.402000+00:00",
+          "Image": "C:\\Windows\\system32\\notepad.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 314,
+          "EventID": 5156,
+          "TimeCreated": "2019-05-18 20:43:34.402000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 326,
+          "EventID": 5156,
+          "TimeCreated": "2019-05-18 20:43:34.957000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 328,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:34.978000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        }
+      ],
+      "gt_technique_id": "T1071.001",
+      "gt_technique_name": "",
+      "gt_tactic": "Command and Control",
+      "gt_is_true_positive": true,
+      "gt_notes": "PowerShell outbound HTTP — Empire C2"
+    },
+    {
+      "group_id": "T1071_001_1545",
+      "rule_technique_id": "T1071.001",
+      "rule_technique_name": "Web Protocols",
+      "confidence": 0.5,
+      "anchor": {
+        "idx": 1545,
+        "EventID": 3,
+        "Image": "C:\\Windows\\System32\\notepad.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2019-05-18 20:43:55.909000+00:00"
+      },
+      "num_events": 201,
+      "event_id_distribution": {
+        "7": 82,
+        "12": 55,
+        "5156": 33,
+        "3": 31
+      },
+      "sample_logs": [
+        {
+          "idx": 1299,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:45.993000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1300,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:46.050000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKCR"
+        },
+        {
+          "idx": 1301,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:46.051000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Wbem"
+        },
+        {
+          "idx": 1302,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:46.051000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft"
+        },
+        {
+          "idx": 1303,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:46.051000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE"
+        },
+        {
+          "idx": 1304,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:46.051000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE"
+        },
+        {
+          "idx": 1305,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:46.051000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1306,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:46.051000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1307,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:46.051000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft"
+        },
+        {
+          "idx": 1308,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:46.051000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Wbem"
+        },
+        {
+          "idx": 1309,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:46.080000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1310,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:46.167000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1311,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:46.204000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1312,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:46.210000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1313,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:46.210000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\Tcpip\\Parameters"
+        }
+      ],
+      "gt_technique_id": "",
+      "gt_technique_name": "",
+      "gt_tactic": "",
+      "gt_is_true_positive": false,
+      "gt_notes": "notepad.exe EID 3 — ambiguous, not core to Invoke-RunAs chain"
+    },
+    {
+      "group_id": "T1071_001_1796",
+      "rule_technique_id": "T1071.001",
+      "rule_technique_name": "Web Protocols",
+      "confidence": 0.33,
+      "anchor": {
+        "idx": 1796,
+        "EventID": 3,
+        "Image": "C:\\Windows\\System32\\notepad.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2019-05-18 20:44:01.066000+00:00"
+      },
+      "num_events": 140,
+      "event_id_distribution": {
+        "5156": 48,
+        "12": 46,
+        "3": 46
+      },
+      "sample_logs": [
+        {
+          "idx": 1491,
+          "EventID": 5156,
+          "TimeCreated": "2019-05-18 20:43:51.409000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1493,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:51.429000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 1503,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:52.294000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\.DEFAULT\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 1506,
+          "EventID": 5156,
+          "TimeCreated": "2019-05-18 20:43:52.297000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1507,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:52.550000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1510,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:53.316000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1516,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:54.825000+00:00",
+          "Image": "C:\\Windows\\system32\\notepad.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 1517,
+          "EventID": 5156,
+          "TimeCreated": "2019-05-18 20:43:54.825000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1528,
+          "EventID": 5156,
+          "TimeCreated": "2019-05-18 20:43:54.972000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1530,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:54.992000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 1545,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:55.909000+00:00",
+          "Image": "C:\\Windows\\System32\\notepad.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1546,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:56.175000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1557,
+          "EventID": 5156,
+          "TimeCreated": "2019-05-18 20:43:56.487000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1559,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:56.505000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 1741,
+          "EventID": 5156,
+          "TimeCreated": "2019-05-18 20:43:57.379000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "",
+      "gt_technique_name": "",
+      "gt_tactic": "",
+      "gt_is_true_positive": false,
+      "gt_notes": "notepad.exe EID 3 — ambiguous, excluded conservatively"
+    },
+    {
+      "group_id": "T1112_633",
+      "rule_technique_id": "T1112",
+      "rule_technique_name": "Modify Registry",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 633,
+        "EventID": 13,
+        "Image": "C:\\Windows\\System32\\WScript.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2019-05-18 20:43:37.885000+00:00"
+      },
+      "num_events": 708,
+      "event_id_distribution": {
+        "12": 386,
+        "7": 288,
+        "3": 16,
+        "1": 6,
+        "13": 4,
+        "5": 3,
+        "10": 2,
+        "11": 2,
+        "17": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 292,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:29.899000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 295,
+          "EventID": 3,
+          "TimeCreated": "2019-05-18 20:43:30.941000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 328,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:34.978000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 365,
+          "EventID": 12,
+          "TimeCreated": "2019-05-18 20:43:35.166000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-2511471446-1103646877-3980648787-1106\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 415,
+          "EventID": 1,
+          "TimeCreated": "2019-05-18 20:43:35.605000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "\"cmd.exe\" /c C:\\windows\\system32\\autoupdate.vbs",
+          "ParentImage": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 418,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.613000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 419,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.614000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 420,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.615000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 423,
+          "EventID": 1,
+          "TimeCreated": "2019-05-18 20:43:35.617000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 426,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.662000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 427,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.663000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 428,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.663000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 429,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.663000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 431,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.663000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 432,
+          "EventID": 7,
+          "TimeCreated": "2019-05-18 20:43:35.664000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "",
+      "gt_technique_name": "",
+      "gt_tactic": "",
+      "gt_is_true_positive": false,
+      "gt_notes": "wscript registry modify — not part of Invoke-RunAs core chain"
+    }
+  ]
+}

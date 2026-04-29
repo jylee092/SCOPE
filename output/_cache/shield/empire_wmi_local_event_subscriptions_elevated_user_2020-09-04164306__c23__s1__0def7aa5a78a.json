@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities for SearchIndexer.exe and wermgr.exe, including registry modifications, DLL loads, and pipe creation, are consistent with their legitimate functions as Windows system processes, and no suspicious command lines or other attack patterns were identified.\"\n}"}

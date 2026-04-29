@@ -1,0 +1,1006 @@
+{
+  "scenario": "empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod_2020-09-21001437",
+  "tactic_sequence": [
+    "Privilege Escalation",
+    "Impact",
+    "Privilege Escalation",
+    "Impact",
+    "Privilege Escalation",
+    "Execution",
+    "Defense Evasion",
+    "Privilege Escalation",
+    "Execution",
+    "Impact",
+    "Discovery",
+    "Defense Evasion",
+    "Impact",
+    "Privilege Escalation",
+    "Impact"
+  ],
+  "technique_sequence": [
+    "T1133",
+    "T1531",
+    "T1133",
+    "T1531",
+    "T1133",
+    "T1059.001",
+    "T1202",
+    "T1133",
+    "T1059.001",
+    "T1531",
+    "T1033",
+    "T1201",
+    "T1027",
+    "T1531",
+    "T1133",
+    "T1531"
+  ],
+  "per_group_topk": [
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1059.001",
+      "T1047"
+    ],
+    [
+      "T1202"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001",
+      "T1562.001"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1033",
+      "T1087.001"
+    ],
+    [
+      "T1201"
+    ],
+    [
+      "T1027",
+      "T1059.001"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ]
+  ],
+  "notes": {
+    "n_events_evaluated": 3229,
+    "n_alerts": 45,
+    "alerts": [
+      {
+        "ts": "2020-09-21 04:14:38.810000+00:00",
+        "event_index": 11,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:14:38.811000+00:00",
+        "event_index": 15,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:14:38.813000+00:00",
+        "event_index": 21,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:14:38.814000+00:00",
+        "event_index": 24,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:14:53.948000+00:00",
+        "event_index": 226,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:14:55.050000+00:00",
+        "event_index": 368,
+        "event_id": 1,
+        "topk_tids": [
+          "T1059.001",
+          "T1047"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "c86133ad-4725-4bd0-8170-210788e0a7ba",
+          "title": "Net WebClient Casing Anomalies",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:14:55.054000+00:00",
+        "event_index": 375,
+        "event_id": 1,
+        "topk_tids": [
+          "T1202"
+        ],
+        "topk_tactics": [
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "3037d961-21e9-4732-b27a-637bcc7bf539",
+          "title": "Suspicious High IntegrityLevel Conhost Legacy Option",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:14:55.108000+00:00",
+        "event_index": 491,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:14:55.113000+00:00",
+        "event_index": 501,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:14:55.116000+00:00",
+        "event_index": 508,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:14:55.119000+00:00",
+        "event_index": 514,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:14:55.136000+00:00",
+        "event_index": 551,
+        "event_id": 4688,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "79f4ede3-402e-41c8-bc3e-ebbf5f162581",
+          "title": "HackTool - Empire PowerShell Launch Parameters",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:14:56.293000+00:00",
+        "event_index": 906,
+        "event_id": 17,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "ac7102b4-9e1e-4802-9b4f-17c5524c015c",
+          "title": "New PowerShell Instance Created",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:14:56.312000+00:00",
+        "event_index": 940,
+        "event_id": 4104,
+        "topk_tids": [
+          "T1059.001",
+          "T1562.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "ae7fbf8e-f3cb-49fd-8db4-5f3bed522c71",
+          "title": "Suspicious PowerShell Invocations - Specific",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:15:05.585000+00:00",
+        "event_index": 1388,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:15:06.585000+00:00",
+        "event_index": 1408,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:15:14.694000+00:00",
+        "event_index": 1583,
+        "event_id": 1,
+        "topk_tids": [
+          "T1033",
+          "T1087.001"
+        ],
+        "topk_tactics": [
+          "Discovery",
+          "Discovery"
+        ],
+        "top_rule": {
+          "rule_id": "502b42de-4306-40b4-9596-6f590c81f073",
+          "title": "Local Accounts Discovery",
+          "level": "low",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:15:15.829000+00:00",
+        "event_index": 1892,
+        "event_id": 4104,
+        "topk_tids": [
+          "T1201"
+        ],
+        "topk_tactics": [
+          "Discovery"
+        ],
+        "top_rule": {
+          "rule_id": "bbb9495b-58fc-4016-b9df-9a3a1b67ca82",
+          "title": "Password Policy Discovery With Get-AdDefaultDomainPasswordPolicy",
+          "level": "low",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:15:18.375000+00:00",
+        "event_index": 3258,
+        "event_id": 4104,
+        "topk_tids": [
+          "T1027",
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "96cd126d-f970-49c4-848a-da3a09f55c55",
+          "title": "Potential PowerShell Obfuscation Using Alias Cmdlets",
+          "level": "low",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:15:19.452000+00:00",
+        "event_index": 3426,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:15:19.452000+00:00",
+        "event_index": 3427,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:15:20.733000+00:00",
+        "event_index": 4132,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:15:20.733000+00:00",
+        "event_index": 4133,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:15:20.734000+00:00",
+        "event_index": 4134,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:15:20.734000+00:00",
+        "event_index": 4135,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:15:20.734000+00:00",
+        "event_index": 4136,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:15:20.734000+00:00",
+        "event_index": 4137,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:15:20.735000+00:00",
+        "event_index": 4138,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:15:20.736000+00:00",
+        "event_index": 4139,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:15:20.736000+00:00",
+        "event_index": 4140,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:15:20.736000+00:00",
+        "event_index": 4141,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:15:20.736000+00:00",
+        "event_index": 4142,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:15:20.736000+00:00",
+        "event_index": 4143,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:15:23.143000+00:00",
+        "event_index": 5206,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:15:23.147000+00:00",
+        "event_index": 5215,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:15:23.148000+00:00",
+        "event_index": 5218,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:15:23.150000+00:00",
+        "event_index": 5226,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:15:23.154000+00:00",
+        "event_index": 5235,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:15:23.155000+00:00",
+        "event_index": 5237,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:15:23.156000+00:00",
+        "event_index": 5239,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:15:23.157000+00:00",
+        "event_index": 5242,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:15:23.157000+00:00",
+        "event_index": 5244,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:15:23.158000+00:00",
+        "event_index": 5245,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:15:38.353000+00:00",
+        "event_index": 5554,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-21 04:15:38.354000+00:00",
+        "event_index": 5556,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      }
+    ]
+  }
+}

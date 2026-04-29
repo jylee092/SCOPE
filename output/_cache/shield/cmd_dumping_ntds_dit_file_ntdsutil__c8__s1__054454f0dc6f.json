@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is performing actions consistent with legitimate Windows services, including writing telemetry data and managing various system and client state registry keys, with no notable command lines or other suspicious indicators present.\"\n}"}

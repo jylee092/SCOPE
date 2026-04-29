@@ -1,0 +1,104 @@
+{
+  "scenario": "psh_lsass_memory_dump_comsvcs_2020-10-18T19500924",
+  "tactic_sequence": [
+    "Persistence",
+    "Credential Access"
+  ],
+  "technique_sequence": [
+    "T1547.001",
+    "T1003.001"
+  ],
+  "per_group_topk": [
+    [
+      "T1547.001"
+    ],
+    [
+      "T1003.001",
+      "T1218.011"
+    ]
+  ],
+  "notes": {
+    "n_total_events": 184,
+    "n_filtered_events": 184,
+    "n_lof_anomalous": 8,
+    "n_communities": 8,
+    "n_alerts": 2,
+    "alerts": [
+      {
+        "ts": "2020-10-18 07:50:00",
+        "community_id": 3,
+        "n_members": 3,
+        "confidence": 0.85,
+        "topk_tids": [
+          "T1547.001"
+        ],
+        "topk_tactics": [
+          "Persistence"
+        ],
+        "kill_chain_stages": [
+          "Persistence"
+        ],
+        "summary": "A suspicious svchost.exe instance created an unknown registry key 'VFUProvider' under HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion, a sensitive location. This activity, including setting a 'StartTime' value, strongly suggests an attempt to establish persistence or configure a malicious component. While a full attack chain is not visible, this behavior is a significant indicator of compromise.",
+        "event_indices": [
+          28,
+          29
+        ]
+      },
+      {
+        "ts": "2020-10-18 07:50:05",
+        "community_id": 0,
+        "n_members": 31,
+        "confidence": 0.95,
+        "topk_tids": [
+          "T1003.001",
+          "T1218.011"
+        ],
+        "topk_tactics": [
+          "Credential Access",
+          "Defense Evasion"
+        ],
+        "kill_chain_stages": [
+          "Credential Access",
+          "Defense Evasion",
+          "Execution"
+        ],
+        "summary": "A malicious process used rundll32.exe to load comsvcs.dll and execute its MiniDump function, targeting LSASS. This action resulted in the creation of a memory dump file, C:\\Users\\wardog\\AppData\\Local\\Temp\\lsass-comsvcs.dmp, indicating a successful attempt at credential dumping.",
+        "event_indices": [
+          97,
+          100,
+          101,
+          102,
+          103,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          116,
+          117,
+          118,
+          119,
+          120,
+          121,
+          122,
+          123,
+          124,
+          125,
+          129,
+          130,
+          133,
+          134,
+          135,
+          145,
+          146,
+          150,
+          151,
+          154,
+          156
+        ]
+      }
+    ],
+    "elapsed_sec": 92.9
+  }
+}

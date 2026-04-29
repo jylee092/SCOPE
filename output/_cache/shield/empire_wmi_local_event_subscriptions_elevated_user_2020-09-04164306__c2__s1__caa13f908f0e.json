@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[lsass.exe|{860ba2e3-a72]\"\n  ],\n  \"rationale\": \"The lsass.exe process instance with ID {860ba2e3-a72} is highly suspicious because it performs a write operation to C:\\\\Windows\\\\debug\\\\PASSWD.LOG, which"}

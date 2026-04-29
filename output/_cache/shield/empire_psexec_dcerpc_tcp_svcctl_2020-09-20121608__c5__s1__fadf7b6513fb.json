@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed processes, command lines, loaded modules, registry interactions, and named pipe connections are consistent with normal Windows operating system behavior, particularly for WMI services, and do not exhibit any specific indicators of compromise or known attack patterns.\"\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[svchost.exe|{39e4a257-f13]\"\n  ],\n  \"rationale\": \"The svchost.exe process is creating inbound firewall rules to allow network connections to a Python executable located in a user's AppData directory, which is a common technique for establishing persistence or command and control.\"\n}"}

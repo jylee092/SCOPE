@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The process vssvc.exe is a legitimate Windows service, and all observed registry modifications and pipe connections are consistent with its normal operation, primarily involving VSS diagnostic keys and the workstation service pipe, with no notable command lines or other indicators of compromise present.\"\n}"}

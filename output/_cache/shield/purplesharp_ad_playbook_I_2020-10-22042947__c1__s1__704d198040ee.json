@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[PurpleSharp.exe|{313fa531-430]\",\n    \"P[cmd.exe|{313fa531-42a]\"\n  ],\n  \"rationale\": \"The process 'PurpleSharp.exe' is highly suspicious due to its name, command-line arguments explicitly listing"}

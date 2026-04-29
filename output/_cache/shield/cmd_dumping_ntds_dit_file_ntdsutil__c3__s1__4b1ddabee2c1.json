@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is performing routine registry operations related to user application data and host activity management, and no command-line arguments, child processes, or other indicators of compromise are present.\"\n}"}

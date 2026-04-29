@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[svchost.exe|{aa6b4a20-e96]\",\n    \"P[svchost.exe|{905CC552-204]\"\n  ],\n  \"rationale\": \"Both svchost.exe processes are making repeated outbound connections to an external IP address on port 5985 (WinRM), which is a common protocol abused by attackers for command and control or lateral movement.\"\n}"}

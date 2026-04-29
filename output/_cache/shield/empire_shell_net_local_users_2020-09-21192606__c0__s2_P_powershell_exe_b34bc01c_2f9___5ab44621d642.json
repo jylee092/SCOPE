@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"PowerShell executed 'net.exe user', which is a common command-line utility used for local user enumeration, a known reconnaissance technique often employed by attackers.\",\n  \"indicators\": [\n    \"powershell\",\n    \"net.exe\",\n    \"user enumeration\",\n    \"reconnaissance\"\n  ]\n}"}

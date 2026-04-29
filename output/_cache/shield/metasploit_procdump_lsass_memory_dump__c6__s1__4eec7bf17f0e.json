@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[Explorer.EXE|{19de6d3b-d62]\"\n  ],\n  \"rationale\": \"The process Explorer.EXE loaded 'sendmail.dll', which is an unusual and suspicious DLL for a core Windows shell process, potentially indicating code injection or malware.\"\n}"}

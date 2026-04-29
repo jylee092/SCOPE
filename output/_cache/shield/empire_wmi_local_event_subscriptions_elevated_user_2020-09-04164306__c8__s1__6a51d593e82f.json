@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed registry and file operations by svchost.exe and RuntimeBroker.exe are consistent with normal Windows operating system behavior, involving legitimate system and application data paths, with no suspicious command lines, unauthorized writes, or other attack patterns detected.\"\n}"}

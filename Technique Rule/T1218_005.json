@@ -1,0 +1,48 @@
+{
+  "technique": { "id": "T1218.005", "name": "Mshta" },
+  "detection": { "id": "DET-T1218005" },
+  "analysis": { "id": "AN-T1218005" },
+  "log_sources": {
+    "Anchor Event": {
+      "data_component": { "id": "DC0032", "name": "Process Creation" },
+      "description": "mshta.exe 실행 — HTML Application 호스트.",
+      "conditions": [
+        {
+          "type": "mshta_process",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [1] },
+          "filters": {
+            "Image": { "contains": "mshta.exe" }
+          },
+          "description": "mshta.exe 프로세스 생성."
+        },
+        {
+          "type": "mshta_security",
+          "source": "WinEventLog:Security",
+          "channel": { "event_codes": [4688] },
+          "filters": {
+            "NewProcessName": { "contains": "mshta.exe" }
+          },
+          "description": "Security 채널 fallback."
+        }
+      ]
+    },
+    "Supporting Events": [
+      { "data_component": { "id": "DC0032", "name": "Process Creation" }, "source": "WinEventLog:Sysmon", "channel": { "event_codes": [1] }, "filters": { "ParentImage": { "contains": "mshta.exe" } }, "description": "mshta의 자식 프로세스 (powershell/cmd 등)" },
+      { "data_component": { "id": "DC0082", "name": "Network Connection Creation" }, "source": "WinEventLog:Sysmon", "channel": { "event_codes": [3] }, "filters": { "Image": { "contains": "mshta.exe" } }, "description": "원격 HTA/스크립트 다운로드" }
+    ]
+  },
+  "mutable_elements": {
+    "grouping_logic": {
+      "primary_anchor_eids": [1, 4688],
+      "correlation_key": { "primary": ["Hostname", "ProcessGuid"], "fallback": ["Hostname"] },
+      "time_window": { "before_seconds": 30, "after_seconds": 120 }
+    },
+    "feature_extraction_filters": {
+      "suspicious_mshta_args": ["http://", "https://", "javascript:", "vbscript:", ".hta", "GetObject"]
+    },
+    "semantic_templates": {
+      "mshta_exec": "프로세스({ParentImage})가 mshta.exe로 {CommandLine}을 실행하여 HTA/JS/VBS 페이로드를 호출함."
+    }
+  }
+}

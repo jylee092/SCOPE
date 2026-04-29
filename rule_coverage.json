@@ -1,0 +1,2263 @@
+{
+  "rules_available": [
+    "T1003",
+    "T1003.001",
+    "T1016",
+    "T1018",
+    "T1021.002",
+    "T1021.003",
+    "T1021.006",
+    "T1027",
+    "T1033",
+    "T1036.005",
+    "T1037.001",
+    "T1047",
+    "T1049",
+    "T1053.005",
+    "T1055",
+    "T1057",
+    "T1059",
+    "T1059.001",
+    "T1059.003",
+    "T1059.005",
+    "T1069.002",
+    "T1070.001",
+    "T1070.004",
+    "T1071.001",
+    "T1082",
+    "T1083",
+    "T1087.001",
+    "T1087.002",
+    "T1105",
+    "T1112",
+    "T1123",
+    "T1134",
+    "T1140",
+    "T1204.002",
+    "T1218.003",
+    "T1218.005",
+    "T1218.011",
+    "T1482",
+    "T1543.003",
+    "T1546.003",
+    "T1546.015",
+    "T1547.001",
+    "T1548.002",
+    "T1558.003",
+    "T1560.001",
+    "T1562.001"
+  ],
+  "num_scenarios": 37,
+  "scenarios": [
+    {
+      "scenario": "msf_record_mic",
+      "group": "atomic",
+      "tactic": "collection",
+      "json_path": "Dataset\\atomic\\collection\\msf_record_mic\\msf_record_mic_2020-06-09225055.json",
+      "total_events": 6202,
+      "top_eids": {
+        "10": 1929,
+        "12": 1806,
+        "13": 806,
+        "7": 580,
+        "5156": 143,
+        "4703": 119,
+        "4658": 114,
+        "5447": 96,
+        "23": 87,
+        "5158": 77
+      },
+      "techniques_from_filename": [
+        "T1059.001",
+        "T1123"
+      ],
+      "techniques_from_log": [],
+      "techniques_union": [
+        "T1059.001",
+        "T1070.004",
+        "T1123"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1059.001",
+          "T1070.004",
+          "T1123"
+        ],
+        "covered_parent": [],
+        "uncovered": []
+      },
+      "evidence_samples": []
+    },
+    {
+      "scenario": "cmd_dumping_ntds_dit_file_ntdsutil",
+      "group": "atomic",
+      "tactic": "credential_access",
+      "json_path": "Dataset\\atomic\\credential_access\\cmd_dumping_ntds_dit_file_ntdsutil\\cmd_dumping_ntds_dit_file_ntdsutil.json",
+      "total_events": 11184,
+      "top_eids": {
+        "10": 7495,
+        "12": 653,
+        "4658": 456,
+        "7": 437,
+        "4661": 372,
+        "13": 340,
+        "9": 223,
+        "4799": 186,
+        "5156": 148,
+        "3": 93
+      },
+      "techniques_from_filename": [
+        "T1003.003"
+      ],
+      "techniques_from_log": [
+        "T1003.003",
+        "T1070.001"
+      ],
+      "techniques_union": [
+        "T1003.003",
+        "T1070.001",
+        "T1070.004"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1070.001",
+          "T1070.004"
+        ],
+        "covered_parent": [
+          "T1003.003"
+        ],
+        "uncovered": []
+      },
+      "evidence_samples": [
+        {
+          "tid": "T1003.003",
+          "label": "NTDS dump (ntdsutil)",
+          "sample": "ntdsutil  \"ac i ntds\" \"ifm\" \"create full c:\\windows\\temp\\ntds_t1003\" q q"
+        },
+        {
+          "tid": "T1070.001",
+          "label": "EID 104 log cleared",
+          "sample": ""
+        }
+      ]
+    },
+    {
+      "scenario": "cmd_sam_copy_esentutl",
+      "group": "atomic",
+      "tactic": "credential_access",
+      "json_path": "Dataset\\atomic\\credential_access\\cmd_sam_copy_esentutl\\cmd_sam_copy_esentutl_2020-10-1900290001.json",
+      "total_events": 915,
+      "top_eids": {
+        "10": 245,
+        "13": 208,
+        "4799": 186,
+        "9": 117,
+        "12": 77,
+        "7": 55,
+        "11": 4,
+        "5156": 2,
+        "5158": 2,
+        "4689": 2
+      },
+      "techniques_from_filename": [
+        "T1003.002"
+      ],
+      "techniques_from_log": [
+        "T1003.002",
+        "T1070.001"
+      ],
+      "techniques_union": [
+        "T1003.002",
+        "T1070.001"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1070.001"
+        ],
+        "covered_parent": [
+          "T1003.002"
+        ],
+        "uncovered": []
+      },
+      "evidence_samples": [
+        {
+          "tid": "T1003.002",
+          "label": "SAM copy (esentutl)",
+          "sample": "esentutl.exe  /y /vss c:\\windows/system32/config/sam /d c:\\programdata\\sam"
+        },
+        {
+          "tid": "T1070.001",
+          "label": "EID 1102 log cleared",
+          "sample": ""
+        }
+      ]
+    },
+    {
+      "scenario": "empire_mimikatz_logonpasswords",
+      "group": "atomic",
+      "tactic": "credential_access",
+      "json_path": "Dataset\\atomic\\credential_access\\empire_mimikatz_logonpasswords\\empire_mimikatz_logonpasswords_2020-08-07103224.json",
+      "total_events": 6026,
+      "top_eids": {
+        "800": 2940,
+        "4103": 1695,
+        "10": 272,
+        "5156": 211,
+        "5158": 195,
+        "12": 154,
+        "3": 90,
+        "4658": 86,
+        "7": 81,
+        "4656": 49
+      },
+      "techniques_from_filename": [
+        "T1003.001",
+        "T1059.001"
+      ],
+      "techniques_from_log": [],
+      "techniques_union": [
+        "T1003.001",
+        "T1059.001"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1003.001",
+          "T1059.001"
+        ],
+        "covered_parent": [],
+        "uncovered": []
+      },
+      "evidence_samples": []
+    },
+    {
+      "scenario": "empire_shell_rubeus_asktgt_createnetonly",
+      "group": "atomic",
+      "tactic": "credential_access",
+      "json_path": "Dataset\\atomic\\credential_access\\empire_shell_rubeus_asktgt_createnetonly\\empire_shell_rubeus_asktgt_createnetonly_2020-09-21230246.json",
+      "total_events": 3590,
+      "top_eids": {
+        "7": 695,
+        "10": 580,
+        "12": 569,
+        "13": 327,
+        "4703": 305,
+        "800": 151,
+        "4658": 146,
+        "4103": 129,
+        "18": 107,
+        "4656": 92
+      },
+      "techniques_from_filename": [
+        "T1059.001",
+        "T1558.003"
+      ],
+      "techniques_from_log": [
+        "T1003.001",
+        "T1558.003"
+      ],
+      "techniques_union": [
+        "T1003.001",
+        "T1059.001",
+        "T1558.003"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1003.001",
+          "T1059.001",
+          "T1558.003"
+        ],
+        "covered_parent": [],
+        "uncovered": []
+      },
+      "evidence_samples": [
+        {
+          "tid": "T1558.003",
+          "label": "Rubeus ticket",
+          "sample": "\"c:\\users\\sbeavers\\desktop\\rubeus.exe\" asktgt /user:pgustavo /rc4:81d310fa34e6a56a31145445891bb7b8 /createnetonly:c:\\windows\\system32\\cmd.exe"
+        },
+        {
+          "tid": "T1003.001",
+          "label": "LSASS access 0x3000",
+          "sample": "c:\\windows\\system32\\svchost.exe -> c:\\windows\\system32\\lsass.exe"
+        }
+      ]
+    },
+    {
+      "scenario": "psh_lsass_memory_dump_comsvcs",
+      "group": "atomic",
+      "tactic": "credential_access",
+      "json_path": "Dataset\\atomic\\credential_access\\psh_lsass_memory_dump_comsvcs\\psh_lsass_memory_dump_comsvcs_2020-10-18T19500924.json",
+      "total_events": 184,
+      "top_eids": {
+        "10": 68,
+        "7": 30,
+        "12": 29,
+        "13": 15,
+        "4658": 10,
+        "4663": 5,
+        "4656": 5,
+        "4690": 5,
+        "4689": 3,
+        "5156": 3
+      },
+      "techniques_from_filename": [
+        "T1003.001"
+      ],
+      "techniques_from_log": [
+        "T1003.001",
+        "T1070.001"
+      ],
+      "techniques_union": [
+        "T1003.001",
+        "T1070.001"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1003.001",
+          "T1070.001"
+        ],
+        "covered_parent": [],
+        "uncovered": []
+      },
+      "evidence_samples": [
+        {
+          "tid": "T1003.001",
+          "label": "comsvcs MiniDump",
+          "sample": "\"c:\\windows\\system32\\rundll32.exe\" c:\\windows\\system32\\comsvcs.dll minidump 756 c:\\users\\wardog\\appdata\\local\\temp\\lsass-comsvcs.dmp full"
+        },
+        {
+          "tid": "T1070.001",
+          "label": "EID 1102 log cleared",
+          "sample": ""
+        }
+      ]
+    },
+    {
+      "scenario": "cmd_process_herpaderping_mimiexplorer",
+      "group": "atomic",
+      "tactic": "defense_evasion",
+      "json_path": "Dataset\\atomic\\defense_evasion\\cmd_process_herpaderping_mimiexplorer\\cmd_process_herpaderping_mimiexplorer_2020-10-2623583501.json",
+      "total_events": 265,
+      "top_eids": {
+        "10": 111,
+        "7": 108,
+        "13": 17,
+        "12": 7,
+        "4658": 4,
+        "4688": 3,
+        "1": 3,
+        "4690": 2,
+        "4656": 2,
+        "4663": 2
+      },
+      "techniques_from_filename": [
+        "T1036.005"
+      ],
+      "techniques_from_log": [
+        "T1003.001",
+        "T1070.001"
+      ],
+      "techniques_union": [
+        "T1003.001",
+        "T1036.005",
+        "T1070.001"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1003.001",
+          "T1036.005",
+          "T1070.001"
+        ],
+        "covered_parent": [],
+        "uncovered": []
+      },
+      "evidence_samples": [
+        {
+          "tid": "T1070.001",
+          "label": "EID 1102 log cleared",
+          "sample": ""
+        },
+        {
+          "tid": "T1003.001",
+          "label": "mimikatz",
+          "sample": "processherpaderping.exe  mimikatz.exe wardog.exe \"c:\\program files (x86)\\internet explorer\\iexplore.exe\""
+        }
+      ]
+    },
+    {
+      "scenario": "cmd_stop_event_logging_controlset001_minint_key",
+      "group": "atomic",
+      "tactic": "defense_evasion",
+      "json_path": "Dataset\\atomic\\defense_evasion\\cmd_stop_event_logging_controlset001_minint_key\\cmd_stop_event_logging_controlset001_minint_key.json",
+      "total_events": 16010,
+      "top_eids": {
+        "10": 8695,
+        "12": 3685,
+        "7": 1646,
+        "13": 1441,
+        "11": 62,
+        "5379": 55,
+        "4673": 39,
+        "18": 32,
+        "9": 30,
+        "1": 28
+      },
+      "techniques_from_filename": [
+        "T1070.001",
+        "T1562.001"
+      ],
+      "techniques_from_log": [
+        "T1070.001"
+      ],
+      "techniques_union": [
+        "T1070.001",
+        "T1070.004",
+        "T1562.001"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1070.001",
+          "T1070.004",
+          "T1562.001"
+        ],
+        "covered_parent": [],
+        "uncovered": []
+      },
+      "evidence_samples": [
+        {
+          "tid": "T1070.001",
+          "label": "ControlSet MiniNT",
+          "sample": "hklm\\system\\currentcontrolset\\control\\minint"
+        }
+      ]
+    },
+    {
+      "scenario": "cmd_wevtutil_modify_security_eventlog_path",
+      "group": "atomic",
+      "tactic": "defense_evasion",
+      "json_path": "Dataset\\atomic\\defense_evasion\\cmd_wevtutil_modify_security_eventlog_path\\cmd_wevtutil_modify_security_eventlog_path.json",
+      "total_events": 25208,
+      "top_eids": {
+        "10": 12309,
+        "12": 5772,
+        "13": 4137,
+        "7": 1745,
+        "11": 318,
+        "9": 144,
+        "23": 144,
+        "4673": 124,
+        "3": 112,
+        "18": 85
+      },
+      "techniques_from_filename": [
+        "T1070.001"
+      ],
+      "techniques_from_log": [],
+      "techniques_union": [
+        "T1070.001",
+        "T1070.004"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1070.001",
+          "T1070.004"
+        ],
+        "covered_parent": [],
+        "uncovered": []
+      },
+      "evidence_samples": []
+    },
+    {
+      "scenario": "empire_dllinjection_LoadLibrary_CreateRemoteThread",
+      "group": "atomic",
+      "tactic": "defense_evasion",
+      "json_path": "Dataset\\atomic\\defense_evasion\\empire_dllinjection_LoadLibrary_CreateRemoteThread\\empire_dllinjection_LoadLibrary_CreateRemoteThread_2020-07-22000048.json",
+      "total_events": 12200,
+      "top_eids": {
+        "12": 3706,
+        "4658": 1355,
+        "5156": 1186,
+        "800": 797,
+        "4103": 744,
+        "4690": 670,
+        "4656": 670,
+        "4663": 638,
+        "7": 570,
+        "10": 424
+      },
+      "techniques_from_filename": [
+        "T1055.001",
+        "T1055.002",
+        "T1059.001"
+      ],
+      "techniques_from_log": [
+        "T1055",
+        "T1059.001",
+        "T1087.002"
+      ],
+      "techniques_union": [
+        "T1055",
+        "T1055.001",
+        "T1055.002",
+        "T1059.001",
+        "T1082",
+        "T1087.002"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1055",
+          "T1059.001",
+          "T1082",
+          "T1087.002"
+        ],
+        "covered_parent": [
+          "T1055.001",
+          "T1055.002"
+        ],
+        "uncovered": []
+      },
+      "evidence_samples": [
+        {
+          "tid": "T1055",
+          "label": "CreateRemoteThread",
+          "sample": ""
+        },
+        {
+          "tid": "T1059.001",
+          "label": "PowerShell",
+          "sample": "# localized\t09/15/2018 04:54 am (gmt)\t303:6.40.10614 \tmsft_roleresourcestrings.psd1\r\n# localized msft_roleresource.psd1\r\n\r\nconvertfrom-stringdata @'\r\n"
+        },
+        {
+          "tid": "T1087.002",
+          "label": "AD query",
+          "sample": "bose ($localizedstring.checkingmembers -f 'explicit');\n        $members = [system.string[]] @(remove-duplicatemembers -members $members);\n        if ("
+        }
+      ]
+    },
+    {
+      "scenario": "psh_cmstp_execution_bypassuac",
+      "group": "atomic",
+      "tactic": "defense_evasion",
+      "json_path": "Dataset\\atomic\\defense_evasion\\psh_cmstp_execution_bypassuac\\psh_cmstp_execution_bypassuac_2020-10-2201543213.json",
+      "total_events": 1166,
+      "top_eids": {
+        "10": 271,
+        "22": 205,
+        "7": 185,
+        "4673": 170,
+        "4658": 78,
+        "12": 51,
+        "4690": 39,
+        "4656": 39,
+        "13": 39,
+        "4663": 38
+      },
+      "techniques_from_filename": [
+        "T1218.003",
+        "T1548.002"
+      ],
+      "techniques_from_log": [
+        "T1070.001",
+        "T1218.003",
+        "T1548.002"
+      ],
+      "techniques_union": [
+        "T1070.001",
+        "T1071.001",
+        "T1218.003",
+        "T1548.002"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1070.001",
+          "T1071.001",
+          "T1218.003",
+          "T1548.002"
+        ],
+        "covered_parent": [],
+        "uncovered": []
+      },
+      "evidence_samples": [
+        {
+          "tid": "T1070.001",
+          "label": "EID 1102 log cleared",
+          "sample": ""
+        },
+        {
+          "tid": "T1218.003",
+          "label": "cmstp",
+          "sample": "\"c:\\windows\\system32\\cmstp.exe\" /s c:\\programdata\\t1218.003_uacbypass.inf /au"
+        },
+        {
+          "tid": "T1548.002",
+          "label": "cmstp",
+          "sample": "\"c:\\windows\\system32\\cmstp.exe\" /s c:\\programdata\\t1218.003_uacbypass.inf /au"
+        }
+      ]
+    },
+    {
+      "scenario": "cmd_seatbelt_group_user",
+      "group": "atomic",
+      "tactic": "discovery",
+      "json_path": "Dataset\\atomic\\discovery\\cmd_seatbelt_group_user\\cmd_seatbelt_group_user_2020-11-0216391814.json",
+      "total_events": 451,
+      "top_eids": {
+        "10": 157,
+        "7": 122,
+        "4658": 37,
+        "12": 23,
+        "4690": 19,
+        "4656": 19,
+        "13": 16,
+        "11": 11,
+        "4703": 9,
+        "4663": 8
+      },
+      "techniques_from_filename": [
+        "T1082",
+        "T1087.001"
+      ],
+      "techniques_from_log": [
+        "T1070.001"
+      ],
+      "techniques_union": [
+        "T1070.001",
+        "T1082",
+        "T1087.001"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1070.001",
+          "T1082",
+          "T1087.001"
+        ],
+        "covered_parent": [],
+        "uncovered": []
+      },
+      "evidence_samples": [
+        {
+          "tid": "T1070.001",
+          "label": "EID 1102 log cleared",
+          "sample": ""
+        }
+      ]
+    },
+    {
+      "scenario": "empire_find_localadmin_smb_svcctl_OpenSCManager",
+      "group": "atomic",
+      "tactic": "discovery",
+      "json_path": "Dataset\\atomic\\discovery\\empire_find_localadmin_smb_svcctl_OpenSCManager\\empire_find_localadmin_smb_svcctl_OpenSCManager_2020-09-22021559.json",
+      "total_events": 4570,
+      "top_eids": {
+        "12": 1174,
+        "800": 770,
+        "4103": 730,
+        "10": 549,
+        "7": 414,
+        "13": 382,
+        "5156": 112,
+        "5158": 103,
+        "4658": 51,
+        "600": 40
+      },
+      "techniques_from_filename": [
+        "T1033",
+        "T1059.001",
+        "T1087.002"
+      ],
+      "techniques_from_log": [
+        "T1003.001"
+      ],
+      "techniques_union": [
+        "T1003.001",
+        "T1033",
+        "T1059.001",
+        "T1087.002"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1003.001",
+          "T1033",
+          "T1059.001",
+          "T1087.002"
+        ],
+        "covered_parent": [],
+        "uncovered": []
+      },
+      "evidence_samples": [
+        {
+          "tid": "T1003.001",
+          "label": "LSASS access 0x3000",
+          "sample": "c:\\windows\\system32\\svchost.exe -> c:\\windows\\system32\\lsass.exe"
+        }
+      ]
+    },
+    {
+      "scenario": "empire_getsession_dcerpc_smb_srvsvc_NetSessEnum",
+      "group": "atomic",
+      "tactic": "discovery",
+      "json_path": "Dataset\\atomic\\discovery\\empire_getsession_dcerpc_smb_srvsvc_NetSessEnum\\empire_getsession_dcerpc_smb_srvsvc_NetSessEnum_2020-09-22034513.json",
+      "total_events": 5047,
+      "top_eids": {
+        "4658": 1067,
+        "800": 560,
+        "4103": 538,
+        "4690": 534,
+        "4656": 534,
+        "4663": 517,
+        "10": 224,
+        "13": 186,
+        "7": 176,
+        "12": 172
+      },
+      "techniques_from_filename": [
+        "T1049",
+        "T1059.001"
+      ],
+      "techniques_from_log": [
+        "T1003.001",
+        "T1059.001",
+        "T1087.002"
+      ],
+      "techniques_union": [
+        "T1003.001",
+        "T1049",
+        "T1059.001",
+        "T1070.004",
+        "T1087.002"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1003.001",
+          "T1049",
+          "T1059.001",
+          "T1070.004",
+          "T1087.002"
+        ],
+        "covered_parent": [],
+        "uncovered": []
+      },
+      "evidence_samples": [
+        {
+          "tid": "T1003.001",
+          "label": "LSASS access 0x3000",
+          "sample": "c:\\windows\\system32\\svchost.exe -> c:\\windows\\system32\\lsass.exe"
+        },
+        {
+          "tid": "T1059.001",
+          "label": "PowerShell",
+          "sample": "# localized\t09/15/2018 04:54 am (gmt)\t303:6.40.10614 \tmsft_roleresourcestrings.psd1\r\n# localized msft_roleresource.psd1\r\n\r\nconvertfrom-stringdata @'\r\n"
+        },
+        {
+          "tid": "T1087.002",
+          "label": "AD query",
+          "sample": "data localizedstring\n{\n    # culture=\"en-us\"\n    convertfrom-stringdata @'\n        rolenotfounderror              = please ensure that the powershell "
+        }
+      ]
+    },
+    {
+      "scenario": "empire_shell_net_local_users",
+      "group": "atomic",
+      "tactic": "discovery",
+      "json_path": "Dataset\\atomic\\discovery\\empire_shell_net_local_users\\empire_shell_net_local_users_2020-09-21192606.json",
+      "total_events": 1907,
+      "top_eids": {
+        "10": 829,
+        "7": 203,
+        "12": 171,
+        "800": 116,
+        "4103": 101,
+        "4703": 82,
+        "4658": 72,
+        "5156": 65,
+        "4656": 55,
+        "5158": 54
+      },
+      "techniques_from_filename": [
+        "T1059.001",
+        "T1087.001"
+      ],
+      "techniques_from_log": [
+        "T1003.001"
+      ],
+      "techniques_union": [
+        "T1003.001",
+        "T1059.001",
+        "T1087.001"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1003.001",
+          "T1059.001",
+          "T1087.001"
+        ],
+        "covered_parent": [],
+        "uncovered": []
+      },
+      "evidence_samples": [
+        {
+          "tid": "T1003.001",
+          "label": "LSASS access 0x3000",
+          "sample": "c:\\windows\\system32\\svchost.exe -> c:\\windows\\system32\\lsass.exe"
+        }
+      ]
+    },
+    {
+      "scenario": "empire_shell_samr_EnumDomainUsers",
+      "group": "atomic",
+      "tactic": "discovery",
+      "json_path": "Dataset\\atomic\\discovery\\empire_shell_samr_EnumDomainUsers\\empire_shell_samr_EnumDomainUsers_2020-09-21193527.json",
+      "total_events": 633,
+      "top_eids": {
+        "10": 180,
+        "12": 108,
+        "800": 75,
+        "4103": 66,
+        "13": 60,
+        "7": 36,
+        "5156": 31,
+        "5158": 24,
+        "11": 5,
+        "4634": 5
+      },
+      "techniques_from_filename": [
+        "T1059.001"
+      ],
+      "techniques_from_log": [],
+      "techniques_union": [
+        "T1059.001"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1059.001"
+        ],
+        "covered_parent": [],
+        "uncovered": []
+      },
+      "evidence_samples": []
+    },
+    {
+      "scenario": "cmd_sharpview_pcre_net",
+      "group": "atomic",
+      "tactic": "execution",
+      "json_path": "Dataset\\atomic\\execution\\cmd_sharpview_pcre_net\\cmd_sharpview_pcre_net_2020-10-2920232423.json",
+      "total_events": 267,
+      "top_eids": {
+        "7": 85,
+        "10": 49,
+        "4658": 34,
+        "13": 23,
+        "4690": 17,
+        "4656": 17,
+        "12": 12,
+        "4663": 6,
+        "5158": 6,
+        "11": 4
+      },
+      "techniques_from_filename": [
+        "T1059.003",
+        "T1087.002"
+      ],
+      "techniques_from_log": [
+        "T1070.001"
+      ],
+      "techniques_union": [
+        "T1059.003",
+        "T1070.001",
+        "T1087.002"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1059.003",
+          "T1070.001",
+          "T1087.002"
+        ],
+        "covered_parent": [],
+        "uncovered": []
+      },
+      "evidence_samples": [
+        {
+          "tid": "T1070.001",
+          "label": "EID 1102 log cleared",
+          "sample": ""
+        }
+      ]
+    },
+    {
+      "scenario": "empire_launcher_vbs",
+      "group": "atomic",
+      "tactic": "execution",
+      "json_path": "Dataset\\atomic\\execution\\empire_launcher_vbs\\empire_launcher_vbs_2020-09-04160940.json",
+      "total_events": 2067,
+      "top_eids": {
+        "12": 420,
+        "10": 324,
+        "7": 324,
+        "4658": 223,
+        "800": 126,
+        "4690": 112,
+        "4656": 112,
+        "4663": 96,
+        "4103": 87,
+        "13": 63
+      },
+      "techniques_from_filename": [
+        "T1059.001",
+        "T1059.005"
+      ],
+      "techniques_from_log": [
+        "T1027",
+        "T1059.001",
+        "T1059.005"
+      ],
+      "techniques_union": [
+        "T1027",
+        "T1059.001",
+        "T1059.005",
+        "T1105",
+        "T1140"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1027",
+          "T1059.001",
+          "T1059.005",
+          "T1105",
+          "T1140"
+        ],
+        "covered_parent": [],
+        "uncovered": []
+      },
+      "evidence_samples": [
+        {
+          "tid": "T1059.005",
+          "label": "WSH",
+          "sample": "\"c:\\windows\\system32\\wscript.exe\" \"c:\\users\\pgustavo\\desktop\\launcher.vbs\" "
+        },
+        {
+          "tid": "T1059.001",
+          "label": "PSH encoded",
+          "sample": "\"c:\\windows\\system32\\windowspowershell\\v1.0\\powershell.exe\" -nop -sta -w 1 -enc  sqbmacgajabqafmavgbfafiauwbpae8abgbuageaqgbsaeualgbqafmavgbfahiauwbja"
+        },
+        {
+          "tid": "T1027",
+          "label": "PSH encoded",
+          "sample": "\"c:\\windows\\system32\\windowspowershell\\v1.0\\powershell.exe\" -nop -sta -w 1 -enc  sqbmacgajabqafmavgbfafiauwbpae8abgbuageaqgbsaeualgbqafmavgbfahiauwbja"
+        }
+      ]
+    },
+    {
+      "scenario": "psh_powershell_httplistener",
+      "group": "atomic",
+      "tactic": "execution",
+      "json_path": "Dataset\\atomic\\execution\\psh_powershell_httplistener\\psh_powershell_httplistener_2020-11-0204130683.json",
+      "total_events": 110,
+      "top_eids": {
+        "10": 67,
+        "13": 15,
+        "12": 13,
+        "7": 8,
+        "5158": 3,
+        "1102": 1,
+        "5156": 1,
+        "5154": 1,
+        "22": 1
+      },
+      "techniques_from_filename": [
+        "T1059.001"
+      ],
+      "techniques_from_log": [
+        "T1070.001"
+      ],
+      "techniques_union": [
+        "T1059.001",
+        "T1070.001"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1059.001",
+          "T1070.001"
+        ],
+        "covered_parent": [],
+        "uncovered": []
+      },
+      "evidence_samples": [
+        {
+          "tid": "T1070.001",
+          "label": "EID 1102 log cleared",
+          "sample": ""
+        }
+      ]
+    },
+    {
+      "scenario": "psh_python_webserver",
+      "group": "atomic",
+      "tactic": "execution",
+      "json_path": "Dataset\\atomic\\execution\\psh_python_webserver\\psh_python_webserver_2020-10-2900161507.json",
+      "total_events": 2395,
+      "top_eids": {
+        "4658": 642,
+        "10": 451,
+        "4656": 322,
+        "4690": 320,
+        "4663": 320,
+        "7": 254,
+        "12": 28,
+        "13": 23,
+        "5447": 8,
+        "5158": 4
+      },
+      "techniques_from_filename": [
+        "T1059.006"
+      ],
+      "techniques_from_log": [
+        "T1070.001"
+      ],
+      "techniques_union": [
+        "T1059.006",
+        "T1070.001"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1070.001"
+        ],
+        "covered_parent": [
+          "T1059.006"
+        ],
+        "uncovered": []
+      },
+      "evidence_samples": [
+        {
+          "tid": "T1070.001",
+          "label": "EID 1102 log cleared",
+          "sample": ""
+        }
+      ]
+    },
+    {
+      "scenario": "covenant_psremoting_command",
+      "group": "atomic",
+      "tactic": "lateral_movement",
+      "json_path": "Dataset\\atomic\\lateral_movement\\covenant_psremoting_command\\covenant_psremoting_command_2020-08-06115603.json",
+      "total_events": 4284,
+      "top_eids": {
+        "10": 1923,
+        "12": 582,
+        "7": 425,
+        "13": 296,
+        "4658": 192,
+        "4656": 190,
+        "5156": 112,
+        "5158": 98,
+        "4690": 98,
+        "4663": 65
+      },
+      "techniques_from_filename": [
+        "T1021.006"
+      ],
+      "techniques_from_log": [
+        "T1003.001"
+      ],
+      "techniques_union": [
+        "T1003.001",
+        "T1021.006"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1003.001",
+          "T1021.006"
+        ],
+        "covered_parent": [],
+        "uncovered": []
+      },
+      "evidence_samples": [
+        {
+          "tid": "T1003.001",
+          "label": "LSASS access 0x101400",
+          "sample": "c:\\windows\\system32\\wsmprovhost.exe -> c:\\windows\\system32\\lsass.exe"
+        }
+      ]
+    },
+    {
+      "scenario": "empire_psexec_dcerpc_tcp_svcctl",
+      "group": "atomic",
+      "tactic": "lateral_movement",
+      "json_path": "Dataset\\atomic\\lateral_movement\\empire_psexec_dcerpc_tcp_svcctl\\empire_psexec_dcerpc_tcp_svcctl_2020-09-20121608.json",
+      "total_events": 4348,
+      "top_eids": {
+        "10": 1493,
+        "12": 718,
+        "800": 424,
+        "7": 357,
+        "4103": 350,
+        "13": 287,
+        "4658": 134,
+        "5158": 91,
+        "5156": 83,
+        "4656": 69
+      },
+      "techniques_from_filename": [
+        "T1021.002",
+        "T1059.001"
+      ],
+      "techniques_from_log": [
+        "T1003.001",
+        "T1027",
+        "T1059.001",
+        "T1059.003"
+      ],
+      "techniques_union": [
+        "T1003.001",
+        "T1021.002",
+        "T1027",
+        "T1059.001",
+        "T1059.003",
+        "T1105",
+        "T1140"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1003.001",
+          "T1021.002",
+          "T1027",
+          "T1059.001",
+          "T1059.003",
+          "T1105",
+          "T1140"
+        ],
+        "covered_parent": [],
+        "uncovered": []
+      },
+      "evidence_samples": [
+        {
+          "tid": "T1059.001",
+          "label": "PowerShell",
+          "sample": "c:\\windows\\system32\\cmd.exe /c start /b c:\\windows\\system32\\windowspowershell\\v1.0\\powershell -nop -sta -w 1 -enc  sqbmacgajabqafmavgbfahiauwbpae8abgb"
+        },
+        {
+          "tid": "T1027",
+          "label": "PSH encoded",
+          "sample": "c:\\windows\\system32\\cmd.exe /c start /b c:\\windows\\system32\\windowspowershell\\v1.0\\powershell -nop -sta -w 1 -enc  sqbmacgajabqafmavgbfahiauwbpae8abgb"
+        },
+        {
+          "tid": "T1059.003",
+          "label": "cmd /c",
+          "sample": "c:\\windows\\system32\\cmd.exe /c start /b c:\\windows\\system32\\windowspowershell\\v1.0\\powershell -nop -sta -w 1 -enc  sqbmacgajabqafmavgbfahiauwbpae8abgb"
+        },
+        {
+          "tid": "T1003.001",
+          "label": "LSASS access 0x3000",
+          "sample": "c:\\windows\\system32\\svchost.exe -> c:\\windows\\system32\\lsass.exe"
+        }
+      ]
+    },
+    {
+      "scenario": "empire_psremoting_stager",
+      "group": "atomic",
+      "tactic": "lateral_movement",
+      "json_path": "Dataset\\atomic\\lateral_movement\\empire_psremoting_stager\\empire_psremoting_stager_2020-09-20170827.json",
+      "total_events": 2744,
+      "top_eids": {
+        "12": 850,
+        "7": 344,
+        "10": 241,
+        "800": 203,
+        "4658": 175,
+        "4103": 155,
+        "13": 148,
+        "5158": 109,
+        "4656": 101,
+        "4690": 89
+      },
+      "techniques_from_filename": [
+        "T1021.006",
+        "T1059.001"
+      ],
+      "techniques_from_log": [
+        "T1003.001",
+        "T1027",
+        "T1059.001"
+      ],
+      "techniques_union": [
+        "T1003.001",
+        "T1021.006",
+        "T1027",
+        "T1059.001",
+        "T1105",
+        "T1140"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1003.001",
+          "T1021.006",
+          "T1027",
+          "T1059.001",
+          "T1105",
+          "T1140"
+        ],
+        "covered_parent": [],
+        "uncovered": []
+      },
+      "evidence_samples": [
+        {
+          "tid": "T1059.001",
+          "label": "PSH encoded",
+          "sample": "\"c:\\windows\\system32\\windowspowershell\\v1.0\\powershell.exe\" -nop -sta -w 1 -enc sqbmacgajabqafmavgbfahiauwbpag8atgbuageaqgbsaeualgbqafmavgbfafiacwbjag"
+        },
+        {
+          "tid": "T1027",
+          "label": "PSH encoded",
+          "sample": "\"c:\\windows\\system32\\windowspowershell\\v1.0\\powershell.exe\" -nop -sta -w 1 -enc sqbmacgajabqafmavgbfahiauwbpag8atgbuageaqgbsaeualgbqafmavgbfafiacwbjag"
+        },
+        {
+          "tid": "T1003.001",
+          "label": "LSASS access 0x3000",
+          "sample": "c:\\windows\\system32\\svchost.exe -> c:\\windows\\system32\\lsass.exe"
+        }
+      ]
+    },
+    {
+      "scenario": "empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod",
+      "group": "atomic",
+      "tactic": "lateral_movement",
+      "json_path": "Dataset\\atomic\\lateral_movement\\empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod\\empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod_2020-09-21001437.json",
+      "total_events": 6383,
+      "top_eids": {
+        "4658": 1192,
+        "10": 831,
+        "4656": 605,
+        "12": 602,
+        "4690": 597,
+        "4663": 562,
+        "800": 547,
+        "4103": 489,
+        "7": 259,
+        "13": 135
+      },
+      "techniques_from_filename": [
+        "T1021.003",
+        "T1047",
+        "T1059.001"
+      ],
+      "techniques_from_log": [
+        "T1003.001",
+        "T1027",
+        "T1059.001",
+        "T1087.002"
+      ],
+      "techniques_union": [
+        "T1003.001",
+        "T1021.003",
+        "T1027",
+        "T1047",
+        "T1059.001",
+        "T1087.002",
+        "T1105",
+        "T1140"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1003.001",
+          "T1021.003",
+          "T1027",
+          "T1047",
+          "T1059.001",
+          "T1087.002",
+          "T1105",
+          "T1140"
+        ],
+        "covered_parent": [],
+        "uncovered": []
+      },
+      "evidence_samples": [
+        {
+          "tid": "T1059.001",
+          "label": "PowerShell",
+          "sample": "c:\\windows\\system32\\windowspowershell\\v1.0\\powershell -nop -sta -w 1 -enc  sqbgacgajabqafmavgblahiacwbjag8atgbuaeeaqgbsagualgbqafmavgbfafiacwbjae8abga"
+        },
+        {
+          "tid": "T1027",
+          "label": "PSH encoded",
+          "sample": "c:\\windows\\system32\\windowspowershell\\v1.0\\powershell -nop -sta -w 1 -enc  sqbgacgajabqafmavgblahiacwbjag8atgbuaeeaqgbsagualgbqafmavgbfafiacwbjae8abga"
+        },
+        {
+          "tid": "T1003.001",
+          "label": "LSASS access 0x3000",
+          "sample": "c:\\windows\\system32\\svchost.exe -> c:\\windows\\system32\\lsass.exe"
+        },
+        {
+          "tid": "T1087.002",
+          "label": "AD query",
+          "sample": "e -message ($localizedstring.membershipcountmismatch -f $members.count, $existingmembers.count);\n            return $false;\n        }\n\n        foreach"
+        }
+      ]
+    },
+    {
+      "scenario": "purplesharp_ad_playbook_I",
+      "group": "atomic",
+      "tactic": "lateral_movement",
+      "json_path": "Dataset\\atomic\\lateral_movement\\purplesharp_ad_playbook_I\\purplesharp_ad_playbook_I_2020-10-22042947.json",
+      "total_events": 25993,
+      "top_eids": {
+        "12": 17917,
+        "7": 1537,
+        "13": 1135,
+        "4658": 761,
+        "11": 629,
+        "4656": 405,
+        "4690": 381,
+        "10": 345,
+        "800": 285,
+        "4103": 285
+      },
+      "techniques_from_filename": [
+        "T1021.006",
+        "T1069.002",
+        "T1087.002"
+      ],
+      "techniques_from_log": [
+        "T1059.001",
+        "T1087.002"
+      ],
+      "techniques_union": [
+        "T1021.006",
+        "T1059.001",
+        "T1069.002",
+        "T1070.004",
+        "T1087.002"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1021.006",
+          "T1059.001",
+          "T1069.002",
+          "T1070.004",
+          "T1087.002"
+        ],
+        "covered_parent": [],
+        "uncovered": []
+      },
+      "evidence_samples": [
+        {
+          "tid": "T1059.001",
+          "label": "PowerShell",
+          "sample": "# localized\t09/15/2018 04:54 am (gmt)\t303:6.40.10614 \tmsft_roleresourcestrings.psd1\r\n# localized msft_roleresource.psd1\r\n\r\nconvertfrom-stringdata @'\r\n"
+        },
+        {
+          "tid": "T1087.002",
+          "label": "AD query",
+          "sample": "}\n        'hours' { return $timespan.totalhours -as [system.uint32] }\n        'days' { return $timespan.totaldays -as [system.uint32] }\n    }\n} #end f"
+        }
+      ]
+    },
+    {
+      "scenario": "cmd_userinitmprlogonscript_batch",
+      "group": "atomic",
+      "tactic": "persistence",
+      "json_path": "Dataset\\atomic\\persistence\\cmd_userinitmprlogonscript_batch\\cmd_userinitmprlogonscript_batch_2020-10-1922471810.json",
+      "total_events": 122,
+      "top_eids": {
+        "10": 65,
+        "13": 19,
+        "7": 11,
+        "5158": 5,
+        "5156": 5,
+        "11": 4,
+        "12": 3,
+        "9": 3,
+        "1102": 1,
+        "4688": 1
+      },
+      "techniques_from_filename": [
+        "T1037.001"
+      ],
+      "techniques_from_log": [
+        "T1037.001",
+        "T1070.001"
+      ],
+      "techniques_union": [
+        "T1037.001",
+        "T1070.001"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1037.001",
+          "T1070.001"
+        ],
+        "covered_parent": [],
+        "uncovered": []
+      },
+      "evidence_samples": [
+        {
+          "tid": "T1070.001",
+          "label": "EID 1102 log cleared",
+          "sample": ""
+        },
+        {
+          "tid": "T1037.001",
+          "label": "MprLogonScript",
+          "sample": "hku\\s-1-5-21-3940915590-64593676-1414006259-500\\environment\\userinitmprlogonscript"
+        }
+      ]
+    },
+    {
+      "scenario": "covenant_persistwmi",
+      "group": "atomic",
+      "tactic": "persistence",
+      "json_path": "Dataset\\atomic\\persistence\\covenant_persistwmi\\covenant_persistwmi_2019-12-05044734.json",
+      "total_events": 1001,
+      "top_eids": {
+        "10": 525,
+        "5156": 93,
+        "3": 76,
+        "5158": 72,
+        "4703": 47,
+        "7": 44,
+        "11": 20,
+        "4624": 14,
+        "4627": 14,
+        "5145": 14
+      },
+      "techniques_from_filename": [
+        "T1546.003"
+      ],
+      "techniques_from_log": [],
+      "techniques_union": [
+        "T1546.003"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1546.003"
+        ],
+        "covered_parent": [],
+        "uncovered": []
+      },
+      "evidence_samples": []
+    },
+    {
+      "scenario": "empire_persistence_registry_modification_run_keys_elevated_user",
+      "group": "atomic",
+      "tactic": "persistence",
+      "json_path": "Dataset\\atomic\\persistence\\empire_persistence_registry_modification_run_keys_elevated_user\\empire_persistence_registry_modification_run_keys_elevated_user_2020-07-22001847.json",
+      "total_events": 657,
+      "top_eids": {
+        "5156": 197,
+        "800": 73,
+        "4658": 69,
+        "4103": 62,
+        "3": 46,
+        "5158": 35,
+        "4690": 32,
+        "4656": 32,
+        "10": 30,
+        "12": 19
+      },
+      "techniques_from_filename": [
+        "T1547.001"
+      ],
+      "techniques_from_log": [],
+      "techniques_union": [
+        "T1547.001"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1547.001"
+        ],
+        "covered_parent": [],
+        "uncovered": []
+      },
+      "evidence_samples": []
+    },
+    {
+      "scenario": "empire_schtasks_creation_execution_elevated_user",
+      "group": "atomic",
+      "tactic": "persistence",
+      "json_path": "Dataset\\atomic\\persistence\\empire_schtasks_creation_execution_elevated_user\\empire_schtasks_creation_execution_elevated_user_2020-09-21175806.json",
+      "total_events": 59399,
+      "top_eids": {
+        "12": 12237,
+        "13": 9241,
+        "7": 8268,
+        "4658": 5137,
+        "10": 4365,
+        "5447": 2645,
+        "4656": 2617,
+        "4690": 2530,
+        "4663": 1842,
+        "5154": 1798
+      },
+      "techniques_from_filename": [
+        "T1053.005",
+        "T1059.001"
+      ],
+      "techniques_from_log": [
+        "T1003.001",
+        "T1016",
+        "T1021.006",
+        "T1055",
+        "T1059.001",
+        "T1059.003",
+        "T1087.002"
+      ],
+      "techniques_union": [
+        "T1003.001",
+        "T1016",
+        "T1021.006",
+        "T1027",
+        "T1053.005",
+        "T1055",
+        "T1059.001",
+        "T1059.003",
+        "T1070.004",
+        "T1087.002",
+        "T1105",
+        "T1140"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1003.001",
+          "T1016",
+          "T1021.006",
+          "T1027",
+          "T1053.005",
+          "T1055",
+          "T1059.001",
+          "T1059.003",
+          "T1070.004",
+          "T1087.002",
+          "T1105",
+          "T1140"
+        ],
+        "covered_parent": [],
+        "uncovered": []
+      },
+      "evidence_samples": [
+        {
+          "tid": "T1059.001",
+          "label": "PowerShell",
+          "sample": "\"c:\\windows\\system32\\schtasks.exe\" /create /f /ru system /sc onlogon /tn mordorelevated /tr \"c:\\windows\\system32\\windowspowershell\\v1.0\\powershell.exe"
+        },
+        {
+          "tid": "T1087.002",
+          "label": "AD query",
+          "sample": "rray members\n        [allownull()]\n        [system.string[]]\n        $memberstoinclude,\n\n        ## excluded array members\n        [allownull()]\n     "
+        },
+        {
+          "tid": "T1003.001",
+          "label": "LSASS access 0x101001",
+          "sample": "c:\\windows\\system32\\svchost.exe -> c:\\windows\\system32\\lsass.exe"
+        },
+        {
+          "tid": "T1059.003",
+          "label": "cmd /c",
+          "sample": "c:\\windows\\system32\\cmd.exe /c \"\"c:\\program files\\npcap\\checkstatus.bat\"\""
+        },
+        {
+          "tid": "T1055",
+          "label": "CreateRemoteThread",
+          "sample": ""
+        },
+        {
+          "tid": "T1021.006",
+          "label": "WinRM",
+          "sample": "c:\\windows\\system32\\svchost.exe -k networkservice -p -s winrm"
+        },
+        {
+          "tid": "T1016",
+          "label": "ipconfig",
+          "sample": "\"ipconfig.exe\" /all"
+        }
+      ]
+    },
+    {
+      "scenario": "empire_wmi_local_event_subscriptions_elevated_user",
+      "group": "atomic",
+      "tactic": "persistence",
+      "json_path": "Dataset\\atomic\\persistence\\empire_wmi_local_event_subscriptions_elevated_user\\empire_wmi_local_event_subscriptions_elevated_user_2020-09-04164306.json",
+      "total_events": 79896,
+      "top_eids": {
+        "10": 22380,
+        "12": 18463,
+        "13": 11722,
+        "7": 10174,
+        "4658": 2990,
+        "5447": 2715,
+        "4656": 1554,
+        "4690": 1422,
+        "4703": 1242,
+        "4663": 1195
+      },
+      "techniques_from_filename": [
+        "T1059.001",
+        "T1546.003"
+      ],
+      "techniques_from_log": [
+        "T1003.001",
+        "T1016",
+        "T1021.006",
+        "T1027",
+        "T1055",
+        "T1059.001",
+        "T1059.003"
+      ],
+      "techniques_union": [
+        "T1003.001",
+        "T1016",
+        "T1021.006",
+        "T1027",
+        "T1055",
+        "T1059.001",
+        "T1059.003",
+        "T1070.004",
+        "T1071.001",
+        "T1105",
+        "T1140",
+        "T1546.003"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1003.001",
+          "T1016",
+          "T1021.006",
+          "T1027",
+          "T1055",
+          "T1059.001",
+          "T1059.003",
+          "T1070.004",
+          "T1071.001",
+          "T1105",
+          "T1140",
+          "T1546.003"
+        ],
+        "covered_parent": [],
+        "uncovered": []
+      },
+      "evidence_samples": [
+        {
+          "tid": "T1003.001",
+          "label": "LSASS access 0x1410",
+          "sample": "c:\\windowsazure\\guestagent_2.7.41491.993_2020-09-04_183104\\collectguestlogs.exe -> c:\\windows\\system32\\lsass.exe"
+        },
+        {
+          "tid": "T1055",
+          "label": "CreateRemoteThread",
+          "sample": ""
+        },
+        {
+          "tid": "T1021.006",
+          "label": "WinRM",
+          "sample": "c:\\windows\\system32\\svchost.exe -k networkservice -p -s winrm"
+        },
+        {
+          "tid": "T1016",
+          "label": "ipconfig",
+          "sample": "\"ipconfig.exe\" /all"
+        },
+        {
+          "tid": "T1059.003",
+          "label": "cmd /c",
+          "sample": "c:\\windows\\system32\\cmd.exe /c \"\"c:\\packages\\plugins\\microsoft.compute.customscriptextension\\1.10.9\\enable.cmd\"\""
+        },
+        {
+          "tid": "T1059.001",
+          "label": "PowerShell",
+          "sample": "c:\\windows\\system32\\windowspowershell\\v1.0\\powershell.exe -noni -w hidden -enc sqbgacgajabqafmavgbfafiauwbjae8atgbuageaqgbmagualgbqafmavgblafiauwbpag8"
+        },
+        {
+          "tid": "T1027",
+          "label": "PSH encoded",
+          "sample": "c:\\windows\\system32\\windowspowershell\\v1.0\\powershell.exe -noni -w hidden -enc sqbgacgajabqafmavgbfafiauwbjae8atgbuageaqgbmagualgbqafmavgblafiauwbpag8"
+        }
+      ]
+    },
+    {
+      "scenario": "cmd_service_mod_fax",
+      "group": "atomic",
+      "tactic": "privilege_escalation",
+      "json_path": "Dataset\\atomic\\privilege_escalation\\cmd_service_mod_fax\\cmd_service_mod_fax_2020-10-2120454410.json",
+      "total_events": 437,
+      "top_eids": {
+        "12": 159,
+        "7": 97,
+        "10": 59,
+        "4658": 36,
+        "4690": 18,
+        "4656": 18,
+        "13": 14,
+        "4663": 6,
+        "4688": 4,
+        "4689": 4
+      },
+      "techniques_from_filename": [
+        "T1543.003"
+      ],
+      "techniques_from_log": [
+        "T1059.001",
+        "T1070.001"
+      ],
+      "techniques_union": [
+        "T1059.001",
+        "T1070.001",
+        "T1543.003"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1059.001",
+          "T1070.001",
+          "T1543.003"
+        ],
+        "covered_parent": [],
+        "uncovered": []
+      },
+      "evidence_samples": [
+        {
+          "tid": "T1070.001",
+          "label": "EID 1102 log cleared",
+          "sample": ""
+        },
+        {
+          "tid": "T1059.001",
+          "label": "PowerShell",
+          "sample": "sc  config fax binpath= \"c:\\windows\\system32\\windowspowershell\\v1.0\\powershell.exe -noexit -c \\\"write-host 't1543.003 test'\\\"\""
+        }
+      ]
+    },
+    {
+      "scenario": "empire_invoke_runas",
+      "group": "atomic",
+      "tactic": "privilege_escalation",
+      "json_path": "Dataset\\atomic\\privilege_escalation\\empire_invoke_runas\\empire_invoke_runas_2019-05-18204300.json",
+      "total_events": 2581,
+      "top_eids": {
+        "12": 466,
+        "10": 419,
+        "800": 376,
+        "7": 363,
+        "4103": 325,
+        "5156": 136,
+        "3": 135,
+        "4703": 131,
+        "5858": 39,
+        "18": 20
+      },
+      "techniques_from_filename": [
+        "T1059.001",
+        "T1134"
+      ],
+      "techniques_from_log": [],
+      "techniques_union": [
+        "T1059.001",
+        "T1134"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1059.001",
+          "T1134"
+        ],
+        "covered_parent": [],
+        "uncovered": []
+      },
+      "evidence_samples": []
+    },
+    {
+      "scenario": "empire_uac_shellapi_fodhelper",
+      "group": "atomic",
+      "tactic": "privilege_escalation",
+      "json_path": "Dataset\\atomic\\privilege_escalation\\empire_uac_shellapi_fodhelper\\empire_uac_shellapi_fodhelper_2020-09-04032946.json",
+      "total_events": 4139,
+      "top_eids": {
+        "10": 948,
+        "12": 858,
+        "7": 840,
+        "800": 287,
+        "4103": 229,
+        "4658": 202,
+        "13": 146,
+        "4690": 102,
+        "4656": 102,
+        "4663": 67
+      },
+      "techniques_from_filename": [
+        "T1059.001",
+        "T1548.002"
+      ],
+      "techniques_from_log": [
+        "T1027",
+        "T1059.001",
+        "T1548.002"
+      ],
+      "techniques_union": [
+        "T1027",
+        "T1059.001",
+        "T1105",
+        "T1140",
+        "T1548.002"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1027",
+          "T1059.001",
+          "T1105",
+          "T1140",
+          "T1548.002"
+        ],
+        "covered_parent": [],
+        "uncovered": []
+      },
+      "evidence_samples": [
+        {
+          "tid": "T1548.002",
+          "label": "fodhelper UAC bypass",
+          "sample": "\"c:\\windows\\system32\\fodhelper.exe\" "
+        },
+        {
+          "tid": "T1059.001",
+          "label": "PowerShell",
+          "sample": "\"c:\\windows\\system32\\windowspowershell\\v1.0\\powershell.exe\" -nop -noni -w hidden -c $x=$((gp hkcu:software\\microsoft\\windows update).update); powershe"
+        },
+        {
+          "tid": "T1027",
+          "label": "PSH encoded",
+          "sample": "\"c:\\windows\\system32\\windowspowershell\\v1.0\\powershell.exe\" -nop -noni -w hidden -enc sqbgacgajabqafmavgbfafiauwbjae8abgbuaeeaqgbsaeualgbqafmavgbfafia"
+        }
+      ]
+    },
+    {
+      "scenario": "apt29_evals_day1_manual",
+      "group": "compound",
+      "tactic": "apt29",
+      "json_path": "Dataset\\compound\\apt29\\apt29_evals_day1_manual\\apt29_evals_day1_manual_2020-05-01225525.json",
+      "total_events": 100000,
+      "top_eids": {
+        "12": 35418,
+        "10": 20245,
+        "7": 6859,
+        "4658": 6709,
+        "800": 4594,
+        "13": 4576,
+        "4103": 4561,
+        "4690": 3355,
+        "4656": 3346,
+        "4663": 3290
+      },
+      "techniques_from_filename": [
+        "T1003.001",
+        "T1021.002",
+        "T1021.006",
+        "T1047",
+        "T1053.005",
+        "T1055",
+        "T1059.001",
+        "T1070.001",
+        "T1071.001",
+        "T1087.001",
+        "T1218.005",
+        "T1482",
+        "T1546.003",
+        "T1547.001",
+        "T1548.002"
+      ],
+      "techniques_from_log": [
+        "T1003.001",
+        "T1021.002",
+        "T1021.006",
+        "T1055",
+        "T1057",
+        "T1059.001",
+        "T1087.002"
+      ],
+      "techniques_union": [
+        "T1003.001",
+        "T1021.002",
+        "T1021.006",
+        "T1027",
+        "T1047",
+        "T1053.005",
+        "T1055",
+        "T1057",
+        "T1059.001",
+        "T1070.001",
+        "T1070.004",
+        "T1071.001",
+        "T1082",
+        "T1083",
+        "T1087.001",
+        "T1087.002",
+        "T1140",
+        "T1218.005",
+        "T1482",
+        "T1546.003",
+        "T1547.001",
+        "T1548.002",
+        "T1560.001"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1003.001",
+          "T1021.002",
+          "T1021.006",
+          "T1027",
+          "T1047",
+          "T1053.005",
+          "T1055",
+          "T1057",
+          "T1059.001",
+          "T1070.001",
+          "T1070.004",
+          "T1071.001",
+          "T1082",
+          "T1083",
+          "T1087.001",
+          "T1087.002",
+          "T1140",
+          "T1218.005",
+          "T1482",
+          "T1546.003",
+          "T1547.001",
+          "T1548.002",
+          "T1560.001"
+        ],
+        "covered_parent": [],
+        "uncovered": []
+      },
+      "evidence_samples": [
+        {
+          "tid": "T1057",
+          "label": "tasklist",
+          "sample": "get-process"
+        },
+        {
+          "tid": "T1059.001",
+          "label": "PowerShell",
+          "sample": "# localized\t09/15/2018 04:54 am (gmt)\t303:6.40.10614 \tmsft_roleresourcestrings.psd1\r\n# localized msft_roleresource.psd1\r\n\r\nconvertfrom-stringdata @'\r\n"
+        },
+        {
+          "tid": "T1087.002",
+          "label": "AD query",
+          "sample": "alidateset('seconds','minutes','hours','days')]\n        [system.string]\n        $timespantype\n    )\n    switch ($timespantype)\n    {\n        'seconds'"
+        },
+        {
+          "tid": "T1003.001",
+          "label": "LSASS access 0x1f3fff",
+          "sample": "c:\\windows\\system32\\windowspowershell\\v1.0\\powershell.exe -> c:\\windows\\system32\\lsass.exe"
+        },
+        {
+          "tid": "T1055",
+          "label": "CreateRemoteThread",
+          "sample": ""
+        },
+        {
+          "tid": "T1021.006",
+          "label": "PS remoting",
+          "sample": "invoke-command -computername nashua -scriptblock { get-process -includeusername | select-object username,sessionid | where-object { $_.username -like "
+        },
+        {
+          "tid": "T1021.002",
+          "label": "psexec",
+          "sample": "\"c:\\program files\\sysinternalssuite\\psexec64.exe\" -accepteula \\\\nashua -u dmevals\\pbeesly -p fl0nk3rt0n!t0by -i 2 c:\\windows\\temp\\python.exe"
+        }
+      ]
+    },
+    {
+      "scenario": "apt29_evals_day2_manual",
+      "group": "compound",
+      "tactic": "apt29",
+      "json_path": "Dataset\\compound\\apt29\\apt29_evals_day2_manual\\apt29_evals_day2_manual_2020-05-02035409.json",
+      "total_events": 100000,
+      "top_eids": {
+        "12": 45073,
+        "13": 32053,
+        "10": 15925,
+        "7": 4341,
+        "11": 1385,
+        "23": 279,
+        "4658": 130,
+        "5156": 92,
+        "4656": 71,
+        "5": 69
+      },
+      "techniques_from_filename": [
+        "T1003.001",
+        "T1021.002",
+        "T1021.006",
+        "T1047",
+        "T1053.005",
+        "T1055",
+        "T1059.001",
+        "T1070.001",
+        "T1071.001",
+        "T1087.001",
+        "T1218.005",
+        "T1482",
+        "T1546.003",
+        "T1547.001",
+        "T1548.002"
+      ],
+      "techniques_from_log": [],
+      "techniques_union": [
+        "T1003.001",
+        "T1018",
+        "T1021.002",
+        "T1021.006",
+        "T1027",
+        "T1047",
+        "T1053.005",
+        "T1055",
+        "T1059.001",
+        "T1070.001",
+        "T1070.004",
+        "T1071.001",
+        "T1083",
+        "T1087.001",
+        "T1087.002",
+        "T1105",
+        "T1140",
+        "T1218.005",
+        "T1482",
+        "T1546.003",
+        "T1547.001",
+        "T1548.002"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1003.001",
+          "T1018",
+          "T1021.002",
+          "T1021.006",
+          "T1027",
+          "T1047",
+          "T1053.005",
+          "T1055",
+          "T1059.001",
+          "T1070.001",
+          "T1070.004",
+          "T1071.001",
+          "T1083",
+          "T1087.001",
+          "T1087.002",
+          "T1105",
+          "T1140",
+          "T1218.005",
+          "T1482",
+          "T1546.003",
+          "T1547.001",
+          "T1548.002"
+        ],
+        "covered_parent": [],
+        "uncovered": []
+      },
+      "evidence_samples": []
+    },
+    {
+      "scenario": "metasploit_logonpasswords_lsass_memory_dump",
+      "group": "compound",
+      "tactic": "lsass_campaign_01",
+      "json_path": "Dataset\\compound\\lsass_campaign_01\\metasploit_logonpasswords_lsass_memory_dump\\metasploit_logonpasswords_lsass_memory_dump.json",
+      "total_events": 53698,
+      "top_eids": {
+        "10": 30414,
+        "7": 8033,
+        "13": 3310,
+        "12": 3166,
+        "18": 1587,
+        "4105": 1240,
+        "4106": 1239,
+        "4658": 466,
+        "800": 456,
+        "4103": 449
+      },
+      "techniques_from_filename": [
+        "T1003.001",
+        "T1059.001"
+      ],
+      "techniques_from_log": [
+        "T1003.001",
+        "T1016",
+        "T1033",
+        "T1055",
+        "T1057",
+        "T1059.001",
+        "T1059.005",
+        "T1070.001",
+        "T1082"
+      ],
+      "techniques_union": [
+        "T1003.001",
+        "T1016",
+        "T1033",
+        "T1055",
+        "T1057",
+        "T1059.001",
+        "T1059.005",
+        "T1070.001",
+        "T1070.004",
+        "T1071.001",
+        "T1082"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1003.001",
+          "T1016",
+          "T1033",
+          "T1055",
+          "T1057",
+          "T1059.001",
+          "T1059.005",
+          "T1070.001",
+          "T1070.004",
+          "T1071.001",
+          "T1082"
+        ],
+        "covered_parent": [],
+        "uncovered": []
+      },
+      "evidence_samples": [
+        {
+          "tid": "T1082",
+          "label": "systeminfo",
+          "sample": "systeminfo"
+        },
+        {
+          "tid": "T1033",
+          "label": "whoami",
+          "sample": "whoami  "
+        },
+        {
+          "tid": "T1059.001",
+          "label": "PowerShell",
+          "sample": "powershell.exe -executionpolicy restricted -command write-host 'final result: 1';"
+        },
+        {
+          "tid": "T1057",
+          "label": "tasklist",
+          "sample": "tasklist  /fo table /svc /fi \"username eq nt authority\\system\""
+        },
+        {
+          "tid": "T1003.001",
+          "label": "LSASS access 0x1410",
+          "sample": "c:\\windows\\system32\\wbem\\wmiprvse.exe -> c:\\windows\\system32\\lsass.exe"
+        },
+        {
+          "tid": "T1055",
+          "label": "CreateRemoteThread",
+          "sample": ""
+        },
+        {
+          "tid": "T1059.005",
+          "label": "WSH",
+          "sample": "c:\\windows\\system32\\cscript.exe c:\\windows\\system32\\gathernetworkinfo.vbs"
+        },
+        {
+          "tid": "T1016",
+          "label": "ipconfig",
+          "sample": "\"c:\\windows\\system32\\cmd.exe\" /c ipconfig /all >> config\\envinfo.txt"
+        },
+        {
+          "tid": "T1070.001",
+          "label": "EID 104 log cleared",
+          "sample": ""
+        }
+      ]
+    },
+    {
+      "scenario": "metasploit_procdump_lsass_memory_dump",
+      "group": "compound",
+      "tactic": "lsass_campaign_02",
+      "json_path": "Dataset\\compound\\lsass_campaign_02\\metasploit_procdump_lsass_memory_dump\\metasploit_procdump_lsass_memory_dump.json",
+      "total_events": 42482,
+      "top_eids": {
+        "10": 26468,
+        "7": 6068,
+        "12": 2299,
+        "4105": 1235,
+        "4106": 1234,
+        "13": 1193,
+        "800": 453,
+        "4103": 450,
+        "11": 408,
+        "4673": 349
+      },
+      "techniques_from_filename": [
+        "T1003.001",
+        "T1059.001"
+      ],
+      "techniques_from_log": [
+        "T1003.001",
+        "T1016",
+        "T1033",
+        "T1057",
+        "T1059.005",
+        "T1070.001",
+        "T1082"
+      ],
+      "techniques_union": [
+        "T1003.001",
+        "T1016",
+        "T1033",
+        "T1057",
+        "T1059.001",
+        "T1059.005",
+        "T1070.001",
+        "T1070.004",
+        "T1082"
+      ],
+      "coverage": {
+        "covered_exact": [
+          "T1003.001",
+          "T1016",
+          "T1033",
+          "T1057",
+          "T1059.001",
+          "T1059.005",
+          "T1070.001",
+          "T1070.004",
+          "T1082"
+        ],
+        "covered_parent": [],
+        "uncovered": []
+      },
+      "evidence_samples": [
+        {
+          "tid": "T1082",
+          "label": "systeminfo",
+          "sample": "systeminfo"
+        },
+        {
+          "tid": "T1033",
+          "label": "whoami",
+          "sample": "whoami  "
+        },
+        {
+          "tid": "T1003.001",
+          "label": "procdump lsass",
+          "sample": "\"c:\\\\program files\\\\procdump.exe\" -accepteula -ma lsass.exe c:\\windows\\temp\\lsass_dump.dmp"
+        },
+        {
+          "tid": "T1059.005",
+          "label": "WSH",
+          "sample": "c:\\windows\\system32\\cscript.exe c:\\windows\\system32\\gathernetworkinfo.vbs"
+        },
+        {
+          "tid": "T1057",
+          "label": "tasklist",
+          "sample": "\"c:\\windows\\system32\\cmd.exe\" /c tasklist /svc > processes.txt"
+        },
+        {
+          "tid": "T1070.001",
+          "label": "EID 104 log cleared",
+          "sample": ""
+        },
+        {
+          "tid": "T1016",
+          "label": "ipconfig",
+          "sample": "$net_adapter=(get-netadapter -includehidden); $output= ($net_adapter); $output += ($net_adapter | fl *); $output += (get-netadapteradvancedproperty | "
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "techniques_needed_total": 45,
+    "techniques_covered": 45,
+    "techniques_uncovered": []
+  }
+}

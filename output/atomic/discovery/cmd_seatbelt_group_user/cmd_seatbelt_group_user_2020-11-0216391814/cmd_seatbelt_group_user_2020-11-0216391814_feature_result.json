@@ -1,0 +1,357 @@
+[
+  {
+    "group_id": "T1070_001_3",
+    "technique_id": "T1070.001",
+    "technique_name": "Clear Windows Event Logs",
+    "anchor_eid": 1102,
+    "anchor_detail": {
+      "eid": 1102,
+      "time": "2020-11-02 04:39:08.640000+00:00",
+      "image": null,
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": null,
+      "integrity": null
+    },
+    "confidence": 0.5,
+    "all_idxs": [
+      3,
+      42,
+      44,
+      305,
+      306
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "spawn",
+            "parent_image": "cmd.exe",
+            "child_image": "Seatbelt.exe",
+            "integrity_level": "High",
+            "parent_guid": "{39e4a257-7a5f-5fa0-b74c-000000000700}",
+            "child_guid": "{39e4a257-7c7f-5fa0-c34c-000000000700}",
+            "cmdline": "Seatbelt.exe  -group=user",
+            "source_eid": 1
+          },
+          {
+            "relation": "spawn",
+            "parent_image": "svchost.exe",
+            "child_image": "WmiPrvSE.exe",
+            "integrity_level": "System",
+            "parent_guid": "{39e4a257-f132-5f8b-1000-000000000700}",
+            "child_guid": "{39e4a257-7c81-5fa0-c44c-000000000700}",
+            "cmdline": "C:\\windows\\system32\\wbem\\wmiprvse.exe -secured -Embedding",
+            "source_eid": 1
+          }
+        ],
+        "chain_depth": 2
+      },
+      "command_script": {
+        "entries": [
+          {
+            "source_eid": 4688,
+            "image": "Seatbelt.exe",
+            "cmdline": "Seatbelt.exe  -group=user",
+            "cmdline_length": 25,
+            "has_obfuscation": false,
+            "special_chars": []
+          },
+          {
+            "source_eid": 4688,
+            "image": "WmiPrvSE.exe",
+            "cmdline": "C:\\windows\\system32\\wbem\\wmiprvse.exe -secured -Embedding",
+            "cmdline_length": 57,
+            "has_obfuscation": false,
+            "special_chars": []
+          }
+        ],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 1,
+        "user": "WORKSTATION5\\wardog",
+        "domain": null,
+        "logon_id": "0xc61d9",
+        "integrity_level": "High",
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-11-02T04:39:08.640000+00:00",
+        "window_start_delta_sec": 0.0,
+        "window_end_delta_sec": 4.59,
+        "span_sec": 4.59,
+        "total_events": 5,
+        "event_density_per_10sec": 10.89,
+        "eid_counts": {
+          "4688": 2,
+          "1": 2,
+          "1102": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.01,
+          "max_sec": 3.031,
+          "mean_sec": 1.148
+        },
+        "burst_detected": []
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [
+          {
+            "source_eid": 1102,
+            "message": "The audit log was cleared.",
+            "user": null
+          }
+        ],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1082_44",
+    "technique_id": "T1082",
+    "technique_name": "System Information Discovery",
+    "anchor_eid": 1,
+    "anchor_detail": {
+      "eid": 1,
+      "time": "2020-11-02 04:39:11.681000+00:00",
+      "image": "Seatbelt.exe",
+      "parent_image": "cmd.exe",
+      "cmdline": "Seatbelt.exe  -group=user",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": "WORKSTATION5\\wardog",
+      "integrity": "High"
+    },
+    "confidence": 1.0,
+    "all_idxs": [
+      33,
+      41,
+      42,
+      44,
+      46,
+      50,
+      51,
+      52,
+      53,
+      55,
+      56,
+      57,
+      58,
+      74,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      100,
+      106,
+      107,
+      109,
+      110,
+      111,
+      113,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      142,
+      149,
+      150,
+      152,
+      157,
+      158,
+      159,
+      160,
+      161,
+      163,
+      165,
+      180,
+      183,
+      184,
+      185,
+      187,
+      209,
+      211,
+      212,
+      213,
+      214,
+      215,
+      229,
+      268,
+      269,
+      270,
+      271,
+      272,
+      273,
+      274,
+      275,
+      276,
+      277,
+      278,
+      279,
+      285,
+      305,
+      380,
+      381,
+      384,
+      385,
+      386,
+      388,
+      394,
+      399,
+      409,
+      411
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "spawn",
+            "parent_image": "cmd.exe",
+            "child_image": "Seatbelt.exe",
+            "integrity_level": "High",
+            "parent_guid": "{39e4a257-7a5f-5fa0-b74c-000000000700}",
+            "child_guid": "{39e4a257-7c7f-5fa0-c34c-000000000700}",
+            "cmdline": "Seatbelt.exe  -group=user",
+            "source_eid": 1
+          },
+          {
+            "relation": "spawn",
+            "parent_image": "svchost.exe",
+            "child_image": "WmiPrvSE.exe",
+            "integrity_level": null,
+            "parent_guid": null,
+            "child_guid": null,
+            "cmdline": "C:\\windows\\system32\\wbem\\wmiprvse.exe -secured -Embedding",
+            "source_eid": 4688
+          }
+        ],
+        "chain_depth": 2
+      },
+      "command_script": {
+        "entries": [
+          {
+            "source_eid": 4688,
+            "image": "Seatbelt.exe",
+            "cmdline": "Seatbelt.exe  -group=user",
+            "cmdline_length": 25,
+            "has_obfuscation": false,
+            "special_chars": []
+          },
+          {
+            "source_eid": 4688,
+            "image": "WmiPrvSE.exe",
+            "cmdline": "C:\\windows\\system32\\wbem\\wmiprvse.exe -secured -Embedding",
+            "cmdline_length": 57,
+            "has_obfuscation": false,
+            "special_chars": []
+          }
+        ],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 1,
+        "user": "WORKSTATION5\\wardog",
+        "domain": null,
+        "logon_id": "0xc61d9",
+        "integrity_level": "High",
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-11-02T04:39:11.681000+00:00",
+        "window_start_delta_sec": -0.52,
+        "window_end_delta_sec": 1.98,
+        "span_sec": 2.5,
+        "total_events": 91,
+        "event_density_per_10sec": 364.73,
+        "eid_counts": {
+          "7": 81,
+          "12": 4,
+          "4688": 2,
+          "24": 1,
+          "1": 1,
+          "13": 1,
+          "5": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 0.509,
+          "mean_sec": 0.028
+        },
+        "burst_detected": [
+          {
+            "eid": 7,
+            "count": 81,
+            "window_sec": 0.03
+          },
+          {
+            "eid": 12,
+            "count": 4,
+            "window_sec": 0.81
+          }
+        ]
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Notifications\\Data\\418A073AA3BC3475",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-7c7f-5fa0-c34c-000000000700}",
+            "image": "Seatbelt.exe"
+          }
+        ],
+        "registry_noise_count": 1,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  }
+]

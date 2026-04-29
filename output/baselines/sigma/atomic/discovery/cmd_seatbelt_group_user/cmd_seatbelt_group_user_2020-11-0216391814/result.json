@@ -1,0 +1,43 @@
+{
+  "scenario": "cmd_seatbelt_group_user_2020-11-0216391814",
+  "tactic_sequence": [
+    "Discovery"
+  ],
+  "technique_sequence": [
+    "T1526"
+  ],
+  "per_group_topk": [
+    [
+      "T1526",
+      "T1087",
+      "T1083"
+    ]
+  ],
+  "notes": {
+    "n_events_evaluated": 352,
+    "n_alerts": 1,
+    "alerts": [
+      {
+        "ts": "2020-11-02 04:39:11.681000+00:00",
+        "event_index": 44,
+        "event_id": 1,
+        "topk_tids": [
+          "T1526",
+          "T1087",
+          "T1083"
+        ],
+        "topk_tactics": [
+          "Discovery",
+          "Discovery",
+          "Discovery"
+        ],
+        "top_rule": {
+          "rule_id": "38646daa-e78f-4ace-9de0-55547b2d30da",
+          "title": "PUA - Seatbelt Execution",
+          "level": "high",
+          "status": "test"
+        }
+      }
+    ]
+  }
+}

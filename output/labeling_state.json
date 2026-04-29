@@ -1,0 +1,247 @@
+{
+  "per_scenario": {
+    "msf_record_mic_2020-06-09225055": {
+      "n_total": 97,
+      "n_trivial": 0,
+      "n_anchor_tool": 0,
+      "n_pending": 97,
+      "annotation_path": "atomic\\collection\\msf_record_mic\\msf_record_mic_2020-06-09225055\\msf_record_mic_2020-06-09225055_annotation.json"
+    },
+    "cmd_dumping_ntds_dit_file_ntdsutil": {
+      "n_total": 78,
+      "n_trivial": 33,
+      "n_anchor_tool": 3,
+      "n_pending": 42,
+      "annotation_path": "atomic\\credential_access\\cmd_dumping_ntds_dit_file_ntdsutil\\cmd_dumping_ntds_dit_file_ntdsutil\\cmd_dumping_ntds_dit_file_ntdsutil_annotation.json"
+    },
+    "cmd_sam_copy_esentutl_2020-10-1900290001": {
+      "n_total": 41,
+      "n_trivial": 0,
+      "n_anchor_tool": 38,
+      "n_pending": 3,
+      "annotation_path": "atomic\\credential_access\\cmd_sam_copy_esentutl\\cmd_sam_copy_esentutl_2020-10-1900290001\\cmd_sam_copy_esentutl_2020-10-1900290001_annotation.json"
+    },
+    "empire_mimikatz_logonpasswords_2020-08-07103224": {
+      "n_total": 28,
+      "n_trivial": 2,
+      "n_anchor_tool": 10,
+      "n_pending": 16,
+      "annotation_path": "atomic\\credential_access\\empire_mimikatz_logonpasswords\\empire_mimikatz_logonpasswords_2020-08-07103224\\empire_mimikatz_logonpasswords_2020-08-07103224_annotation.json"
+    },
+    "empire_shell_rubeus_asktgt_createnetonly_2020-09-21230246": {
+      "n_total": 52,
+      "n_trivial": 7,
+      "n_anchor_tool": 1,
+      "n_pending": 44,
+      "annotation_path": "atomic\\credential_access\\empire_shell_rubeus_asktgt_createnetonly\\empire_shell_rubeus_asktgt_createnetonly_2020-09-21230246\\empire_shell_rubeus_asktgt_createnetonly_2020-09-21230246_annotation.json"
+    },
+    "psh_lsass_memory_dump_comsvcs_2020-10-18T19500924": {
+      "n_total": 4,
+      "n_trivial": 0,
+      "n_anchor_tool": 2,
+      "n_pending": 2,
+      "annotation_path": "atomic\\credential_access\\psh_lsass_memory_dump_comsvcs\\psh_lsass_memory_dump_comsvcs_2020-10-18T19500924\\psh_lsass_memory_dump_comsvcs_2020-10-18T19500924_annotation.json"
+    },
+    "cmd_process_herpaderping_mimiexplorer_2020-10-2623583501": {
+      "n_total": 8,
+      "n_trivial": 0,
+      "n_anchor_tool": 4,
+      "n_pending": 4,
+      "annotation_path": "atomic\\defense_evasion\\cmd_process_herpaderping_mimiexplorer\\cmd_process_herpaderping_mimiexplorer_2020-10-2623583501\\cmd_process_herpaderping_mimiexplorer_2020-10-2623583501_annotation.json"
+    },
+    "cmd_stop_event_logging_controlset001_minint_key": {
+      "n_total": 79,
+      "n_trivial": 45,
+      "n_anchor_tool": 4,
+      "n_pending": 30,
+      "annotation_path": "atomic\\defense_evasion\\cmd_stop_event_logging_controlset001_minint_key\\cmd_stop_event_logging_controlset001_minint_key\\cmd_stop_event_logging_controlset001_minint_key_annotation.json"
+    },
+    "cmd_wevtutil_modify_security_eventlog_path": {
+      "n_total": 89,
+      "n_trivial": 32,
+      "n_anchor_tool": 1,
+      "n_pending": 56,
+      "annotation_path": "atomic\\defense_evasion\\cmd_wevtutil_modify_security_eventlog_path\\cmd_wevtutil_modify_security_eventlog_path\\cmd_wevtutil_modify_security_eventlog_path_annotation.json"
+    },
+    "empire_dllinjection_LoadLibrary_CreateRemoteThread_2020-07-22000048": {
+      "n_total": 138,
+      "n_trivial": 0,
+      "n_anchor_tool": 9,
+      "n_pending": 129,
+      "annotation_path": "atomic\\defense_evasion\\empire_dllinjection_LoadLibrary_CreateRemoteThread\\empire_dllinjection_LoadLibrary_CreateRemoteThread_2020-07-22000048\\empire_dllinjection_LoadLibrary_CreateRemoteThread_2020-07-22000048_annotation.json"
+    },
+    "psh_cmstp_execution_bypassuac_2020-10-2201543213": {
+      "n_total": 16,
+      "n_trivial": 0,
+      "n_anchor_tool": 3,
+      "n_pending": 13,
+      "annotation_path": "atomic\\defense_evasion\\psh_cmstp_execution_bypassuac\\psh_cmstp_execution_bypassuac_2020-10-2201543213\\psh_cmstp_execution_bypassuac_2020-10-2201543213_annotation.json"
+    },
+    "cmd_seatbelt_group_user_2020-11-0216391814": {
+      "n_total": 4,
+      "n_trivial": 0,
+      "n_anchor_tool": 1,
+      "n_pending": 3,
+      "annotation_path": "atomic\\discovery\\cmd_seatbelt_group_user\\cmd_seatbelt_group_user_2020-11-0216391814\\cmd_seatbelt_group_user_2020-11-0216391814_annotation.json"
+    },
+    "empire_find_localadmin_smb_svcctl_OpenSCManager_2020-09-22021559": {
+      "n_total": 46,
+      "n_trivial": 2,
+      "n_anchor_tool": 0,
+      "n_pending": 44,
+      "annotation_path": "atomic\\discovery\\empire_find_localadmin_smb_svcctl_OpenSCManager\\empire_find_localadmin_smb_svcctl_OpenSCManager_2020-09-22021559\\empire_find_localadmin_smb_svcctl_OpenSCManager_2020-09-22021559_annotation.json"
+    },
+    "empire_getsession_dcerpc_smb_srvsvc_NetSessEnum_2020-09-22034513": {
+      "n_total": 25,
+      "n_trivial": 5,
+      "n_anchor_tool": 1,
+      "n_pending": 19,
+      "annotation_path": "atomic\\discovery\\empire_getsession_dcerpc_smb_srvsvc_NetSessEnum\\empire_getsession_dcerpc_smb_srvsvc_NetSessEnum_2020-09-22034513\\empire_getsession_dcerpc_smb_srvsvc_NetSessEnum_2020-09-22034513_annotation.json"
+    },
+    "empire_shell_net_local_users_2020-09-21192606": {
+      "n_total": 21,
+      "n_trivial": 6,
+      "n_anchor_tool": 1,
+      "n_pending": 14,
+      "annotation_path": "atomic\\discovery\\empire_shell_net_local_users\\empire_shell_net_local_users_2020-09-21192606\\empire_shell_net_local_users_2020-09-21192606_annotation.json"
+    },
+    "empire_shell_samr_EnumDomainUsers_2020-09-21193527": {
+      "n_total": 16,
+      "n_trivial": 1,
+      "n_anchor_tool": 1,
+      "n_pending": 14,
+      "annotation_path": "atomic\\discovery\\empire_shell_samr_EnumDomainUsers\\empire_shell_samr_EnumDomainUsers_2020-09-21193527\\empire_shell_samr_EnumDomainUsers_2020-09-21193527_annotation.json"
+    },
+    "cmd_sharpview_pcre_net_2020-10-2920232423": {
+      "n_total": 3,
+      "n_trivial": 0,
+      "n_anchor_tool": 2,
+      "n_pending": 1,
+      "annotation_path": "atomic\\execution\\cmd_sharpview_pcre_net\\cmd_sharpview_pcre_net_2020-10-2920232423\\cmd_sharpview_pcre_net_2020-10-2920232423_annotation.json"
+    },
+    "empire_launcher_vbs_2020-09-04160940": {
+      "n_total": 29,
+      "n_trivial": 0,
+      "n_anchor_tool": 6,
+      "n_pending": 23,
+      "annotation_path": "atomic\\execution\\empire_launcher_vbs\\empire_launcher_vbs_2020-09-04160940\\empire_launcher_vbs_2020-09-04160940_annotation.json"
+    },
+    "psh_powershell_httplistener_2020-11-0204130683": {
+      "n_total": 3,
+      "n_trivial": 1,
+      "n_anchor_tool": 1,
+      "n_pending": 1,
+      "annotation_path": "atomic\\execution\\psh_powershell_httplistener\\psh_powershell_httplistener_2020-11-0204130683\\psh_powershell_httplistener_2020-11-0204130683_annotation.json"
+    },
+    "psh_python_webserver_2020-10-2900161507": {
+      "n_total": 25,
+      "n_trivial": 7,
+      "n_anchor_tool": 1,
+      "n_pending": 17,
+      "annotation_path": "atomic\\execution\\psh_python_webserver\\psh_python_webserver_2020-10-2900161507\\psh_python_webserver_2020-10-2900161507_annotation.json"
+    },
+    "covenant_psremoting_command_2020-08-06115603": {
+      "n_total": 61,
+      "n_trivial": 2,
+      "n_anchor_tool": 6,
+      "n_pending": 53,
+      "annotation_path": "atomic\\lateral_movement\\covenant_psremoting_command\\covenant_psremoting_command_2020-08-06115603\\covenant_psremoting_command_2020-08-06115603_annotation.json"
+    },
+    "empire_psexec_dcerpc_tcp_svcctl_2020-09-20121608": {
+      "n_total": 47,
+      "n_trivial": 3,
+      "n_anchor_tool": 5,
+      "n_pending": 39,
+      "annotation_path": "atomic\\lateral_movement\\empire_psexec_dcerpc_tcp_svcctl\\empire_psexec_dcerpc_tcp_svcctl_2020-09-20121608\\empire_psexec_dcerpc_tcp_svcctl_2020-09-20121608_annotation.json"
+    },
+    "empire_psremoting_stager_2020-09-20170827": {
+      "n_total": 55,
+      "n_trivial": 1,
+      "n_anchor_tool": 9,
+      "n_pending": 45,
+      "annotation_path": "atomic\\lateral_movement\\empire_psremoting_stager\\empire_psremoting_stager_2020-09-20170827\\empire_psremoting_stager_2020-09-20170827_annotation.json"
+    },
+    "empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod_2020-09-21001437": {
+      "n_total": 54,
+      "n_trivial": 8,
+      "n_anchor_tool": 7,
+      "n_pending": 39,
+      "annotation_path": "atomic\\lateral_movement\\empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod\\empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod_2020-09-21001437\\empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod_2020-09-21001437_annotation.json"
+    },
+    "purplesharp_ad_playbook_I_2020-10-22042947": {
+      "n_total": 79,
+      "n_trivial": 0,
+      "n_anchor_tool": 18,
+      "n_pending": 61,
+      "annotation_path": "atomic\\lateral_movement\\purplesharp_ad_playbook_I\\purplesharp_ad_playbook_I_2020-10-22042947\\purplesharp_ad_playbook_I_2020-10-22042947_annotation.json"
+    },
+    "cmd_userinitmprlogonscript_batch_2020-10-1922471810": {
+      "n_total": 4,
+      "n_trivial": 0,
+      "n_anchor_tool": 2,
+      "n_pending": 2,
+      "annotation_path": "atomic\\persistence\\cmd_userinitmprlogonscript_batch\\cmd_userinitmprlogonscript_batch_2020-10-1922471810\\cmd_userinitmprlogonscript_batch_2020-10-1922471810_annotation.json"
+    },
+    "covenant_persistwmi_2019-12-05044734": {
+      "n_total": 51,
+      "n_trivial": 0,
+      "n_anchor_tool": 0,
+      "n_pending": 51,
+      "annotation_path": "atomic\\persistence\\covenant_persistwmi\\covenant_persistwmi_2019-12-05044734\\covenant_persistwmi_2019-12-05044734_annotation.json"
+    },
+    "empire_persistence_registry_modification_run_keys_elevated_user_2020-07-22001847": {
+      "n_total": 24,
+      "n_trivial": 0,
+      "n_anchor_tool": 2,
+      "n_pending": 22,
+      "annotation_path": "atomic\\persistence\\empire_persistence_registry_modification_run_keys_elevated_user\\empire_persistence_registry_modification_run_keys_elevated_user_2020-07-22001847\\empire_persistence_registry_modification_run_keys_elevated_user_2020-07-22001847_annotation.json"
+    },
+    "empire_schtasks_creation_execution_elevated_user_2020-09-21175806": {
+      "n_total": 180,
+      "n_trivial": 59,
+      "n_anchor_tool": 2,
+      "n_pending": 119,
+      "annotation_path": "atomic\\persistence\\empire_schtasks_creation_execution_elevated_user\\empire_schtasks_creation_execution_elevated_user_2020-09-21175806\\empire_schtasks_creation_execution_elevated_user_2020-09-21175806_annotation.json"
+    },
+    "empire_wmi_local_event_subscriptions_elevated_user_2020-09-04164306": {
+      "n_total": 294,
+      "n_trivial": 44,
+      "n_anchor_tool": 10,
+      "n_pending": 240,
+      "annotation_path": "atomic\\persistence\\empire_wmi_local_event_subscriptions_elevated_user\\empire_wmi_local_event_subscriptions_elevated_user_2020-09-04164306\\empire_wmi_local_event_subscriptions_elevated_user_2020-09-04164306_annotation.json"
+    },
+    "cmd_service_mod_fax_2020-10-2120454410": {
+      "n_total": 7,
+      "n_trivial": 0,
+      "n_anchor_tool": 3,
+      "n_pending": 4,
+      "annotation_path": "atomic\\privilege_escalation\\cmd_service_mod_fax\\cmd_service_mod_fax_2020-10-2120454410\\cmd_service_mod_fax_2020-10-2120454410_annotation.json"
+    },
+    "empire_uac_shellapi_fodhelper_2020-09-04032946": {
+      "n_total": 36,
+      "n_trivial": 0,
+      "n_anchor_tool": 6,
+      "n_pending": 30,
+      "annotation_path": "atomic\\privilege_escalation\\empire_uac_shellapi_fodhelper\\empire_uac_shellapi_fodhelper_2020-09-04032946\\empire_uac_shellapi_fodhelper_2020-09-04032946_annotation.json"
+    },
+    "metasploit_logonpasswords_lsass_memory_dump": {
+      "n_total": 271,
+      "n_trivial": 87,
+      "n_anchor_tool": 41,
+      "n_pending": 143,
+      "annotation_path": "compound\\lsass_campaign_01\\metasploit_logonpasswords_lsass_memory_dump\\metasploit_logonpasswords_lsass_memory_dump\\metasploit_logonpasswords_lsass_memory_dump_annotation.json"
+    },
+    "metasploit_procdump_lsass_memory_dump": {
+      "n_total": 219,
+      "n_trivial": 87,
+      "n_anchor_tool": 2,
+      "n_pending": 130,
+      "annotation_path": "compound\\lsass_campaign_02\\metasploit_procdump_lsass_memory_dump\\metasploit_procdump_lsass_memory_dump\\metasploit_procdump_lsass_memory_dump_annotation.json"
+    }
+  },
+  "totals": {
+    "pending": 1550,
+    "trivial": 432,
+    "anchor-tool": 202
+  }
+}

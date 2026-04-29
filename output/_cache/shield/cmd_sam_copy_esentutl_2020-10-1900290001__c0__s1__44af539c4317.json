@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed registry modifications by Explorer.EXE are to standard user-specific keys (FeatureUsage, UserAssist, ActivityDataModel) which is normal behavior for the Windows shell and does not indicate suspicious activity.\"\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed processes are legitimate Windows or Microsoft application binaries, and their command lines, DLL loads, and file/registry operations are consistent with normal system and UWP application behavior, with no indicators of common attack patterns.\"\n}"}

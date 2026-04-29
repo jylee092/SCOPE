@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[svchost.exe|{d273d0f0-e86]\"\n  ],\n  \"rationale\": \"The svchost.exe process is observed writing to prefetch files for common reconnaissance and execution utilities (cmd.exe, powershell.exe, whoami.exe), which is anomalous behavior for a legitimate service host and suggests potential compromise or malicious activity.\"\n}"}

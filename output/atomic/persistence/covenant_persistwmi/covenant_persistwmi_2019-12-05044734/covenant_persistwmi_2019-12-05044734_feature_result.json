@@ -1,0 +1,2310 @@
+[
+  {
+    "group_id": "T1021_003_107",
+    "technique_id": "T1021.003",
+    "technique_name": "Distributed Component Object Model",
+    "anchor_eid": 4624,
+    "anchor_detail": {
+      "eid": 4624,
+      "time": "2019-12-05 04:47:40.113000+00:00",
+      "image": null,
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": "-",
+      "integrity": null
+    },
+    "confidence": 0.56,
+    "all_idxs": [
+      43,
+      44,
+      59,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      86,
+      88,
+      89,
+      90,
+      92,
+      93,
+      95,
+      96,
+      97,
+      98,
+      99,
+      107,
+      110,
+      118,
+      127,
+      148,
+      153,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      192,
+      193,
+      201,
+      265,
+      275,
+      277,
+      278,
+      287,
+      293,
+      298,
+      299,
+      300,
+      301,
+      302,
+      440,
+      441,
+      442,
+      460,
+      462,
+      517,
+      542,
+      543,
+      544,
+      587,
+      597,
+      601
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "observed",
+            "child_image": "dns.exe",
+            "parent_image": null,
+            "source_eid": 3
+          },
+          {
+            "relation": "observed",
+            "child_image": "svchost.exe",
+            "parent_image": null,
+            "source_eid": 18
+          },
+          {
+            "relation": "observed",
+            "child_image": "lsass.exe",
+            "parent_image": null,
+            "source_eid": 3
+          },
+          {
+            "relation": "observed",
+            "child_image": "System",
+            "parent_image": null,
+            "source_eid": 3
+          },
+          {
+            "relation": "observed",
+            "child_image": "DFSRs.exe",
+            "parent_image": null,
+            "source_eid": 11
+          },
+          {
+            "relation": "observed",
+            "child_image": "dfsrs.exe",
+            "parent_image": null,
+            "source_eid": 3
+          },
+          {
+            "relation": "observed",
+            "child_image": "Microsoft.ActiveDirectory.WebServices.exe",
+            "parent_image": null,
+            "source_eid": 3
+          }
+        ],
+        "chain_depth": 7
+      },
+      "command_script": {
+        "entries": [],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 4624,
+        "user": "-",
+        "domain": "-",
+        "logon_id": "0x0",
+        "integrity_level": null,
+        "user_sid": "S-1-0-0",
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2019-12-05T04:47:40.113000+00:00",
+        "window_start_delta_sec": -1.03,
+        "window_end_delta_sec": 36.42,
+        "span_sec": 37.45,
+        "total_events": 74,
+        "event_density_per_10sec": 19.76,
+        "eid_counts": {
+          "3": 27,
+          "7": 22,
+          "11": 13,
+          "4624": 9,
+          "18": 3
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 9.138,
+          "mean_sec": 0.513
+        },
+        "burst_detected": [
+          {
+            "eid": 3,
+            "count": 27,
+            "window_sec": 2.05
+          },
+          {
+            "eid": 7,
+            "count": 22,
+            "window_sec": 0.0
+          },
+          {
+            "eid": 11,
+            "count": 13,
+            "window_sec": 0.0
+          },
+          {
+            "eid": 4624,
+            "count": 9,
+            "window_sec": 0.0
+          },
+          {
+            "eid": 18,
+            "count": 3,
+            "window_sec": 8.1
+          }
+        ]
+      },
+      "network": {
+        "connections": [
+          {
+            "source_eid": 3,
+            "image": "dns.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "172.18.39.100",
+            "src_port": 53,
+            "dst_port": 55506,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "dns.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "172.18.39.100",
+            "src_port": 53,
+            "dst_port": 60589,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "dst_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "src_port": 49635,
+            "dst_port": 389,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "172.18.39.5",
+            "src_port": 49636,
+            "dst_port": 389,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "dst_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "src_port": 49635,
+            "dst_port": 389,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "System",
+            "src_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "dst_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "src_port": 49637,
+            "dst_port": 445,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": "SMB"
+          },
+          {
+            "source_eid": 3,
+            "image": "System",
+            "src_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "dst_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "src_port": 49637,
+            "dst_port": 445,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": "SMB"
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "172.18.39.5",
+            "src_port": 49636,
+            "dst_port": 389,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "dst_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "src_port": 49639,
+            "dst_port": 389,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "dst_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "src_port": 49638,
+            "dst_port": 389,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "dst_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "src_port": 49638,
+            "dst_port": 389,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "dst_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "src_port": 49639,
+            "dst_port": 389,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "dns.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "172.18.39.100",
+            "src_port": 53,
+            "dst_port": 53248,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "dns.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "172.18.39.100",
+            "src_port": 53,
+            "dst_port": 60051,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "dfsrs.exe",
+            "src_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "dst_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "src_port": 49640,
+            "dst_port": 135,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "dfsrs.exe",
+            "src_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "dst_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "src_port": 49641,
+            "dst_port": 389,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "dst_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "src_port": 49641,
+            "dst_port": 389,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "dst_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "src_port": 49640,
+            "dst_port": 135,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "dfsrs.exe",
+            "src_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "dst_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "src_port": 49642,
+            "dst_port": 389,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "dst_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "src_port": 49642,
+            "dst_port": 389,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.39.105",
+            "dst_ip": "172.18.39.5",
+            "src_port": 51711,
+            "dst_port": 88,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "172.18.39.105",
+            "src_port": 389,
+            "dst_port": 49346,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.39.105",
+            "dst_ip": "172.18.39.5",
+            "src_port": 51710,
+            "dst_port": 88,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "dns.exe",
+            "src_ip": "0:0:0:0:0:0:0:1",
+            "dst_ip": "0:0:0:0:0:0:0:1",
+            "src_port": 53,
+            "dst_port": 57286,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "dns.exe",
+            "src_ip": "0:0:0:0:0:0:0:1",
+            "dst_ip": "0:0:0:0:0:0:0:1",
+            "src_port": 53,
+            "dst_port": 57430,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "0:0:0:0:0:0:0:1",
+            "dst_ip": "0:0:0:0:0:0:0:1",
+            "src_port": 49643,
+            "dst_port": 389,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "Microsoft.ActiveDirectory.WebServices.exe",
+            "src_ip": "0:0:0:0:0:0:0:1",
+            "dst_ip": "0:0:0:0:0:0:0:1",
+            "src_port": 49643,
+            "dst_port": 389,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          }
+        ]
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": [
+          {
+            "source_eid": 11,
+            "path": "C:\\ProgramData\\Microsoft\\Group Policy\\History\\{FF1D66B7-66C6-412F-A0AF-F334C8A65A6B}\\Machine",
+            "image": "svchost.exe"
+          },
+          {
+            "source_eid": 11,
+            "path": "C:\\ProgramData\\Microsoft\\Group Policy\\History\\{FF1D66B7-66C6-412F-A0AF-F334C8A65A6B}",
+            "image": "svchost.exe"
+          },
+          {
+            "source_eid": 11,
+            "path": "C:\\ProgramData\\Microsoft\\Group Policy\\History\\{FF1D66B7-66C6-412F-A0AF-F334C8A65A6B}\\Machine\\Preferences",
+            "image": "svchost.exe"
+          },
+          {
+            "source_eid": 11,
+            "path": "C:\\ProgramData\\Microsoft\\Group Policy\\History\\{B8F60072-2A07-4323-9C8C-71E74DC1A477}",
+            "image": "svchost.exe"
+          },
+          {
+            "source_eid": 11,
+            "path": "C:\\ProgramData\\Microsoft\\Group Policy\\History\\{FF1D66B7-66C6-412F-A0AF-F334C8A65A6B}\\Machine\\Preferences\\Registry\\Registry.xml",
+            "image": "svchost.exe"
+          },
+          {
+            "source_eid": 11,
+            "path": "C:\\ProgramData\\Microsoft\\Group Policy\\History\\{FF1D66B7-66C6-412F-A0AF-F334C8A65A6B}\\Machine\\Preferences\\Registry",
+            "image": "svchost.exe"
+          },
+          {
+            "source_eid": 11,
+            "path": "C:\\ProgramData\\Microsoft\\Group Policy\\History\\{B8F60072-2A07-4323-9C8C-71E74DC1A477}\\Machine\\Preferences",
+            "image": "svchost.exe"
+          },
+          {
+            "source_eid": 11,
+            "path": "C:\\ProgramData\\Microsoft\\Group Policy\\History\\{B8F60072-2A07-4323-9C8C-71E74DC1A477}\\Machine\\Preferences\\Registry",
+            "image": "svchost.exe"
+          },
+          {
+            "source_eid": 11,
+            "path": "C:\\ProgramData\\Microsoft\\Group Policy\\History\\{B8F60072-2A07-4323-9C8C-71E74DC1A477}\\Machine",
+            "image": "svchost.exe"
+          },
+          {
+            "source_eid": 11,
+            "path": "C:\\ProgramData\\Microsoft\\Group Policy\\History\\{B8F60072-2A07-4323-9C8C-71E74DC1A477}\\Machine\\Preferences\\Registry\\Registry.xml",
+            "image": "svchost.exe"
+          },
+          {
+            "source_eid": 11,
+            "path": "C:\\Windows\\ServiceState\\EventLog\\Data\\lastalive1.dat",
+            "image": "svchost.exe"
+          },
+          {
+            "source_eid": 11,
+            "path": "C:\\System Volume Information\\DFSR\\Config\\Replica_23EE0F75-A719-4963-BC3A-9CB385279D9B.XML.TMP",
+            "image": "DFSRs.exe"
+          },
+          {
+            "source_eid": 11,
+            "path": "C:\\System Volume Information\\DFSR\\Config\\Volume_59E89FD7-0000-0000-0000-100000000000.XML.TMP",
+            "image": "DFSRs.exe"
+          }
+        ]
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1021_003_587",
+    "technique_id": "T1021.003",
+    "technique_name": "Distributed Component Object Model",
+    "anchor_eid": 4624,
+    "anchor_detail": {
+      "eid": 4624,
+      "time": "2019-12-05 04:48:15.516000+00:00",
+      "image": null,
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": "-",
+      "integrity": null
+    },
+    "confidence": 0.67,
+    "all_idxs": [
+      542,
+      543,
+      544,
+      587,
+      597,
+      601,
+      631,
+      708,
+      710,
+      719,
+      748,
+      765
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "observed",
+            "child_image": "svchost.exe",
+            "parent_image": null,
+            "source_eid": 7
+          },
+          {
+            "relation": "observed",
+            "child_image": "lsass.exe",
+            "parent_image": null,
+            "source_eid": 3
+          },
+          {
+            "relation": "observed",
+            "child_image": "Microsoft.ActiveDirectory.WebServices.exe",
+            "parent_image": null,
+            "source_eid": 3
+          },
+          {
+            "relation": "observed",
+            "child_image": "dns.exe",
+            "parent_image": null,
+            "source_eid": 18
+          }
+        ],
+        "chain_depth": 4
+      },
+      "command_script": {
+        "entries": [],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 4624,
+        "user": "-",
+        "domain": "-",
+        "logon_id": "0x0",
+        "integrity_level": null,
+        "user_sid": "S-1-0-0",
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2019-12-05T04:48:15.516000+00:00",
+        "window_start_delta_sec": -8.09,
+        "window_end_delta_sec": 28.34,
+        "span_sec": 36.44,
+        "total_events": 12,
+        "event_density_per_10sec": 3.29,
+        "eid_counts": {
+          "3": 6,
+          "7": 3,
+          "4624": 1,
+          "18": 1,
+          "11": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 8.095,
+          "mean_sec": 3.312
+        },
+        "burst_detected": [
+          {
+            "eid": 3,
+            "count": 6,
+            "window_sec": 2.01
+          },
+          {
+            "eid": 7,
+            "count": 3,
+            "window_sec": 0.0
+          }
+        ]
+      },
+      "network": {
+        "connections": [
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "0:0:0:0:0:0:0:1",
+            "dst_ip": "0:0:0:0:0:0:0:1",
+            "src_port": 49643,
+            "dst_port": 389,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "Microsoft.ActiveDirectory.WebServices.exe",
+            "src_ip": "0:0:0:0:0:0:0:1",
+            "dst_ip": "0:0:0:0:0:0:0:1",
+            "src_port": 49643,
+            "dst_port": 389,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "dns.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "172.18.39.102",
+            "src_port": 53,
+            "dst_port": 51302,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "dns.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "172.18.39.102",
+            "src_port": 53,
+            "dst_port": 52957,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "dns.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "172.18.39.102",
+            "src_port": 53,
+            "dst_port": 58009,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "172.18.39.102",
+            "src_port": 49644,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          }
+        ]
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": [
+          {
+            "source_eid": 11,
+            "path": "C:\\Windows\\ServiceState\\EventLog\\Data\\lastalive0.dat",
+            "image": "svchost.exe"
+          }
+        ]
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1021_003_846",
+    "technique_id": "T1021.003",
+    "technique_name": "Distributed Component Object Model",
+    "anchor_eid": 4624,
+    "anchor_detail": {
+      "eid": 4624,
+      "time": "2019-12-05 04:49:00.051000+00:00",
+      "image": null,
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": "-",
+      "integrity": null
+    },
+    "confidence": 0.67,
+    "all_idxs": [
+      846,
+      853,
+      904,
+      910,
+      913,
+      993,
+      994,
+      997
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "observed",
+            "child_image": "dns.exe",
+            "parent_image": null,
+            "source_eid": 3
+          },
+          {
+            "relation": "observed",
+            "child_image": "svchost.exe",
+            "parent_image": null,
+            "source_eid": 7
+          },
+          {
+            "relation": "observed",
+            "child_image": "System",
+            "parent_image": null,
+            "source_eid": 3
+          }
+        ],
+        "chain_depth": 3
+      },
+      "command_script": {
+        "entries": [],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 4624,
+        "user": "-",
+        "domain": "-",
+        "logon_id": "0x0",
+        "integrity_level": null,
+        "user_sid": "S-1-0-0",
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2019-12-05T04:49:00.051000+00:00",
+        "window_start_delta_sec": 0.0,
+        "window_end_delta_sec": 8.09,
+        "span_sec": 8.09,
+        "total_events": 8,
+        "event_density_per_10sec": 9.89,
+        "eid_counts": {
+          "7": 4,
+          "3": 3,
+          "4624": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 7.064,
+          "mean_sec": 1.156
+        },
+        "burst_detected": [
+          {
+            "eid": 7,
+            "count": 4,
+            "window_sec": 7.07
+          },
+          {
+            "eid": 3,
+            "count": 3,
+            "window_sec": 1.02
+          }
+        ]
+      },
+      "network": {
+        "connections": [
+          {
+            "source_eid": 3,
+            "image": "dns.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "172.18.39.103",
+            "src_port": 53,
+            "dst_port": 56009,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "dns.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "172.18.39.103",
+            "src_port": 53,
+            "dst_port": 50006,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "System",
+            "src_ip": "172.18.39.103",
+            "dst_ip": "172.18.39.5",
+            "src_port": 50864,
+            "dst_port": 445,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": "SMB"
+          }
+        ]
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1021_003_352",
+    "technique_id": "T1021.003",
+    "technique_name": "Distributed Component Object Model",
+    "anchor_eid": 4648,
+    "anchor_detail": {
+      "eid": 4648,
+      "time": "2019-12-05 04:47:56.287000+00:00",
+      "image": null,
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": "IT001$",
+      "integrity": null
+    },
+    "confidence": 0.67,
+    "all_idxs": [
+      295,
+      333,
+      339,
+      344,
+      347,
+      352,
+      357,
+      364,
+      368,
+      369,
+      379,
+      380,
+      424,
+      443,
+      444,
+      446
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "observed",
+            "child_image": "svchost.exe",
+            "parent_image": null,
+            "source_eid": 3
+          },
+          {
+            "relation": "observed",
+            "child_image": "unsecapp.exe",
+            "parent_image": null,
+            "source_eid": 7
+          },
+          {
+            "relation": "observed",
+            "child_image": "lsass.exe",
+            "parent_image": null,
+            "source_eid": 3
+          }
+        ],
+        "chain_depth": 3
+      },
+      "command_script": {
+        "entries": [],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 3,
+        "user": "NT AUTHORITY\\NETWORK SERVICE",
+        "domain": "NT AUTHORITY",
+        "logon_id": null,
+        "integrity_level": null,
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2019-12-05T04:47:56.287000+00:00",
+        "window_start_delta_sec": -7.1,
+        "window_end_delta_sec": 2.04,
+        "span_sec": 9.14,
+        "total_events": 16,
+        "event_density_per_10sec": 17.5,
+        "eid_counts": {
+          "7": 8,
+          "3": 4,
+          "4648": 4
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 7.095,
+          "mean_sec": 0.609
+        },
+        "burst_detected": [
+          {
+            "eid": 7,
+            "count": 8,
+            "window_sec": 0.0
+          },
+          {
+            "eid": 3,
+            "count": 4,
+            "window_sec": 9.14
+          },
+          {
+            "eid": 4648,
+            "count": 4,
+            "window_sec": 0.01
+          }
+        ]
+      },
+      "network": {
+        "connections": [
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.39.105",
+            "dst_ip": "172.18.39.102",
+            "src_port": 51709,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.39.105",
+            "dst_ip": "172.18.39.5",
+            "src_port": 51711,
+            "dst_port": 88,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.39.105",
+            "dst_ip": "172.18.39.5",
+            "src_port": 51710,
+            "dst_port": 88,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.39.105",
+            "dst_ip": "172.18.39.5",
+            "src_port": 49346,
+            "dst_port": 389,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          }
+        ]
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1021_002_349",
+    "technique_id": "T1021.002",
+    "technique_name": "SMB/Windows Admin Shares",
+    "anchor_eid": 4624,
+    "anchor_detail": {
+      "eid": 4624,
+      "time": "2019-12-05 04:47:56.287000+00:00",
+      "image": null,
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": "IT001$",
+      "integrity": null
+    },
+    "confidence": 0.67,
+    "all_idxs": [
+      295,
+      333,
+      334,
+      339,
+      344,
+      347,
+      349,
+      352,
+      357,
+      364,
+      367,
+      368,
+      369,
+      374,
+      379,
+      380,
+      382,
+      424,
+      425,
+      443,
+      444,
+      446
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "observed",
+            "child_image": "svchost.exe",
+            "parent_image": null,
+            "source_eid": 3
+          },
+          {
+            "relation": "observed",
+            "child_image": "unsecapp.exe",
+            "parent_image": null,
+            "source_eid": 7
+          },
+          {
+            "relation": "observed",
+            "child_image": "System",
+            "parent_image": null,
+            "source_eid": 11
+          },
+          {
+            "relation": "observed",
+            "child_image": "lsass.exe",
+            "parent_image": null,
+            "source_eid": 3
+          }
+        ],
+        "chain_depth": 4
+      },
+      "command_script": {
+        "entries": [],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 4624,
+        "user": "IT001$",
+        "domain": "shire",
+        "logon_id": "0x3e7",
+        "integrity_level": null,
+        "user_sid": "S-1-5-18",
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2019-12-05T04:47:56.287000+00:00",
+        "window_start_delta_sec": -7.1,
+        "window_end_delta_sec": 2.04,
+        "span_sec": 9.14,
+        "total_events": 22,
+        "event_density_per_10sec": 24.07,
+        "eid_counts": {
+          "7": 8,
+          "3": 4,
+          "4624": 4,
+          "4648": 4,
+          "18": 1,
+          "11": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 7.095,
+          "mean_sec": 0.435
+        },
+        "burst_detected": [
+          {
+            "eid": 7,
+            "count": 8,
+            "window_sec": 0.0
+          },
+          {
+            "eid": 3,
+            "count": 4,
+            "window_sec": 9.14
+          },
+          {
+            "eid": 4624,
+            "count": 4,
+            "window_sec": 0.01
+          },
+          {
+            "eid": 4648,
+            "count": 4,
+            "window_sec": 0.01
+          }
+        ]
+      },
+      "network": {
+        "connections": [
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.39.105",
+            "dst_ip": "172.18.39.102",
+            "src_port": 51709,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.39.105",
+            "dst_ip": "172.18.39.5",
+            "src_port": 51711,
+            "dst_port": 88,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.39.105",
+            "dst_ip": "172.18.39.5",
+            "src_port": 51710,
+            "dst_port": 88,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.39.105",
+            "dst_ip": "172.18.39.5",
+            "src_port": 49346,
+            "dst_port": 389,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          }
+        ]
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": [
+          {
+            "source_eid": 11,
+            "path": "C:\\Windows\\System32\\LogFiles\\WMI\\RtBackup\\EtwRTAdmin_PS_Provider.etl",
+            "image": "System"
+          }
+        ]
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1021_002_849",
+    "technique_id": "T1021.002",
+    "technique_name": "SMB/Windows Admin Shares",
+    "anchor_eid": 5140,
+    "anchor_detail": {
+      "eid": 5140,
+      "time": "2019-12-05 04:49:00.051000+00:00",
+      "image": null,
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": "FILE001$",
+      "integrity": null
+    },
+    "confidence": 0.17,
+    "all_idxs": [
+      846,
+      849
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [],
+        "chain_depth": 0
+      },
+      "command_script": {
+        "entries": [],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 4624,
+        "user": "-",
+        "domain": "-",
+        "logon_id": "0x0",
+        "integrity_level": null,
+        "user_sid": "S-1-0-0",
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2019-12-05T04:49:00.051000+00:00",
+        "window_start_delta_sec": 0.0,
+        "window_end_delta_sec": 0.0,
+        "span_sec": 0.0,
+        "total_events": 2,
+        "event_density_per_10sec": null,
+        "eid_counts": {
+          "4624": 1,
+          "5140": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 0.0,
+          "mean_sec": 0.0
+        },
+        "burst_detected": []
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1047_431",
+    "technique_id": "T1047",
+    "technique_name": "Windows Management Instrumentation",
+    "anchor_eid": 5861,
+    "anchor_detail": {
+      "eid": 5861,
+      "time": "2019-12-05 04:47:57.321000+00:00",
+      "image": null,
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": null,
+      "integrity": null
+    },
+    "confidence": 0.5,
+    "all_idxs": [
+      295,
+      431,
+      432,
+      433,
+      443,
+      444,
+      446
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "observed",
+            "child_image": "svchost.exe",
+            "parent_image": null,
+            "source_eid": 3
+          },
+          {
+            "relation": "observed",
+            "child_image": "lsass.exe",
+            "parent_image": null,
+            "source_eid": 3
+          }
+        ],
+        "chain_depth": 2
+      },
+      "command_script": {
+        "entries": [],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 3,
+        "user": "NT AUTHORITY\\NETWORK SERVICE",
+        "domain": "NT AUTHORITY",
+        "logon_id": null,
+        "integrity_level": null,
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2019-12-05T04:47:57.321000+00:00",
+        "window_start_delta_sec": -8.13,
+        "window_end_delta_sec": 1.01,
+        "span_sec": 9.14,
+        "total_events": 7,
+        "event_density_per_10sec": 7.66,
+        "eid_counts": {
+          "3": 4,
+          "5861": 1,
+          "5857": 1,
+          "5859": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 8.133,
+          "mean_sec": 1.523
+        },
+        "burst_detected": [
+          {
+            "eid": 3,
+            "count": 4,
+            "window_sec": 9.14
+          }
+        ]
+      },
+      "network": {
+        "connections": [
+          {
+            "source_eid": 3,
+            "image": "svchost.exe",
+            "src_ip": "172.18.39.105",
+            "dst_ip": "172.18.39.102",
+            "src_port": 51709,
+            "dst_port": 5985,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.39.105",
+            "dst_ip": "172.18.39.5",
+            "src_port": 51711,
+            "dst_port": 88,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.39.105",
+            "dst_ip": "172.18.39.5",
+            "src_port": 51710,
+            "dst_port": 88,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.39.105",
+            "dst_ip": "172.18.39.5",
+            "src_port": 49346,
+            "dst_port": 389,
+            "protocol": "udp",
+            "direction": "outbound",
+            "service_hint": null
+          }
+        ]
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1112_268",
+    "technique_id": "T1112",
+    "technique_name": "Modify Registry",
+    "anchor_eid": 13,
+    "anchor_detail": {
+      "eid": 13,
+      "time": "2019-12-05 04:47:47.190000+00:00",
+      "image": "DFSRs.exe",
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "HKLM\\System\\CurrentControlSet\\Services\\DFSR\\Parameters\\Replication Groups\\23EE0F75-A719-4963-BC3A-9CB385279D9B\\Replica Set Configuration File",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": null,
+      "integrity": null
+    },
+    "confidence": 0.0,
+    "all_idxs": [
+      265,
+      266,
+      268,
+      269,
+      270,
+      274,
+      275,
+      277,
+      279,
+      293,
+      298,
+      301
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "observed",
+            "child_image": "DFSRs.exe",
+            "parent_image": null,
+            "source_eid": 11
+          },
+          {
+            "relation": "observed",
+            "child_image": "dfsrs.exe",
+            "parent_image": null,
+            "source_eid": 3
+          }
+        ],
+        "chain_depth": 2
+      },
+      "command_script": {
+        "entries": [],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 3,
+        "user": "NT AUTHORITY\\SYSTEM",
+        "domain": "NT AUTHORITY",
+        "logon_id": null,
+        "integrity_level": null,
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2019-12-05T04:47:47.190000+00:00",
+        "window_start_delta_sec": -0.0,
+        "window_end_delta_sec": 2.0,
+        "span_sec": 2.0,
+        "total_events": 12,
+        "event_density_per_10sec": 59.97,
+        "eid_counts": {
+          "12": 3,
+          "13": 3,
+          "3": 3,
+          "11": 2,
+          "18": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 1.996,
+          "mean_sec": 0.182
+        },
+        "burst_detected": [
+          {
+            "eid": 12,
+            "count": 3,
+            "window_sec": 0.0
+          },
+          {
+            "eid": 13,
+            "count": 3,
+            "window_sec": 0.0
+          },
+          {
+            "eid": 3,
+            "count": 3,
+            "window_sec": 0.0
+          }
+        ]
+      },
+      "network": {
+        "connections": [
+          {
+            "source_eid": 3,
+            "image": "dfsrs.exe",
+            "src_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "dst_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "src_port": 49640,
+            "dst_port": 135,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "dfsrs.exe",
+            "src_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "dst_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "src_port": 49641,
+            "dst_port": 389,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "dfsrs.exe",
+            "src_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "dst_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "src_port": 49642,
+            "dst_port": 389,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          }
+        ]
+      },
+      "persistence": {
+        "registry_signals": [
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\DFSR\\Parameters\\Replication Groups\\23EE0F75-A719-4963-BC3A-9CB385279D9B\\Replica Set Configuration File",
+            "details": "\\\\?\\C:\\System Volume Information\\DFSR\\Config\\Replica_23EE0F75-A719-4963-BC3A-9CB385279D9B.XML",
+            "process_guid": "{d14e8c55-47c8-5de8-0000-0010caf90100}",
+            "image": "DFSRs.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\DFSR\\Parameters\\Replication Groups\\23EE0F75-A719-4963-BC3A-9CB385279D9B\\Config Source",
+            "details": "DWORD (0x00000001)",
+            "process_guid": "{d14e8c55-47c8-5de8-0000-0010caf90100}",
+            "image": "DFSRs.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\DFSR\\Parameters\\Volumes\\59E89FD7-0000-0000-0000-100000000000\\Volume Configuration File",
+            "details": "\\\\.\\C:\\System Volume Information\\DFSR\\Config\\Volume_59E89FD7-0000-0000-0000-100000000000.XML",
+            "process_guid": "{d14e8c55-47c8-5de8-0000-0010caf90100}",
+            "image": "DFSRs.exe"
+          }
+        ],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": [
+          {
+            "source_eid": 11,
+            "path": "C:\\System Volume Information\\DFSR\\Config\\Replica_23EE0F75-A719-4963-BC3A-9CB385279D9B.XML.TMP",
+            "image": "DFSRs.exe"
+          },
+          {
+            "source_eid": 11,
+            "path": "C:\\System Volume Information\\DFSR\\Config\\Volume_59E89FD7-0000-0000-0000-100000000000.XML.TMP",
+            "image": "DFSRs.exe"
+          }
+        ]
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1112_270",
+    "technique_id": "T1112",
+    "technique_name": "Modify Registry",
+    "anchor_eid": 13,
+    "anchor_detail": {
+      "eid": 13,
+      "time": "2019-12-05 04:47:47.190000+00:00",
+      "image": "DFSRs.exe",
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "HKLM\\System\\CurrentControlSet\\Services\\DFSR\\Parameters\\Replication Groups\\23EE0F75-A719-4963-BC3A-9CB385279D9B\\Config Source",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": null,
+      "integrity": null
+    },
+    "confidence": 0.0,
+    "all_idxs": [
+      265,
+      266,
+      268,
+      269,
+      270,
+      274,
+      275,
+      277,
+      279,
+      293,
+      298,
+      301
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "observed",
+            "child_image": "DFSRs.exe",
+            "parent_image": null,
+            "source_eid": 11
+          },
+          {
+            "relation": "observed",
+            "child_image": "dfsrs.exe",
+            "parent_image": null,
+            "source_eid": 3
+          }
+        ],
+        "chain_depth": 2
+      },
+      "command_script": {
+        "entries": [],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 3,
+        "user": "NT AUTHORITY\\SYSTEM",
+        "domain": "NT AUTHORITY",
+        "logon_id": null,
+        "integrity_level": null,
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2019-12-05T04:47:47.190000+00:00",
+        "window_start_delta_sec": -0.0,
+        "window_end_delta_sec": 2.0,
+        "span_sec": 2.0,
+        "total_events": 12,
+        "event_density_per_10sec": 59.97,
+        "eid_counts": {
+          "12": 3,
+          "13": 3,
+          "3": 3,
+          "11": 2,
+          "18": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 1.996,
+          "mean_sec": 0.182
+        },
+        "burst_detected": [
+          {
+            "eid": 12,
+            "count": 3,
+            "window_sec": 0.0
+          },
+          {
+            "eid": 13,
+            "count": 3,
+            "window_sec": 0.0
+          },
+          {
+            "eid": 3,
+            "count": 3,
+            "window_sec": 0.0
+          }
+        ]
+      },
+      "network": {
+        "connections": [
+          {
+            "source_eid": 3,
+            "image": "dfsrs.exe",
+            "src_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "dst_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "src_port": 49640,
+            "dst_port": 135,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "dfsrs.exe",
+            "src_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "dst_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "src_port": 49641,
+            "dst_port": 389,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "dfsrs.exe",
+            "src_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "dst_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "src_port": 49642,
+            "dst_port": 389,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          }
+        ]
+      },
+      "persistence": {
+        "registry_signals": [
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\DFSR\\Parameters\\Replication Groups\\23EE0F75-A719-4963-BC3A-9CB385279D9B\\Replica Set Configuration File",
+            "details": "\\\\?\\C:\\System Volume Information\\DFSR\\Config\\Replica_23EE0F75-A719-4963-BC3A-9CB385279D9B.XML",
+            "process_guid": "{d14e8c55-47c8-5de8-0000-0010caf90100}",
+            "image": "DFSRs.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\DFSR\\Parameters\\Replication Groups\\23EE0F75-A719-4963-BC3A-9CB385279D9B\\Config Source",
+            "details": "DWORD (0x00000001)",
+            "process_guid": "{d14e8c55-47c8-5de8-0000-0010caf90100}",
+            "image": "DFSRs.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\DFSR\\Parameters\\Volumes\\59E89FD7-0000-0000-0000-100000000000\\Volume Configuration File",
+            "details": "\\\\.\\C:\\System Volume Information\\DFSR\\Config\\Volume_59E89FD7-0000-0000-0000-100000000000.XML",
+            "process_guid": "{d14e8c55-47c8-5de8-0000-0010caf90100}",
+            "image": "DFSRs.exe"
+          }
+        ],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": [
+          {
+            "source_eid": 11,
+            "path": "C:\\System Volume Information\\DFSR\\Config\\Replica_23EE0F75-A719-4963-BC3A-9CB385279D9B.XML.TMP",
+            "image": "DFSRs.exe"
+          },
+          {
+            "source_eid": 11,
+            "path": "C:\\System Volume Information\\DFSR\\Config\\Volume_59E89FD7-0000-0000-0000-100000000000.XML.TMP",
+            "image": "DFSRs.exe"
+          }
+        ]
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1112_279",
+    "technique_id": "T1112",
+    "technique_name": "Modify Registry",
+    "anchor_eid": 13,
+    "anchor_detail": {
+      "eid": 13,
+      "time": "2019-12-05 04:47:47.192000+00:00",
+      "image": "DFSRs.exe",
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "HKLM\\System\\CurrentControlSet\\Services\\DFSR\\Parameters\\Volumes\\59E89FD7-0000-0000-0000-100000000000\\Volume Configuration File",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": null,
+      "integrity": null
+    },
+    "confidence": 0.0,
+    "all_idxs": [
+      265,
+      266,
+      268,
+      269,
+      270,
+      274,
+      275,
+      277,
+      279,
+      293,
+      298,
+      301
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "observed",
+            "child_image": "DFSRs.exe",
+            "parent_image": null,
+            "source_eid": 11
+          },
+          {
+            "relation": "observed",
+            "child_image": "dfsrs.exe",
+            "parent_image": null,
+            "source_eid": 3
+          }
+        ],
+        "chain_depth": 2
+      },
+      "command_script": {
+        "entries": [],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 3,
+        "user": "NT AUTHORITY\\SYSTEM",
+        "domain": "NT AUTHORITY",
+        "logon_id": null,
+        "integrity_level": null,
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2019-12-05T04:47:47.192000+00:00",
+        "window_start_delta_sec": -0.0,
+        "window_end_delta_sec": 2.0,
+        "span_sec": 2.0,
+        "total_events": 12,
+        "event_density_per_10sec": 59.97,
+        "eid_counts": {
+          "12": 3,
+          "13": 3,
+          "3": 3,
+          "11": 2,
+          "18": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 1.996,
+          "mean_sec": 0.182
+        },
+        "burst_detected": [
+          {
+            "eid": 12,
+            "count": 3,
+            "window_sec": 0.0
+          },
+          {
+            "eid": 13,
+            "count": 3,
+            "window_sec": 0.0
+          },
+          {
+            "eid": 3,
+            "count": 3,
+            "window_sec": 0.0
+          }
+        ]
+      },
+      "network": {
+        "connections": [
+          {
+            "source_eid": 3,
+            "image": "dfsrs.exe",
+            "src_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "dst_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "src_port": 49640,
+            "dst_port": 135,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "dfsrs.exe",
+            "src_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "dst_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "src_port": 49641,
+            "dst_port": 389,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "dfsrs.exe",
+            "src_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "dst_ip": "fe80:0:0:0:44af:a0ee:c7f9:e9ed",
+            "src_port": 49642,
+            "dst_port": 389,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          }
+        ]
+      },
+      "persistence": {
+        "registry_signals": [
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\DFSR\\Parameters\\Replication Groups\\23EE0F75-A719-4963-BC3A-9CB385279D9B\\Replica Set Configuration File",
+            "details": "\\\\?\\C:\\System Volume Information\\DFSR\\Config\\Replica_23EE0F75-A719-4963-BC3A-9CB385279D9B.XML",
+            "process_guid": "{d14e8c55-47c8-5de8-0000-0010caf90100}",
+            "image": "DFSRs.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\DFSR\\Parameters\\Replication Groups\\23EE0F75-A719-4963-BC3A-9CB385279D9B\\Config Source",
+            "details": "DWORD (0x00000001)",
+            "process_guid": "{d14e8c55-47c8-5de8-0000-0010caf90100}",
+            "image": "DFSRs.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\DFSR\\Parameters\\Volumes\\59E89FD7-0000-0000-0000-100000000000\\Volume Configuration File",
+            "details": "\\\\.\\C:\\System Volume Information\\DFSR\\Config\\Volume_59E89FD7-0000-0000-0000-100000000000.XML",
+            "process_guid": "{d14e8c55-47c8-5de8-0000-0010caf90100}",
+            "image": "DFSRs.exe"
+          }
+        ],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": [
+          {
+            "source_eid": 11,
+            "path": "C:\\System Volume Information\\DFSR\\Config\\Replica_23EE0F75-A719-4963-BC3A-9CB385279D9B.XML.TMP",
+            "image": "DFSRs.exe"
+          },
+          {
+            "source_eid": 11,
+            "path": "C:\\System Volume Information\\DFSR\\Config\\Volume_59E89FD7-0000-0000-0000-100000000000.XML.TMP",
+            "image": "DFSRs.exe"
+          }
+        ]
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1134_330",
+    "technique_id": "T1134",
+    "technique_name": "Access Token Manipulation",
+    "anchor_eid": 4673,
+    "anchor_detail": {
+      "eid": 4673,
+      "time": "2019-12-05 04:47:56.282000+00:00",
+      "image": null,
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": "IT001$",
+      "integrity": null
+    },
+    "confidence": 0.33,
+    "all_idxs": [
+      260,
+      262,
+      330,
+      362,
+      376,
+      378,
+      381,
+      410,
+      500,
+      501,
+      503,
+      504,
+      505,
+      506,
+      507,
+      508,
+      509,
+      510,
+      511,
+      512,
+      514,
+      539,
+      545,
+      604,
+      609
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "access",
+            "parent_image": "svchost.exe",
+            "child_image": "powershell.exe",
+            "granted_access": "0x1400",
+            "source_guid": "{a158f72c-4a8b-5de8-0000-0010df500200}",
+            "target_guid": "{a158f72c-5898-5de8-0000-0010a6ba6d00}",
+            "source_eid": 10
+          },
+          {
+            "relation": "access",
+            "parent_image": "svchost.exe",
+            "child_image": "Ec2Config.exe",
+            "granted_access": "0x1400",
+            "source_guid": "{a158f72c-4a8b-5de8-0000-0010df500200}",
+            "target_guid": "{a158f72c-4a8a-5de8-0000-0010d4060200}",
+            "source_eid": 10
+          }
+        ],
+        "chain_depth": 2
+      },
+      "command_script": {
+        "entries": [],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 4673,
+        "user": "IT001$",
+        "domain": "shire",
+        "logon_id": "0x3e7",
+        "integrity_level": null,
+        "user_sid": "S-1-5-18",
+        "privilege_list": "SeTcbPrivilege"
+      },
+      "temporal": {
+        "anchor_time": "2019-12-05T04:47:56.282000+00:00",
+        "window_start_delta_sec": -9.09,
+        "window_end_delta_sec": 21.27,
+        "span_sec": 30.36,
+        "total_events": 25,
+        "event_density_per_10sec": 8.23,
+        "eid_counts": {
+          "10": 21,
+          "4673": 4
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 10.124,
+          "mean_sec": 1.265
+        },
+        "burst_detected": [
+          {
+            "eid": 10,
+            "count": 21,
+            "window_sec": 9.11
+          },
+          {
+            "eid": 4673,
+            "count": 4,
+            "window_sec": 0.01
+          }
+        ]
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1546_003_351",
+    "technique_id": "T1546.003",
+    "technique_name": "Windows Management Instrumentation Event Subscription",
+    "anchor_eid": 19,
+    "anchor_detail": {
+      "eid": 19,
+      "time": "2019-12-05 04:47:56.287000+00:00",
+      "image": null,
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": "shire\\pgustavo",
+      "integrity": null
+    },
+    "confidence": 0.2,
+    "all_idxs": [
+      351,
+      358,
+      373,
+      431
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [],
+        "chain_depth": 0
+      },
+      "command_script": {
+        "entries": [],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 19,
+        "user": "shire\\pgustavo",
+        "domain": "NT AUTHORITY",
+        "logon_id": null,
+        "integrity_level": null,
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2019-12-05T04:47:56.287000+00:00",
+        "window_start_delta_sec": 0.0,
+        "window_end_delta_sec": 1.03,
+        "span_sec": 1.03,
+        "total_events": 4,
+        "event_density_per_10sec": 38.68,
+        "eid_counts": {
+          "19": 1,
+          "20": 1,
+          "21": 1,
+          "5861": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.002,
+          "max_sec": 1.028,
+          "mean_sec": 0.345
+        },
+        "burst_detected": []
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  }
+]

@@ -1,0 +1,1 @@
+{"text": "{\n  \"confidence_score\": 0.85,\n  \"attack_summary\": \"An attack chain is observed where a malicious payload (`payload.exe`) was placed in the user's Downloads folder and configured for persistence/execution via `svchost.exe` modifying system registry keys. Subsequently, `wmiprvse.exe` repeatedly connected to the LSASS pipe and loaded security-related DLLs"}

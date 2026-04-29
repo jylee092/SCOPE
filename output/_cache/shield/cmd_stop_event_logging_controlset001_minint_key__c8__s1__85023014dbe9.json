@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed registry operations by svchost.exe are consistent with routine Windows system and application management, specifically related to Cortana, Content Delivery Manager, and Windows Communications Apps, with no unusual command lines or registry paths indicative of malicious activity.\"\n}"}

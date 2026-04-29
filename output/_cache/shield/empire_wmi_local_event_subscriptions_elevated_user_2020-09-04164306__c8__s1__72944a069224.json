@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is interacting with registry keys and files related to the Windows Delivery Optimization service under the NetworkService account, and loading legitimate DLLs (dosvc.dll, StorageUsage.dll), which is expected behavior for this system service.\"\n}"}

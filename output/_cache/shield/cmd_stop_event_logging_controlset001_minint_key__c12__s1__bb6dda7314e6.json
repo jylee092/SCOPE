@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[smartscreen.exe|{625b42a0-2f3]\",\n    \"P[consent.exe|{625b42a0-2f3]\"\n  ],\n  \"rationale\": \"The process ID {625b42a0-2f3} is associated with both 'consent"}

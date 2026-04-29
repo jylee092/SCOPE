@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[powershell.exe|{860ba2e3-9f1]\"\n  ],\n  \"rationale\": \"The powershell.exe process performed a large number of registry creations related to system and enterprise certificate stores, which can be indicative of certificate manipulation for malicious purposes.\"\n}"}

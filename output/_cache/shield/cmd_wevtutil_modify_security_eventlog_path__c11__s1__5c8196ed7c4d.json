@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities, including file writes, registry modifications, and DLL loads, are consistent with the normal operation of the legitimate Windows SearchApp.exe process within its expected directories and registry hives, and no suspicious command lines or other attack patterns were identified.\"\n}"}

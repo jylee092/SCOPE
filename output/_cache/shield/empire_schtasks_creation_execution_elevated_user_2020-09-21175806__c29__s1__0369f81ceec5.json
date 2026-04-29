@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed processes (smss.exe, csrss.exe, wsqmcons.exe) and their associated activities, including command lines, registry modifications, and module loads, are consistent with normal Windows system startup and operation, with no indicators matching common attack patterns.\"\n}"}

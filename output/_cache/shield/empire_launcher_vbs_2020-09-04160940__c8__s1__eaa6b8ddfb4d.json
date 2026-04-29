@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The process P[svchost.exe|{860ba2e3-8b5] is observed writing to prefetch files in C:\\\\Windows\\\\Prefetch, which is a normal and expected system behavior for the Windows Prefetcher service and does not indicate malicious activity on its own.\"\n}"}

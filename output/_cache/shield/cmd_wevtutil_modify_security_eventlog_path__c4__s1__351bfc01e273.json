@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities for msedge.exe and svchost.exe, including file writes, registry modifications, and network connections, are consistent with normal operating behavior for a web browser and associated Windows services, with no notable command lines or unusual patterns indicative of an attack.\"\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The community only shows dllhost.exe loading a set of standard Windows and application-specific DLLs (SkypeContext.dll), without any notable command lines, child processes, file/registry writes, or network activity that would indicate a known attack pattern.\"\n}"}

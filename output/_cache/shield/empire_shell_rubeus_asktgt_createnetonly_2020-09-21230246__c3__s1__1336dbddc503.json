@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities, including registry modifications to DiagTrack and IdentityCRL keys, loading of OnDemandConnRouteHelper.dll, and network connections on port 443, are consistent with the normal operation of legitimate Windows telemetry and identity services hosted by svchost.exe.\"\n}"}

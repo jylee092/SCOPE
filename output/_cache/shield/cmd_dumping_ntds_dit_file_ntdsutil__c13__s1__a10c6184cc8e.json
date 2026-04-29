@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is performing registry operations related to Volume Shadow Copy Service (VSS) and device management, which are legitimate functions for this system process, and no suspicious command-line arguments, file writes, or network connections were observed.\"\n}"}

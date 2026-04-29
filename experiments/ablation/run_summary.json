@@ -1,0 +1,705 @@
+{
+  "runs": [
+    {
+      "variant": "no_grouping",
+      "scenario": "msf_record_mic_2020-06-09225055",
+      "groups": 200,
+      "chain_length": 200,
+      "best_score": -460.6429,
+      "novelty": 0.975,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\collection\\msf_record_mic\\msf_record_mic_2020-06-09225055\\msf_record_mic_2020-06-09225055_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\collection\\msf_record_mic\\msf_record_mic_2020-06-09225055\\msf_record_mic_2020-06-09225055_viterbi.json"
+    },
+    {
+      "variant": "no_grouping",
+      "scenario": "cmd_dumping_ntds_dit_file_ntdsutil",
+      "groups": 200,
+      "chain_length": 200,
+      "best_score": -488.4367,
+      "novelty": 0.98,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\credential_access\\cmd_dumping_ntds_dit_file_ntdsutil\\cmd_dumping_ntds_dit_file_ntdsutil\\cmd_dumping_ntds_dit_file_ntdsutil_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\credential_access\\cmd_dumping_ntds_dit_file_ntdsutil\\cmd_dumping_ntds_dit_file_ntdsutil\\cmd_dumping_ntds_dit_file_ntdsutil_viterbi.json"
+    },
+    {
+      "variant": "no_grouping",
+      "scenario": "cmd_sam_copy_esentutl_2020-10-1900290001",
+      "groups": 200,
+      "chain_length": 200,
+      "best_score": -448.0185,
+      "novelty": 0.975,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\credential_access\\cmd_sam_copy_esentutl\\cmd_sam_copy_esentutl_2020-10-1900290001\\cmd_sam_copy_esentutl_2020-10-1900290001_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\credential_access\\cmd_sam_copy_esentutl\\cmd_sam_copy_esentutl_2020-10-1900290001\\cmd_sam_copy_esentutl_2020-10-1900290001_viterbi.json"
+    },
+    {
+      "variant": "no_grouping",
+      "scenario": "empire_mimikatz_logonpasswords_2020-08-07103224",
+      "groups": 200,
+      "chain_length": 200,
+      "best_score": -473.132,
+      "novelty": 0.98,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\credential_access\\empire_mimikatz_logonpasswords\\empire_mimikatz_logonpasswords_2020-08-07103224\\empire_mimikatz_logonpasswords_2020-08-07103224_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\credential_access\\empire_mimikatz_logonpasswords\\empire_mimikatz_logonpasswords_2020-08-07103224\\empire_mimikatz_logonpasswords_2020-08-07103224_viterbi.json"
+    },
+    {
+      "variant": "no_grouping",
+      "scenario": "empire_shell_rubeus_asktgt_createnetonly_2020-09-21230246",
+      "groups": 200,
+      "chain_length": 200,
+      "best_score": -483.4259,
+      "novelty": 0.975,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\credential_access\\empire_shell_rubeus_asktgt_createnetonly\\empire_shell_rubeus_asktgt_createnetonly_2020-09-21230246\\empire_shell_rubeus_asktgt_createnetonly_2020-09-21230246_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\credential_access\\empire_shell_rubeus_asktgt_createnetonly\\empire_shell_rubeus_asktgt_createnetonly_2020-09-21230246\\empire_shell_rubeus_asktgt_createnetonly_2020-09-21230246_viterbi.json"
+    },
+    {
+      "variant": "no_grouping",
+      "scenario": "psh_lsass_memory_dump_comsvcs_2020-10-18T19500924",
+      "groups": 116,
+      "chain_length": 116,
+      "best_score": -270.2994,
+      "novelty": 0.9655,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\credential_access\\psh_lsass_memory_dump_comsvcs\\psh_lsass_memory_dump_comsvcs_2020-10-18T19500924\\psh_lsass_memory_dump_comsvcs_2020-10-18T19500924_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\credential_access\\psh_lsass_memory_dump_comsvcs\\psh_lsass_memory_dump_comsvcs_2020-10-18T19500924\\psh_lsass_memory_dump_comsvcs_2020-10-18T19500924_viterbi.json"
+    },
+    {
+      "variant": "no_grouping",
+      "scenario": "cmd_process_herpaderping_mimiexplorer_2020-10-2623583501",
+      "groups": 142,
+      "chain_length": 142,
+      "best_score": -351.5778,
+      "novelty": 0.9648,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\defense_evasion\\cmd_process_herpaderping_mimiexplorer\\cmd_process_herpaderping_mimiexplorer_2020-10-2623583501\\cmd_process_herpaderping_mimiexplorer_2020-10-2623583501_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\defense_evasion\\cmd_process_herpaderping_mimiexplorer\\cmd_process_herpaderping_mimiexplorer_2020-10-2623583501\\cmd_process_herpaderping_mimiexplorer_2020-10-2623583501_viterbi.json"
+    },
+    {
+      "variant": "no_grouping",
+      "scenario": "cmd_stop_event_logging_controlset001_minint_key",
+      "groups": 200,
+      "chain_length": 200,
+      "best_score": -498.1653,
+      "novelty": 0.98,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\defense_evasion\\cmd_stop_event_logging_controlset001_minint_key\\cmd_stop_event_logging_controlset001_minint_key\\cmd_stop_event_logging_controlset001_minint_key_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\defense_evasion\\cmd_stop_event_logging_controlset001_minint_key\\cmd_stop_event_logging_controlset001_minint_key\\cmd_stop_event_logging_controlset001_minint_key_viterbi.json"
+    },
+    {
+      "variant": "no_grouping",
+      "scenario": "cmd_wevtutil_modify_security_eventlog_path",
+      "groups": 200,
+      "chain_length": 200,
+      "best_score": -488.5323,
+      "novelty": 0.98,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\defense_evasion\\cmd_wevtutil_modify_security_eventlog_path\\cmd_wevtutil_modify_security_eventlog_path\\cmd_wevtutil_modify_security_eventlog_path_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\defense_evasion\\cmd_wevtutil_modify_security_eventlog_path\\cmd_wevtutil_modify_security_eventlog_path\\cmd_wevtutil_modify_security_eventlog_path_viterbi.json"
+    },
+    {
+      "variant": "no_grouping",
+      "scenario": "empire_dllinjection_LoadLibrary_CreateRemoteThread_2020-07-22000048",
+      "groups": 200,
+      "chain_length": 200,
+      "best_score": -373.266,
+      "novelty": 0.98,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\defense_evasion\\empire_dllinjection_LoadLibrary_CreateRemoteThread\\empire_dllinjection_LoadLibrary_CreateRemoteThread_2020-07-22000048\\empire_dllinjection_LoadLibrary_CreateRemoteThread_2020-07-22000048_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\defense_evasion\\empire_dllinjection_LoadLibrary_CreateRemoteThread\\empire_dllinjection_LoadLibrary_CreateRemoteThread_2020-07-22000048\\empire_dllinjection_LoadLibrary_CreateRemoteThread_2020-07-22000048_viterbi.json"
+    },
+    {
+      "variant": "no_grouping",
+      "scenario": "psh_cmstp_execution_bypassuac_2020-10-2201543213",
+      "groups": 200,
+      "chain_length": 200,
+      "best_score": -460.8427,
+      "novelty": 0.98,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\defense_evasion\\psh_cmstp_execution_bypassuac\\psh_cmstp_execution_bypassuac_2020-10-2201543213\\psh_cmstp_execution_bypassuac_2020-10-2201543213_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\defense_evasion\\psh_cmstp_execution_bypassuac\\psh_cmstp_execution_bypassuac_2020-10-2201543213\\psh_cmstp_execution_bypassuac_2020-10-2201543213_viterbi.json"
+    },
+    {
+      "variant": "no_grouping",
+      "scenario": "cmd_seatbelt_group_user_2020-11-0216391814",
+      "groups": 200,
+      "chain_length": 200,
+      "best_score": -563.2396,
+      "novelty": 0.98,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\discovery\\cmd_seatbelt_group_user\\cmd_seatbelt_group_user_2020-11-0216391814\\cmd_seatbelt_group_user_2020-11-0216391814_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\discovery\\cmd_seatbelt_group_user\\cmd_seatbelt_group_user_2020-11-0216391814\\cmd_seatbelt_group_user_2020-11-0216391814_viterbi.json"
+    },
+    {
+      "variant": "no_grouping",
+      "scenario": "empire_find_localadmin_smb_svcctl_OpenSCManager_2020-09-22021559",
+      "groups": 200,
+      "chain_length": 200,
+      "best_score": -462.9394,
+      "novelty": 0.98,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\discovery\\empire_find_localadmin_smb_svcctl_OpenSCManager\\empire_find_localadmin_smb_svcctl_OpenSCManager_2020-09-22021559\\empire_find_localadmin_smb_svcctl_OpenSCManager_2020-09-22021559_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\discovery\\empire_find_localadmin_smb_svcctl_OpenSCManager\\empire_find_localadmin_smb_svcctl_OpenSCManager_2020-09-22021559\\empire_find_localadmin_smb_svcctl_OpenSCManager_2020-09-22021559_viterbi.json"
+    },
+    {
+      "variant": "no_grouping",
+      "scenario": "empire_getsession_dcerpc_smb_srvsvc_NetSessEnum_2020-09-22034513",
+      "groups": 200,
+      "chain_length": 200,
+      "best_score": -468.1681,
+      "novelty": 0.98,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\discovery\\empire_getsession_dcerpc_smb_srvsvc_NetSessEnum\\empire_getsession_dcerpc_smb_srvsvc_NetSessEnum_2020-09-22034513\\empire_getsession_dcerpc_smb_srvsvc_NetSessEnum_2020-09-22034513_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\discovery\\empire_getsession_dcerpc_smb_srvsvc_NetSessEnum\\empire_getsession_dcerpc_smb_srvsvc_NetSessEnum_2020-09-22034513\\empire_getsession_dcerpc_smb_srvsvc_NetSessEnum_2020-09-22034513_viterbi.json"
+    },
+    {
+      "variant": "no_grouping",
+      "scenario": "empire_shell_net_local_users_2020-09-21192606",
+      "groups": 200,
+      "chain_length": 200,
+      "best_score": -482.818,
+      "novelty": 0.975,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\discovery\\empire_shell_net_local_users\\empire_shell_net_local_users_2020-09-21192606\\empire_shell_net_local_users_2020-09-21192606_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\discovery\\empire_shell_net_local_users\\empire_shell_net_local_users_2020-09-21192606\\empire_shell_net_local_users_2020-09-21192606_viterbi.json"
+    },
+    {
+      "variant": "no_grouping",
+      "scenario": "empire_shell_samr_EnumDomainUsers_2020-09-21193527",
+      "groups": 200,
+      "chain_length": 200,
+      "best_score": -467.8005,
+      "novelty": 0.98,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\discovery\\empire_shell_samr_EnumDomainUsers\\empire_shell_samr_EnumDomainUsers_2020-09-21193527\\empire_shell_samr_EnumDomainUsers_2020-09-21193527_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\discovery\\empire_shell_samr_EnumDomainUsers\\empire_shell_samr_EnumDomainUsers_2020-09-21193527\\empire_shell_samr_EnumDomainUsers_2020-09-21193527_viterbi.json"
+    },
+    {
+      "variant": "no_grouping",
+      "scenario": "cmd_sharpview_pcre_net_2020-10-2920232423",
+      "groups": 94,
+      "chain_length": 94,
+      "best_score": -228.6866,
+      "novelty": 0.9468,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\execution\\cmd_sharpview_pcre_net\\cmd_sharpview_pcre_net_2020-10-2920232423\\cmd_sharpview_pcre_net_2020-10-2920232423_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\execution\\cmd_sharpview_pcre_net\\cmd_sharpview_pcre_net_2020-10-2920232423\\cmd_sharpview_pcre_net_2020-10-2920232423_viterbi.json"
+    },
+    {
+      "variant": "no_grouping",
+      "scenario": "empire_launcher_vbs_2020-09-04160940",
+      "groups": 200,
+      "chain_length": 200,
+      "best_score": -438.3445,
+      "novelty": 0.98,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\execution\\empire_launcher_vbs\\empire_launcher_vbs_2020-09-04160940\\empire_launcher_vbs_2020-09-04160940_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\execution\\empire_launcher_vbs\\empire_launcher_vbs_2020-09-04160940\\empire_launcher_vbs_2020-09-04160940_viterbi.json"
+    },
+    {
+      "variant": "no_grouping",
+      "scenario": "psh_powershell_httplistener_2020-11-0204130683",
+      "groups": 96,
+      "chain_length": 96,
+      "best_score": -238.7898,
+      "novelty": 0.9688,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\execution\\psh_powershell_httplistener\\psh_powershell_httplistener_2020-11-0204130683\\psh_powershell_httplistener_2020-11-0204130683_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\execution\\psh_powershell_httplistener\\psh_powershell_httplistener_2020-11-0204130683\\psh_powershell_httplistener_2020-11-0204130683_viterbi.json"
+    },
+    {
+      "variant": "no_grouping",
+      "scenario": "psh_python_webserver_2020-10-2900161507",
+      "groups": 200,
+      "chain_length": 200,
+      "best_score": -531.5438,
+      "novelty": 0.98,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\execution\\psh_python_webserver\\psh_python_webserver_2020-10-2900161507\\psh_python_webserver_2020-10-2900161507_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\execution\\psh_python_webserver\\psh_python_webserver_2020-10-2900161507\\psh_python_webserver_2020-10-2900161507_viterbi.json"
+    },
+    {
+      "variant": "no_grouping",
+      "scenario": "covenant_psremoting_command_2020-08-06115603",
+      "groups": 200,
+      "chain_length": 200,
+      "best_score": -476.0445,
+      "novelty": 0.98,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\lateral_movement\\covenant_psremoting_command\\covenant_psremoting_command_2020-08-06115603\\covenant_psremoting_command_2020-08-06115603_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\lateral_movement\\covenant_psremoting_command\\covenant_psremoting_command_2020-08-06115603\\covenant_psremoting_command_2020-08-06115603_viterbi.json"
+    },
+    {
+      "variant": "no_grouping",
+      "scenario": "empire_psexec_dcerpc_tcp_svcctl_2020-09-20121608",
+      "groups": 200,
+      "chain_length": 200,
+      "best_score": -473.2045,
+      "novelty": 0.985,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\lateral_movement\\empire_psexec_dcerpc_tcp_svcctl\\empire_psexec_dcerpc_tcp_svcctl_2020-09-20121608\\empire_psexec_dcerpc_tcp_svcctl_2020-09-20121608_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\lateral_movement\\empire_psexec_dcerpc_tcp_svcctl\\empire_psexec_dcerpc_tcp_svcctl_2020-09-20121608\\empire_psexec_dcerpc_tcp_svcctl_2020-09-20121608_viterbi.json"
+    },
+    {
+      "variant": "no_grouping",
+      "scenario": "empire_psremoting_stager_2020-09-20170827",
+      "groups": 200,
+      "chain_length": 200,
+      "best_score": -430.7428,
+      "novelty": 0.98,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\lateral_movement\\empire_psremoting_stager\\empire_psremoting_stager_2020-09-20170827\\empire_psremoting_stager_2020-09-20170827_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\lateral_movement\\empire_psremoting_stager\\empire_psremoting_stager_2020-09-20170827\\empire_psremoting_stager_2020-09-20170827_viterbi.json"
+    },
+    {
+      "variant": "no_grouping",
+      "scenario": "empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod_2020-09-21001437",
+      "groups": 200,
+      "chain_length": 200,
+      "best_score": -466.8422,
+      "novelty": 0.98,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\lateral_movement\\empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod\\empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod_2020-09-21001437\\empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod_2020-09-21001437_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\lateral_movement\\empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod\\empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod_2020-09-21001437\\empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod_2020-09-21001437_viterbi.json"
+    },
+    {
+      "variant": "no_grouping",
+      "scenario": "purplesharp_ad_playbook_I_2020-10-22042947",
+      "groups": 200,
+      "chain_length": 200,
+      "best_score": -424.0717,
+      "novelty": 0.98,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\lateral_movement\\purplesharp_ad_playbook_I\\purplesharp_ad_playbook_I_2020-10-22042947\\purplesharp_ad_playbook_I_2020-10-22042947_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\lateral_movement\\purplesharp_ad_playbook_I\\purplesharp_ad_playbook_I_2020-10-22042947\\purplesharp_ad_playbook_I_2020-10-22042947_viterbi.json"
+    },
+    {
+      "variant": "no_grouping",
+      "scenario": "cmd_userinitmprlogonscript_batch_2020-10-1922471810",
+      "groups": 93,
+      "chain_length": 93,
+      "best_score": -233.0851,
+      "novelty": 0.9677,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\persistence\\cmd_userinitmprlogonscript_batch\\cmd_userinitmprlogonscript_batch_2020-10-1922471810\\cmd_userinitmprlogonscript_batch_2020-10-1922471810_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\persistence\\cmd_userinitmprlogonscript_batch\\cmd_userinitmprlogonscript_batch_2020-10-1922471810\\cmd_userinitmprlogonscript_batch_2020-10-1922471810_viterbi.json"
+    },
+    {
+      "variant": "no_grouping",
+      "scenario": "covenant_persistwmi_2019-12-05044734",
+      "groups": 200,
+      "chain_length": 200,
+      "best_score": -505.4963,
+      "novelty": 0.98,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\persistence\\covenant_persistwmi\\covenant_persistwmi_2019-12-05044734\\covenant_persistwmi_2019-12-05044734_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\persistence\\covenant_persistwmi\\covenant_persistwmi_2019-12-05044734\\covenant_persistwmi_2019-12-05044734_viterbi.json"
+    },
+    {
+      "variant": "no_grouping",
+      "scenario": "empire_persistence_registry_modification_run_keys_elevated_user_2020-07-22001847",
+      "groups": 64,
+      "chain_length": 64,
+      "best_score": -146.1758,
+      "novelty": 0.9531,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\persistence\\empire_persistence_registry_modification_run_keys_elevated_user\\empire_persistence_registry_modification_run_keys_elevated_user_2020-07-22001847\\empire_persistence_registry_modification_run_keys_elevated_user_2020-07-22001847_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\persistence\\empire_persistence_registry_modification_run_keys_elevated_user\\empire_persistence_registry_modification_run_keys_elevated_user_2020-07-22001847\\empire_persistence_registry_modification_run_keys_elevated_user_2020-07-22001847_viterbi.json"
+    },
+    {
+      "variant": "no_grouping",
+      "scenario": "empire_schtasks_creation_execution_elevated_user_2020-09-21175806",
+      "groups": 200,
+      "chain_length": 200,
+      "best_score": -466.472,
+      "novelty": 0.975,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\persistence\\empire_schtasks_creation_execution_elevated_user\\empire_schtasks_creation_execution_elevated_user_2020-09-21175806\\empire_schtasks_creation_execution_elevated_user_2020-09-21175806_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\persistence\\empire_schtasks_creation_execution_elevated_user\\empire_schtasks_creation_execution_elevated_user_2020-09-21175806\\empire_schtasks_creation_execution_elevated_user_2020-09-21175806_viterbi.json"
+    },
+    {
+      "variant": "no_grouping",
+      "scenario": "empire_wmi_local_event_subscriptions_elevated_user_2020-09-04164306",
+      "groups": 200,
+      "chain_length": 200,
+      "best_score": -467.9158,
+      "novelty": 0.975,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\persistence\\empire_wmi_local_event_subscriptions_elevated_user\\empire_wmi_local_event_subscriptions_elevated_user_2020-09-04164306\\empire_wmi_local_event_subscriptions_elevated_user_2020-09-04164306_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\persistence\\empire_wmi_local_event_subscriptions_elevated_user\\empire_wmi_local_event_subscriptions_elevated_user_2020-09-04164306\\empire_wmi_local_event_subscriptions_elevated_user_2020-09-04164306_viterbi.json"
+    },
+    {
+      "variant": "no_grouping",
+      "scenario": "cmd_service_mod_fax_2020-10-2120454410",
+      "groups": 200,
+      "chain_length": 200,
+      "best_score": -386.8119,
+      "novelty": 0.98,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\privilege_escalation\\cmd_service_mod_fax\\cmd_service_mod_fax_2020-10-2120454410\\cmd_service_mod_fax_2020-10-2120454410_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\privilege_escalation\\cmd_service_mod_fax\\cmd_service_mod_fax_2020-10-2120454410\\cmd_service_mod_fax_2020-10-2120454410_viterbi.json"
+    },
+    {
+      "variant": "no_grouping",
+      "scenario": "empire_invoke_runas_2019-05-18204300",
+      "groups": 200,
+      "chain_length": 200,
+      "best_score": -435.3692,
+      "novelty": 0.98,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\privilege_escalation\\empire_invoke_runas\\empire_invoke_runas_2019-05-18204300\\empire_invoke_runas_2019-05-18204300_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\privilege_escalation\\empire_invoke_runas\\empire_invoke_runas_2019-05-18204300\\empire_invoke_runas_2019-05-18204300_viterbi.json"
+    },
+    {
+      "variant": "no_grouping",
+      "scenario": "empire_uac_shellapi_fodhelper_2020-09-04032946",
+      "groups": 200,
+      "chain_length": 200,
+      "best_score": -486.4565,
+      "novelty": 0.975,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\privilege_escalation\\empire_uac_shellapi_fodhelper\\empire_uac_shellapi_fodhelper_2020-09-04032946\\empire_uac_shellapi_fodhelper_2020-09-04032946_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\atomic\\privilege_escalation\\empire_uac_shellapi_fodhelper\\empire_uac_shellapi_fodhelper_2020-09-04032946\\empire_uac_shellapi_fodhelper_2020-09-04032946_viterbi.json"
+    },
+    {
+      "variant": "no_grouping",
+      "scenario": "metasploit_logonpasswords_lsass_memory_dump",
+      "groups": 200,
+      "chain_length": 200,
+      "best_score": -496.6779,
+      "novelty": 0.98,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\compound\\lsass_campaign_01\\metasploit_logonpasswords_lsass_memory_dump\\metasploit_logonpasswords_lsass_memory_dump\\metasploit_logonpasswords_lsass_memory_dump_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\compound\\lsass_campaign_01\\metasploit_logonpasswords_lsass_memory_dump\\metasploit_logonpasswords_lsass_memory_dump\\metasploit_logonpasswords_lsass_memory_dump_viterbi.json"
+    },
+    {
+      "variant": "no_grouping",
+      "scenario": "metasploit_procdump_lsass_memory_dump",
+      "groups": 200,
+      "chain_length": 200,
+      "best_score": -500.4575,
+      "novelty": 0.98,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\compound\\lsass_campaign_02\\metasploit_procdump_lsass_memory_dump\\metasploit_procdump_lsass_memory_dump\\metasploit_procdump_lsass_memory_dump_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_grouping\\compound\\lsass_campaign_02\\metasploit_procdump_lsass_memory_dump\\metasploit_procdump_lsass_memory_dump\\metasploit_procdump_lsass_memory_dump_viterbi.json"
+    },
+    {
+      "variant": "no_shared_entity",
+      "scenario": "msf_record_mic_2020-06-09225055",
+      "groups": 18,
+      "chain_length": 18,
+      "best_score": -51.5766,
+      "novelty": 0.7222,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\collection\\msf_record_mic\\msf_record_mic_2020-06-09225055\\msf_record_mic_2020-06-09225055_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\collection\\msf_record_mic\\msf_record_mic_2020-06-09225055\\msf_record_mic_2020-06-09225055_viterbi.json"
+    },
+    {
+      "variant": "no_shared_entity",
+      "scenario": "cmd_dumping_ntds_dit_file_ntdsutil",
+      "groups": 58,
+      "chain_length": 58,
+      "best_score": -145.5077,
+      "novelty": 0.9138,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\credential_access\\cmd_dumping_ntds_dit_file_ntdsutil\\cmd_dumping_ntds_dit_file_ntdsutil\\cmd_dumping_ntds_dit_file_ntdsutil_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\credential_access\\cmd_dumping_ntds_dit_file_ntdsutil\\cmd_dumping_ntds_dit_file_ntdsutil\\cmd_dumping_ntds_dit_file_ntdsutil_viterbi.json"
+    },
+    {
+      "variant": "no_shared_entity",
+      "scenario": "cmd_sam_copy_esentutl_2020-10-1900290001",
+      "groups": 23,
+      "chain_length": 23,
+      "best_score": -58.5924,
+      "novelty": 0.913,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\credential_access\\cmd_sam_copy_esentutl\\cmd_sam_copy_esentutl_2020-10-1900290001\\cmd_sam_copy_esentutl_2020-10-1900290001_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\credential_access\\cmd_sam_copy_esentutl\\cmd_sam_copy_esentutl_2020-10-1900290001\\cmd_sam_copy_esentutl_2020-10-1900290001_viterbi.json"
+    },
+    {
+      "variant": "no_shared_entity",
+      "scenario": "empire_mimikatz_logonpasswords_2020-08-07103224",
+      "groups": 23,
+      "chain_length": 23,
+      "best_score": -61.5893,
+      "novelty": 0.7826,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\credential_access\\empire_mimikatz_logonpasswords\\empire_mimikatz_logonpasswords_2020-08-07103224\\empire_mimikatz_logonpasswords_2020-08-07103224_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\credential_access\\empire_mimikatz_logonpasswords\\empire_mimikatz_logonpasswords_2020-08-07103224\\empire_mimikatz_logonpasswords_2020-08-07103224_viterbi.json"
+    },
+    {
+      "variant": "no_shared_entity",
+      "scenario": "empire_shell_rubeus_asktgt_createnetonly_2020-09-21230246",
+      "groups": 31,
+      "chain_length": 31,
+      "best_score": -96.1679,
+      "novelty": 0.8387,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\credential_access\\empire_shell_rubeus_asktgt_createnetonly\\empire_shell_rubeus_asktgt_createnetonly_2020-09-21230246\\empire_shell_rubeus_asktgt_createnetonly_2020-09-21230246_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\credential_access\\empire_shell_rubeus_asktgt_createnetonly\\empire_shell_rubeus_asktgt_createnetonly_2020-09-21230246\\empire_shell_rubeus_asktgt_createnetonly_2020-09-21230246_viterbi.json"
+    },
+    {
+      "variant": "no_shared_entity",
+      "scenario": "psh_lsass_memory_dump_comsvcs_2020-10-18T19500924",
+      "groups": 6,
+      "chain_length": 6,
+      "best_score": -13.8389,
+      "novelty": 0.8333,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\credential_access\\psh_lsass_memory_dump_comsvcs\\psh_lsass_memory_dump_comsvcs_2020-10-18T19500924\\psh_lsass_memory_dump_comsvcs_2020-10-18T19500924_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\credential_access\\psh_lsass_memory_dump_comsvcs\\psh_lsass_memory_dump_comsvcs_2020-10-18T19500924\\psh_lsass_memory_dump_comsvcs_2020-10-18T19500924_viterbi.json"
+    },
+    {
+      "variant": "no_shared_entity",
+      "scenario": "cmd_process_herpaderping_mimiexplorer_2020-10-2623583501",
+      "groups": 6,
+      "chain_length": 6,
+      "best_score": -15.1517,
+      "novelty": 0.3333,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\defense_evasion\\cmd_process_herpaderping_mimiexplorer\\cmd_process_herpaderping_mimiexplorer_2020-10-2623583501\\cmd_process_herpaderping_mimiexplorer_2020-10-2623583501_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\defense_evasion\\cmd_process_herpaderping_mimiexplorer\\cmd_process_herpaderping_mimiexplorer_2020-10-2623583501\\cmd_process_herpaderping_mimiexplorer_2020-10-2623583501_viterbi.json"
+    },
+    {
+      "variant": "no_shared_entity",
+      "scenario": "cmd_stop_event_logging_controlset001_minint_key",
+      "groups": 65,
+      "chain_length": 65,
+      "best_score": -159.9676,
+      "novelty": 0.9077,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\defense_evasion\\cmd_stop_event_logging_controlset001_minint_key\\cmd_stop_event_logging_controlset001_minint_key\\cmd_stop_event_logging_controlset001_minint_key_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\defense_evasion\\cmd_stop_event_logging_controlset001_minint_key\\cmd_stop_event_logging_controlset001_minint_key\\cmd_stop_event_logging_controlset001_minint_key_viterbi.json"
+    },
+    {
+      "variant": "no_shared_entity",
+      "scenario": "cmd_wevtutil_modify_security_eventlog_path",
+      "groups": 54,
+      "chain_length": 54,
+      "best_score": -133.2705,
+      "novelty": 0.9074,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\defense_evasion\\cmd_wevtutil_modify_security_eventlog_path\\cmd_wevtutil_modify_security_eventlog_path\\cmd_wevtutil_modify_security_eventlog_path_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\defense_evasion\\cmd_wevtutil_modify_security_eventlog_path\\cmd_wevtutil_modify_security_eventlog_path\\cmd_wevtutil_modify_security_eventlog_path_viterbi.json"
+    },
+    {
+      "variant": "no_shared_entity",
+      "scenario": "empire_dllinjection_LoadLibrary_CreateRemoteThread_2020-07-22000048",
+      "groups": 31,
+      "chain_length": 31,
+      "best_score": -83.5934,
+      "novelty": 0.8065,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\defense_evasion\\empire_dllinjection_LoadLibrary_CreateRemoteThread\\empire_dllinjection_LoadLibrary_CreateRemoteThread_2020-07-22000048\\empire_dllinjection_LoadLibrary_CreateRemoteThread_2020-07-22000048_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\defense_evasion\\empire_dllinjection_LoadLibrary_CreateRemoteThread\\empire_dllinjection_LoadLibrary_CreateRemoteThread_2020-07-22000048\\empire_dllinjection_LoadLibrary_CreateRemoteThread_2020-07-22000048_viterbi.json"
+    },
+    {
+      "variant": "no_shared_entity",
+      "scenario": "psh_cmstp_execution_bypassuac_2020-10-2201543213",
+      "groups": 10,
+      "chain_length": 10,
+      "best_score": -24.4435,
+      "novelty": 0.6,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\defense_evasion\\psh_cmstp_execution_bypassuac\\psh_cmstp_execution_bypassuac_2020-10-2201543213\\psh_cmstp_execution_bypassuac_2020-10-2201543213_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\defense_evasion\\psh_cmstp_execution_bypassuac\\psh_cmstp_execution_bypassuac_2020-10-2201543213\\psh_cmstp_execution_bypassuac_2020-10-2201543213_viterbi.json"
+    },
+    {
+      "variant": "no_shared_entity",
+      "scenario": "cmd_seatbelt_group_user_2020-11-0216391814",
+      "groups": 3,
+      "chain_length": 3,
+      "best_score": -7.9198,
+      "novelty": 0.3333,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\discovery\\cmd_seatbelt_group_user\\cmd_seatbelt_group_user_2020-11-0216391814\\cmd_seatbelt_group_user_2020-11-0216391814_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\discovery\\cmd_seatbelt_group_user\\cmd_seatbelt_group_user_2020-11-0216391814\\cmd_seatbelt_group_user_2020-11-0216391814_viterbi.json"
+    },
+    {
+      "variant": "no_shared_entity",
+      "scenario": "empire_find_localadmin_smb_svcctl_OpenSCManager_2020-09-22021559",
+      "groups": 19,
+      "chain_length": 19,
+      "best_score": -57.3121,
+      "novelty": 0.7895,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\discovery\\empire_find_localadmin_smb_svcctl_OpenSCManager\\empire_find_localadmin_smb_svcctl_OpenSCManager_2020-09-22021559\\empire_find_localadmin_smb_svcctl_OpenSCManager_2020-09-22021559_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\discovery\\empire_find_localadmin_smb_svcctl_OpenSCManager\\empire_find_localadmin_smb_svcctl_OpenSCManager_2020-09-22021559\\empire_find_localadmin_smb_svcctl_OpenSCManager_2020-09-22021559_viterbi.json"
+    },
+    {
+      "variant": "no_shared_entity",
+      "scenario": "empire_getsession_dcerpc_smb_srvsvc_NetSessEnum_2020-09-22034513",
+      "groups": 53,
+      "chain_length": 53,
+      "best_score": -145.1703,
+      "novelty": 0.9057,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\discovery\\empire_getsession_dcerpc_smb_srvsvc_NetSessEnum\\empire_getsession_dcerpc_smb_srvsvc_NetSessEnum_2020-09-22034513\\empire_getsession_dcerpc_smb_srvsvc_NetSessEnum_2020-09-22034513_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\discovery\\empire_getsession_dcerpc_smb_srvsvc_NetSessEnum\\empire_getsession_dcerpc_smb_srvsvc_NetSessEnum_2020-09-22034513\\empire_getsession_dcerpc_smb_srvsvc_NetSessEnum_2020-09-22034513_viterbi.json"
+    },
+    {
+      "variant": "no_shared_entity",
+      "scenario": "empire_shell_net_local_users_2020-09-21192606",
+      "groups": 14,
+      "chain_length": 14,
+      "best_score": -46.5529,
+      "novelty": 0.6429,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\discovery\\empire_shell_net_local_users\\empire_shell_net_local_users_2020-09-21192606\\empire_shell_net_local_users_2020-09-21192606_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\discovery\\empire_shell_net_local_users\\empire_shell_net_local_users_2020-09-21192606\\empire_shell_net_local_users_2020-09-21192606_viterbi.json"
+    },
+    {
+      "variant": "no_shared_entity",
+      "scenario": "empire_shell_samr_EnumDomainUsers_2020-09-21193527",
+      "groups": 12,
+      "chain_length": 12,
+      "best_score": -34.9108,
+      "novelty": 0.75,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\discovery\\empire_shell_samr_EnumDomainUsers\\empire_shell_samr_EnumDomainUsers_2020-09-21193527\\empire_shell_samr_EnumDomainUsers_2020-09-21193527_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\discovery\\empire_shell_samr_EnumDomainUsers\\empire_shell_samr_EnumDomainUsers_2020-09-21193527\\empire_shell_samr_EnumDomainUsers_2020-09-21193527_viterbi.json"
+    },
+    {
+      "variant": "no_shared_entity",
+      "scenario": "cmd_sharpview_pcre_net_2020-10-2920232423",
+      "groups": 2,
+      "chain_length": 2,
+      "best_score": -4.9109,
+      "novelty": 0.5,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\execution\\cmd_sharpview_pcre_net\\cmd_sharpview_pcre_net_2020-10-2920232423\\cmd_sharpview_pcre_net_2020-10-2920232423_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\execution\\cmd_sharpview_pcre_net\\cmd_sharpview_pcre_net_2020-10-2920232423\\cmd_sharpview_pcre_net_2020-10-2920232423_viterbi.json"
+    },
+    {
+      "variant": "no_shared_entity",
+      "scenario": "empire_launcher_vbs_2020-09-04160940",
+      "groups": 19,
+      "chain_length": 19,
+      "best_score": -50.2853,
+      "novelty": 0.7368,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\execution\\empire_launcher_vbs\\empire_launcher_vbs_2020-09-04160940\\empire_launcher_vbs_2020-09-04160940_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\execution\\empire_launcher_vbs\\empire_launcher_vbs_2020-09-04160940\\empire_launcher_vbs_2020-09-04160940_viterbi.json"
+    },
+    {
+      "variant": "no_shared_entity",
+      "scenario": "psh_powershell_httplistener_2020-11-0204130683",
+      "groups": 2,
+      "chain_length": 2,
+      "best_score": -4.8717,
+      "novelty": 0.0,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\execution\\psh_powershell_httplistener\\psh_powershell_httplistener_2020-11-0204130683\\psh_powershell_httplistener_2020-11-0204130683_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\execution\\psh_powershell_httplistener\\psh_powershell_httplistener_2020-11-0204130683\\psh_powershell_httplistener_2020-11-0204130683_viterbi.json"
+    },
+    {
+      "variant": "no_shared_entity",
+      "scenario": "psh_python_webserver_2020-10-2900161507",
+      "groups": 2,
+      "chain_length": 2,
+      "best_score": -5.247,
+      "novelty": 0.5,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\execution\\psh_python_webserver\\psh_python_webserver_2020-10-2900161507\\psh_python_webserver_2020-10-2900161507_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\execution\\psh_python_webserver\\psh_python_webserver_2020-10-2900161507\\psh_python_webserver_2020-10-2900161507_viterbi.json"
+    },
+    {
+      "variant": "no_shared_entity",
+      "scenario": "covenant_psremoting_command_2020-08-06115603",
+      "groups": 21,
+      "chain_length": 21,
+      "best_score": -56.1702,
+      "novelty": 0.7619,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\lateral_movement\\covenant_psremoting_command\\covenant_psremoting_command_2020-08-06115603\\covenant_psremoting_command_2020-08-06115603_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\lateral_movement\\covenant_psremoting_command\\covenant_psremoting_command_2020-08-06115603\\covenant_psremoting_command_2020-08-06115603_viterbi.json"
+    },
+    {
+      "variant": "no_shared_entity",
+      "scenario": "empire_psexec_dcerpc_tcp_svcctl_2020-09-20121608",
+      "groups": 36,
+      "chain_length": 36,
+      "best_score": -104.5647,
+      "novelty": 0.8611,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\lateral_movement\\empire_psexec_dcerpc_tcp_svcctl\\empire_psexec_dcerpc_tcp_svcctl_2020-09-20121608\\empire_psexec_dcerpc_tcp_svcctl_2020-09-20121608_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\lateral_movement\\empire_psexec_dcerpc_tcp_svcctl\\empire_psexec_dcerpc_tcp_svcctl_2020-09-20121608\\empire_psexec_dcerpc_tcp_svcctl_2020-09-20121608_viterbi.json"
+    },
+    {
+      "variant": "no_shared_entity",
+      "scenario": "empire_psremoting_stager_2020-09-20170827",
+      "groups": 33,
+      "chain_length": 33,
+      "best_score": -93.4608,
+      "novelty": 0.8788,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\lateral_movement\\empire_psremoting_stager\\empire_psremoting_stager_2020-09-20170827\\empire_psremoting_stager_2020-09-20170827_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\lateral_movement\\empire_psremoting_stager\\empire_psremoting_stager_2020-09-20170827\\empire_psremoting_stager_2020-09-20170827_viterbi.json"
+    },
+    {
+      "variant": "no_shared_entity",
+      "scenario": "empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod_2020-09-21001437",
+      "groups": 60,
+      "chain_length": 60,
+      "best_score": -165.6899,
+      "novelty": 0.9167,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\lateral_movement\\empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod\\empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod_2020-09-21001437\\empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod_2020-09-21001437_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\lateral_movement\\empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod\\empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod_2020-09-21001437\\empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod_2020-09-21001437_viterbi.json"
+    },
+    {
+      "variant": "no_shared_entity",
+      "scenario": "purplesharp_ad_playbook_I_2020-10-22042947",
+      "groups": 50,
+      "chain_length": 50,
+      "best_score": -137.3176,
+      "novelty": 0.88,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\lateral_movement\\purplesharp_ad_playbook_I\\purplesharp_ad_playbook_I_2020-10-22042947\\purplesharp_ad_playbook_I_2020-10-22042947_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\lateral_movement\\purplesharp_ad_playbook_I\\purplesharp_ad_playbook_I_2020-10-22042947\\purplesharp_ad_playbook_I_2020-10-22042947_viterbi.json"
+    },
+    {
+      "variant": "no_shared_entity",
+      "scenario": "cmd_userinitmprlogonscript_batch_2020-10-1922471810",
+      "groups": 3,
+      "chain_length": 3,
+      "best_score": -7.4358,
+      "novelty": 0.6667,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\persistence\\cmd_userinitmprlogonscript_batch\\cmd_userinitmprlogonscript_batch_2020-10-1922471810\\cmd_userinitmprlogonscript_batch_2020-10-1922471810_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\persistence\\cmd_userinitmprlogonscript_batch\\cmd_userinitmprlogonscript_batch_2020-10-1922471810\\cmd_userinitmprlogonscript_batch_2020-10-1922471810_viterbi.json"
+    },
+    {
+      "variant": "no_shared_entity",
+      "scenario": "covenant_persistwmi_2019-12-05044734",
+      "groups": 15,
+      "chain_length": 15,
+      "best_score": -46.5646,
+      "novelty": 0.6667,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\persistence\\covenant_persistwmi\\covenant_persistwmi_2019-12-05044734\\covenant_persistwmi_2019-12-05044734_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\persistence\\covenant_persistwmi\\covenant_persistwmi_2019-12-05044734\\covenant_persistwmi_2019-12-05044734_viterbi.json"
+    },
+    {
+      "variant": "no_shared_entity",
+      "scenario": "empire_persistence_registry_modification_run_keys_elevated_user_2020-07-22001847",
+      "groups": 9,
+      "chain_length": 9,
+      "best_score": -24.7039,
+      "novelty": 0.5556,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\persistence\\empire_persistence_registry_modification_run_keys_elevated_user\\empire_persistence_registry_modification_run_keys_elevated_user_2020-07-22001847\\empire_persistence_registry_modification_run_keys_elevated_user_2020-07-22001847_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\persistence\\empire_persistence_registry_modification_run_keys_elevated_user\\empire_persistence_registry_modification_run_keys_elevated_user_2020-07-22001847\\empire_persistence_registry_modification_run_keys_elevated_user_2020-07-22001847_viterbi.json"
+    },
+    {
+      "variant": "no_shared_entity",
+      "scenario": "empire_schtasks_creation_execution_elevated_user_2020-09-21175806",
+      "groups": 176,
+      "chain_length": 172,
+      "best_score": -472.7744,
+      "novelty": 0.9593,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\persistence\\empire_schtasks_creation_execution_elevated_user\\empire_schtasks_creation_execution_elevated_user_2020-09-21175806\\empire_schtasks_creation_execution_elevated_user_2020-09-21175806_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\persistence\\empire_schtasks_creation_execution_elevated_user\\empire_schtasks_creation_execution_elevated_user_2020-09-21175806\\empire_schtasks_creation_execution_elevated_user_2020-09-21175806_viterbi.json"
+    },
+    {
+      "variant": "no_shared_entity",
+      "scenario": "empire_wmi_local_event_subscriptions_elevated_user_2020-09-04164306",
+      "groups": 128,
+      "chain_length": 128,
+      "best_score": -342.1552,
+      "novelty": 0.9531,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\persistence\\empire_wmi_local_event_subscriptions_elevated_user\\empire_wmi_local_event_subscriptions_elevated_user_2020-09-04164306\\empire_wmi_local_event_subscriptions_elevated_user_2020-09-04164306_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\persistence\\empire_wmi_local_event_subscriptions_elevated_user\\empire_wmi_local_event_subscriptions_elevated_user_2020-09-04164306\\empire_wmi_local_event_subscriptions_elevated_user_2020-09-04164306_viterbi.json"
+    },
+    {
+      "variant": "no_shared_entity",
+      "scenario": "cmd_service_mod_fax_2020-10-2120454410",
+      "groups": 4,
+      "chain_length": 4,
+      "best_score": -10.8627,
+      "novelty": 0.5,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\privilege_escalation\\cmd_service_mod_fax\\cmd_service_mod_fax_2020-10-2120454410\\cmd_service_mod_fax_2020-10-2120454410_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\privilege_escalation\\cmd_service_mod_fax\\cmd_service_mod_fax_2020-10-2120454410\\cmd_service_mod_fax_2020-10-2120454410_viterbi.json"
+    },
+    {
+      "variant": "no_shared_entity",
+      "scenario": "empire_invoke_runas_2019-05-18204300",
+      "groups": 27,
+      "chain_length": 27,
+      "best_score": -70.9008,
+      "novelty": 0.8148,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\privilege_escalation\\empire_invoke_runas\\empire_invoke_runas_2019-05-18204300\\empire_invoke_runas_2019-05-18204300_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\privilege_escalation\\empire_invoke_runas\\empire_invoke_runas_2019-05-18204300\\empire_invoke_runas_2019-05-18204300_viterbi.json"
+    },
+    {
+      "variant": "no_shared_entity",
+      "scenario": "empire_uac_shellapi_fodhelper_2020-09-04032946",
+      "groups": 23,
+      "chain_length": 23,
+      "best_score": -59.3837,
+      "novelty": 0.7826,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\privilege_escalation\\empire_uac_shellapi_fodhelper\\empire_uac_shellapi_fodhelper_2020-09-04032946\\empire_uac_shellapi_fodhelper_2020-09-04032946_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\atomic\\privilege_escalation\\empire_uac_shellapi_fodhelper\\empire_uac_shellapi_fodhelper_2020-09-04032946\\empire_uac_shellapi_fodhelper_2020-09-04032946_viterbi.json"
+    },
+    {
+      "variant": "no_shared_entity",
+      "scenario": "metasploit_logonpasswords_lsass_memory_dump",
+      "groups": 188,
+      "chain_length": 159,
+      "best_score": -411.3253,
+      "novelty": 0.9623,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\compound\\lsass_campaign_01\\metasploit_logonpasswords_lsass_memory_dump\\metasploit_logonpasswords_lsass_memory_dump\\metasploit_logonpasswords_lsass_memory_dump_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\compound\\lsass_campaign_01\\metasploit_logonpasswords_lsass_memory_dump\\metasploit_logonpasswords_lsass_memory_dump\\metasploit_logonpasswords_lsass_memory_dump_viterbi.json"
+    },
+    {
+      "variant": "no_shared_entity",
+      "scenario": "metasploit_procdump_lsass_memory_dump",
+      "groups": 139,
+      "chain_length": 139,
+      "best_score": -355.0608,
+      "novelty": 0.964,
+      "ttp_mapping": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\compound\\lsass_campaign_02\\metasploit_procdump_lsass_memory_dump\\metasploit_procdump_lsass_memory_dump\\metasploit_procdump_lsass_memory_dump_ttp_mapping.json",
+      "viterbi": "D:\\Lab\\EDR_Agent\\Paper\\CCS_Project-main\\Final_Code\\output\\ablation_no_shared_entity\\compound\\lsass_campaign_02\\metasploit_procdump_lsass_memory_dump\\metasploit_procdump_lsass_memory_dump\\metasploit_procdump_lsass_memory_dump_viterbi.json"
+    }
+  ],
+  "failed": []
+}

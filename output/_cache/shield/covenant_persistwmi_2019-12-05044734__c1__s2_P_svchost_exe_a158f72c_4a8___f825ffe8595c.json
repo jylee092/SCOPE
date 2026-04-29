@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"svchost.exe connected to the lsass named pipe, which is often indicative of credential dumping.\",\n  \"indicators\": [\n    \"lsass\",\n    \"pipe_connect\",\n    \"credential_dumping\"\n  ]\n}"}

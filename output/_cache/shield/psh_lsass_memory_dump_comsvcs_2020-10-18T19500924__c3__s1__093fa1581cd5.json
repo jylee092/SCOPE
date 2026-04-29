@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[svchost.exe|{39e4a257-f13]\"\n  ],\n  \"rationale\": \"The svchost.exe process created a new, non-standard registry key (VFUProvider) under HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion, which is a sensitive location often used for persistence or configuration by malicious processes.\"\n}"}

@@ -1,0 +1,37 @@
+{
+  "technique": { "id": "T1204.002", "name": "Malicious File" },
+  "detection": { "id": "DET0294" },
+  "analysis": { "id": "AN0819" },
+  "log_sources": {
+    "Anchor Event": {
+      "data_component": { "id": "DC0032", "name": "Process Creation" },
+      "description": "사용자 실행 유도에 의한 악성 프로세스 생성",
+      "conditions": [
+        {
+          "type": "user_spawned_process",
+          "source": "WinEvent_Log:Sysmon",
+          "channel": { "event_codes": [1] },
+          "filters": { "ParentImage": { "contains": ["excel.exe", "winword.exe", "acrord32.exe"] } },
+          "description": "Office 등 사용자 애플리케이션에서 파생된 의심스러운 자식 프로세스"
+        }
+      ]
+    },
+    "Supporting Events": [
+      { "data_component": { "id": "DC0039", "name": "File Creation" }, "source": "WinEvent_Log:Sysmon", "channel": { "event_codes": [11] }, "description": "악성 파일 드롭 행위" },
+      { "data_component": { "id": "DC0059", "name": "File Metadata" }, "source": "WinEvent_Log:Sysmon", "channel": { "event_codes": [15] }, "description": "대체 데이터 스트림(ADS) 또는 다운로드 증적(Mark-of-the-Web)" }
+    ]
+  },
+  "mutable_elements": {
+    "grouping_logic": {
+      "primary_anchor_eids": [1],
+      "correlation_key": { "primary": ["Hostname", "ProcessGuid"], "fallback": ["Hostname"] },
+      "time_window": { "window_seconds": 50, "note": "파일 생성 후 프로세스 실행까지의 지연 시간 고려" }
+    },
+    "feature_extraction_filters": {
+      "suspicious_extensions": [".exe", ".scr", ".lnk", ".vbs", ".docm", ".xlsm", ".pdf->exe"],
+      "user_paths": ["C:\\Users\\*\\Downloads\\", "C:\\Users\\*\\Desktop\\", "C:\\Users\\*\\AppData\\Local\\Temp\\"],
+      "parent_apps": ["outlook.exe", "winword.exe", "excel.exe", "chrome.exe", "msedge.exe"],
+      "signer_allow_list": ["Microsoft Corporation", "Google LLC", "Adobe Inc.", "VMware, Inc.", "Cisco Systems, Inc."]
+    }
+  }
+}

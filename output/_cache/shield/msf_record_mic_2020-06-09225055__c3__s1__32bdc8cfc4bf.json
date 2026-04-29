@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed file deletions in the Cortana AppIconCache and registry modifications related to the Recycle Bin and Windows Notifications are consistent with the normal operations of RuntimeBroker.exe and ctfmon.exe, with no notable command lines or other indicators of compromise.\"\n}"}

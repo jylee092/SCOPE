@@ -1,0 +1,15 @@
+{
+  "scenario": "cmd_process_herpaderping_mimiexplorer_2020-10-2623583501",
+  "tactic_sequence": [],
+  "technique_sequence": [],
+  "per_group_topk": [],
+  "notes": {
+    "n_total_events": 265,
+    "n_filtered_events": 265,
+    "n_lof_anomalous": 14,
+    "n_communities": 4,
+    "n_alerts": 0,
+    "alerts": [],
+    "elapsed_sec": 83.1
+  }
+}

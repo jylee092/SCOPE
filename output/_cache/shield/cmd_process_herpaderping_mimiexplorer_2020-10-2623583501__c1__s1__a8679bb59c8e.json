@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The System process interacting with its own Background Activity Moderator (BAM) registry keys is a normal and expected operating system behavior, not indicative of an attack pattern.\"\n}"}

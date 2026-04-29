@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": false,\n  \"deviation\": \"\",\n  \"indicators\": [\n    \"netsh.exe modifying firewall rules\",\n    \"powershell.exe spawning netsh.exe\",\n    \"adding inbound allow firewall rule\",\n    \"rule for program in user AppData directory\"\n  ]\n}"}

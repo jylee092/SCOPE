@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[lsass.exe|{ee23f965-8a2]\"\n  ],\n  \"rationale\": \"The lsass.exe process initiating an outbound network connection to a high, non-standard port (49674) is highly suspicious, as lsass.exe typically communicates on well-known ports like 389 (LDAP) for legitimate domain operations.\"\n}"}

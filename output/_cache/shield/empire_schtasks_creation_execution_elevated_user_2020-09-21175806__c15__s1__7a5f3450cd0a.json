@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed registry and file operations by svchost.exe are consistent with the normal functioning of the Windows Diagnostic Tracking service and WMI Autologgers, and no notable command lines or other suspicious indicators were present in the provided events.\"\n}"}

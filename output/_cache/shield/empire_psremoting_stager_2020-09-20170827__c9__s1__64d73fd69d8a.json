@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is performing its legitimate function of writing prefetch files; while the execution of whoami.exe, powershell.exe, and wsmprovhost.exe (as indicated by the prefetch files) is highly suspicious, svchost.exe itself is not directly performing a malicious action within this community.\"\n}"}

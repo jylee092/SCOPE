@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities by svchost.exe, including writing to a SleepStudy ETL file and modifying registry keys under BackgroundModel and HostActivityManager, are consistent with normal Windows system operations and do not match known attack patterns.\"\n}"}

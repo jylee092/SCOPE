@@ -1,0 +1,562 @@
+[
+  {
+    "scenario": "msf_record_mic_2020-06-09225055",
+    "events": 6202,
+    "groups": 15,
+    "chain_len": 15,
+    "stages": {
+      "load": 1.4174867999972776,
+      "grouping": 6.455196100054309,
+      "feature": 2.2054942999966443,
+      "mapping": 8.69058049999876,
+      "viterbi": 8.480825199978426
+    },
+    "total_sec": 27.249582900025416,
+    "events_per_sec": 227.59981401382166,
+    "peak_mem_mb": 1239.6015625
+  },
+  {
+    "scenario": "cmd_dumping_ntds_dit_file_ntdsutil",
+    "events": 11184,
+    "groups": 31,
+    "chain_len": 31,
+    "stages": {
+      "load": 2.535320400027558,
+      "grouping": 8.675815700029489,
+      "feature": 5.268461700004991,
+      "mapping": 7.190148700028658,
+      "viterbi": 6.474543300049845
+    },
+    "total_sec": 30.14428980014054,
+    "events_per_sec": 371.01554138946267,
+    "peak_mem_mb": 1315.375
+  },
+  {
+    "scenario": "cmd_sam_copy_esentutl_2020-10-1900290001",
+    "events": 915,
+    "groups": 9,
+    "chain_len": 9,
+    "stages": {
+      "load": 0.1505485000088811,
+      "grouping": 1.6994509000214748,
+      "feature": 0.8028245000168681,
+      "mapping": 2.13911280001048,
+      "viterbi": 2.02907619997859
+    },
+    "total_sec": 6.821012900036294,
+    "events_per_sec": 134.1442998876503,
+    "peak_mem_mb": 1261.25
+  },
+  {
+    "scenario": "empire_mimikatz_logonpasswords_2020-08-07103224",
+    "events": 6026,
+    "groups": 15,
+    "chain_len": 15,
+    "stages": {
+      "load": 1.4110581999993883,
+      "grouping": 4.767127100029029,
+      "feature": 2.279735799995251,
+      "mapping": 3.328028699965216,
+      "viterbi": 3.7884660999989137
+    },
+    "total_sec": 15.574415899987798,
+    "events_per_sec": 386.9165969816384,
+    "peak_mem_mb": 1318.46484375
+  },
+  {
+    "scenario": "empire_shell_rubeus_asktgt_createnetonly_2020-09-21230246",
+    "events": 3590,
+    "groups": 21,
+    "chain_len": 21,
+    "stages": {
+      "load": 0.6150554000050761,
+      "grouping": 4.432406699983403,
+      "feature": 3.450117100030184,
+      "mapping": 4.669867200020235,
+      "viterbi": 4.726094499987084
+    },
+    "total_sec": 17.893540900025982,
+    "events_per_sec": 200.6310556450449,
+    "peak_mem_mb": 1281.15625
+  },
+  {
+    "scenario": "psh_lsass_memory_dump_comsvcs_2020-10-18T19500924",
+    "events": 184,
+    "groups": 4,
+    "chain_len": 4,
+    "stages": {
+      "load": 0.05202340002870187,
+      "grouping": 0.9055641000159085,
+      "feature": 0.3447728999890387,
+      "mapping": 0.8607006999664009,
+      "viterbi": 1.0298336999840103
+    },
+    "total_sec": 3.1928947999840602,
+    "events_per_sec": 57.62795567236308,
+    "peak_mem_mb": 1281.515625
+  },
+  {
+    "scenario": "cmd_process_herpaderping_mimiexplorer_2020-10-2623583501",
+    "events": 265,
+    "groups": 5,
+    "chain_len": 5,
+    "stages": {
+      "load": 0.066724999982398,
+      "grouping": 0.9943672000081278,
+      "feature": 0.4306023999815807,
+      "mapping": 1.2401742999791168,
+      "viterbi": 1.3309435999835841
+    },
+    "total_sec": 4.062812499934807,
+    "events_per_sec": 65.22575186628777,
+    "peak_mem_mb": 1286.85546875
+  },
+  {
+    "scenario": "cmd_stop_event_logging_controlset001_minint_key",
+    "events": 16010,
+    "groups": 31,
+    "chain_len": 31,
+    "stages": {
+      "load": 3.592495399992913,
+      "grouping": 13.225408700003754,
+      "feature": 6.204320600023493,
+      "mapping": 6.872767799999565,
+      "viterbi": 4.92026949999854
+    },
+    "total_sec": 34.815262000018265,
+    "events_per_sec": 459.85579542648856,
+    "peak_mem_mb": 1387.68359375
+  },
+  {
+    "scenario": "cmd_wevtutil_modify_security_eventlog_path",
+    "events": 25208,
+    "groups": 36,
+    "chain_len": 36,
+    "stages": {
+      "load": 4.703511000028811,
+      "grouping": 20.24359889997868,
+      "feature": 5.668876299983822,
+      "mapping": 8.35153819998959,
+      "viterbi": 6.62318910000613
+    },
+    "total_sec": 45.59071349998703,
+    "events_per_sec": 552.9196203522274,
+    "peak_mem_mb": 1451.09375
+  },
+  {
+    "scenario": "empire_dllinjection_LoadLibrary_CreateRemoteThread_2020-07-22000048",
+    "events": 12200,
+    "groups": 22,
+    "chain_len": 22,
+    "stages": {
+      "load": 3.246868900023401,
+      "grouping": 10.82824989996152,
+      "feature": 6.7859395000268705,
+      "mapping": 4.841578599996865,
+      "viterbi": 5.171065100003034
+    },
+    "total_sec": 30.87370200001169,
+    "events_per_sec": 395.15831305216915,
+    "peak_mem_mb": 1411.72265625
+  },
+  {
+    "scenario": "psh_cmstp_execution_bypassuac_2020-10-2201543213",
+    "events": 1166,
+    "groups": 10,
+    "chain_len": 10,
+    "stages": {
+      "load": 0.21070709999185055,
+      "grouping": 2.23507980001159,
+      "feature": 1.100096800015308,
+      "mapping": 2.317340699955821,
+      "viterbi": 2.6098323999904096
+    },
+    "total_sec": 8.47305679996498,
+    "events_per_sec": 137.6126736226788,
+    "peak_mem_mb": 1311.66015625
+  },
+  {
+    "scenario": "cmd_seatbelt_group_user_2020-11-0216391814",
+    "events": 451,
+    "groups": 2,
+    "chain_len": 2,
+    "stages": {
+      "load": 0.10481569997500628,
+      "grouping": 1.0917679999838583,
+      "feature": 0.18926030001603067,
+      "mapping": 0.42743420001352206,
+      "viterbi": 0.5175521000055596
+    },
+    "total_sec": 2.330830299993977,
+    "events_per_sec": 193.49328005610937,
+    "peak_mem_mb": 1311.11328125
+  },
+  {
+    "scenario": "empire_find_localadmin_smb_svcctl_OpenSCManager_2020-09-22021559",
+    "events": 4570,
+    "groups": 11,
+    "chain_len": 11,
+    "stages": {
+      "load": 0.8257251000031829,
+      "grouping": 3.2853559000068344,
+      "feature": 1.5481807999894954,
+      "mapping": 2.2552108999807388,
+      "viterbi": 2.2818682999932207
+    },
+    "total_sec": 10.196340999973472,
+    "events_per_sec": 448.1999964508729,
+    "peak_mem_mb": 1330.015625
+  },
+  {
+    "scenario": "empire_getsession_dcerpc_smb_srvsvc_NetSessEnum_2020-09-22034513",
+    "events": 5047,
+    "groups": 14,
+    "chain_len": 14,
+    "stages": {
+      "load": 1.1113058000337332,
+      "grouping": 5.420595500036143,
+      "feature": 3.3113206999842077,
+      "mapping": 3.020225499989465,
+      "viterbi": 2.852603499952238
+    },
+    "total_sec": 15.716050999995787,
+    "events_per_sec": 321.13665194910305,
+    "peak_mem_mb": 1338.1484375
+  },
+  {
+    "scenario": "empire_shell_net_local_users_2020-09-21192606",
+    "events": 1907,
+    "groups": 10,
+    "chain_len": 10,
+    "stages": {
+      "load": 0.31118010001955554,
+      "grouping": 2.3460562999825925,
+      "feature": 1.2068353000213392,
+      "mapping": 2.1067481000209227,
+      "viterbi": 2.0571156999794766
+    },
+    "total_sec": 8.027935500023887,
+    "events_per_sec": 237.54550593914536,
+    "peak_mem_mb": 1314.87109375
+  },
+  {
+    "scenario": "empire_shell_samr_EnumDomainUsers_2020-09-21193527",
+    "events": 633,
+    "groups": 7,
+    "chain_len": 7,
+    "stages": {
+      "load": 0.12560590001521632,
+      "grouping": 1.8488975000218488,
+      "feature": 0.7891598999849521,
+      "mapping": 1.5320673999958672,
+      "viterbi": 1.641250399989076
+    },
+    "total_sec": 5.93698110000696,
+    "events_per_sec": 106.61984421666054,
+    "peak_mem_mb": 1315.69140625
+  },
+  {
+    "scenario": "cmd_sharpview_pcre_net_2020-10-2920232423",
+    "events": 267,
+    "groups": 2,
+    "chain_len": 2,
+    "stages": {
+      "load": 0.07287780003389344,
+      "grouping": 1.0224416000419296,
+      "feature": 0.22628220001934096,
+      "mapping": 0.411371499998495,
+      "viterbi": 0.5273794999811798
+    },
+    "total_sec": 2.260352600074839,
+    "events_per_sec": 118.12316361224342,
+    "peak_mem_mb": 1313.8359375
+  },
+  {
+    "scenario": "empire_launcher_vbs_2020-09-04160940",
+    "events": 2067,
+    "groups": 13,
+    "chain_len": 13,
+    "stages": {
+      "load": 0.4532265000161715,
+      "grouping": 5.4369580000056885,
+      "feature": 2.4011165000265464,
+      "mapping": 3.1402614999678917,
+      "viterbi": 3.5276907000225037
+    },
+    "total_sec": 14.959253200038802,
+    "events_per_sec": 138.17534688126267,
+    "peak_mem_mb": 1321.65234375
+  },
+  {
+    "scenario": "psh_powershell_httplistener_2020-11-0204130683",
+    "events": 110,
+    "groups": 2,
+    "chain_len": 2,
+    "stages": {
+      "load": 0.030455600004643202,
+      "grouping": 0.32522609998704866,
+      "feature": 0.11146709998138249,
+      "mapping": 0.415169199986849,
+      "viterbi": 0.5259107999736443
+    },
+    "total_sec": 1.4082287999335676,
+    "events_per_sec": 78.112306753838,
+    "peak_mem_mb": 1319.47265625
+  },
+  {
+    "scenario": "psh_python_webserver_2020-10-2900161507",
+    "events": 2395,
+    "groups": 2,
+    "chain_len": 2,
+    "stages": {
+      "load": 0.40957560000242665,
+      "grouping": 1.8511224999674596,
+      "feature": 0.1801778000080958,
+      "mapping": 0.41075859998818487,
+      "viterbi": 0.5449542999849655
+    },
+    "total_sec": 3.3965887999511324,
+    "events_per_sec": 705.1192066683071,
+    "peak_mem_mb": 1319.29296875
+  },
+  {
+    "scenario": "covenant_psremoting_command_2020-08-06115603",
+    "events": 4284,
+    "groups": 19,
+    "chain_len": 19,
+    "stages": {
+      "load": 0.970828999998048,
+      "grouping": 5.374107200012077,
+      "feature": 3.6652238000533544,
+      "mapping": 4.138452800048981,
+      "viterbi": 4.194024100026581
+    },
+    "total_sec": 18.34263690013904,
+    "events_per_sec": 233.55420615492457,
+    "peak_mem_mb": 1325.34765625
+  },
+  {
+    "scenario": "empire_psexec_dcerpc_tcp_svcctl_2020-09-20121608",
+    "events": 4348,
+    "groups": 26,
+    "chain_len": 26,
+    "stages": {
+      "load": 0.741661700012628,
+      "grouping": 6.471316899987869,
+      "feature": 5.159829500014894,
+      "mapping": 5.922027900000103,
+      "viterbi": 5.351893599960022
+    },
+    "total_sec": 23.646729599975515,
+    "events_per_sec": 183.87320672049728,
+    "peak_mem_mb": 1334.35546875
+  },
+  {
+    "scenario": "empire_psremoting_stager_2020-09-20170827",
+    "events": 2744,
+    "groups": 22,
+    "chain_len": 22,
+    "stages": {
+      "load": 0.5870089000090957,
+      "grouping": 6.604619999998249,
+      "feature": 4.029452299990226,
+      "mapping": 4.692687400034629,
+      "viterbi": 4.893323700001929
+    },
+    "total_sec": 20.807092300034128,
+    "events_per_sec": 131.87810965761417,
+    "peak_mem_mb": 1318.6328125
+  },
+  {
+    "scenario": "empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod_2020-09-21001437",
+    "events": 6383,
+    "groups": 29,
+    "chain_len": 29,
+    "stages": {
+      "load": 1.341690000030212,
+      "grouping": 7.534987099992577,
+      "feature": 6.927120000007562,
+      "mapping": 6.257254299998749,
+      "viterbi": 4.993308099976275
+    },
+    "total_sec": 27.054359500005376,
+    "events_per_sec": 235.9324012087121,
+    "peak_mem_mb": 1353.88671875
+  },
+  {
+    "scenario": "purplesharp_ad_playbook_I_2020-10-22042947",
+    "events": 25993,
+    "groups": 37,
+    "chain_len": 37,
+    "stages": {
+      "load": 6.061360599996988,
+      "grouping": 25.332097300037276,
+      "feature": 11.275464500009548,
+      "mapping": 8.183565000013914,
+      "viterbi": 8.732545399980154
+    },
+    "total_sec": 59.58503280003788,
+    "events_per_sec": 436.2337113622177,
+    "peak_mem_mb": 1624.5625
+  },
+  {
+    "scenario": "cmd_userinitmprlogonscript_batch_2020-10-1922471810",
+    "events": 122,
+    "groups": 3,
+    "chain_len": 3,
+    "stages": {
+      "load": 0.04027639998821542,
+      "grouping": 0.7126101000467315,
+      "feature": 0.1937466999515891,
+      "mapping": 0.6414205000037327,
+      "viterbi": 0.7549154000007547
+    },
+    "total_sec": 2.3429690999910235,
+    "events_per_sec": 52.07068245179478,
+    "peak_mem_mb": 1321.15625
+  },
+  {
+    "scenario": "covenant_persistwmi_2019-12-05044734",
+    "events": 1001,
+    "groups": 12,
+    "chain_len": 12,
+    "stages": {
+      "load": 0.2073765000095591,
+      "grouping": 1.330275599961169,
+      "feature": 1.3538590000243858,
+      "mapping": 2.617999299953226,
+      "viterbi": 2.9262956000166014
+    },
+    "total_sec": 8.435805999964941,
+    "events_per_sec": 118.66086062246572,
+    "peak_mem_mb": 1325.00390625
+  },
+  {
+    "scenario": "empire_persistence_registry_modification_run_keys_elevated_user_2020-07-22001847",
+    "events": 657,
+    "groups": 7,
+    "chain_len": 7,
+    "stages": {
+      "load": 0.144986700033769,
+      "grouping": 1.1098164000432007,
+      "feature": 0.7981392000219785,
+      "mapping": 1.5650748999905773,
+      "viterbi": 1.7604609999689274
+    },
+    "total_sec": 5.378478200058453,
+    "events_per_sec": 122.1535117485202,
+    "peak_mem_mb": 1330.1953125
+  },
+  {
+    "scenario": "empire_schtasks_creation_execution_elevated_user_2020-09-21175806",
+    "events": 59399,
+    "groups": 80,
+    "chain_len": 80,
+    "stages": {
+      "load": 19.346313300018664,
+      "grouping": 45.08400819997769,
+      "feature": 35.24852339999052,
+      "mapping": 17.39722579997033,
+      "viterbi": 15.107316899986472
+    },
+    "total_sec": 132.18338759994367,
+    "events_per_sec": 449.36811711750465,
+    "peak_mem_mb": 2183.3828125
+  },
+  {
+    "scenario": "empire_wmi_local_event_subscriptions_elevated_user_2020-09-04164306",
+    "events": 79896,
+    "groups": 80,
+    "chain_len": 80,
+    "stages": {
+      "load": 34.950585299986415,
+      "grouping": 66.94138370000292,
+      "feature": 30.035336299974006,
+      "mapping": 18.516134699981194,
+      "viterbi": 19.885622399975546
+    },
+    "total_sec": 170.32906239992008,
+    "events_per_sec": 469.0685128789712,
+    "peak_mem_mb": 2534.484375
+  },
+  {
+    "scenario": "cmd_service_mod_fax_2020-10-2120454410",
+    "events": 437,
+    "groups": 4,
+    "chain_len": 4,
+    "stages": {
+      "load": 0.11631620000116527,
+      "grouping": 2.1174131000298075,
+      "feature": 0.41339449997758493,
+      "mapping": 0.9892441999982111,
+      "viterbi": 1.0238898000097834
+    },
+    "total_sec": 4.660257800016552,
+    "events_per_sec": 93.771636409996,
+    "peak_mem_mb": 1427.78125
+  },
+  {
+    "scenario": "empire_invoke_runas_2019-05-18204300",
+    "events": 2581,
+    "groups": 21,
+    "chain_len": 21,
+    "stages": {
+      "load": 0.6627740999683738,
+      "grouping": 7.3182801000075415,
+      "feature": 3.8272684999974445,
+      "mapping": 4.9876356000313535,
+      "viterbi": 5.32038609997835
+    },
+    "total_sec": 22.116344399983063,
+    "events_per_sec": 116.70102225402027,
+    "peak_mem_mb": 1438.26171875
+  },
+  {
+    "scenario": "empire_uac_shellapi_fodhelper_2020-09-04032946",
+    "events": 4139,
+    "groups": 17,
+    "chain_len": 17,
+    "stages": {
+      "load": 0.956207400013227,
+      "grouping": 9.47896470001433,
+      "feature": 3.3669296000152826,
+      "mapping": 4.018954299972393,
+      "viterbi": 3.8326222999603488
+    },
+    "total_sec": 21.65367829997558,
+    "events_per_sec": 191.1453538129209,
+    "peak_mem_mb": 1450.17578125
+  },
+  {
+    "scenario": "metasploit_logonpasswords_lsass_memory_dump",
+    "events": 53698,
+    "groups": 80,
+    "chain_len": 80,
+    "stages": {
+      "load": 14.152489300002344,
+      "grouping": 54.14753090002341,
+      "feature": 18.743670500000007,
+      "mapping": 18.436387600027956,
+      "viterbi": 19.629974199982826
+    },
+    "total_sec": 125.11005250003655,
+    "events_per_sec": 429.2061183491576,
+    "peak_mem_mb": 1835.2890625
+  },
+  {
+    "scenario": "metasploit_procdump_lsass_memory_dump",
+    "events": 42482,
+    "groups": 80,
+    "chain_len": 80,
+    "stages": {
+      "load": 10.127183600037824,
+      "grouping": 39.35271940001985,
+      "feature": 17.359862699988298,
+      "mapping": 18.489875999977812,
+      "viterbi": 17.866404499975033
+    },
+    "total_sec": 103.19604619999882,
+    "events_per_sec": 411.66305846318835,
+    "peak_mem_mb": 1748.28125
+  }
+]

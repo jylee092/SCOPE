@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"svchost.exe is creating and setting an unknown registry key 'HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\VFUProvider', which is not a standard Windows component.\",\n  \"indicators\": [\n    \"svchost.exe\",\n    \"reg_create\",\n    \"reg_set\",\n    \"VFUProvider\"\n  ]\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities, including writes to the Prefetch directory and modifications to Superfetch-related registry keys by svchost.exe, are consistent with normal Windows operating system behavior for performance optimization and service management.\"\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[PowerShell_ISE.exe|{fe86be69-088]\"\n  ],\n  \"rationale\": \"PowerShell_ISE.exe, a user-facing scripting environment, performed extensive creation and modification of system-wide and user-specific certificate store registry keys, particularly within the 'Disallowed' category, which is unusual for"}

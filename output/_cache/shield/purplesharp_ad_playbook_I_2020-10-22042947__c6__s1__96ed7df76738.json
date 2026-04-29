@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The community shows svchost.exe processes performing routine registry operations related to user system certificates, which is a common and legitimate activity for various Windows services, and no other suspicious indicators like notable command lines or unusual file/network activity are present.\"\n}"}

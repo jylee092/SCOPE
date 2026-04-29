@@ -1,0 +1,5761 @@
+{
+  "scenario": "purplesharp_ad_playbook_I_2020-10-22042947",
+  "total_groups": 37,
+  "instruction": "각 그룹의 sample_logs와 anchor를 확인한 뒤 gt_ 필드를 채워주세요. gt_is_true_positive: 해당 그룹이 실제 공격 행위인지 (true/false). gt_technique_id: 실제 MITRE technique ID (예: T1059.001). gt_tactic: 실제 tactic 이름 (예: Execution). gt_notes: 판단 근거나 메모.",
+  "groups": [
+    {
+      "group_id": "T1016_18",
+      "rule_technique_id": "T1016",
+      "rule_technique_name": "System Network Configuration Discovery",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 18,
+        "EventID": 1,
+        "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+        "CommandLine": "PurpleSharp.exe  /t T1110.003,T1558.003,T1135,T1021.006",
+        "TimeCreated": "2020-10-22 08:29:53.801000+00:00"
+      },
+      "num_events": 176,
+      "event_id_distribution": {
+        "7": 101,
+        "12": 28,
+        "3": 22,
+        "13": 10,
+        "22": 6,
+        "18": 5,
+        "1": 1,
+        "23": 1,
+        "11": 1,
+        "5": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 14,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.798000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 18,
+          "EventID": 1,
+          "TimeCreated": "2020-10-22 08:29:53.801000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "PurpleSharp.exe  /t T1110.003,T1558.003,T1135,T1021.006",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 26,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.805000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 29,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.806000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 30,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.806000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 33,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.807000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 36,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.809000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 38,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.810000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 40,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.812000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 43,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.813000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 46,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.815000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 50,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.817000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 52,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.818000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 54,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.819000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 57,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.821000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "System Network Configuration Discovery",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(purplesharp)"
+    },
+    {
+      "group_id": "T1016_851",
+      "rule_technique_id": "T1016",
+      "rule_technique_name": "System Network Configuration Discovery",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 851,
+        "EventID": 4104,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-22 08:29:55.263000+00:00"
+      },
+      "num_events": 1,
+      "event_id_distribution": {
+        "4104": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 851,
+          "EventID": 4104,
+          "TimeCreated": "2020-10-22 08:29:55.263000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "System Network Configuration Discovery",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1016)"
+    },
+    {
+      "group_id": "T1016_3302",
+      "rule_technique_id": "T1016",
+      "rule_technique_name": "System Network Configuration Discovery",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 3302,
+        "EventID": 4104,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-22 08:29:58.833000+00:00"
+      },
+      "num_events": 1,
+      "event_id_distribution": {
+        "4104": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 3302,
+          "EventID": 4104,
+          "TimeCreated": "2020-10-22 08:29:58.833000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "System Network Configuration Discovery",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1016)"
+    },
+    {
+      "group_id": "T1018_1197",
+      "rule_technique_id": "T1018",
+      "rule_technique_name": "Remote System Discovery",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 1197,
+        "EventID": 5145,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-22 08:29:55.455000+00:00"
+      },
+      "num_events": 265,
+      "event_id_distribution": {
+        "11": 169,
+        "3": 49,
+        "4624": 38,
+        "18": 7,
+        "17": 1,
+        "5145": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 8,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:51.785000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 239,
+          "EventID": 4624,
+          "TimeCreated": "2020-10-22 08:29:53.908000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 310,
+          "EventID": 4624,
+          "TimeCreated": "2020-10-22 08:29:53.940000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 357,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:53.963000+00:00",
+          "Image": "C:\\windows\\system32\\wbem\\wmiprvse.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 358,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:53.964000+00:00",
+          "Image": "C:\\windows\\system32\\wbem\\wmiprvse.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 367,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:53.967000+00:00",
+          "Image": "C:\\windows\\system32\\wbem\\wmiprvse.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 421,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:53.997000+00:00",
+          "Image": "C:\\windows\\system32\\wbem\\wmiprvse.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 422,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:53.997000+00:00",
+          "Image": "C:\\windows\\system32\\wbem\\wmiprvse.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 461,
+          "EventID": 17,
+          "TimeCreated": "2020-10-22 08:29:54.021000+00:00",
+          "Image": "C:\\windows\\system32\\wbem\\wmiprvse.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 944,
+          "EventID": 4624,
+          "TimeCreated": "2020-10-22 08:29:55.315000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 960,
+          "EventID": 4624,
+          "TimeCreated": "2020-10-22 08:29:55.329000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1190,
+          "EventID": 4624,
+          "TimeCreated": "2020-10-22 08:29:55.450000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1197,
+          "EventID": 5145,
+          "TimeCreated": "2020-10-22 08:29:55.455000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2541,
+          "EventID": 4624,
+          "TimeCreated": "2020-10-22 08:29:57.311000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2883,
+          "EventID": 4624,
+          "TimeCreated": "2020-10-22 08:29:57.543000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "Remote System Discovery",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1018)"
+    },
+    {
+      "group_id": "T1018_1283",
+      "rule_technique_id": "T1018",
+      "rule_technique_name": "Remote System Discovery",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 1283,
+        "EventID": 5145,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-22 08:29:55.517000+00:00"
+      },
+      "num_events": 243,
+      "event_id_distribution": {
+        "11": 212,
+        "3": 12,
+        "18": 8,
+        "4624": 5,
+        "17": 5,
+        "5145": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 1268,
+          "EventID": 4624,
+          "TimeCreated": "2020-10-22 08:29:55.507000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1283,
+          "EventID": 5145,
+          "TimeCreated": "2020-10-22 08:29:55.517000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1309,
+          "EventID": 4624,
+          "TimeCreated": "2020-10-22 08:29:55.532000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1897,
+          "EventID": 18,
+          "TimeCreated": "2020-10-22 08:29:55.936000+00:00",
+          "Image": "C:\\windows\\system32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1903,
+          "EventID": 18,
+          "TimeCreated": "2020-10-22 08:29:55.940000+00:00",
+          "Image": "System",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1938,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:29:55.957000+00:00",
+          "Image": "System",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1941,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:29:55.958000+00:00",
+          "Image": "System",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1961,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:55.969000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1964,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:55.971000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1965,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:55.972000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1967,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:55.974000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1968,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:55.975000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1969,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:55.976000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1971,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:55.977000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1970,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:55.977000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "Remote System Discovery",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1018)"
+    },
+    {
+      "group_id": "T1018_1323",
+      "rule_technique_id": "T1018",
+      "rule_technique_name": "Remote System Discovery",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 1323,
+        "EventID": 5145,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-22 08:29:55.545000+00:00"
+      },
+      "num_events": 13,
+      "event_id_distribution": {
+        "3": 12,
+        "5145": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 1323,
+          "EventID": 5145,
+          "TimeCreated": "2020-10-22 08:29:55.545000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2190,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:29:57.107000+00:00",
+          "Image": "System",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2192,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:29:57.108000+00:00",
+          "Image": "System",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2403,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:29:57.231000+00:00",
+          "Image": "System",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2757,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:29:57.431000+00:00",
+          "Image": "System",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2760,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:29:57.433000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3131,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:29:58.691000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3132,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:29:58.691000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3135,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:29:58.693000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3136,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:29:58.693000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 4532,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:00.181000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 5934,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:06.850000+00:00",
+          "Image": "System",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 8663,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:08.165000+00:00",
+          "Image": "System",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "Remote System Discovery",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1018)"
+    },
+    {
+      "group_id": "T1021_003_239",
+      "rule_technique_id": "T1021.003",
+      "rule_technique_name": "Distributed Component Object Model",
+      "confidence": 0.78,
+      "anchor": {
+        "idx": 239,
+        "EventID": 4624,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-22 08:29:53.908000+00:00"
+      },
+      "num_events": 460,
+      "event_id_distribution": {
+        "7": 193,
+        "11": 169,
+        "3": 51,
+        "4624": 38,
+        "18": 7,
+        "17": 1,
+        "22": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 8,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:51.785000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 239,
+          "EventID": 4624,
+          "TimeCreated": "2020-10-22 08:29:53.908000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 279,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.925000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 280,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.926000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 281,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.927000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 284,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.928000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 286,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.929000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 289,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.930000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 290,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.931000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 292,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.932000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 294,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.933000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 296,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.934000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 300,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.935000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 298,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.935000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 302,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.936000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "Distributed Component Object Model",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1021.003)"
+    },
+    {
+      "group_id": "T1021_003_1308",
+      "rule_technique_id": "T1021.003",
+      "rule_technique_name": "Distributed Component Object Model",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 1308,
+        "EventID": 4624,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-22 08:29:55.532000+00:00"
+      },
+      "num_events": 663,
+      "event_id_distribution": {
+        "7": 422,
+        "11": 210,
+        "3": 12,
+        "18": 8,
+        "4624": 5,
+        "17": 5,
+        "22": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 1308,
+          "EventID": 4624,
+          "TimeCreated": "2020-10-22 08:29:55.532000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1812,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:55.888000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1875,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:55.924000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1879,
+          "EventID": 18,
+          "TimeCreated": "2020-10-22 08:29:55.926000+00:00",
+          "Image": "C:\\windows\\system32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1883,
+          "EventID": 18,
+          "TimeCreated": "2020-10-22 08:29:55.928000+00:00",
+          "Image": "System",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2190,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:29:57.107000+00:00",
+          "Image": "System",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2192,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:29:57.108000+00:00",
+          "Image": "System",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2193,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:57.108000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2232,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:57.131000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2236,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:57.133000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2240,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:57.136000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2242,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:57.136000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2245,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:57.138000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2246,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:57.138000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2248,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:57.140000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "Distributed Component Object Model",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1021.003)"
+    },
+    {
+      "group_id": "T1021_003_7332",
+      "rule_technique_id": "T1021.003",
+      "rule_technique_name": "Distributed Component Object Model",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 7332,
+        "EventID": 4624,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-22 08:30:07.622000+00:00"
+      },
+      "num_events": 576,
+      "event_id_distribution": {
+        "7": 298,
+        "11": 172,
+        "3": 58,
+        "4624": 29,
+        "18": 14,
+        "17": 4,
+        "22": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 3102,
+          "EventID": 4624,
+          "TimeCreated": "2020-10-22 08:29:58.675000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3232,
+          "EventID": 4624,
+          "TimeCreated": "2020-10-22 08:29:58.759000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 5657,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:06.615000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 5667,
+          "EventID": 18,
+          "TimeCreated": "2020-10-22 08:30:06.615000+00:00",
+          "Image": "System",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 5868,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:06.850000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6129,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:06.852000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6394,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.111000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6398,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.111000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6403,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.111000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6511,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.112000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6592,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:07.113000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6585,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:07.113000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6579,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:07.113000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6577,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:07.113000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6576,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:07.113000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "Distributed Component Object Model",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1021.003)"
+    },
+    {
+      "group_id": "T1021_003_3600",
+      "rule_technique_id": "T1021.003",
+      "rule_technique_name": "Distributed Component Object Model",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 3600,
+        "EventID": 1,
+        "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+        "CommandLine": "C:\\windows\\system32\\wsmprovhost.exe -Embedding",
+        "TimeCreated": "2020-10-22 08:29:58.970000+00:00"
+      },
+      "num_events": 1485,
+      "event_id_distribution": {
+        "12": 817,
+        "7": 422,
+        "13": 165,
+        "11": 25,
+        "23": 14,
+        "3": 12,
+        "1": 7,
+        "4624": 5,
+        "17": 5,
+        "18": 4,
+        "4103": 4,
+        "5": 3,
+        "22": 1,
+        "10": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 1308,
+          "EventID": 4624,
+          "TimeCreated": "2020-10-22 08:29:55.532000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1812,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:55.888000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1875,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:55.924000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2190,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:29:57.107000+00:00",
+          "Image": "System",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2192,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:29:57.108000+00:00",
+          "Image": "System",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2193,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:57.108000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2242,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:57.136000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2403,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:29:57.231000+00:00",
+          "Image": "System",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2458,
+          "EventID": 4624,
+          "TimeCreated": "2020-10-22 08:29:57.261000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2736,
+          "EventID": 22,
+          "TimeCreated": "2020-10-22 08:29:57.425000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2757,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:29:57.431000+00:00",
+          "Image": "System",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2760,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:29:57.433000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2781,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:57.443000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2869,
+          "EventID": 1,
+          "TimeCreated": "2020-10-22 08:29:57.531000+00:00",
+          "Image": "C:\\Windows\\System32\\dllhost.exe",
+          "CommandLine": "C:\\windows\\system32\\DllHost.exe /Processid:{E10F6C3A-F1AE-4ADC-AA9D-2FE65525666E}",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2880,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:57.542000+00:00",
+          "Image": "C:\\Windows\\System32\\dllhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "Distributed Component Object Model",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(wsmprovhost)"
+    },
+    {
+      "group_id": "T1021_003_3831",
+      "rule_technique_id": "T1021.003",
+      "rule_technique_name": "Distributed Component Object Model",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 3831,
+        "EventID": 1,
+        "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+        "CommandLine": "C:\\windows\\system32\\wsmprovhost.exe -Embedding",
+        "TimeCreated": "2020-10-22 08:29:59.583000+00:00"
+      },
+      "num_events": 1477,
+      "event_id_distribution": {
+        "12": 817,
+        "7": 414,
+        "13": 165,
+        "11": 25,
+        "23": 14,
+        "3": 12,
+        "1": 7,
+        "4624": 5,
+        "17": 5,
+        "18": 4,
+        "4103": 4,
+        "5": 3,
+        "22": 1,
+        "10": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 1268,
+          "EventID": 4624,
+          "TimeCreated": "2020-10-22 08:29:55.507000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1309,
+          "EventID": 4624,
+          "TimeCreated": "2020-10-22 08:29:55.532000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1894,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:55.934000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1900,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:55.937000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1907,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:55.942000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1938,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:29:55.957000+00:00",
+          "Image": "System",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1941,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:29:55.958000+00:00",
+          "Image": "System",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1966,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:55.972000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2514,
+          "EventID": 22,
+          "TimeCreated": "2020-10-22 08:29:57.292000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2542,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:57.312000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2595,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:29:57.340000+00:00",
+          "Image": "System",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2596,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:29:57.341000+00:00",
+          "Image": "System",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2598,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:29:57.342000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2600,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:29:57.343000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2601,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:29:57.344000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "Distributed Component Object Model",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(wsmprovhost)"
+    },
+    {
+      "group_id": "T1021_003_6099",
+      "rule_technique_id": "T1021.003",
+      "rule_technique_name": "Distributed Component Object Model",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 6099,
+        "EventID": 4624,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-22 08:30:06.852000+00:00"
+      },
+      "num_events": 422,
+      "event_id_distribution": {
+        "7": 410,
+        "3": 10,
+        "22": 1,
+        "4624": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 2514,
+          "EventID": 22,
+          "TimeCreated": "2020-10-22 08:29:57.292000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2542,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:57.312000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2595,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:29:57.340000+00:00",
+          "Image": "System",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2596,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:29:57.341000+00:00",
+          "Image": "System",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2598,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:29:57.342000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2600,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:29:57.343000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2601,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:29:57.344000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2605,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:57.347000+00:00",
+          "Image": "C:\\Windows\\System32\\dllhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2606,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:57.348000+00:00",
+          "Image": "C:\\Windows\\System32\\dllhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2607,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:57.349000+00:00",
+          "Image": "C:\\Windows\\System32\\dllhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2608,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:57.349000+00:00",
+          "Image": "C:\\Windows\\System32\\dllhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2609,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:57.350000+00:00",
+          "Image": "C:\\Windows\\System32\\dllhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2610,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:57.351000+00:00",
+          "Image": "C:\\Windows\\System32\\dllhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2612,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:57.352000+00:00",
+          "Image": "C:\\Windows\\System32\\dllhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2613,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:57.352000+00:00",
+          "Image": "C:\\Windows\\System32\\dllhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "Distributed Component Object Model",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1021.003)"
+    },
+    {
+      "group_id": "T1021_002_960",
+      "rule_technique_id": "T1021.002",
+      "rule_technique_name": "SMB/Windows Admin Shares",
+      "confidence": 0.67,
+      "anchor": {
+        "idx": 960,
+        "EventID": 4624,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-22 08:29:55.329000+00:00"
+      },
+      "num_events": 236,
+      "event_id_distribution": {
+        "11": 178,
+        "4624": 39,
+        "18": 14,
+        "17": 5
+      },
+      "sample_logs": [
+        {
+          "idx": 8,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:51.785000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 239,
+          "EventID": 4624,
+          "TimeCreated": "2020-10-22 08:29:53.908000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 310,
+          "EventID": 4624,
+          "TimeCreated": "2020-10-22 08:29:53.940000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 357,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:53.963000+00:00",
+          "Image": "C:\\windows\\system32\\wbem\\wmiprvse.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 358,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:53.964000+00:00",
+          "Image": "C:\\windows\\system32\\wbem\\wmiprvse.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 367,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:53.967000+00:00",
+          "Image": "C:\\windows\\system32\\wbem\\wmiprvse.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 421,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:53.997000+00:00",
+          "Image": "C:\\windows\\system32\\wbem\\wmiprvse.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 422,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:53.997000+00:00",
+          "Image": "C:\\windows\\system32\\wbem\\wmiprvse.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 461,
+          "EventID": 17,
+          "TimeCreated": "2020-10-22 08:29:54.021000+00:00",
+          "Image": "C:\\windows\\system32\\wbem\\wmiprvse.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 944,
+          "EventID": 4624,
+          "TimeCreated": "2020-10-22 08:29:55.315000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 960,
+          "EventID": 4624,
+          "TimeCreated": "2020-10-22 08:29:55.329000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1190,
+          "EventID": 4624,
+          "TimeCreated": "2020-10-22 08:29:55.450000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2541,
+          "EventID": 4624,
+          "TimeCreated": "2020-10-22 08:29:57.311000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2883,
+          "EventID": 4624,
+          "TimeCreated": "2020-10-22 08:29:57.543000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2909,
+          "EventID": 4624,
+          "TimeCreated": "2020-10-22 08:29:57.569000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "SMB/Windows Admin Shares",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1021.002)"
+    },
+    {
+      "group_id": "T1021_002_1316",
+      "rule_technique_id": "T1021.002",
+      "rule_technique_name": "SMB/Windows Admin Shares",
+      "confidence": 0.67,
+      "anchor": {
+        "idx": 1316,
+        "EventID": 5140,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-22 08:29:55.538000+00:00"
+      },
+      "num_events": 229,
+      "event_id_distribution": {
+        "11": 210,
+        "18": 8,
+        "4624": 5,
+        "17": 5,
+        "5140": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 1308,
+          "EventID": 4624,
+          "TimeCreated": "2020-10-22 08:29:55.532000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1316,
+          "EventID": 5140,
+          "TimeCreated": "2020-10-22 08:29:55.538000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1879,
+          "EventID": 18,
+          "TimeCreated": "2020-10-22 08:29:55.926000+00:00",
+          "Image": "C:\\windows\\system32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1883,
+          "EventID": 18,
+          "TimeCreated": "2020-10-22 08:29:55.928000+00:00",
+          "Image": "System",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2232,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:57.131000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2236,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:57.133000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2240,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:57.136000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2245,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:57.138000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2246,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:57.138000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2248,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:57.140000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2252,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:57.144000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2254,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:57.145000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2257,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:57.147000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2255,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:57.147000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2259,
+          "EventID": 11,
+          "TimeCreated": "2020-10-22 08:29:57.149000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "SMB/Windows Admin Shares",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1021.002)"
+    },
+    {
+      "group_id": "T1021_002_2118",
+      "rule_technique_id": "T1021.002",
+      "rule_technique_name": "SMB/Windows Admin Shares",
+      "confidence": 0.5,
+      "anchor": {
+        "idx": 2118,
+        "EventID": 3,
+        "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-22 08:29:57.051000+00:00"
+      },
+      "num_events": 204,
+      "event_id_distribution": {
+        "7": 101,
+        "3": 42,
+        "12": 28,
+        "13": 10,
+        "4625": 7,
+        "22": 6,
+        "18": 5,
+        "11": 2,
+        "1": 1,
+        "23": 1,
+        "5": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 14,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.798000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 18,
+          "EventID": 1,
+          "TimeCreated": "2020-10-22 08:29:53.801000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "PurpleSharp.exe  /t T1110.003,T1558.003,T1135,T1021.006",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 26,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.805000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 29,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.806000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 30,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.806000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 33,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.807000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 36,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.809000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 38,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.810000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 40,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.812000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 43,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.813000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 46,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.815000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 50,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.817000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 52,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.818000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 54,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.819000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 57,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.821000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "SMB/Windows Admin Shares",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(purplesharp)"
+    },
+    {
+      "group_id": "T1021_006_2794",
+      "rule_technique_id": "T1021.006",
+      "rule_technique_name": "Windows Remote Management (WinRM)",
+      "confidence": 0.33,
+      "anchor": {
+        "idx": 2794,
+        "EventID": 3,
+        "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-22 08:29:57.454000+00:00"
+      },
+      "num_events": 198,
+      "event_id_distribution": {
+        "7": 101,
+        "3": 42,
+        "12": 28,
+        "13": 10,
+        "22": 6,
+        "18": 5,
+        "1": 3,
+        "23": 1,
+        "11": 1,
+        "5": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 14,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.798000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 18,
+          "EventID": 1,
+          "TimeCreated": "2020-10-22 08:29:53.801000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "PurpleSharp.exe  /t T1110.003,T1558.003,T1135,T1021.006",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 26,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.805000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 29,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.806000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 30,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.806000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 33,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.807000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 36,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.809000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 38,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.810000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 40,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.812000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 43,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.813000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 46,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.815000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 50,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.817000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 52,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.818000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 54,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.819000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 57,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.821000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "Windows Remote Management (WinRM)",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(purplesharp)"
+    },
+    {
+      "group_id": "T1021_006_23780",
+      "rule_technique_id": "T1021.006",
+      "rule_technique_name": "Windows Remote Management (WinRM)",
+      "confidence": 0.67,
+      "anchor": {
+        "idx": 23780,
+        "EventID": 1,
+        "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+        "CommandLine": "C:\\windows\\system32\\wsmprovhost.exe -Embedding",
+        "TimeCreated": "2020-10-22 08:30:37.757000+00:00"
+      },
+      "num_events": 1267,
+      "event_id_distribution": {
+        "12": 817,
+        "7": 231,
+        "13": 165,
+        "11": 21,
+        "23": 14,
+        "1": 5,
+        "17": 5,
+        "18": 4,
+        "5": 3,
+        "4624": 1,
+        "10": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 22595,
+          "EventID": 4624,
+          "TimeCreated": "2020-10-22 08:30:34.153000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23270,
+          "EventID": 1,
+          "TimeCreated": "2020-10-22 08:30:36.490000+00:00",
+          "Image": "C:\\Windows\\System32\\dllhost.exe",
+          "CommandLine": "C:\\windows\\system32\\DllHost.exe /Processid:{E10F6C3A-F1AE-4ADC-AA9D-2FE65525666E}",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23780,
+          "EventID": 1,
+          "TimeCreated": "2020-10-22 08:30:37.757000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "C:\\windows\\system32\\wsmprovhost.exe -Embedding",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23831,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.785000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23832,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.785000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23834,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.786000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23850,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.795000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23860,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.800000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23859,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.800000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23861,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.801000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23862,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.801000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23887,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.814000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23888,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.815000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23889,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.816000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23890,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.816000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "Windows Remote Management (WinRM)",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(wsmprovhost)"
+    },
+    {
+      "group_id": "T1047_575",
+      "rule_technique_id": "T1047",
+      "rule_technique_name": "Windows Management Instrumentation",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 575,
+        "EventID": 5857,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-22 08:29:54.082000+00:00"
+      },
+      "num_events": 66,
+      "event_id_distribution": {
+        "3": 58,
+        "5857": 4,
+        "1": 3,
+        "4104": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 271,
+          "EventID": 1,
+          "TimeCreated": "2020-10-22 08:29:53.921000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "C:\\windows\\system32\\wbem\\wmiprvse.exe -Embedding",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 575,
+          "EventID": 5857,
+          "TimeCreated": "2020-10-22 08:29:54.082000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1160,
+          "EventID": 5857,
+          "TimeCreated": "2020-10-22 08:29:55.431000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1995,
+          "EventID": 5857,
+          "TimeCreated": "2020-10-22 08:29:56.981000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3337,
+          "EventID": 5857,
+          "TimeCreated": "2020-10-22 08:29:58.848000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 5780,
+          "EventID": 4104,
+          "TimeCreated": "2020-10-22 08:30:06.616000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6394,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.111000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6398,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.111000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6403,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.111000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6511,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.112000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6926,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.386000+00:00",
+          "Image": "C:\\Windows\\System32\\dns.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6923,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.386000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6928,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.386000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6918,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.386000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6922,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.386000+00:00",
+          "Image": "C:\\Windows\\System32\\dns.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "Windows Management Instrumentation",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1047)"
+    },
+    {
+      "group_id": "T1059_4352",
+      "rule_technique_id": "T1059",
+      "rule_technique_name": "Command and Scripting Interpreter",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 4352,
+        "EventID": 1,
+        "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "CommandLine": "\"C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\"",
+        "TimeCreated": "2020-10-22 08:30:00.074000+00:00"
+      },
+      "num_events": 1273,
+      "event_id_distribution": {
+        "12": 817,
+        "7": 237,
+        "13": 165,
+        "11": 25,
+        "23": 14,
+        "17": 5,
+        "18": 4,
+        "1": 3,
+        "5": 3
+      },
+      "sample_logs": [
+        {
+          "idx": 3831,
+          "EventID": 1,
+          "TimeCreated": "2020-10-22 08:29:59.583000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "C:\\windows\\system32\\wsmprovhost.exe -Embedding",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3841,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.594000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3842,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.596000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3845,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.604000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3851,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.607000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3857,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.610000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3859,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.611000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3867,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.615000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3871,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.617000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3880,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.621000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3907,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.653000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3914,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.657000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3920,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.668000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3931,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.686000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3941,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.702000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "Command and Scripting Interpreter",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(powershell)"
+    },
+    {
+      "group_id": "T1059_4430",
+      "rule_technique_id": "T1059",
+      "rule_technique_name": "Command and Scripting Interpreter",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 4430,
+        "EventID": 1,
+        "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "CommandLine": "\"C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\"",
+        "TimeCreated": "2020-10-22 08:30:00.116000+00:00"
+      },
+      "num_events": 1273,
+      "event_id_distribution": {
+        "12": 817,
+        "7": 237,
+        "13": 165,
+        "11": 25,
+        "23": 14,
+        "17": 5,
+        "18": 4,
+        "1": 3,
+        "5": 3
+      },
+      "sample_logs": [
+        {
+          "idx": 3600,
+          "EventID": 1,
+          "TimeCreated": "2020-10-22 08:29:58.970000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "C:\\windows\\system32\\wsmprovhost.exe -Embedding",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3609,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:58.982000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3611,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:58.984000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3615,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:58.986000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3616,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:58.988000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3617,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:58.991000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3620,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:58.995000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3622,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:58.996000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3624,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:58.999000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3626,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.008000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3632,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.014000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3634,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.015000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3636,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.016000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3638,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.021000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3641,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.023000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "Command and Scripting Interpreter",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(powershell)"
+    },
+    {
+      "group_id": "T1059_24048",
+      "rule_technique_id": "T1059",
+      "rule_technique_name": "Command and Scripting Interpreter",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 24048,
+        "EventID": 1,
+        "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "CommandLine": "\"C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\"",
+        "TimeCreated": "2020-10-22 08:30:37.907000+00:00"
+      },
+      "num_events": 1263,
+      "event_id_distribution": {
+        "12": 817,
+        "7": 231,
+        "13": 165,
+        "11": 21,
+        "23": 14,
+        "17": 5,
+        "18": 4,
+        "1": 3,
+        "5": 3
+      },
+      "sample_logs": [
+        {
+          "idx": 23780,
+          "EventID": 1,
+          "TimeCreated": "2020-10-22 08:30:37.757000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "C:\\windows\\system32\\wsmprovhost.exe -Embedding",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23831,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.785000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23832,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.785000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23834,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.786000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23850,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.795000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23859,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.800000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23860,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.800000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23861,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.801000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23862,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.801000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23887,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.814000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23888,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.815000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23889,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.816000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23890,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.816000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23891,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.817000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23892,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.818000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "Command and Scripting Interpreter",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(powershell)"
+    },
+    {
+      "group_id": "T1059_001_607",
+      "rule_technique_id": "T1059.001",
+      "rule_technique_name": "PowerShell",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 607,
+        "EventID": 4104,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-22 08:29:54.100000+00:00"
+      },
+      "num_events": 12554,
+      "event_id_distribution": {
+        "12": 11030,
+        "13": 394,
+        "4103": 277,
+        "4656": 212,
+        "7": 193,
+        "4663": 155,
+        "4105": 132,
+        "4106": 132,
+        "10": 19,
+        "400": 3,
+        "1": 2,
+        "4104": 2,
+        "403": 2,
+        "22": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 9,
+          "EventID": 13,
+          "TimeCreated": "2020-10-22 08:29:53.796000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Diagnostics\\DiagTrack\\HeartBeats\\Default\\LastHeartBeatTime"
+        },
+        {
+          "idx": 10,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:29:53.796000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Diagnostics\\DiagTrack\\HeartBeats\\Default"
+        },
+        {
+          "idx": 11,
+          "EventID": 13,
+          "TimeCreated": "2020-10-22 08:29:53.797000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Diagnostics\\DiagTrack\\HeartBeats\\Default\\HeartBeatSequenceNumber"
+        },
+        {
+          "idx": 12,
+          "EventID": 13,
+          "TimeCreated": "2020-10-22 08:29:53.797000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Diagnostics\\DiagTrack\\HeartBeats\\Default\\EventDroppedEtw"
+        },
+        {
+          "idx": 13,
+          "EventID": 13,
+          "TimeCreated": "2020-10-22 08:29:53.798000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Diagnostics\\DiagTrack\\HeartBeats\\Default\\BuffersDroppedEtw"
+        },
+        {
+          "idx": 16,
+          "EventID": 13,
+          "TimeCreated": "2020-10-22 08:29:53.800000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Diagnostics\\DiagTrack\\HeartBeats\\Default\\EventDroppedConsumer"
+        },
+        {
+          "idx": 19,
+          "EventID": 13,
+          "TimeCreated": "2020-10-22 08:29:53.801000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Diagnostics\\DiagTrack\\HeartBeats\\Default\\EventDroppedDecoding"
+        },
+        {
+          "idx": 20,
+          "EventID": 13,
+          "TimeCreated": "2020-10-22 08:29:53.802000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Diagnostics\\DiagTrack\\HeartBeats\\Default\\EventDroppedThrottled"
+        },
+        {
+          "idx": 22,
+          "EventID": 13,
+          "TimeCreated": "2020-10-22 08:29:53.803000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Diagnostics\\DiagTrack\\HeartBeats\\Default\\EventsDroppedFullTriggerBuffer"
+        },
+        {
+          "idx": 45,
+          "EventID": 13,
+          "TimeCreated": "2020-10-22 08:29:53.814000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Diagnostics\\DiagTrack\\HeartBeats\\Default\\CriticalDataEventDroppedThrottled"
+        },
+        {
+          "idx": 47,
+          "EventID": 13,
+          "TimeCreated": "2020-10-22 08:29:53.816000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Diagnostics\\DiagTrack\\HeartBeats\\Default\\EventsPersistedCounter"
+        },
+        {
+          "idx": 49,
+          "EventID": 13,
+          "TimeCreated": "2020-10-22 08:29:53.817000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Diagnostics\\DiagTrack\\HeartBeats\\Default\\EventDroppedUploader"
+        },
+        {
+          "idx": 53,
+          "EventID": 13,
+          "TimeCreated": "2020-10-22 08:29:53.818000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Diagnostics\\DiagTrack\\HeartBeats\\Default\\CompressedBytesUploaded"
+        },
+        {
+          "idx": 56,
+          "EventID": 13,
+          "TimeCreated": "2020-10-22 08:29:53.820000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Diagnostics\\DiagTrack\\HeartBeats\\Default\\InvalidHttpCodes"
+        },
+        {
+          "idx": 58,
+          "EventID": 13,
+          "TimeCreated": "2020-10-22 08:29:53.821000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Diagnostics\\DiagTrack\\HeartBeats\\Default\\LastInvalidHttpCode"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "PowerShell",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: rule-exact(c=1.00)"
+    },
+    {
+      "group_id": "T1059_001_5173",
+      "rule_technique_id": "T1059.001",
+      "rule_technique_name": "PowerShell",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 5173,
+        "EventID": 7,
+        "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-22 08:30:00.523000+00:00"
+      },
+      "num_events": 2003,
+      "event_id_distribution": {
+        "12": 1025,
+        "7": 414,
+        "13": 212,
+        "10": 122,
+        "4656": 88,
+        "4663": 45,
+        "11": 25,
+        "4105": 15,
+        "4106": 15,
+        "23": 14,
+        "1": 7,
+        "17": 5,
+        "18": 4,
+        "4103": 4,
+        "5": 3,
+        "400": 2,
+        "403": 2,
+        "22": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 1267,
+          "EventID": 4656,
+          "TimeCreated": "2020-10-22 08:29:55.506000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1321,
+          "EventID": 4656,
+          "TimeCreated": "2020-10-22 08:29:55.544000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1328,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:29:55.555000+00:00",
+          "Image": "C:\\windows\\system32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\.DEFAULT\\Software\\Microsoft\\SystemCertificates\\CA"
+        },
+        {
+          "idx": 1334,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:29:55.559000+00:00",
+          "Image": "C:\\windows\\system32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\.DEFAULT\\Software\\Microsoft\\SystemCertificates\\CA"
+        },
+        {
+          "idx": 1344,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:29:55.567000+00:00",
+          "Image": "C:\\windows\\system32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\.DEFAULT\\Software\\Microsoft\\SystemCertificates\\CA\\Certificates"
+        },
+        {
+          "idx": 1350,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:29:55.573000+00:00",
+          "Image": "C:\\windows\\system32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\.DEFAULT\\Software\\Microsoft\\SystemCertificates\\CA\\CRLs"
+        },
+        {
+          "idx": 1354,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:29:55.574000+00:00",
+          "Image": "C:\\windows\\system32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\.DEFAULT\\Software\\Microsoft\\SystemCertificates\\CA\\CTLs"
+        },
+        {
+          "idx": 1359,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:29:55.576000+00:00",
+          "Image": "C:\\windows\\system32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\.DEFAULT\\Software\\Policies\\Microsoft\\SystemCertificates\\CA"
+        },
+        {
+          "idx": 1361,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:29:55.578000+00:00",
+          "Image": "C:\\windows\\system32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\.DEFAULT\\Software\\Policies\\Microsoft\\SystemCertificates\\CA\\Certificates"
+        },
+        {
+          "idx": 1367,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:29:55.580000+00:00",
+          "Image": "C:\\windows\\system32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\.DEFAULT\\Software\\Policies\\Microsoft\\SystemCertificates\\CA\\CRLs"
+        },
+        {
+          "idx": 1371,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:29:55.592000+00:00",
+          "Image": "C:\\windows\\system32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\.DEFAULT\\Software\\Policies\\Microsoft\\SystemCertificates\\CA\\CTLs"
+        },
+        {
+          "idx": 1374,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:29:55.596000+00:00",
+          "Image": "C:\\windows\\system32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\SystemCertificates\\CA"
+        },
+        {
+          "idx": 1378,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:29:55.601000+00:00",
+          "Image": "C:\\windows\\system32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\SystemCertificates\\CA"
+        },
+        {
+          "idx": 1383,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:29:55.608000+00:00",
+          "Image": "C:\\windows\\system32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\SystemCertificates\\CA\\Certificates"
+        },
+        {
+          "idx": 1389,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:29:55.615000+00:00",
+          "Image": "C:\\windows\\system32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\SystemCertificates\\CA\\CRLs"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "PowerShell",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(powershell)"
+    },
+    {
+      "group_id": "T1059_001_5696",
+      "rule_technique_id": "T1059.001",
+      "rule_technique_name": "PowerShell",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 5696,
+        "EventID": 7,
+        "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-22 08:30:06.616000+00:00"
+      },
+      "num_events": 1864,
+      "event_id_distribution": {
+        "12": 888,
+        "7": 420,
+        "13": 212,
+        "10": 115,
+        "4656": 87,
+        "4663": 45,
+        "11": 25,
+        "4105": 15,
+        "4106": 15,
+        "23": 14,
+        "1": 7,
+        "17": 5,
+        "18": 4,
+        "4103": 4,
+        "5": 3,
+        "400": 2,
+        "403": 2,
+        "22": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 2193,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:57.108000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2194,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:29:57.109000+00:00",
+          "Image": "C:\\windows\\system32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\Tcpip\\Parameters"
+        },
+        {
+          "idx": 2195,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:29:57.110000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft"
+        },
+        {
+          "idx": 2197,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:29:57.110000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE"
+        },
+        {
+          "idx": 2201,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:29:57.113000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT"
+        },
+        {
+          "idx": 2203,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:29:57.114000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion"
+        },
+        {
+          "idx": 2205,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:29:57.115000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\ProfileService"
+        },
+        {
+          "idx": 2207,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:29:57.116000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\ProfileService\\References"
+        },
+        {
+          "idx": 2208,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:29:57.117000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\ProfileService\\References\\S-1-5-21-2323213074-4052461197-1785501644-1104"
+        },
+        {
+          "idx": 2211,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:29:57.118000+00:00",
+          "Image": "C:\\windows\\system32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\Tcpip\\Parameters"
+        },
+        {
+          "idx": 2213,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:29:57.119000+00:00",
+          "Image": "C:\\windows\\system32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\Tcpip\\Parameters"
+        },
+        {
+          "idx": 2215,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:29:57.121000+00:00",
+          "Image": "C:\\windows\\system32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\Tcpip\\Parameters"
+        },
+        {
+          "idx": 2217,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:29:57.121000+00:00",
+          "Image": "C:\\windows\\system32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\Tcpip\\Parameters"
+        },
+        {
+          "idx": 2219,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:29:57.122000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\ProfileList\\S-1-5-21-2323213074-4052461197-1785501644-1104"
+        },
+        {
+          "idx": 2221,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:29:57.123000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "PowerShell",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(powershell)"
+    },
+    {
+      "group_id": "T1059_001_24055",
+      "rule_technique_id": "T1059.001",
+      "rule_technique_name": "PowerShell",
+      "confidence": 0.46,
+      "anchor": {
+        "idx": 24055,
+        "EventID": 7,
+        "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-22 08:30:37.910000+00:00"
+      },
+      "num_events": 5894,
+      "event_id_distribution": {
+        "12": 5202,
+        "7": 339,
+        "13": 266,
+        "10": 34,
+        "11": 21,
+        "23": 14,
+        "1": 5,
+        "17": 5,
+        "18": 4,
+        "5": 3,
+        "22": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 19784,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:30:28.805000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKCR"
+        },
+        {
+          "idx": 19785,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:30:28.806000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKCR"
+        },
+        {
+          "idx": 19786,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:30:28.807000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKCR"
+        },
+        {
+          "idx": 19787,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:30:28.807000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKCR"
+        },
+        {
+          "idx": 19788,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:30:28.807000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKCR"
+        },
+        {
+          "idx": 19789,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:30:28.808000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKCR"
+        },
+        {
+          "idx": 19790,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:30:28.808000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKCR"
+        },
+        {
+          "idx": 19791,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:30:28.809000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKCR"
+        },
+        {
+          "idx": 19793,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:30:28.810000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKCR"
+        },
+        {
+          "idx": 19794,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:30:28.810000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKCR"
+        },
+        {
+          "idx": 19792,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:30:28.810000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKCR"
+        },
+        {
+          "idx": 19795,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:30:28.811000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKCR"
+        },
+        {
+          "idx": 19796,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:30:28.811000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKCR"
+        },
+        {
+          "idx": 19797,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:30:28.812000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKCR"
+        },
+        {
+          "idx": 19798,
+          "EventID": 12,
+          "TimeCreated": "2020-10-22 08:30:28.812000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKCR"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "PowerShell",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(powershell)"
+    },
+    {
+      "group_id": "T1069_002_7012",
+      "rule_technique_id": "T1069.002",
+      "rule_technique_name": "Domain Groups Discovery",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 7012,
+        "EventID": 4661,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-22 08:30:07.387000+00:00"
+      },
+      "num_events": 59,
+      "event_id_distribution": {
+        "3": 58,
+        "4661": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 6394,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.111000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6398,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.111000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6403,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.111000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6511,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.112000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6918,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.386000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6922,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.386000+00:00",
+          "Image": "C:\\Windows\\System32\\dns.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6923,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.386000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6926,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.386000+00:00",
+          "Image": "C:\\Windows\\System32\\dns.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6928,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.386000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 7012,
+          "EventID": 4661,
+          "TimeCreated": "2020-10-22 08:30:07.387000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 7155,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.388000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 7156,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.388000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 7416,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.623000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 7408,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.623000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 7407,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.623000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "Domain Groups Discovery",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1069.002)"
+    },
+    {
+      "group_id": "T1070_004_460",
+      "rule_technique_id": "T1070.004",
+      "rule_technique_name": "File Deletion",
+      "confidence": 0.5,
+      "anchor": {
+        "idx": 460,
+        "EventID": 23,
+        "Image": "c:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-22 08:29:54.020000+00:00"
+      },
+      "num_events": 178,
+      "event_id_distribution": {
+        "7": 101,
+        "12": 28,
+        "3": 22,
+        "13": 10,
+        "22": 6,
+        "18": 5,
+        "1": 3,
+        "23": 1,
+        "11": 1,
+        "5": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 14,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.798000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 18,
+          "EventID": 1,
+          "TimeCreated": "2020-10-22 08:29:53.801000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "PurpleSharp.exe  /t T1110.003,T1558.003,T1135,T1021.006",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 26,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.805000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 29,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.806000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 30,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.806000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 33,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.807000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 36,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.809000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 38,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.810000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 40,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.812000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 43,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.813000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 46,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.815000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 50,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.817000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 52,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.818000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 54,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.819000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 57,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.821000+00:00",
+          "Image": "C:\\Users\\pgustavo\\Downloads\\PurpleSharp.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "File Deletion",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(purplesharp)"
+    },
+    {
+      "group_id": "T1070_004_4180",
+      "rule_technique_id": "T1070.004",
+      "rule_technique_name": "File Deletion",
+      "confidence": 0.5,
+      "anchor": {
+        "idx": 4180,
+        "EventID": 23,
+        "Image": "C:\\windows\\system32\\wsmprovhost.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-22 08:29:59.967000+00:00"
+      },
+      "num_events": 1278,
+      "event_id_distribution": {
+        "12": 817,
+        "7": 237,
+        "13": 165,
+        "11": 25,
+        "23": 14,
+        "1": 7,
+        "17": 5,
+        "18": 4,
+        "5": 3,
+        "10": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 2869,
+          "EventID": 1,
+          "TimeCreated": "2020-10-22 08:29:57.531000+00:00",
+          "Image": "C:\\Windows\\System32\\dllhost.exe",
+          "CommandLine": "C:\\windows\\system32\\DllHost.exe /Processid:{E10F6C3A-F1AE-4ADC-AA9D-2FE65525666E}",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3138,
+          "EventID": 1,
+          "TimeCreated": "2020-10-22 08:29:58.695000+00:00",
+          "Image": "C:\\Windows\\System32\\SearchProtocolHost.exe",
+          "CommandLine": "\"C:\\windows\\system32\\SearchProtocolHost.exe\" Global\\UsGthrFltPipeMssGthrPipe1_ Global\\UsGthrCtrlFltPipeMssGthrPipe1 1 -2147483646 \"Software\\Microsoft\\Windows Search\" \"Mozilla/4.0 (compatible; MSIE 6.0",
+          "ParentImage": "C:\\Windows\\System32\\SearchIndexer.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3275,
+          "EventID": 1,
+          "TimeCreated": "2020-10-22 08:29:58.803000+00:00",
+          "Image": "C:\\Windows\\System32\\SearchFilterHost.exe",
+          "CommandLine": "\"C:\\windows\\system32\\SearchFilterHost.exe\" 0 776 780 788 8192 784 ",
+          "ParentImage": "C:\\Windows\\System32\\SearchIndexer.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3600,
+          "EventID": 1,
+          "TimeCreated": "2020-10-22 08:29:58.970000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "C:\\windows\\system32\\wsmprovhost.exe -Embedding",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3609,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:58.982000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3611,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:58.984000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3615,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:58.986000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3616,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:58.988000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3617,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:58.991000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3620,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:58.995000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3622,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:58.996000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3624,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:58.999000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3626,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.008000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3632,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.014000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3634,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.015000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "File Deletion",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(wsmprovhost)"
+    },
+    {
+      "group_id": "T1070_004_4258",
+      "rule_technique_id": "T1070.004",
+      "rule_technique_name": "File Deletion",
+      "confidence": 0.5,
+      "anchor": {
+        "idx": 4258,
+        "EventID": 23,
+        "Image": "C:\\windows\\system32\\wsmprovhost.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-22 08:30:00.018000+00:00"
+      },
+      "num_events": 1278,
+      "event_id_distribution": {
+        "12": 817,
+        "7": 237,
+        "13": 165,
+        "11": 25,
+        "23": 14,
+        "1": 7,
+        "17": 5,
+        "18": 4,
+        "5": 3,
+        "10": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 2602,
+          "EventID": 1,
+          "TimeCreated": "2020-10-22 08:29:57.345000+00:00",
+          "Image": "C:\\Windows\\System32\\dllhost.exe",
+          "CommandLine": "C:\\windows\\system32\\DllHost.exe /Processid:{E10F6C3A-F1AE-4ADC-AA9D-2FE65525666E}",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2693,
+          "EventID": 1,
+          "TimeCreated": "2020-10-22 08:29:57.395000+00:00",
+          "Image": "C:\\Windows\\System32\\SearchProtocolHost.exe",
+          "CommandLine": "\"C:\\windows\\system32\\SearchProtocolHost.exe\" Global\\UsGthrFltPipeMssGthrPipe1_ Global\\UsGthrCtrlFltPipeMssGthrPipe1 1 -2147483646 \"Software\\Microsoft\\Windows Search\" \"Mozilla/4.0 (compatible; MSIE 6.0",
+          "ParentImage": "C:\\Windows\\System32\\SearchIndexer.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2893,
+          "EventID": 1,
+          "TimeCreated": "2020-10-22 08:29:57.548000+00:00",
+          "Image": "C:\\Windows\\System32\\SearchFilterHost.exe",
+          "CommandLine": "\"C:\\windows\\system32\\SearchFilterHost.exe\" 0 768 772 780 8192 776 ",
+          "ParentImage": "C:\\Windows\\System32\\SearchIndexer.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3831,
+          "EventID": 1,
+          "TimeCreated": "2020-10-22 08:29:59.583000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "C:\\windows\\system32\\wsmprovhost.exe -Embedding",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3841,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.594000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3842,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.596000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3845,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.604000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3851,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.607000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3857,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.610000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3859,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.611000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3867,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.615000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3871,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.617000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3880,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.621000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3907,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.653000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3914,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.657000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "File Deletion",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(wsmprovhost)"
+    },
+    {
+      "group_id": "T1070_004_8817",
+      "rule_technique_id": "T1070.004",
+      "rule_technique_name": "File Deletion",
+      "confidence": 0.5,
+      "anchor": {
+        "idx": 8817,
+        "EventID": 23,
+        "Image": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-22 08:30:08.379000+00:00"
+      },
+      "num_events": 1274,
+      "event_id_distribution": {
+        "12": 817,
+        "7": 237,
+        "13": 165,
+        "11": 25,
+        "23": 14,
+        "17": 5,
+        "1": 4,
+        "18": 4,
+        "5": 3
+      },
+      "sample_logs": [
+        {
+          "idx": 3831,
+          "EventID": 1,
+          "TimeCreated": "2020-10-22 08:29:59.583000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "C:\\windows\\system32\\wsmprovhost.exe -Embedding",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3841,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.594000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3842,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.596000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3845,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.604000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3851,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.607000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3857,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.610000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3859,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.611000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3867,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.615000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3871,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.617000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3880,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.621000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3907,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.653000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3914,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.657000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3920,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.668000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3931,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.686000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3941,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.702000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "File Deletion",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(powershell)"
+    },
+    {
+      "group_id": "T1070_004_9883",
+      "rule_technique_id": "T1070.004",
+      "rule_technique_name": "File Deletion",
+      "confidence": 0.5,
+      "anchor": {
+        "idx": 9883,
+        "EventID": 23,
+        "Image": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-22 08:30:08.904000+00:00"
+      },
+      "num_events": 1274,
+      "event_id_distribution": {
+        "12": 817,
+        "7": 237,
+        "13": 165,
+        "11": 25,
+        "23": 14,
+        "17": 5,
+        "1": 4,
+        "18": 4,
+        "5": 3
+      },
+      "sample_logs": [
+        {
+          "idx": 3600,
+          "EventID": 1,
+          "TimeCreated": "2020-10-22 08:29:58.970000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "C:\\windows\\system32\\wsmprovhost.exe -Embedding",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3609,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:58.982000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3611,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:58.984000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3615,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:58.986000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3616,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:58.988000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3617,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:58.991000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3620,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:58.995000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3622,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:58.996000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3624,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:58.999000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3626,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.008000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3632,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.014000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3634,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.015000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3636,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.016000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3638,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.021000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3641,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:59.023000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "File Deletion",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(powershell)"
+    },
+    {
+      "group_id": "T1070_004_24021",
+      "rule_technique_id": "T1070.004",
+      "rule_technique_name": "File Deletion",
+      "confidence": 0.5,
+      "anchor": {
+        "idx": 24021,
+        "EventID": 23,
+        "Image": "C:\\windows\\system32\\wsmprovhost.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-22 08:30:37.892000+00:00"
+      },
+      "num_events": 1266,
+      "event_id_distribution": {
+        "12": 817,
+        "7": 231,
+        "13": 165,
+        "11": 21,
+        "23": 14,
+        "1": 5,
+        "17": 5,
+        "18": 4,
+        "5": 3,
+        "10": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 23270,
+          "EventID": 1,
+          "TimeCreated": "2020-10-22 08:30:36.490000+00:00",
+          "Image": "C:\\Windows\\System32\\dllhost.exe",
+          "CommandLine": "C:\\windows\\system32\\DllHost.exe /Processid:{E10F6C3A-F1AE-4ADC-AA9D-2FE65525666E}",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23780,
+          "EventID": 1,
+          "TimeCreated": "2020-10-22 08:30:37.757000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "C:\\windows\\system32\\wsmprovhost.exe -Embedding",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23831,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.785000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23832,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.785000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23834,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.786000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23850,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.795000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23859,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.800000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23860,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.800000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23862,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.801000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23861,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.801000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23887,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.814000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23888,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.815000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23889,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.816000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23890,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.816000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23891,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:30:37.817000+00:00",
+          "Image": "C:\\Windows\\System32\\wsmprovhost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "File Deletion",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(wsmprovhost)"
+    },
+    {
+      "group_id": "T1087_002_952",
+      "rule_technique_id": "T1087.002",
+      "rule_technique_name": "Domain Account Discovery",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 952,
+        "EventID": 4104,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-22 08:29:55.323000+00:00"
+      },
+      "num_events": 60,
+      "event_id_distribution": {
+        "3": 58,
+        "4104": 1,
+        "4661": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 952,
+          "EventID": 4104,
+          "TimeCreated": "2020-10-22 08:29:55.323000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6394,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.111000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6398,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.111000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6403,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.111000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6511,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.112000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6918,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.386000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6922,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.386000+00:00",
+          "Image": "C:\\Windows\\System32\\dns.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6923,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.386000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6926,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.386000+00:00",
+          "Image": "C:\\Windows\\System32\\dns.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6928,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.386000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 7043,
+          "EventID": 4661,
+          "TimeCreated": "2020-10-22 08:30:07.387000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 7156,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.388000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 7155,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.388000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 7404,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.623000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 7405,
+          "EventID": 3,
+          "TimeCreated": "2020-10-22 08:30:07.623000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "Domain Account Discovery",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1087.002)"
+    },
+    {
+      "group_id": "T1112_20446",
+      "rule_technique_id": "T1112",
+      "rule_technique_name": "Modify Registry",
+      "confidence": 0.0,
+      "anchor": {
+        "idx": 20446,
+        "EventID": 13,
+        "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-22 08:30:30.133000+00:00"
+      },
+      "num_events": 3,
+      "event_id_distribution": {
+        "13": 2,
+        "23": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 20446,
+          "EventID": 13,
+          "TimeCreated": "2020-10-22 08:30:30.133000+00:00",
+          "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\NdisCap\\Parameters\\RefCount"
+        },
+        {
+          "idx": 20447,
+          "EventID": 13,
+          "TimeCreated": "2020-10-22 08:30:30.133000+00:00",
+          "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\.DEFAULT\\System\\CurrentControlSet\\Control\\NetTrace\\Session\\CaptureEnabled"
+        },
+        {
+          "idx": 20989,
+          "EventID": 23,
+          "TimeCreated": "2020-10-22 08:30:30.406000+00:00",
+          "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "Modify Registry",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:c=0,no-kw,rule!=fam(T1112)"
+    },
+    {
+      "group_id": "T1134_1008",
+      "rule_technique_id": "T1134",
+      "rule_technique_name": "Access Token Manipulation",
+      "confidence": 0.67,
+      "anchor": {
+        "idx": 1008,
+        "EventID": 4673,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-22 08:29:55.353000+00:00"
+      },
+      "num_events": 37,
+      "event_id_distribution": {
+        "10": 19,
+        "4673": 16,
+        "1": 2
+      },
+      "sample_logs": [
+        {
+          "idx": 271,
+          "EventID": 1,
+          "TimeCreated": "2020-10-22 08:29:53.921000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "C:\\windows\\system32\\wbem\\wmiprvse.exe -Embedding",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 274,
+          "EventID": 10,
+          "TimeCreated": "2020-10-22 08:29:53.923000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 275,
+          "EventID": 10,
+          "TimeCreated": "2020-10-22 08:29:53.924000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 325,
+          "EventID": 10,
+          "TimeCreated": "2020-10-22 08:29:53.947000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 329,
+          "EventID": 10,
+          "TimeCreated": "2020-10-22 08:29:53.949000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 333,
+          "EventID": 10,
+          "TimeCreated": "2020-10-22 08:29:53.951000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 456,
+          "EventID": 10,
+          "TimeCreated": "2020-10-22 08:29:54.018000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 459,
+          "EventID": 10,
+          "TimeCreated": "2020-10-22 08:29:54.020000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 478,
+          "EventID": 10,
+          "TimeCreated": "2020-10-22 08:29:54.032000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 482,
+          "EventID": 10,
+          "TimeCreated": "2020-10-22 08:29:54.033000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 698,
+          "EventID": 10,
+          "TimeCreated": "2020-10-22 08:29:55.156000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 699,
+          "EventID": 10,
+          "TimeCreated": "2020-10-22 08:29:55.157000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1008,
+          "EventID": 4673,
+          "TimeCreated": "2020-10-22 08:29:55.353000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3603,
+          "EventID": 4673,
+          "TimeCreated": "2020-10-22 08:29:58.974000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3698,
+          "EventID": 4673,
+          "TimeCreated": "2020-10-22 08:29:59.050000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "Access Token Manipulation",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1134)"
+    },
+    {
+      "group_id": "T1134_5435",
+      "rule_technique_id": "T1134",
+      "rule_technique_name": "Access Token Manipulation",
+      "confidence": 0.67,
+      "anchor": {
+        "idx": 5435,
+        "EventID": 4673,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-22 08:30:06.613000+00:00"
+      },
+      "num_events": 20,
+      "event_id_distribution": {
+        "10": 14,
+        "4673": 4,
+        "1": 2
+      },
+      "sample_logs": [
+        {
+          "idx": 5435,
+          "EventID": 4673,
+          "TimeCreated": "2020-10-22 08:30:06.613000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 5544,
+          "EventID": 4673,
+          "TimeCreated": "2020-10-22 08:30:06.614000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 5619,
+          "EventID": 4673,
+          "TimeCreated": "2020-10-22 08:30:06.615000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 5664,
+          "EventID": 4673,
+          "TimeCreated": "2020-10-22 08:30:06.615000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6690,
+          "EventID": 10,
+          "TimeCreated": "2020-10-22 08:30:07.114000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6692,
+          "EventID": 10,
+          "TimeCreated": "2020-10-22 08:30:07.114000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6693,
+          "EventID": 10,
+          "TimeCreated": "2020-10-22 08:30:07.114000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 7302,
+          "EventID": 10,
+          "TimeCreated": "2020-10-22 08:30:07.621000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 7303,
+          "EventID": 1,
+          "TimeCreated": "2020-10-22 08:30:07.621000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "C:\\windows\\system32\\wbem\\wmiprvse.exe -Embedding",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 7296,
+          "EventID": 10,
+          "TimeCreated": "2020-10-22 08:30:07.621000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 7322,
+          "EventID": 10,
+          "TimeCreated": "2020-10-22 08:30:07.622000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 7327,
+          "EventID": 10,
+          "TimeCreated": "2020-10-22 08:30:07.622000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 7481,
+          "EventID": 10,
+          "TimeCreated": "2020-10-22 08:30:07.623000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23270,
+          "EventID": 1,
+          "TimeCreated": "2020-10-22 08:30:36.490000+00:00",
+          "Image": "C:\\Windows\\System32\\dllhost.exe",
+          "CommandLine": "C:\\windows\\system32\\DllHost.exe /Processid:{E10F6C3A-F1AE-4ADC-AA9D-2FE65525666E}",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23271,
+          "EventID": 10,
+          "TimeCreated": "2020-10-22 08:30:36.491000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "Access Token Manipulation",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1134)"
+    },
+    {
+      "group_id": "T1558_003_1124",
+      "rule_technique_id": "T1558.003",
+      "rule_technique_name": "Kerberoasting",
+      "confidence": 0.67,
+      "anchor": {
+        "idx": 1124,
+        "EventID": 4769,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-22 08:29:55.403000+00:00"
+      },
+      "num_events": 247,
+      "event_id_distribution": {
+        "7": 193,
+        "3": 49,
+        "4769": 5
+      },
+      "sample_logs": [
+        {
+          "idx": 279,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.925000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 280,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.926000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 281,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.927000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 284,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.928000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 286,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.929000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 289,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.930000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 290,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.931000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 292,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.932000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 294,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.933000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 296,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.934000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 298,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.935000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 300,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.935000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 302,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.936000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 303,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.937000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 306,
+          "EventID": 7,
+          "TimeCreated": "2020-10-22 08:29:53.938000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "Kerberoasting",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1558.003)"
+    }
+  ]
+}

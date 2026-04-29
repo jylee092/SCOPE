@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[dns.exe|{8ee6d027-d5d]\"\n  ],\n  \"rationale\": \"The dns.exe process connecting to the '\\\\lsass' named pipe is highly suspicious, as this pipe is commonly abused by credential dumping tools like Mimikatz to interact with the LSASS process.\"\n}"}

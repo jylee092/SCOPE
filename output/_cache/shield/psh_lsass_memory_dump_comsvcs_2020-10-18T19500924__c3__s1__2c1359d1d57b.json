@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[rundll32.exe|{39e4a257-d4a]\"\n  ],\n  \"rationale\": \"The rundll32.exe process loaded comsvcs.dll and wrote an LSASS memory dump file to a temporary directory, which is a known technique for credential dumping.\"\n}"}

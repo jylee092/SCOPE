@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed processes (sppsvc.exe, WmiPrvSE.exe, conhost.exe, backgroundTaskHost.exe) exhibit normal behavior, including standard command-line arguments, legitimate parent-child relationships, and expected registry interactions for their respective functions, with no indicators of known attack patterns.\"\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[powershell.exe|{39e4a257-41e]\",\n    \"P[netsh.exe|{39e4a257-420]\"\n  ],\n  \"rationale\": \"PowerShell spawned netsh.exe to add a new inbound firewall rule for a Python executable located in a user's AppData directory, which is a common technique for establishing persistence or command-and-control communication.\"\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[wardog.exe|{39e4a257-9ae]\"\n  ],\n  \"rationale\": \"The process 'wardog.exe' is a non-standard executable that loads numerous system DLLs related to networking, security, and logon, which is highly suspicious and indicative of potential malware or an offensive tool.\"\n}"}

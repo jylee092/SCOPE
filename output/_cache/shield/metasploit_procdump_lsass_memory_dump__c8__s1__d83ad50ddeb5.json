@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed process activities, including DLL loads, file writes to WER directories, and registry modifications, are consistent with the legitimate functions of Windows Error Reporting Manager (wermgr.exe) and svchost.exe, with no indicators of common attack patterns or malicious behavior.\"\n}"}

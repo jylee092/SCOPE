@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"Connecting to LSASS named pipe, a known technique for credential access, which is unusual for typical WMI provider host activity.\",\n  \"indicators\": [\n    \"WmiPrvSE.exe abuse\",\n    \"pipe_connect\",\n    \"lsass\",\n    \"credential access\"\n  ]\n}"}

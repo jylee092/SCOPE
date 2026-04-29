@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": false,\n  \"deviation\": \"\",\n  \"indicators\": [\n    \"csrss.exe\",\n    \"HKLM\\\\System\\\\CurrentControlSet\\\\Hardware Profiles\\\\0001\\\\System\\\\CurrentControlSet\",\n    \"HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\AutoRotation\"\n  ]\n}"}

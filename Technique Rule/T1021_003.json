@@ -1,0 +1,43 @@
+{
+  "technique": { "id": "T1021.003", "name": "Distributed Component Object Model" },
+  "detection": { "id": "DET0285" },
+  "analysis": { "id": "AN0791" },
+  "log_sources": {
+    "Anchor Event": {
+      "data_component": { "id": "DC0032", "name": "Process Creation" },
+      "description": "DCOM을 통한 프로세스 생성 및 관련 네트워크/로그온 활동",
+      "conditions": [
+        {
+          "type": "dcom_process_spawn",
+          "source": "WinEvent_Log:Sysmon",
+          "channel": { "event_codes": [1] },
+          "filters": { "ParentImage": { "contains": ["svchost.exe", "mmc.exe"] } },
+          "description": "원격 프로시저 호출(RPC)에 의해 트리거된 프로세스 생성"
+        },
+        {
+          "type": "remote_logon_session",
+          "source": "WinEvent_Log:Security",
+          "channel": { "event_codes": [4624, 4648] },
+          "description": "네트워크 공유 또는 RPC 호출 시 발생하는 로그온 세션 생성"
+        }
+      ]
+    },
+    "Supporting Events": [
+      { "data_component": { "id": "DC0082", "name": "Network Connection" }, "source": "WinEvent_Log:Sysmon", "channel": { "event_codes": [3, 22] }, "description": "원격 실행 전후의 네트워크 연결 및 DNS 쿼리" },
+      { "data_component": { "id": "DC0016", "name": "Module Load" }, "source": "WinEvent_Log:Sysmon", "channel": { "event_codes": [7] }, "description": "DCOM 인터페이스 관련 DLL 로드" }
+    ]
+  },
+  "mutable_elements": {
+    "grouping_logic": {
+      "primary_anchor_eids": [1, 4624],
+      "correlation_key": { "primary": ["Hostname", "ProcessGuid"], "secondary": ["LogonGuid"], "fallback": ["Hostname"] },
+      "time_window": { "window_seconds": 50, "note": "RPC 활동과 프로세스 생성 간 상관관계 분석을 위한 5분 윈도우" }
+    },
+    "feature_extraction_filters": {
+      "user_context": ["DOMAIN\\admin", "DOMAIN\\svc_dcom", "NT AUTHORITY\\SYSTEM"],
+      "process_name": ["excel.exe", "wmiprvse.exe", "mmc.exe", "svchost.exe"],
+      "remote_host_list": ["DC01.corp.local", "FILESERVER01", "10.0.0.25"]
+    },
+    "semantic_templates": { "dcom_execution": "원격지에서 DCOM을 통해 {Image}를 실행함" }
+  }
+}

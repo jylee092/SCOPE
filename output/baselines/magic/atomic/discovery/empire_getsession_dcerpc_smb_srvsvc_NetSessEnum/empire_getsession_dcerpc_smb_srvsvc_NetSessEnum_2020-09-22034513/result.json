@@ -1,0 +1,809 @@
+{
+  "scenario": "empire_getsession_dcerpc_smb_srvsvc_NetSessEnum_2020-09-22034513",
+  "tactic_sequence": [
+    "Discovery",
+    "Defense Evasion",
+    "Privilege Escalation",
+    "Impact",
+    "Privilege Escalation",
+    "Impact",
+    "Execution",
+    "Privilege Escalation",
+    "Impact",
+    "Privilege Escalation",
+    "Impact",
+    "Privilege Escalation",
+    "Impact",
+    "Privilege Escalation",
+    "Impact",
+    "Privilege Escalation",
+    "Impact"
+  ],
+  "technique_sequence": [
+    "T1201",
+    "T1027",
+    "T1133",
+    "T1531",
+    "T1133",
+    "T1531",
+    "T1482",
+    "T1133",
+    "T1531",
+    "T1133",
+    "T1531",
+    "T1133",
+    "T1531",
+    "T1133",
+    "T1531",
+    "T1486",
+    "T1133",
+    "T1486"
+  ],
+  "per_group_topk": [
+    [
+      "T1201"
+    ],
+    [
+      "T1027",
+      "T1059.001"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1486",
+      "T1562.001"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1486",
+      "T1562.001"
+    ]
+  ],
+  "notes": {
+    "n_graph_nodes": 348,
+    "n_graph_edges": 450,
+    "n_proc_nodes": 25,
+    "n_sigma_alerts": 41,
+    "n_alerts": 41,
+    "alerts": [
+      {
+        "ts": "2020-09-22 07:45:16.542000+00:00",
+        "event_index": 274,
+        "event_id": 4104,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1201"
+        ],
+        "topk_tactics": [
+          "Discovery"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:45:19.107000+00:00",
+        "event_index": 1715,
+        "event_id": 4104,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1027",
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:45:20.285000+00:00",
+        "event_index": 2184,
+        "event_id": 4624,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:45:21.407000+00:00",
+        "event_index": 2472,
+        "event_id": 4634,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:45:21.413000+00:00",
+        "event_index": 2489,
+        "event_id": 4634,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:45:21.417000+00:00",
+        "event_index": 2498,
+        "event_id": 4634,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:45:21.417000+00:00",
+        "event_index": 2500,
+        "event_id": 4624,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:45:21.418000+00:00",
+        "event_index": 2504,
+        "event_id": 4634,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:45:21.418000+00:00",
+        "event_index": 2505,
+        "event_id": 4634,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:45:21.419000+00:00",
+        "event_index": 2507,
+        "event_id": 4634,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:45:21.420000+00:00",
+        "event_index": 2509,
+        "event_id": 4634,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:45:21.420000+00:00",
+        "event_index": 2510,
+        "event_id": 4634,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:45:21.420000+00:00",
+        "event_index": 2511,
+        "event_id": 4634,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:45:21.420000+00:00",
+        "event_index": 2512,
+        "event_id": 4634,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:45:21.421000+00:00",
+        "event_index": 2513,
+        "event_id": 4634,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:45:21.422000+00:00",
+        "event_index": 2516,
+        "event_id": 4634,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:45:21.422000+00:00",
+        "event_index": 2517,
+        "event_id": 4634,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:45:22.788000+00:00",
+        "event_index": 3480,
+        "event_id": 4634,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:45:22.788000+00:00",
+        "event_index": 3481,
+        "event_id": 4634,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:45:22.789000+00:00",
+        "event_index": 3484,
+        "event_id": 4634,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:45:22.789000+00:00",
+        "event_index": 3485,
+        "event_id": 4634,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:45:22.789000+00:00",
+        "event_index": 3486,
+        "event_id": 4634,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:45:22.789000+00:00",
+        "event_index": 3487,
+        "event_id": 4634,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:45:22.790000+00:00",
+        "event_index": 3488,
+        "event_id": 4634,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:45:22.790000+00:00",
+        "event_index": 3489,
+        "event_id": 4634,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:45:30.867000+00:00",
+        "event_index": 3574,
+        "event_id": 4634,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:45:37.138000+00:00",
+        "event_index": 3864,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:45:37.154000+00:00",
+        "event_index": 3888,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:45:37.172000+00:00",
+        "event_index": 3910,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:45:38.200000+00:00",
+        "event_index": 3964,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:45:38.206000+00:00",
+        "event_index": 3975,
+        "event_id": 4624,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:45:49.244000+00:00",
+        "event_index": 4059,
+        "event_id": 4634,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:45:56.248000+00:00",
+        "event_index": 4086,
+        "event_id": 4624,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:45:56.249000+00:00",
+        "event_index": 4088,
+        "event_id": 4634,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:46:07.333000+00:00",
+        "event_index": 4173,
+        "event_id": 4624,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:46:07.334000+00:00",
+        "event_index": 4177,
+        "event_id": 4634,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:46:07.336000+00:00",
+        "event_index": 4181,
+        "event_id": 4624,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:46:07.337000+00:00",
+        "event_index": 4183,
+        "event_id": 4634,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:46:26.566000+00:00",
+        "event_index": 4544,
+        "event_id": 7,
+        "process_guid": "{b34bc01c-abd1-5f69-8e02-000000000900}",
+        "anomaly_score": 0.7896588059103836,
+        "topk_tids": [
+          "T1486",
+          "T1562.001"
+        ],
+        "topk_tactics": [
+          "Impact",
+          "Impact"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:46:27.585000+00:00",
+        "event_index": 4568,
+        "event_id": 4624,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ]
+      },
+      {
+        "ts": "2020-09-22 07:46:27.660000+00:00",
+        "event_index": 4720,
+        "event_id": 7,
+        "process_guid": "{b34bc01c-abd2-5f69-8f02-000000000900}",
+        "anomaly_score": 0.7896588059103836,
+        "topk_tids": [
+          "T1486",
+          "T1562.001"
+        ],
+        "topk_tactics": [
+          "Impact",
+          "Impact"
+        ]
+      }
+    ],
+    "elapsed_sec": 2.0
+  }
+}

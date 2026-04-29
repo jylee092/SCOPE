@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The System process's connections to NetBIOS ports (137, 138) and interactions with BAM and ProductPolicy registry keys are consistent with normal operating system behavior and do not indicate suspicious activity without additional context such as unusual command lines or child processes.\"\n}"}

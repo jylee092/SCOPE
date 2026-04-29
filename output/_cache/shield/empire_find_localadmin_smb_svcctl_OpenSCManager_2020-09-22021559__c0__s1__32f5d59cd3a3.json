@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[powershell.exe|{b34bc01c-6dc]\"\n  ],\n  \"rationale\": \"The powershell.exe process repeatedly created registry keys under 'HKU\\\\...\\\\Internet Settings\\\\Connections', which is highly unusual and often indicative of proxy manipulation or C2 setup, and also made suspicious network connections to LDAP and RPC ports.\"\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[lsass.exe|{d14e8c55-47b]\"\n  ],\n  \"rationale\": \"LSASS making an outbound network connection to an ephemeral port on an internal EC2 instance is highly unusual and indicative of potential credential exfiltration or C2 communication.\"\n}"}

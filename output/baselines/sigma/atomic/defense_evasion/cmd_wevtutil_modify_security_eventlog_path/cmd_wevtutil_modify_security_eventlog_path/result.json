@@ -1,0 +1,189 @@
+{
+  "scenario": "cmd_wevtutil_modify_security_eventlog_path",
+  "tactic_sequence": [
+    "Execution",
+    "Defense Evasion",
+    "Privilege Escalation",
+    "Defense Evasion",
+    "Initial Access"
+  ],
+  "technique_sequence": [
+    "T1204.002",
+    "T1202",
+    "T1546.003",
+    "T1070.001",
+    "T1562.002",
+    "T1566.001"
+  ],
+  "per_group_topk": [
+    [
+      "T1204.002"
+    ],
+    [
+      "T1202"
+    ],
+    [
+      "T1546.003"
+    ],
+    [
+      "T1070.001",
+      "T1562.002"
+    ],
+    [
+      "T1562.002"
+    ],
+    [
+      "T1562.002"
+    ],
+    [
+      "T1566.001"
+    ],
+    [
+      "T1566.001"
+    ]
+  ],
+  "notes": {
+    "n_events_evaluated": 24938,
+    "n_alerts": 8,
+    "alerts": [
+      {
+        "ts": "2022-07-05 02:00:55.325000+00:00",
+        "event_index": 5082,
+        "event_id": 13,
+        "topk_tids": [
+          "T1204.002"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "60936b49-fca0-4f32-993d-7415edcf9a5d",
+          "title": "New Application in AppCompat",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2022-07-05 02:01:01.886000+00:00",
+        "event_index": 6597,
+        "event_id": 1,
+        "topk_tids": [
+          "T1202"
+        ],
+        "topk_tactics": [
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "3037d961-21e9-4732-b27a-637bcc7bf539",
+          "title": "Suspicious High IntegrityLevel Conhost Legacy Option",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2022-07-05 02:02:01.706000+00:00",
+        "event_index": 19015,
+        "event_id": 19,
+        "topk_tids": [
+          "T1546.003"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "0f06a3a5-6a09-413f-8743-e6cf35561297",
+          "title": "WMI Event Subscription",
+          "level": "medium",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2022-07-05 02:02:04.168000+00:00",
+        "event_index": 19357,
+        "event_id": 1,
+        "topk_tids": [
+          "T1070.001",
+          "T1562.002"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "cc36992a-4671-4f21-a91d-6c2b72a2edf5",
+          "title": "Suspicious Eventlog Clearing or Configuration Change Activity",
+          "level": "high",
+          "status": "stable"
+        }
+      },
+      {
+        "ts": "2022-07-05 02:02:04.203000+00:00",
+        "event_index": 19379,
+        "event_id": 13,
+        "topk_tids": [
+          "T1562.002"
+        ],
+        "topk_tactics": [
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "0cb8d736-995d-4ce7-a31e-1e8d452a1459",
+          "title": "Potential EventLog File Location Tampering",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2022-07-05 02:02:04.244000+00:00",
+        "event_index": 19381,
+        "event_id": 11,
+        "topk_tids": [
+          "T1562.002"
+        ],
+        "topk_tactics": [
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "65236ec7-ace0-4f0c-82fd-737b04fd4dcb",
+          "title": "EVTX Created In Uncommon Location",
+          "level": "medium",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2022-07-05 02:02:30.027000+00:00",
+        "event_index": 24325,
+        "event_id": 4663,
+        "topk_tids": [
+          "T1566.001"
+        ],
+        "topk_tactics": [
+          "Initial Access"
+        ],
+        "top_rule": {
+          "rule_id": "0248a7bc-8a9a-4cd8-a57e-3ae8e073a073",
+          "title": "ISO Image Mounted",
+          "level": "medium",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2022-07-05 02:02:30.030000+00:00",
+        "event_index": 24330,
+        "event_id": 4663,
+        "topk_tids": [
+          "T1566.001"
+        ],
+        "topk_tactics": [
+          "Initial Access"
+        ],
+        "top_rule": {
+          "rule_id": "0248a7bc-8a9a-4cd8-a57e-3ae8e073a073",
+          "title": "ISO Image Mounted",
+          "level": "medium",
+          "status": "test"
+        }
+      }
+    ]
+  }
+}

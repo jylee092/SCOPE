@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[lsass.exe|{b34bc01c-1f9]\"\n  ],\n  \"rationale\": \"The process P[lsass.exe|{b34bc01c-1f9] made an outbound network connection on port 88 (Kerberos) to an external IP address (5."}

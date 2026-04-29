@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"No command lines were provided, and the observed file deletion within the application's own data directory and the loaded legitimate DLLs do not match any known attack patterns.\"\n}"}

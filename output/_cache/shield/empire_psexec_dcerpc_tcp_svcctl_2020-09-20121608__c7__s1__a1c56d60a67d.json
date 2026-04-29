@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The provided events only show cmd.exe and conhost.exe loading standard Windows DLLs, with no suspicious command lines, child processes, file/registry operations, or network connections observed.\"\n}"}

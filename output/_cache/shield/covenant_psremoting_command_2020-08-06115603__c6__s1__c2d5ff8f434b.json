@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed activities of svchost.exe, including creating registry keys and writing files in C:\\\\Windows\\\\Prefetch, are consistent with the normal operation of the Windows prefetcher service and do not indicate malicious behavior.\"\n}"}

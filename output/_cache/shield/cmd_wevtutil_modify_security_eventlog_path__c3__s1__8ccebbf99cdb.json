@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed processes (Explorer.EXE, msedge.exe, consent.exe) exhibit normal behavior, including standard command-line arguments for consent.exe, typical file and registry operations for a browser and the Windows shell, and expected internal IPC (mojo pipes) and local network discovery (mDNS).\"\n}"}

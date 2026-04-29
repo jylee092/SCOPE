@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"Both WmiPrvSE.exe and NetworkWatcherAgent.exe are legitimate system processes, and their observed activities, including DLL loads, registry modifications to network-related keys, and DNS lookups, are consistent with their normal operational functions without any indicators of abuse or malicious command lines.\"\n}"}

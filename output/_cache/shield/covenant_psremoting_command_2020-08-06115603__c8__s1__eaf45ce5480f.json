@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed svchost.exe processes are writing to C:\\\\Windows\\\\ServiceState\\\\EventLog\\\\Data\\\\lastalive*.dat files, which is normal behavior for the Windows Event Log service, and no suspicious command lines or other indicators were provided.\"\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The provided community data lacks the 'Notable command lines' section, and all observed DLL loads by sc.exe are standard system libraries, showing no direct indicators of suspicious activity.\"\n}"}

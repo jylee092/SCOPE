@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[dns.exe|{b669e388-a0e]\"\n  ],\n  \"rationale\": \"The dns.exe process is making multiple outbound network connections to various high-numbered, non-standard ports, which is unusual for its typical function and could indicate compromise or C2 activity.\"\n}"}

@@ -1,0 +1,579 @@
+{
+  "scenario": "empire_shell_rubeus_asktgt_createnetonly_2020-09-21230246",
+  "tactic_sequence": [
+    "Privilege Escalation",
+    "Impact",
+    "Privilege Escalation",
+    "Impact",
+    "Privilege Escalation",
+    "Defense Evasion",
+    "Credential Access",
+    "Defense Evasion",
+    "Lateral Movement",
+    "Defense Evasion",
+    "Impact",
+    "Privilege Escalation",
+    "Impact",
+    "Privilege Escalation",
+    "Impact"
+  ],
+  "technique_sequence": [
+    "T1133",
+    "T1531",
+    "T1133",
+    "T1531",
+    "T1133",
+    "T1003",
+    "T1202",
+    "T1003.001",
+    "T1003",
+    "T1550.002",
+    "T1558.003",
+    "T1558",
+    "T1531",
+    "T1133",
+    "T1531",
+    "T1133",
+    "T1531"
+  ],
+  "per_group_topk": [
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1003",
+      "T1558.003",
+      "T1550.003"
+    ],
+    [
+      "T1202"
+    ],
+    [
+      "T1003.001"
+    ],
+    [
+      "T1003",
+      "T1558.003",
+      "T1550.003"
+    ],
+    [
+      "T1550.002",
+      "T1550"
+    ],
+    [
+      "T1558.003"
+    ],
+    [
+      "T1558",
+      "T1550.003"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ]
+  ],
+  "notes": {
+    "n_events_evaluated": 2752,
+    "n_alerts": 23,
+    "alerts": [
+      {
+        "ts": "2020-09-22 03:02:52.370000+00:00",
+        "event_index": 12,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-22 03:02:52.371000+00:00",
+        "event_index": 13,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-22 03:03:05.500000+00:00",
+        "event_index": 298,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-22 03:03:05.516000+00:00",
+        "event_index": 337,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-22 03:03:05.520000+00:00",
+        "event_index": 345,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-22 03:03:05.521000+00:00",
+        "event_index": 347,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-22 03:03:08.667000+00:00",
+        "event_index": 640,
+        "event_id": 1,
+        "topk_tids": [
+          "T1003",
+          "T1558.003",
+          "T1550.003"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "7ec2c172-dceb-4c10-92c9-87c1881b7e18",
+          "title": "HackTool - Rubeus Execution",
+          "level": "critical",
+          "status": "stable"
+        }
+      },
+      {
+        "ts": "2020-09-22 03:03:08.740000+00:00",
+        "event_index": 756,
+        "event_id": 1,
+        "topk_tids": [
+          "T1202"
+        ],
+        "topk_tactics": [
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "3037d961-21e9-4732-b27a-637bcc7bf539",
+          "title": "Suspicious High IntegrityLevel Conhost Legacy Option",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-22 03:03:08.839000+00:00",
+        "event_index": 951,
+        "event_id": 10,
+        "topk_tids": [
+          "T1003.001"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ],
+        "top_rule": {
+          "rule_id": "d0d2f720-d14f-448d-8242-51ff396a334e",
+          "title": "HackTool - Generic Process Access",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-22 03:03:08.843000+00:00",
+        "event_index": 960,
+        "event_id": 4688,
+        "topk_tids": [
+          "T1003",
+          "T1558.003",
+          "T1550.003"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "7ec2c172-dceb-4c10-92c9-87c1881b7e18",
+          "title": "HackTool - Rubeus Execution",
+          "level": "critical",
+          "status": "stable"
+        }
+      },
+      {
+        "ts": "2020-09-22 03:03:08.860000+00:00",
+        "event_index": 1006,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1550.002",
+          "T1550"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "192a0330-c20b-4356-90b6-7b7049ae0b87",
+          "title": "Successful Overpass the Hash Attempt",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-22 03:03:09.877000+00:00",
+        "event_index": 1032,
+        "event_id": 5156,
+        "topk_tids": [
+          "T1558.003"
+        ],
+        "topk_tactics": [
+          "Lateral Movement"
+        ],
+        "top_rule": {
+          "rule_id": "eca91c7c-9214-47b9-b4c5-cb1d7e4f2350",
+          "title": "Uncommon Outbound Kerberos Connection - Security",
+          "level": "medium",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-22 03:03:11.930000+00:00",
+        "event_index": 1130,
+        "event_id": 3,
+        "topk_tids": [
+          "T1558",
+          "T1550.003"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "e54979bd-c5f9-4d6c-967b-a04b19ac4c74",
+          "title": "Uncommon Outbound Kerberos Connection",
+          "level": "medium",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-22 03:03:16.953000+00:00",
+        "event_index": 1151,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-22 03:03:53.209000+00:00",
+        "event_index": 1492,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-22 03:03:53.210000+00:00",
+        "event_index": 1494,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-22 03:04:23.243000+00:00",
+        "event_index": 3529,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-22 03:04:23.244000+00:00",
+        "event_index": 3533,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-22 03:04:23.246000+00:00",
+        "event_index": 3538,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-22 03:04:24.240000+00:00",
+        "event_index": 3556,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-22 03:04:24.243000+00:00",
+        "event_index": 3565,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-22 03:04:24.243000+00:00",
+        "event_index": 3566,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-22 03:04:24.246000+00:00",
+        "event_index": 3572,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      }
+    ]
+  }
+}

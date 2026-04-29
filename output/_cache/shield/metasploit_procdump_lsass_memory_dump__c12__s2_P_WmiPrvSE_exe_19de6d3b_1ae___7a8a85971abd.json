@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"WmiPrvSE.exe initiated a DNS query to 'pandalab.com', which is unusual for its typical local system management role and suggests potential external communication by a hosted WMI provider.\",\n  \"indicators\": [\n    \"WmiPrvSE.exe\",\n    \"dns query\",\n    \"pandalab.com\"\n  ]\n}"}

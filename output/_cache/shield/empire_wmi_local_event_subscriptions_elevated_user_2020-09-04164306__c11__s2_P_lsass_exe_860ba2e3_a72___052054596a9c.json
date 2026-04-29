@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"LSASS writing to a file named PASSWD.LOG, which is highly indicative of credential dumping or logging sensitive information.\",\n  \"indicators\": [\n    \"credential dumping\",\n    \"PASSWD.LOG\",\n    \"lsass.exe write\"\n  ]\n}"}

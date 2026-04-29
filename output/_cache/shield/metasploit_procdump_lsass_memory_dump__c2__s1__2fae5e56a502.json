@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed registry modifications by svchost.exe processes are to legitimate system paths related to Scheduled Tasks (specifically the Software Protection Platform service), Storage Sense, and HKEY_CLASSES_ROOT, with no notable command lines or other suspicious indicators present.\"\n}"}

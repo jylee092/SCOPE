@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed processes (msedge.exe, identity_helper.exe) and their associated command lines, file/registry operations, DLL loads, and IPC/network activities are consistent with the normal operation of the Microsoft Edge browser and do not exhibit any known attack patterns or suspicious indicators.\"\n}"}

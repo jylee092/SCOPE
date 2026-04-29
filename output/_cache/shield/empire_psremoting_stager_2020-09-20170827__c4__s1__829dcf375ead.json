@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[wsmprovhost.exe|{d273d0f0-c4f]\",\n    \"P[powershell.exe|{d273d0f0-c4f]\"\n  ],\n  \"rationale\": \"The process P[wsmprovhost.exe] spawned P[powershell.exe] with a Base64 encoded command ('-enc'), which is a common technique used by attackers to obfuscate malicious scripts and evade detection.\"\n}"}

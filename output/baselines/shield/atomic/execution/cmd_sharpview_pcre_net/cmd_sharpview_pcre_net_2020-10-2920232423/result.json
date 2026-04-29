@@ -1,0 +1,15 @@
+{
+  "scenario": "cmd_sharpview_pcre_net_2020-10-2920232423",
+  "tactic_sequence": [],
+  "technique_sequence": [],
+  "per_group_topk": [],
+  "notes": {
+    "n_total_events": 267,
+    "n_filtered_events": 267,
+    "n_lof_anomalous": 12,
+    "n_communities": 4,
+    "n_alerts": 0,
+    "alerts": [],
+    "elapsed_sec": 25.3
+  }
+}

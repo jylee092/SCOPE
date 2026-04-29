@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities, including registry modifications, DLL loads, and file writes, are consistent with the legitimate operations of the svchost.exe process hosting the Device Setup Manager service (DsmSvc) and do not match any known attack patterns.\"\n}"}

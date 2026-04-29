@@ -1,0 +1,747 @@
+{
+  "scenario": "cmd_process_herpaderping_mimiexplorer_2020-10-2623583501",
+  "total_groups": 5,
+  "instruction": "각 그룹의 sample_logs와 anchor를 확인한 뒤 gt_ 필드를 채워주세요. gt_is_true_positive: 해당 그룹이 실제 공격 행위인지 (true/false). gt_technique_id: 실제 MITRE technique ID (예: T1059.001). gt_tactic: 실제 tactic 이름 (예: Execution). gt_notes: 판단 근거나 메모.",
+  "groups": [
+    {
+      "group_id": "T1036_005_31",
+      "rule_technique_id": "T1036.005",
+      "rule_technique_name": "Match Legitimate Name or Location",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 31,
+        "EventID": 1,
+        "Image": "C:\\Users\\wardog\\Desktop\\ProcessHerpaderping.exe",
+        "CommandLine": "ProcessHerpaderping.exe  mimikatz.exe wardog.exe \"C:\\Program Files (x86)\\Internet Explorer\\iexplore.exe\"",
+        "TimeCreated": "2020-10-26 11:58:30.396000+00:00"
+      },
+      "num_events": 118,
+      "event_id_distribution": {
+        "7": 107,
+        "1": 3,
+        "13": 2,
+        "4656": 2,
+        "4663": 2,
+        "11": 1,
+        "10": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 27,
+          "EventID": 7,
+          "TimeCreated": "2020-10-26 11:58:30.365000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 31,
+          "EventID": 1,
+          "TimeCreated": "2020-10-26 11:58:30.396000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\ProcessHerpaderping.exe",
+          "CommandLine": "ProcessHerpaderping.exe  mimikatz.exe wardog.exe \"C:\\Program Files (x86)\\Internet Explorer\\iexplore.exe\"",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 32,
+          "EventID": 7,
+          "TimeCreated": "2020-10-26 11:58:30.398000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\ProcessHerpaderping.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 33,
+          "EventID": 7,
+          "TimeCreated": "2020-10-26 11:58:30.398000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\ProcessHerpaderping.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 34,
+          "EventID": 7,
+          "TimeCreated": "2020-10-26 11:58:30.399000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\ProcessHerpaderping.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 35,
+          "EventID": 7,
+          "TimeCreated": "2020-10-26 11:58:30.399000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\ProcessHerpaderping.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 37,
+          "EventID": 7,
+          "TimeCreated": "2020-10-26 11:58:30.401000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\ProcessHerpaderping.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 38,
+          "EventID": 11,
+          "TimeCreated": "2020-10-26 11:58:30.411000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\ProcessHerpaderping.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 40,
+          "EventID": 10,
+          "TimeCreated": "2020-10-26 11:58:30.470000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 41,
+          "EventID": 13,
+          "TimeCreated": "2020-10-26 11:58:30.580000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\ProcessHerpaderping.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\bam\\State\\UserSettings\\S-1-5-21-3940915590-64593676-1414006259-500\\\\Device\\HarddiskVolume2\\Users\\wardog\\Desktop"
+        },
+        {
+          "idx": 45,
+          "EventID": 4656,
+          "TimeCreated": "2020-10-26 11:58:30.593000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 47,
+          "EventID": 4663,
+          "TimeCreated": "2020-10-26 11:58:30.594000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 48,
+          "EventID": 1,
+          "TimeCreated": "2020-10-26 11:58:30.597000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\wardog.exe",
+          "CommandLine": "\"wardog.exe\"",
+          "ParentImage": "C:\\Users\\wardog\\Desktop\\ProcessHerpaderping.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 49,
+          "EventID": 7,
+          "TimeCreated": "2020-10-26 11:58:30.631000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\wardog.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 51,
+          "EventID": 7,
+          "TimeCreated": "2020-10-26 11:58:30.632000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\wardog.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1055",
+      "gt_technique_name": "Match Legitimate Name or Location",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(herpaderping,wardog,processherpaderping)"
+    },
+    {
+      "group_id": "T1070_001_2",
+      "rule_technique_id": "T1070.001",
+      "rule_technique_name": "Clear Windows Event Logs",
+      "confidence": 0.5,
+      "anchor": {
+        "idx": 2,
+        "EventID": 1102,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-26 11:58:27.997000+00:00"
+      },
+      "num_events": 7,
+      "event_id_distribution": {
+        "4688": 3,
+        "1": 3,
+        "1102": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 2,
+          "EventID": 1102,
+          "TimeCreated": "2020-10-26 11:58:27.997000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 28,
+          "EventID": 4688,
+          "TimeCreated": "2020-10-26 11:58:30.366000+00:00",
+          "Image": "nan",
+          "CommandLine": "ProcessHerpaderping.exe  mimikatz.exe wardog.exe \"C:\\Program Files (x86)\\Internet Explorer\\iexplore.exe\"",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 31,
+          "EventID": 1,
+          "TimeCreated": "2020-10-26 11:58:30.396000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\ProcessHerpaderping.exe",
+          "CommandLine": "ProcessHerpaderping.exe  mimikatz.exe wardog.exe \"C:\\Program Files (x86)\\Internet Explorer\\iexplore.exe\"",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 39,
+          "EventID": 4688,
+          "TimeCreated": "2020-10-26 11:58:30.469000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 42,
+          "EventID": 4688,
+          "TimeCreated": "2020-10-26 11:58:30.585000+00:00",
+          "Image": "nan",
+          "CommandLine": "\\??\\C:\\windows\\system32\\conhost.exe 0xffffffff -ForceV1",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 48,
+          "EventID": 1,
+          "TimeCreated": "2020-10-26 11:58:30.597000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\wardog.exe",
+          "CommandLine": "\"wardog.exe\"",
+          "ParentImage": "C:\\Users\\wardog\\Desktop\\ProcessHerpaderping.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 55,
+          "EventID": 1,
+          "TimeCreated": "2020-10-26 11:58:30.634000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "\\??\\C:\\windows\\system32\\conhost.exe 0xffffffff -ForceV1",
+          "ParentImage": "C:\\Users\\wardog\\Desktop\\wardog.exe",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1055",
+      "gt_technique_name": "Clear Windows Event Logs",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: sample-kw+ctx(T1070.001,c=0.50)"
+    },
+    {
+      "group_id": "T1112_41",
+      "rule_technique_id": "T1112",
+      "rule_technique_name": "Modify Registry",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 41,
+        "EventID": 13,
+        "Image": "C:\\Users\\wardog\\Desktop\\ProcessHerpaderping.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-26 11:58:30.580000+00:00"
+      },
+      "num_events": 115,
+      "event_id_distribution": {
+        "7": 107,
+        "1": 3,
+        "13": 3,
+        "11": 1,
+        "10": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 27,
+          "EventID": 7,
+          "TimeCreated": "2020-10-26 11:58:30.365000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 31,
+          "EventID": 1,
+          "TimeCreated": "2020-10-26 11:58:30.396000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\ProcessHerpaderping.exe",
+          "CommandLine": "ProcessHerpaderping.exe  mimikatz.exe wardog.exe \"C:\\Program Files (x86)\\Internet Explorer\\iexplore.exe\"",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 32,
+          "EventID": 7,
+          "TimeCreated": "2020-10-26 11:58:30.398000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\ProcessHerpaderping.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 33,
+          "EventID": 7,
+          "TimeCreated": "2020-10-26 11:58:30.398000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\ProcessHerpaderping.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 34,
+          "EventID": 7,
+          "TimeCreated": "2020-10-26 11:58:30.399000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\ProcessHerpaderping.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 35,
+          "EventID": 7,
+          "TimeCreated": "2020-10-26 11:58:30.399000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\ProcessHerpaderping.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 37,
+          "EventID": 7,
+          "TimeCreated": "2020-10-26 11:58:30.401000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\ProcessHerpaderping.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 38,
+          "EventID": 11,
+          "TimeCreated": "2020-10-26 11:58:30.411000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\ProcessHerpaderping.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 40,
+          "EventID": 10,
+          "TimeCreated": "2020-10-26 11:58:30.470000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 41,
+          "EventID": 13,
+          "TimeCreated": "2020-10-26 11:58:30.580000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\ProcessHerpaderping.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\bam\\State\\UserSettings\\S-1-5-21-3940915590-64593676-1414006259-500\\\\Device\\HarddiskVolume2\\Users\\wardog\\Desktop"
+        },
+        {
+          "idx": 48,
+          "EventID": 1,
+          "TimeCreated": "2020-10-26 11:58:30.597000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\wardog.exe",
+          "CommandLine": "\"wardog.exe\"",
+          "ParentImage": "C:\\Users\\wardog\\Desktop\\ProcessHerpaderping.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 49,
+          "EventID": 7,
+          "TimeCreated": "2020-10-26 11:58:30.631000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\wardog.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 50,
+          "EventID": 7,
+          "TimeCreated": "2020-10-26 11:58:30.632000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\wardog.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 51,
+          "EventID": 7,
+          "TimeCreated": "2020-10-26 11:58:30.632000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\wardog.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 54,
+          "EventID": 7,
+          "TimeCreated": "2020-10-26 11:58:30.633000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\wardog.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1055",
+      "gt_technique_name": "Modify Registry",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(herpaderping,wardog,processherpaderping)"
+    },
+    {
+      "group_id": "T1112_52",
+      "rule_technique_id": "T1112",
+      "rule_technique_name": "Modify Registry",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 52,
+        "EventID": 13,
+        "Image": "wardog.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-26 11:58:30.633000+00:00"
+      },
+      "num_events": 113,
+      "event_id_distribution": {
+        "7": 107,
+        "1": 3,
+        "13": 2,
+        "11": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 27,
+          "EventID": 7,
+          "TimeCreated": "2020-10-26 11:58:30.365000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 31,
+          "EventID": 1,
+          "TimeCreated": "2020-10-26 11:58:30.396000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\ProcessHerpaderping.exe",
+          "CommandLine": "ProcessHerpaderping.exe  mimikatz.exe wardog.exe \"C:\\Program Files (x86)\\Internet Explorer\\iexplore.exe\"",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 32,
+          "EventID": 7,
+          "TimeCreated": "2020-10-26 11:58:30.398000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\ProcessHerpaderping.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 33,
+          "EventID": 7,
+          "TimeCreated": "2020-10-26 11:58:30.398000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\ProcessHerpaderping.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 34,
+          "EventID": 7,
+          "TimeCreated": "2020-10-26 11:58:30.399000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\ProcessHerpaderping.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 35,
+          "EventID": 7,
+          "TimeCreated": "2020-10-26 11:58:30.399000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\ProcessHerpaderping.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 37,
+          "EventID": 7,
+          "TimeCreated": "2020-10-26 11:58:30.401000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\ProcessHerpaderping.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 38,
+          "EventID": 11,
+          "TimeCreated": "2020-10-26 11:58:30.411000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\ProcessHerpaderping.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 41,
+          "EventID": 13,
+          "TimeCreated": "2020-10-26 11:58:30.580000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\ProcessHerpaderping.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\bam\\State\\UserSettings\\S-1-5-21-3940915590-64593676-1414006259-500\\\\Device\\HarddiskVolume2\\Users\\wardog\\Desktop"
+        },
+        {
+          "idx": 48,
+          "EventID": 1,
+          "TimeCreated": "2020-10-26 11:58:30.597000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\wardog.exe",
+          "CommandLine": "\"wardog.exe\"",
+          "ParentImage": "C:\\Users\\wardog\\Desktop\\ProcessHerpaderping.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 49,
+          "EventID": 7,
+          "TimeCreated": "2020-10-26 11:58:30.631000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\wardog.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 50,
+          "EventID": 7,
+          "TimeCreated": "2020-10-26 11:58:30.632000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\wardog.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 51,
+          "EventID": 7,
+          "TimeCreated": "2020-10-26 11:58:30.632000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\wardog.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 54,
+          "EventID": 7,
+          "TimeCreated": "2020-10-26 11:58:30.633000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\wardog.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 52,
+          "EventID": 13,
+          "TimeCreated": "2020-10-26 11:58:30.633000+00:00",
+          "Image": "wardog.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\bam\\State\\UserSettings\\S-1-5-21-3940915590-64593676-1414006259-500\\\\Device\\HarddiskVolume2\\Windows\\System32\\con"
+        }
+      ],
+      "gt_technique_id": "T1055",
+      "gt_technique_name": "Modify Registry",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(wardog)"
+    },
+    {
+      "group_id": "T1134_229",
+      "rule_technique_id": "T1134",
+      "rule_technique_name": "Access Token Manipulation",
+      "confidence": 0.67,
+      "anchor": {
+        "idx": 229,
+        "EventID": 4673,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-26 11:58:30.838000+00:00"
+      },
+      "num_events": 116,
+      "event_id_distribution": {
+        "10": 111,
+        "1": 3,
+        "4673": 2
+      },
+      "sample_logs": [
+        {
+          "idx": 0,
+          "EventID": 10,
+          "TimeCreated": "2020-10-26 11:58:27.799000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1,
+          "EventID": 10,
+          "TimeCreated": "2020-10-26 11:58:27.799000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3,
+          "EventID": 10,
+          "TimeCreated": "2020-10-26 11:58:28.810000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 4,
+          "EventID": 10,
+          "TimeCreated": "2020-10-26 11:58:28.810000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 7,
+          "EventID": 10,
+          "TimeCreated": "2020-10-26 11:58:29.241000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 8,
+          "EventID": 10,
+          "TimeCreated": "2020-10-26 11:58:29.241000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 9,
+          "EventID": 10,
+          "TimeCreated": "2020-10-26 11:58:29.241000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 10,
+          "EventID": 10,
+          "TimeCreated": "2020-10-26 11:58:29.242000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 11,
+          "EventID": 10,
+          "TimeCreated": "2020-10-26 11:58:29.242000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 12,
+          "EventID": 10,
+          "TimeCreated": "2020-10-26 11:58:29.242000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 20,
+          "EventID": 10,
+          "TimeCreated": "2020-10-26 11:58:29.243000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 19,
+          "EventID": 10,
+          "TimeCreated": "2020-10-26 11:58:29.243000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 18,
+          "EventID": 10,
+          "TimeCreated": "2020-10-26 11:58:29.243000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 17,
+          "EventID": 10,
+          "TimeCreated": "2020-10-26 11:58:29.243000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 16,
+          "EventID": 10,
+          "TimeCreated": "2020-10-26 11:58:29.243000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1055",
+      "gt_technique_name": "Access Token Manipulation",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1134)"
+    }
+  ]
+}

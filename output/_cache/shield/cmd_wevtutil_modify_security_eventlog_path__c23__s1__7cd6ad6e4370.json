@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[services.exe|{01e2a015-d09]\"\n  ],\n  \"rationale\": \"The services.exe process is modifying the security descriptors and start types of multiple Windows Defender-related services, which is a common tactic used by attackers to disable or tamper with endpoint security products.\"\n}"}

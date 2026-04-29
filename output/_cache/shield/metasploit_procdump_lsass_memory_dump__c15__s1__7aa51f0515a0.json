@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The RuntimeBroker.exe process is performing registry operations consistent with its normal function of managing UWP applications and their interaction with mounted devices, and no command-line arguments or other indicators of compromise were provided.\"\n}"}

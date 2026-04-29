@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is interacting with legitimate audio-related registry keys, and no command-line arguments, child processes, or other indicators of compromise are present in the provided community.\"\n}"}

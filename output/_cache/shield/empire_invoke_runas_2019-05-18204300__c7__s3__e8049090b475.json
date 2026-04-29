@@ -1,0 +1,1 @@
+{"text": "{\n  \"confidence_score\": 0.95,\n  \"attack_summary\": \"An initial access vector, likely PowerShell, spawned cmd.exe to execute a VBScript named 'autoupdate.vbs' from the C:\\\\windows\\\\system32 directory. This script, executed by wscript.exe, masqueraded as a legitimate system update to achieve execution and performed extensive registry modifications, potentially"}

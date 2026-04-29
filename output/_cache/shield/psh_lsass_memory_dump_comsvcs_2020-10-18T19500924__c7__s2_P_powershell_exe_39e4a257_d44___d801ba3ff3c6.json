@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"Powershell executed rundll32.exe to dump LSASS memory using comsvcs.dll MiniDump function, which is a common technique for credential theft.\",\n  \"indicators\": [\n    \"powershell\",\n    \"rundll32\",\n    \"comsvcs.dll\",\n    \"MiniDump\",\n    \"lsass\",\n    \"credential dumping\"\n  ]\n}"}

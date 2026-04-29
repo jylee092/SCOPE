@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All processes exhibit normal behavior, including standard command-line arguments, expected parent-child relationships, and legitimate registry interactions for their respective functions, with no indicators of known attack patterns or unauthorized activity.\"\n}"}

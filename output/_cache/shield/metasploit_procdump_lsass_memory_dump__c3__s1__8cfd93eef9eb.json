@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed process activities, including DLL loads, file writes to the Windows Error Reporting directory, and registry modifications to standard system paths, are consistent with the normal operation of wermgr.exe and svchost.exe. No notable command lines or other suspicious indicators were present.\"\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities for MsMpEng.exe and WindowsAzureGuestAgent.exe are consistent with their legitimate functions as an antivirus and a guest agent, respectively, and no suspicious command lines or other attack patterns were identified.\"\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed processes, command lines, file/registry operations, and network connections are consistent with normal Windows operating system and Microsoft Edge browser activity, with no indicators matching known attack patterns.\"\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The 'net.exe' process is a legitimate Windows utility, and without command-line arguments, child processes, or other behavioral indicators, its module loads alone do not suggest suspicious activity.\"\n}"}

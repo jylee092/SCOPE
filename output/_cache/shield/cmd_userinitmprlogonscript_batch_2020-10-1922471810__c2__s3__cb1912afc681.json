@@ -1,0 +1,1 @@
+{"text": "{\n  \"confidence_score\": 0.95,\n  \"attack_summary\": \"The 'reg.exe' process was observed modifying a user's 'UserInitMprLogonScript' registry key to execute a batch file ('art.bat') from the temporary directory upon user logon. This activity is a clear attempt to establish persistence on the system, ensuring continued access or execution of malicious code.\","}

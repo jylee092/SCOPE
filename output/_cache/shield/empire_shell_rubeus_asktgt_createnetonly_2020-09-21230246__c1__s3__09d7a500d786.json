@@ -1,0 +1,1 @@
+{"text": "{\n  \"confidence_score\": 0.9,\n  \"attack_summary\": \"An adversary utilized Rubeus.exe, a known credential access tool, to request a Kerberos TGT using an NTLM hash, indicating credential theft. This was followed by the creation of a netonly process, suggesting an attempt at lateral movement using the obtained Kerberos tickets. Suspicious WmiPrvSE.exe"}

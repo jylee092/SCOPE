@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"cmd.exe spawned ntdsutil with arguments to create a full Active Directory database snapshot (ntds.dit) to a temporary file, which is a common technique for credential dumping.\",\n  \"indicators\": [\n    \"ntdsutil\",\n    \"create full\",\n    \"credential dumping\",\n    \"ntds.dit\"\n  ]\n}"}

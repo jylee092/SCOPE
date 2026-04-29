@@ -1,0 +1,1 @@
+{"text": "{\n  \"confidence_score\": 0.95,\n  \"attack_summary\": \"An attacker used `cmd.exe` to orchestrate the modification of the 'Fax' service's binary path to execute PowerShell, followed by starting the service. The service configuration was then reverted, indicating an attempt to execute code via service binary replacement (T1543.003) with subsequent cleanup to"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed process activities, command lines, DLL loads, and registry interactions are consistent with normal Windows system operations for svchost.exe and dxgiadaptercache.exe, showing no signs of common attack patterns or malicious behavior.\"\n}"}

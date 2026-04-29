@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is performing registry operations related to device containers, device setup, and volume snapshots, which are legitimate activities for a Windows service host, and no suspicious command lines, child processes, or other indicators were observed.\"\n}"}

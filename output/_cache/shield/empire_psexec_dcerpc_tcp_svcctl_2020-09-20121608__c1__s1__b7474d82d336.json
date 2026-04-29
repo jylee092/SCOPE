@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process creating Group Policy ServiceInstances registry keys is a normal Windows operation, and no suspicious command lines or other indicators of compromise were observed.\"\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"Execution of SharpView.exe, a known red-teaming/reconnaissance tool, to enumerate ACLs for 'Domain Admins'. This is a common step in Active Directory reconnaissance.\",\n  \"indicators\": [\n    \"SharpView.exe\",\n    \"Active Directory reconnaissance\",\n    \"Get-ObjectAcl\",\n    \"Domain Admins\"\n  ]\n}"}

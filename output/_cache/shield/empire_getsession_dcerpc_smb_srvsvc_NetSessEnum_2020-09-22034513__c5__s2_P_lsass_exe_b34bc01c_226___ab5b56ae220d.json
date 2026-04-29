@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": false,\n  \"deviation\": \"\",\n  \"indicators\": [\n    \"lsass.exe\",\n    \"Kerberos\",\n    \"LDAP\",\n    \"W32Time\",\n    \"Tcpip\"\n  ]\n}"}

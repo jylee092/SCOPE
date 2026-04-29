@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"Powershell wrote an .inf file explicitly named for UAC bypass (T1218.003) to a common data directory, indicating an attempt to elevate privileges.\",\n  \"indicators\": [\n    \"powershell.exe\",\n    \"write\",\n    \"C:\\\\ProgramData\\\\T1218.003_uacbypass.inf\",\n    \"UAC bypass\",\n    \"T1218.003\"\n  ]\n}"}

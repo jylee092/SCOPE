@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The process unsecapp.exe is a legitimate Windows component, and the loaded modules (cryptsp.dll, userenv.dll, profapi.dll, amsi.dll) are standard system libraries, with no suspicious command lines or other activities reported in this community.\"\n}"}

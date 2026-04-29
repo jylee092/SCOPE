@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities, including registry modifications and file writes to the AppModel State Repository, are consistent with the normal operation of legitimate svchost.exe processes managing Windows application states, and no suspicious command lines were provided.\"\n}"}

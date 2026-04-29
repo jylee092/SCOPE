@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed processes (taskhostw.exe, Explorer.EXE, LogonUI.exe) are performing actions consistent with their normal operating behavior during system startup or user logon, with no suspicious command lines, file/registry writes to sensitive locations, or unusual DLL loads detected in the provided events.\"\n}"}

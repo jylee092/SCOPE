@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"cmd.exe spawned esentutl.exe to extract the SAM database using VSS, a common credential dumping technique.\",\n  \"indicators\": [\n    \"esentutl.exe\",\n    \"SAM\",\n    \"VSS\",\n    \"credential dumping\"\n  ]\n}"}

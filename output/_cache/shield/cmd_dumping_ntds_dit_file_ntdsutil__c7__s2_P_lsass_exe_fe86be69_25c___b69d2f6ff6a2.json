@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": false,\n  \"deviation\": \"\",\n  \"indicators\": [\n    \"vss_ps.dll\",\n    \"HKLM\\\\System\\\\CurrentControlSet\\\\Services\\\\VSS\\\\Diag\\\\NTDS\",\n    \"Active Directory backup\",\n    \"Volume Shadow Copy Service\",\n    \"LDAP\",\n    \"DNS\"\n  ]\n}"}

@@ -1,0 +1,477 @@
+[
+  {
+    "group_id": "T1021_002_173",
+    "technique_id": "T1021.002",
+    "technique_name": "SMB/Windows Admin Shares",
+    "confidence": 0.11,
+    "confidence_margin": 0.005594,
+    "generated_description": "Adversaries established multiple successful logon sessions, observed in a rapid burst of events, and subsequently initiated access attempts against network share objects. This activity was notably associated with a Null SID (S-1-0-0) and a Logon ID of 0x0, suggesting an adversary may be leveraging unauthenticated or system-level access to enumerate or interact with shared resources.",
+    "similar_techniques": [
+      {
+        "rank": 1,
+        "technique_id": "T1021.002",
+        "technique_name": "Remote Services: SMB/Windows Admin Shares",
+        "tactic": "Lateral Movement",
+        "similarity": 0.6834,
+        "p_ttp": 0.014669,
+        "description": "Adversaries may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to interact with a remote network share using Server Message Block (SMB). The adversary may then perform actions as the logged-on user. SMB is a file, printer, and serial port sharing protocol for Windows machines on the"
+      },
+      {
+        "rank": 2,
+        "technique_id": "T1134.005",
+        "technique_name": "Access Token Manipulation: SID-History Injection",
+        "tactic": "Defense Evasion",
+        "similarity": 0.634,
+        "p_ttp": 0.009075,
+        "description": "Adversaries may use SID-History Injection to escalate privileges and bypass access controls. The Windows security identifier (SID) is a unique value that identifies a user or group account. SIDs are used by Windows security in both security descriptors and access tokens. An account can hold addition"
+      },
+      {
+        "rank": 3,
+        "technique_id": "T1482",
+        "technique_name": "Domain Trust Discovery",
+        "tactic": "Discovery",
+        "similarity": 0.6326,
+        "p_ttp": 0.008301,
+        "description": "Adversaries may attempt to gather information on domain trust relationships that may be used to identify lateral movement opportunities in Windows multi-domain/forest environments. Domain trusts provide a mechanism for a domain to allow access to resources based on the authentication procedures of a"
+      },
+      {
+        "rank": 4,
+        "technique_id": "T1135",
+        "technique_name": "Network Share Discovery",
+        "tactic": "Discovery",
+        "similarity": 0.616,
+        "p_ttp": 0.007066,
+        "description": "Adversaries may look for folders and drives shared on remote systems as a means of identifying sources of information to gather as a precursor for Collection and to identify potential systems of interest for Lateral Movement. Networks often contain shared network drives and folders that enable users"
+      },
+      {
+        "rank": 5,
+        "technique_id": "T1049",
+        "technique_name": "System Network Connections Discovery",
+        "tactic": "Discovery",
+        "similarity": 0.5715,
+        "p_ttp": 0.006838,
+        "description": "Adversaries may attempt to get a listing of network connections to or from the compromised system they are currently accessing or from remote systems by querying for information over the network. An adversary who gains access to a system that is part of a cloud-based environment may map out Virtual "
+      }
+    ],
+    "all_idxs": [
+      173,
+      175,
+      179,
+      194,
+      203,
+      257
+    ]
+  },
+  {
+    "group_id": "T1049_77",
+    "technique_id": "T1049",
+    "technique_name": "System Network Connections Discovery",
+    "confidence": 1.0,
+    "confidence_margin": 0.005015,
+    "generated_description": "Adversaries executed a system utility via PowerShell with elevated privileges to enumerate domain user accounts. This action involved the `net` command-line tool, specifically querying for user details across the domain. The activity generated network traffic consistent with standard domain authentication and directory service protocols as it communicated with internal domain resources.",
+    "similar_techniques": [
+      {
+        "rank": 1,
+        "technique_id": "T1482",
+        "technique_name": "Domain Trust Discovery",
+        "tactic": "Discovery",
+        "similarity": 0.705,
+        "p_ttp": 0.014918,
+        "description": "Adversaries may attempt to gather information on domain trust relationships that may be used to identify lateral movement opportunities in Windows multi-domain/forest environments. Domain trusts provide a mechanism for a domain to allow access to resources based on the authentication procedures of a"
+      },
+      {
+        "rank": 2,
+        "technique_id": "T1087.002",
+        "technique_name": "Account Discovery: Domain Account",
+        "tactic": "Discovery",
+        "similarity": 0.6549,
+        "p_ttp": 0.009903,
+        "description": "Adversaries may attempt to get a listing of domain accounts. This information can help adversaries determine which domain accounts exist to aid in follow-on behavior such as targeting specific accounts which possess particular privileges. Commands such as net user /domain and net group /domain of th"
+      },
+      {
+        "rank": 3,
+        "technique_id": "T1087",
+        "technique_name": "Account Discovery",
+        "tactic": "Discovery",
+        "similarity": 0.6421,
+        "p_ttp": 0.008542,
+        "description": "Adversaries may attempt to get a listing of valid accounts, usernames, or email addresses on a system or within a compromised environment. This information can help adversaries determine which accounts exist, which can aid in follow-on behavior such as brute-forcing, spear-phishing attacks, or accou"
+      },
+      {
+        "rank": 4,
+        "technique_id": "T1615",
+        "technique_name": "Group Policy Discovery",
+        "tactic": "Discovery",
+        "similarity": 0.6314,
+        "p_ttp": 0.007892,
+        "description": "Adversaries may gather information on Group Policy settings to identify paths for privilege escalation, security measures applied within a domain, and to discover patterns in domain objects that can be manipulated or used to blend in the environment. Group Policy allows for centralized management of"
+      },
+      {
+        "rank": 5,
+        "technique_id": "T1207",
+        "technique_name": "Rogue Domain Controller",
+        "tactic": "Defense Evasion",
+        "similarity": 0.6079,
+        "p_ttp": 0.006378,
+        "description": "Adversaries may register a rogue Domain Controller to enable manipulation of Active Directory data. DCShadow may be used to create a rogue Domain Controller (DC). DCShadow is a method of manipulating Active Directory (AD) data, including objects and schemas, by registering (or reusing an inactive re"
+      }
+    ],
+    "all_idxs": [
+      4,
+      31,
+      65,
+      73,
+      76,
+      77,
+      86,
+      89,
+      92,
+      93,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      112,
+      114,
+      115,
+      116,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      135,
+      136,
+      137,
+      138,
+      148,
+      154,
+      155,
+      185,
+      186,
+      187,
+      219,
+      249,
+      271,
+      293,
+      362
+    ]
+  },
+  {
+    "group_id": "T1070_004_570",
+    "technique_id": "T1070.004",
+    "technique_name": "File Deletion",
+    "confidence": 0.0,
+    "confidence_margin": 0.001831,
+    "generated_description": "An adversary executed a system process with SYSTEM privileges to remove a network capture file from a temporary Azure-related cache directory, likely as part of an effort to erase forensic evidence. Concurrently, the adversary modified a specific service's registry parameters, potentially indicating an attempt to install, hijack, or otherwise manipulate a legitimate Windows service on the compromised system.",
+    "similar_techniques": [
+      {
+        "rank": 1,
+        "technique_id": "T1574.011",
+        "technique_name": "Hijack Execution Flow: Services Registry Permissions Weakness",
+        "tactic": "Defense Evasion",
+        "similarity": 0.5988,
+        "p_ttp": 0.010887,
+        "description": "Adversaries may execute their own malicious payloads by hijacking the Registry entries used by services. Flaws in the permissions for Registry keys related to services can allow adversaries to redirect the originally specified executable to one they control, launching their own code when a service s"
+      },
+      {
+        "rank": 2,
+        "technique_id": "T1569.002",
+        "technique_name": "System Services: Service Execution",
+        "tactic": "Execution",
+        "similarity": 0.5821,
+        "p_ttp": 0.009056,
+        "description": "Adversaries may abuse the Windows service control manager to execute malicious commands or payloads. The Windows service control manager (services.exe) is an interface to manage and manipulate services. The service control manager is accessible to users via GUI components as well as system utilities"
+      },
+      {
+        "rank": 3,
+        "technique_id": "T1070",
+        "technique_name": "Indicator Removal",
+        "tactic": "Defense Evasion",
+        "similarity": 0.5443,
+        "p_ttp": 0.007437,
+        "description": "Adversaries may delete or modify artifacts generated within systems to remove evidence of their presence or hinder defenses. Various artifacts may be created by an adversary or something that can be attributed to an adversary’s actions. Typically these artifacts are used as defensive indicators rela"
+      },
+      {
+        "rank": 4,
+        "technique_id": "T1574.010",
+        "technique_name": "Hijack Execution Flow: Services File Permissions Weakness",
+        "tactic": "Defense Evasion",
+        "similarity": 0.5456,
+        "p_ttp": 0.006907,
+        "description": "Adversaries may execute their own malicious payloads by hijacking the binaries used by services. Adversaries may use flaws in the permissions of Windows services to replace the binary that is executed upon service start. These service processes may automatically execute specific binaries as part of "
+      },
+      {
+        "rank": 5,
+        "technique_id": "T1218.010",
+        "technique_name": "System Binary Proxy Execution: Regsvr32",
+        "tactic": "Defense Evasion",
+        "similarity": 0.5453,
+        "p_ttp": 0.0068,
+        "description": "Adversaries may abuse Regsvr32.exe to proxy execution of malicious code. Regsvr32.exe is a command-line program used to register and unregister object linking and embedding controls, including dynamic link libraries (DLLs), on Windows systems. The Regsvr32.exe binary may also be signed by Microsoft."
+      }
+    ],
+    "all_idxs": [
+      387,
+      391,
+      570
+    ]
+  },
+  {
+    "group_id": "T1087_001_154",
+    "technique_id": "T1087.001",
+    "technique_name": "Local Account Discovery",
+    "confidence": 1.0,
+    "confidence_margin": 0.012552,
+    "generated_description": "Adversaries may use built-in operating system utilities to enumerate user accounts within a domain. An adversary executed the `net.exe` utility from a PowerShell process with the `user /domain` command-line arguments to list all domain user accounts. This activity helps adversaries gain knowledge of legitimate accounts that can be targeted for further access or privilege escalation.",
+    "similar_techniques": [
+      {
+        "rank": 1,
+        "technique_id": "T1087.002",
+        "technique_name": "Account Discovery: Domain Account",
+        "tactic": "Discovery",
+        "similarity": 0.7134,
+        "p_ttp": 0.022209,
+        "description": "Adversaries may attempt to get a listing of domain accounts. This information can help adversaries determine which domain accounts exist to aid in follow-on behavior such as targeting specific accounts which possess particular privileges. Commands such as net user /domain and net group /domain of th"
+      },
+      {
+        "rank": 2,
+        "technique_id": "T1136.002",
+        "technique_name": "Create Account: Domain Account",
+        "tactic": "Persistence",
+        "similarity": 0.6721,
+        "p_ttp": 0.009657,
+        "description": "Adversaries may create a domain account to maintain access to victim systems. Domain accounts are those managed by Active Directory Domain Services where access and permissions are configured across systems and services that are part of that domain. Domain accounts can cover user, administrator, and"
+      },
+      {
+        "rank": 3,
+        "technique_id": "T1087",
+        "technique_name": "Account Discovery",
+        "tactic": "Discovery",
+        "similarity": 0.6532,
+        "p_ttp": 0.009068,
+        "description": "Adversaries may attempt to get a listing of valid accounts, usernames, or email addresses on a system or within a compromised environment. This information can help adversaries determine which accounts exist, which can aid in follow-on behavior such as brute-forcing, spear-phishing attacks, or accou"
+      },
+      {
+        "rank": 4,
+        "technique_id": "T1069.002",
+        "technique_name": "Permission Groups Discovery: Domain Groups",
+        "tactic": "Discovery",
+        "similarity": 0.6136,
+        "p_ttp": 0.00832,
+        "description": "Adversaries may attempt to find domain-level groups and permission settings. The knowledge of domain-level permission groups can help adversaries determine which groups exist and which users belong to a particular group. Adversaries may use this information to determine which users have elevated per"
+      },
+      {
+        "rank": 5,
+        "technique_id": "T1087.001",
+        "technique_name": "Account Discovery: Local Account",
+        "tactic": "Discovery",
+        "similarity": 0.5774,
+        "p_ttp": 0.007728,
+        "description": "Adversaries may attempt to get a listing of local system accounts. This information can help adversaries determine which local accounts exist on a system to aid in follow-on behavior. Commands such as net user and net localgroup of the [Net](https://attack.mitre.org/software/S0039) utility and id an"
+      }
+    ],
+    "all_idxs": [
+      154,
+      155
+    ]
+  },
+  {
+    "group_id": "T1087_001_155",
+    "technique_id": "T1087.001",
+    "technique_name": "Local Account Discovery",
+    "confidence": 1.0,
+    "confidence_margin": 0.006397,
+    "generated_description": "Adversaries use built-in operating system utilities to discover information about domain user accounts present in a compromised environment. An adversary executed the `net` command with the `user /domain` arguments, originating from a PowerShell process, to list all available domain user accounts. This activity, involving the `net.exe` and `net1.exe` binaries with these specific parameters, indicates an attempt to gain knowledge of the environment's user base as part of a broader reconnaissance effort.",
+    "similar_techniques": [
+      {
+        "rank": 1,
+        "technique_id": "T1087.002",
+        "technique_name": "Account Discovery: Domain Account",
+        "tactic": "Discovery",
+        "similarity": 0.6578,
+        "p_ttp": 0.017971,
+        "description": "Adversaries may attempt to get a listing of domain accounts. This information can help adversaries determine which domain accounts exist to aid in follow-on behavior such as targeting specific accounts which possess particular privileges. Commands such as net user /domain and net group /domain of th"
+      },
+      {
+        "rank": 2,
+        "technique_id": "T1087",
+        "technique_name": "Account Discovery",
+        "tactic": "Discovery",
+        "similarity": 0.6648,
+        "p_ttp": 0.011574,
+        "description": "Adversaries may attempt to get a listing of valid accounts, usernames, or email addresses on a system or within a compromised environment. This information can help adversaries determine which accounts exist, which can aid in follow-on behavior such as brute-forcing, spear-phishing attacks, or accou"
+      },
+      {
+        "rank": 3,
+        "technique_id": "T1482",
+        "technique_name": "Domain Trust Discovery",
+        "tactic": "Discovery",
+        "similarity": 0.6672,
+        "p_ttp": 0.010561,
+        "description": "Adversaries may attempt to gather information on domain trust relationships that may be used to identify lateral movement opportunities in Windows multi-domain/forest environments. Domain trusts provide a mechanism for a domain to allow access to resources based on the authentication procedures of a"
+      },
+      {
+        "rank": 4,
+        "technique_id": "T1615",
+        "technique_name": "Group Policy Discovery",
+        "tactic": "Discovery",
+        "similarity": 0.6375,
+        "p_ttp": 0.008343,
+        "description": "Adversaries may gather information on Group Policy settings to identify paths for privilege escalation, security measures applied within a domain, and to discover patterns in domain objects that can be manipulated or used to blend in the environment. Group Policy allows for centralized management of"
+      },
+      {
+        "rank": 5,
+        "technique_id": "T1069.002",
+        "technique_name": "Permission Groups Discovery: Domain Groups",
+        "tactic": "Discovery",
+        "similarity": 0.5813,
+        "p_ttp": 0.008034,
+        "description": "Adversaries may attempt to find domain-level groups and permission settings. The knowledge of domain-level permission groups can help adversaries determine which groups exist and which users belong to a particular group. Adversaries may use this information to determine which users have elevated per"
+      }
+    ],
+    "all_idxs": [
+      154,
+      155
+    ]
+  },
+  {
+    "group_id": "T1087_002_181",
+    "technique_id": "T1087.002",
+    "technique_name": "Domain Account Discovery",
+    "confidence": 0.0,
+    "confidence_margin": 0.003693,
+    "generated_description": "An adversary performed an operation on an object within the system, generating a security audit event. This activity was conducted under the context of a standard domain user account. No associated process execution, command-line arguments, file system modifications, or network communications were observed, leaving the specific nature of the object and the adversary's tactical goal undetermined from the available forensic evidence.",
+    "similar_techniques": [
+      {
+        "rank": 1,
+        "technique_id": "T1070",
+        "technique_name": "Indicator Removal",
+        "tactic": "Defense Evasion",
+        "similarity": 0.6007,
+        "p_ttp": 0.010796,
+        "description": "Adversaries may delete or modify artifacts generated within systems to remove evidence of their presence or hinder defenses. Various artifacts may be created by an adversary or something that can be attributed to an adversary’s actions. Typically these artifacts are used as defensive indicators rela"
+      },
+      {
+        "rank": 2,
+        "technique_id": "T1207",
+        "technique_name": "Rogue Domain Controller",
+        "tactic": "Defense Evasion",
+        "similarity": 0.5488,
+        "p_ttp": 0.007103,
+        "description": "Adversaries may register a rogue Domain Controller to enable manipulation of Active Directory data. DCShadow may be used to create a rogue Domain Controller (DC). DCShadow is a method of manipulating Active Directory (AD) data, including objects and schemas, by registering (or reusing an inactive re"
+      },
+      {
+        "rank": 3,
+        "technique_id": "T1134.005",
+        "technique_name": "Access Token Manipulation: SID-History Injection",
+        "tactic": "Defense Evasion",
+        "similarity": 0.5431,
+        "p_ttp": 0.006417,
+        "description": "Adversaries may use SID-History Injection to escalate privileges and bypass access controls. The Windows security identifier (SID) is a unique value that identifies a user or group account. SIDs are used by Windows security in both security descriptors and access tokens. An account can hold addition"
+      },
+      {
+        "rank": 4,
+        "technique_id": "T1546.015",
+        "technique_name": "Event Triggered Execution: Component Object Model Hijacking",
+        "tactic": "Persistence",
+        "similarity": 0.5151,
+        "p_ttp": 0.005658,
+        "description": "Adversaries may establish persistence by executing malicious content triggered by hijacked references to Component Object Model (COM) objects. COM is a system within Windows to enable interaction between software components through the operating system. References to various COM objects are stored i"
+      },
+      {
+        "rank": 5,
+        "technique_id": "T1562.002",
+        "technique_name": "Impair Defenses: Disable Windows Event Logging",
+        "tactic": "Defense Evasion",
+        "similarity": 0.5123,
+        "p_ttp": 0.005555,
+        "description": "Adversaries may disable Windows event logging to limit data that can be leveraged for detections and audits. Windows event logs record user and system activity such as login attempts, process creation, and much more. This data is used by security tools and analysts to generate detections. The EventL"
+      }
+    ],
+    "all_idxs": [
+      181
+    ]
+  },
+  {
+    "group_id": "T1112_387",
+    "technique_id": "T1112",
+    "technique_name": "Modify Registry",
+    "confidence": 0.0,
+    "confidence_margin": 0.003047,
+    "generated_description": "An adversary, operating with SYSTEM privileges, modified a service's registry configuration by setting a parameter to zero, which could alter its behavior or disable its function. To remove forensic evidence, the adversary also deleted a network capture file from a temporary location on the system, aiming to evade detection of their actions.",
+    "similar_techniques": [
+      {
+        "rank": 1,
+        "technique_id": "T1112",
+        "technique_name": "Modify Registry",
+        "tactic": "Defense Evasion",
+        "similarity": 0.6958,
+        "p_ttp": 0.01403,
+        "description": "Adversaries may interact with the Windows Registry as part of a variety of other techniques to aid in defense evasion, persistence, and execution. Access to specific areas of the Registry depends on account permissions, with some keys requiring administrator-level access. The built-in Windows comman"
+      },
+      {
+        "rank": 2,
+        "technique_id": "T1574.011",
+        "technique_name": "Hijack Execution Flow: Services Registry Permissions Weakness",
+        "tactic": "Defense Evasion",
+        "similarity": 0.6768,
+        "p_ttp": 0.010983,
+        "description": "Adversaries may execute their own malicious payloads by hijacking the Registry entries used by services. Flaws in the permissions for Registry keys related to services can allow adversaries to redirect the originally specified executable to one they control, launching their own code when a service s"
+      },
+      {
+        "rank": 3,
+        "technique_id": "T1070",
+        "technique_name": "Indicator Removal",
+        "tactic": "Defense Evasion",
+        "similarity": 0.6139,
+        "p_ttp": 0.00702,
+        "description": "Adversaries may delete or modify artifacts generated within systems to remove evidence of their presence or hinder defenses. Various artifacts may be created by an adversary or something that can be attributed to an adversary’s actions. Typically these artifacts are used as defensive indicators rela"
+      },
+      {
+        "rank": 4,
+        "technique_id": "T1012",
+        "technique_name": "Query Registry",
+        "tactic": "Discovery",
+        "similarity": 0.6232,
+        "p_ttp": 0.006914,
+        "description": "Adversaries may interact with the Windows Registry to gather information about the system, configuration, and installed software. The Registry contains a significant amount of information about the operating system, configuration, software, and security. Information can easily be queried using the ["
+      },
+      {
+        "rank": 5,
+        "technique_id": "T1543.003",
+        "technique_name": "Create or Modify System Process: Windows Service",
+        "tactic": "Persistence",
+        "similarity": 0.6113,
+        "p_ttp": 0.006415,
+        "description": "Adversaries may create or modify Windows services to repeatedly execute malicious payloads as part of persistence. When Windows boots up, it starts programs or applications called services that perform background system functions. Windows service configuration information, including the file path to"
+      }
+    ],
+    "all_idxs": [
+      387,
+      391,
+      570
+    ]
+  }
+]

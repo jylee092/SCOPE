@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities, including registry modifications related to IdentityCRL and DiagTrack, loading of OnDemandConnRouteHelper.dll, and outbound HTTPS connection, are consistent with the normal operation of legitimate Windows services hosted by svchost.exe. No suspicious command lines were provided.\"\n}"}

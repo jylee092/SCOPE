@@ -1,0 +1,243 @@
+{
+  "scenario": "cmd_seatbelt_group_user_2020-11-0216391814",
+  "total_groups": 2,
+  "instruction": "각 그룹의 sample_logs와 anchor를 확인한 뒤 gt_ 필드를 채워주세요. gt_is_true_positive: 해당 그룹이 실제 공격 행위인지 (true/false). gt_technique_id: 실제 MITRE technique ID (예: T1059.001). gt_tactic: 실제 tactic 이름 (예: Execution). gt_notes: 판단 근거나 메모.",
+  "groups": [
+    {
+      "group_id": "T1070_001_3",
+      "rule_technique_id": "T1070.001",
+      "rule_technique_name": "Clear Windows Event Logs",
+      "confidence": 0.5,
+      "anchor": {
+        "idx": 3,
+        "EventID": 1102,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-11-02 04:39:08.640000+00:00"
+      },
+      "num_events": 5,
+      "event_id_distribution": {
+        "4688": 2,
+        "1": 2,
+        "1102": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 3,
+          "EventID": 1102,
+          "TimeCreated": "2020-11-02 04:39:08.640000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 42,
+          "EventID": 4688,
+          "TimeCreated": "2020-11-02 04:39:11.671000+00:00",
+          "Image": "nan",
+          "CommandLine": "Seatbelt.exe  -group=user",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 44,
+          "EventID": 1,
+          "TimeCreated": "2020-11-02 04:39:11.681000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\Seatbelt.exe",
+          "CommandLine": "Seatbelt.exe  -group=user",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 305,
+          "EventID": 4688,
+          "TimeCreated": "2020-11-02 04:39:13.217000+00:00",
+          "Image": "nan",
+          "CommandLine": "C:\\windows\\system32\\wbem\\wmiprvse.exe -secured -Embedding",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 306,
+          "EventID": 1,
+          "TimeCreated": "2020-11-02 04:39:13.232000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "C:\\windows\\system32\\wbem\\wmiprvse.exe -secured -Embedding",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1082",
+      "gt_technique_name": "Clear Windows Event Logs",
+      "gt_tactic": "Discovery",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: sample-kw+ctx(T1070.001,c=0.50)"
+    },
+    {
+      "group_id": "T1082_44",
+      "rule_technique_id": "T1082",
+      "rule_technique_name": "System Information Discovery",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 44,
+        "EventID": 1,
+        "Image": "C:\\Users\\wardog\\Desktop\\Seatbelt.exe",
+        "CommandLine": "Seatbelt.exe  -group=user",
+        "TimeCreated": "2020-11-02 04:39:11.681000+00:00"
+      },
+      "num_events": 91,
+      "event_id_distribution": {
+        "7": 81,
+        "12": 4,
+        "4688": 2,
+        "24": 1,
+        "1": 1,
+        "13": 1,
+        "5": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 33,
+          "EventID": 24,
+          "TimeCreated": "2020-11-02 04:39:11.161000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 41,
+          "EventID": 7,
+          "TimeCreated": "2020-11-02 04:39:11.670000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 42,
+          "EventID": 4688,
+          "TimeCreated": "2020-11-02 04:39:11.671000+00:00",
+          "Image": "nan",
+          "CommandLine": "Seatbelt.exe  -group=user",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 44,
+          "EventID": 1,
+          "TimeCreated": "2020-11-02 04:39:11.681000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\Seatbelt.exe",
+          "CommandLine": "Seatbelt.exe  -group=user",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 46,
+          "EventID": 7,
+          "TimeCreated": "2020-11-02 04:39:11.683000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\Seatbelt.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 50,
+          "EventID": 7,
+          "TimeCreated": "2020-11-02 04:39:11.697000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\Seatbelt.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 51,
+          "EventID": 7,
+          "TimeCreated": "2020-11-02 04:39:11.697000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\Seatbelt.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 52,
+          "EventID": 7,
+          "TimeCreated": "2020-11-02 04:39:11.698000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\Seatbelt.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 53,
+          "EventID": 7,
+          "TimeCreated": "2020-11-02 04:39:11.698000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\Seatbelt.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 55,
+          "EventID": 7,
+          "TimeCreated": "2020-11-02 04:39:11.700000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\Seatbelt.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 57,
+          "EventID": 7,
+          "TimeCreated": "2020-11-02 04:39:11.701000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\Seatbelt.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 56,
+          "EventID": 7,
+          "TimeCreated": "2020-11-02 04:39:11.701000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\Seatbelt.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 58,
+          "EventID": 7,
+          "TimeCreated": "2020-11-02 04:39:11.702000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\Seatbelt.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 74,
+          "EventID": 7,
+          "TimeCreated": "2020-11-02 04:39:11.704000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\Seatbelt.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 83,
+          "EventID": 7,
+          "TimeCreated": "2020-11-02 04:39:11.705000+00:00",
+          "Image": "C:\\Users\\wardog\\Desktop\\Seatbelt.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1082",
+      "gt_technique_name": "System Information Discovery",
+      "gt_tactic": "Discovery",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(seatbelt)"
+    }
+  ]
+}

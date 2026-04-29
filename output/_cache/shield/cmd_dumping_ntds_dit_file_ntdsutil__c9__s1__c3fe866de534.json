@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed process activities, including the rundll32.exe command line invoking shell32.dll,SHCreateLocalServerRunDll, appear to be legitimate system operations without matching known attack patterns or suspicious indicators.\"\n}"}

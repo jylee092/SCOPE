@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed activities, including DLL loads and registry modifications by LogonUI.exe and dxgiadaptercache.exe, are consistent with normal system operations related to user interface, display settings, and graphics infrastructure, and no suspicious command lines or other attack patterns were identified.\"\n}"}

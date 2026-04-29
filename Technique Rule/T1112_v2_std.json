@@ -1,0 +1,124 @@
+{
+  "technique": {
+    "id": "T1112",
+    "name": "Modify Registry"
+  },
+  "detection": {
+    "id": "DET0280"
+  },
+  "analysis": {
+    "id": "AN0781"
+  },
+  "log_sources": {
+    "Anchor Event": {
+      "data_component": {
+        "id": "DC0063",
+        "name": "Windows Registry Key Modification"
+      },
+      "description": "레지스트리 값 설정/이름 변경 이벤트. EID 13 전체가 아닌 핵심 경로 필터 필수 (실제 데이터: EID 13이 19개이나 UserInitMprLogonScript 관련은 1개, 나머지 18개는 OS 정상 동작).",
+      "conditions": [
+        {
+          "type": "default",
+          "source": "WinEventLog:Sysmon",
+          "channel": {
+            "event_codes": [
+              13,
+              14
+            ]
+          },
+          "description": "레지스트리 값 설정/이름 변경 이벤트. EID 13 전체가 아닌 핵심 경로 필터 필수 (실제 데이터: EID 13이 19개이나 UserInitMprLogonScript 관련은 1개, 나머지 18개는 OS 정상 동작).",
+          "filters": {
+            "TargetObject": {
+              "contains_any": [
+                "CurrentVersion\\Run",
+                "CurrentControlSet\\Services",
+                "Control\\Lsa",
+                "UserInitMprLogonScript",
+                "ms-settings\\shell\\open\\command",
+                "HKLM\\Security"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "Supporting Events": [
+      {
+        "data_component": {
+          "id": "DC0032",
+          "name": "Process Creation"
+        },
+        "source": "WinEventLog:Sysmon",
+        "channel": {
+          "event_codes": [
+            1
+          ]
+        },
+        "description": "레지스트리를 수정한 주체 프로세스 정보. ProcessGuid로 Anchor EID 13과 직접 연결 가능 (같은 Sysmon 채널)."
+      }
+    ]
+  },
+  "mutable_elements": {
+    "grouping_logic": {
+      "correlation_key": {
+        "primary": [
+          "Hostname",
+          "ProcessGuid"
+        ],
+        "secondary": [
+          "Hostname",
+          "norm_logon_id"
+        ],
+        "fallback": [
+          "Hostname"
+        ],
+        "note": "T1112는 예외적으로 ProcessGuid를 primary로 사용. Anchor(EID 13)와 Supporting(EID 1)이 모두 Sysmon이라 ProcessGuid 직접 연결 가능. 실제 데이터 확인: EID 13(UserInitMpr).ProcessGuid == EID 1(reg.exe).ProcessGuid = {39e4a257-4fac-5f8e-0208-000000000700}"
+      },
+      "time_window": {
+        "before_seconds": 60,
+        "after_seconds": 60,
+        "note": "ProcessGuid로 직접 연결 가능하므로 time_window는 보조 수단. 좁게 설정해도 무방."
+      },
+      "primary_anchor_eids": [
+        13,
+        14
+      ],
+      "secondary_anchor": {
+        "event_codes": [
+          13,
+          14
+        ],
+        "required_filters": [
+          "TargetObject: None"
+        ],
+        "note": "EID 13 전체 사용 시 OS 정상 레지스트리 변경(HKU\\Software\\Microsoft\\Windows\\... 등) 18개가 노이즈로 포함됨. 필터 필수."
+      },
+      "note": "Chain Link Info: {'anchor_to_supporting': 'EID 13/14의 ProcessGuid == EID 1의 ProcessGuid → 동일 프로세스가 레지스트리 수정', 'parent_chain': 'EID 13/14의 ProcessGuid == EID 1의 ParentProcessGuid → 부모 프로세스가 레지스트리 수정'}"
+    },
+    "feature_extraction_filters": {
+      "critical_registry_paths": [
+        "HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run",
+        "HKCU\\Software\\Classes\\ms-settings\\shell\\open\\command",
+        "HKLM\\System\\CurrentControlSet\\Services",
+        "HKLM\\Security",
+        "HKLM\\System\\CurrentControlSet\\Control\\Lsa",
+        "HKCU\\Environment\\UserInitMprLogonScript"
+      ],
+      "parent_process_normal": [
+        "regedit.exe",
+        "msiexec.exe",
+        "services.exe"
+      ],
+      "integrity_check": {
+        "signature_required": true,
+        "field": "Signed",
+        "description": "서명되지 않은 프로세스나 비정상 부모-자식 관계에서의 수정 행위 탐지. IntegrityLevel=High이면 추가 가중치."
+      }
+    },
+    "semantic_templates": {
+      "persistence_via_logon_script": "프로세스({Image})가 UserInitMprLogonScript 레지스트리 키에 스크립트({Details})를 등록하여 로그인 시 자동 실행되도록 설정함",
+      "critical_path_match": "신뢰할 수 없는 프로세스({Image})가 핵심 레지스트리 경로({TargetObject})를 수정함",
+      "persistence_match": "부팅/로그인 시 자동 실행 또는 서비스 등록을 통한 지속성 확보 레지스트리 조작 감지"
+    }
+  }
+}

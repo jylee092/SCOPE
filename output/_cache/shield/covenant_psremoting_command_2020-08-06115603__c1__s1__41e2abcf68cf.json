@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities, including registry modifications related to W32Time and Group Policy, DNS lookups for Kerberos, and network connections to LDAP and Kerberos ports, are consistent with normal operations of lsass.exe and svchost.exe on a domain-joined Windows system.\"\n}"}

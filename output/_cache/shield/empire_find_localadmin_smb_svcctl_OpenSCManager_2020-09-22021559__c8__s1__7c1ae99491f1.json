@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is performing numerous registry creations under HKLM\\\\SOFTWARE\\\\Microsoft\\\\SecurityManager\\\\CapAuthz, which are legitimate system paths, and no suspicious command lines, child processes, or other attack patterns are observed.\"\n}"}

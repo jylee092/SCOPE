@@ -1,0 +1,70 @@
+{
+  "technique": { "id": "T1546.003", "name": "Windows Management Instrumentation Event Subscription" },
+  "detection": { "id": "DET-T1546003" },
+  "analysis": { "id": "AN-T1546003" },
+  "log_sources": {
+    "Anchor Event": {
+      "data_component": { "id": "DC0008", "name": "WMI Creation" },
+      "description": "WMI __EventFilter / __EventConsumer / __FilterToConsumerBinding 객체 등록.",
+      "conditions": [
+        {
+          "type": "wmi_event_sysmon",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [19, 20, 21] },
+          "description": "Sysmon EID 19 (WmiEventFilter), 20 (WmiEventConsumer), 21 (WmiEventConsumerToFilter) — WMI 영속성 트리오."
+        },
+        {
+          "type": "wmi_persistence_cmdline",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [1] },
+          "filters": {
+            "CommandLine": {
+              "contains_any": [
+                "New-WmiEventFilter",
+                "Set-WmiInstance",
+                "__EventFilter",
+                "CommandLineEventConsumer",
+                "ActiveScriptEventConsumer",
+                "__FilterToConsumerBinding",
+                "root\\subscription"
+              ]
+            }
+          },
+          "description": "PowerShell/wmic로 WMI 구독 객체를 만드는 커맨드라인."
+        },
+        {
+          "type": "wmi_psh_script",
+          "source": "WinEventLog:PowerShell",
+          "channel": { "event_codes": [4104] },
+          "filters": {
+            "ScriptBlockText": {
+              "contains_any": ["__EventFilter", "CommandLineEventConsumer", "ActiveScriptEventConsumer", "root\\subscription"]
+            }
+          },
+          "description": "PowerShell Script Block Logging에서 WMI persistence 구문 포착."
+        }
+      ]
+    },
+    "Supporting Events": [
+      { "data_component": { "id": "DC0008", "name": "WMI Activity" }, "source": "WinEventLog:WMI-Activity", "channel": { "event_codes": [5861, 5860] }, "description": "WMI-Activity/Operational 채널의 구독 등록 이벤트" },
+      { "data_component": { "id": "DC0032", "name": "Process Creation" }, "source": "WinEventLog:Sysmon", "channel": { "event_codes": [1] }, "description": "WmiPrvSE.exe 또는 scrcons.exe 실행 (구독 트리거)" },
+      { "data_component": { "id": "DC0063", "name": "Registry Key Modification" }, "source": "WinEventLog:Sysmon", "channel": { "event_codes": [12, 13] }, "description": "WMI 네임스페이스 관련 레지스트리 변경" }
+    ]
+  },
+  "mutable_elements": {
+    "grouping_logic": {
+      "primary_anchor_eids": [19, 20, 21],
+      "secondary_anchor": { "event_codes": [1, 4104], "required_filters": ["__EventFilter", "EventConsumer", "root\\subscription"] },
+      "correlation_key": { "primary": ["Hostname", "ProcessGuid"], "fallback": ["Hostname"] },
+      "time_window": { "before_seconds": 30, "after_seconds": 90 }
+    },
+    "feature_extraction_filters": {
+      "suspicious_consumer_scripts": ["powershell.exe", "cmd.exe", "wscript.exe", "cscript.exe", "mshta.exe"],
+      "legitimate_consumer_allowlist": ["SCM Event", "BVTConsumer"],
+      "description": "CommandLineEventConsumer의 CommandLineTemplate에 의심스러운 실행기가 포함되면 악성 가중치."
+    },
+    "semantic_templates": {
+      "wmi_persistence": "프로세스({Image})가 WMI 영속성 트리오(__EventFilter + EventConsumer + Binding)를 등록함. 시스템 이벤트 발생 시 {CommandLineTemplate} 실행 예정."
+    }
+  }
+}

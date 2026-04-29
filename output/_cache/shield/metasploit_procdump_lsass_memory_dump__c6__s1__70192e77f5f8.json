@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed processes, command lines, registry operations, and DLL loads are consistent with the normal operation of the Windows Search service (SearchIndexer.exe) and do not exhibit any known attack patterns or suspicious indicators.\"\n}"}

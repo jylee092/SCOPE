@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed registry modifications by Explorer.EXE are consistent with normal user activity and system operation, such as tracking desktop settings, user assist data, and feature usage, with no notable command lines or other indicators of compromise.\"\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The provided events only show dllhost.exe loading a series of common system and application-related DLLs, with no notable command lines, child processes, file/registry writes, or network activity to indicate suspicious behavior.\"\n}"}

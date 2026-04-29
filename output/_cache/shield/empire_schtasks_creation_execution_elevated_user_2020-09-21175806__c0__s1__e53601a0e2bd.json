@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed processes (mscorsvw.exe, ngen.exe, ngentask.exe) and their command lines are consistent with legitimate .NET Native Image Generator (NGen) operations. The file and registry artifacts are also standard for Office and .NET Framework components. While powershell.exe and svchost.exe are present"}

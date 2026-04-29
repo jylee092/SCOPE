@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is writing prefetch files for legitimate Windows binaries (wmiprvse.exe and backgroundtaskhost.exe), which is normal system behavior, and no suspicious command lines or other indicators were observed.\"\n}"}

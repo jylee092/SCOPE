@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities, including registry modifications, file writes, and network connections to wdcp.microsoft.com on port 443, are consistent with the normal operation of MsMpEng.exe (Windows Defender Antimalware Service Executable) and do not indicate any suspicious behavior or attack patterns.\"\n}"}

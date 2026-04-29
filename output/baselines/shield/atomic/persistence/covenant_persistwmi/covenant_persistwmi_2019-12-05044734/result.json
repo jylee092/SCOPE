@@ -1,0 +1,48 @@
+{
+  "scenario": "covenant_persistwmi_2019-12-05044734",
+  "tactic_sequence": [
+    "Credential Access"
+  ],
+  "technique_sequence": [
+    "T1003.001"
+  ],
+  "per_group_topk": [
+    [
+      "T1003.001"
+    ]
+  ],
+  "notes": {
+    "n_total_events": 1001,
+    "n_filtered_events": 1001,
+    "n_lof_anomalous": 12,
+    "n_communities": 9,
+    "n_alerts": 1,
+    "alerts": [
+      {
+        "ts": "2019-12-05 04:47:56",
+        "community_id": 7,
+        "n_members": 7,
+        "confidence": 0.95,
+        "topk_tids": [
+          "T1003.001"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ],
+        "kill_chain_stages": [
+          "Credential Access"
+        ],
+        "summary": "Two distinct svchost.exe processes were observed connecting to the \\lsass pipe within a short timeframe. This activity is a known technique for credential dumping, indicating an attempt to extract sensitive authentication material from the system.",
+        "event_indices": [
+          333,
+          334,
+          364,
+          368,
+          379,
+          843
+        ]
+      }
+    ],
+    "elapsed_sec": 70.6
+  }
+}

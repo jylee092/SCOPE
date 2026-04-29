@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[services.exe|{b34bc01c-1f9]\"\n  ],\n  \"rationale\": \"The services.exe process created numerous registry entries for new services, all with an unusual '_ad782' suffix, which is a common pattern for establishing persistence or masquerading malicious services.\"\n}"}

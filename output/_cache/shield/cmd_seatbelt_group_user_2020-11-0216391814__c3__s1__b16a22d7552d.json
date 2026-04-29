@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities, including process creation, command lines, DLL loads, registry operations, and pipe connections, are consistent with normal Windows Management Instrumentation (WMI) functionality and do not exhibit any known attack patterns or suspicious indicators.\"\n}"}

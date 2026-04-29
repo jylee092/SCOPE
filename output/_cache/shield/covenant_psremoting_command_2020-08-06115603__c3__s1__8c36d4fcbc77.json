@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[wsmprovhost.exe|{49a15388-282]\"\n  ],\n  \"rationale\": \"The wsmprovhost.exe process is writing and deleting PowerShell scripts (.ps1, .psm1) in a user's temporary directory and creating a PowerShell host named pipe, which is a common pattern for remote code execution and evasion via PowerShell.\"\n}"}

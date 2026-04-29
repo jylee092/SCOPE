@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is performing routine delete and write operations on prefetch files in C:\\\\Windows\\\\Prefetch\\\\, which is normal behavior for the Windows Prefetcher service and does not indicate suspicious activity by svchost.exe itself.\"\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed writes by svchost.exe to prefetch files for netsh.exe and python.exe are normal system behavior, indicating these executables were run and the prefetcher updated their cache files.\"\n}"}

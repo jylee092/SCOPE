@@ -1,0 +1,15 @@
+{
+  "scenario": "covenant_psremoting_command_2020-08-06115603",
+  "tactic_sequence": [],
+  "technique_sequence": [],
+  "per_group_topk": [],
+  "notes": {
+    "n_total_events": 4284,
+    "n_filtered_events": 1166,
+    "n_lof_anomalous": 112,
+    "n_communities": 15,
+    "n_alerts": 0,
+    "alerts": [],
+    "elapsed_sec": 196.8
+  }
+}

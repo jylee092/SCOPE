@@ -1,0 +1,46 @@
+{
+  "scenario": "cmd_seatbelt_group_user_2020-11-0216391814",
+  "tactic_sequence": [],
+  "technique_sequence": [
+    "T1526"
+  ],
+  "per_group_topk": [
+    [
+      "T1526",
+      "T1087",
+      "T1083",
+      "T1074.001",
+      "T1588.003"
+    ]
+  ],
+  "notes": {
+    "n_alerts": 1,
+    "n_sigma_alerts": 1,
+    "n_deepag_top1_used": 0,
+    "alerts": [
+      {
+        "ts": "2020-11-02 04:39:11.681000+00:00",
+        "event_index": 44,
+        "event_id": 1,
+        "topk_tids": [
+          "T1526",
+          "T1087",
+          "T1083",
+          "T1074.001",
+          "T1588.003"
+        ],
+        "topk_tactics": [
+          "",
+          "Discovery",
+          "Discovery",
+          "Collection",
+          ""
+        ],
+        "deepag_top1": "T1074.001",
+        "deepag_prob": 8.479971438646317e-05,
+        "chosen_top1": "T1526",
+        "chosen_src": "sigma"
+      }
+    ]
+  }
+}

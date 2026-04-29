@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[lsass.exe|{d14e8c55-47b]\"\n  ],\n  \"rationale\": \"LSASS initiating an outbound network connection to an external, non-domain controller IP address is highly anomalous and a strong indicator of compromise, often associated with credential exfiltration or command and control activity.\"\n}"}

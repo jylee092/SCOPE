@@ -1,0 +1,178 @@
+[
+  {
+    "group_id": "T1036_005_1691",
+    "technique_id": "T1036.005",
+    "technique_name": "Match Legitimate Name or Location",
+    "confidence": 1.0,
+    "confidence_margin": 0.000704,
+    "generated_description": "Adversaries utilized a legitimate scripting interpreter, Python, to initiate an HTTP server on a compromised system. Executed from a PowerShell process and operating at an elevated integrity level, this server likely served to establish command and control communication or facilitate data transfer using standard web protocols.",
+    "similar_techniques": [
+      {
+        "rank": 1,
+        "technique_id": "T1059.006",
+        "technique_name": "Command and Scripting Interpreter: Python",
+        "tactic": "Execution",
+        "similarity": 0.6344,
+        "p_ttp": 0.011945,
+        "description": "Adversaries may abuse Python commands and scripts for execution. Python is a very popular scripting/programming language, with capabilities to perform many functions. Python can be executed interactively from the command-line (via the python.exe interpreter) or via scripts (.py) that can be written "
+      },
+      {
+        "rank": 2,
+        "technique_id": "T1505.003",
+        "technique_name": "Server Software Component: Web Shell",
+        "tactic": "Persistence",
+        "similarity": 0.6305,
+        "p_ttp": 0.011241,
+        "description": "Adversaries may backdoor web servers with web shells to establish persistent access to systems. A Web shell is a Web script that is placed on an openly accessible Web server to allow an adversary to access the Web server as a gateway into a network. A Web shell may provide a set of functions to exec"
+      },
+      {
+        "rank": 3,
+        "technique_id": "T1059",
+        "technique_name": "Command and Scripting Interpreter",
+        "tactic": "Execution",
+        "similarity": 0.6293,
+        "p_ttp": 0.011108,
+        "description": "Adversaries may abuse command and script interpreters to execute commands, scripts, or binaries. These interfaces and languages provide ways of interacting with computer systems and are a common feature across many different platforms. Most systems come with some built-in command-line interface and "
+      },
+      {
+        "rank": 4,
+        "technique_id": "T1059.001",
+        "technique_name": "Command and Scripting Interpreter: PowerShell",
+        "tactic": "Execution",
+        "similarity": 0.6004,
+        "p_ttp": 0.008749,
+        "description": "Adversaries may abuse PowerShell commands and scripts for execution. PowerShell is a powerful interactive command-line interface and scripting environment included in the Windows operating system. Adversaries can use PowerShell to perform a number of actions, including discovery of information and e"
+      },
+      {
+        "rank": 5,
+        "technique_id": "T1102.003",
+        "technique_name": "Web Service: One-Way Communication",
+        "tactic": "Command and Control",
+        "similarity": 0.5729,
+        "p_ttp": 0.007083,
+        "description": "Adversaries may use an existing, legitimate external Web service as a means for sending commands to a compromised system without receiving return output over the Web service channel. Compromised systems may leverage popular websites and social media to host command and control (C2) instructions. Tho"
+      }
+    ],
+    "all_idxs": [
+      973,
+      1690,
+      1691,
+      1692,
+      1694,
+      1695,
+      1697,
+      1698,
+      1699,
+      1700,
+      1701,
+      1702,
+      1703,
+      1704,
+      1705,
+      1706,
+      1712,
+      1713,
+      1714,
+      1715,
+      1716,
+      1717,
+      1718,
+      1719,
+      1720,
+      1721,
+      1722,
+      1723,
+      1724,
+      1725,
+      1726,
+      1727,
+      1728,
+      1729,
+      1730,
+      1731,
+      1732,
+      1735,
+      1736,
+      1737,
+      1738,
+      1739,
+      1740,
+      1741,
+      1742,
+      1743,
+      1744,
+      1746,
+      1747,
+      1748,
+      1749,
+      1750,
+      1757,
+      2367,
+      2374
+    ]
+  },
+  {
+    "group_id": "T1070_001_2",
+    "technique_id": "T1070.001",
+    "technique_name": "Clear Windows Event Logs",
+    "confidence": 0.5,
+    "confidence_margin": 0.003283,
+    "generated_description": "An adversary executed commands with elevated privileges, using PowerShell to orchestrate subsequent actions. They cleared event logs to hinder forensic analysis and remove traces of their activity. To facilitate network communication, the adversary modified the system's firewall rules using `netsh.exe` to allow inbound connections for a Python executable. Subsequently, they launched a Python HTTP server, likely for command and control or data exfiltration.",
+    "similar_techniques": [
+      {
+        "rank": 1,
+        "technique_id": "T1059.001",
+        "technique_name": "Command and Scripting Interpreter: PowerShell",
+        "tactic": "Execution",
+        "similarity": 0.5981,
+        "p_ttp": 0.011207,
+        "description": "Adversaries may abuse PowerShell commands and scripts for execution. PowerShell is a powerful interactive command-line interface and scripting environment included in the Windows operating system. Adversaries can use PowerShell to perform a number of actions, including discovery of information and e"
+      },
+      {
+        "rank": 2,
+        "technique_id": "T1569.002",
+        "technique_name": "System Services: Service Execution",
+        "tactic": "Execution",
+        "similarity": 0.5604,
+        "p_ttp": 0.007924,
+        "description": "Adversaries may abuse the Windows service control manager to execute malicious commands or payloads. The Windows service control manager (services.exe) is an interface to manage and manipulate services. The service control manager is accessible to users via GUI components as well as system utilities"
+      },
+      {
+        "rank": 3,
+        "technique_id": "T1546.007",
+        "technique_name": "Event Triggered Execution: Netsh Helper DLL",
+        "tactic": "Persistence",
+        "similarity": 0.5524,
+        "p_ttp": 0.007554,
+        "description": "Adversaries may establish persistence by executing malicious content triggered by Netsh Helper DLLs. Netsh.exe (also referred to as Netshell) is a command-line scripting utility used to interact with the network configuration of a system. It contains functionality to add helper DLLs for extending fu"
+      },
+      {
+        "rank": 4,
+        "technique_id": "T1202",
+        "technique_name": "Indirect Command Execution",
+        "tactic": "Defense Evasion",
+        "similarity": 0.5509,
+        "p_ttp": 0.007552,
+        "description": "Adversaries may abuse utilities that allow for command execution to bypass security restrictions that limit the use of command-line interpreters. Various Windows utilities may be used to execute commands, possibly without invoking [cmd](https://attack.mitre.org/software/S0106). For example, [Forfile"
+      },
+      {
+        "rank": 5,
+        "technique_id": "T1059.006",
+        "technique_name": "Command and Scripting Interpreter: Python",
+        "tactic": "Execution",
+        "similarity": 0.5477,
+        "p_ttp": 0.007396,
+        "description": "Adversaries may abuse Python commands and scripts for execution. Python is a very popular scripting/programming language, with capabilities to perform many functions. Python can be executed interactively from the command-line (via the python.exe interpreter) or via scripts (.py) that can be written "
+      }
+    ],
+    "all_idxs": [
+      2,
+      34,
+      35,
+      860,
+      861,
+      1688,
+      1690
+    ]
+  }
+]

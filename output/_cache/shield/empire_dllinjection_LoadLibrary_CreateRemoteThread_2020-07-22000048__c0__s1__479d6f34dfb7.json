@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is performing registry operations related to Windows Error Reporting, Host Activity Manager, and AppModel system data for Cortana and Feedback Hub, which are all legitimate Windows functionalities, and no suspicious command lines or other indicators were observed.\"\n}"}

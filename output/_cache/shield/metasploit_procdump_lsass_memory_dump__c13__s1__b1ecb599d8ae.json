@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed registry modifications and DLL loads by svchost.exe are consistent with the normal operation of Windows services related to Microsoft Account (Windows Live ID) authentication and certificate management, with no indicators of malicious activity or known attack patterns.\"\n}"}

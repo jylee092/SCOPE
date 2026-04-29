@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The community only shows Explorer.EXE performing routine registry modifications related to user activity tracking (UserAssist, FeatureUsage, ActivityDataModel), which is normal behavior for the Windows shell.\"\n}"}

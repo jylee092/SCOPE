@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[svchost.exe|{aa6b4a20-e96]\",\n    \"P[svchost.exe|{03ba39f5-e68]\"\n  ],\n  \"rationale\": \"Both svchost.exe instances are repeatedly connecting to a remote host on port 5985 (WinRM), which is a common protocol abused by attackers for lateral movement and remote execution.\"\n}"}

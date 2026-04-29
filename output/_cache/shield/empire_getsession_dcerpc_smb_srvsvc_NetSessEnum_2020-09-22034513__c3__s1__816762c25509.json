@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process modifying TaskCache registry keys is consistent with the normal operation of the Task Scheduler service, and no suspicious command-line arguments or other indicators were provided.\"\n}"}

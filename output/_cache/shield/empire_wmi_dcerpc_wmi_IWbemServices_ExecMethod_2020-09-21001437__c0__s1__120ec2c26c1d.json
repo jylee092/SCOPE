@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities, including registry creation in hivelist, network connections to port 138 (NetBIOS Name Service), and writes to Windows Event Trace Log files, are consistent with normal operating system functions performed by the System process and do not match known attack patterns.\"\n}"}

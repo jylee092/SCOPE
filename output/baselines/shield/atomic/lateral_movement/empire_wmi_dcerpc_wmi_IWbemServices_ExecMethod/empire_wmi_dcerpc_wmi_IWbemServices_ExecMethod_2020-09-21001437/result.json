@@ -1,0 +1,15 @@
+{
+  "scenario": "empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod_2020-09-21001437",
+  "tactic_sequence": [],
+  "technique_sequence": [],
+  "per_group_topk": [],
+  "notes": {
+    "n_total_events": 6383,
+    "n_filtered_events": 630,
+    "n_lof_anomalous": 80,
+    "n_communities": 11,
+    "n_alerts": 0,
+    "alerts": [],
+    "elapsed_sec": 98.1
+  }
+}

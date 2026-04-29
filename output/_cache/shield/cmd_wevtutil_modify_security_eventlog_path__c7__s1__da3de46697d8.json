@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The community shows PowerShell_ISE.exe performing routine file deletion in its own application data and loading standard system and PowerShell-related DLLs, with no notable command lines, child processes, or other indicators of compromise.\"\n}"}

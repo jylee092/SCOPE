@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed events involve 'smss.exe' and 'autochk.exe' performing standard system initialization tasks, including creating and setting numerous legitimate registry keys and writing to the pagefile, with no notable command lines or other indicators of compromise.\"\n}"}

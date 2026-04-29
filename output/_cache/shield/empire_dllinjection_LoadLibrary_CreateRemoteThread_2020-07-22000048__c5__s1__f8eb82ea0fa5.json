@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[System|{47b21e2e-951]\"\n  ],\n  \"rationale\": \"The System process initiating outbound connections to SMB (445) and NetBIOS (137, 138) ports is highly anomalous, as System typically hosts these services rather than connecting to them, suggesting potential compromise or malicious activity.\"\n}"}

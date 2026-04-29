@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The System process interacting with the Background Activity Moderator (BAM) registry keys to record user application launches (e.g., cmd.exe) is normal and expected Windows operating system behavior.\"\n}"}

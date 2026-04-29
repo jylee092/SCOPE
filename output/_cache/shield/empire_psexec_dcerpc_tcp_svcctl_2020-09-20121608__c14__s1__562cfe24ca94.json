@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed writes by svchost.exe to lastalive*.dat files in the EventLog directory are standard and expected behavior for the Windows Event Log service, indicating no suspicious activity.\"\n}"}

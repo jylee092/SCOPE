@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[notepad.exe|{b59756a9-b9b]\",\n    \"P[taskhostw.exe|{b59756a9-baa]\"\n  ],\n  \"rationale\": \"Notepad.exe exhibited highly unusual behavior by loading PowerShell-related DLLs, writing a PowerShell module (."}

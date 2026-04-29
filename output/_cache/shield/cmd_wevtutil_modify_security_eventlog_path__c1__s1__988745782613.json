@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The community only shows dllhost.exe loading a series of legitimate Windows and application-specific DLLs, and no command-line arguments or other behavioral indicators (like file writes, network connections, or child processes) were provided to suggest suspicious activity.\"\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is performing numerous registry operations and file writes consistent with the normal functioning of the Windows Update Orchestrator service (USOsvc), with no notable command lines or other suspicious indicators observed.\"\n}"}

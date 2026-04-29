@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The process SearchUI.exe is performing routine registry operations related to Windows Search and Cortana functionality, and no command-line arguments, unusual child processes, or other suspicious indicators are present in this community.\"\n}"}

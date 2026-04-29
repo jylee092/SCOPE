@@ -1,0 +1,236 @@
+{
+  "scenario": "psh_cmstp_execution_bypassuac_2020-10-2201543213",
+  "tactic_sequence": [
+    "Privilege Escalation",
+    "Defense Evasion",
+    "Privilege Escalation",
+    "Defense Evasion",
+    "Discovery"
+  ],
+  "technique_sequence": [
+    "T1548.002",
+    "T1218.003",
+    "T1548.002",
+    "T1202",
+    "T1033"
+  ],
+  "per_group_topk": [
+    [
+      "T1548.002",
+      "T1218.003",
+      "T1074.001",
+      "T1588.003",
+      "T0864"
+    ],
+    [
+      "T1218.003",
+      "T1543.003",
+      "T1074.001",
+      "T1574",
+      "T1098"
+    ],
+    [
+      "T1218.003",
+      "T1521.001",
+      "T1587.003",
+      "T0815",
+      "T0864"
+    ],
+    [
+      "T1218.003",
+      "T1559.001",
+      "T0864",
+      "T1521.001",
+      "T0815"
+    ],
+    [
+      "T1548.002",
+      "T1218.003",
+      "T1059",
+      "T0864",
+      "T0815"
+    ],
+    [
+      "T1202",
+      "T1589",
+      "T1027.002",
+      "T1036.008",
+      "T0878"
+    ],
+    [
+      "T1033",
+      "T1087.001",
+      "T0815",
+      "T1027.002",
+      "T0860"
+    ]
+  ],
+  "notes": {
+    "n_alerts": 7,
+    "n_sigma_alerts": 7,
+    "n_deepag_top1_used": 0,
+    "alerts": [
+      {
+        "ts": "2020-10-22 01:54:23.985000+00:00",
+        "event_index": 316,
+        "event_id": 1,
+        "topk_tids": [
+          "T1548.002",
+          "T1218.003",
+          "T1074.001",
+          "T1588.003",
+          "T0864"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Defense Evasion",
+          "Collection",
+          "",
+          ""
+        ],
+        "deepag_top1": "T1074.001",
+        "deepag_prob": 8.479971438646317e-05,
+        "chosen_top1": "T1548.002",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-10-22 01:54:24.190000+00:00",
+        "event_index": 627,
+        "event_id": 12,
+        "topk_tids": [
+          "T1218.003",
+          "T1543.003",
+          "T1074.001",
+          "T1574",
+          "T1098"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Persistence",
+          "Collection",
+          "Persistence",
+          "Persistence"
+        ],
+        "deepag_top1": "T1543.003",
+        "deepag_prob": 0.023735666647553444,
+        "chosen_top1": "T1218.003",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-10-22 01:54:24.190000+00:00",
+        "event_index": 628,
+        "event_id": 13,
+        "topk_tids": [
+          "T1218.003",
+          "T1521.001",
+          "T1587.003",
+          "T0815",
+          "T0864"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "deepag_top1": "T1521.001",
+        "deepag_prob": 0.0003343665739521384,
+        "chosen_top1": "T1218.003",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-10-22 01:54:24.296000+00:00",
+        "event_index": 637,
+        "event_id": 10,
+        "topk_tids": [
+          "T1218.003",
+          "T1559.001",
+          "T0864",
+          "T1521.001",
+          "T0815"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Execution",
+          "",
+          "",
+          ""
+        ],
+        "deepag_top1": "T0864",
+        "deepag_prob": 4.2639025195967406e-05,
+        "chosen_top1": "T1218.003",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-10-22 01:54:24.296000+00:00",
+        "event_index": 638,
+        "event_id": 1,
+        "topk_tids": [
+          "T1548.002",
+          "T1218.003",
+          "T1059",
+          "T0864",
+          "T0815"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Defense Evasion",
+          "Execution",
+          "",
+          ""
+        ],
+        "deepag_top1": "T0864",
+        "deepag_prob": 0.00019982049707323313,
+        "chosen_top1": "T1548.002",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-10-22 01:54:24.312000+00:00",
+        "event_index": 649,
+        "event_id": 1,
+        "topk_tids": [
+          "T1202",
+          "T1589",
+          "T1027.002",
+          "T1036.008",
+          "T0878"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "",
+          "Defense Evasion",
+          "Defense Evasion",
+          ""
+        ],
+        "deepag_top1": "T1589",
+        "deepag_prob": 0.0355062335729599,
+        "chosen_top1": "T1202",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-10-22 01:54:28.753000+00:00",
+        "event_index": 1015,
+        "event_id": 1,
+        "topk_tids": [
+          "T1033",
+          "T1087.001",
+          "T0815",
+          "T1027.002",
+          "T0860"
+        ],
+        "topk_tactics": [
+          "Discovery",
+          "Discovery",
+          "",
+          "Defense Evasion",
+          ""
+        ],
+        "deepag_top1": "T0815",
+        "deepag_prob": 0.005169679410755634,
+        "chosen_top1": "T1033",
+        "chosen_src": "sigma"
+      }
+    ]
+  }
+}

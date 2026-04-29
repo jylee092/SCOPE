@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[powershell.exe|{b34bc01c-20c]\"\n  ],\n  \"rationale\": \"The powershell.exe process wrote a Base64 encoded string to an unusual registry key (HKLM\\\\SOFTWARE\\\\Microsoft\\\\Network\\\\debug), which is a common technique for obfuscated malicious PowerShell execution or persistence.\"\n}"}

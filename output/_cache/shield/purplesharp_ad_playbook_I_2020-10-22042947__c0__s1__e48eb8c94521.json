@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The community shows svchost.exe processes performing writes to prefetch files in C:\\\\Windows\\\\Prefetch, which is normal system behavior for prefetch file management and does not exhibit any known attack patterns or suspicious indicators.\"\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed write operations by svchost.exe to EventLog service state files (lastaliveX.dat) are normal and expected behavior for the Windows Event Log service, and no suspicious command lines or other indicators were present.\"\n}"}

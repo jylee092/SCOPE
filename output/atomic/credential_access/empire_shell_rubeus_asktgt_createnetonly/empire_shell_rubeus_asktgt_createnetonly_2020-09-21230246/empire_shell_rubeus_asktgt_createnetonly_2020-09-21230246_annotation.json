@@ -1,0 +1,2573 @@
+{
+  "scenario": "empire_shell_rubeus_asktgt_createnetonly_2020-09-21230246",
+  "total_groups": 21,
+  "instruction": "각 그룹의 sample_logs와 anchor를 확인한 뒤 gt_ 필드를 채워주세요. gt_is_true_positive: 해당 그룹이 실제 공격 행위인지 (true/false). gt_technique_id: 실제 MITRE technique ID (예: T1059.001). gt_tactic: 실제 tactic 이름 (예: Execution). gt_notes: 판단 근거나 메모.",
+  "groups": [
+    {
+      "group_id": "T1558_003_640",
+      "rule_technique_id": "T1558.003",
+      "rule_technique_name": "Kerberoasting",
+      "confidence": 0.67,
+      "anchor": {
+        "idx": 640,
+        "EventID": 1,
+        "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+        "CommandLine": "\"C:\\users\\sbeavers\\Desktop\\Rubeus.exe\" asktgt /user:pgustavo /rc4:81d310fa34e6a56a31145445891bb7b8 /createnetonly:C:\\Windows\\System32\\cmd.exe",
+        "TimeCreated": "2020-09-22 03:03:08.667000+00:00"
+      },
+      "num_events": 158,
+      "event_id_distribution": {
+        "7": 108,
+        "12": 22,
+        "4656": 15,
+        "4663": 5,
+        "1": 3,
+        "17": 1,
+        "18": 1,
+        "10": 1,
+        "5": 1,
+        "3": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 50,
+          "EventID": 12,
+          "TimeCreated": "2020-09-22 03:03:00.391000+00:00",
+          "Image": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-4228717743-1032521047-1810997296-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 275,
+          "EventID": 12,
+          "TimeCreated": "2020-09-22 03:03:04.494000+00:00",
+          "Image": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-4228717743-1032521047-1810997296-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 637,
+          "EventID": 12,
+          "TimeCreated": "2020-09-22 03:03:08.666000+00:00",
+          "Image": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-4228717743-1032521047-1810997296-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 638,
+          "EventID": 17,
+          "TimeCreated": "2020-09-22 03:03:08.666000+00:00",
+          "Image": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 639,
+          "EventID": 18,
+          "TimeCreated": "2020-09-22 03:03:08.667000+00:00",
+          "Image": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 640,
+          "EventID": 1,
+          "TimeCreated": "2020-09-22 03:03:08.667000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "\"C:\\users\\sbeavers\\Desktop\\Rubeus.exe\" asktgt /user:pgustavo /rc4:81d310fa34e6a56a31145445891bb7b8 /createnetonly:C:\\Windows\\System32\\cmd.exe",
+          "ParentImage": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 643,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.669000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 644,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.669000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 646,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.670000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 645,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.670000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 647,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.671000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 649,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.673000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 650,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.673000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 651,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.673000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 652,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.673000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1558",
+      "gt_technique_name": "Kerberoasting",
+      "gt_tactic": "Credential Access",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(rubeus,asktgt,createnetonly)"
+    },
+    {
+      "group_id": "T1021_002_12",
+      "rule_technique_id": "T1021.002",
+      "rule_technique_name": "SMB/Windows Admin Shares",
+      "confidence": 0.11,
+      "anchor": {
+        "idx": 12,
+        "EventID": 4624,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-22 03:02:52.370000+00:00"
+      },
+      "num_events": 9,
+      "event_id_distribution": {
+        "4624": 4,
+        "5145": 4,
+        "5140": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 12,
+          "EventID": 4624,
+          "TimeCreated": "2020-09-22 03:02:52.370000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 298,
+          "EventID": 4624,
+          "TimeCreated": "2020-09-22 03:03:05.500000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 301,
+          "EventID": 5140,
+          "TimeCreated": "2020-09-22 03:03:05.502000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 306,
+          "EventID": 5145,
+          "TimeCreated": "2020-09-22 03:03:05.504000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 320,
+          "EventID": 5145,
+          "TimeCreated": "2020-09-22 03:03:05.510000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 330,
+          "EventID": 5145,
+          "TimeCreated": "2020-09-22 03:03:05.514000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 337,
+          "EventID": 4624,
+          "TimeCreated": "2020-09-22 03:03:05.516000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 347,
+          "EventID": 4624,
+          "TimeCreated": "2020-09-22 03:03:05.521000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 359,
+          "EventID": 5145,
+          "TimeCreated": "2020-09-22 03:03:05.526000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1558",
+      "gt_technique_name": "SMB/Windows Admin Shares",
+      "gt_tactic": "Credential Access",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1021.002)"
+    },
+    {
+      "group_id": "T1021_002_1492",
+      "rule_technique_id": "T1021.002",
+      "rule_technique_name": "SMB/Windows Admin Shares",
+      "confidence": 0.17,
+      "anchor": {
+        "idx": 1492,
+        "EventID": 4624,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-22 03:03:53.209000+00:00"
+      },
+      "num_events": 1,
+      "event_id_distribution": {
+        "4624": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 1492,
+          "EventID": 4624,
+          "TimeCreated": "2020-09-22 03:03:53.209000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1558",
+      "gt_technique_name": "SMB/Windows Admin Shares",
+      "gt_tactic": "Credential Access",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1021.002)"
+    },
+    {
+      "group_id": "T1021_002_2426",
+      "rule_technique_id": "T1021.002",
+      "rule_technique_name": "SMB/Windows Admin Shares",
+      "confidence": 0.17,
+      "anchor": {
+        "idx": 2426,
+        "EventID": 5140,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-22 03:04:02.664000+00:00"
+      },
+      "num_events": 6,
+      "event_id_distribution": {
+        "4624": 5,
+        "5140": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 1492,
+          "EventID": 4624,
+          "TimeCreated": "2020-09-22 03:03:53.209000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2426,
+          "EventID": 5140,
+          "TimeCreated": "2020-09-22 03:04:02.664000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3529,
+          "EventID": 4624,
+          "TimeCreated": "2020-09-22 03:04:23.243000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3533,
+          "EventID": 4624,
+          "TimeCreated": "2020-09-22 03:04:23.244000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3538,
+          "EventID": 4624,
+          "TimeCreated": "2020-09-22 03:04:23.246000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3556,
+          "EventID": 4624,
+          "TimeCreated": "2020-09-22 03:04:24.240000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1558",
+      "gt_technique_name": "SMB/Windows Admin Shares",
+      "gt_tactic": "Credential Access",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1021.002)"
+    },
+    {
+      "group_id": "T1021_003_1006",
+      "rule_technique_id": "T1021.003",
+      "rule_technique_name": "Distributed Component Object Model",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 1006,
+        "EventID": 4624,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-22 03:03:08.860000+00:00"
+      },
+      "num_events": 111,
+      "event_id_distribution": {
+        "7": 108,
+        "4624": 1,
+        "3": 1,
+        "22": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 643,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.669000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 644,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.669000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 645,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.670000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 646,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.670000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 647,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.671000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 649,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.673000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 650,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.673000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 651,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.673000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 652,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.673000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 653,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.674000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 654,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.674000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 655,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.675000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 656,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.677000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 657,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.678000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 658,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.678000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1558",
+      "gt_technique_name": "Distributed Component Object Model",
+      "gt_tactic": "Credential Access",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: sample-kw+ctx(T1021.003,c=1.00)"
+    },
+    {
+      "group_id": "T1021_003_1805",
+      "rule_technique_id": "T1021.003",
+      "rule_technique_name": "Distributed Component Object Model",
+      "confidence": 0.67,
+      "anchor": {
+        "idx": 1805,
+        "EventID": 1,
+        "Image": "C:\\Windows\\System32\\usocoreworker.exe",
+        "CommandLine": "C:\\Windows\\System32\\usocoreworker.exe -Embedding",
+        "TimeCreated": "2020-09-22 03:04:01.356000+00:00"
+      },
+      "num_events": 681,
+      "event_id_distribution": {
+        "7": 418,
+        "12": 114,
+        "13": 105,
+        "11": 14,
+        "23": 7,
+        "9": 6,
+        "1": 4,
+        "2": 4,
+        "10": 3,
+        "5": 3,
+        "3": 3
+      },
+      "sample_logs": [
+        {
+          "idx": 1687,
+          "EventID": 12,
+          "TimeCreated": "2020-09-22 03:04:00.297000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{BC3FCBC4-9738-4C74-BA9E-108757C9DC5C}"
+        },
+        {
+          "idx": 1688,
+          "EventID": 13,
+          "TimeCreated": "2020-09-22 03:04:00.298000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{BC3FCBC4-9738-4C74-BA9E-108757C9DC5C}\\DynamicInfo"
+        },
+        {
+          "idx": 1697,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:04:00.302000+00:00",
+          "Image": "C:\\Windows\\System32\\UsoClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1698,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:04:00.303000+00:00",
+          "Image": "C:\\Windows\\System32\\UsoClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1699,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:04:00.303000+00:00",
+          "Image": "C:\\Windows\\System32\\UsoClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1700,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:04:00.304000+00:00",
+          "Image": "C:\\Windows\\System32\\UsoClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1701,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:04:00.304000+00:00",
+          "Image": "C:\\Windows\\System32\\UsoClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1702,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:04:00.304000+00:00",
+          "Image": "C:\\Windows\\System32\\UsoClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1703,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:04:00.305000+00:00",
+          "Image": "C:\\Windows\\System32\\UsoClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1706,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:04:00.306000+00:00",
+          "Image": "C:\\Windows\\System32\\UsoClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1704,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:04:00.306000+00:00",
+          "Image": "C:\\Windows\\System32\\UsoClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1705,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:04:00.306000+00:00",
+          "Image": "C:\\Windows\\System32\\UsoClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1707,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:04:00.307000+00:00",
+          "Image": "C:\\Windows\\System32\\UsoClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1708,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:04:00.307000+00:00",
+          "Image": "C:\\Windows\\System32\\UsoClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1709,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:04:00.308000+00:00",
+          "Image": "C:\\Windows\\System32\\UsoClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1558",
+      "gt_technique_name": "Distributed Component Object Model",
+      "gt_tactic": "Credential Access",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1021.003)"
+    },
+    {
+      "group_id": "T1047_163",
+      "rule_technique_id": "T1047",
+      "rule_technique_name": "Windows Management Instrumentation",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 163,
+        "EventID": 5857,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-22 03:03:02.440000+00:00"
+      },
+      "num_events": 14,
+      "event_id_distribution": {
+        "3": 6,
+        "5857": 5,
+        "1": 3
+      },
+      "sample_logs": [
+        {
+          "idx": 107,
+          "EventID": 1,
+          "TimeCreated": "2020-09-22 03:03:01.421000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "C:\\windows\\system32\\wbem\\wmiprvse.exe -secured -Embedding",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 163,
+          "EventID": 5857,
+          "TimeCreated": "2020-09-22 03:03:02.440000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 165,
+          "EventID": 5857,
+          "TimeCreated": "2020-09-22 03:03:02.441000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 274,
+          "EventID": 3,
+          "TimeCreated": "2020-09-22 03:03:04.493000+00:00",
+          "Image": "System",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 277,
+          "EventID": 3,
+          "TimeCreated": "2020-09-22 03:03:04.494000+00:00",
+          "Image": "System",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 439,
+          "EventID": 3,
+          "TimeCreated": "2020-09-22 03:03:06.556000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 446,
+          "EventID": 3,
+          "TimeCreated": "2020-09-22 03:03:06.559000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 448,
+          "EventID": 3,
+          "TimeCreated": "2020-09-22 03:03:06.559000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 456,
+          "EventID": 3,
+          "TimeCreated": "2020-09-22 03:03:06.563000+00:00",
+          "Image": "System",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 668,
+          "EventID": 5857,
+          "TimeCreated": "2020-09-22 03:03:08.684000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 707,
+          "EventID": 1,
+          "TimeCreated": "2020-09-22 03:03:08.710000+00:00",
+          "Image": "C:\\Windows\\System32\\sppsvc.exe",
+          "CommandLine": "C:\\windows\\system32\\sppsvc.exe",
+          "ParentImage": "C:\\Windows\\System32\\services.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 856,
+          "EventID": 1,
+          "TimeCreated": "2020-09-22 03:03:08.790000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "C:\\windows\\system32\\wbem\\wmiprvse.exe -Embedding",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1039,
+          "EventID": 5857,
+          "TimeCreated": "2020-09-22 03:03:09.881000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1040,
+          "EventID": 5857,
+          "TimeCreated": "2020-09-22 03:03:09.881000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1558",
+      "gt_technique_name": "Windows Management Instrumentation",
+      "gt_tactic": "Credential Access",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1047)"
+    },
+    {
+      "group_id": "T1047_2074",
+      "rule_technique_id": "T1047",
+      "rule_technique_name": "Windows Management Instrumentation",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 2074,
+        "EventID": 5857,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-22 03:04:01.494000+00:00"
+      },
+      "num_events": 12,
+      "event_id_distribution": {
+        "1": 8,
+        "3": 3,
+        "5857": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 1684,
+          "EventID": 1,
+          "TimeCreated": "2020-09-22 03:04:00.295000+00:00",
+          "Image": "C:\\Windows\\System32\\UsoClient.exe",
+          "CommandLine": "C:\\windows\\system32\\usoclient.exe StartUWork",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1755,
+          "EventID": 1,
+          "TimeCreated": "2020-09-22 03:04:01.333000+00:00",
+          "Image": "C:\\Windows\\System32\\UsoClient.exe",
+          "CommandLine": "\"C:\\windows\\system32\\usoclient.exe\" StartScheduleTime",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1805,
+          "EventID": 1,
+          "TimeCreated": "2020-09-22 03:04:01.356000+00:00",
+          "Image": "C:\\Windows\\System32\\usocoreworker.exe",
+          "CommandLine": "C:\\Windows\\System32\\usocoreworker.exe -Embedding",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1905,
+          "EventID": 1,
+          "TimeCreated": "2020-09-22 03:04:01.413000+00:00",
+          "Image": "C:\\Windows\\System32\\MusNotification.exe",
+          "CommandLine": "C:\\windows\\system32\\MusNotification.exe",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2074,
+          "EventID": 5857,
+          "TimeCreated": "2020-09-22 03:04:01.494000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2155,
+          "EventID": 1,
+          "TimeCreated": "2020-09-22 03:04:01.535000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "C:\\windows\\system32\\wbem\\wmiprvse.exe -secured -Embedding",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2506,
+          "EventID": 1,
+          "TimeCreated": "2020-09-22 03:04:02.703000+00:00",
+          "Image": "C:\\Windows\\System32\\sppsvc.exe",
+          "CommandLine": "C:\\windows\\system32\\sppsvc.exe",
+          "ParentImage": "C:\\Windows\\System32\\services.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2852,
+          "EventID": 1,
+          "TimeCreated": "2020-09-22 03:04:02.874000+00:00",
+          "Image": "C:\\Windows\\System32\\MusNotification.exe",
+          "CommandLine": "C:\\windows\\system32\\MusNotification.exe",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2973,
+          "EventID": 3,
+          "TimeCreated": "2020-09-22 03:04:03.945000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3015,
+          "EventID": 1,
+          "TimeCreated": "2020-09-22 03:04:03.963000+00:00",
+          "Image": "C:\\Windows\\System32\\MusNotification.exe",
+          "CommandLine": "C:\\windows\\system32\\MusNotification.exe",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3207,
+          "EventID": 3,
+          "TimeCreated": "2020-09-22 03:04:06.060000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3469,
+          "EventID": 3,
+          "TimeCreated": "2020-09-22 03:04:18.208000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1558",
+      "gt_technique_name": "Windows Management Instrumentation",
+      "gt_tactic": "Credential Access",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1047)"
+    },
+    {
+      "group_id": "T1053_005_1330",
+      "rule_technique_id": "T1053.005",
+      "rule_technique_name": "Scheduled Task",
+      "confidence": 0.5,
+      "anchor": {
+        "idx": 1330,
+        "EventID": 4702,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-22 03:03:40.094000+00:00"
+      },
+      "num_events": 16,
+      "event_id_distribution": {
+        "13": 12,
+        "12": 3,
+        "4702": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 1317,
+          "EventID": 12,
+          "TimeCreated": "2020-09-22 03:03:40.085000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Plain\\{A6432082-89BD-434D-9C61-D7FE6D91CCB9}"
+        },
+        {
+          "idx": 1318,
+          "EventID": 13,
+          "TimeCreated": "2020-09-22 03:03:40.086000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Microsoft\\Windows\\SoftwareProtectionPlatform\\SvcRestartTask\\Index"
+        },
+        {
+          "idx": 1319,
+          "EventID": 13,
+          "TimeCreated": "2020-09-22 03:03:40.087000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{A6432082-89BD-434D-9C61-D7FE6D91CCB9}\\Hash"
+        },
+        {
+          "idx": 1320,
+          "EventID": 13,
+          "TimeCreated": "2020-09-22 03:03:40.087000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{A6432082-89BD-434D-9C61-D7FE6D91CCB9}\\Schema"
+        },
+        {
+          "idx": 1321,
+          "EventID": 13,
+          "TimeCreated": "2020-09-22 03:03:40.088000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{A6432082-89BD-434D-9C61-D7FE6D91CCB9}\\Version"
+        },
+        {
+          "idx": 1322,
+          "EventID": 13,
+          "TimeCreated": "2020-09-22 03:03:40.088000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{A6432082-89BD-434D-9C61-D7FE6D91CCB9}\\SecurityDescriptor"
+        },
+        {
+          "idx": 1323,
+          "EventID": 13,
+          "TimeCreated": "2020-09-22 03:03:40.088000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{A6432082-89BD-434D-9C61-D7FE6D91CCB9}\\Source"
+        },
+        {
+          "idx": 1324,
+          "EventID": 13,
+          "TimeCreated": "2020-09-22 03:03:40.089000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{A6432082-89BD-434D-9C61-D7FE6D91CCB9}\\Author"
+        },
+        {
+          "idx": 1325,
+          "EventID": 13,
+          "TimeCreated": "2020-09-22 03:03:40.090000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{A6432082-89BD-434D-9C61-D7FE6D91CCB9}\\Description"
+        },
+        {
+          "idx": 1326,
+          "EventID": 13,
+          "TimeCreated": "2020-09-22 03:03:40.090000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{A6432082-89BD-434D-9C61-D7FE6D91CCB9}\\URI"
+        },
+        {
+          "idx": 1327,
+          "EventID": 13,
+          "TimeCreated": "2020-09-22 03:03:40.091000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{A6432082-89BD-434D-9C61-D7FE6D91CCB9}\\Triggers"
+        },
+        {
+          "idx": 1328,
+          "EventID": 13,
+          "TimeCreated": "2020-09-22 03:03:40.092000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{A6432082-89BD-434D-9C61-D7FE6D91CCB9}\\Actions"
+        },
+        {
+          "idx": 1329,
+          "EventID": 12,
+          "TimeCreated": "2020-09-22 03:03:40.093000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKCR"
+        },
+        {
+          "idx": 1330,
+          "EventID": 4702,
+          "TimeCreated": "2020-09-22 03:03:40.094000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2021,
+          "EventID": 12,
+          "TimeCreated": "2020-09-22 03:04:01.470000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\VFUProvider"
+        }
+      ],
+      "gt_technique_id": "T1558",
+      "gt_technique_name": "Scheduled Task",
+      "gt_tactic": "Credential Access",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1053.005)"
+    },
+    {
+      "group_id": "T1053_005_1986",
+      "rule_technique_id": "T1053.005",
+      "rule_technique_name": "Scheduled Task",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 1986,
+        "EventID": 4702,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-22 03:04:01.452000+00:00"
+      },
+      "num_events": 685,
+      "event_id_distribution": {
+        "12": 364,
+        "13": 282,
+        "11": 22,
+        "1": 8,
+        "4698": 2,
+        "106": 2,
+        "4699": 2,
+        "141": 2,
+        "4702": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 1520,
+          "EventID": 12,
+          "TimeCreated": "2020-09-22 03:03:56.210000+00:00",
+          "Image": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-4228717743-1032521047-1810997296-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 1541,
+          "EventID": 12,
+          "TimeCreated": "2020-09-22 03:04:00.226000+00:00",
+          "Image": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-4228717743-1032521047-1810997296-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 1542,
+          "EventID": 13,
+          "TimeCreated": "2020-09-22 03:04:00.226000+00:00",
+          "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\NdisCap\\Parameters\\RefCount"
+        },
+        {
+          "idx": 1543,
+          "EventID": 13,
+          "TimeCreated": "2020-09-22 03:04:00.226000+00:00",
+          "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\.DEFAULT\\System\\CurrentControlSet\\Control\\NetTrace\\Session\\CaptureEnabled"
+        },
+        {
+          "idx": 1544,
+          "EventID": 12,
+          "TimeCreated": "2020-09-22 03:04:00.227000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Control\\NetworkSetup2\\Protocols"
+        },
+        {
+          "idx": 1545,
+          "EventID": 12,
+          "TimeCreated": "2020-09-22 03:04:00.228000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Control\\NetworkSetup2\\Filters"
+        },
+        {
+          "idx": 1546,
+          "EventID": 12,
+          "TimeCreated": "2020-09-22 03:04:00.228000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Control\\NetworkSetup2\\Interfaces"
+        },
+        {
+          "idx": 1548,
+          "EventID": 12,
+          "TimeCreated": "2020-09-22 03:04:00.229000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Control\\NetworkSetup2\\Services"
+        },
+        {
+          "idx": 1549,
+          "EventID": 12,
+          "TimeCreated": "2020-09-22 03:04:00.229000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Control\\NetworkSetup2\\Clients"
+        },
+        {
+          "idx": 1547,
+          "EventID": 12,
+          "TimeCreated": "2020-09-22 03:04:00.229000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Control\\NetworkSetup2\\BindRules"
+        },
+        {
+          "idx": 1550,
+          "EventID": 12,
+          "TimeCreated": "2020-09-22 03:04:00.230000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Control\\NetworkSetup2\\State"
+        },
+        {
+          "idx": 1551,
+          "EventID": 12,
+          "TimeCreated": "2020-09-22 03:04:00.231000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Control\\Class\\{4d36e972-e325-11ce-bfc1-08002be10318}\\0000"
+        },
+        {
+          "idx": 1552,
+          "EventID": 12,
+          "TimeCreated": "2020-09-22 03:04:00.231000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Control\\NetworkSetup2\\BindPaths\\{AFD3B9FC-85E3-31AE-CA58-C6C829075072}\\Properties\\{a111f1f2-5923-47c0-9a68-d0bafb577901}"
+        },
+        {
+          "idx": 1553,
+          "EventID": 13,
+          "TimeCreated": "2020-09-22 03:04:00.231000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Control\\NetworkSetup2\\BindPaths\\{AFD3B9FC-85E3-31AE-CA58-C6C829075072}\\Properties\\{a111f1f2-5923-47c0-9a68-d0bafb577901}"
+        },
+        {
+          "idx": 1554,
+          "EventID": 12,
+          "TimeCreated": "2020-09-22 03:04:00.232000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Control\\NetworkSetup2\\BindPaths\\{D4D94FA9-F35E-411F-C00A-3A647CF15A09}\\Properties\\{a111f1f2-5923-47c0-9a68-d0bafb577901}"
+        }
+      ],
+      "gt_technique_id": "T1558",
+      "gt_technique_name": "Scheduled Task",
+      "gt_tactic": "Credential Access",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: sample-kw+ctx(T1053.005,c=1.00)"
+    },
+    {
+      "group_id": "T1059_708",
+      "rule_technique_id": "T1059",
+      "rule_technique_name": "Command and Scripting Interpreter",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 708,
+        "EventID": 1,
+        "Image": "C:\\Windows\\System32\\cmd.exe",
+        "CommandLine": "\"C:\\Windows\\System32\\cmd.exe\"",
+        "TimeCreated": "2020-09-22 03:03:08.710000+00:00"
+      },
+      "num_events": 135,
+      "event_id_distribution": {
+        "7": 107,
+        "12": 22,
+        "1": 3,
+        "17": 1,
+        "18": 1,
+        "5": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 50,
+          "EventID": 12,
+          "TimeCreated": "2020-09-22 03:03:00.391000+00:00",
+          "Image": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-4228717743-1032521047-1810997296-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 275,
+          "EventID": 12,
+          "TimeCreated": "2020-09-22 03:03:04.494000+00:00",
+          "Image": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-4228717743-1032521047-1810997296-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 637,
+          "EventID": 12,
+          "TimeCreated": "2020-09-22 03:03:08.666000+00:00",
+          "Image": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-4228717743-1032521047-1810997296-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 638,
+          "EventID": 17,
+          "TimeCreated": "2020-09-22 03:03:08.666000+00:00",
+          "Image": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 639,
+          "EventID": 18,
+          "TimeCreated": "2020-09-22 03:03:08.667000+00:00",
+          "Image": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 640,
+          "EventID": 1,
+          "TimeCreated": "2020-09-22 03:03:08.667000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "\"C:\\users\\sbeavers\\Desktop\\Rubeus.exe\" asktgt /user:pgustavo /rc4:81d310fa34e6a56a31145445891bb7b8 /createnetonly:C:\\Windows\\System32\\cmd.exe",
+          "ParentImage": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 643,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.669000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 644,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.669000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 645,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.670000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 646,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.670000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 647,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.671000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 649,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.673000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 650,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.673000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 651,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.673000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 652,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.673000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1558",
+      "gt_technique_name": "Command and Scripting Interpreter",
+      "gt_tactic": "Credential Access",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: sample-kw+ctx(T1059,c=1.00)"
+    },
+    {
+      "group_id": "T1059_003_1014",
+      "rule_technique_id": "T1059.003",
+      "rule_technique_name": "Windows Command Shell",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 1014,
+        "EventID": 4688,
+        "Image": "nan",
+        "CommandLine": "\"C:\\Windows\\System32\\cmd.exe\"",
+        "TimeCreated": "2020-09-22 03:03:09.871000+00:00"
+      },
+      "num_events": 116,
+      "event_id_distribution": {
+        "7": 108,
+        "11": 4,
+        "1": 3,
+        "4688": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 53,
+          "EventID": 11,
+          "TimeCreated": "2020-09-22 03:03:01.394000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 640,
+          "EventID": 1,
+          "TimeCreated": "2020-09-22 03:03:08.667000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "\"C:\\users\\sbeavers\\Desktop\\Rubeus.exe\" asktgt /user:pgustavo /rc4:81d310fa34e6a56a31145445891bb7b8 /createnetonly:C:\\Windows\\System32\\cmd.exe",
+          "ParentImage": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 643,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.669000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 644,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.669000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 645,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.670000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 646,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.670000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 647,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.671000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 649,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.673000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 650,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.673000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 651,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.673000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 652,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.673000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 653,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.674000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 654,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.674000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 655,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.675000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 656,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:03:08.677000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1558",
+      "gt_technique_name": "Windows Command Shell",
+      "gt_tactic": "Credential Access",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: sample-kw+ctx(T1059.003,c=1.00)"
+    },
+    {
+      "group_id": "T1069_002_323",
+      "rule_technique_id": "T1069.002",
+      "rule_technique_name": "Domain Groups Discovery",
+      "confidence": 0.0,
+      "anchor": {
+        "idx": 323,
+        "EventID": 4661,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-22 03:03:05.512000+00:00"
+      },
+      "num_events": 1,
+      "event_id_distribution": {
+        "4661": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 323,
+          "EventID": 4661,
+          "TimeCreated": "2020-09-22 03:03:05.512000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1558",
+      "gt_technique_name": "Domain Groups Discovery",
+      "gt_tactic": "Credential Access",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:c=0,no-kw,rule!=fam(T1069.002)"
+    },
+    {
+      "group_id": "T1070_004_1671",
+      "rule_technique_id": "T1070.004",
+      "rule_technique_name": "File Deletion",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 1671,
+        "EventID": 23,
+        "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-22 03:04:00.289000+00:00"
+      },
+      "num_events": 559,
+      "event_id_distribution": {
+        "7": 292,
+        "12": 114,
+        "13": 107,
+        "11": 14,
+        "23": 8,
+        "1": 8,
+        "9": 6,
+        "2": 4,
+        "10": 3,
+        "5": 3
+      },
+      "sample_logs": [
+        {
+          "idx": 1542,
+          "EventID": 13,
+          "TimeCreated": "2020-09-22 03:04:00.226000+00:00",
+          "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\NdisCap\\Parameters\\RefCount"
+        },
+        {
+          "idx": 1543,
+          "EventID": 13,
+          "TimeCreated": "2020-09-22 03:04:00.226000+00:00",
+          "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\.DEFAULT\\System\\CurrentControlSet\\Control\\NetTrace\\Session\\CaptureEnabled"
+        },
+        {
+          "idx": 1671,
+          "EventID": 23,
+          "TimeCreated": "2020-09-22 03:04:00.289000+00:00",
+          "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1684,
+          "EventID": 1,
+          "TimeCreated": "2020-09-22 03:04:00.295000+00:00",
+          "Image": "C:\\Windows\\System32\\UsoClient.exe",
+          "CommandLine": "C:\\windows\\system32\\usoclient.exe StartUWork",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1687,
+          "EventID": 12,
+          "TimeCreated": "2020-09-22 03:04:00.297000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{BC3FCBC4-9738-4C74-BA9E-108757C9DC5C}"
+        },
+        {
+          "idx": 1688,
+          "EventID": 13,
+          "TimeCreated": "2020-09-22 03:04:00.298000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{BC3FCBC4-9738-4C74-BA9E-108757C9DC5C}\\DynamicInfo"
+        },
+        {
+          "idx": 1755,
+          "EventID": 1,
+          "TimeCreated": "2020-09-22 03:04:01.333000+00:00",
+          "Image": "C:\\Windows\\System32\\UsoClient.exe",
+          "CommandLine": "\"C:\\windows\\system32\\usoclient.exe\" StartScheduleTime",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1801,
+          "EventID": 12,
+          "TimeCreated": "2020-09-22 03:04:01.353000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{BC3FCBC4-9738-4C74-BA9E-108757C9DC5C}"
+        },
+        {
+          "idx": 1802,
+          "EventID": 13,
+          "TimeCreated": "2020-09-22 03:04:01.354000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{BC3FCBC4-9738-4C74-BA9E-108757C9DC5C}\\DynamicInfo"
+        },
+        {
+          "idx": 1805,
+          "EventID": 1,
+          "TimeCreated": "2020-09-22 03:04:01.356000+00:00",
+          "Image": "C:\\Windows\\System32\\usocoreworker.exe",
+          "CommandLine": "C:\\Windows\\System32\\usocoreworker.exe -Embedding",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1809,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:04:01.359000+00:00",
+          "Image": "C:\\Windows\\System32\\usocoreworker.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1810,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:04:01.359000+00:00",
+          "Image": "C:\\Windows\\System32\\usocoreworker.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1811,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:04:01.360000+00:00",
+          "Image": "C:\\Windows\\System32\\usocoreworker.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1812,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:04:01.360000+00:00",
+          "Image": "C:\\Windows\\System32\\usocoreworker.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1813,
+          "EventID": 7,
+          "TimeCreated": "2020-09-22 03:04:01.360000+00:00",
+          "Image": "C:\\Windows\\System32\\usocoreworker.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1558",
+      "gt_technique_name": "File Deletion",
+      "gt_tactic": "Credential Access",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1070.004)"
+    },
+    {
+      "group_id": "T1087_002_309",
+      "rule_technique_id": "T1087.002",
+      "rule_technique_name": "Domain Account Discovery",
+      "confidence": 0.0,
+      "anchor": {
+        "idx": 309,
+        "EventID": 4661,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-22 03:03:05.504000+00:00"
+      },
+      "num_events": 1,
+      "event_id_distribution": {
+        "4661": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 309,
+          "EventID": 4661,
+          "TimeCreated": "2020-09-22 03:03:05.504000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1558",
+      "gt_technique_name": "Domain Account Discovery",
+      "gt_tactic": "Credential Access",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:c=0,no-kw,rule!=fam(T1087.002)"
+    },
+    {
+      "group_id": "T1087_002_312",
+      "rule_technique_id": "T1087.002",
+      "rule_technique_name": "Domain Account Discovery",
+      "confidence": 0.0,
+      "anchor": {
+        "idx": 312,
+        "EventID": 4661,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-22 03:03:05.507000+00:00"
+      },
+      "num_events": 1,
+      "event_id_distribution": {
+        "4661": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 312,
+          "EventID": 4661,
+          "TimeCreated": "2020-09-22 03:03:05.507000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1558",
+      "gt_technique_name": "Domain Account Discovery",
+      "gt_tactic": "Credential Access",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:c=0,no-kw,rule!=fam(T1087.002)"
+    },
+    {
+      "group_id": "T1087_002_322",
+      "rule_technique_id": "T1087.002",
+      "rule_technique_name": "Domain Account Discovery",
+      "confidence": 0.0,
+      "anchor": {
+        "idx": 322,
+        "EventID": 4661,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-22 03:03:05.511000+00:00"
+      },
+      "num_events": 1,
+      "event_id_distribution": {
+        "4661": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 322,
+          "EventID": 4661,
+          "TimeCreated": "2020-09-22 03:03:05.511000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1558",
+      "gt_technique_name": "Domain Account Discovery",
+      "gt_tactic": "Credential Access",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:c=0,no-kw,rule!=fam(T1087.002)"
+    },
+    {
+      "group_id": "T1112_1542",
+      "rule_technique_id": "T1112",
+      "rule_technique_name": "Modify Registry",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 1542,
+        "EventID": 13,
+        "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-22 03:04:00.226000+00:00"
+      },
+      "num_events": 11,
+      "event_id_distribution": {
+        "1": 8,
+        "13": 2,
+        "23": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 1542,
+          "EventID": 13,
+          "TimeCreated": "2020-09-22 03:04:00.226000+00:00",
+          "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\NdisCap\\Parameters\\RefCount"
+        },
+        {
+          "idx": 1543,
+          "EventID": 13,
+          "TimeCreated": "2020-09-22 03:04:00.226000+00:00",
+          "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\.DEFAULT\\System\\CurrentControlSet\\Control\\NetTrace\\Session\\CaptureEnabled"
+        },
+        {
+          "idx": 1671,
+          "EventID": 23,
+          "TimeCreated": "2020-09-22 03:04:00.289000+00:00",
+          "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1684,
+          "EventID": 1,
+          "TimeCreated": "2020-09-22 03:04:00.295000+00:00",
+          "Image": "C:\\Windows\\System32\\UsoClient.exe",
+          "CommandLine": "C:\\windows\\system32\\usoclient.exe StartUWork",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1755,
+          "EventID": 1,
+          "TimeCreated": "2020-09-22 03:04:01.333000+00:00",
+          "Image": "C:\\Windows\\System32\\UsoClient.exe",
+          "CommandLine": "\"C:\\windows\\system32\\usoclient.exe\" StartScheduleTime",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1805,
+          "EventID": 1,
+          "TimeCreated": "2020-09-22 03:04:01.356000+00:00",
+          "Image": "C:\\Windows\\System32\\usocoreworker.exe",
+          "CommandLine": "C:\\Windows\\System32\\usocoreworker.exe -Embedding",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1905,
+          "EventID": 1,
+          "TimeCreated": "2020-09-22 03:04:01.413000+00:00",
+          "Image": "C:\\Windows\\System32\\MusNotification.exe",
+          "CommandLine": "C:\\windows\\system32\\MusNotification.exe",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2155,
+          "EventID": 1,
+          "TimeCreated": "2020-09-22 03:04:01.535000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "C:\\windows\\system32\\wbem\\wmiprvse.exe -secured -Embedding",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2506,
+          "EventID": 1,
+          "TimeCreated": "2020-09-22 03:04:02.703000+00:00",
+          "Image": "C:\\Windows\\System32\\sppsvc.exe",
+          "CommandLine": "C:\\windows\\system32\\sppsvc.exe",
+          "ParentImage": "C:\\Windows\\System32\\services.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2852,
+          "EventID": 1,
+          "TimeCreated": "2020-09-22 03:04:02.874000+00:00",
+          "Image": "C:\\Windows\\System32\\MusNotification.exe",
+          "CommandLine": "C:\\windows\\system32\\MusNotification.exe",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3015,
+          "EventID": 1,
+          "TimeCreated": "2020-09-22 03:04:03.963000+00:00",
+          "Image": "C:\\Windows\\System32\\MusNotification.exe",
+          "CommandLine": "C:\\windows\\system32\\MusNotification.exe",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1558",
+      "gt_technique_name": "Modify Registry",
+      "gt_tactic": "Credential Access",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1112)"
+    },
+    {
+      "group_id": "T1134_205",
+      "rule_technique_id": "T1134",
+      "rule_technique_name": "Access Token Manipulation",
+      "confidence": 0.67,
+      "anchor": {
+        "idx": 205,
+        "EventID": 4673,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-22 03:03:02.459000+00:00"
+      },
+      "num_events": 124,
+      "event_id_distribution": {
+        "10": 120,
+        "1": 3,
+        "4673": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 68,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:03:01.403000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 69,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:03:01.403000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 71,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:03:01.404000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 72,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:03:01.404000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 73,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:03:01.405000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 74,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:03:01.405000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 75,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:03:01.405000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 76,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:03:01.406000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 77,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:03:01.406000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 78,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:03:01.407000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 79,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:03:01.407000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 80,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:03:01.408000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 81,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:03:01.408000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 106,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:03:01.420000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 105,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:03:01.420000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1558",
+      "gt_technique_name": "Access Token Manipulation",
+      "gt_tactic": "Credential Access",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1134)"
+    },
+    {
+      "group_id": "T1134_1035",
+      "rule_technique_id": "T1134",
+      "rule_technique_name": "Access Token Manipulation",
+      "confidence": 0.67,
+      "anchor": {
+        "idx": 1035,
+        "EventID": 4673,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-22 03:03:09.878000+00:00"
+      },
+      "num_events": 112,
+      "event_id_distribution": {
+        "10": 108,
+        "1": 3,
+        "4673": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 54,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:03:01.395000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 55,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:03:01.396000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 56,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:03:01.396000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 57,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:03:01.396000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 58,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:03:01.397000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 59,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:03:01.397000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 60,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:03:01.398000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 61,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:03:01.399000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 62,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:03:01.399000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 63,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:03:01.400000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 64,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:03:01.400000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 65,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:03:01.401000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 66,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:03:01.401000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 640,
+          "EventID": 1,
+          "TimeCreated": "2020-09-22 03:03:08.667000+00:00",
+          "Image": "C:\\Users\\sbeavers\\Desktop\\Rubeus.exe",
+          "CommandLine": "\"C:\\users\\sbeavers\\Desktop\\Rubeus.exe\" asktgt /user:pgustavo /rc4:81d310fa34e6a56a31145445891bb7b8 /createnetonly:C:\\Windows\\System32\\cmd.exe",
+          "ParentImage": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 641,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:03:08.668000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1558",
+      "gt_technique_name": "Access Token Manipulation",
+      "gt_tactic": "Credential Access",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: sample-kw+ctx(T1134,c=0.67)"
+    },
+    {
+      "group_id": "T1134_1983",
+      "rule_technique_id": "T1134",
+      "rule_technique_name": "Access Token Manipulation",
+      "confidence": 0.67,
+      "anchor": {
+        "idx": 1983,
+        "EventID": 4673,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-22 03:04:01.452000+00:00"
+      },
+      "num_events": 227,
+      "event_id_distribution": {
+        "10": 217,
+        "1": 8,
+        "4673": 2
+      },
+      "sample_logs": [
+        {
+          "idx": 1527,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:03:59.226000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1528,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:03:59.227000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1529,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:03:59.227000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1674,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:04:00.291000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1676,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:04:00.291000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1677,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:04:00.292000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1678,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:04:00.292000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1679,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:04:00.293000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1680,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:04:00.293000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1681,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:04:00.293000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1682,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:04:00.294000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1684,
+          "EventID": 1,
+          "TimeCreated": "2020-09-22 03:04:00.295000+00:00",
+          "Image": "C:\\Windows\\System32\\UsoClient.exe",
+          "CommandLine": "C:\\windows\\system32\\usoclient.exe StartUWork",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1685,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:04:00.295000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1683,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:04:00.295000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1686,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 03:04:00.296000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1558",
+      "gt_technique_name": "Access Token Manipulation",
+      "gt_tactic": "Credential Access",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1134)"
+    }
+  ]
+}

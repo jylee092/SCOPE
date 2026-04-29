@@ -1,0 +1,15 @@
+{
+  "scenario": "purplesharp_ad_playbook_I_2020-10-22042947",
+  "tactic_sequence": [],
+  "technique_sequence": [],
+  "per_group_topk": [],
+  "notes": {
+    "n_total_events": 25993,
+    "n_filtered_events": 21689,
+    "n_lof_anomalous": 494,
+    "n_communities": 16,
+    "n_alerts": 0,
+    "alerts": [],
+    "elapsed_sec": 168.7
+  }
+}

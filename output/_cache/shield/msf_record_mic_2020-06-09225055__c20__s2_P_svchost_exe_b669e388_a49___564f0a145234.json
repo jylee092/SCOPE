@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": false,\n  \"deviation\": \"\",\n  \"indicators\": [\n    \"svchost.exe\",\n    \"WinRM\",\n    \"dpapi.dll\",\n    \"wmidcom.dll\",\n    \"registry_internet_settings\"\n  ]\n}"}

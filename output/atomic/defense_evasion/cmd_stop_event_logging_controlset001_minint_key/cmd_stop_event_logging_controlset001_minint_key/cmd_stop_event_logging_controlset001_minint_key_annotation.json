@@ -1,0 +1,3429 @@
+{
+  "scenario": "cmd_stop_event_logging_controlset001_minint_key",
+  "total_groups": 31,
+  "instruction": "각 그룹의 sample_logs와 anchor를 확인한 뒤 gt_ 필드를 채워주세요. gt_is_true_positive: 해당 그룹이 실제 공격 행위인지 (true/false). gt_technique_id: 실제 MITRE technique ID (예: T1059.001). gt_tactic: 실제 tactic 이름 (예: Execution). gt_notes: 판단 근거나 메모.",
+  "groups": [
+    {
+      "group_id": "T1003_1043",
+      "rule_technique_id": "T1003",
+      "rule_technique_name": "OS Credential Dumping",
+      "confidence": 0.5,
+      "anchor": {
+        "idx": 1043,
+        "EventID": 10,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2022-08-03 07:30:09.471000+00:00"
+      },
+      "num_events": 16,
+      "event_id_distribution": {
+        "10": 8,
+        "4656": 5,
+        "4670": 3
+      },
+      "sample_logs": [
+        {
+          "idx": 211,
+          "EventID": 4670,
+          "TimeCreated": "2022-08-03 07:30:06.450000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1043,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:30:09.471000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1045,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:30:09.471000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2151,
+          "EventID": 4670,
+          "TimeCreated": "2022-08-03 07:30:13.086000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2454,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:30:14.725000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3677,
+          "EventID": 4656,
+          "TimeCreated": "2022-08-03 07:30:17.226000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3680,
+          "EventID": 4656,
+          "TimeCreated": "2022-08-03 07:30:17.226000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3681,
+          "EventID": 4656,
+          "TimeCreated": "2022-08-03 07:30:17.226000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 4714,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:30:19.905000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 4717,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:30:19.905000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 5256,
+          "EventID": 4670,
+          "TimeCreated": "2022-08-03 07:30:20.600000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 5587,
+          "EventID": 4656,
+          "TimeCreated": "2022-08-03 07:30:21.494000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 5592,
+          "EventID": 4656,
+          "TimeCreated": "2022-08-03 07:30:21.496000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6635,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:30:25.051000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 8752,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:30:30.141000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1562.002",
+      "gt_technique_name": "OS Credential Dumping",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1003)"
+    },
+    {
+      "group_id": "T1003_10369",
+      "rule_technique_id": "T1003",
+      "rule_technique_name": "OS Credential Dumping",
+      "confidence": 0.0,
+      "anchor": {
+        "idx": 10369,
+        "EventID": 10,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2022-08-03 07:30:35.272000+00:00"
+      },
+      "num_events": 1,
+      "event_id_distribution": {
+        "10": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 10369,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:30:35.272000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1562.002",
+      "gt_technique_name": "OS Credential Dumping",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:c=0,no-kw,rule!=fam(T1003)"
+    },
+    {
+      "group_id": "T1003_10826",
+      "rule_technique_id": "T1003",
+      "rule_technique_name": "OS Credential Dumping",
+      "confidence": 0.0,
+      "anchor": {
+        "idx": 10826,
+        "EventID": 10,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2022-08-03 07:30:40.753000+00:00"
+      },
+      "num_events": 1,
+      "event_id_distribution": {
+        "10": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 10826,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:30:40.753000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1562.002",
+      "gt_technique_name": "OS Credential Dumping",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:c=0,no-kw,rule!=fam(T1003)"
+    },
+    {
+      "group_id": "T1003_10828",
+      "rule_technique_id": "T1003",
+      "rule_technique_name": "OS Credential Dumping",
+      "confidence": 0.0,
+      "anchor": {
+        "idx": 10828,
+        "EventID": 10,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2022-08-03 07:30:40.753000+00:00"
+      },
+      "num_events": 1,
+      "event_id_distribution": {
+        "10": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 10828,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:30:40.753000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1562.002",
+      "gt_technique_name": "OS Credential Dumping",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:c=0,no-kw,rule!=fam(T1003)"
+    },
+    {
+      "group_id": "T1003_11223",
+      "rule_technique_id": "T1003",
+      "rule_technique_name": "OS Credential Dumping",
+      "confidence": 0.0,
+      "anchor": {
+        "idx": 11223,
+        "EventID": 10,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2022-08-03 07:30:45.913000+00:00"
+      },
+      "num_events": 1,
+      "event_id_distribution": {
+        "10": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 11223,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:30:45.913000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1562.002",
+      "gt_technique_name": "OS Credential Dumping",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:c=0,no-kw,rule!=fam(T1003)"
+    },
+    {
+      "group_id": "T1003_11610",
+      "rule_technique_id": "T1003",
+      "rule_technique_name": "OS Credential Dumping",
+      "confidence": 0.0,
+      "anchor": {
+        "idx": 11610,
+        "EventID": 10,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2022-08-03 07:30:50.990000+00:00"
+      },
+      "num_events": 1,
+      "event_id_distribution": {
+        "10": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 11610,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:30:50.990000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1562.002",
+      "gt_technique_name": "OS Credential Dumping",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:c=0,no-kw,rule!=fam(T1003)"
+    },
+    {
+      "group_id": "T1003_11614",
+      "rule_technique_id": "T1003",
+      "rule_technique_name": "OS Credential Dumping",
+      "confidence": 0.0,
+      "anchor": {
+        "idx": 11614,
+        "EventID": 10,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2022-08-03 07:30:50.990000+00:00"
+      },
+      "num_events": 1,
+      "event_id_distribution": {
+        "10": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 11614,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:30:50.990000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1562.002",
+      "gt_technique_name": "OS Credential Dumping",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:c=0,no-kw,rule!=fam(T1003)"
+    },
+    {
+      "group_id": "T1003_12011",
+      "rule_technique_id": "T1003",
+      "rule_technique_name": "OS Credential Dumping",
+      "confidence": 0.0,
+      "anchor": {
+        "idx": 12011,
+        "EventID": 10,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2022-08-03 07:30:56.086000+00:00"
+      },
+      "num_events": 1,
+      "event_id_distribution": {
+        "10": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 12011,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:30:56.086000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1562.002",
+      "gt_technique_name": "OS Credential Dumping",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:c=0,no-kw,rule!=fam(T1003)"
+    },
+    {
+      "group_id": "T1003_12394",
+      "rule_technique_id": "T1003",
+      "rule_technique_name": "OS Credential Dumping",
+      "confidence": 0.0,
+      "anchor": {
+        "idx": 12394,
+        "EventID": 10,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2022-08-03 07:31:01.177000+00:00"
+      },
+      "num_events": 1,
+      "event_id_distribution": {
+        "10": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 12394,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:31:01.177000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1562.002",
+      "gt_technique_name": "OS Credential Dumping",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:c=0,no-kw,rule!=fam(T1003)"
+    },
+    {
+      "group_id": "T1003_12400",
+      "rule_technique_id": "T1003",
+      "rule_technique_name": "OS Credential Dumping",
+      "confidence": 0.0,
+      "anchor": {
+        "idx": 12400,
+        "EventID": 10,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2022-08-03 07:31:01.177000+00:00"
+      },
+      "num_events": 1,
+      "event_id_distribution": {
+        "10": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 12400,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:31:01.177000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1562.002",
+      "gt_technique_name": "OS Credential Dumping",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:c=0,no-kw,rule!=fam(T1003)"
+    },
+    {
+      "group_id": "T1003_12767",
+      "rule_technique_id": "T1003",
+      "rule_technique_name": "OS Credential Dumping",
+      "confidence": 0.0,
+      "anchor": {
+        "idx": 12767,
+        "EventID": 10,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2022-08-03 07:31:06.260000+00:00"
+      },
+      "num_events": 1,
+      "event_id_distribution": {
+        "10": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 12767,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:31:06.260000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1562.002",
+      "gt_technique_name": "OS Credential Dumping",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:c=0,no-kw,rule!=fam(T1003)"
+    },
+    {
+      "group_id": "T1003_13167",
+      "rule_technique_id": "T1003",
+      "rule_technique_name": "OS Credential Dumping",
+      "confidence": 0.0,
+      "anchor": {
+        "idx": 13167,
+        "EventID": 10,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2022-08-03 07:31:11.396000+00:00"
+      },
+      "num_events": 1,
+      "event_id_distribution": {
+        "10": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 13167,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:31:11.396000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1562.002",
+      "gt_technique_name": "OS Credential Dumping",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:c=0,no-kw,rule!=fam(T1003)"
+    },
+    {
+      "group_id": "T1003_13179",
+      "rule_technique_id": "T1003",
+      "rule_technique_name": "OS Credential Dumping",
+      "confidence": 0.0,
+      "anchor": {
+        "idx": 13179,
+        "EventID": 10,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2022-08-03 07:31:11.396000+00:00"
+      },
+      "num_events": 1,
+      "event_id_distribution": {
+        "10": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 13179,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:31:11.396000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1562.002",
+      "gt_technique_name": "OS Credential Dumping",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:c=0,no-kw,rule!=fam(T1003)"
+    },
+    {
+      "group_id": "T1021_003_58",
+      "rule_technique_id": "T1021.003",
+      "rule_technique_name": "Distributed Component Object Model",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 58,
+        "EventID": 1,
+        "Image": "C:\\Windows\\System32\\wermgr.exe",
+        "CommandLine": "C:\\Windows\\system32\\wermgr.exe -upload",
+        "TimeCreated": "2022-08-03 07:30:05.723000+00:00"
+      },
+      "num_events": 3120,
+      "event_id_distribution": {
+        "7": 1572,
+        "13": 757,
+        "12": 729,
+        "22": 12,
+        "11": 10,
+        "3": 9,
+        "1": 7,
+        "4624": 5,
+        "5": 5,
+        "23": 4,
+        "10": 3,
+        "2": 3,
+        "9": 2,
+        "18": 1,
+        "4648": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 3,
+          "EventID": 12,
+          "TimeCreated": "2022-08-03 07:30:05.684000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "\\REGISTRY\\A\\{562d5938-b3df-47e2-8870-ff9ce1e13d9a}\\WorkItems\\{7103aee3-bb83-468f-97bf-9247ee978e37}"
+        },
+        {
+          "idx": 9,
+          "EventID": 12,
+          "TimeCreated": "2022-08-03 07:30:05.686000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{FA103B2E-5EB2-499F-9443-9765F29C7B5B}"
+        },
+        {
+          "idx": 11,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:05.686000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{FA103B2E-5EB2-499F-9443-9765F29C7B5B}\\DynamicInfo"
+        },
+        {
+          "idx": 13,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:05.687000+00:00",
+          "Image": "C:\\Windows\\System32\\taskhostw.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 14,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:05.687000+00:00",
+          "Image": "C:\\Windows\\System32\\taskhostw.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 15,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:05.688000+00:00",
+          "Image": "C:\\Windows\\System32\\taskhostw.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 16,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:05.689000+00:00",
+          "Image": "C:\\Windows\\System32\\taskhostw.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 20,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:05.700000+00:00",
+          "Image": "C:\\Windows\\System32\\taskhostw.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 21,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:05.700000+00:00",
+          "Image": "C:\\Windows\\System32\\taskhostw.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 18,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:05.700000+00:00",
+          "Image": "C:\\Windows\\System32\\taskhostw.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 19,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:05.700000+00:00",
+          "Image": "C:\\Windows\\System32\\taskhostw.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 22,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:05.701000+00:00",
+          "Image": "C:\\Windows\\System32\\taskhostw.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:05.701000+00:00",
+          "Image": "C:\\Windows\\System32\\taskhostw.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 24,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:05.701000+00:00",
+          "Image": "C:\\Windows\\System32\\taskhostw.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 25,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:05.701000+00:00",
+          "Image": "C:\\Windows\\System32\\taskhostw.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1562.002",
+      "gt_technique_name": "Distributed Component Object Model",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1021.003)"
+    },
+    {
+      "group_id": "T1021_003_15878",
+      "rule_technique_id": "T1021.003",
+      "rule_technique_name": "Distributed Component Object Model",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 15878,
+        "EventID": 1,
+        "Image": "C:\\Windows\\System32\\slui.exe",
+        "CommandLine": "C:\\Windows\\System32\\slui.exe -Embedding",
+        "TimeCreated": "2022-08-03 11:35:11.110000+00:00"
+      },
+      "num_events": 65,
+      "event_id_distribution": {
+        "7": 54,
+        "3": 4,
+        "12": 4,
+        "22": 2,
+        "1": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 15475,
+          "EventID": 22,
+          "TimeCreated": "2022-08-03 11:35:10.396000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 15476,
+          "EventID": 22,
+          "TimeCreated": "2022-08-03 11:35:10.396000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 15825,
+          "EventID": 3,
+          "TimeCreated": "2022-08-03 11:35:10.660000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 15826,
+          "EventID": 3,
+          "TimeCreated": "2022-08-03 11:35:10.660000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 15829,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 11:35:10.814000+00:00",
+          "Image": "C:\\Windows\\System32\\slui.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 15861,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 11:35:10.848000+00:00",
+          "Image": "C:\\Windows\\System32\\slui.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 15869,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 11:35:11.101000+00:00",
+          "Image": "C:\\Windows\\System32\\slui.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 15876,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 11:35:11.102000+00:00",
+          "Image": "C:\\Windows\\System32\\slui.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 15878,
+          "EventID": 1,
+          "TimeCreated": "2022-08-03 11:35:11.110000+00:00",
+          "Image": "C:\\Windows\\System32\\slui.exe",
+          "CommandLine": "C:\\Windows\\System32\\slui.exe -Embedding",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 15881,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 11:35:11.111000+00:00",
+          "Image": "C:\\Windows\\System32\\slui.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 15883,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 11:35:11.112000+00:00",
+          "Image": "C:\\Windows\\System32\\slui.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 15884,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 11:35:11.113000+00:00",
+          "Image": "C:\\Windows\\System32\\slui.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 15885,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 11:35:11.114000+00:00",
+          "Image": "C:\\Windows\\System32\\slui.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 15887,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 11:35:11.132000+00:00",
+          "Image": "C:\\Windows\\System32\\slui.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 15888,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 11:35:11.132000+00:00",
+          "Image": "C:\\Windows\\System32\\slui.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1562.002",
+      "gt_technique_name": "Distributed Component Object Model",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1021.003)"
+    },
+    {
+      "group_id": "T1053_005_1683",
+      "rule_technique_id": "T1053.005",
+      "rule_technique_name": "Scheduled Task",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 1683,
+        "EventID": 4702,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2022-08-03 07:30:10.697000+00:00"
+      },
+      "num_events": 5067,
+      "event_id_distribution": {
+        "12": 3580,
+        "13": 1404,
+        "11": 53,
+        "1": 26,
+        "4702": 4
+      },
+      "sample_logs": [
+        {
+          "idx": 1,
+          "EventID": 1,
+          "TimeCreated": "2022-08-03 07:30:05.629000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3,
+          "EventID": 12,
+          "TimeCreated": "2022-08-03 07:30:05.684000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "\\REGISTRY\\A\\{562d5938-b3df-47e2-8870-ff9ce1e13d9a}\\WorkItems\\{7103aee3-bb83-468f-97bf-9247ee978e37}"
+        },
+        {
+          "idx": 6,
+          "EventID": 1,
+          "TimeCreated": "2022-08-03 07:30:05.685000+00:00",
+          "Image": "C:\\Windows\\System32\\taskhostw.exe",
+          "CommandLine": "taskhostw.exe Install $(Arg0)",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 9,
+          "EventID": 12,
+          "TimeCreated": "2022-08-03 07:30:05.686000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{FA103B2E-5EB2-499F-9443-9765F29C7B5B}"
+        },
+        {
+          "idx": 10,
+          "EventID": 12,
+          "TimeCreated": "2022-08-03 07:30:05.686000+00:00",
+          "Image": "C:\\Windows\\System32\\VBoxService.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Control\\TimeZoneInformation"
+        },
+        {
+          "idx": 11,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:05.686000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{FA103B2E-5EB2-499F-9443-9765F29C7B5B}\\DynamicInfo"
+        },
+        {
+          "idx": 32,
+          "EventID": 12,
+          "TimeCreated": "2022-08-03 07:30:05.703000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{FA103B2E-5EB2-499F-9443-9765F29C7B5B}"
+        },
+        {
+          "idx": 33,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:05.704000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{FA103B2E-5EB2-499F-9443-9765F29C7B5B}\\DynamicInfo"
+        },
+        {
+          "idx": 37,
+          "EventID": 1,
+          "TimeCreated": "2022-08-03 07:30:05.708000+00:00",
+          "Image": "C:\\Windows\\System32\\taskhostw.exe",
+          "CommandLine": "taskhostw.exe SYSTEM",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 42,
+          "EventID": 12,
+          "TimeCreated": "2022-08-03 07:30:05.709000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{1C654285-C780-4C07-8D95-D950BB7A03E7}"
+        },
+        {
+          "idx": 41,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:05.709000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{1C654285-C780-4C07-8D95-D950BB7A03E7}\\DynamicInfo"
+        },
+        {
+          "idx": 43,
+          "EventID": 12,
+          "TimeCreated": "2022-08-03 07:30:05.710000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{B75AF762-3C5C-4C74-ADB1-B99F98FDE0E5}"
+        },
+        {
+          "idx": 44,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:05.710000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{B75AF762-3C5C-4C74-ADB1-B99F98FDE0E5}\\DynamicInfo"
+        },
+        {
+          "idx": 50,
+          "EventID": 1,
+          "TimeCreated": "2022-08-03 07:30:05.716000+00:00",
+          "Image": "C:\\Windows\\System32\\wsqmcons.exe",
+          "CommandLine": "C:\\Windows\\System32\\wsqmcons.exe",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 52,
+          "EventID": 12,
+          "TimeCreated": "2022-08-03 07:30:05.717000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{0B76A047-5E0D-48D6-97E9-1CB6702F8832}"
+        }
+      ],
+      "gt_technique_id": "T1562.002",
+      "gt_technique_name": "Scheduled Task",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1053.005)"
+    },
+    {
+      "group_id": "T1053_005_10755",
+      "rule_technique_id": "T1053.005",
+      "rule_technique_name": "Scheduled Task",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 10755,
+        "EventID": 4702,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2022-08-03 07:30:36.696000+00:00"
+      },
+      "num_events": 1326,
+      "event_id_distribution": {
+        "12": 842,
+        "13": 458,
+        "11": 23,
+        "1": 2,
+        "4702": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 8055,
+          "EventID": 12,
+          "TimeCreated": "2022-08-03 07:30:26.701000+00:00",
+          "Image": "C:\\Windows\\system32\\backgroundTaskHost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002\\Software\\Microsoft"
+        },
+        {
+          "idx": 8056,
+          "EventID": 12,
+          "TimeCreated": "2022-08-03 07:30:26.701000+00:00",
+          "Image": "C:\\Windows\\system32\\backgroundTaskHost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "\\REGISTRY\\A\\{d4c920b6-b7b7-1808-610c-227748f139d8}\\LocalState"
+        },
+        {
+          "idx": 8057,
+          "EventID": 12,
+          "TimeCreated": "2022-08-03 07:30:26.701000+00:00",
+          "Image": "C:\\Windows\\system32\\backgroundTaskHost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002"
+        },
+        {
+          "idx": 8058,
+          "EventID": 12,
+          "TimeCreated": "2022-08-03 07:30:26.701000+00:00",
+          "Image": "C:\\Windows\\system32\\backgroundTaskHost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002\\Software\\Microsoft\\Windows\\CurrentVersion"
+        },
+        {
+          "idx": 8059,
+          "EventID": 12,
+          "TimeCreated": "2022-08-03 07:30:26.701000+00:00",
+          "Image": "C:\\Windows\\system32\\backgroundTaskHost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002\\Software\\Microsoft\\Windows"
+        },
+        {
+          "idx": 8060,
+          "EventID": 12,
+          "TimeCreated": "2022-08-03 07:30:26.701000+00:00",
+          "Image": "C:\\Windows\\system32\\backgroundTaskHost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002\\Software"
+        },
+        {
+          "idx": 8080,
+          "EventID": 12,
+          "TimeCreated": "2022-08-03 07:30:26.702000+00:00",
+          "Image": "C:\\Windows\\system32\\backgroundTaskHost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002\\Software"
+        },
+        {
+          "idx": 8081,
+          "EventID": 12,
+          "TimeCreated": "2022-08-03 07:30:26.702000+00:00",
+          "Image": "C:\\Windows\\system32\\backgroundTaskHost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002"
+        },
+        {
+          "idx": 8082,
+          "EventID": 12,
+          "TimeCreated": "2022-08-03 07:30:26.702000+00:00",
+          "Image": "C:\\Windows\\system32\\backgroundTaskHost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer"
+        },
+        {
+          "idx": 8083,
+          "EventID": 12,
+          "TimeCreated": "2022-08-03 07:30:26.702000+00:00",
+          "Image": "C:\\Windows\\system32\\backgroundTaskHost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002\\Software\\Microsoft\\Windows\\CurrentVersion"
+        },
+        {
+          "idx": 8084,
+          "EventID": 12,
+          "TimeCreated": "2022-08-03 07:30:26.702000+00:00",
+          "Image": "C:\\Windows\\system32\\backgroundTaskHost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002\\Software\\Microsoft\\Windows"
+        },
+        {
+          "idx": 8085,
+          "EventID": 12,
+          "TimeCreated": "2022-08-03 07:30:26.702000+00:00",
+          "Image": "C:\\Windows\\system32\\backgroundTaskHost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002\\Software\\Microsoft"
+        },
+        {
+          "idx": 8088,
+          "EventID": 12,
+          "TimeCreated": "2022-08-03 07:30:26.702000+00:00",
+          "Image": "C:\\Windows\\system32\\backgroundTaskHost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002\\Software\\Microsoft"
+        },
+        {
+          "idx": 8087,
+          "EventID": 12,
+          "TimeCreated": "2022-08-03 07:30:26.702000+00:00",
+          "Image": "C:\\Windows\\system32\\backgroundTaskHost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002\\Software\\Microsoft"
+        },
+        {
+          "idx": 8078,
+          "EventID": 12,
+          "TimeCreated": "2022-08-03 07:30:26.702000+00:00",
+          "Image": "C:\\Windows\\system32\\backgroundTaskHost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002"
+        }
+      ],
+      "gt_technique_id": "T1562.002",
+      "gt_technique_name": "Scheduled Task",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1053.005)"
+    },
+    {
+      "group_id": "T1055_129",
+      "rule_technique_id": "T1055",
+      "rule_technique_name": "Process Injection",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 129,
+        "EventID": 10,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2022-08-03 07:30:06.017000+00:00"
+      },
+      "num_events": 1550,
+      "event_id_distribution": {
+        "7": 1525,
+        "1": 24,
+        "10": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 1,
+          "EventID": 1,
+          "TimeCreated": "2022-08-03 07:30:05.629000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6,
+          "EventID": 1,
+          "TimeCreated": "2022-08-03 07:30:05.685000+00:00",
+          "Image": "C:\\Windows\\System32\\taskhostw.exe",
+          "CommandLine": "taskhostw.exe Install $(Arg0)",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 13,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:05.687000+00:00",
+          "Image": "C:\\Windows\\System32\\taskhostw.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 14,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:05.687000+00:00",
+          "Image": "C:\\Windows\\System32\\taskhostw.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 15,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:05.688000+00:00",
+          "Image": "C:\\Windows\\System32\\taskhostw.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 16,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:05.689000+00:00",
+          "Image": "C:\\Windows\\System32\\taskhostw.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 18,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:05.700000+00:00",
+          "Image": "C:\\Windows\\System32\\taskhostw.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 19,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:05.700000+00:00",
+          "Image": "C:\\Windows\\System32\\taskhostw.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 20,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:05.700000+00:00",
+          "Image": "C:\\Windows\\System32\\taskhostw.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 21,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:05.700000+00:00",
+          "Image": "C:\\Windows\\System32\\taskhostw.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 25,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:05.701000+00:00",
+          "Image": "C:\\Windows\\System32\\taskhostw.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 24,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:05.701000+00:00",
+          "Image": "C:\\Windows\\System32\\taskhostw.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 23,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:05.701000+00:00",
+          "Image": "C:\\Windows\\System32\\taskhostw.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 22,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:05.701000+00:00",
+          "Image": "C:\\Windows\\System32\\taskhostw.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 26,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:05.702000+00:00",
+          "Image": "C:\\Windows\\System32\\taskhostw.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1562.002",
+      "gt_technique_name": "Process Injection",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1055)"
+    },
+    {
+      "group_id": "T1059_10774",
+      "rule_technique_id": "T1059",
+      "rule_technique_name": "Command and Scripting Interpreter",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 10774,
+        "EventID": 1,
+        "Image": "C:\\Windows\\System32\\cmd.exe",
+        "CommandLine": "C:\\Windows\\system32\\cmd.exe",
+        "TimeCreated": "2022-08-03 07:30:40.053000+00:00"
+      },
+      "num_events": 63,
+      "event_id_distribution": {
+        "7": 47,
+        "13": 8,
+        "17": 2,
+        "18": 2,
+        "1": 2,
+        "12": 2
+      },
+      "sample_logs": [
+        {
+          "idx": 9733,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:32.948000+00:00",
+          "Image": "C:\\Windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\\"
+        },
+        {
+          "idx": 9734,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:32.948000+00:00",
+          "Image": "C:\\Windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\\"
+        },
+        {
+          "idx": 9735,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:32.997000+00:00",
+          "Image": "C:\\Windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002\\Software\\Microsoft\\Windows\\CurrentVersion\\ActivityDataModel\\ReaderRevisionInfo\\FA037D7B-C952-4F7D-AE4"
+        },
+        {
+          "idx": 9736,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:33.013000+00:00",
+          "Image": "C:\\Windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002\\Software\\Microsoft\\Windows\\CurrentVersion\\ActivityDataModel\\ReaderRevisionInfo\\FA037D7B-C952-4F7D-AE4"
+        },
+        {
+          "idx": 10760,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:37.264000+00:00",
+          "Image": "C:\\Windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\\"
+        },
+        {
+          "idx": 10761,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:37.264000+00:00",
+          "Image": "C:\\Windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\\"
+        },
+        {
+          "idx": 10768,
+          "EventID": 17,
+          "TimeCreated": "2022-08-03 07:30:40.052000+00:00",
+          "Image": "C:\\Users\\IT01-Pedro\\Downloads\\payload.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 10769,
+          "EventID": 18,
+          "TimeCreated": "2022-08-03 07:30:40.052000+00:00",
+          "Image": "C:\\Users\\IT01-Pedro\\Downloads\\payload.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 10770,
+          "EventID": 17,
+          "TimeCreated": "2022-08-03 07:30:40.052000+00:00",
+          "Image": "C:\\Users\\IT01-Pedro\\Downloads\\payload.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 10771,
+          "EventID": 18,
+          "TimeCreated": "2022-08-03 07:30:40.052000+00:00",
+          "Image": "C:\\Users\\IT01-Pedro\\Downloads\\payload.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 10772,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:40.052000+00:00",
+          "Image": "C:\\Users\\IT01-Pedro\\Downloads\\payload.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\bam\\State\\UserSettings\\S-1-5-21-968647429-258479840-2507984072-1001\\\\Device\\HarddiskVolume2\\Windows\\System32\\cm"
+        },
+        {
+          "idx": 10774,
+          "EventID": 1,
+          "TimeCreated": "2022-08-03 07:30:40.053000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "C:\\Windows\\system32\\cmd.exe",
+          "ParentImage": "C:\\Users\\IT01-Pedro\\Downloads\\payload.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 10777,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:40.071000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 10778,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:40.096000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 10782,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:40.130000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1562.002",
+      "gt_technique_name": "Command and Scripting Interpreter",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1059)"
+    },
+    {
+      "group_id": "T1059_001_15046",
+      "rule_technique_id": "T1059.001",
+      "rule_technique_name": "PowerShell",
+      "confidence": 0.62,
+      "anchor": {
+        "idx": 15046,
+        "EventID": 4104,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2022-08-03 07:31:35.226000+00:00"
+      },
+      "num_events": 1157,
+      "event_id_distribution": {
+        "10": 1092,
+        "4103": 18,
+        "7": 17,
+        "12": 13,
+        "13": 8,
+        "4105": 4,
+        "4104": 2,
+        "4106": 2,
+        "1": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 14272,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:31:26.615000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 14273,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:31:26.615000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 14274,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:31:26.615000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 14275,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:31:26.615000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 14276,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:31:26.615000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 14285,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:31:26.616000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 14284,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:31:26.616000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 14283,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:31:26.616000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 14281,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:31:26.616000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 14282,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:31:26.616000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 14279,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:31:26.616000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 14278,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:31:26.616000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 14277,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:31:26.616000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 14280,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:31:26.616000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 14295,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:31:26.622000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1562.002",
+      "gt_technique_name": "PowerShell",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1059.001)"
+    },
+    {
+      "group_id": "T1059_001_15471",
+      "rule_technique_id": "T1059.001",
+      "rule_technique_name": "PowerShell",
+      "confidence": 0.69,
+      "anchor": {
+        "idx": 15471,
+        "EventID": 4104,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2022-08-03 11:35:10.353000+00:00"
+      },
+      "num_events": 511,
+      "event_id_distribution": {
+        "10": 373,
+        "12": 66,
+        "7": 54,
+        "13": 7,
+        "4106": 3,
+        "4103": 2,
+        "4105": 2,
+        "22": 2,
+        "4104": 1,
+        "1": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 15466,
+          "EventID": 4103,
+          "TimeCreated": "2022-08-03 11:35:10.306000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 15468,
+          "EventID": 4106,
+          "TimeCreated": "2022-08-03 11:35:10.348000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 15469,
+          "EventID": 4103,
+          "TimeCreated": "2022-08-03 11:35:10.349000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 15470,
+          "EventID": 4105,
+          "TimeCreated": "2022-08-03 11:35:10.353000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 15471,
+          "EventID": 4104,
+          "TimeCreated": "2022-08-03 11:35:10.353000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 15472,
+          "EventID": 4105,
+          "TimeCreated": "2022-08-03 11:35:10.354000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 15473,
+          "EventID": 4106,
+          "TimeCreated": "2022-08-03 11:35:10.355000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 15474,
+          "EventID": 4106,
+          "TimeCreated": "2022-08-03 11:35:10.355000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 15476,
+          "EventID": 22,
+          "TimeCreated": "2022-08-03 11:35:10.396000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 15475,
+          "EventID": 22,
+          "TimeCreated": "2022-08-03 11:35:10.396000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 15477,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 11:35:10.402000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 15489,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 11:35:10.403000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 15488,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 11:35:10.403000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 15487,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 11:35:10.403000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 15486,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 11:35:10.403000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1562.002",
+      "gt_technique_name": "PowerShell",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1059.001)"
+    },
+    {
+      "group_id": "T1059_003_10767",
+      "rule_technique_id": "T1059.003",
+      "rule_technique_name": "Windows Command Shell",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 10767,
+        "EventID": 4688,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2022-08-03 07:30:40.044000+00:00"
+      },
+      "num_events": 87,
+      "event_id_distribution": {
+        "7": 70,
+        "11": 14,
+        "1": 2,
+        "4688": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 9202,
+          "EventID": 11,
+          "TimeCreated": "2022-08-03 07:30:30.563000+00:00",
+          "Image": "C:\\Windows\\system32\\backgroundTaskHost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 9203,
+          "EventID": 11,
+          "TimeCreated": "2022-08-03 07:30:30.565000+00:00",
+          "Image": "C:\\Windows\\system32\\backgroundTaskHost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 9206,
+          "EventID": 11,
+          "TimeCreated": "2022-08-03 07:30:30.568000+00:00",
+          "Image": "C:\\Windows\\system32\\backgroundTaskHost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 9229,
+          "EventID": 11,
+          "TimeCreated": "2022-08-03 07:30:30.988000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 9230,
+          "EventID": 11,
+          "TimeCreated": "2022-08-03 07:30:31.237000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 9231,
+          "EventID": 11,
+          "TimeCreated": "2022-08-03 07:30:31.332000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 9269,
+          "EventID": 11,
+          "TimeCreated": "2022-08-03 07:30:31.678000+00:00",
+          "Image": "C:\\Windows\\system32\\backgroundTaskHost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 9270,
+          "EventID": 11,
+          "TimeCreated": "2022-08-03 07:30:31.680000+00:00",
+          "Image": "C:\\Windows\\system32\\backgroundTaskHost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 9273,
+          "EventID": 11,
+          "TimeCreated": "2022-08-03 07:30:31.694000+00:00",
+          "Image": "C:\\Windows\\system32\\backgroundTaskHost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 10018,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:33.550000+00:00",
+          "Image": "C:\\Windows\\System32\\RuntimeBroker.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 10021,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:33.551000+00:00",
+          "Image": "C:\\Windows\\System32\\RuntimeBroker.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 10019,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:33.551000+00:00",
+          "Image": "C:\\Windows\\System32\\RuntimeBroker.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 10020,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:33.551000+00:00",
+          "Image": "C:\\Windows\\System32\\RuntimeBroker.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 10022,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:33.552000+00:00",
+          "Image": "C:\\Windows\\System32\\RuntimeBroker.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 10206,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:34.446000+00:00",
+          "Image": "C:\\Windows\\System32\\backgroundTaskHost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1562.002",
+      "gt_technique_name": "Windows Command Shell",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1059.003)"
+    },
+    {
+      "group_id": "T1070_004_86",
+      "rule_technique_id": "T1070.004",
+      "rule_technique_name": "File Deletion",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 86,
+        "EventID": 23,
+        "Image": "C:\\Windows\\Explorer.EXE",
+        "CommandLine": "nan",
+        "TimeCreated": "2022-08-03 07:30:05.826000+00:00"
+      },
+      "num_events": 2156,
+      "event_id_distribution": {
+        "12": 913,
+        "13": 746,
+        "7": 330,
+        "10": 95,
+        "1": 26,
+        "11": 12,
+        "2": 12,
+        "23": 7,
+        "18": 6,
+        "9": 2,
+        "22": 2,
+        "3": 2,
+        "17": 2,
+        "5": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 1,
+          "EventID": 1,
+          "TimeCreated": "2022-08-03 07:30:05.629000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3,
+          "EventID": 12,
+          "TimeCreated": "2022-08-03 07:30:05.684000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "\\REGISTRY\\A\\{562d5938-b3df-47e2-8870-ff9ce1e13d9a}\\WorkItems\\{7103aee3-bb83-468f-97bf-9247ee978e37}"
+        },
+        {
+          "idx": 6,
+          "EventID": 1,
+          "TimeCreated": "2022-08-03 07:30:05.685000+00:00",
+          "Image": "C:\\Windows\\System32\\taskhostw.exe",
+          "CommandLine": "taskhostw.exe Install $(Arg0)",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 37,
+          "EventID": 1,
+          "TimeCreated": "2022-08-03 07:30:05.708000+00:00",
+          "Image": "C:\\Windows\\System32\\taskhostw.exe",
+          "CommandLine": "taskhostw.exe SYSTEM",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 50,
+          "EventID": 1,
+          "TimeCreated": "2022-08-03 07:30:05.716000+00:00",
+          "Image": "C:\\Windows\\System32\\wsqmcons.exe",
+          "CommandLine": "C:\\Windows\\System32\\wsqmcons.exe",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 58,
+          "EventID": 1,
+          "TimeCreated": "2022-08-03 07:30:05.723000+00:00",
+          "Image": "C:\\Windows\\System32\\wermgr.exe",
+          "CommandLine": "C:\\Windows\\system32\\wermgr.exe -upload",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 66,
+          "EventID": 1,
+          "TimeCreated": "2022-08-03 07:30:05.728000+00:00",
+          "Image": "C:\\Windows\\System32\\UsoClient.exe",
+          "CommandLine": "C:\\Windows\\system32\\usoclient.exe StartScan",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 75,
+          "EventID": 1,
+          "TimeCreated": "2022-08-03 07:30:05.733000+00:00",
+          "Image": "C:\\Windows\\System32\\sc.exe",
+          "CommandLine": "C:\\Windows\\system32\\sc.exe start wuauserv",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 86,
+          "EventID": 23,
+          "TimeCreated": "2022-08-03 07:30:05.826000+00:00",
+          "Image": "C:\\Windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 87,
+          "EventID": 11,
+          "TimeCreated": "2022-08-03 07:30:05.826000+00:00",
+          "Image": "C:\\Windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 94,
+          "EventID": 12,
+          "TimeCreated": "2022-08-03 07:30:05.967000+00:00",
+          "Image": "C:\\Windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FeatureUsage\\AppSwitched"
+        },
+        {
+          "idx": 112,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:05.968000+00:00",
+          "Image": "C:\\Windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FeatureUsage\\AppSwitched\\Microsoft.Windows.Explore"
+        },
+        {
+          "idx": 123,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:30:06.012000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 122,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:30:06.012000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 121,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:06.012000+00:00",
+          "Image": "C:\\Windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\\"
+        }
+      ],
+      "gt_technique_id": "T1562.002",
+      "gt_technique_name": "File Deletion",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1070.004)"
+    },
+    {
+      "group_id": "T1071_001_5856",
+      "rule_technique_id": "T1071.001",
+      "rule_technique_name": "Web Protocols",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 5856,
+        "EventID": 3,
+        "Image": "C:\\Users\\IT01-Pedro\\Downloads\\payload.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2022-08-03 07:30:22.947000+00:00"
+      },
+      "num_events": 5211,
+      "event_id_distribution": {
+        "12": 3095,
+        "13": 1294,
+        "7": 792,
+        "22": 9,
+        "5156": 4,
+        "3": 4,
+        "1": 3,
+        "18": 3,
+        "5158": 2,
+        "17": 2,
+        "23": 1,
+        "11": 1,
+        "10": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 2048,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:12.961000+00:00",
+          "Image": "C:\\Windows\\System32\\usocoreworker.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2049,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:12.962000+00:00",
+          "Image": "C:\\Windows\\SystemApps\\Microsoft.Windows.AppRep.ChxApp_cw5n1h2txyewy\\CHXSmartScreen.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2050,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:12.962000+00:00",
+          "Image": "C:\\Windows\\System32\\usocoreworker.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2052,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:12.963000+00:00",
+          "Image": "C:\\Windows\\SystemApps\\Microsoft.Windows.AppRep.ChxApp_cw5n1h2txyewy\\CHXSmartScreen.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2053,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:12.963000+00:00",
+          "Image": "C:\\Windows\\SystemApps\\Microsoft.Windows.AppRep.ChxApp_cw5n1h2txyewy\\CHXSmartScreen.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2054,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:12.963000+00:00",
+          "Image": "C:\\Windows\\SystemApps\\Microsoft.Windows.AppRep.ChxApp_cw5n1h2txyewy\\CHXSmartScreen.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2055,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:12.964000+00:00",
+          "Image": "C:\\Windows\\SystemApps\\Microsoft.Windows.AppRep.ChxApp_cw5n1h2txyewy\\CHXSmartScreen.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2056,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:12.964000+00:00",
+          "Image": "C:\\Windows\\SystemApps\\Microsoft.Windows.AppRep.ChxApp_cw5n1h2txyewy\\CHXSmartScreen.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2057,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:12.965000+00:00",
+          "Image": "C:\\Windows\\SystemApps\\Microsoft.Windows.AppRep.ChxApp_cw5n1h2txyewy\\CHXSmartScreen.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2058,
+          "EventID": 12,
+          "TimeCreated": "2022-08-03 07:30:12.965000+00:00",
+          "Image": "C:\\Windows\\SystemApps\\Microsoft.Windows.AppRep.ChxApp_cw5n1h2txyewy\\CHXSmartScreen.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002"
+        },
+        {
+          "idx": 2059,
+          "EventID": 12,
+          "TimeCreated": "2022-08-03 07:30:12.965000+00:00",
+          "Image": "C:\\Windows\\SystemApps\\Microsoft.Windows.AppRep.ChxApp_cw5n1h2txyewy\\CHXSmartScreen.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002\\Software"
+        },
+        {
+          "idx": 2060,
+          "EventID": 12,
+          "TimeCreated": "2022-08-03 07:30:12.965000+00:00",
+          "Image": "C:\\Windows\\SystemApps\\Microsoft.Windows.AppRep.ChxApp_cw5n1h2txyewy\\CHXSmartScreen.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002\\Software\\Microsoft"
+        },
+        {
+          "idx": 2061,
+          "EventID": 12,
+          "TimeCreated": "2022-08-03 07:30:12.965000+00:00",
+          "Image": "C:\\Windows\\SystemApps\\Microsoft.Windows.AppRep.ChxApp_cw5n1h2txyewy\\CHXSmartScreen.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002\\Software\\Microsoft\\Windows"
+        },
+        {
+          "idx": 2067,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:12.966000+00:00",
+          "Image": "C:\\Windows\\SystemApps\\Microsoft.Windows.AppRep.ChxApp_cw5n1h2txyewy\\CHXSmartScreen.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2068,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:12.966000+00:00",
+          "Image": "C:\\Windows\\SystemApps\\Microsoft.Windows.AppRep.ChxApp_cw5n1h2txyewy\\CHXSmartScreen.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1562.002",
+      "gt_technique_name": "Web Protocols",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1071.001)"
+    },
+    {
+      "group_id": "T1112_4041",
+      "rule_technique_id": "T1112",
+      "rule_technique_name": "Modify Registry",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 4041,
+        "EventID": 13,
+        "Image": "C:\\Windows\\SystemApps\\Microsoft.Windows.AppRep.ChxApp_cw5n1h2txyewy\\CHXSmartScreen.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2022-08-03 07:30:18.494000+00:00"
+      },
+      "num_events": 1002,
+      "event_id_distribution": {
+        "13": 649,
+        "12": 240,
+        "7": 99,
+        "1": 11,
+        "11": 2,
+        "5": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 1524,
+          "EventID": 12,
+          "TimeCreated": "2022-08-03 07:30:09.628000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "\\REGISTRY\\A\\{562d5938-b3df-47e2-8870-ff9ce1e13d9a}\\Events\\{d8e1c027-c10c-4986-85a0-799bb05230fd}"
+        },
+        {
+          "idx": 1525,
+          "EventID": 12,
+          "TimeCreated": "2022-08-03 07:30:09.628000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "\\REGISTRY\\A\\{562d5938-b3df-47e2-8870-ff9ce1e13d9a}\\WorkItems\\{528ce3f8-ec56-4d81-a4d6-f7cd8f13f6b8}"
+        },
+        {
+          "idx": 1526,
+          "EventID": 12,
+          "TimeCreated": "2022-08-03 07:30:09.629000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "\\REGISTRY\\A\\{562d5938-b3df-47e2-8870-ff9ce1e13d9a}\\Events\\{2dc9c351-3f57-4ae9-8bf1-f232ec6afb9f}"
+        },
+        {
+          "idx": 1527,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:09.629000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "\\REGISTRY\\A\\{562d5938-b3df-47e2-8870-ff9ce1e13d9a}\\Events\\{2dc9c351-3f57-4ae9-8bf1-f232ec6afb9f}\\BrokerId"
+        },
+        {
+          "idx": 1528,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:09.630000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "\\REGISTRY\\A\\{562d5938-b3df-47e2-8870-ff9ce1e13d9a}\\Events\\{2dc9c351-3f57-4ae9-8bf1-f232ec6afb9f}\\EventParameters"
+        },
+        {
+          "idx": 1529,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:09.630000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "\\REGISTRY\\A\\{562d5938-b3df-47e2-8870-ff9ce1e13d9a}\\Events\\{2dc9c351-3f57-4ae9-8bf1-f232ec6afb9f}\\Flags"
+        },
+        {
+          "idx": 1530,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:09.630000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "\\REGISTRY\\A\\{562d5938-b3df-47e2-8870-ff9ce1e13d9a}\\Events\\{2dc9c351-3f57-4ae9-8bf1-f232ec6afb9f}\\PackageFullName"
+        },
+        {
+          "idx": 1531,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:09.630000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "\\REGISTRY\\A\\{562d5938-b3df-47e2-8870-ff9ce1e13d9a}\\Events\\{2dc9c351-3f57-4ae9-8bf1-f232ec6afb9f}\\UserSid"
+        },
+        {
+          "idx": 1542,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:09.642000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "\\REGISTRY\\A\\{562d5938-b3df-47e2-8870-ff9ce1e13d9a}\\WorkItems\\{94bd3652-1450-47dc-a7fb-8a1cef6c8628}\\PackageFlags"
+        },
+        {
+          "idx": 1541,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:09.642000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "\\REGISTRY\\A\\{562d5938-b3df-47e2-8870-ff9ce1e13d9a}\\WorkItems\\{94bd3652-1450-47dc-a7fb-8a1cef6c8628}\\ExtendedRegistrationData"
+        },
+        {
+          "idx": 1540,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:09.642000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "\\REGISTRY\\A\\{562d5938-b3df-47e2-8870-ff9ce1e13d9a}\\WorkItems\\{94bd3652-1450-47dc-a7fb-8a1cef6c8628}\\PsmActivationType"
+        },
+        {
+          "idx": 1539,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:09.642000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "\\REGISTRY\\A\\{562d5938-b3df-47e2-8870-ff9ce1e13d9a}\\WorkItems\\{94bd3652-1450-47dc-a7fb-8a1cef6c8628}\\PackageRelativeAppName"
+        },
+        {
+          "idx": 1537,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:09.642000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "\\REGISTRY\\A\\{562d5938-b3df-47e2-8870-ff9ce1e13d9a}\\Events\\{2dc9c351-3f57-4ae9-8bf1-f232ec6afb9f}\\EventType"
+        },
+        {
+          "idx": 1538,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:09.642000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "\\REGISTRY\\A\\{562d5938-b3df-47e2-8870-ff9ce1e13d9a}\\WorkItems\\{94bd3652-1450-47dc-a7fb-8a1cef6c8628}\\TaskEntryPoint"
+        },
+        {
+          "idx": 1535,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:09.642000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "\\REGISTRY\\A\\{562d5938-b3df-47e2-8870-ff9ce1e13d9a}\\WorkItems\\{94bd3652-1450-47dc-a7fb-8a1cef6c8628}\\Name"
+        }
+      ],
+      "gt_technique_id": "T1562.002",
+      "gt_technique_name": "Modify Registry",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1112)"
+    },
+    {
+      "group_id": "T1112_10772",
+      "rule_technique_id": "T1112",
+      "rule_technique_name": "Modify Registry",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 10772,
+        "EventID": 13,
+        "Image": "C:\\Users\\IT01-Pedro\\Downloads\\payload.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2022-08-03 07:30:40.052000+00:00"
+      },
+      "num_events": 64,
+      "event_id_distribution": {
+        "7": 47,
+        "13": 8,
+        "17": 2,
+        "18": 2,
+        "1": 2,
+        "12": 2,
+        "10": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 9733,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:32.948000+00:00",
+          "Image": "C:\\Windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\\"
+        },
+        {
+          "idx": 9734,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:32.948000+00:00",
+          "Image": "C:\\Windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\\"
+        },
+        {
+          "idx": 9735,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:32.997000+00:00",
+          "Image": "C:\\Windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002\\Software\\Microsoft\\Windows\\CurrentVersion\\ActivityDataModel\\ReaderRevisionInfo\\FA037D7B-C952-4F7D-AE4"
+        },
+        {
+          "idx": 9736,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:33.013000+00:00",
+          "Image": "C:\\Windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002\\Software\\Microsoft\\Windows\\CurrentVersion\\ActivityDataModel\\ReaderRevisionInfo\\FA037D7B-C952-4F7D-AE4"
+        },
+        {
+          "idx": 10760,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:37.264000+00:00",
+          "Image": "C:\\Windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\\"
+        },
+        {
+          "idx": 10761,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:37.264000+00:00",
+          "Image": "C:\\Windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\\"
+        },
+        {
+          "idx": 10768,
+          "EventID": 17,
+          "TimeCreated": "2022-08-03 07:30:40.052000+00:00",
+          "Image": "C:\\Users\\IT01-Pedro\\Downloads\\payload.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 10769,
+          "EventID": 18,
+          "TimeCreated": "2022-08-03 07:30:40.052000+00:00",
+          "Image": "C:\\Users\\IT01-Pedro\\Downloads\\payload.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 10770,
+          "EventID": 17,
+          "TimeCreated": "2022-08-03 07:30:40.052000+00:00",
+          "Image": "C:\\Users\\IT01-Pedro\\Downloads\\payload.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 10771,
+          "EventID": 18,
+          "TimeCreated": "2022-08-03 07:30:40.052000+00:00",
+          "Image": "C:\\Users\\IT01-Pedro\\Downloads\\payload.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 10772,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:40.052000+00:00",
+          "Image": "C:\\Users\\IT01-Pedro\\Downloads\\payload.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\bam\\State\\UserSettings\\S-1-5-21-968647429-258479840-2507984072-1001\\\\Device\\HarddiskVolume2\\Windows\\System32\\cm"
+        },
+        {
+          "idx": 10774,
+          "EventID": 1,
+          "TimeCreated": "2022-08-03 07:30:40.053000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "C:\\Windows\\system32\\cmd.exe",
+          "ParentImage": "C:\\Users\\IT01-Pedro\\Downloads\\payload.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 10775,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:30:40.053000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 10777,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:40.071000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 10778,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:40.096000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1562.002",
+      "gt_technique_name": "Modify Registry",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1112)"
+    },
+    {
+      "group_id": "T1112_10783",
+      "rule_technique_id": "T1112",
+      "rule_technique_name": "Modify Registry",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 10783,
+        "EventID": 13,
+        "Image": "C:\\Windows\\system32\\cmd.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2022-08-03 07:30:40.131000+00:00"
+      },
+      "num_events": 63,
+      "event_id_distribution": {
+        "7": 47,
+        "13": 8,
+        "17": 2,
+        "18": 2,
+        "1": 2,
+        "12": 2
+      },
+      "sample_logs": [
+        {
+          "idx": 9733,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:32.948000+00:00",
+          "Image": "C:\\Windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\\"
+        },
+        {
+          "idx": 9734,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:32.948000+00:00",
+          "Image": "C:\\Windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\\"
+        },
+        {
+          "idx": 9735,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:32.997000+00:00",
+          "Image": "C:\\Windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002\\Software\\Microsoft\\Windows\\CurrentVersion\\ActivityDataModel\\ReaderRevisionInfo\\FA037D7B-C952-4F7D-AE4"
+        },
+        {
+          "idx": 9736,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:33.013000+00:00",
+          "Image": "C:\\Windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002\\Software\\Microsoft\\Windows\\CurrentVersion\\ActivityDataModel\\ReaderRevisionInfo\\FA037D7B-C952-4F7D-AE4"
+        },
+        {
+          "idx": 10760,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:37.264000+00:00",
+          "Image": "C:\\Windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\\"
+        },
+        {
+          "idx": 10761,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:37.264000+00:00",
+          "Image": "C:\\Windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-968647429-258479840-2507984072-1002\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\\"
+        },
+        {
+          "idx": 10768,
+          "EventID": 17,
+          "TimeCreated": "2022-08-03 07:30:40.052000+00:00",
+          "Image": "C:\\Users\\IT01-Pedro\\Downloads\\payload.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 10769,
+          "EventID": 18,
+          "TimeCreated": "2022-08-03 07:30:40.052000+00:00",
+          "Image": "C:\\Users\\IT01-Pedro\\Downloads\\payload.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 10770,
+          "EventID": 17,
+          "TimeCreated": "2022-08-03 07:30:40.052000+00:00",
+          "Image": "C:\\Users\\IT01-Pedro\\Downloads\\payload.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 10771,
+          "EventID": 18,
+          "TimeCreated": "2022-08-03 07:30:40.052000+00:00",
+          "Image": "C:\\Users\\IT01-Pedro\\Downloads\\payload.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 10772,
+          "EventID": 13,
+          "TimeCreated": "2022-08-03 07:30:40.052000+00:00",
+          "Image": "C:\\Users\\IT01-Pedro\\Downloads\\payload.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\bam\\State\\UserSettings\\S-1-5-21-968647429-258479840-2507984072-1001\\\\Device\\HarddiskVolume2\\Windows\\System32\\cm"
+        },
+        {
+          "idx": 10774,
+          "EventID": 1,
+          "TimeCreated": "2022-08-03 07:30:40.053000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "C:\\Windows\\system32\\cmd.exe",
+          "ParentImage": "C:\\Users\\IT01-Pedro\\Downloads\\payload.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 10777,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:40.071000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 10778,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:40.096000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 10782,
+          "EventID": 7,
+          "TimeCreated": "2022-08-03 07:30:40.130000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1562.002",
+      "gt_technique_name": "Modify Registry",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1112)"
+    },
+    {
+      "group_id": "T1123_1353",
+      "rule_technique_id": "T1123",
+      "rule_technique_name": "Audio Capture",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 1353,
+        "EventID": 10,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2022-08-03 07:30:09.509000+00:00"
+      },
+      "num_events": 92,
+      "event_id_distribution": {
+        "11": 56,
+        "4688": 25,
+        "10": 11
+      },
+      "sample_logs": [
+        {
+          "idx": 0,
+          "EventID": 4688,
+          "TimeCreated": "2022-08-03 07:30:05.626000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 36,
+          "EventID": 4688,
+          "TimeCreated": "2022-08-03 07:30:05.705000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 47,
+          "EventID": 4688,
+          "TimeCreated": "2022-08-03 07:30:05.713000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 55,
+          "EventID": 4688,
+          "TimeCreated": "2022-08-03 07:30:05.719000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 63,
+          "EventID": 4688,
+          "TimeCreated": "2022-08-03 07:30:05.725000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 71,
+          "EventID": 4688,
+          "TimeCreated": "2022-08-03 07:30:05.731000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 87,
+          "EventID": 11,
+          "TimeCreated": "2022-08-03 07:30:05.826000+00:00",
+          "Image": "C:\\Windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 187,
+          "EventID": 4688,
+          "TimeCreated": "2022-08-03 07:30:06.400000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 192,
+          "EventID": 4688,
+          "TimeCreated": "2022-08-03 07:30:06.412000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 197,
+          "EventID": 11,
+          "TimeCreated": "2022-08-03 07:30:06.418000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 199,
+          "EventID": 4688,
+          "TimeCreated": "2022-08-03 07:30:06.436000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 215,
+          "EventID": 4688,
+          "TimeCreated": "2022-08-03 07:30:06.452000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 247,
+          "EventID": 4688,
+          "TimeCreated": "2022-08-03 07:30:06.537000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 300,
+          "EventID": 11,
+          "TimeCreated": "2022-08-03 07:30:07.203000+00:00",
+          "Image": "C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\PowerShell_ISE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 302,
+          "EventID": 11,
+          "TimeCreated": "2022-08-03 07:30:07.203000+00:00",
+          "Image": "C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\PowerShell_ISE.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1562.002",
+      "gt_technique_name": "Audio Capture",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1123)"
+    },
+    {
+      "group_id": "T1123_11542",
+      "rule_technique_id": "T1123",
+      "rule_technique_name": "Audio Capture",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 11542,
+        "EventID": 10,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2022-08-03 07:30:45.967000+00:00"
+      },
+      "num_events": 10,
+      "event_id_distribution": {
+        "10": 4,
+        "11": 4,
+        "4688": 2
+      },
+      "sample_logs": [
+        {
+          "idx": 10767,
+          "EventID": 4688,
+          "TimeCreated": "2022-08-03 07:30:40.044000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 10781,
+          "EventID": 4688,
+          "TimeCreated": "2022-08-03 07:30:40.105000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 11542,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:30:45.967000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 11604,
+          "EventID": 11,
+          "TimeCreated": "2022-08-03 07:30:50.191000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 11606,
+          "EventID": 11,
+          "TimeCreated": "2022-08-03 07:30:50.379000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 11919,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:30:51.040000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 11924,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:30:51.040000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 11986,
+          "EventID": 11,
+          "TimeCreated": "2022-08-03 07:30:52.557000+00:00",
+          "Image": "C:\\Windows\\Sysmon.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 12322,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:30:56.136000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 14271,
+          "EventID": 11,
+          "TimeCreated": "2022-08-03 07:31:24.814000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1562.002",
+      "gt_technique_name": "Audio Capture",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1123)"
+    },
+    {
+      "group_id": "T1123_12701",
+      "rule_technique_id": "T1123",
+      "rule_technique_name": "Audio Capture",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 12701,
+        "EventID": 10,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2022-08-03 07:31:01.227000+00:00"
+      },
+      "num_events": 9,
+      "event_id_distribution": {
+        "10": 5,
+        "11": 3,
+        "4688": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 11986,
+          "EventID": 11,
+          "TimeCreated": "2022-08-03 07:30:52.557000+00:00",
+          "Image": "C:\\Windows\\Sysmon.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 12701,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:31:01.227000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 12704,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:31:01.227000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 13080,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:31:06.325000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 13475,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:31:11.443000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 13481,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:31:11.443000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 14271,
+          "EventID": 11,
+          "TimeCreated": "2022-08-03 07:31:24.814000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 14629,
+          "EventID": 4688,
+          "TimeCreated": "2022-08-03 07:31:26.757000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 14649,
+          "EventID": 11,
+          "TimeCreated": "2022-08-03 07:31:26.803000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1562.002",
+      "gt_technique_name": "Audio Capture",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1123)"
+    },
+    {
+      "group_id": "T1134_186",
+      "rule_technique_id": "T1134",
+      "rule_technique_name": "Access Token Manipulation",
+      "confidence": 0.67,
+      "anchor": {
+        "idx": 186,
+        "EventID": 4673,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2022-08-03 07:30:06.396000+00:00"
+      },
+      "num_events": 4673,
+      "event_id_distribution": {
+        "10": 4627,
+        "1": 26,
+        "4673": 20
+      },
+      "sample_logs": [
+        {
+          "idx": 1,
+          "EventID": 1,
+          "TimeCreated": "2022-08-03 07:30:05.629000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 4,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:30:05.684000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6,
+          "EventID": 1,
+          "TimeCreated": "2022-08-03 07:30:05.685000+00:00",
+          "Image": "C:\\Windows\\System32\\taskhostw.exe",
+          "CommandLine": "taskhostw.exe Install $(Arg0)",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 7,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:30:05.685000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 8,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:30:05.686000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 17,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:30:05.690000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 31,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:30:05.703000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 34,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:30:05.704000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 35,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:30:05.704000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 38,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:30:05.708000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 37,
+          "EventID": 1,
+          "TimeCreated": "2022-08-03 07:30:05.708000+00:00",
+          "Image": "C:\\Windows\\System32\\taskhostw.exe",
+          "CommandLine": "taskhostw.exe SYSTEM",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 39,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:30:05.709000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 40,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:30:05.709000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 45,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:30:05.712000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 46,
+          "EventID": 10,
+          "TimeCreated": "2022-08-03 07:30:05.712000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1562.002",
+      "gt_technique_name": "Access Token Manipulation",
+      "gt_tactic": "Defense Evasion",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1134)"
+    }
+  ]
+}

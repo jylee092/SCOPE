@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed activities, including lsass.exe connecting to the Kerberos port (88) and modifying Windows Time service registry keys, are legitimate operations for the Local Security Authority Subsystem Service, and no suspicious command lines or other anomalous behaviors were identified.\"\n}"}

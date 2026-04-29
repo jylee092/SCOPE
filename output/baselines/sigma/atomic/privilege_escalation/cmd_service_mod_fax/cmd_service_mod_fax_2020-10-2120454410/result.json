@@ -1,0 +1,159 @@
+{
+  "scenario": "cmd_service_mod_fax_2020-10-2120454410",
+  "tactic_sequence": [
+    "Privilege Escalation",
+    "Persistence",
+    "Execution",
+    "Defense Evasion",
+    "Privilege Escalation"
+  ],
+  "technique_sequence": [
+    "T1543.003",
+    "T1569.002",
+    "T1548",
+    "T1543.003"
+  ],
+  "per_group_topk": [
+    [
+      "T1543.003",
+      "T1574.011"
+    ],
+    [
+      "T1543.003",
+      "T1574.011"
+    ],
+    [
+      "T1569.002"
+    ],
+    [
+      "T1548",
+      "T1059.001"
+    ],
+    [
+      "T1543.003",
+      "T1574.011"
+    ],
+    [
+      "T1543.003",
+      "T1574.011"
+    ]
+  ],
+  "notes": {
+    "n_events_evaluated": 351,
+    "n_alerts": 6,
+    "alerts": [
+      {
+        "ts": "2020-10-21 08:45:33.684000+00:00",
+        "event_index": 24,
+        "event_id": 4688,
+        "topk_tids": [
+          "T1543.003",
+          "T1574.011"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "38879043-7e1e-47a9-8d46-6bec88e201df",
+          "title": "Potential Persistence Attempt Via Existing Service Tampering",
+          "level": "medium",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-10-21 08:45:33.686000+00:00",
+        "event_index": 27,
+        "event_id": 1,
+        "topk_tids": [
+          "T1543.003",
+          "T1574.011"
+        ],
+        "topk_tactics": [
+          "Persistence",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "138d3531-8793-4f50-a2cd-f291b2863d78",
+          "title": "Suspicious Service Path Modification",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-10-21 08:45:33.693000+00:00",
+        "event_index": 36,
+        "event_id": 13,
+        "topk_tids": [
+          "T1569.002"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "4a5f5a5e-ac01-474b-9b4e-d61298c9df1d",
+          "title": "PowerShell as a Service in Registry",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-10-21 08:45:35.288000+00:00",
+        "event_index": 64,
+        "event_id": 1,
+        "topk_tids": [
+          "T1548",
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "d522eca2-2973-4391-a3e0-ef0374321dae",
+          "title": "Abused Debug Privilege by Arbitrary Parent Processes",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-10-21 08:45:41.335000+00:00",
+        "event_index": 402,
+        "event_id": 4688,
+        "topk_tids": [
+          "T1543.003",
+          "T1574.011"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "38879043-7e1e-47a9-8d46-6bec88e201df",
+          "title": "Potential Persistence Attempt Via Existing Service Tampering",
+          "level": "medium",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-10-21 08:45:41.336000+00:00",
+        "event_index": 403,
+        "event_id": 1,
+        "topk_tids": [
+          "T1543.003",
+          "T1574.011"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "38879043-7e1e-47a9-8d46-6bec88e201df",
+          "title": "Potential Persistence Attempt Via Existing Service Tampering",
+          "level": "medium",
+          "status": "test"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[svchost.exe|{625b42a0-2f3]\"\n  ],\n  \"rationale\": \"The svchost.exe process is suspicious because it is creating and setting registry keys related to 'payload.exe' located in a user's Downloads directory, which is highly indicative of interaction with a potentially malicious executable.\"\n}"}

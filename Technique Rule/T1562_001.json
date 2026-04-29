@@ -1,0 +1,96 @@
+{
+  "technique": { "id": "T1562.001", "name": "Disable or Modify Tools" },
+  "detection": { "id": "DET-T1562001" },
+  "analysis": { "id": "AN-T1562001" },
+  "log_sources": {
+    "Anchor Event": {
+      "data_component": { "id": "DC0065", "name": "Service Modification" },
+      "description": "보안/로깅 서비스 중지 또는 비활성화.",
+      "conditions": [
+        {
+          "type": "service_stop_cli",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [1] },
+          "filters": {
+            "CommandLine": {
+              "contains_any": [
+                "sc stop",
+                "sc.exe stop",
+                "sc config",
+                "net stop",
+                "Stop-Service",
+                "Set-Service -StartupType Disabled",
+                "Set-MpPreference -Disable",
+                "taskkill /IM MsMpEng"
+              ]
+            }
+          },
+          "description": "서비스 중지/비활성화 커맨드라인."
+        },
+        {
+          "type": "service_registry_disable",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [12, 13] },
+          "filters": {
+            "TargetObject": {
+              "contains_any": [
+                "\\Services\\EventLog\\",
+                "\\Services\\WinDefend\\",
+                "\\Services\\Sense\\",
+                "\\Services\\WdNisSvc\\",
+                "\\Services\\WinRM\\",
+                "\\Services\\Netlogon\\",
+                "\\Services\\MpsSvc\\"
+              ]
+            }
+          },
+          "description": "보안 관련 서비스 Start DWORD 레지스트리 직접 수정."
+        },
+        {
+          "type": "defender_registry",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [12, 13] },
+          "filters": {
+            "TargetObject": {
+              "contains_any": [
+                "\\Policies\\Microsoft\\Windows Defender",
+                "\\Windows Defender\\Real-Time Protection",
+                "\\Windows Defender\\Exclusions",
+                "DisableAntiSpyware",
+                "DisableRealtimeMonitoring"
+              ]
+            }
+          },
+          "description": "Windows Defender 정책 비활성화 레지스트리 수정."
+        },
+        {
+          "type": "wevtutil_stop_eventlog",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [1] },
+          "filters": {
+            "CommandLine": { "contains_any": ["wevtutil sl", "wevtutil.exe sl", "/e:false", "/enabled:false"] }
+          },
+          "description": "wevtutil로 이벤트 로그 채널 비활성화."
+        }
+      ]
+    },
+    "Supporting Events": [
+      { "data_component": { "id": "DC0041", "name": "Service Metadata" }, "source": "WinEventLog:System", "channel": { "event_codes": [7036, 7040] }, "description": "서비스 상태 변경 (7036) / 시작 유형 변경 (7040)" },
+      { "data_component": { "id": "DC0038", "name": "Application Log Content" }, "source": "WinEventLog:Defender", "channel": { "event_codes": [5001, 5010] }, "description": "Defender 실시간 보호 비활성화 이벤트" }
+    ]
+  },
+  "mutable_elements": {
+    "grouping_logic": {
+      "primary_anchor_eids": [1, 12, 13],
+      "correlation_key": { "primary": ["Hostname", "ProcessGuid"], "fallback": ["Hostname"] },
+      "time_window": { "before_seconds": 30, "after_seconds": 60 }
+    },
+    "feature_extraction_filters": {
+      "security_services": ["WinDefend", "Sense", "EventLog", "WdNisSvc", "MpsSvc", "WinRM"],
+      "description": "중지된 서비스가 security_services에 포함되면 강한 악성 신호."
+    },
+    "semantic_templates": {
+      "disable_tools": "프로세스({Image})가 보안 서비스({ServiceName}) 또는 로깅 채널을 중지/비활성화함."
+    }
+  }
+}

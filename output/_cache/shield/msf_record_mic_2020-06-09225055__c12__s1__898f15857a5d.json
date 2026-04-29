@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed registry operations by svchost.exe are consistent with the legitimate Windows Content Delivery Manager (CDM) service, which manages background tasks and content updates, and do not show any indicators of known attack patterns.\"\n}"}

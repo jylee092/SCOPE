@@ -1,0 +1,109 @@
+{
+  "scenario": "cmd_userinitmprlogonscript_batch_2020-10-1922471810",
+  "tactic_sequence": [
+    "Persistence"
+  ],
+  "technique_sequence": [
+    "T1037.001",
+    "T1547.001"
+  ],
+  "per_group_topk": [
+    [
+      "T1037.001",
+      "T1074.001",
+      "T1588.003",
+      "T0864",
+      "T1594"
+    ],
+    [
+      "T1037.001",
+      "T1521.001",
+      "T0864",
+      "T1636.003",
+      "T1646"
+    ],
+    [
+      "T1547.001",
+      "T1037.001",
+      "T1521.001",
+      "T0815",
+      "T0864"
+    ]
+  ],
+  "notes": {
+    "n_alerts": 3,
+    "n_sigma_alerts": 3,
+    "n_deepag_top1_used": 0,
+    "alerts": [
+      {
+        "ts": "2020-10-19 10:47:08.745000+00:00",
+        "event_index": 75,
+        "event_id": 4688,
+        "topk_tids": [
+          "T1037.001",
+          "T1074.001",
+          "T1588.003",
+          "T0864",
+          "T1594"
+        ],
+        "topk_tactics": [
+          "Persistence",
+          "Collection",
+          "",
+          "",
+          ""
+        ],
+        "deepag_top1": "T1074.001",
+        "deepag_prob": 8.479971438646317e-05,
+        "chosen_top1": "T1037.001",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-10-19 10:47:08.749000+00:00",
+        "event_index": 77,
+        "event_id": 1,
+        "topk_tids": [
+          "T1037.001",
+          "T1521.001",
+          "T0864",
+          "T1636.003",
+          "T1646"
+        ],
+        "topk_tactics": [
+          "Persistence",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "deepag_top1": "T1521.001",
+        "deepag_prob": 0.0007700612186454237,
+        "chosen_top1": "T1037.001",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-10-19 10:47:08.771000+00:00",
+        "event_index": 96,
+        "event_id": 13,
+        "topk_tids": [
+          "T1547.001",
+          "T1037.001",
+          "T1521.001",
+          "T0815",
+          "T0864"
+        ],
+        "topk_tactics": [
+          "Persistence",
+          "Persistence",
+          "",
+          "",
+          ""
+        ],
+        "deepag_top1": "T1521.001",
+        "deepag_prob": 0.00011059696407755837,
+        "chosen_top1": "T1547.001",
+        "chosen_src": "sigma"
+      }
+    ]
+  }
+}

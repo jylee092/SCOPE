@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed processes (smss.exe, csrss.exe, autochk.exe) are legitimate Windows system components, and their command lines, child processes, and registry operations are consistent with normal system boot and initialization activities, showing no signs of common attack patterns.\"\n}"}

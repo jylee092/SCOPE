@@ -1,0 +1,15 @@
+{
+  "scenario": "empire_find_localadmin_smb_svcctl_OpenSCManager_2020-09-22021559",
+  "tactic_sequence": [],
+  "technique_sequence": [],
+  "per_group_topk": [],
+  "notes": {
+    "n_total_events": 4570,
+    "n_filtered_events": 1810,
+    "n_lof_anomalous": 105,
+    "n_communities": 11,
+    "n_alerts": 0,
+    "alerts": [],
+    "elapsed_sec": 123.2
+  }
+}

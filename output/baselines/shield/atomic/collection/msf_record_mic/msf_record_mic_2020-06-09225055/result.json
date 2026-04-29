@@ -1,0 +1,15 @@
+{
+  "scenario": "msf_record_mic_2020-06-09225055",
+  "tactic_sequence": [],
+  "technique_sequence": [],
+  "per_group_topk": [],
+  "notes": {
+    "n_total_events": 6202,
+    "n_filtered_events": 2575,
+    "n_lof_anomalous": 183,
+    "n_communities": 18,
+    "n_alerts": 0,
+    "alerts": [],
+    "elapsed_sec": 201.1
+  }
+}

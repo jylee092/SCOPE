@@ -1,0 +1,15 @@
+{
+  "scenario": "empire_getsession_dcerpc_smb_srvsvc_NetSessEnum_2020-09-22034513",
+  "tactic_sequence": [],
+  "technique_sequence": [],
+  "per_group_topk": [],
+  "notes": {
+    "n_total_events": 5047,
+    "n_filtered_events": 361,
+    "n_lof_anomalous": 50,
+    "n_communities": 10,
+    "n_alerts": 0,
+    "alerts": [],
+    "elapsed_sec": 54.1
+  }
+}

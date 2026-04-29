@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed processes (csrss.exe, smss.exe, autochk.exe) exhibit normal system behavior, including standard command-line arguments, expected parent-child relationships, and typical registry modifications associated with Windows boot and session management.\"\n}"}

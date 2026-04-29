@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"High volume of outbound network connections in a short timeframe (9 connections in ~1 minute), which can be indicative of unusual authentication activity or potential compromise, even if targets are internal.\",\n  \"indicators\": [\n    \"lsass.exe\",\n    \"network connections\",\n    \"high volume\"\n  ]\n}"}

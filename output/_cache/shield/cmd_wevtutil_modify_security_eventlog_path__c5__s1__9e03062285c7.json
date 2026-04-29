@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[payload.exe|{01e2a015-a68]\"\n  ],\n  \"rationale\": \"The process 'payload.exe' is inherently suspicious due to its name, which strongly indicates a malicious binary or payload.\"\n}"}

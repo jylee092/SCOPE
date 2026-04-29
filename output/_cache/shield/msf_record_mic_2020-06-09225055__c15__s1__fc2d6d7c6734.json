@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is performing legitimate registry operations related to Windows Storage Sense for both the local machine and a service account (NT AUTHORITY\\\\NETWORK SERVICE), with no suspicious command-line arguments or other indicators present.\"\n}"}

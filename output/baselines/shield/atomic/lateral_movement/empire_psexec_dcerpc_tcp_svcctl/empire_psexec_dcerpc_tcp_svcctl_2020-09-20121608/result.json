@@ -1,0 +1,15 @@
+{
+  "scenario": "empire_psexec_dcerpc_tcp_svcctl_2020-09-20121608",
+  "tactic_sequence": [],
+  "technique_sequence": [],
+  "per_group_topk": [],
+  "notes": {
+    "n_total_events": 4348,
+    "n_filtered_events": 1099,
+    "n_lof_anomalous": 97,
+    "n_communities": 17,
+    "n_alerts": 0,
+    "alerts": [],
+    "elapsed_sec": 272.0
+  }
+}

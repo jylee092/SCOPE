@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The NetworkWatcherAgent.exe processes are performing actions consistent with legitimate network capture management, specifically disabling network tracing and deleting associated temporary capture files, which is expected behavior for this utility.\"\n}"}

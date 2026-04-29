@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is a legitimate Windows utility, and while it connects to a high-numbered port (64218), without command-line arguments, destination IP, or other contextual indicators, this network activity does not definitively match a known attack pattern.\"\n}"}

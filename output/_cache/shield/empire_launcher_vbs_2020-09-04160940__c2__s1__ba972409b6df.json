@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[wscript.exe|{860ba2e3-9f1]\"\n  ],\n  \"rationale\": \"The wscript.exe process is executing a VBScript named 'launcher.vbs' from a user's desktop directory, which is a common initial access vector for malware, and it is modifying registry keys related to Windows Script Host and Internet Explorer security zones.\"\n}"}

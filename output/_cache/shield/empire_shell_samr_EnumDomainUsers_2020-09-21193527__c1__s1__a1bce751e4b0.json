@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The 'net.exe' process is loading standard Windows DLLs, and without command-line arguments or other behavioral indicators like file writes or network connections, there is no evidence of suspicious activity.\"\n}"}

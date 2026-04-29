@@ -1,0 +1,1 @@
+{"text": "{\n  \"confidence_score\": 0.9,\n  \"attack_summary\": \"Two suspicious processes, svchost.exe and WmiPrvSE.exe, were observed connecting to the LSASS named pipe. This behavior is a strong indicator of an attempt to dump credentials from the Local Security Authority Subsystem Service (LSASS). WmiPrvSE.exe also connected to the srvsvc pipe,"}

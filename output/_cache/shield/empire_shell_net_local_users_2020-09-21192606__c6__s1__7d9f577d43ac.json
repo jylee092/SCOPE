@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The WmiPrvSE.exe process is performing standard WMI operations, including loading legitimate WMI-related DLLs and interacting with WMI registry keys to compile MOF files, with no suspicious command-line arguments or other indicators of compromise observed in this community.\"\n}"}

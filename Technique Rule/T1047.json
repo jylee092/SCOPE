@@ -1,0 +1,66 @@
+{
+  "technique": { "id": "T1047", "name": "Windows Management Instrumentation" },
+  "detection": { "id": "DET-T1047" },
+  "analysis": { "id": "AN-T1047" },
+  "log_sources": {
+    "Anchor Event": {
+      "data_component": { "id": "DC0064", "name": "Command Execution" },
+      "description": "WMI 기반 프로세스 생성 또는 원격 WMI 호출.",
+      "conditions": [
+        {
+          "type": "wmic_cli",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [1] },
+          "filters": {
+            "Image": { "contains": "wmic.exe" },
+            "CommandLine": { "contains_any": ["process call create", "/node:", "/user:", "process get"] }
+          },
+          "description": "wmic.exe로 프로세스 생성 또는 원격 노드 쿼리."
+        },
+        {
+          "type": "wmiprvse_child",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [1] },
+          "filters": {
+            "ParentImage": { "contains": "WmiPrvSE.exe" }
+          },
+          "description": "WmiPrvSE.exe가 부모인 자식 프로세스 — WMI를 통해 생성된 프로세스."
+        },
+        {
+          "type": "wmi_psh_invoke",
+          "source": "WinEventLog:PowerShell",
+          "channel": { "event_codes": [4104] },
+          "filters": {
+            "ScriptBlockText": { "contains_any": ["Invoke-WmiMethod", "Get-WmiObject -ComputerName", "Invoke-CimMethod", "New-CimSession -ComputerName"] }
+          },
+          "description": "PowerShell WMI cmdlet 호출."
+        },
+        {
+          "type": "wmi_activity",
+          "source": "WinEventLog:WMI-Activity",
+          "channel": { "event_codes": [5857, 5858, 5859, 5860, 5861] },
+          "description": "WMI-Activity/Operational 채널 제공자 로드/쿼리 이벤트."
+        }
+      ]
+    },
+    "Supporting Events": [
+      { "data_component": { "id": "DC0032", "name": "Process Creation" }, "source": "WinEventLog:Sysmon", "channel": { "event_codes": [1] }, "description": "WMI를 통해 생성된 자식 프로세스 체인" },
+      { "data_component": { "id": "DC0082", "name": "Network Connection Creation" }, "source": "WinEventLog:Sysmon", "channel": { "event_codes": [3] }, "filters": { "DestinationPort": { "in": ["135", "445"] } }, "description": "DCOM/WMI 원격 호출 (포트 135 RPC, 445 SMB)" }
+    ]
+  },
+  "mutable_elements": {
+    "grouping_logic": {
+      "primary_anchor_eids": [1],
+      "secondary_anchor": { "event_codes": [5857, 5858, 5860, 5861] },
+      "correlation_key": { "primary": ["Hostname", "ProcessGuid"], "fallback": ["Hostname"] },
+      "time_window": { "before_seconds": 30, "after_seconds": 180 }
+    },
+    "feature_extraction_filters": {
+      "suspicious_wmi_children": ["powershell.exe", "cmd.exe", "rundll32.exe", "regsvr32.exe", "mshta.exe"],
+      "remote_wmi_indicators": ["/node:", "-ComputerName"]
+    },
+    "semantic_templates": {
+      "wmi_execution": "프로세스({Image})가 WMI({Method})를 호출하여 {TargetHost}에서 {TargetProcess}를 실행함."
+    }
+  }
+}

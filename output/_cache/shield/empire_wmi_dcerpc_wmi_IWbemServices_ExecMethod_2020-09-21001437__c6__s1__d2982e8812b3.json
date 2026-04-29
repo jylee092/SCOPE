@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities, including process creation, command line, registry interactions, DLL loads, and pipe connections, are consistent with the normal operation of WmiPrvSE.exe as a legitimate Windows Management Instrumentation host process.\"\n}"}

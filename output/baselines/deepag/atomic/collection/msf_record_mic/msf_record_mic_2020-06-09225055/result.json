@@ -1,0 +1,572 @@
+{
+  "scenario": "msf_record_mic_2020-06-09225055",
+  "tactic_sequence": [
+    "Initial Access",
+    "Collection",
+    "Initial Access",
+    "Impact",
+    "Credential Access",
+    "Execution",
+    "Initial Access",
+    "Impact"
+  ],
+  "technique_sequence": [
+    "T1133",
+    "T1123",
+    "T1133",
+    "T1531",
+    "T1003.001",
+    "T1059",
+    "T1133",
+    "T1531"
+  ],
+  "per_group_topk": [
+    [
+      "T1133",
+      "T1078",
+      "T1110",
+      "T1074.001",
+      "T1588.003"
+    ],
+    [
+      "T1133",
+      "T1074",
+      "T1059",
+      "T1594",
+      "T1074.001"
+    ],
+    [
+      "T1133",
+      "T1074",
+      "T1059",
+      "T1074.001",
+      "T1543.004"
+    ],
+    [
+      "T1133",
+      "T1059",
+      "T1074",
+      "T1074.001",
+      "T1071"
+    ],
+    [
+      "T1133",
+      "T1059",
+      "T1074",
+      "T1074.001",
+      "T1071"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110",
+      "T1074",
+      "T1074.001"
+    ],
+    [
+      "T1123",
+      "T1074.001",
+      "T1059",
+      "T1566",
+      "T1074"
+    ],
+    [
+      "T1123",
+      "T1587.003",
+      "T1583",
+      "T1587",
+      "T1583.003"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110",
+      "T1574",
+      "T1589.002"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110",
+      "T1098",
+      "T1036.008"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110",
+      "T1656",
+      "T1218.010"
+    ],
+    [
+      "T1531",
+      "T1566",
+      "T1003.003",
+      "T1656",
+      "T1059"
+    ],
+    [
+      "T1531",
+      "T1587.003",
+      "T1608.001",
+      "T1521.001",
+      "T1583.007"
+    ],
+    [
+      "T1531",
+      "T0815",
+      "T1574",
+      "T0878",
+      "T0838"
+    ],
+    [
+      "T1003.001",
+      "T0815",
+      "T0838",
+      "T0878",
+      "T1589"
+    ],
+    [
+      "T1059",
+      "T0815",
+      "T0838",
+      "T1589",
+      "T0878"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110",
+      "T1421",
+      "T1456"
+    ],
+    [
+      "T1531",
+      "T1656",
+      "T1098.003",
+      "T1098.005",
+      "T1584.008"
+    ]
+  ],
+  "notes": {
+    "n_alerts": 18,
+    "n_sigma_alerts": 18,
+    "n_deepag_top1_used": 4,
+    "alerts": [
+      {
+        "ts": "2020-06-10 02:51:03.645000+00:00",
+        "event_index": 293,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110",
+          "T1074.001",
+          "T1588.003"
+        ],
+        "topk_tactics": [
+          "Initial Access",
+          "Initial Access",
+          "Credential Access",
+          "Collection",
+          ""
+        ],
+        "deepag_top1": "T1074.001",
+        "deepag_prob": 8.479971438646317e-05,
+        "chosen_top1": "T1133",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-06-10 02:51:03.645000+00:00",
+        "event_index": 295,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1133",
+          "T1074",
+          "T1059",
+          "T1594",
+          "T1074.001"
+        ],
+        "topk_tactics": [
+          "Initial Access",
+          "Collection",
+          "Execution",
+          "",
+          "Collection"
+        ],
+        "deepag_top1": "T1133",
+        "deepag_prob": 0.540533721446991,
+        "chosen_top1": "T1133",
+        "chosen_src": "deepag"
+      },
+      {
+        "ts": "2020-06-10 02:51:03.647000+00:00",
+        "event_index": 302,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1074",
+          "T1059",
+          "T1074.001",
+          "T1543.004"
+        ],
+        "topk_tactics": [
+          "Initial Access",
+          "Collection",
+          "Execution",
+          "Collection",
+          "Persistence"
+        ],
+        "deepag_top1": "T1133",
+        "deepag_prob": 0.68858402967453,
+        "chosen_top1": "T1133",
+        "chosen_src": "deepag"
+      },
+      {
+        "ts": "2020-06-10 02:51:03.655000+00:00",
+        "event_index": 338,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1133",
+          "T1059",
+          "T1074",
+          "T1074.001",
+          "T1071"
+        ],
+        "topk_tactics": [
+          "Initial Access",
+          "Execution",
+          "Collection",
+          "Collection",
+          "Command and Control"
+        ],
+        "deepag_top1": "T1133",
+        "deepag_prob": 0.6930358409881592,
+        "chosen_top1": "T1133",
+        "chosen_src": "deepag"
+      },
+      {
+        "ts": "2020-06-10 02:51:52.314000+00:00",
+        "event_index": 4911,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1133",
+          "T1059",
+          "T1074",
+          "T1074.001",
+          "T1071"
+        ],
+        "topk_tactics": [
+          "Initial Access",
+          "Execution",
+          "Collection",
+          "Collection",
+          "Command and Control"
+        ],
+        "deepag_top1": "T1133",
+        "deepag_prob": 0.5945689678192139,
+        "chosen_top1": "T1133",
+        "chosen_src": "deepag"
+      },
+      {
+        "ts": "2020-06-10 02:51:52.314000+00:00",
+        "event_index": 4912,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110",
+          "T1074",
+          "T1074.001"
+        ],
+        "topk_tactics": [
+          "Initial Access",
+          "Initial Access",
+          "Credential Access",
+          "Collection",
+          "Collection"
+        ],
+        "deepag_top1": "T1074",
+        "deepag_prob": 0.3762211501598358,
+        "chosen_top1": "T1133",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-06-10 02:51:56.437000+00:00",
+        "event_index": 5241,
+        "event_id": 4663,
+        "topk_tids": [
+          "T1123",
+          "T1074.001",
+          "T1059",
+          "T1566",
+          "T1074"
+        ],
+        "topk_tactics": [
+          "Collection",
+          "Collection",
+          "Execution",
+          "Initial Access",
+          "Collection"
+        ],
+        "deepag_top1": "T1074.001",
+        "deepag_prob": 0.3922328054904938,
+        "chosen_top1": "T1123",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-06-10 02:52:01.460000+00:00",
+        "event_index": 5344,
+        "event_id": 4663,
+        "topk_tids": [
+          "T1123",
+          "T1587.003",
+          "T1583",
+          "T1587",
+          "T1583.003"
+        ],
+        "topk_tactics": [
+          "Collection",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "deepag_top1": "T1587.003",
+        "deepag_prob": 0.0014078180538490415,
+        "chosen_top1": "T1123",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-06-10 02:52:07.558000+00:00",
+        "event_index": 5602,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110",
+          "T1574",
+          "T1589.002"
+        ],
+        "topk_tactics": [
+          "Initial Access",
+          "Initial Access",
+          "Credential Access",
+          "Persistence",
+          ""
+        ],
+        "deepag_top1": "T1574",
+        "deepag_prob": 0.0002640769525896758,
+        "chosen_top1": "T1133",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-06-10 02:52:07.563000+00:00",
+        "event_index": 5616,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110",
+          "T1098",
+          "T1036.008"
+        ],
+        "topk_tactics": [
+          "Initial Access",
+          "Initial Access",
+          "Credential Access",
+          "Persistence",
+          "Defense Evasion"
+        ],
+        "deepag_top1": "T1098",
+        "deepag_prob": 0.031398236751556396,
+        "chosen_top1": "T1133",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-06-10 02:52:07.566000+00:00",
+        "event_index": 5627,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110",
+          "T1656",
+          "T1218.010"
+        ],
+        "topk_tactics": [
+          "Initial Access",
+          "Initial Access",
+          "Credential Access",
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "deepag_top1": "T1656",
+        "deepag_prob": 0.1507076472043991,
+        "chosen_top1": "T1133",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-06-10 02:52:07.567000+00:00",
+        "event_index": 5633,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531",
+          "T1566",
+          "T1003.003",
+          "T1656",
+          "T1059"
+        ],
+        "topk_tactics": [
+          "Impact",
+          "Initial Access",
+          "Credential Access",
+          "Defense Evasion",
+          "Execution"
+        ],
+        "deepag_top1": "T1566",
+        "deepag_prob": 0.179525688290596,
+        "chosen_top1": "T1531",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-06-10 02:52:07.567000+00:00",
+        "event_index": 5635,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531",
+          "T1587.003",
+          "T1608.001",
+          "T1521.001",
+          "T1583.007"
+        ],
+        "topk_tactics": [
+          "Impact",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "deepag_top1": "T1587.003",
+        "deepag_prob": 0.0009890766814351082,
+        "chosen_top1": "T1531",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-06-10 02:52:07.569000+00:00",
+        "event_index": 5641,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531",
+          "T0815",
+          "T1574",
+          "T0878",
+          "T0838"
+        ],
+        "topk_tactics": [
+          "Impact",
+          "",
+          "Persistence",
+          "",
+          ""
+        ],
+        "deepag_top1": "T0815",
+        "deepag_prob": 0.00032255882979370654,
+        "chosen_top1": "T1531",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-06-10 02:52:07.571000+00:00",
+        "event_index": 5649,
+        "event_id": 4663,
+        "topk_tids": [
+          "T1003.001",
+          "T0815",
+          "T0838",
+          "T0878",
+          "T1589"
+        ],
+        "topk_tactics": [
+          "Credential Access",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "deepag_top1": "T0815",
+        "deepag_prob": 0.005216292105615139,
+        "chosen_top1": "T1003.001",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-06-10 02:52:10.604000+00:00",
+        "event_index": 5700,
+        "event_id": 1,
+        "topk_tids": [
+          "T1059",
+          "T0815",
+          "T0838",
+          "T1589",
+          "T0878"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "deepag_top1": "T0815",
+        "deepag_prob": 0.03500308096408844,
+        "chosen_top1": "T1059",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-06-10 02:52:52.883000+00:00",
+        "event_index": 6147,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110",
+          "T1421",
+          "T1456"
+        ],
+        "topk_tactics": [
+          "Initial Access",
+          "Initial Access",
+          "Credential Access",
+          "",
+          ""
+        ],
+        "deepag_top1": "T1421",
+        "deepag_prob": 0.018312981352210045,
+        "chosen_top1": "T1133",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-06-10 02:52:52.883000+00:00",
+        "event_index": 6149,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531",
+          "T1656",
+          "T1098.003",
+          "T1098.005",
+          "T1584.008"
+        ],
+        "topk_tactics": [
+          "Impact",
+          "Defense Evasion",
+          "Persistence",
+          "Persistence",
+          ""
+        ],
+        "deepag_top1": "T1656",
+        "deepag_prob": 0.1012917309999466,
+        "chosen_top1": "T1531",
+        "chosen_src": "sigma"
+      }
+    ]
+  }
+}

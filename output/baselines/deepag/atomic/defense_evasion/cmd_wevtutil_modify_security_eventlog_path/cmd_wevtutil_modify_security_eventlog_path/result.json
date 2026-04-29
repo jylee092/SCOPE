@@ -1,0 +1,267 @@
+{
+  "scenario": "cmd_wevtutil_modify_security_eventlog_path",
+  "tactic_sequence": [
+    "Execution",
+    "Defense Evasion",
+    "Persistence",
+    "Defense Evasion",
+    "Initial Access"
+  ],
+  "technique_sequence": [
+    "T1204.002",
+    "T1202",
+    "T1546.003",
+    "T1070.001",
+    "T1562.002",
+    "T1566.001"
+  ],
+  "per_group_topk": [
+    [
+      "T1204.002",
+      "T1074.001",
+      "T1588.003",
+      "T0864",
+      "T1594"
+    ],
+    [
+      "T1202",
+      "T1587.003",
+      "T1574",
+      "T1204.002",
+      "T1608.001"
+    ],
+    [
+      "T1546.003",
+      "T1587.003",
+      "T1521.001",
+      "T1608.001",
+      "T1583.006"
+    ],
+    [
+      "T1070.001",
+      "T1562.002",
+      "T1589",
+      "T1098",
+      "T1583.006"
+    ],
+    [
+      "T1562.002",
+      "T1055",
+      "T1547.001",
+      "T1543.003",
+      "T1547"
+    ],
+    [
+      "T1562.002",
+      "T1036",
+      "T1562",
+      "T1027.002",
+      "T1036.008"
+    ],
+    [
+      "T1566.001",
+      "T1562",
+      "T1036",
+      "T1562.001",
+      "T1036.005"
+    ],
+    [
+      "T1566.001",
+      "T1562",
+      "T1036",
+      "T1027.002",
+      "T1036.005"
+    ]
+  ],
+  "notes": {
+    "n_alerts": 8,
+    "n_sigma_alerts": 8,
+    "n_deepag_top1_used": 0,
+    "alerts": [
+      {
+        "ts": "2022-07-05 02:00:55.325000+00:00",
+        "event_index": 5082,
+        "event_id": 13,
+        "topk_tids": [
+          "T1204.002",
+          "T1074.001",
+          "T1588.003",
+          "T0864",
+          "T1594"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Collection",
+          "",
+          "",
+          ""
+        ],
+        "deepag_top1": "T1074.001",
+        "deepag_prob": 8.479971438646317e-05,
+        "chosen_top1": "T1204.002",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2022-07-05 02:01:01.886000+00:00",
+        "event_index": 6597,
+        "event_id": 1,
+        "topk_tids": [
+          "T1202",
+          "T1587.003",
+          "T1574",
+          "T1204.002",
+          "T1608.001"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "",
+          "Persistence",
+          "Execution",
+          ""
+        ],
+        "deepag_top1": "T1587.003",
+        "deepag_prob": 0.08205454796552658,
+        "chosen_top1": "T1202",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2022-07-05 02:02:01.706000+00:00",
+        "event_index": 19015,
+        "event_id": 19,
+        "topk_tids": [
+          "T1546.003",
+          "T1587.003",
+          "T1521.001",
+          "T1608.001",
+          "T1583.006"
+        ],
+        "topk_tactics": [
+          "Persistence",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "deepag_top1": "T1587.003",
+        "deepag_prob": 0.0010732092196121812,
+        "chosen_top1": "T1546.003",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2022-07-05 02:02:04.168000+00:00",
+        "event_index": 19357,
+        "event_id": 1,
+        "topk_tids": [
+          "T1070.001",
+          "T1562.002",
+          "T1589",
+          "T1098",
+          "T1583.006"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion",
+          "",
+          "Persistence",
+          ""
+        ],
+        "deepag_top1": "T1589",
+        "deepag_prob": 0.020607110112905502,
+        "chosen_top1": "T1070.001",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2022-07-05 02:02:04.203000+00:00",
+        "event_index": 19379,
+        "event_id": 13,
+        "topk_tids": [
+          "T1562.002",
+          "T1055",
+          "T1547.001",
+          "T1543.003",
+          "T1547"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Privilege Escalation",
+          "Persistence",
+          "Persistence",
+          "Persistence"
+        ],
+        "deepag_top1": "T1055",
+        "deepag_prob": 0.13905276358127594,
+        "chosen_top1": "T1562.002",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2022-07-05 02:02:04.244000+00:00",
+        "event_index": 19381,
+        "event_id": 11,
+        "topk_tids": [
+          "T1562.002",
+          "T1036",
+          "T1562",
+          "T1027.002",
+          "T1036.008"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion",
+          "Defense Evasion",
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "deepag_top1": "T1036",
+        "deepag_prob": 0.14889715611934662,
+        "chosen_top1": "T1562.002",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2022-07-05 02:02:30.027000+00:00",
+        "event_index": 24325,
+        "event_id": 4663,
+        "topk_tids": [
+          "T1566.001",
+          "T1562",
+          "T1036",
+          "T1562.001",
+          "T1036.005"
+        ],
+        "topk_tactics": [
+          "Initial Access",
+          "Defense Evasion",
+          "Defense Evasion",
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "deepag_top1": "T1562",
+        "deepag_prob": 0.17575176060199738,
+        "chosen_top1": "T1566.001",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2022-07-05 02:02:30.030000+00:00",
+        "event_index": 24330,
+        "event_id": 4663,
+        "topk_tids": [
+          "T1566.001",
+          "T1562",
+          "T1036",
+          "T1027.002",
+          "T1036.005"
+        ],
+        "topk_tactics": [
+          "Initial Access",
+          "Defense Evasion",
+          "Defense Evasion",
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "deepag_top1": "T1562",
+        "deepag_prob": 0.1658022105693817,
+        "chosen_top1": "T1566.001",
+        "chosen_src": "sigma"
+      }
+    ]
+  }
+}

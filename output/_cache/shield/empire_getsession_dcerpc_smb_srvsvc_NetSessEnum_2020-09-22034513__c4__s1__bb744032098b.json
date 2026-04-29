@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed registry modifications and network connections by lsass.exe are consistent with its legitimate function in a Windows domain environment, particularly for authentication, directory services, and time synchronization.\"\n}"}

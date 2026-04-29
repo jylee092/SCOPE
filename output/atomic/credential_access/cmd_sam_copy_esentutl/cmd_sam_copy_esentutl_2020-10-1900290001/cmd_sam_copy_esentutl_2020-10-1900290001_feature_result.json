@@ -1,0 +1,4245 @@
+[
+  {
+    "group_id": "T1003_29",
+    "technique_id": "T1003",
+    "technique_name": "OS Credential Dumping",
+    "anchor_eid": 1,
+    "anchor_detail": {
+      "eid": 1,
+      "time": "2020-10-19 12:28:31.098000+00:00",
+      "image": "esentutl.exe",
+      "parent_image": "cmd.exe",
+      "cmdline": "esentutl.exe  /y /vss C:\\windows/system32/config/SAM /d C:\\ProgramData\\SAM",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": "WORKSTATION5\\wardog",
+      "integrity": "High"
+    },
+    "confidence": 0.5,
+    "all_idxs": [
+      26,
+      29,
+      31,
+      35,
+      36,
+      37,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      47,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      63,
+      64,
+      65,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      77,
+      78,
+      79,
+      84,
+      85,
+      86,
+      87,
+      89,
+      90,
+      91,
+      95,
+      105,
+      112,
+      173,
+      187,
+      200,
+      245,
+      246,
+      257,
+      258,
+      357,
+      431,
+      432,
+      439,
+      441,
+      442,
+      444,
+      489,
+      490,
+      492,
+      496,
+      525,
+      600,
+      601,
+      622,
+      626,
+      647,
+      652,
+      661,
+      662,
+      678,
+      690,
+      740,
+      741,
+      754,
+      782,
+      796,
+      800,
+      813
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "spawn",
+            "parent_image": "cmd.exe",
+            "child_image": "esentutl.exe",
+            "integrity_level": "High",
+            "parent_guid": "{39e4a257-15ba-5f8d-e204-000000000700}",
+            "child_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "cmdline": "esentutl.exe  /y /vss C:\\windows/system32/config/SAM /d C:\\ProgramData\\SAM",
+            "source_eid": 1
+          }
+        ],
+        "chain_depth": 1
+      },
+      "command_script": {
+        "entries": [
+          {
+            "source_eid": 1,
+            "image": "esentutl.exe",
+            "cmdline": "esentutl.exe  /y /vss C:\\windows/system32/config/SAM /d C:\\ProgramData\\SAM",
+            "cmdline_length": 74,
+            "has_obfuscation": false,
+            "special_chars": []
+          }
+        ],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 1,
+        "user": "WORKSTATION5\\wardog",
+        "domain": null,
+        "logon_id": "0xc61d9",
+        "integrity_level": "High",
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-10-19T12:28:31.098000+00:00",
+        "window_start_delta_sec": -0.01,
+        "window_end_delta_sec": 5.06,
+        "span_sec": 5.08,
+        "total_events": 86,
+        "event_density_per_10sec": 169.39,
+        "eid_counts": {
+          "7": 43,
+          "13": 37,
+          "1": 1,
+          "4656": 1,
+          "4663": 1,
+          "18": 1,
+          "11": 1,
+          "5": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 3.368,
+          "mean_sec": 0.06
+        },
+        "burst_detected": [
+          {
+            "eid": 7,
+            "count": 43,
+            "window_sec": 0.04
+          },
+          {
+            "eid": 13,
+            "count": 37,
+            "window_sec": 0.02
+          }
+        ]
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\PREPAREBACKUP (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\PREPAREBACKUP (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\PREPAREBACKUP (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_STABLE (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\PREPAREBACKUP (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\DOSNAPSHOT (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\PREPARESNAPSHOT (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\PREPARESNAPSHOT (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_WAITING_FOR_FREEZE (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\FREEZE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\FREEZE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\BKGND_FREEZE_THREAD (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_WAITING_FOR_THAW (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\BKGND_FREEZE_THREAD (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_WAITING_FOR_POST_SNAPSHOT (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\THAW (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\THAW (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\POSTSNAPSHOT (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\POSTSNAPSHOT (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_WAITING_FOR_BACKUP_COMPLETE (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\DOSNAPSHOT (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\GETSTATE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\GETSTATE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\GETSTATE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\GETSTATE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\BACKUPCOMPLETE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\BACKUPCOMPLETE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\BACKUPCOMPLETE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\BACKUPCOMPLETE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          }
+        ],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": [
+          {
+            "source_eid": 11,
+            "path": "C:\\ProgramData\\SAM",
+            "image": "esentutl.exe"
+          }
+        ]
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1070_001_0",
+    "technique_id": "T1070.001",
+    "technique_name": "Clear Windows Event Logs",
+    "anchor_eid": 1102,
+    "anchor_detail": {
+      "eid": 1102,
+      "time": "2020-10-19 12:28:23.942000+00:00",
+      "image": null,
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": null,
+      "integrity": null
+    },
+    "confidence": 0.75,
+    "all_idxs": [
+      0,
+      1,
+      27,
+      29
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "spawn",
+            "parent_image": "cmd.exe",
+            "child_image": "esentutl.exe",
+            "integrity_level": "High",
+            "parent_guid": "{39e4a257-15ba-5f8d-e204-000000000700}",
+            "child_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "cmdline": "esentutl.exe  /y /vss C:\\windows/system32/config/SAM /d C:\\ProgramData\\SAM",
+            "source_eid": 1
+          }
+        ],
+        "chain_depth": 1
+      },
+      "command_script": {
+        "entries": [
+          {
+            "source_eid": 4688,
+            "image": "esentutl.exe",
+            "cmdline": "esentutl.exe  /y /vss C:\\windows/system32/config/SAM /d C:\\ProgramData\\SAM",
+            "cmdline_length": 74,
+            "has_obfuscation": false,
+            "special_chars": []
+          }
+        ],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 1,
+        "user": "WORKSTATION5\\wardog",
+        "domain": null,
+        "logon_id": "0xc61d9",
+        "integrity_level": "High",
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-10-19T12:28:23.942000+00:00",
+        "window_start_delta_sec": 0.0,
+        "window_end_delta_sec": 7.16,
+        "span_sec": 7.16,
+        "total_events": 4,
+        "event_density_per_10sec": 5.59,
+        "eid_counts": {
+          "1102": 1,
+          "104": 1,
+          "4688": 1,
+          "1": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.009,
+          "max_sec": 7.115,
+          "mean_sec": 2.385
+        },
+        "burst_detected": []
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [
+          {
+            "source_eid": 1102,
+            "message": "The audit log was cleared.",
+            "user": null
+          },
+          {
+            "source_eid": 104,
+            "message": "The System log file was cleared.",
+            "user": null
+          }
+        ],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1112_91",
+    "technique_id": "T1112",
+    "technique_name": "Modify Registry",
+    "anchor_eid": 13,
+    "anchor_detail": {
+      "eid": 13,
+      "time": "2020-10-19 12:28:31.447000+00:00",
+      "image": "esentutl.exe",
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\IDENTIFY (Enter)",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": null,
+      "integrity": null
+    },
+    "confidence": 1.0,
+    "all_idxs": [
+      26,
+      29,
+      31,
+      35,
+      36,
+      37,
+      39,
+      40,
+      41,
+      42,
+      43,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      63,
+      64,
+      65,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      77,
+      78,
+      79,
+      84,
+      85,
+      86,
+      87,
+      89,
+      90,
+      91,
+      95,
+      105,
+      112,
+      173,
+      187,
+      200,
+      245,
+      246,
+      257,
+      258,
+      357,
+      431,
+      432,
+      439,
+      441,
+      442,
+      444,
+      489,
+      490,
+      492,
+      496,
+      525,
+      600,
+      601,
+      622,
+      626,
+      647,
+      652,
+      661,
+      662,
+      678,
+      690,
+      740,
+      741,
+      754,
+      782,
+      796,
+      800,
+      813
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "spawn",
+            "parent_image": "cmd.exe",
+            "child_image": "esentutl.exe",
+            "integrity_level": "High",
+            "parent_guid": "{39e4a257-15ba-5f8d-e204-000000000700}",
+            "child_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "cmdline": "esentutl.exe  /y /vss C:\\windows/system32/config/SAM /d C:\\ProgramData\\SAM",
+            "source_eid": 1
+          }
+        ],
+        "chain_depth": 1
+      },
+      "command_script": {
+        "entries": [
+          {
+            "source_eid": 1,
+            "image": "esentutl.exe",
+            "cmdline": "esentutl.exe  /y /vss C:\\windows/system32/config/SAM /d C:\\ProgramData\\SAM",
+            "cmdline_length": 74,
+            "has_obfuscation": false,
+            "special_chars": []
+          }
+        ],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 1,
+        "user": "WORKSTATION5\\wardog",
+        "domain": null,
+        "logon_id": "0xc61d9",
+        "integrity_level": "High",
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-10-19T12:28:31.447000+00:00",
+        "window_start_delta_sec": -0.36,
+        "window_end_delta_sec": 4.71,
+        "span_sec": 5.08,
+        "total_events": 84,
+        "event_density_per_10sec": 165.45,
+        "eid_counts": {
+          "7": 43,
+          "13": 37,
+          "1": 1,
+          "18": 1,
+          "11": 1,
+          "5": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 3.368,
+          "mean_sec": 0.061
+        },
+        "burst_detected": [
+          {
+            "eid": 7,
+            "count": 43,
+            "window_sec": 0.04
+          },
+          {
+            "eid": 13,
+            "count": 37,
+            "window_sec": 0.02
+          }
+        ]
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\PREPAREBACKUP (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\PREPAREBACKUP (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\PREPAREBACKUP (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_STABLE (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\PREPAREBACKUP (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\DOSNAPSHOT (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\PREPARESNAPSHOT (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\PREPARESNAPSHOT (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_WAITING_FOR_FREEZE (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\FREEZE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\FREEZE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\BKGND_FREEZE_THREAD (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_WAITING_FOR_THAW (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\BKGND_FREEZE_THREAD (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_WAITING_FOR_POST_SNAPSHOT (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\THAW (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\THAW (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\POSTSNAPSHOT (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\POSTSNAPSHOT (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_WAITING_FOR_BACKUP_COMPLETE (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\DOSNAPSHOT (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\GETSTATE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\GETSTATE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\GETSTATE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\GETSTATE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\BACKUPCOMPLETE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\BACKUPCOMPLETE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\BACKUPCOMPLETE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\BACKUPCOMPLETE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          }
+        ],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": [
+          {
+            "source_eid": 11,
+            "path": "C:\\ProgramData\\SAM",
+            "image": "esentutl.exe"
+          }
+        ]
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1112_128",
+    "technique_id": "T1112",
+    "technique_name": "Modify Registry",
+    "anchor_eid": 13,
+    "anchor_detail": {
+      "eid": 13,
+      "time": "2020-10-19 12:28:31.479000+00:00",
+      "image": "vssvc.exe",
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\COM+ REGDB Writer\\IDENTIFY (Enter)",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": null,
+      "integrity": null
+    },
+    "confidence": 1.0,
+    "all_idxs": [
+      29,
+      109,
+      111,
+      113,
+      114,
+      117,
+      118,
+      119,
+      120,
+      121,
+      128,
+      137,
+      139,
+      143,
+      146,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      156,
+      157,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      172,
+      174,
+      181,
+      182,
+      185,
+      213,
+      255,
+      256,
+      260,
+      338,
+      339,
+      353,
+      427,
+      428,
+      433,
+      434,
+      435,
+      436,
+      437,
+      438,
+      440,
+      443,
+      445,
+      446,
+      447,
+      448,
+      449,
+      450,
+      452,
+      456,
+      457,
+      458,
+      459,
+      460,
+      461,
+      462,
+      464,
+      465,
+      466,
+      467,
+      468,
+      469,
+      470,
+      471,
+      472,
+      473,
+      474,
+      480,
+      481,
+      483,
+      486,
+      487,
+      488,
+      491,
+      493,
+      494,
+      495,
+      497,
+      498,
+      520,
+      524,
+      527,
+      602,
+      603,
+      606,
+      609,
+      613,
+      616,
+      646,
+      649,
+      684,
+      685,
+      686,
+      688,
+      691,
+      693,
+      694,
+      695,
+      696,
+      712,
+      713,
+      714,
+      715,
+      716,
+      717,
+      718,
+      719,
+      720,
+      722,
+      723,
+      724,
+      725,
+      726,
+      727,
+      728,
+      730,
+      733,
+      734,
+      735,
+      736,
+      737,
+      770,
+      784
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "spawn",
+            "parent_image": "cmd.exe",
+            "child_image": "esentutl.exe",
+            "integrity_level": "High",
+            "parent_guid": "{39e4a257-15ba-5f8d-e204-000000000700}",
+            "child_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "cmdline": "esentutl.exe  /y /vss C:\\windows/system32/config/SAM /d C:\\ProgramData\\SAM",
+            "source_eid": 1
+          },
+          {
+            "relation": "access",
+            "parent_image": "vssvc.exe",
+            "child_image": "esentutl.exe",
+            "granted_access": "0x1000",
+            "source_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "target_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "source_eid": 10
+          }
+        ],
+        "chain_depth": 2
+      },
+      "command_script": {
+        "entries": [
+          {
+            "source_eid": 1,
+            "image": "esentutl.exe",
+            "cmdline": "esentutl.exe  /y /vss C:\\windows/system32/config/SAM /d C:\\ProgramData\\SAM",
+            "cmdline_length": 74,
+            "has_obfuscation": false,
+            "special_chars": []
+          }
+        ],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 1,
+        "user": "WORKSTATION5\\wardog",
+        "domain": null,
+        "logon_id": "0xc61d9",
+        "integrity_level": "High",
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-10-19T12:28:31.479000+00:00",
+        "window_start_delta_sec": -0.38,
+        "window_end_delta_sec": 4.59,
+        "span_sec": 4.97,
+        "total_events": 135,
+        "event_density_per_10sec": 271.68,
+        "eid_counts": {
+          "13": 91,
+          "9": 33,
+          "12": 8,
+          "1": 1,
+          "18": 1,
+          "10": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 3.087,
+          "mean_sec": 0.037
+        },
+        "burst_detected": [
+          {
+            "eid": 13,
+            "count": 91,
+            "window_sec": 0.01
+          },
+          {
+            "eid": 9,
+            "count": 33,
+            "window_sec": 0.01
+          },
+          {
+            "eid": 12,
+            "count": 8,
+            "window_sec": 0.0
+          }
+        ]
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\ASR Writer\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Registry Writer\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Shadow Copy Optimization Writer\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\COM+ REGDB Writer\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Shadow Copy Optimization Writer\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\COM+ REGDB Writer\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Registry Writer\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\ASR Writer\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\SwProvider_{b5946137-7b9f-4925-af80-51abd60b20d5}\\PROVIDER_BEGINPREPARE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\SwProvider_{b5946137-7b9f-4925-af80-51abd60b20d5}\\PROVIDER_BEGINPREPARE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Shadow Copy Optimization Writer\\PREPAREBACKUP (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Shadow Copy Optimization Writer\\VSS_WS_STABLE (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Shadow Copy Optimization Writer\\PREPAREBACKUP (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\SwProvider_{b5946137-7b9f-4925-af80-51abd60b20d5}\\PROVIDER_ENDPREPARE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\SwProvider_{b5946137-7b9f-4925-af80-51abd60b20d5}\\PROVIDER_ENDPREPARE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssvcPublisher\\PREPARESNAPSHOT (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Shadow Copy Optimization Writer\\PREPARESNAPSHOT (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Shadow Copy Optimization Writer\\PREPARESNAPSHOT (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Shadow Copy Optimization Writer\\VSS_WS_WAITING_FOR_FREEZE (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssvcPublisher\\PREPARESNAPSHOT (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssvcPublisher\\FREEZE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssvcPublisher\\FREEZE_FRONT (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Shadow Copy Optimization Writer\\FREEZE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Shadow Copy Optimization Writer\\FREEZE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Shadow Copy Optimization Writer\\BKGND_FREEZE_THREAD (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Shadow Copy Optimization Writer\\VSS_WS_WAITING_FOR_THAW (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssvcPublisher\\FREEZE_FRONT (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssvcPublisher\\FREEZE_BACK (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssvcPublisher\\FREEZE_BACK (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssvcPublisher\\FREEZE_SYSTEM (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssvcPublisher\\FREEZE_RM (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssvcPublisher\\FREEZE_SYSTEM (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssvcPublisher\\FREEZE_KTM (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssvcPublisher\\FREEZE_KTM (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssvcPublisher\\FREEZE_RM (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\SwProvider_{b5946137-7b9f-4925-af80-51abd60b20d5}\\PROVIDER_PRECOMMIT (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\SwProvider_{b5946137-7b9f-4925-af80-51abd60b20d5}\\PROVIDER_PRECOMMIT (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssvcPublisher\\FREEZE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Lovelace\\OPEN_VOLUME_HANDLE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Lovelace(C:_)\\OPEN_VOLUME_HANDLE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Lovelace(C:_)\\OPEN_VOLUME_HANDLE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Lovelace\\OPEN_VOLUME_HANDLE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Lovelace\\IOCTL_RELEASE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Lovelace\\IOCTL_RELEASE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Lovelace\\IOCTL_FLUSH_AND_HOLD (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Lovelace(C:_)\\IOCTL_RELEASE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Lovelace\\IOCTL_FLUSH_AND_HOLD (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Lovelace(C:_)\\IOCTL_FLUSH_AND_HOLD (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\SwProvider_{b5946137-7b9f-4925-af80-51abd60b20d5}\\PROVIDER_COMMIT (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Lovelace(C:_)\\IOCTL_FLUSH_AND_HOLD (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Lovelace(C:_)\\IOCTL_RELEASE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\SwProvider_{b5946137-7b9f-4925-af80-51abd60b20d5}\\PROVIDER_POSTCOMMIT (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\SwProvider_{b5946137-7b9f-4925-af80-51abd60b20d5}\\PROVIDER_COMMIT (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssvcPublisher\\THAW (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssvcPublisher\\THAW_KTM (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\SwProvider_{b5946137-7b9f-4925-af80-51abd60b20d5}\\PROVIDER_POSTCOMMIT (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssvcPublisher\\THAW_KTM (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Shadow Copy Optimization Writer\\THAW (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Shadow Copy Optimization Writer\\THAW (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Shadow Copy Optimization Writer\\BKGND_FREEZE_THREAD (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Shadow Copy Optimization Writer\\VSS_WS_WAITING_FOR_POST_SNAPSHOT (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\SwProvider_{b5946137-7b9f-4925-af80-51abd60b20d5}\\PROVIDER_PREFINALCOMMIT (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssvcPublisher\\THAW (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\SwProvider_{b5946137-7b9f-4925-af80-51abd60b20d5}\\PROVIDER_PREFINALCOMMIT (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssvcPublisher\\POSTSNAPSHOT (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Shadow Copy Optimization Writer\\POSTSNAPSHOT (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Shadow Copy Optimization Writer\\POSTSNAPSHOT (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Shadow Copy Optimization Writer\\VSS_WS_WAITING_FOR_BACKUP_COMPLETE (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssvcPublisher\\POSTSNAPSHOT (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\SwProvider_{b5946137-7b9f-4925-af80-51abd60b20d5}\\PROVIDER_POSTFINALCOMMIT (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\SwProvider_{b5946137-7b9f-4925-af80-51abd60b20d5}\\PROVIDER_POSTFINALCOMMIT (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Shadow Copy Optimization Writer\\GETSTATE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Shadow Copy Optimization Writer\\GETSTATE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\ASR Writer\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Registry Writer\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Shadow Copy Optimization Writer\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Registry Writer\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\COM+ REGDB Writer\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Shadow Copy Optimization Writer\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\COM+ REGDB Writer\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\ASR Writer\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Shadow Copy Optimization Writer\\BACKUPCOMPLETE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Shadow Copy Optimization Writer\\BACKUPCOMPLETE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          }
+        ],
+        "registry_noise": [
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Enum\\IDE\\DiskVirtual_HD______________________________1.1.0___\\5&35dc7040&0&0.0.0\\Device Parameters\\Partmgr\\PartitionTableCache",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Enum\\IDE\\DiskVirtual_HD______________________________1.1.0___\\5&35dc7040&0&0.0.0\\Device Parameters\\Partmgr\\SnapshotDataCache",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Enum\\IDE\\DiskVirtual_HD______________________________1.1.0___\\5&35dc7040&0&0.1.0\\Device Parameters\\Partmgr\\PartitionTableCache",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Enum\\IDE\\DiskVirtual_HD______________________________1.1.0___\\5&35dc7040&0&0.1.0\\Device Parameters\\Partmgr\\SnapshotDataCache",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Enum\\IDE\\DiskVirtual_HD______________________________1.1.0___\\5&35dc7040&0&0.1.0\\Device Parameters\\Partmgr\\SnapshotDataCache",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Enum\\IDE\\DiskVirtual_HD______________________________1.1.0___\\5&35dc7040&0&0.1.0\\Device Parameters\\Partmgr\\PartitionTableCache",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Enum\\IDE\\DiskVirtual_HD______________________________1.1.0___\\5&35dc7040&0&0.0.0\\Device Parameters\\Partmgr\\SnapshotDataCache",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Enum\\IDE\\DiskVirtual_HD______________________________1.1.0___\\5&35dc7040&0&0.0.0\\Device Parameters\\Partmgr\\PartitionTableCache",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f136-5f8b-3800-000000000700}",
+            "image": "vssvc.exe"
+          }
+        ],
+        "registry_noise_count": 8,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1112_246",
+    "technique_id": "T1112",
+    "technique_name": "Modify Registry",
+    "anchor_eid": 13,
+    "anchor_detail": {
+      "eid": 13,
+      "time": "2020-10-19 12:28:31.568000+00:00",
+      "image": "esentutl.exe",
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_STABLE (SetCurrentState)",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": null,
+      "integrity": null
+    },
+    "confidence": 1.0,
+    "all_idxs": [
+      26,
+      29,
+      31,
+      35,
+      36,
+      37,
+      39,
+      40,
+      41,
+      42,
+      43,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      63,
+      64,
+      65,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      77,
+      78,
+      79,
+      84,
+      85,
+      86,
+      87,
+      89,
+      90,
+      91,
+      95,
+      105,
+      112,
+      173,
+      187,
+      200,
+      245,
+      246,
+      257,
+      258,
+      357,
+      431,
+      432,
+      439,
+      441,
+      442,
+      444,
+      489,
+      490,
+      492,
+      496,
+      525,
+      600,
+      601,
+      622,
+      626,
+      647,
+      652,
+      661,
+      662,
+      678,
+      690,
+      740,
+      741,
+      754,
+      782,
+      796,
+      800,
+      813
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "spawn",
+            "parent_image": "cmd.exe",
+            "child_image": "esentutl.exe",
+            "integrity_level": "High",
+            "parent_guid": "{39e4a257-15ba-5f8d-e204-000000000700}",
+            "child_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "cmdline": "esentutl.exe  /y /vss C:\\windows/system32/config/SAM /d C:\\ProgramData\\SAM",
+            "source_eid": 1
+          }
+        ],
+        "chain_depth": 1
+      },
+      "command_script": {
+        "entries": [
+          {
+            "source_eid": 1,
+            "image": "esentutl.exe",
+            "cmdline": "esentutl.exe  /y /vss C:\\windows/system32/config/SAM /d C:\\ProgramData\\SAM",
+            "cmdline_length": 74,
+            "has_obfuscation": false,
+            "special_chars": []
+          }
+        ],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 1,
+        "user": "WORKSTATION5\\wardog",
+        "domain": null,
+        "logon_id": "0xc61d9",
+        "integrity_level": "High",
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-10-19T12:28:31.568000+00:00",
+        "window_start_delta_sec": -0.48,
+        "window_end_delta_sec": 4.59,
+        "span_sec": 5.08,
+        "total_events": 84,
+        "event_density_per_10sec": 165.45,
+        "eid_counts": {
+          "7": 43,
+          "13": 37,
+          "1": 1,
+          "18": 1,
+          "11": 1,
+          "5": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 3.368,
+          "mean_sec": 0.061
+        },
+        "burst_detected": [
+          {
+            "eid": 7,
+            "count": 43,
+            "window_sec": 0.04
+          },
+          {
+            "eid": 13,
+            "count": 37,
+            "window_sec": 0.02
+          }
+        ]
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\PREPAREBACKUP (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\PREPAREBACKUP (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\PREPAREBACKUP (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_STABLE (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\PREPAREBACKUP (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\DOSNAPSHOT (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\PREPARESNAPSHOT (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\PREPARESNAPSHOT (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_WAITING_FOR_FREEZE (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\FREEZE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\FREEZE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\BKGND_FREEZE_THREAD (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_WAITING_FOR_THAW (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\BKGND_FREEZE_THREAD (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_WAITING_FOR_POST_SNAPSHOT (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\THAW (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\THAW (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\POSTSNAPSHOT (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\POSTSNAPSHOT (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_WAITING_FOR_BACKUP_COMPLETE (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\DOSNAPSHOT (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\GETSTATE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\GETSTATE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\GETSTATE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\GETSTATE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\BACKUPCOMPLETE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\BACKUPCOMPLETE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\BACKUPCOMPLETE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\BACKUPCOMPLETE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          }
+        ],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": [
+          {
+            "source_eid": 11,
+            "path": "C:\\ProgramData\\SAM",
+            "image": "esentutl.exe"
+          }
+        ]
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1112_431",
+    "technique_id": "T1112",
+    "technique_name": "Modify Registry",
+    "anchor_eid": 13,
+    "anchor_detail": {
+      "eid": 13,
+      "time": "2020-10-19 12:28:31.921000+00:00",
+      "image": "esentutl.exe",
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\PREPARESNAPSHOT (Leave)",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": null,
+      "integrity": null
+    },
+    "confidence": 1.0,
+    "all_idxs": [
+      26,
+      29,
+      31,
+      35,
+      36,
+      37,
+      39,
+      40,
+      41,
+      42,
+      43,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      63,
+      64,
+      65,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      77,
+      78,
+      79,
+      84,
+      85,
+      86,
+      87,
+      89,
+      90,
+      91,
+      95,
+      105,
+      112,
+      173,
+      187,
+      200,
+      245,
+      246,
+      257,
+      258,
+      357,
+      431,
+      432,
+      439,
+      441,
+      442,
+      444,
+      489,
+      490,
+      492,
+      496,
+      525,
+      600,
+      601,
+      622,
+      626,
+      647,
+      652,
+      661,
+      662,
+      678,
+      690,
+      740,
+      741,
+      754,
+      782,
+      796,
+      800,
+      813
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "spawn",
+            "parent_image": "cmd.exe",
+            "child_image": "esentutl.exe",
+            "integrity_level": "High",
+            "parent_guid": "{39e4a257-15ba-5f8d-e204-000000000700}",
+            "child_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "cmdline": "esentutl.exe  /y /vss C:\\windows/system32/config/SAM /d C:\\ProgramData\\SAM",
+            "source_eid": 1
+          }
+        ],
+        "chain_depth": 1
+      },
+      "command_script": {
+        "entries": [
+          {
+            "source_eid": 1,
+            "image": "esentutl.exe",
+            "cmdline": "esentutl.exe  /y /vss C:\\windows/system32/config/SAM /d C:\\ProgramData\\SAM",
+            "cmdline_length": 74,
+            "has_obfuscation": false,
+            "special_chars": []
+          }
+        ],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 1,
+        "user": "WORKSTATION5\\wardog",
+        "domain": null,
+        "logon_id": "0xc61d9",
+        "integrity_level": "High",
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-10-19T12:28:31.921000+00:00",
+        "window_start_delta_sec": -0.84,
+        "window_end_delta_sec": 4.24,
+        "span_sec": 5.08,
+        "total_events": 84,
+        "event_density_per_10sec": 165.45,
+        "eid_counts": {
+          "7": 43,
+          "13": 37,
+          "1": 1,
+          "18": 1,
+          "11": 1,
+          "5": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 3.368,
+          "mean_sec": 0.061
+        },
+        "burst_detected": [
+          {
+            "eid": 7,
+            "count": 43,
+            "window_sec": 0.04
+          },
+          {
+            "eid": 13,
+            "count": 37,
+            "window_sec": 0.02
+          }
+        ]
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\PREPAREBACKUP (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\PREPAREBACKUP (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\PREPAREBACKUP (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_STABLE (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\PREPAREBACKUP (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\DOSNAPSHOT (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\PREPARESNAPSHOT (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\PREPARESNAPSHOT (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_WAITING_FOR_FREEZE (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\FREEZE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\FREEZE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\BKGND_FREEZE_THREAD (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_WAITING_FOR_THAW (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\BKGND_FREEZE_THREAD (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_WAITING_FOR_POST_SNAPSHOT (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\THAW (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\THAW (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\POSTSNAPSHOT (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\POSTSNAPSHOT (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_WAITING_FOR_BACKUP_COMPLETE (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\DOSNAPSHOT (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\GETSTATE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\GETSTATE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\GETSTATE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\GETSTATE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\BACKUPCOMPLETE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\BACKUPCOMPLETE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\BACKUPCOMPLETE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\BACKUPCOMPLETE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          }
+        ],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": [
+          {
+            "source_eid": 11,
+            "path": "C:\\ProgramData\\SAM",
+            "image": "esentutl.exe"
+          }
+        ]
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1112_626",
+    "technique_id": "T1112",
+    "technique_name": "Modify Registry",
+    "anchor_eid": 13,
+    "anchor_detail": {
+      "eid": 13,
+      "time": "2020-10-19 12:28:35.978000+00:00",
+      "image": "esentutl.exe",
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\GETSTATE (Enter)",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": null,
+      "integrity": null
+    },
+    "confidence": 1.0,
+    "all_idxs": [
+      26,
+      29,
+      31,
+      35,
+      36,
+      37,
+      39,
+      40,
+      41,
+      42,
+      43,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      63,
+      64,
+      65,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      77,
+      78,
+      79,
+      84,
+      85,
+      86,
+      87,
+      89,
+      90,
+      91,
+      95,
+      105,
+      112,
+      173,
+      187,
+      200,
+      245,
+      246,
+      257,
+      258,
+      357,
+      431,
+      432,
+      439,
+      441,
+      442,
+      444,
+      489,
+      490,
+      492,
+      496,
+      525,
+      600,
+      601,
+      622,
+      626,
+      647,
+      652,
+      661,
+      662,
+      678,
+      690,
+      740,
+      741,
+      754,
+      782,
+      796,
+      800,
+      813
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "spawn",
+            "parent_image": "cmd.exe",
+            "child_image": "esentutl.exe",
+            "integrity_level": "High",
+            "parent_guid": "{39e4a257-15ba-5f8d-e204-000000000700}",
+            "child_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "cmdline": "esentutl.exe  /y /vss C:\\windows/system32/config/SAM /d C:\\ProgramData\\SAM",
+            "source_eid": 1
+          }
+        ],
+        "chain_depth": 1
+      },
+      "command_script": {
+        "entries": [
+          {
+            "source_eid": 1,
+            "image": "esentutl.exe",
+            "cmdline": "esentutl.exe  /y /vss C:\\windows/system32/config/SAM /d C:\\ProgramData\\SAM",
+            "cmdline_length": 74,
+            "has_obfuscation": false,
+            "special_chars": []
+          }
+        ],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 1,
+        "user": "WORKSTATION5\\wardog",
+        "domain": null,
+        "logon_id": "0xc61d9",
+        "integrity_level": "High",
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-10-19T12:28:35.978000+00:00",
+        "window_start_delta_sec": -4.89,
+        "window_end_delta_sec": 0.18,
+        "span_sec": 5.08,
+        "total_events": 84,
+        "event_density_per_10sec": 165.45,
+        "eid_counts": {
+          "7": 43,
+          "13": 37,
+          "1": 1,
+          "18": 1,
+          "11": 1,
+          "5": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 3.368,
+          "mean_sec": 0.061
+        },
+        "burst_detected": [
+          {
+            "eid": 7,
+            "count": 43,
+            "window_sec": 0.04
+          },
+          {
+            "eid": 13,
+            "count": 37,
+            "window_sec": 0.02
+          }
+        ]
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\PREPAREBACKUP (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\PREPAREBACKUP (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\PREPAREBACKUP (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_STABLE (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\PREPAREBACKUP (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\DOSNAPSHOT (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\PREPARESNAPSHOT (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\PREPARESNAPSHOT (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_WAITING_FOR_FREEZE (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\FREEZE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\FREEZE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\BKGND_FREEZE_THREAD (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_WAITING_FOR_THAW (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\BKGND_FREEZE_THREAD (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_WAITING_FOR_POST_SNAPSHOT (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\THAW (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\THAW (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\POSTSNAPSHOT (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\POSTSNAPSHOT (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_WAITING_FOR_BACKUP_COMPLETE (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\DOSNAPSHOT (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\GETSTATE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\GETSTATE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\GETSTATE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\GETSTATE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\BACKUPCOMPLETE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\BACKUPCOMPLETE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\BACKUPCOMPLETE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\BACKUPCOMPLETE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          }
+        ],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": [
+          {
+            "source_eid": 11,
+            "path": "C:\\ProgramData\\SAM",
+            "image": "esentutl.exe"
+          }
+        ]
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1112_662",
+    "technique_id": "T1112",
+    "technique_name": "Modify Registry",
+    "anchor_eid": 13,
+    "anchor_detail": {
+      "eid": 13,
+      "time": "2020-10-19 12:28:35.999000+00:00",
+      "image": "esentutl.exe",
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\IDENTIFY (Enter)",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": null,
+      "integrity": null
+    },
+    "confidence": 1.0,
+    "all_idxs": [
+      26,
+      29,
+      31,
+      35,
+      36,
+      37,
+      39,
+      40,
+      41,
+      42,
+      43,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      63,
+      64,
+      65,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      77,
+      78,
+      79,
+      84,
+      85,
+      86,
+      87,
+      89,
+      90,
+      91,
+      95,
+      105,
+      112,
+      173,
+      187,
+      200,
+      245,
+      246,
+      257,
+      258,
+      357,
+      431,
+      432,
+      439,
+      441,
+      442,
+      444,
+      489,
+      490,
+      492,
+      496,
+      525,
+      600,
+      601,
+      622,
+      626,
+      647,
+      652,
+      661,
+      662,
+      678,
+      690,
+      740,
+      741,
+      754,
+      782,
+      796,
+      800,
+      813
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "spawn",
+            "parent_image": "cmd.exe",
+            "child_image": "esentutl.exe",
+            "integrity_level": "High",
+            "parent_guid": "{39e4a257-15ba-5f8d-e204-000000000700}",
+            "child_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "cmdline": "esentutl.exe  /y /vss C:\\windows/system32/config/SAM /d C:\\ProgramData\\SAM",
+            "source_eid": 1
+          }
+        ],
+        "chain_depth": 1
+      },
+      "command_script": {
+        "entries": [
+          {
+            "source_eid": 1,
+            "image": "esentutl.exe",
+            "cmdline": "esentutl.exe  /y /vss C:\\windows/system32/config/SAM /d C:\\ProgramData\\SAM",
+            "cmdline_length": 74,
+            "has_obfuscation": false,
+            "special_chars": []
+          }
+        ],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 1,
+        "user": "WORKSTATION5\\wardog",
+        "domain": null,
+        "logon_id": "0xc61d9",
+        "integrity_level": "High",
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-10-19T12:28:35.999000+00:00",
+        "window_start_delta_sec": -4.91,
+        "window_end_delta_sec": 0.16,
+        "span_sec": 5.08,
+        "total_events": 84,
+        "event_density_per_10sec": 165.45,
+        "eid_counts": {
+          "7": 43,
+          "13": 37,
+          "1": 1,
+          "18": 1,
+          "11": 1,
+          "5": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 3.368,
+          "mean_sec": 0.061
+        },
+        "burst_detected": [
+          {
+            "eid": 7,
+            "count": 43,
+            "window_sec": 0.04
+          },
+          {
+            "eid": 13,
+            "count": 37,
+            "window_sec": 0.02
+          }
+        ]
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\PREPAREBACKUP (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\PREPAREBACKUP (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\PREPAREBACKUP (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_STABLE (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\PREPAREBACKUP (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\DOSNAPSHOT (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\PREPARESNAPSHOT (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\PREPARESNAPSHOT (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_WAITING_FOR_FREEZE (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\FREEZE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\FREEZE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\BKGND_FREEZE_THREAD (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_WAITING_FOR_THAW (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\BKGND_FREEZE_THREAD (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_WAITING_FOR_POST_SNAPSHOT (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\THAW (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\THAW (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\POSTSNAPSHOT (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\POSTSNAPSHOT (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_WAITING_FOR_BACKUP_COMPLETE (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\DOSNAPSHOT (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\GETSTATE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\GETSTATE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\GETSTATE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\GETSTATE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\BACKUPCOMPLETE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\BACKUPCOMPLETE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\BACKUPCOMPLETE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\BACKUPCOMPLETE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          }
+        ],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": [
+          {
+            "source_eid": 11,
+            "path": "C:\\ProgramData\\SAM",
+            "image": "esentutl.exe"
+          }
+        ]
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1112_741",
+    "technique_id": "T1112",
+    "technique_name": "Modify Registry",
+    "anchor_eid": 13,
+    "anchor_detail": {
+      "eid": 13,
+      "time": "2020-10-19 12:28:36.046000+00:00",
+      "image": "esentutl.exe",
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\BACKUPCOMPLETE (Enter)",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": null,
+      "integrity": null
+    },
+    "confidence": 1.0,
+    "all_idxs": [
+      26,
+      29,
+      31,
+      35,
+      36,
+      37,
+      39,
+      40,
+      41,
+      42,
+      43,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      63,
+      64,
+      65,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      77,
+      78,
+      79,
+      84,
+      85,
+      86,
+      87,
+      89,
+      90,
+      91,
+      95,
+      105,
+      112,
+      173,
+      187,
+      200,
+      245,
+      246,
+      257,
+      258,
+      357,
+      431,
+      432,
+      439,
+      441,
+      442,
+      444,
+      489,
+      490,
+      492,
+      496,
+      525,
+      600,
+      601,
+      622,
+      626,
+      647,
+      652,
+      661,
+      662,
+      678,
+      690,
+      740,
+      741,
+      754,
+      782,
+      796,
+      800,
+      813
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "spawn",
+            "parent_image": "cmd.exe",
+            "child_image": "esentutl.exe",
+            "integrity_level": "High",
+            "parent_guid": "{39e4a257-15ba-5f8d-e204-000000000700}",
+            "child_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "cmdline": "esentutl.exe  /y /vss C:\\windows/system32/config/SAM /d C:\\ProgramData\\SAM",
+            "source_eid": 1
+          }
+        ],
+        "chain_depth": 1
+      },
+      "command_script": {
+        "entries": [
+          {
+            "source_eid": 1,
+            "image": "esentutl.exe",
+            "cmdline": "esentutl.exe  /y /vss C:\\windows/system32/config/SAM /d C:\\ProgramData\\SAM",
+            "cmdline_length": 74,
+            "has_obfuscation": false,
+            "special_chars": []
+          }
+        ],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 1,
+        "user": "WORKSTATION5\\wardog",
+        "domain": null,
+        "logon_id": "0xc61d9",
+        "integrity_level": "High",
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-10-19T12:28:36.046000+00:00",
+        "window_start_delta_sec": -4.96,
+        "window_end_delta_sec": 0.12,
+        "span_sec": 5.08,
+        "total_events": 84,
+        "event_density_per_10sec": 165.45,
+        "eid_counts": {
+          "7": 43,
+          "13": 37,
+          "1": 1,
+          "18": 1,
+          "11": 1,
+          "5": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 3.368,
+          "mean_sec": 0.061
+        },
+        "burst_detected": [
+          {
+            "eid": 7,
+            "count": 43,
+            "window_sec": 0.04
+          },
+          {
+            "eid": 13,
+            "count": 37,
+            "window_sec": 0.02
+          }
+        ]
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\PREPAREBACKUP (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\PREPAREBACKUP (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\PREPAREBACKUP (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_STABLE (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\PREPAREBACKUP (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\DOSNAPSHOT (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\PREPARESNAPSHOT (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\PREPARESNAPSHOT (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_WAITING_FOR_FREEZE (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\FREEZE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\FREEZE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\BKGND_FREEZE_THREAD (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_WAITING_FOR_THAW (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\BKGND_FREEZE_THREAD (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_WAITING_FOR_POST_SNAPSHOT (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\THAW (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\THAW (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\POSTSNAPSHOT (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\POSTSNAPSHOT (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\VSS_WS_WAITING_FOR_BACKUP_COMPLETE (SetCurrentState)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\DOSNAPSHOT (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\GETSTATE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\GETSTATE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\GETSTATE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\GETSTATE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\IDENTIFY (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\IDENTIFY (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\BACKUPCOMPLETE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\BACKUPCOMPLETE (Enter)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\EseRecoveryWriter\\BACKUPCOMPLETE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\VssapiPublisher\\BACKUPCOMPLETE (Leave)",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+            "image": "esentutl.exe"
+          }
+        ],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": [
+          {
+            "source_eid": 11,
+            "path": "C:\\ProgramData\\SAM",
+            "image": "esentutl.exe"
+          }
+        ]
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  }
+]

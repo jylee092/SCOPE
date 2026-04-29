@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"Powershell is repeatedly creating registry keys in a user's hive (HKU), which can indicate persistence mechanisms or configuration changes by malware. This is unusual for typical benign PowerShell usage.\",\n  \"indicators\": [\n    \"powershell\",\n    \"reg_create\",\n    \"HKU\",\n    \"persistence\"\n  ]\n}"}

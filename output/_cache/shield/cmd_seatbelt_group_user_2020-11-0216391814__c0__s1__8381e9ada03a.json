@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[Seatbelt.exe|{39e4a257-7c7]\"\n  ],\n  \"rationale\": \"The process 'Seatbelt.exe' is a known red-team and penetration testing tool designed for system enumeration and privilege escalation checks, making its execution inherently suspicious as it aligns with reconnaissance and information gathering attack patterns.\"\n}"}

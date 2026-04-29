@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The process taskhostw.exe is performing routine operations related to managing the user's web cache, including deleting old cache files, writing new ones, and setting a registry key indicating cache corruption, which is consistent with normal system behavior and not indicative of an attack.\"\n}"}

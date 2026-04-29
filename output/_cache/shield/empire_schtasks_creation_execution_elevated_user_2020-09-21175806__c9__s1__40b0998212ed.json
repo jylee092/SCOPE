@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed processes, command lines, file operations, and registry modifications are consistent with the normal operation of the Windows Update service and its components (svchost.exe and usocoreworker.exe), with no indicators of malicious activity.\"\n}"}

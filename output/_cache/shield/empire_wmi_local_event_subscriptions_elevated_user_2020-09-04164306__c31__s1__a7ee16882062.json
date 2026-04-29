@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed processes and their command lines, including the non-standard 'FindVolume.exe' launched by the legitimate 'WindowsAzureGuestAgent.exe' for disk path enumeration, do not match any known common attack patterns or indicators of compromise.\"\n}"}

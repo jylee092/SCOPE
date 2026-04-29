@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed activities, including the deletion of application icon cache files and creation of Recycle Bin-related registry keys by RuntimeBroker.exe, are normal system maintenance operations and do not match any known attack patterns.\"\n}"}

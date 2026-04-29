@@ -1,0 +1,832 @@
+{
+  "scenario": "empire_find_localadmin_smb_svcctl_OpenSCManager_2020-09-22021559",
+  "total_groups": 11,
+  "instruction": "각 그룹의 sample_logs와 anchor를 확인한 뒤 gt_ 필드를 채워주세요. gt_is_true_positive: 해당 그룹이 실제 공격 행위인지 (true/false). gt_technique_id: 실제 MITRE technique ID (예: T1059.001). gt_tactic: 실제 tactic 이름 (예: Execution). gt_notes: 판단 근거나 메모.",
+  "groups": [
+    {
+      "group_id": "T1021_002_1368",
+      "rule_technique_id": "T1021.002",
+      "rule_technique_name": "SMB/Windows Admin Shares",
+      "confidence": 0.11,
+      "anchor": {
+        "idx": 1368,
+        "EventID": 4624,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-22 06:16:30.918000+00:00"
+      },
+      "num_events": 4,
+      "event_id_distribution": {
+        "4624": 2,
+        "5140": 1,
+        "5145": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 1368,
+          "EventID": 4624,
+          "TimeCreated": "2020-09-22 06:16:30.918000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1370,
+          "EventID": 5140,
+          "TimeCreated": "2020-09-22 06:16:30.919000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1371,
+          "EventID": 5145,
+          "TimeCreated": "2020-09-22 06:16:30.919000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1540,
+          "EventID": 4624,
+          "TimeCreated": "2020-09-22 06:16:54.065000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1069.001",
+      "gt_technique_name": "SMB/Windows Admin Shares",
+      "gt_tactic": "Discovery",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1021.002)"
+    },
+    {
+      "group_id": "T1021_002_56",
+      "rule_technique_id": "T1021.002",
+      "rule_technique_name": "SMB/Windows Admin Shares",
+      "confidence": 0.11,
+      "anchor": {
+        "idx": 56,
+        "EventID": 4624,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-22 06:16:02.937000+00:00"
+      },
+      "num_events": 4,
+      "event_id_distribution": {
+        "4624": 4
+      },
+      "sample_logs": [
+        {
+          "idx": 56,
+          "EventID": 4624,
+          "TimeCreated": "2020-09-22 06:16:02.937000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 64,
+          "EventID": 4624,
+          "TimeCreated": "2020-09-22 06:16:02.941000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 908,
+          "EventID": 4624,
+          "TimeCreated": "2020-09-22 06:16:08.679000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1368,
+          "EventID": 4624,
+          "TimeCreated": "2020-09-22 06:16:30.918000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1069.001",
+      "gt_technique_name": "SMB/Windows Admin Shares",
+      "gt_tactic": "Discovery",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1021.002)"
+    },
+    {
+      "group_id": "T1021_002_1068",
+      "rule_technique_id": "T1021.002",
+      "rule_technique_name": "SMB/Windows Admin Shares",
+      "confidence": 0.33,
+      "anchor": {
+        "idx": 1068,
+        "EventID": 4624,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-22 06:16:09.804000+00:00"
+      },
+      "num_events": 4,
+      "event_id_distribution": {
+        "3": 2,
+        "11": 1,
+        "4624": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 69,
+          "EventID": 11,
+          "TimeCreated": "2020-09-22 06:16:03.941000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1068,
+          "EventID": 4624,
+          "TimeCreated": "2020-09-22 06:16:09.804000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1099,
+          "EventID": 3,
+          "TimeCreated": "2020-09-22 06:16:11.808000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1100,
+          "EventID": 3,
+          "TimeCreated": "2020-09-22 06:16:11.808000+00:00",
+          "Image": "C:\\Windows\\System32\\services.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1069.001",
+      "gt_technique_name": "SMB/Windows Admin Shares",
+      "gt_tactic": "Discovery",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1021.002)"
+    },
+    {
+      "group_id": "T1021_002_1540",
+      "rule_technique_id": "T1021.002",
+      "rule_technique_name": "SMB/Windows Admin Shares",
+      "confidence": 0.17,
+      "anchor": {
+        "idx": 1540,
+        "EventID": 4624,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-22 06:16:54.065000+00:00"
+      },
+      "num_events": 2,
+      "event_id_distribution": {
+        "4624": 2
+      },
+      "sample_logs": [
+        {
+          "idx": 1540,
+          "EventID": 4624,
+          "TimeCreated": "2020-09-22 06:16:54.065000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1822,
+          "EventID": 4624,
+          "TimeCreated": "2020-09-22 06:17:17.224000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1069.001",
+      "gt_technique_name": "SMB/Windows Admin Shares",
+      "gt_tactic": "Discovery",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1021.002)"
+    },
+    {
+      "group_id": "T1021_002_3455",
+      "rule_technique_id": "T1021.002",
+      "rule_technique_name": "SMB/Windows Admin Shares",
+      "confidence": 0.17,
+      "anchor": {
+        "idx": 3455,
+        "EventID": 4624,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-22 06:17:54.215000+00:00"
+      },
+      "num_events": 1,
+      "event_id_distribution": {
+        "4624": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 3455,
+          "EventID": 4624,
+          "TimeCreated": "2020-09-22 06:17:54.215000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1069.001",
+      "gt_technique_name": "SMB/Windows Admin Shares",
+      "gt_tactic": "Discovery",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1021.002)"
+    },
+    {
+      "group_id": "T1021_003_1822",
+      "rule_technique_id": "T1021.003",
+      "rule_technique_name": "Distributed Component Object Model",
+      "confidence": 0.0,
+      "anchor": {
+        "idx": 1822,
+        "EventID": 4624,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-22 06:17:17.224000+00:00"
+      },
+      "num_events": 1,
+      "event_id_distribution": {
+        "4624": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 1822,
+          "EventID": 4624,
+          "TimeCreated": "2020-09-22 06:17:17.224000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1069.001",
+      "gt_technique_name": "Distributed Component Object Model",
+      "gt_tactic": "Discovery",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:c=0,no-kw,rule!=fam(T1021.003)"
+    },
+    {
+      "group_id": "T1047_554",
+      "rule_technique_id": "T1047",
+      "rule_technique_name": "Windows Management Instrumentation",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 554,
+        "EventID": 5857,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-22 06:16:08.383000+00:00"
+      },
+      "num_events": 9,
+      "event_id_distribution": {
+        "3": 7,
+        "1": 1,
+        "5857": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 97,
+          "EventID": 3,
+          "TimeCreated": "2020-09-22 06:16:05.961000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 526,
+          "EventID": 1,
+          "TimeCreated": "2020-09-22 06:16:08.356000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "C:\\windows\\system32\\wbem\\wmiprvse.exe -secured -Embedding",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 554,
+          "EventID": 5857,
+          "TimeCreated": "2020-09-22 06:16:08.383000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1078,
+          "EventID": 3,
+          "TimeCreated": "2020-09-22 06:16:09.810000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1079,
+          "EventID": 3,
+          "TimeCreated": "2020-09-22 06:16:09.811000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1086,
+          "EventID": 3,
+          "TimeCreated": "2020-09-22 06:16:09.814000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1087,
+          "EventID": 3,
+          "TimeCreated": "2020-09-22 06:16:10.805000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1089,
+          "EventID": 3,
+          "TimeCreated": "2020-09-22 06:16:10.806000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1381,
+          "EventID": 3,
+          "TimeCreated": "2020-09-22 06:16:32.936000+00:00",
+          "Image": "System",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1069.001",
+      "gt_technique_name": "Windows Management Instrumentation",
+      "gt_tactic": "Discovery",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: sample-kw+ctx(T1047,c=1.00)"
+    },
+    {
+      "group_id": "T1070_004_4519",
+      "rule_technique_id": "T1070.004",
+      "rule_technique_name": "File Deletion",
+      "confidence": 0.0,
+      "anchor": {
+        "idx": 4519,
+        "EventID": 23,
+        "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-22 06:18:36.826000+00:00"
+      },
+      "num_events": 3,
+      "event_id_distribution": {
+        "13": 2,
+        "23": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 4368,
+          "EventID": 13,
+          "TimeCreated": "2020-09-22 06:18:34.770000+00:00",
+          "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\NdisCap\\Parameters\\RefCount"
+        },
+        {
+          "idx": 4371,
+          "EventID": 13,
+          "TimeCreated": "2020-09-22 06:18:34.771000+00:00",
+          "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\.DEFAULT\\System\\CurrentControlSet\\Control\\NetTrace\\Session\\CaptureEnabled"
+        },
+        {
+          "idx": 4519,
+          "EventID": 23,
+          "TimeCreated": "2020-09-22 06:18:36.826000+00:00",
+          "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1069.001",
+      "gt_technique_name": "File Deletion",
+      "gt_tactic": "Discovery",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:c=0,no-kw,rule!=fam(T1070.004)"
+    },
+    {
+      "group_id": "T1112_4368",
+      "rule_technique_id": "T1112",
+      "rule_technique_name": "Modify Registry",
+      "confidence": 0.0,
+      "anchor": {
+        "idx": 4368,
+        "EventID": 13,
+        "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-22 06:18:34.770000+00:00"
+      },
+      "num_events": 3,
+      "event_id_distribution": {
+        "13": 2,
+        "23": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 4368,
+          "EventID": 13,
+          "TimeCreated": "2020-09-22 06:18:34.770000+00:00",
+          "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\NdisCap\\Parameters\\RefCount"
+        },
+        {
+          "idx": 4371,
+          "EventID": 13,
+          "TimeCreated": "2020-09-22 06:18:34.771000+00:00",
+          "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\.DEFAULT\\System\\CurrentControlSet\\Control\\NetTrace\\Session\\CaptureEnabled"
+        },
+        {
+          "idx": 4519,
+          "EventID": 23,
+          "TimeCreated": "2020-09-22 06:18:36.826000+00:00",
+          "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1069.001",
+      "gt_technique_name": "Modify Registry",
+      "gt_tactic": "Discovery",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:c=0,no-kw,rule!=fam(T1112)"
+    },
+    {
+      "group_id": "T1134_2174",
+      "rule_technique_id": "T1134",
+      "rule_technique_name": "Access Token Manipulation",
+      "confidence": 0.67,
+      "anchor": {
+        "idx": 2174,
+        "EventID": 4673,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-22 06:17:50.565000+00:00"
+      },
+      "num_events": 192,
+      "event_id_distribution": {
+        "10": 186,
+        "1": 3,
+        "4673": 3
+      },
+      "sample_logs": [
+        {
+          "idx": 2041,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 06:17:41.441000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2042,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 06:17:41.441000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2043,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 06:17:41.442000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2044,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 06:17:41.442000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2045,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 06:17:41.443000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2046,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 06:17:41.443000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2073,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 06:17:47.483000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2074,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 06:17:47.484000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2075,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 06:17:47.484000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2076,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 06:17:47.485000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2093,
+          "EventID": 1,
+          "TimeCreated": "2020-09-22 06:17:49.506000+00:00",
+          "Image": "C:\\Windows\\System32\\backgroundTaskHost.exe",
+          "CommandLine": "\"C:\\windows\\system32\\backgroundTaskHost.exe\" -ServerName:App.AppXmtcan0h2tfbfy7k9kn8hbxb6dmzz1zh0.mca",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2094,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 06:17:49.507000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2095,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 06:17:49.508000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2097,
+          "EventID": 1,
+          "TimeCreated": "2020-09-22 06:17:49.509000+00:00",
+          "Image": "C:\\Windows\\System32\\backgroundTaskHost.exe",
+          "CommandLine": "\"C:\\windows\\system32\\backgroundTaskHost.exe\" -ServerName:CortanaUI.AppXy7vb4pc2dr3kc93kfc509b1d0arkfb2x.mca",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2099,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 06:17:49.509000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1069.001",
+      "gt_technique_name": "Access Token Manipulation",
+      "gt_tactic": "Discovery",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1134)"
+    },
+    {
+      "group_id": "T1134_4132",
+      "rule_technique_id": "T1134",
+      "rule_technique_name": "Access Token Manipulation",
+      "confidence": 0.67,
+      "anchor": {
+        "idx": 4132,
+        "EventID": 4673,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-22 06:18:24.621000+00:00"
+      },
+      "num_events": 84,
+      "event_id_distribution": {
+        "10": 82,
+        "1": 1,
+        "4673": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 3726,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 06:18:16.380000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3728,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 06:18:16.380000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3743,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 06:18:17.393000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3744,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 06:18:17.394000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3745,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 06:18:17.394000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3746,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 06:18:17.394000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3774,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 06:18:23.436000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3776,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 06:18:23.438000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3784,
+          "EventID": 1,
+          "TimeCreated": "2020-09-22 06:18:24.443000+00:00",
+          "Image": "C:\\Windows\\System32\\backgroundTaskHost.exe",
+          "CommandLine": "\"C:\\windows\\system32\\backgroundTaskHost.exe\" -ServerName:App.AppXmtcan0h2tfbfy7k9kn8hbxb6dmzz1zh0.mca",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3782,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 06:18:24.443000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3785,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 06:18:24.444000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3790,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 06:18:24.447000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3808,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 06:18:24.456000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3809,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 06:18:24.457000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 3810,
+          "EventID": 10,
+          "TimeCreated": "2020-09-22 06:18:24.457000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1069.001",
+      "gt_technique_name": "Access Token Manipulation",
+      "gt_tactic": "Discovery",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1134)"
+    }
+  ]
+}

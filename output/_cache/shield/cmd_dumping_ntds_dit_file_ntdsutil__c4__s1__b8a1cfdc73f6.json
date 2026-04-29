@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed registry operations by SearchApp.exe are consistent with its legitimate function of managing search settings and application state, with no suspicious command lines, child processes, or unusual registry keys/values indicating malicious activity.\"\n}"}

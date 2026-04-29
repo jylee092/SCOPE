@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is performing registry operations related to audio and Internet Explorer's audio policy configuration, which appears to be normal system activity without any suspicious command-line arguments or other indicators of compromise.\"\n}"}

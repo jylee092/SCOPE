@@ -1,0 +1,2189 @@
+{
+  "scenario": "empire_find_localadmin_smb_svcctl_OpenSCManager_2020-09-22021559",
+  "tactic_sequence": [
+    "Privilege Escalation",
+    "Impact",
+    "Privilege Escalation",
+    "Impact",
+    "Execution",
+    "Privilege Escalation",
+    "Impact",
+    "Execution",
+    "Privilege Escalation",
+    "Impact",
+    "Privilege Escalation",
+    "Impact",
+    "Privilege Escalation",
+    "Impact"
+  ],
+  "technique_sequence": [
+    "T1133",
+    "T1531",
+    "T1133",
+    "T1531",
+    "T1482",
+    "T1133",
+    "T1531",
+    "T1482",
+    "T1133",
+    "T1531",
+    "T1133",
+    "T1531",
+    "T1133",
+    "T1531"
+  ],
+  "per_group_topk": [
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1482",
+      "T1087",
+      "T1087.001",
+      "T1087.002",
+      "T1069.001"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ]
+  ],
+  "notes": {
+    "n_graph_nodes": 750,
+    "n_graph_edges": 1024,
+    "n_proc_nodes": 34,
+    "n_sigma_alerts": 81,
+    "n_alerts": 81,
+    "alerts": [
+      {
+        "ts": "2020-09-22 06:16:02.937000+00:00",
+        "event_index": 56,
+        "event_id": 4624,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:02.938000+00:00",
+        "event_index": 58,
+        "event_id": 4634,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:02.941000+00:00",
+        "event_index": 64,
+        "event_id": 4624,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:02.941000+00:00",
+        "event_index": 66,
+        "event_id": 4634,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.086000+00:00",
+        "event_index": 243,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.107000+00:00",
+        "event_index": 267,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.131000+00:00",
+        "event_index": 289,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.261000+00:00",
+        "event_index": 416,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.293000+00:00",
+        "event_index": 449,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.330000+00:00",
+        "event_index": 496,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.334000+00:00",
+        "event_index": 498,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.337000+00:00",
+        "event_index": 502,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.347000+00:00",
+        "event_index": 516,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.357000+00:00",
+        "event_index": 527,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.365000+00:00",
+        "event_index": 533,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.411000+00:00",
+        "event_index": 588,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.435000+00:00",
+        "event_index": 619,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.448000+00:00",
+        "event_index": 631,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.452000+00:00",
+        "event_index": 635,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.457000+00:00",
+        "event_index": 641,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.460000+00:00",
+        "event_index": 644,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.464000+00:00",
+        "event_index": 648,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.470000+00:00",
+        "event_index": 652,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.474000+00:00",
+        "event_index": 658,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.477000+00:00",
+        "event_index": 661,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.479000+00:00",
+        "event_index": 666,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.500000+00:00",
+        "event_index": 692,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.500000+00:00",
+        "event_index": 693,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.504000+00:00",
+        "event_index": 698,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.509000+00:00",
+        "event_index": 704,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.514000+00:00",
+        "event_index": 712,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.521000+00:00",
+        "event_index": 716,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.525000+00:00",
+        "event_index": 721,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.529000+00:00",
+        "event_index": 726,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.532000+00:00",
+        "event_index": 729,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.535000+00:00",
+        "event_index": 733,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.537000+00:00",
+        "event_index": 737,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.539000+00:00",
+        "event_index": 740,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.541000+00:00",
+        "event_index": 743,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.551000+00:00",
+        "event_index": 750,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.553000+00:00",
+        "event_index": 753,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.556000+00:00",
+        "event_index": 758,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.558000+00:00",
+        "event_index": 760,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.560000+00:00",
+        "event_index": 763,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.562000+00:00",
+        "event_index": 767,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.575000+00:00",
+        "event_index": 779,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.577000+00:00",
+        "event_index": 782,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.581000+00:00",
+        "event_index": 786,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.583000+00:00",
+        "event_index": 789,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.585000+00:00",
+        "event_index": 792,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.588000+00:00",
+        "event_index": 796,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.590000+00:00",
+        "event_index": 798,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.604000+00:00",
+        "event_index": 814,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.614000+00:00",
+        "event_index": 823,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.618000+00:00",
+        "event_index": 830,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.621000+00:00",
+        "event_index": 833,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.623000+00:00",
+        "event_index": 837,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.628000+00:00",
+        "event_index": 840,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.630000+00:00",
+        "event_index": 843,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.632000+00:00",
+        "event_index": 847,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.633000+00:00",
+        "event_index": 848,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.635000+00:00",
+        "event_index": 851,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.638000+00:00",
+        "event_index": 857,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.642000+00:00",
+        "event_index": 861,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.644000+00:00",
+        "event_index": 864,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.646000+00:00",
+        "event_index": 867,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.651000+00:00",
+        "event_index": 870,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.652000+00:00",
+        "event_index": 873,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.663000+00:00",
+        "event_index": 889,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.679000+00:00",
+        "event_index": 908,
+        "event_id": 4624,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.683000+00:00",
+        "event_index": 913,
+        "event_id": 4634,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.693000+00:00",
+        "event_index": 928,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:08.736000+00:00",
+        "event_index": 971,
+        "event_id": 4103,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1482",
+          "T1087",
+          "T1087.001",
+          "T1087.002",
+          "T1069.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution",
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:09.804000+00:00",
+        "event_index": 1068,
+        "event_id": 4624,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:30.918000+00:00",
+        "event_index": 1368,
+        "event_id": 4624,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:42.030000+00:00",
+        "event_index": 1452,
+        "event_id": 4634,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:54.065000+00:00",
+        "event_index": 1540,
+        "event_id": 4624,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:16:54.066000+00:00",
+        "event_index": 1542,
+        "event_id": 4634,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:17:09.170000+00:00",
+        "event_index": 1745,
+        "event_id": 4634,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:17:54.215000+00:00",
+        "event_index": 3455,
+        "event_id": 4624,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ]
+      },
+      {
+        "ts": "2020-09-22 06:17:54.217000+00:00",
+        "event_index": 3458,
+        "event_id": 4634,
+        "process_guid": "",
+        "anomaly_score": 0.0,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ]
+      }
+    ],
+    "elapsed_sec": 1.7
+  }
+}

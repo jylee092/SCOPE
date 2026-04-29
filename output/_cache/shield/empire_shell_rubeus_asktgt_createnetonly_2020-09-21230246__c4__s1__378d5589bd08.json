@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[Rubeus.exe|{d273d0f0-696]\"\n  ],\n  \"rationale\": \"The presence and execution of 'Rubeus.exe' is highly suspicious, as Rubeus is a well-known open-source tool used for Kerberos abuse and credential access in red teaming and penetration testing scenarios.\"\n}"}

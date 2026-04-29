@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed svchost.exe processes are legitimately updating the HKLM\\\\System\\\\CurrentControlSet\\\\Services\\\\W32Time\\\\Config\\\\LastKnownGoodTime registry key, which is normal behavior for the Windows Time service, and no suspicious command lines or other indicators were present.\"\n}"}

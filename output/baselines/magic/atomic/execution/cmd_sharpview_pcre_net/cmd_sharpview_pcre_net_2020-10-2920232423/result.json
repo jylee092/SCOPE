@@ -1,0 +1,167 @@
+{
+  "scenario": "cmd_sharpview_pcre_net_2020-10-2920232423",
+  "tactic_sequence": [
+    "Discovery",
+    "Execution",
+    "Command and Control",
+    "Discovery"
+  ],
+  "technique_sequence": [
+    "T1049",
+    "T1059",
+    "T1001.003",
+    "T1482"
+  ],
+  "per_group_topk": [
+    [
+      "T1049",
+      "T1069.002",
+      "T1482",
+      "T1135",
+      "T1033"
+    ],
+    [
+      "T1059"
+    ],
+    [
+      "T1059"
+    ],
+    [
+      "T1059"
+    ],
+    [
+      "T1059"
+    ],
+    [
+      "T1001.003"
+    ],
+    [
+      "T1482"
+    ],
+    [
+      "T1482"
+    ]
+  ],
+  "notes": {
+    "n_graph_nodes": 109,
+    "n_graph_edges": 109,
+    "n_proc_nodes": 5,
+    "n_sigma_alerts": 8,
+    "n_alerts": 8,
+    "alerts": [
+      {
+        "ts": "2020-10-29 08:23:20.534000+00:00",
+        "event_index": 35,
+        "event_id": 1,
+        "process_guid": "{14475cd4-5cf8-5f9b-7801-000000000500}",
+        "anomaly_score": 1.0,
+        "topk_tids": [
+          "T1049",
+          "T1069.002",
+          "T1482",
+          "T1135",
+          "T1033"
+        ],
+        "topk_tactics": [
+          "Discovery",
+          "Discovery",
+          "Discovery",
+          "Discovery",
+          "Discovery"
+        ]
+      },
+      {
+        "ts": "2020-10-29 08:23:21.498000+00:00",
+        "event_index": 169,
+        "event_id": 11,
+        "process_guid": "{14475cd4-5cf8-5f9b-7801-000000000500}",
+        "anomaly_score": 1.0,
+        "topk_tids": [
+          "T1059"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-10-29 08:23:21.510000+00:00",
+        "event_index": 170,
+        "event_id": 7,
+        "process_guid": "{14475cd4-5cf8-5f9b-7801-000000000500}",
+        "anomaly_score": 1.0,
+        "topk_tids": [
+          "T1059"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-10-29 08:23:21.510000+00:00",
+        "event_index": 171,
+        "event_id": 7,
+        "process_guid": "{14475cd4-5cf8-5f9b-7801-000000000500}",
+        "anomaly_score": 1.0,
+        "topk_tids": [
+          "T1059"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-10-29 08:23:21.521000+00:00",
+        "event_index": 190,
+        "event_id": 7,
+        "process_guid": "{14475cd4-5cf8-5f9b-7801-000000000500}",
+        "anomaly_score": 1.0,
+        "topk_tids": [
+          "T1059"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ]
+      },
+      {
+        "ts": "2020-10-29 08:23:21.622000+00:00",
+        "event_index": 236,
+        "event_id": 11,
+        "process_guid": "{14475cd4-5cf8-5f9b-7801-000000000500}",
+        "anomaly_score": 1.0,
+        "topk_tids": [
+          "T1001.003"
+        ],
+        "topk_tactics": [
+          "Command and Control"
+        ]
+      },
+      {
+        "ts": "2020-10-29 08:23:22.558000+00:00",
+        "event_index": 259,
+        "event_id": 22,
+        "process_guid": "{14475cd4-5cf8-5f9b-7801-000000000500}",
+        "anomaly_score": 1.0,
+        "topk_tids": [
+          "T1482"
+        ],
+        "topk_tactics": [
+          "Discovery"
+        ]
+      },
+      {
+        "ts": "2020-10-29 08:23:22.558000+00:00",
+        "event_index": 260,
+        "event_id": 22,
+        "process_guid": "{14475cd4-5cf8-5f9b-7801-000000000500}",
+        "anomaly_score": 1.0,
+        "topk_tids": [
+          "T1482"
+        ],
+        "topk_tactics": [
+          "Discovery"
+        ]
+      }
+    ],
+    "elapsed_sec": 0.2
+  }
+}

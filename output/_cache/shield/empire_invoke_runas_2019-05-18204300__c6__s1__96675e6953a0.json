@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[powershell.exe|{03ba39f5-6e7]\"\n  ],\n  \"rationale\": \"The powershell.exe process wrote script files to the temporary directory and established an external network connection to 10.0.10.106:443, which are common indicators of malicious activity such as C2 communication or script execution from an unexpected location.\"\n}"}

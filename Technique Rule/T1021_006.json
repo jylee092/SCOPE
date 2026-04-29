@@ -1,0 +1,69 @@
+{
+  "technique": { "id": "T1021.006", "name": "Windows Remote Management (WinRM)" },
+  "detection": { "id": "DET-T1021006" },
+  "analysis": { "id": "AN-T1021006" },
+  "log_sources": {
+    "Anchor Event": {
+      "data_component": { "id": "DC0082", "name": "Network Connection Creation" },
+      "description": "WinRM / PowerShell Remoting 엔드포인트 접근.",
+      "conditions": [
+        {
+          "type": "wsmprovhost_process",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [1] },
+          "filters": {
+            "Image": { "contains_any": ["wsmprovhost.exe", "winrshost.exe"] }
+          },
+          "description": "WinRM 호스트 프로세스 실행 — 원격 PSRemoting 세션의 서버 측 증거."
+        },
+        {
+          "type": "psremoting_cmdline",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [1] },
+          "filters": {
+            "CommandLine": { "contains_any": ["Enter-PSSession", "Invoke-Command -ComputerName", "New-PSSession", "Invoke-Command  -ComputerName"] }
+          },
+          "description": "PowerShell Remoting 명령 실행."
+        },
+        {
+          "type": "winrm_port_connect",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [3] },
+          "filters": {
+            "DestinationPort": { "in": ["5985", "5986"] }
+          },
+          "description": "WinRM 포트 5985(HTTP)/5986(HTTPS) 아웃바운드 연결."
+        },
+        {
+          "type": "winrm_psh_scriptblock",
+          "source": "WinEventLog:PowerShell",
+          "channel": { "event_codes": [4104] },
+          "filters": {
+            "ScriptBlockText": { "contains_any": ["Enter-PSSession -ComputerName", "Invoke-Command -ComputerName", "New-PSSession -ComputerName"] }
+          },
+          "description": "명시적 -ComputerName 인자가 있는 원격 세션 호출만 포착 (단순 문자열 언급 제외)."
+        }
+      ]
+    },
+    "Supporting Events": [
+      { "data_component": { "id": "DC0067", "name": "Logon Session Creation" }, "source": "WinEventLog:Security", "channel": { "event_codes": [4624] }, "filters": { "LogonType": { "in": ["3"] } }, "description": "네트워크 로그온 (LogonType 3)" },
+      { "data_component": { "id": "DC0032", "name": "Process Creation" }, "source": "WinEventLog:Sysmon", "channel": { "event_codes": [1] }, "description": "wsmprovhost의 자식 프로세스 (원격 명령 실행 결과)" },
+      { "data_component": { "id": "DC0064", "name": "Command Execution" }, "source": "WinEventLog:PowerShell", "channel": { "event_codes": [4103] }, "description": "원격 세션 내 PowerShell 파이프라인 실행" }
+    ]
+  },
+  "mutable_elements": {
+    "grouping_logic": {
+      "primary_anchor_eids": [1, 4104],
+      "secondary_anchor": { "event_codes": [3], "required_filters": ["5985", "5986"] },
+      "correlation_key": { "primary": ["Hostname", "ProcessGuid"], "secondary": ["norm_logon_id"], "fallback": ["Hostname"] },
+      "time_window": { "before_seconds": 60, "after_seconds": 300 }
+    },
+    "feature_extraction_filters": {
+      "remote_exec_cmdlets": ["Enter-PSSession", "Invoke-Command", "New-PSSession"],
+      "winrm_services": ["WinRM", "WSMan", "WsmSvc"]
+    },
+    "semantic_templates": {
+      "winrm_lateral": "계정({User})이 PowerShell Remoting으로 원격 호스트({TargetHost})에 접속하여 {RemoteCommand}를 실행함."
+    }
+  }
+}

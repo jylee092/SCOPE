@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[lsass.exe|{860ba2e3-a72]\"\n  ],\n  \"rationale\": \"The lsass.exe process writing to 'C:\\\\Windows\\\\debug\\\\PASSWD.LOG' is highly suspicious, as LSASS should not be writing credential information to a plaintext log file, which is a common indicator of credential dumping.\"\n}"}

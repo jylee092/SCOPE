@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The process SDXHelper.exe exhibits behavior consistent with legitimate Microsoft Office operations, including loading standard Office-related DLLs, managing Office solution packages and registry settings, and connecting to a legitimate Microsoft domain (officeapps.live.com) over HTTPS.\"\n}"}

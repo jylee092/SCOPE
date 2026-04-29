@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"rundll32.exe loaded comsvcs.dll and wrote a dump file named 'lsass-comsvcs.dmp', which is a common technique for credential dumping from the LSASS process.\",\n  \"indicators\": [\n    \"rundll32\",\n    \"comsvcs.dll\",\n    \"MiniDump\",\n    \"lsass\",\n    \".dmp\",\n    \"credential dumping\"\n  ]\n}"}

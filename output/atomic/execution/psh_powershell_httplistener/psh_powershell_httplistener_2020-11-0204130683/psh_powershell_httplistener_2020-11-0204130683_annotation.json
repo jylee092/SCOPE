@@ -1,0 +1,203 @@
+{
+  "scenario": "psh_powershell_httplistener_2020-11-0204130683",
+  "total_groups": 2,
+  "instruction": "각 그룹의 sample_logs와 anchor를 확인한 뒤 gt_ 필드를 채워주세요. gt_is_true_positive: 해당 그룹이 실제 공격 행위인지 (true/false). gt_technique_id: 실제 MITRE technique ID (예: T1059.001). gt_tactic: 실제 tactic 이름 (예: Execution). gt_notes: 판단 근거나 메모.",
+  "groups": [
+    {
+      "group_id": "T1059_001_60",
+      "rule_technique_id": "T1059.001",
+      "rule_technique_name": "PowerShell",
+      "confidence": 0.38,
+      "anchor": {
+        "idx": 60,
+        "EventID": 7,
+        "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "CommandLine": "",
+        "TimeCreated": "2020-11-02 04:13:01.711000+00:00"
+      },
+      "num_events": 104,
+      "event_id_distribution": {
+        "10": 67,
+        "13": 15,
+        "12": 13,
+        "7": 8,
+        "22": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 0,
+          "EventID": 10,
+          "TimeCreated": "2020-11-02 04:12:57.963000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1,
+          "EventID": 10,
+          "TimeCreated": "2020-11-02 04:12:57.963000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2,
+          "EventID": 13,
+          "TimeCreated": "2020-11-02 04:12:58.165000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\\C"
+        },
+        {
+          "idx": 3,
+          "EventID": 13,
+          "TimeCreated": "2020-11-02 04:12:58.165000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\\C"
+        },
+        {
+          "idx": 5,
+          "EventID": 10,
+          "TimeCreated": "2020-11-02 04:12:58.964000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6,
+          "EventID": 10,
+          "TimeCreated": "2020-11-02 04:12:58.964000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 9,
+          "EventID": 10,
+          "TimeCreated": "2020-11-02 04:12:59.744000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 10,
+          "EventID": 10,
+          "TimeCreated": "2020-11-02 04:12:59.744000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 11,
+          "EventID": 10,
+          "TimeCreated": "2020-11-02 04:12:59.744000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 12,
+          "EventID": 10,
+          "TimeCreated": "2020-11-02 04:12:59.964000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 13,
+          "EventID": 10,
+          "TimeCreated": "2020-11-02 04:12:59.964000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 18,
+          "EventID": 10,
+          "TimeCreated": "2020-11-02 04:13:00.010000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 17,
+          "EventID": 10,
+          "TimeCreated": "2020-11-02 04:13:00.010000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 14,
+          "EventID": 10,
+          "TimeCreated": "2020-11-02 04:13:00.010000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 15,
+          "EventID": 10,
+          "TimeCreated": "2020-11-02 04:13:00.010000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "PowerShell",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(powershell)"
+    },
+    {
+      "group_id": "T1070_001_4",
+      "rule_technique_id": "T1070.001",
+      "rule_technique_name": "Clear Windows Event Logs",
+      "confidence": 0.0,
+      "anchor": {
+        "idx": 4,
+        "EventID": 1102,
+        "Image": "nan",
+        "CommandLine": "",
+        "TimeCreated": "2020-11-02 04:12:58.211000+00:00"
+      },
+      "num_events": 1,
+      "event_id_distribution": {
+        "1102": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 4,
+          "EventID": 1102,
+          "TimeCreated": "2020-11-02 04:12:58.211000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1059.001",
+      "gt_technique_name": "Clear Windows Event Logs",
+      "gt_tactic": "Execution",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:c=0,no-kw,rule!=fam(T1070.001)"
+    }
+  ]
+}

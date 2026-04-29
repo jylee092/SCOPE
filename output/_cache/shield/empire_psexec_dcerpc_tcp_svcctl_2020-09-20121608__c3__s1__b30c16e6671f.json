@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The NetworkWatcherAgent.exe process is performing routine cleanup by deleting its own temporary packet capture files and modifying a service reference count, which are normal operations for a legitimate network monitoring agent.\"\n}"}

@@ -1,0 +1,15 @@
+{
+  "scenario": "metasploit_logonpasswords_lsass_memory_dump",
+  "tactic_sequence": [],
+  "technique_sequence": [],
+  "per_group_topk": [],
+  "notes": {
+    "n_total_events": 53698,
+    "n_filtered_events": 16943,
+    "n_lof_anomalous": 1327,
+    "n_communities": 20,
+    "n_alerts": 0,
+    "alerts": [],
+    "elapsed_sec": 246.5
+  }
+}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[WmiPrvSE.exe|{47b21e2e-953]\"\n  ],\n  \"rationale\": \"The process P[WmiPrvSE.exe|{47b21e2e-953] is suspicious because it connects to the '\\\\lsass' named pipe, which is a common technique used by attackers for credential dumping from the LSASS process.\"\n}"}

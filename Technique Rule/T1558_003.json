@@ -1,0 +1,60 @@
+{
+  "technique": { "id": "T1558.003", "name": "Kerberoasting" },
+  "detection": { "id": "DET-T1558003" },
+  "analysis": { "id": "AN-T1558003" },
+  "log_sources": {
+    "Anchor Event": {
+      "data_component": { "id": "DC0084", "name": "Active Directory Credential Request" },
+      "description": "서비스 티켓 요청 및 Rubeus/Invoke-Kerberoast 실행.",
+      "conditions": [
+        {
+          "type": "kerberos_service_ticket",
+          "source": "WinEventLog:Security",
+          "channel": { "event_codes": [4769] },
+          "filters": {
+            "TicketEncryptionType": { "in": ["0x17", "0x18"] }
+          },
+          "description": "Kerberos TGS-REQ (EID 4769) with RC4-HMAC (0x17) — kerberoasting 주요 지표."
+        },
+        {
+          "type": "rubeus_process",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [1] },
+          "filters": {
+            "CommandLine": { "contains_any": ["Rubeus", "rubeus", "asktgt", "asktgs", "kerberoast", "tgtdeleg", "asreproast"] }
+          },
+          "description": "Rubeus 또는 유사 Kerberos 도구 실행."
+        },
+        {
+          "type": "invoke_kerberoast_psh",
+          "source": "WinEventLog:PowerShell",
+          "channel": { "event_codes": [4104] },
+          "filters": {
+            "ScriptBlockText": { "contains_any": ["Invoke-Kerberoast", "Request-SPNTicket", "KerberosRequestorSecurityToken", "Get-DomainSPNTicket"] }
+          },
+          "description": "PowerShell Invoke-Kerberoast / Rubeus의 PS 구현."
+        }
+      ]
+    },
+    "Supporting Events": [
+      { "data_component": { "id": "DC0002", "name": "User Account Authentication" }, "source": "WinEventLog:Security", "channel": { "event_codes": [4768] }, "description": "TGT 발급 (Kerberos AS-REQ) — TGS 요청 직전 선행" },
+      { "data_component": { "id": "DC0082", "name": "Network Connection Creation" }, "source": "WinEventLog:Sysmon", "channel": { "event_codes": [3] }, "filters": { "DestinationPort": { "in": ["88"] } }, "description": "Kerberos 포트 88 아웃바운드" },
+      { "data_component": { "id": "DC0016", "name": "Module Load" }, "source": "WinEventLog:Sysmon", "channel": { "event_codes": [7] }, "filters": { "ImageLoaded": { "contains_any": ["kerberos.dll", "System.IdentityModel"] } }, "description": "Kerberos 인증 DLL 로드" }
+    ]
+  },
+  "mutable_elements": {
+    "grouping_logic": {
+      "primary_anchor_eids": [4769, 1, 4104],
+      "correlation_key": { "primary": ["Hostname", "norm_logon_id"], "secondary": ["ProcessGuid"], "fallback": ["Hostname"] },
+      "time_window": { "before_seconds": 60, "after_seconds": 300, "note": "대량 SPN 티켓 요청은 분 단위 발생" }
+    },
+    "feature_extraction_filters": {
+      "spn_volume_anomaly": { "requests_per_minute_threshold": 5, "note": "단기간 다수 SPN 요청" },
+      "suspicious_encryption_types": ["0x17", "0x18"],
+      "rubeus_variants": ["Rubeus", "SafetyKatz", "SharpKatz"]
+    },
+    "semantic_templates": {
+      "kerberoast": "계정({TargetUserName})이 다수 SPN({ServiceName})에 대해 RC4 암호화 TGS 티켓을 요청함. 오프라인 해시 크래킹을 위한 kerberoasting 가능."
+    }
+  }
+}

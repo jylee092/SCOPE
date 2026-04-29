@@ -1,0 +1,90 @@
+# =============================================================
+# SCOPE artifact .gitignore
+#
+# Keeps the repository at ~100MB by excluding caches, dev logs,
+# backups, and large per-scenario CSVs that can be regenerated
+# from the pipeline. Public datasets (OTRF, SigmaHQ rules) are
+# fetched at setup time -- see scripts/setup_data.sh.
+# =============================================================
+
+# --- Python --------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# --- IDE / OS ------------------------------------------------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Public datasets fetched by scripts/setup_data.sh --------
+# OTRF Security-Datasets (Mordor): ~800MB, public, fetched on setup
+Dataset/
+
+# SigmaHQ rules (~40MB, public, fetched on setup)
+_sigma_rules/
+
+# --- Skipped / temporary working files -----------------------
+_skipped/
+_tmp_*.py
+*.tmp
+
+# --- Manual zips and backups (dev artefacts) -----------------
+*.zip
+output (*.zip
+output\ (*.zip
+output/_pre_*/
+output/_snapshots/
+output/_v2_snapshot/
+output/_robustness/
+
+# --- Per-scenario ablation outputs (aggregates kept in output/_ablation/) ----
+# Each ablation variant rewrites the full output tree per scenario, which
+# both bloats the artifact and pushes some paths past Windows' 260-char
+# limit. The aggregated drop-summary JSONs in output/_ablation/ are what
+# the paper figures cite; the per-scenario per-variant outputs below are
+# intermediate computation that the scorer regenerates on demand.
+output/ablation_*/
+
+# --- Old development logs (kept locally for the authors) -----
+run_log.txt
+run_log_*.txt
+
+# --- Large per-scenario normalized event CSVs ----------------
+# These can each be ~30MB; they are regenerated from the raw OTRF
+# JSON by pipeline/data_loader.py. Keep the small per-scenario
+# JSONs (annotation, feature_result, ttp_mapping, viterbi) which
+# are the inputs to the scorers.
+output/atomic/**/*_Finale_dataset.csv
+output/compound/**/*_Finale_dataset.csv
+
+# --- Sweep result JSONs not referenced by paper figures ------
+# We keep:
+#   v20_XZ_sweep_results.json     -- backs Appendix F sensitivity
+#   v22_alpha_bypass_sweep_results.json  -- backs same
+#   viterbi_tune_sweep_results.json      -- backs same
+# Drop the rest of the dev iteration sweeps:
+output/v16_ablation_results.json
+output/v16b_ablation_results.json
+output/v17_ab_sweep_results.json
+output/v18_A_softness_results.json
+output/v19_A1A2_sweep_results.json
+output/v19_Z_sweep_results.json
+output/v21_decode_sweep_results.json
+output/v21b_sumproduct_sweep_results.json
+
+# --- Old MITRE technique-IO cache backup ---------------------
+output/technique_io_cache.v*.json.bak
+
+# --- Local API keys / secrets (NEVER commit) -----------------
+.env
+.env.*
+*.key
+secrets.json

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The System process performing a registry write to the BAM service user settings and making a NetBIOS connection on port 137 are normal operating system functions and do not indicate suspicious activity.\"\n}"}

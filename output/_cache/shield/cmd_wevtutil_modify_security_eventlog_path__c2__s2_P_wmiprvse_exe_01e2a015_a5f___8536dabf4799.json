@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": false,\n  \"deviation\": \"\",\n  \"indicators\": [\n    \"wmiprvse.exe\",\n    \"pipe_connect\",\n    \"PIPE[\\\\lsass]\",\n    \"PIPE[\\\\srvsvc]\",\n    \"load\",\n    \"netutils.dll\",\n    \"srvcli.dll\",\n    \"logoncli.dll\",\n    \"wkscli.dll\",\n    \"dsrole.dll\",\n    \"schedcli.dll\"\n  ]\n}"}

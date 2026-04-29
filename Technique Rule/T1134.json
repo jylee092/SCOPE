@@ -1,0 +1,68 @@
+{
+  "technique": { "id": "T1134", "name": "Access Token Manipulation" },
+  "detection": { "id": "DET0283" },
+  "analysis": { "id": "AN0786" },
+  "log_sources": {
+    "Anchor Event": {
+      "data_component": { "id": "DC0088", "name": "Logon Session Metadata / OS API Execution" },
+      "description": "토큰 조작의 핵심 지표. 우선순위에 따라 API 실행, 권한 상승, 세션 생성을 확인.",
+      "conditions": [
+        {
+          "type": "privilege_sensitive_use",
+          "source": "WinEventLog:Security",
+          "channel": { "event_codes": [4673, 4703] },
+          "filters": {
+            "PrivilegeList": {
+              "contains_any": [
+                "SeDebugPrivilege", "SeTcbPrivilege", "SeImpersonatePrivilege",
+                "SeAssignPrimaryTokenPrivilege", "SeCreateTokenPrivilege",
+                "SeTakeOwnershipPrivilege", "SeLoadDriverPrivilege"
+              ]
+            }
+          },
+          "description": "토큰 조작 관련 민감 권한(SeDebug/SeTcb/SeImpersonate 등) 사용 이벤트."
+        },
+        {
+          "type": "runas_process",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [1] },
+          "filters": {
+            "CommandLine": { "contains_any": ["runas /user", "Invoke-RunAs", "Start-Process -Credential"] }
+          },
+          "description": "명시적 토큰 사용 실행 명령."
+        },
+        {
+          "type": "token_api_psh",
+          "source": "WinEventLog:PowerShell",
+          "channel": { "event_codes": [4104] },
+          "filters": {
+            "ScriptBlockText": {
+              "contains_any": ["DuplicateTokenEx", "ImpersonateLoggedOnUser", "SetThreadToken", "AdjustTokenPrivileges"]
+            }
+          },
+          "description": "PowerShell 토큰 조작 API 호출."
+        }
+      ]
+    },
+    "Supporting Events": [
+      { "data_component": { "id": "DC0032", "name": "Process Creation" }, "source": "WinEventLog:Sysmon", "channel": { "event_codes": [1] } },
+      { "data_component": { "id": "DC0035", "name": "Process Access" }, "source": "WinEventLog:Sysmon", "channel": { "event_codes": [10] } },
+      { "data_component": { "id": "DC0066", "name": "Active Directory Object Modification" }, "source": "WinEventLog:Security", "channel": { "event_codes": [5136] } }
+    ]
+  },
+  "mutable_elements": {
+    "grouping_logic": {
+      "primary_anchor_eids": [4673, 4703, 4672],
+      "correlation_key": { "primary": ["Hostname", "SubjectLogonId"], "secondary": ["ProcessGuid"], "fallback": ["Hostname"] },
+      "time_window": { "window_minutes": 10, "note": "API 호출과 프로세스 생성 간의 상관관계 분석을 위해 10분 설정" }
+    },
+    "feature_extraction_filters": {
+      "allowed_service_accounts": ["NT AUTHORITY\\SYSTEM", "NT AUTHORITY\\LOCAL SERVICE", "NT AUTHORITY\\NETWORK SERVICE", "DOMAIN\\svc_backup"],
+      "known_admin_tools": ["psexec.exe", "services.exe", "taskmgr.exe", "mmc.exe", "winlogon.exe"],
+      "parent_process_anomaly_threshold": { "max_deviation_score": 0.8 }
+    },
+    "semantic_templates": {
+      "token_manipulation": "계정({SubjectUserName})이 {ProcessName}를 통해 민감한 권한({PrivilegeList})을 행사하거나 토큰을 조작함"
+    }
+  }
+}

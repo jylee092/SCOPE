@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed registry modifications by svchost.exe are consistent with legitimate Windows operating system functions related to certificate management and Windows Update orchestration, and no suspicious command lines or other indicators of compromise were present in the provided events.\"\n}"}

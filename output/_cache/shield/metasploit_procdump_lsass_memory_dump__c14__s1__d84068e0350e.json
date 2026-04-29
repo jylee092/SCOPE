@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed activities of sihost.exe, including registry modifications related to user interface settings and the loading of Windows.Security.Integrity.dll, are consistent with its legitimate function as a Windows system process and do not match known attack patterns.\"\n}"}

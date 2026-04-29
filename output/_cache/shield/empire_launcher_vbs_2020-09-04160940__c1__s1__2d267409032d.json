@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities for lsass.exe and Microsoft.ActiveDirectory.WebServices.exe, including registry modifications and network connections to LDAP (port 389) and ephemeral ports, are consistent with their normal operations in an Active Directory environment.\"\n}"}

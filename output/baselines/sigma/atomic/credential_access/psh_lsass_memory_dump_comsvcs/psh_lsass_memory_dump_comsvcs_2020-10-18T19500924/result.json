@@ -1,0 +1,171 @@
+{
+  "scenario": "psh_lsass_memory_dump_comsvcs_2020-10-18T19500924",
+  "tactic_sequence": [
+    "Defense Evasion",
+    "Credential Access"
+  ],
+  "technique_sequence": [
+    "T1036",
+    "T1003.001"
+  ],
+  "per_group_topk": [
+    [
+      "T1036",
+      "T1003.001",
+      "T1218.011"
+    ],
+    [
+      "T1036",
+      "T1003.001",
+      "T1218.011"
+    ],
+    [
+      "T1003.001"
+    ],
+    [
+      "T1003.001"
+    ],
+    [
+      "T1003.001"
+    ],
+    [
+      "T1003.001"
+    ],
+    [
+      "T1003.001"
+    ]
+  ],
+  "notes": {
+    "n_events_evaluated": 157,
+    "n_alerts": 7,
+    "alerts": [
+      {
+        "ts": "2020-10-18 07:50:05.910000+00:00",
+        "event_index": 96,
+        "event_id": 4688,
+        "topk_tids": [
+          "T1036",
+          "T1003.001",
+          "T1218.011"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "646ea171-dded-4578-8a4d-65e9822892e3",
+          "title": "Process Memory Dump Via Comsvcs.DLL",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-10-18 07:50:05.917000+00:00",
+        "event_index": 97,
+        "event_id": 1,
+        "topk_tids": [
+          "T1036",
+          "T1003.001",
+          "T1218.011"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "646ea171-dded-4578-8a4d-65e9822892e3",
+          "title": "Process Memory Dump Via Comsvcs.DLL",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-10-18 07:50:06.001000+00:00",
+        "event_index": 134,
+        "event_id": 11,
+        "topk_tids": [
+          "T1003.001"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ],
+        "top_rule": {
+          "rule_id": "a5a2d357-1ab8-4675-a967-ef9990a59391",
+          "title": "LSASS Process Memory Dump Files",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-10-18 07:50:06.001000+00:00",
+        "event_index": 136,
+        "event_id": 10,
+        "topk_tids": [
+          "T1003.001"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ],
+        "top_rule": {
+          "rule_id": "a49fa4d5-11db-418c-8473-1e014a8dd462",
+          "title": "Lsass Memory Dump via Comsvcs DLL",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-10-18 07:50:06.009000+00:00",
+        "event_index": 141,
+        "event_id": 4663,
+        "topk_tids": [
+          "T1003.001"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ],
+        "top_rule": {
+          "rule_id": "4a1b6da0-d94f-4fc3-98fc-2d9cb9e5ee76",
+          "title": "Potentially Suspicious AccessMask Requested From LSASS",
+          "level": "medium",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-10-18 07:50:06.010000+00:00",
+        "event_index": 143,
+        "event_id": 4663,
+        "topk_tids": [
+          "T1003.001"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ],
+        "top_rule": {
+          "rule_id": "4a1b6da0-d94f-4fc3-98fc-2d9cb9e5ee76",
+          "title": "Potentially Suspicious AccessMask Requested From LSASS",
+          "level": "medium",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-10-18 07:50:06.025000+00:00",
+        "event_index": 144,
+        "event_id": 10,
+        "topk_tids": [
+          "T1003.001"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ],
+        "top_rule": {
+          "rule_id": "a49fa4d5-11db-418c-8473-1e014a8dd462",
+          "title": "Lsass Memory Dump via Comsvcs DLL",
+          "level": "high",
+          "status": "test"
+        }
+      }
+    ]
+  }
+}

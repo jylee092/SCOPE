@@ -1,0 +1,247 @@
+[
+  {
+    "scenario": "psh_powershell_httplistener_2020-11-0204130683",
+    "n_events": 110,
+    "elapsed_sec": 21.9,
+    "n_alerts": 0,
+    "ev_per_sec": 5.0228310502283104
+  },
+  {
+    "scenario": "cmd_userinitmprlogonscript_batch_2020-10-1922471810",
+    "n_events": 122,
+    "elapsed_sec": 46.8,
+    "n_alerts": 1,
+    "ev_per_sec": 2.606837606837607
+  },
+  {
+    "scenario": "psh_lsass_memory_dump_comsvcs_2020-10-18T19500924",
+    "n_events": 184,
+    "elapsed_sec": 92.9,
+    "n_alerts": 2,
+    "ev_per_sec": 1.9806243272335844
+  },
+  {
+    "scenario": "cmd_process_herpaderping_mimiexplorer_2020-10-2623583501",
+    "n_events": 265,
+    "elapsed_sec": 83.1,
+    "n_alerts": 0,
+    "ev_per_sec": 3.1889290012033698
+  },
+  {
+    "scenario": "cmd_sharpview_pcre_net_2020-10-2920232423",
+    "n_events": 267,
+    "elapsed_sec": 25.3,
+    "n_alerts": 0,
+    "ev_per_sec": 10.553359683794467
+  },
+  {
+    "scenario": "cmd_service_mod_fax_2020-10-2120454410",
+    "n_events": 437,
+    "elapsed_sec": 52.1,
+    "n_alerts": 0,
+    "ev_per_sec": 8.387715930902111
+  },
+  {
+    "scenario": "cmd_seatbelt_group_user_2020-11-0216391814",
+    "n_events": 451,
+    "elapsed_sec": 47.1,
+    "n_alerts": 1,
+    "ev_per_sec": 9.575371549893843
+  },
+  {
+    "scenario": "empire_shell_samr_EnumDomainUsers_2020-09-21193527",
+    "n_events": 633,
+    "elapsed_sec": 92.3,
+    "n_alerts": 1,
+    "ev_per_sec": 6.85807150595883
+  },
+  {
+    "scenario": "empire_persistence_registry_modification_run_keys_elevated_user_2020-07-22001847",
+    "n_events": 657,
+    "elapsed_sec": 80.8,
+    "n_alerts": 0,
+    "ev_per_sec": 8.131188118811881
+  },
+  {
+    "scenario": "cmd_sam_copy_esentutl_2020-10-1900290001",
+    "n_events": 915,
+    "elapsed_sec": 75.9,
+    "n_alerts": 1,
+    "ev_per_sec": 12.055335968379445
+  },
+  {
+    "scenario": "covenant_persistwmi_2019-12-05044734",
+    "n_events": 1001,
+    "elapsed_sec": 70.6,
+    "n_alerts": 1,
+    "ev_per_sec": 14.178470254957508
+  },
+  {
+    "scenario": "psh_cmstp_execution_bypassuac_2020-10-2201543213",
+    "n_events": 1166,
+    "elapsed_sec": 67.4,
+    "n_alerts": 0,
+    "ev_per_sec": 17.299703264094955
+  },
+  {
+    "scenario": "empire_shell_net_local_users_2020-09-21192606",
+    "n_events": 1907,
+    "elapsed_sec": 110.4,
+    "n_alerts": 0,
+    "ev_per_sec": 17.27355072463768
+  },
+  {
+    "scenario": "empire_launcher_vbs_2020-09-04160940",
+    "n_events": 2067,
+    "elapsed_sec": 129.8,
+    "n_alerts": 1,
+    "ev_per_sec": 15.924499229583974
+  },
+  {
+    "scenario": "psh_python_webserver_2020-10-2900161507",
+    "n_events": 2395,
+    "elapsed_sec": 83.4,
+    "n_alerts": 1,
+    "ev_per_sec": 28.71702637889688
+  },
+  {
+    "scenario": "empire_invoke_runas_2019-05-18204300",
+    "n_events": 2581,
+    "elapsed_sec": 166.1,
+    "n_alerts": 0,
+    "ev_per_sec": 15.538832028898254
+  },
+  {
+    "scenario": "empire_psremoting_stager_2020-09-20170827",
+    "n_events": 2744,
+    "elapsed_sec": 244.7,
+    "n_alerts": 0,
+    "ev_per_sec": 11.213731099305273
+  },
+  {
+    "scenario": "empire_shell_rubeus_asktgt_createnetonly_2020-09-21230246",
+    "n_events": 3590,
+    "elapsed_sec": 222.0,
+    "n_alerts": 2,
+    "ev_per_sec": 16.17117117117117
+  },
+  {
+    "scenario": "empire_uac_shellapi_fodhelper_2020-09-04032946",
+    "n_events": 4139,
+    "elapsed_sec": 236.1,
+    "n_alerts": 1,
+    "ev_per_sec": 17.530707327403643
+  },
+  {
+    "scenario": "covenant_psremoting_command_2020-08-06115603",
+    "n_events": 4284,
+    "elapsed_sec": 196.8,
+    "n_alerts": 0,
+    "ev_per_sec": 21.768292682926827
+  },
+  {
+    "scenario": "empire_psexec_dcerpc_tcp_svcctl_2020-09-20121608",
+    "n_events": 4348,
+    "elapsed_sec": 272.0,
+    "n_alerts": 0,
+    "ev_per_sec": 15.985294117647058
+  },
+  {
+    "scenario": "empire_find_localadmin_smb_svcctl_OpenSCManager_2020-09-22021559",
+    "n_events": 4570,
+    "elapsed_sec": 123.2,
+    "n_alerts": 0,
+    "ev_per_sec": 37.09415584415584
+  },
+  {
+    "scenario": "empire_getsession_dcerpc_smb_srvsvc_NetSessEnum_2020-09-22034513",
+    "n_events": 5047,
+    "elapsed_sec": 54.1,
+    "n_alerts": 0,
+    "ev_per_sec": 93.2902033271719
+  },
+  {
+    "scenario": "empire_mimikatz_logonpasswords_2020-08-07103224",
+    "n_events": 6026,
+    "elapsed_sec": 127.9,
+    "n_alerts": 1,
+    "ev_per_sec": 47.11493354182955
+  },
+  {
+    "scenario": "msf_record_mic_2020-06-09225055",
+    "n_events": 6202,
+    "elapsed_sec": 201.1,
+    "n_alerts": 0,
+    "ev_per_sec": 30.840377921432125
+  },
+  {
+    "scenario": "empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod_2020-09-21001437",
+    "n_events": 6383,
+    "elapsed_sec": 98.1,
+    "n_alerts": 0,
+    "ev_per_sec": 65.06625891946993
+  },
+  {
+    "scenario": "cmd_dumping_ntds_dit_file_ntdsutil",
+    "n_events": 11184,
+    "elapsed_sec": 158.5,
+    "n_alerts": 1,
+    "ev_per_sec": 70.5615141955836
+  },
+  {
+    "scenario": "empire_dllinjection_LoadLibrary_CreateRemoteThread_2020-07-22000048",
+    "n_events": 12200,
+    "elapsed_sec": 193.5,
+    "n_alerts": 0,
+    "ev_per_sec": 63.049095607235145
+  },
+  {
+    "scenario": "cmd_stop_event_logging_controlset001_minint_key",
+    "n_events": 16010,
+    "elapsed_sec": 253.7,
+    "n_alerts": 1,
+    "ev_per_sec": 63.10603074497438
+  },
+  {
+    "scenario": "cmd_wevtutil_modify_security_eventlog_path",
+    "n_events": 25208,
+    "elapsed_sec": 278.6,
+    "n_alerts": 2,
+    "ev_per_sec": 90.48097631012203
+  },
+  {
+    "scenario": "purplesharp_ad_playbook_I_2020-10-22042947",
+    "n_events": 25993,
+    "elapsed_sec": 168.7,
+    "n_alerts": 0,
+    "ev_per_sec": 154.07824540604625
+  },
+  {
+    "scenario": "metasploit_procdump_lsass_memory_dump",
+    "n_events": 42482,
+    "elapsed_sec": 205.6,
+    "n_alerts": 0,
+    "ev_per_sec": 206.62451361867704
+  },
+  {
+    "scenario": "metasploit_logonpasswords_lsass_memory_dump",
+    "n_events": 53698,
+    "elapsed_sec": 246.5,
+    "n_alerts": 0,
+    "ev_per_sec": 217.841784989858
+  },
+  {
+    "scenario": "empire_schtasks_creation_execution_elevated_user_2020-09-21175806",
+    "n_events": 59399,
+    "elapsed_sec": 257.3,
+    "n_alerts": 0,
+    "ev_per_sec": 230.85503303536726
+  },
+  {
+    "scenario": "empire_wmi_local_event_subscriptions_elevated_user_2020-09-04164306",
+    "n_events": 79896,
+    "elapsed_sec": 240.2,
+    "n_alerts": 0,
+    "ev_per_sec": 332.62281432139883
+  }
+]

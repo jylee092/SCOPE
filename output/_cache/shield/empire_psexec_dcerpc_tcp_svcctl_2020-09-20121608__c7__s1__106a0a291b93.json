@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed processes, command lines, DLL loads, registry interactions, and pipe connections are consistent with normal Windows operating system and Azure agent behavior, with no indicators matching common attack patterns.\"\n}"}

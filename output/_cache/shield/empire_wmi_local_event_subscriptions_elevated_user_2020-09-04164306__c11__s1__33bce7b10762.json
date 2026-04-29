@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed registry and module loading activities for Explorer.EXE and LogonUI.exe are consistent with normal operating system behavior during a user session and logon, and no suspicious command lines, file writes to sensitive locations, or unusual DLL loads were identified in the provided events.\"\n}"}

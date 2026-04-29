@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is making network connections to a standard SSDP port (1900) and a high-numbered port (64218), which are common for legitimate Windows services, and no other suspicious indicators like notable command lines, file/registry modifications, or unusual child processes were observed.\"\n}"}

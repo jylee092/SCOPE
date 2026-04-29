@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities, including file writes to Windows Defender's history, registry updates for its reporting, and a wide range of DNS lookups, are consistent with the legitimate operation of the Microsoft Malware Protection Engine (MsMpEng.exe) performing scans, updates, and cloud protection lookups.\"\n}"}

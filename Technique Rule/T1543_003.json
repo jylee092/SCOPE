@@ -1,0 +1,66 @@
+{
+  "technique": { "id": "T1543.003", "name": "Windows Service" },
+  "detection": { "id": "DET-T1543003" },
+  "analysis": { "id": "AN-T1543003" },
+  "log_sources": {
+    "Anchor Event": {
+      "data_component": { "id": "DC0060", "name": "Service Creation" },
+      "description": "신규 Windows 서비스 등록 또는 기존 서비스 바이너리 경로 수정.",
+      "conditions": [
+        {
+          "type": "service_install_security",
+          "source": "WinEventLog:Security",
+          "channel": { "event_codes": [4697] },
+          "description": "Security 채널 서비스 설치 이벤트."
+        },
+        {
+          "type": "service_install_system",
+          "source": "WinEventLog:System",
+          "channel": { "event_codes": [7045] },
+          "description": "System 채널 'A service was installed' 이벤트."
+        },
+        {
+          "type": "sc_cli",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [1] },
+          "filters": {
+            "Image": { "contains_any": ["sc.exe", "powershell.exe"] },
+            "CommandLine": { "contains_any": ["sc create", "sc.exe create", "sc config", "sc.exe config", "New-Service", "Set-Service -StartupType"] }
+          },
+          "description": "sc.exe 또는 PowerShell New-Service로 서비스 등록/수정."
+        },
+        {
+          "type": "service_registry",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [13] },
+          "filters": {
+            "TargetObject": {
+              "endswith": ["\\ImagePath", "\\ServiceDll", "\\Parameters\\ServiceDll"]
+            }
+          },
+          "description": "서비스 ImagePath/ServiceDll 값 직접 수정 (실제 서비스 바이너리 교체)."
+        }
+      ]
+    },
+    "Supporting Events": [
+      { "data_component": { "id": "DC0032", "name": "Process Creation" }, "source": "WinEventLog:Sysmon", "channel": { "event_codes": [1] }, "description": "services.exe가 부모로 생성하는 서비스 프로세스" },
+      { "data_component": { "id": "DC0039", "name": "File Creation" }, "source": "WinEventLog:Sysmon", "channel": { "event_codes": [11] }, "description": "서비스 바이너리 파일 드롭" }
+    ]
+  },
+  "mutable_elements": {
+    "grouping_logic": {
+      "primary_anchor_eids": [4697, 7045],
+      "secondary_anchor": { "event_codes": [1], "required_filters": ["sc create", "sc.exe create", "New-Service"] },
+      "correlation_key": { "primary": ["Hostname", "ProcessGuid"], "fallback": ["Hostname"] },
+      "time_window": { "before_seconds": 30, "after_seconds": 120 }
+    },
+    "feature_extraction_filters": {
+      "suspicious_binary_paths": ["\\Temp\\", "\\AppData\\", "\\ProgramData\\", "\\Public\\"],
+      "service_naming_anomaly": ["random 8+ chars", "typosquatting system service names"],
+      "description": "서비스 바이너리가 임시 경로거나 이름이 비정상이면 가중치 증가."
+    },
+    "semantic_templates": {
+      "service_create": "프로세스({Image})가 서비스({ServiceName})를 설치하여 {ImagePath} 바이너리가 시스템 시작 시 실행되도록 등록함."
+    }
+  }
+}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[svchost.exe|{d273d0f0-e87]\",\n    \"P[svchost.exe|{b34bc01c-7fb]\"\n  ],\n  \"rationale\": \"Both svchost.exe processes are interacting with a non-standard registry key, HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\VFUProvider, which could indicate malware persistence or configuration.\"\n}"}

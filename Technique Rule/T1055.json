@@ -1,0 +1,59 @@
+{
+  "technique": { "id": "T1055", "name": "Process Injection" },
+  "detection": { "id": "DET0508" },
+  "analysis": { "id": "AN1399" },
+  "log_sources": {
+    "Anchor Event": {
+      "data_component": { "id": "DC0035", "name": "Process Access / OS API Execution" },
+      "description": "인젝션 관련 권한으로 민감 프로세스 핸들 획득 또는 원격 스레드 생성.",
+      "conditions": [
+        {
+          "type": "process_access_injection",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [10] },
+          "filters": {
+            "GrantedAccess": {
+              "contains_any": [
+                "0x1fffff", "0x1f1fff", "0x143a", "0x1438",
+                "0x1410", "0x1000", "0x0fffff",
+                "0x0010", "0x0020", "0x0040", "0x0002"
+              ]
+            },
+            "TargetImage": {
+              "contains_any": [
+                "lsass.exe", "winlogon.exe", "explorer.exe",
+                "services.exe", "csrss.exe", "smss.exe",
+                "spoolsv.exe", "taskhost", "dwm.exe"
+              ]
+            }
+          },
+          "description": "인젝션 권한 플래그 OR 민감 프로세스 타겟 접근. 일상적 0x1000/0x1400 쿼리는 제외하기 위해 TargetImage 필터 병행."
+        },
+        {
+          "type": "create_remote_thread",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [8] },
+          "description": "CreateRemoteThread — 인젝션의 직접 증거."
+        }
+      ]
+    },
+    "Supporting Events": [
+      { "data_component": { "id": "DC0032", "name": "Process Creation" }, "source": "WinEventLog:Sysmon", "channel": { "event_codes": [1] } },
+      { "data_component": { "id": "DC0016", "name": "Module Load" }, "source": "WinEventLog:Sysmon", "channel": { "event_codes": [7] }, "description": "인젝션 후 로드되는 비정상 DLL 확인" }
+    ]
+  },
+  "mutable_elements": {
+    "grouping_logic": {
+      "primary_anchor_eids": [10],
+      "correlation_key": { "primary": ["Hostname", "SourceProcessGUID"], "secondary": ["ProcessGuid"], "fallback": ["Hostname"] },
+      "time_window": { "window_seconds": 30 }
+    },
+    "feature_extraction_filters": {
+      "access_mask": ["PROCESS_VM_WRITE", "PROCESS_VM_OPERATION", "PROCESS_CREATE_THREAD", "PROCESS_QUERY_INFORMATION", "0x1fffff", "0x143a", "0x1438", "0x1000"],
+      "injected_process_list": ["lsass.exe", "explorer.exe", "svchost.exe", "winlogon.exe", "csrss.exe"]
+    },
+    "semantic_templates": {
+      "process_injection": "프로세스({SourceImage})가 {TargetImage}에 코드 주입을 위해 비정상적인 권한으로 접근함"
+    }
+  }
+}

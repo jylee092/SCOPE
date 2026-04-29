@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed activity of svchost.exe writing prefetch files for common Windows utilities like conhost.exe, whoami.exe, wmiprvse.exe, and powershell.exe is a normal system behavior related to the Windows prefetcher service, and no suspicious command lines or other indicators are present in this community.\"\n}"}

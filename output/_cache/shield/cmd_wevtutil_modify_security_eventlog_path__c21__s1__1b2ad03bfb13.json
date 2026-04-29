@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities by SearchApp.exe, including file writes to its local package directory, registry modifications to its search settings, and DLL loads, are consistent with the legitimate operation of the Windows Search application and do not match any known attack patterns.\"\n}"}

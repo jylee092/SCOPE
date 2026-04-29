@@ -1,0 +1,471 @@
+[
+  {
+    "group_id": "T1059_001_60",
+    "technique_id": "T1059.001",
+    "technique_name": "PowerShell",
+    "anchor_eid": 7,
+    "anchor_detail": {
+      "eid": 7,
+      "time": "2020-11-02 04:13:01.711000+00:00",
+      "image": "powershell.exe",
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": null,
+      "integrity": null
+    },
+    "confidence": 0.38,
+    "all_idxs": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "access",
+            "parent_image": "svchost.exe",
+            "child_image": "backgroundTaskHost.exe",
+            "granted_access": "0x1000",
+            "source_guid": "{39e4a257-f132-5f8b-1000-000000000700}",
+            "target_guid": "{39e4a257-cd84-5f9f-fb49-000000000700}",
+            "source_eid": 10
+          },
+          {
+            "relation": "access",
+            "parent_image": "svchost.exe",
+            "child_image": "WindowsInternal.ComposableShell.Experiences.TextInput.InputApp.exe",
+            "granted_access": "0x1000",
+            "source_guid": "{39e4a257-f132-5f8b-1000-000000000700}",
+            "target_guid": "{39e4a257-f247-5f8b-d300-000000000700}",
+            "source_eid": 10
+          },
+          {
+            "relation": "access",
+            "parent_image": "Explorer.EXE",
+            "child_image": "WindowsInternal.ComposableShell.Experiences.TextInput.InputApp.exe",
+            "granted_access": "0x2000",
+            "source_guid": "{39e4a257-f1b3-5f8b-a700-000000000700}",
+            "target_guid": "{39e4a257-f247-5f8b-d300-000000000700}",
+            "source_eid": 10
+          },
+          {
+            "relation": "access",
+            "parent_image": "Explorer.EXE",
+            "child_image": "powershell.exe",
+            "granted_access": "0x2000",
+            "source_guid": "{39e4a257-f1b3-5f8b-a700-000000000700}",
+            "target_guid": "{39e4a257-41a0-5f9a-2d36-000000000700}",
+            "source_eid": 10
+          },
+          {
+            "relation": "access",
+            "parent_image": "svchost.exe",
+            "child_image": "Explorer.EXE",
+            "granted_access": "0x2000",
+            "source_guid": "{39e4a257-f132-5f8b-1000-000000000700}",
+            "target_guid": "{39e4a257-f1b3-5f8b-a700-000000000700}",
+            "source_eid": 10
+          },
+          {
+            "relation": "access",
+            "parent_image": "Explorer.EXE",
+            "child_image": "conhost.exe",
+            "granted_access": "0x1000",
+            "source_guid": "{39e4a257-f1b3-5f8b-a700-000000000700}",
+            "target_guid": "{39e4a257-cd82-5f9f-fa49-000000000700}",
+            "source_eid": 10
+          },
+          {
+            "relation": "access",
+            "parent_image": "svchost.exe",
+            "child_image": "conhost.exe",
+            "granted_access": "0x2000",
+            "source_guid": "{39e4a257-f132-5f8b-1000-000000000700}",
+            "target_guid": "{39e4a257-cd82-5f9f-fa49-000000000700}",
+            "source_eid": 10
+          }
+        ],
+        "chain_depth": 7
+      },
+      "command_script": {
+        "entries": [],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": null,
+        "user": null,
+        "domain": null,
+        "logon_id": null,
+        "integrity_level": null,
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-11-02T04:13:01.711000+00:00",
+        "window_start_delta_sec": -3.75,
+        "window_end_delta_sec": 3.94,
+        "span_sec": 7.69,
+        "total_events": 104,
+        "event_density_per_10sec": 135.29,
+        "eid_counts": {
+          "10": 67,
+          "13": 15,
+          "12": 13,
+          "7": 8,
+          "22": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 0.999,
+          "mean_sec": 0.075
+        },
+        "burst_detected": [
+          {
+            "eid": 10,
+            "count": 67,
+            "window_sec": 1.0
+          },
+          {
+            "eid": 13,
+            "count": 15,
+            "window_sec": 1.85
+          },
+          {
+            "eid": 12,
+            "count": 13,
+            "window_sec": 1.05
+          },
+          {
+            "eid": 7,
+            "count": 8,
+            "window_sec": 0.22
+          }
+        ]
+      },
+      "network": {
+        "connections": [
+          {
+            "source_eid": 22,
+            "image": "powershell.exe",
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null,
+            "protocol": null,
+            "direction": "dns_query",
+            "service_hint": null,
+            "query_name": "WORKSTATION5"
+          }
+        ]
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\\Count\\HRZR_PGYFRFFVBA",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f1b3-5f8b-a700-000000000700}",
+            "image": "Explorer.EXE"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\\Count\\{1NP14R77-02R7-4R5Q-O744-2RO1NR5198O7}\\JvaqbjfCbjreFuryy\\i1.0\\cbjrefuryy.rkr",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f1b3-5f8b-a700-000000000700}",
+            "image": "Explorer.EXE"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\VFUProvider\\StartTime",
+            "details": "QWORD (0x01d6b0f8-0x5c400ebe)",
+            "process_guid": "{39e4a257-f137-5f8b-4c00-000000000700}",
+            "image": "svchost.exe"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\\Count\\{1NP14R77-02R7-4R5Q-O744-2RO1NR5198O7}\\JvaqbjfCbjreFuryy\\i1.0\\cbjrefuryy.rkr",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f1b3-5f8b-a700-000000000700}",
+            "image": "Explorer.EXE"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\\Count\\HRZR_PGYFRFFVBA",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f1b3-5f8b-a700-000000000700}",
+            "image": "Explorer.EXE"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Software\\Microsoft\\Windows\\CurrentVersion\\ActivityDataModel\\ReaderRevisionInfo\\A972977C-95EC-9F21-DCC4-595CA3A0E033",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f1b3-5f8b-a700-000000000700}",
+            "image": "Explorer.EXE"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Software\\Microsoft\\Windows\\CurrentVersion\\ActivityDataModel\\ReaderRevisionInfo\\A972977C-95EC-9F21-DCC4-595CA3A0E033",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f1b3-5f8b-a700-000000000700}",
+            "image": "Explorer.EXE"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FeatureUsage\\AppSwitched\\{1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}\\WindowsPowerShell\\v1.0\\powershell.exe",
+            "details": "DWORD (0x000000f8)",
+            "process_guid": "{39e4a257-f1b3-5f8b-a700-000000000700}",
+            "image": "Explorer.EXE"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\SessionInfo\\2\\ApplicationViewManagement\\W32:00000000004902B2\\VirtualDesktop",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f1b3-5f8b-a700-000000000700}",
+            "image": "Explorer.EXE"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\\Count\\{1NP14R77-02R7-4R5Q-O744-2RO1NR5198O7}\\JvaqbjfCbjreFuryy\\i1.0\\cbjrefuryy.rkr",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f1b3-5f8b-a700-000000000700}",
+            "image": "Explorer.EXE"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\\Count\\HRZR_PGYFRFFVBA",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f1b3-5f8b-a700-000000000700}",
+            "image": "Explorer.EXE"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\\Count\\{1NP14R77-02R7-4R5Q-O744-2RO1NR5198O7}\\JvaqbjfCbjreFuryy\\i1.0\\cbjrefuryy.rkr",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f1b3-5f8b-a700-000000000700}",
+            "image": "Explorer.EXE"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\\Count\\HRZR_PGYFRFFVBA",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f1b3-5f8b-a700-000000000700}",
+            "image": "Explorer.EXE"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Software\\Microsoft\\Windows\\CurrentVersion\\ActivityDataModel\\ReaderRevisionInfo\\A972977C-95EC-9F21-DCC4-595CA3A0E033",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f1b3-5f8b-a700-000000000700}",
+            "image": "Explorer.EXE"
+          },
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Software\\Microsoft\\Windows\\CurrentVersion\\ActivityDataModel\\ReaderRevisionInfo\\A972977C-95EC-9F21-DCC4-595CA3A0E033",
+            "details": "Binary Data",
+            "process_guid": "{39e4a257-f1b3-5f8b-a700-000000000700}",
+            "image": "Explorer.EXE"
+          }
+        ],
+        "registry_noise_count": 15,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1070_001_4",
+    "technique_id": "T1070.001",
+    "technique_name": "Clear Windows Event Logs",
+    "anchor_eid": 1102,
+    "anchor_detail": {
+      "eid": 1102,
+      "time": "2020-11-02 04:12:58.211000+00:00",
+      "image": null,
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": null,
+      "integrity": null
+    },
+    "confidence": 0.0,
+    "all_idxs": [
+      4
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [],
+        "chain_depth": 0
+      },
+      "command_script": {
+        "entries": [],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": null,
+        "user": null,
+        "domain": null,
+        "logon_id": null,
+        "integrity_level": null,
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-11-02T04:12:58.211000+00:00",
+        "window_start_delta_sec": 0.0,
+        "window_end_delta_sec": 0.0,
+        "span_sec": 0.0,
+        "total_events": 1,
+        "event_density_per_10sec": null,
+        "eid_counts": {
+          "1102": 1
+        },
+        "inter_event_gap": {
+          "min_sec": null,
+          "max_sec": null,
+          "mean_sec": null
+        },
+        "burst_detected": []
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [
+          {
+            "source_eid": 1102,
+            "message": "The audit log was cleared.",
+            "user": null
+          }
+        ],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  }
+]

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed file and registry operations by svchost.exe are consistent with its legitimate function of managing Windows AppModel state and application data, and no suspicious command-line arguments, child processes, or network activity were identified.\"\n}"}

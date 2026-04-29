@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is observed writing to prefetch files for cmd.exe, powershell.exe, conhost.exe, and whoami.exe, which is a normal system behavior indicating these applications were recently executed, not that svchost.exe itself is performing a malicious action.\"\n}"}

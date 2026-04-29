@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities, including DLL loads, registry access, and named pipe connections by WmiPrvSE.exe and svchost.exe, are consistent with normal Windows operating system behavior and do not exhibit any known attack patterns or suspicious indicators.\"\n}"}

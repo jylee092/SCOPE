@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is performing standard registry operations related to Windows Host Activity Manager, AppModel, Volatile Notifications, and Windows Error Reporting, with no suspicious command lines, file writes, or network activity observed.\"\n}"}

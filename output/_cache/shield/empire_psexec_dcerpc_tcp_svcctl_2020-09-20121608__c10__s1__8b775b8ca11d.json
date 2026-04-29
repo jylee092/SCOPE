@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed activity of svchost.exe writing to prefetch files for legitimate Windows utilities (POWERSHELL.EXE, WMIPRVSE.EXE, WHOAMI.EXE) is a normal operating system function and does not indicate suspicious behavior without additional context such as command-line arguments or unusual execution patterns.\"\n}"}

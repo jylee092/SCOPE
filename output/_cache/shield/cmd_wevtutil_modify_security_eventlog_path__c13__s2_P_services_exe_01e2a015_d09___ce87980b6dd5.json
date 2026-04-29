@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": false,\n  \"deviation\": \"\",\n  \"indicators\": [\n    \"services.exe\",\n    \"svchost.exe\",\n    \"WaaSMedicSvc\",\n    \"BITS\",\n    \"WinDefend\",\n    \"WdFilter\",\n    \"WdBoot\",\n    \"WdNisSvc\",\n    \"WdNisDrv\",\n    \"sppsvc.exe\"\n  ]\n}"}

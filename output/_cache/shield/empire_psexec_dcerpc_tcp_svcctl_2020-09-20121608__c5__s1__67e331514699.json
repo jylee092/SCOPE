@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The System processes are writing to a standard WMI Event Trace Log (.etl) file in a legitimate system log directory, which is normal operating system behavior, and no suspicious command lines or other indicators were observed.\"\n}"}

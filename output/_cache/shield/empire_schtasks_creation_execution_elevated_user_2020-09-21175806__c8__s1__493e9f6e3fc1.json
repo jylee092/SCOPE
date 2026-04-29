@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed file and registry operations by svchost.exe instances are consistent with the normal functioning of the Windows Superfetch/SysMain service, which manages prefetch files and related system optimization data.\"\n}"}

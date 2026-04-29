@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": false,\n  \"deviation\": \"\",\n  \"indicators\": [\n    \"wsmprovhost.exe\",\n    \"svchost.exe\",\n    \"-Embedding\",\n    \"C:\\\\windows\\\\system32\\\\wsmprovhost.exe\",\n    \"PIPE[\\\\lsass]\",\n    \"pwrshplugin.dll\"\n  ]\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is performing numerous registry operations related to Windows UWP app background tasks (Cortana, Content Delivery Manager), which is normal system behavior, and no suspicious command lines or other indicators of compromise were observed.\"\n}"}

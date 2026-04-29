@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The process CompatTelRunner.exe is performing extensive registry operations and loading DLLs (devinv.dll, drvstore.dll) consistent with its legitimate function of collecting system compatibility and telemetry data, and no suspicious command-line arguments or other malicious indicators were observed.\"\n}"}

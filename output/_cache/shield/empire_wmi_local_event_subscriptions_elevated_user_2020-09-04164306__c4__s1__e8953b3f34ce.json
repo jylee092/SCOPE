@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"No suspicious command lines, file/registry operations, or network destinations (IPs) were observed for dns.exe or svchost.exe; their network connection patterns are consistent with normal operation for these services.\"\n}"}

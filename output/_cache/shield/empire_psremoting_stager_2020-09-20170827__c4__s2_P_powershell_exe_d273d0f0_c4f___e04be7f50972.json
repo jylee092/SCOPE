@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"PowerShell executed with an encoded command, a common technique for obfuscation and malicious activity. The command line also includes '-noP' and '-w 1', which can be used for stealth.\",\n  \"indicators\": [\n    \"EncodedCommand\",\n    \"Base64\",\n    \"PowerShell\",\n    \"wsmprovhost.exe\"\n  ]\n}"}

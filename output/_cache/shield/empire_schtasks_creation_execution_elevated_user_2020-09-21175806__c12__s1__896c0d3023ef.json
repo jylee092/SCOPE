@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is performing actions consistent with the legitimate Windows Connected User Experiences and Telemetry service, including registry modifications under DiagTrack and WMI Autologger, and network connections to Microsoft's telemetry endpoint (v10.events.data.microsoft.com).\"\n}"}

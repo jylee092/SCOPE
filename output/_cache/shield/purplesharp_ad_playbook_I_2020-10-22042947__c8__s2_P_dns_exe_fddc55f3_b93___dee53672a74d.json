@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"Process dns.exe is making multiple outbound connections to various high-numbered, non-standard ports, which is atypical for a DNS client that primarily communicates on port 53.\",\n  \"indicators\": [\n    \"dns.exe\",\n    \"unusual network connections\",\n    \"high-numbered ports\"\n  ]\n}"}

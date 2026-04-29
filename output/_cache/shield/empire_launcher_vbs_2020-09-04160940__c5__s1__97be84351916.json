@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[WmiPrvSE.exe|{860ba2e3-9f1]\"\n  ],\n  \"rationale\": \"The WmiPrvSE.exe process created a registry key under HKLM\\\\System\\\\CurrentControlSet\\\\Control\\\\SecurityProviders\\\\SCHANNEL, which is a sensitive security configuration path often manipulated by attackers to alter system security settings.\"\n}"}

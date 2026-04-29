@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"Execution of 'net user /domain' via PowerShell, a common reconnaissance technique used to enumerate domain users.\",\n  \"indicators\": [\n    \"net user /domain\",\n    \"powershell.exe\"\n  ]\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed registry modifications by the System process are consistent with routine device enumeration, driver loading, and system state updates, particularly for display and input devices, and do not match known attack patterns.\"\n}"}

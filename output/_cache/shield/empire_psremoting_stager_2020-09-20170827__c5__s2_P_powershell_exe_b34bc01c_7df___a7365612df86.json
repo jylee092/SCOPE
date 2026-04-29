@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"Powershell connected to the LSASS named pipe, which is a common technique used by attackers to dump credentials.\",\n  \"indicators\": [\n    \"lsass pipe connect\",\n    \"credential dumping\",\n    \"powershell abuse\"\n  ]\n}"}

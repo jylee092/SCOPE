@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[notepad.exe|{b59756a9-b9b]\"\n  ],\n  \"rationale\": \"The notepad.exe process is highly suspicious as it loads PowerShell-related DLLs, writes and then deletes PowerShell script files in the user's temporary directory, and creates a named pipe with 'PSHost' in its name, indicating"}

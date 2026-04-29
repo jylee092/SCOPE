@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities, including DLL loads and registry modifications to ContentDeliveryManager, are consistent with the normal operation of the legitimate Windows process RuntimeBroker.exe, and no suspicious command lines or other indicators of compromise were found.\"\n}"}

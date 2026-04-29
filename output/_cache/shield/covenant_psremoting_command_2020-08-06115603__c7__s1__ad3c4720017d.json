@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[svchost.exe|{297bc33e-5c3]\"\n  ],\n  \"rationale\": \"The svchost.exe process is creating registry entries related to Internet proxy settings (Connections and WPAD), which is a common technique for attackers to redirect network traffic or establish persistence.\"\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The OfficeClickToRun.exe processes are performing standard registry operations related to client telemetry within the HKU\\\\.DEFAULT hive, which is normal behavior for a legitimate Microsoft Office component, and no suspicious command lines or other indicators of compromise were observed.\"\n}"}

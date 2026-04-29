@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed activity of Explorer.EXE modifying UserAssist, FeatureUsage, and ActivityDataModel registry keys is consistent with normal user interaction and Windows shell functionality, with no suspicious command lines, child processes, or other indicators of compromise.\"\n}"}

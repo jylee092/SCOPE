@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed activities, including lsass.exe connecting to port 88 (Kerberos) and modifying W32Time registry keys, are normal and expected behaviors for the Local Security Authority Subsystem Service, which is responsible for authentication and time synchronization critical for Kerberos.\"\n}"}

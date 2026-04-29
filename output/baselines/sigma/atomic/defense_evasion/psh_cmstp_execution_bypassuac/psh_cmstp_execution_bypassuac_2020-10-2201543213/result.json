@@ -1,0 +1,180 @@
+{
+  "scenario": "psh_cmstp_execution_bypassuac_2020-10-2201543213",
+  "tactic_sequence": [
+    "Privilege Escalation",
+    "Defense Evasion",
+    "Execution",
+    "Defense Evasion",
+    "Discovery"
+  ],
+  "technique_sequence": [
+    "T1548.002",
+    "T1218.003",
+    "T1548.002",
+    "T1202",
+    "T1033"
+  ],
+  "per_group_topk": [
+    [
+      "T1548.002",
+      "T1218.003"
+    ],
+    [
+      "T1218.003"
+    ],
+    [
+      "T1218.003"
+    ],
+    [
+      "T1218.003",
+      "T1559.001"
+    ],
+    [
+      "T1548.002",
+      "T1218.003",
+      "T1059"
+    ],
+    [
+      "T1202"
+    ],
+    [
+      "T1033",
+      "T1087.001"
+    ]
+  ],
+  "notes": {
+    "n_events_evaluated": 830,
+    "n_alerts": 7,
+    "alerts": [
+      {
+        "ts": "2020-10-22 01:54:23.985000+00:00",
+        "event_index": 316,
+        "event_id": 1,
+        "topk_tids": [
+          "T1548.002",
+          "T1218.003"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "e66779cc-383e-4224-a3a4-267eeb585c40",
+          "title": "Bypass UAC via CMSTP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-10-22 01:54:24.190000+00:00",
+        "event_index": 627,
+        "event_id": 12,
+        "topk_tids": [
+          "T1218.003"
+        ],
+        "topk_tactics": [
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "b6d235fc-1d38-4b12-adbe-325f06728f37",
+          "title": "CMSTP Execution Registry Event",
+          "level": "high",
+          "status": "stable"
+        }
+      },
+      {
+        "ts": "2020-10-22 01:54:24.190000+00:00",
+        "event_index": 628,
+        "event_id": 13,
+        "topk_tids": [
+          "T1218.003"
+        ],
+        "topk_tactics": [
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "b6d235fc-1d38-4b12-adbe-325f06728f37",
+          "title": "CMSTP Execution Registry Event",
+          "level": "high",
+          "status": "stable"
+        }
+      },
+      {
+        "ts": "2020-10-22 01:54:24.296000+00:00",
+        "event_index": 637,
+        "event_id": 10,
+        "topk_tids": [
+          "T1218.003",
+          "T1559.001"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "3b4b232a-af90-427c-a22f-30b0c0837b95",
+          "title": "CMSTP Execution Process Access",
+          "level": "high",
+          "status": "stable"
+        }
+      },
+      {
+        "ts": "2020-10-22 01:54:24.296000+00:00",
+        "event_index": 638,
+        "event_id": 1,
+        "topk_tids": [
+          "T1548.002",
+          "T1218.003",
+          "T1059"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Execution",
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "4b60e6f2-bf39-47b4-b4ea-398e33cfe253",
+          "title": "CMSTP UAC Bypass via COM Object Access",
+          "level": "high",
+          "status": "stable"
+        }
+      },
+      {
+        "ts": "2020-10-22 01:54:24.312000+00:00",
+        "event_index": 649,
+        "event_id": 1,
+        "topk_tids": [
+          "T1202"
+        ],
+        "topk_tactics": [
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "3037d961-21e9-4732-b27a-637bcc7bf539",
+          "title": "Suspicious High IntegrityLevel Conhost Legacy Option",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-10-22 01:54:28.753000+00:00",
+        "event_index": 1015,
+        "event_id": 1,
+        "topk_tids": [
+          "T1033",
+          "T1087.001"
+        ],
+        "topk_tactics": [
+          "Discovery",
+          "Discovery"
+        ],
+        "top_rule": {
+          "rule_id": "502b42de-4306-40b4-9596-6f590c81f073",
+          "title": "Local Accounts Discovery",
+          "level": "low",
+          "status": "test"
+        }
+      }
+    ]
+  }
+}

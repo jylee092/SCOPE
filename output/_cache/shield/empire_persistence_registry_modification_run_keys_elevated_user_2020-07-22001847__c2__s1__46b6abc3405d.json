@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[lsass.exe|{47b21e2e-952]\"\n  ],\n  \"rationale\": \"The lsass.exe process is observed making multiple outbound connections to non-standard high ports, which is unusual for this critical system process and could indicate compromise or data exfiltration.\"\n}"}

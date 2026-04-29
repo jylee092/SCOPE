@@ -1,0 +1,1 @@
+{"text": "{\n  \"confidence_score\": 0.95,\n  \"attack_summary\": \"An initial access vector, disguised as 'happy_image.jpeg.exe', acted as a dropper to extract and execute 'winx64_payload.exe' from a temporary directory. The payload then extensively modified system certificate registries, likely for defense evasion or persistence. Subsequently, 'procdump64.exe' was used"}

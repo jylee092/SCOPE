@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The RuntimeBroker.exe process is performing standard system operations, loading legitimate Windows DLLs and interacting with expected registry keys related to Windows Security Manager and CloudStore, with no unusual command-line arguments or other suspicious indicators observed.\"\n}"}

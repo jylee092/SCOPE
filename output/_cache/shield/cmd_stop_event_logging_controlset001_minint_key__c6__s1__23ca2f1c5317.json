@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The process sihost.exe is a legitimate Windows component, and its registry operations on user-specific keys related to AppModel and ShellUI are typical and do not exhibit any known attack patterns or suspicious indicators.\"\n}"}

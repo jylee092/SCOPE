@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[svchost.exe|{19de6d3b-a60]\"\n  ],\n  \"rationale\": \"The process P[svchost.exe|{19de6d3b-a60] is performing extensive registry modifications related to the Windows Task Scheduler (HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows NT"}

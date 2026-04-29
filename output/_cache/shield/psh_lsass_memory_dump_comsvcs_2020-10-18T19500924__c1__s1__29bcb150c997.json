@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed registry writes to the Windows Notifications data key by legitimate system processes (SearchProtocolHost.exe and svchost.exe) are consistent with normal system operation, and no other suspicious indicators like notable command lines or unusual process interactions are present.\"\n}"}

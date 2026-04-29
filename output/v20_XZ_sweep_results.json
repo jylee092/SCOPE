@@ -1,0 +1,82 @@
+[
+  {
+    "variant": "vanilla_no_bypass",
+    "sim_threshold": null,
+    "tech_lcs": 0.6833314285714286,
+    "tac_lcs": 0.7428571428571429,
+    "step_cov": 0.7071428571428572,
+    "order": 0.5714285714285714,
+    "viterbi_mic": 0.701195219123506,
+    "faiss_mic": 0.7848605577689243
+  },
+  {
+    "variant": "bypass_sim_0.60",
+    "sim_threshold": 0.6,
+    "tech_lcs": 0.6690457142857144,
+    "tac_lcs": 0.7190485714285714,
+    "step_cov": 0.6928571428571428,
+    "order": 0.5714285714285714,
+    "viterbi_mic": 0.7848605577689243,
+    "faiss_mic": 0.7848605577689243
+  },
+  {
+    "variant": "bypass_sim_0.65",
+    "sim_threshold": 0.65,
+    "tech_lcs": 0.6547600000000001,
+    "tac_lcs": 0.7333342857142857,
+    "step_cov": 0.6785714285714286,
+    "order": 0.5714285714285714,
+    "viterbi_mic": 0.7609561752988048,
+    "faiss_mic": 0.7848605577689243
+  },
+  {
+    "variant": "bypass_sim_0.70",
+    "sim_threshold": 0.7,
+    "tech_lcs": 0.6690457142857144,
+    "tac_lcs": 0.7428571428571429,
+    "step_cov": 0.6928571428571428,
+    "order": 0.5571428571428572,
+    "viterbi_mic": 0.7450199203187251,
+    "faiss_mic": 0.7848605577689243
+  },
+  {
+    "variant": "bypass_sim_0.75",
+    "sim_threshold": 0.75,
+    "tech_lcs": 0.6833314285714286,
+    "tac_lcs": 0.7714285714285715,
+    "step_cov": 0.7071428571428572,
+    "order": 0.6,
+    "viterbi_mic": 0.7051792828685259,
+    "faiss_mic": 0.7848605577689243
+  },
+  {
+    "variant": "bypass_sim_0.80",
+    "sim_threshold": 0.8,
+    "tech_lcs": 0.6833314285714286,
+    "tac_lcs": 0.7571428571428571,
+    "step_cov": 0.7071428571428572,
+    "order": 0.5714285714285714,
+    "viterbi_mic": 0.701195219123506,
+    "faiss_mic": 0.7848605577689243
+  },
+  {
+    "variant": "bypass_sim_0.85",
+    "sim_threshold": 0.85,
+    "tech_lcs": 0.6833314285714286,
+    "tac_lcs": 0.7428571428571429,
+    "step_cov": 0.7071428571428572,
+    "order": 0.5714285714285714,
+    "viterbi_mic": 0.701195219123506,
+    "faiss_mic": 0.7848605577689243
+  },
+  {
+    "variant": "bypass_sim_1.00",
+    "sim_threshold": 1.0,
+    "tech_lcs": 0.6833314285714286,
+    "tac_lcs": 0.7428571428571429,
+    "step_cov": 0.7071428571428572,
+    "order": 0.5714285714285714,
+    "viterbi_mic": 0.701195219123506,
+    "faiss_mic": 0.7848605577689243
+  }
+]

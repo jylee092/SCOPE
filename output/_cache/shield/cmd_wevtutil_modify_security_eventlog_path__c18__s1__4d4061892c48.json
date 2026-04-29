@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[services.exe|{01e2a015-d09]\"\n  ],\n  \"rationale\": \"The services.exe process is modifying security-related registry keys for multiple Windows Defender components (WinDefend, WdFilter, WdBoot, WdNisSvc), which is a common technique used by attackers to disable or tamper with antivirus protection.\"\n}"}

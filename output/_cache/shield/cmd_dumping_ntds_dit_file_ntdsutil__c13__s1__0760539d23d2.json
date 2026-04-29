@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is performing legitimate device and driver inventory and permission checks, loading standard Windows DLLs, and interacting with a temporary registry hive, with no suspicious command-line arguments or other indicators of compromise observed.\"\n}"}

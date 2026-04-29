@@ -1,0 +1,313 @@
+{
+  "technique": {
+    "id": "T1027",
+    "name": "Obfuscated Files or Information"
+  },
+  "detection": {
+    "id": "DET0378"
+  },
+  "analysis": {
+    "id": "AN1064"
+  },
+  "log_sources": {
+    "Anchor Event": {
+      "data_component": {
+        "id": "DC0032_DC0069",
+        "name": "Process Creation / Script Block Logging"
+      },
+      "description": "난독화된 스크립트 또는 인코딩된 명령 실행 이벤트. 세 가지 우선순위 순으로 적용.",
+      "conditions": [
+        {
+          "type": "script_block_obfuscated",
+          "source": "WinEventLog:PowerShell",
+          "channel": {
+            "event_codes": [
+              4104
+            ]
+          },
+          "filters": {
+            "ScriptBlockText": {
+              "contains_any": [
+                "FromBase64String",
+                "ToBase64String",
+                "[Convert]::From",
+                "Invoke-Expression",
+                " IEX ",
+                "[Reflection.Assembly]",
+                "[System.Reflection",
+                "AmsiUtils",
+                "amsiInitFailed",
+                "ScriptBlockLogging"
+              ]
+            }
+          },
+          "description": "Script Block Logging — 실행된 PowerShell 코드에 Base64 디코딩, IEX, Reflection, AMSI 우회 등 난독화/우회 패턴이 포함된 가장 강한 증거. 이 데이터셋: ScriptBlockText에 frombase64string + iex + amsi + cachedgrouppolicy(AMSI 우회 시그니처) 동시 검출. EID1 -enc 실행 후 3.3초 뒤 기록됨."
+        },
+        {
+          "type": "process_create_encoded",
+          "source": "WinEventLog:Sysmon",
+          "channel": {
+            "event_codes": [
+              1
+            ]
+          },
+          "filters": {
+            "Image": {
+              "contains": [
+                "powershell.exe",
+                "pwsh.exe",
+                "cmd.exe"
+              ]
+            },
+            "CommandLine": {
+              "contains_any": [
+                "-enc ",
+                "-encodedcommand",
+                "-ec ",
+                "FromBase64String",
+                "^p^o^w^e^r^s^h^e^l^l",
+                "&&set ",
+                "certutil -decode",
+                "certutil.exe -decode"
+              ]
+            }
+          },
+          "description": "Sysmon Process Create — 인코딩된 CommandLine으로 실행되는 프로세스. -enc는 PowerShell Base64 인코딩 명령의 대표 지표. 이 데이터셋: powershell.exe -noP -sta -w 1 -enc <Base64> 형태로 Empire 프레임워크 표준 발사 패턴. parent=wscript.exe(T1059.005 체인). ProcessGuid로 하위 Supporting 이벤트 연결 가능."
+        },
+        {
+          "type": "process_create_security",
+          "source": "WinEventLog:Security",
+          "channel": {
+            "event_codes": [
+              4688
+            ]
+          },
+          "filters": {
+            "CommandLine": {
+              "contains_any": [
+                "-enc ",
+                "-encodedcommand",
+                "-ec ",
+                "FromBase64String",
+                "certutil -decode"
+              ]
+            }
+          },
+          "description": "Security Process Create(EID 4688) fallback — Sysmon 미설치 환경. ProcessGuid 없으므로 Hostname + ProcessId + time_window로 그룹핑. 이 데이터셋에 동일 CommandLine의 EID 4688이 존재하나 ProcessGuid 없음 — EID1과 중복이므로 dedup 처리 필요."
+        }
+      ]
+    },
+    "Supporting Events": [
+      {
+        "data_component": {
+          "id": "DC0069",
+          "name": "Script Pipeline Execution"
+        },
+        "source": "WinEventLog:PowerShell",
+        "channel": {
+          "event_codes": [
+            4103
+          ]
+        },
+        "description": "PowerShell 파이프라인 실행 상세 로그. 난독화 해제 후 실제 실행된 Cmdlet 체인 기록. Payload 필드에서 New-Object, ForEach-Object, Get-Random 등 Empire C2 스테이저 패턴 확인 가능. Anchor가 EID 4104 또는 EID 1(-enc)일 때 같은 PS 세션 내 이벤트로 time_window + Hostname으로 연결. 연결 방식: ProcessGuid 없음 — ExecutionProcessID(=ProcessId) + Hostname으로 Anchor의 EID 1/4688 ProcessId와 매칭. 이 데이터셋: ExecutionProcessID=2316 = powershell.exe PID."
+      },
+      {
+        "data_component": {
+          "id": "DC0034",
+          "name": "Process Metadata"
+        },
+        "source": "WinEventLog:PowerShell",
+        "channel": {
+          "event_codes": [
+            400,
+            600
+          ]
+        },
+        "description": "PowerShell 엔진/공급자 시작 이벤트. 400: HostApplication 필드에 -enc 인자 포함 여부로 난독화 실행 확인. 600: Provider 로드 — 비정상 Provider는 추가 지표. Anchor의 시간 범위 내에서 발생하면 같은 PS 세션으로 연결. 연결 방식: ProcessGuid 없음 — Hostname + time_window만 사용 (EID 400의 ExecutionProcessID=0으로 PID 매칭 불가)."
+      },
+      {
+        "data_component": {
+          "id": "DC0016",
+          "name": "Module Load — Reflection/Bypass DLL"
+        },
+        "source": "WinEventLog:Sysmon",
+        "channel": {
+          "event_codes": [
+            7
+          ]
+        },
+        "filters": {
+          "Image": {
+            "contains": [
+              "powershell.exe",
+              "pwsh.exe"
+            ]
+          },
+          "ImageLoaded": {
+            "contains_any": [
+              "System.Management.Automation.dll",
+              "Microsoft.CSharp.dll",
+              "mscorlib.dll",
+              "clrjit.dll"
+            ]
+          }
+        },
+        "description": "인메모리 실행/Reflection에 사용되는 .NET DLL 로드. System.Management.Automation.dll: PS 엔진 DLL(난독화 페이로드가 PS 기능 직접 호출), Microsoft.CSharp.dll + clrjit.dll: 런타임 코드 컴파일(인메모리 C# 실행). Anchor ProcessGuid와 동일한 경우 Supporting으로 연결."
+      },
+      {
+        "data_component": {
+          "id": "DC0039",
+          "name": "File Creation — Temp Script"
+        },
+        "source": "WinEventLog:Sysmon",
+        "channel": {
+          "event_codes": [
+            11
+          ]
+        },
+        "filters": {
+          "ProcessGuid": "same as Anchor ProcessGuid",
+          "TargetFilename": {
+            "path_contains": [
+              "\\Temp\\",
+              "\\Tmp\\",
+              "\\AppData\\Local\\Temp\\"
+            ],
+            "extension_contains": [
+              ".ps1",
+              ".psm1",
+              ".vbs",
+              ".bat",
+              ".hta"
+            ],
+            "exclude": [
+              "__PSScriptPolicyTest_"
+            ]
+          }
+        },
+        "description": "난독화 실행 중 Temp 경로에 스크립트 파일 드롭. __PSScriptPolicyTest_*.ps1/psm1은 PowerShell 정책 검사용 정상 임시 파일 — 명시적으로 제외. 실제 악성 드롭은 무작위 이름의 .ps1/.bat 파일로 나타남. 이 데이터셋에서는 악성 파일 드롭 없음(NoOp) — 환경 따라 유효도 달라짐."
+      },
+      {
+        "data_component": {
+          "id": "DC0051",
+          "name": "DNS Query"
+        },
+        "source": "WinEventLog:Sysmon",
+        "channel": {
+          "event_codes": [
+            22
+          ]
+        },
+        "filters": {
+          "ProcessGuid": "same as Anchor ProcessGuid"
+        },
+        "description": "난독화된 페이로드 실행 후 C2 도메인 DNS 쿼리. Base64 인코딩 페이로드 내 hardcoded C2 주소 조회 시 발생. Anchor ProcessGuid와 동일 시 난독화 → C2 접속 체인 확증."
+      },
+      {
+        "data_component": {
+          "id": "DC0083",
+          "name": "Network Connection — Outbound C2"
+        },
+        "source": "WinEventLog:Sysmon",
+        "channel": {
+          "event_codes": [
+            3
+          ]
+        },
+        "filters": {
+          "ProcessGuid": "same as Anchor ProcessGuid",
+          "DestinationPort": {
+            "in": [
+              80,
+              443,
+              8080,
+              8443
+            ]
+          }
+        },
+        "description": "난독화 페이로드 실행 후 C2 서버 아웃바운드 연결. 이 데이터셋: powershell.exe → 10.10.10.5:80 (EID3, ProcessGuid 일치) — Empire C2 채널 연결. Base64 -enc 페이로드 안에 C2 IP(aAB0AHQAcAA6AC8ALwAxADAALgAxADAALgAxADAALgA1)가 인코딩되어 있음."
+      }
+    ]
+  },
+  "mutable_elements": {
+    "grouping_logic": {
+      "primary_anchor_eids": [
+        4104
+      ],
+      "secondary_anchor": {
+        "event_codes": [
+          1,
+          4688
+        ],
+        "required_filters": [
+          "-enc",
+          "-encodedcommand",
+          "FromBase64String",
+          "certutil -decode"
+        ],
+        "priority_note": "EID 4104(Script Block + 난독화 패턴) 최우선. 없으면 EID 1(CommandLine -enc). 없으면 EID 4688(Security, ProcessGuid 없음) 최하위 fallback.",
+        "dedup_note": "EID 1과 EID 4688이 같은 프로세스를 가리키는 경우(동일 CommandLine, 동일 시각) EID 1 기준으로 dedup 처리. EID 4688 단독 확인 시에만 Anchor로 사용."
+      },
+      "correlation_key": {
+        "primary": [
+          "ProcessGuid"
+        ],
+        "secondary": [
+          "Hostname",
+          "norm_logon_id"
+        ],
+        "fallback": [
+          "Hostname",
+          "ProcessId"
+        ],
+        "note": "EID 4104는 ProcessGuid 없음 — Hostname + time_window로 EID 1/7/22/3과 연결. EID 1 Anchor: ProcessGuid 기준으로 EID 7/22/3/11 연결. EID 4688: ProcessGuid 없으므로 Hostname + ProcessId + time_window만 사용. EID 4103/400/600(PowerShell 채널): ProcessGuid 없음 — ExecutionProcessID(=ProcessId)와 Hostname으로 EID 1과 연결. 이 데이터셋: EID4103의 ExecutionProcessID=2316 == powershell.exe의 ProcessId=2316."
+      },
+      "time_window": {
+        "before_seconds": 10,
+        "after_seconds": 60,
+        "note": "실제 데이터: EID1(-enc) → EID4104(Script Block) 간격 3.3초. EID1 → EID3(C2 연결) 간격 약 5.6초. before 10초는 EID4688(Security, 0.04초 앞)과 EID1 포착에 충분. after 60초는 C2 연결(5.6초), DNS 쿼리, 추가 페이로드 실행까지 포착 가능."
+      }
+    },
+    "feature_extraction_filters": {
+      "encoding_cmdline_patterns": [
+        "-enc ",
+        "-encodedcommand",
+        "-ec ",
+        "FromBase64String",
+        "certutil.*-decode",
+        "msiexec.*http"
+      ],
+      "obfuscation_script_patterns": [
+        "frombase64string",
+        "invoke-expression",
+        " iex ",
+        "[reflection.assembly]",
+        "amsiutils",
+        "amsiinitialized",
+        "scriptblocklogging",
+        "cachedgrouppolicysettings",
+        "char[]",
+        "-join",
+        "replace('x',''"
+      ],
+      "suspicious_parent_processes": [
+        "wscript.exe",
+        "cscript.exe",
+        "mshta.exe",
+        "winword.exe",
+        "excel.exe",
+        "rundll32.exe"
+      ],
+      "temp_drop_exclude_patterns": [
+        "__PSScriptPolicyTest_",
+        "AppData\\Local\\Microsoft\\Windows\\PowerShell\\ModuleAnalysisCache"
+      ],
+      "description": "encoding_cmdline_patterns: CommandLine 기반 1차 탐지. obfuscation_script_patterns: ScriptBlockText(EID4104) 내 난독화 기법 탐지 — AMSI 우회 패턴(amsiutils, cachedgrouppolicysettings)은 공격 의도 확증. suspicious_parent: 드로퍼/매크로로부터 실행된 경우 신뢰도 상승. temp_drop_exclude: PowerShell 정책 검사용 정상 임시 파일 제거."
+    },
+    "semantic_templates": {
+      "base64_encoded_cmd": "Adversaries executed a Base64-encoded PowerShell command ({CommandLine_prefix}) launched from {ParentImage}. The encoded payload ({B64_length} chars) conceals the actual instructions from static analysis and security tooling.",
+      "script_block_obfuscation": "Script Block Logging captured obfuscated PowerShell code containing {patterns_found} techniques. The payload attempted to disable AMSI and Script Block Logging before executing the main stager.",
+      "c2_after_decode": "After decoding and executing the obfuscated payload, {Image} established an outbound connection to {DestinationIp}:{DestinationPort} — indicating a C2 channel embedded within the encoded command."
+    }
+  }
+}

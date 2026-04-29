@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed command lines for smss.exe and autochk.exe are standard for system boot, and their registry interactions are typical for system initialization; no processes in the provided events exhibit behavior matching known attack patterns.\"\n}"}

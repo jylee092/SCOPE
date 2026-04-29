@@ -1,0 +1,361 @@
+{
+  "technique": {
+    "id": "T1059.001",
+    "name": "PowerShell"
+  },
+  "detection": {
+    "id": "DET0455"
+  },
+  "analysis": {
+    "id": "AN1252"
+  },
+  "_data_notes": {
+    "dataset": "psh_lsass_memory_dump_comsvcs_2020-10-18",
+    "observed_ps_guid": "{39e4a257-d445-5f8c-2c03-000000000700}",
+    "role_in_attack": "PowerShell이 직접 공격 명령을 실행하지 않고 rundll32.exe를 자식 프로세스로 생성(ParentImage=powershell.exe). T1218.011 체인의 orchestrator 역할.",
+    "eid_observed": {
+      "EID_1": "rundll32.exe 생성 (ParentImage=powershell.exe, ParentProcessGuid 추적 가능)",
+      "EID_7": "powershell.exe가 로드한 DLL 관측 (System.Management.Automation 포함)",
+      "EID_10": "Explorer.EXE가 powershell.exe에 접근 (GrantedAccess=0x2000, 정상적 시스템 행위 — Supporting 제외 근거 재확인)",
+      "EID_12": "powershell.exe의 레지스트리 키 생성 29건 (HKLM\\...\\Session Manager\\Environment 포함)"
+    },
+    "missing_in_original": [
+      "EID 4688 (Security 프로세스 생성) — Sysmon EID 1 없는 환경 fallback. 실제 데이터에서 rundll32 EID 4688 확인. PowerShell이 부모인 경우 ParentProcessName 필터로 포착.",
+      "EID 12 (Registry Key Create) — 실제 데이터에서 powershell.exe의 EID 12가 29건 관측됨. 원본 JSON에 EID 13만 있고 EID 12가 누락. Supporting에 추가 필요.",
+      "Security EID 4656/4663 — PowerShell이 레지스트리 객체에 접근한 이벤트(HKLM\\...\\Environment) Security 채널에서 관측. 원본에 미포함.",
+      "child_process_spawn 패턴 — PowerShell이 rundll32, cmd, wevtutil 등을 자식으로 생성하는 패턴. EID 1의 ParentImage 역추적으로 포착 가능하나 명시적 설명 부재.",
+      "LogonId 연계 — EID 12에서 PowerShell의 LogonId(0xc61d9) 확인 가능. SubjectLogonId를 통해 Security 채널 이벤트와 연결 가능."
+    ]
+  },
+  "log_sources": {
+    "Anchor Event": {
+      "data_component": {
+        "id": "DC0032",
+        "name": "Process Creation"
+      },
+      "description": "PowerShell 프로세스 실행 이벤트. 세 가지 조건 중 우선순위 순으로 적용.",
+      "conditions": [
+        {
+          "type": "script_block_logging",
+          "source": "WinEventLog:PowerShell",
+          "channel": {
+            "event_codes": [
+              4104
+            ]
+          },
+          "description": "Script Block Logging — 실행된 PowerShell 코드 전체가 기록되는 가장 강한 증거. EID 4104만으로 즉시 Anchor 인정."
+        },
+        {
+          "type": "process_create_sysmon",
+          "source": "WinEventLog:Sysmon",
+          "channel": {
+            "event_codes": [
+              1
+            ]
+          },
+          "filters": {
+            "Image": {
+              "contains": [
+                "powershell.exe",
+                "pwsh.exe"
+              ]
+            }
+          },
+          "description": "Sysmon Process Create — powershell.exe 또는 pwsh.exe 생성 이벤트. ProcessGuid 기준으로 하위 이벤트 체인 연결 가능."
+        },
+        {
+          "type": "process_create_security",
+          "source": "WinEventLog:Security",
+          "channel": {
+            "event_codes": [
+              4688
+            ]
+          },
+          "filters": {
+            "NewProcessName": {
+              "contains": [
+                "powershell.exe",
+                "pwsh.exe"
+              ]
+            }
+          },
+          "_added": "데이터 기반 추가 — Sysmon 미설치 환경 fallback. 실제 데이터에서 Security EID 4688이 rundll32 생성 시 관측됨. PowerShell 자체 생성도 동일 채널에서 포착 가능.",
+          "description": "Security 채널 PowerShell 프로세스 생성 — Sysmon EID 1 없는 환경 fallback. ProcessId 기반으로 후속 EID 4656/4663과 연결."
+        },
+        {
+          "type": "module_load_fallback",
+          "source": "WinEventLog:Sysmon",
+          "channel": {
+            "event_codes": [
+              7
+            ]
+          },
+          "filters": {
+            "Image": {
+              "contains": [
+                "powershell.exe",
+                "pwsh.exe"
+              ]
+            }
+          },
+          "description": "DLL Load fallback — EID 1/4104 없을 때 사용. powershell.exe가 DLL을 로드하는 이벤트에서 ProcessGuid 추출 가능. 특히 네트워크 관련 DLL(httpapi.dll, dnsapi.dll, mswsock.dll) 로드 시 C2 또는 HTTP 리스너 행위 강하게 시사."
+        }
+      ]
+    },
+    "Supporting Events": [
+      {
+        "data_component": {
+          "id": "DC0064",
+          "name": "Command Execution"
+        },
+        "source": "WinEventLog:PowerShell",
+        "channel": {
+          "event_codes": [
+            4103,
+            4105,
+            4106
+          ]
+        },
+        "description": "PowerShell 명령 실행 상세 로그. 4103: 파이프라인 실행, 4105/4106: 스크립트 시작/종료. Anchor ProcessGuid와 동일 세션에서 발생."
+      },
+      {
+        "data_component": {
+          "id": "DC0034",
+          "name": "Process Metadata"
+        },
+        "source": "WinEventLog:PowerShell",
+        "channel": {
+          "event_codes": [
+            400,
+            403
+          ]
+        },
+        "description": "PowerShell 엔진 시작(400)/종료(403) 이벤트. HostApplication 필드에서 실행된 스크립트 경로 또는 인자 확인 가능."
+      },
+      {
+        "data_component": {
+          "id": "DC0016",
+          "name": "Module Load"
+        },
+        "source": "WinEventLog:Sysmon",
+        "channel": {
+          "event_codes": [
+            7
+          ]
+        },
+        "filters": {
+          "Image": {
+            "contains": [
+              "powershell.exe",
+              "pwsh.exe"
+            ]
+          }
+        },
+        "description": "PowerShell이 로드한 DLL. httpapi.dll → HTTP 리스너/C2, System.Net.WebClient → 다운로더, System.Reflection → 인메모리 로딩 등 행위 추론에 사용. Anchor가 EID 7이 아닐 때 Supporting으로 편입."
+      },
+      {
+        "data_component": {
+          "id": "DC0024",
+          "name": "Process Access"
+        },
+        "source": "WinEventLog:Sysmon",
+        "channel": {
+          "event_codes": [
+            10
+          ]
+        },
+        "filters": {
+          "SourceProcessGUID": {
+            "equals": "Anchor.ProcessGuid",
+            "note": "PowerShell → TargetImage 방향만 유효. TargetProcessGUID 기준은 제외. ※ 데이터 확인: Explorer.EXE → powershell.exe 방향(GrantedAccess=0x2000)은 정상 UI 조회 행위로 Supporting 제외 근거 재확인됨."
+          }
+        },
+        "description": "PowerShell이 다른 프로세스 메모리에 접근하는 이벤트 (인젝션/자격증명 덤프 시 발생). 연결 조건: SourceProcessGUID == Anchor.ProcessGuid."
+      },
+      {
+        "data_component": {
+          "id": "DC0063",
+          "name": "Registry Key Modification"
+        },
+        "source": "WinEventLog:Sysmon",
+        "channel": {
+          "event_codes": [
+            12,
+            13
+          ]
+        },
+        "filters": {
+          "ProcessGuid": "same as Anchor ProcessGuid"
+        },
+        "_data_observation": "실제 데이터에서 powershell.exe의 EID 12가 29건 관측됨 (원본 JSON EID 13만 명시 → EID 12 추가). 대상: HKLM\\...\\Session Manager\\Environment.",
+        "description": "PowerShell이 생성/수정한 레지스트리 키. EID 12(Create), EID 13(Set Value) 모두 포함. HKLM\\Tcpip\\Parameters는 네트워크 설정 변경, HKLM\\...\\Session Manager는 환경 변수 변조 행위 시사."
+      },
+      {
+        "data_component": {
+          "id": "DC0051",
+          "name": "DNS Query"
+        },
+        "source": "WinEventLog:Sysmon",
+        "channel": {
+          "event_codes": [
+            22
+          ]
+        },
+        "filters": {
+          "ProcessGuid": "same as Anchor ProcessGuid"
+        },
+        "description": "PowerShell이 수행한 DNS 쿼리. C2 도메인 또는 내부 정찰 행위 확인용."
+      },
+      {
+        "data_component": {
+          "id": "DC0032_child",
+          "name": "Child Process Spawn",
+          "_added": "데이터 기반 추가 — PowerShell이 부모인 자식 프로세스 패턴"
+        },
+        "source": "WinEventLog:Sysmon",
+        "channel": {
+          "event_codes": [
+            1
+          ]
+        },
+        "filters": {
+          "ParentProcessGuid": "same as Anchor ProcessGuid",
+          "Image": {
+            "contains": [
+              "rundll32.exe",
+              "cmd.exe",
+              "wevtutil.exe",
+              "reg.exe",
+              "mshta.exe"
+            ]
+          }
+        },
+        "description": "PowerShell이 생성한 의심 자식 프로세스. 실제 데이터에서 ParentImage=powershell.exe → rundll32.exe(comsvcs.dll MiniDump) 체인 관측. T1218.011, T1070.001 연계 지표. Anchor ProcessGuid와 ParentProcessGuid 일치로 연결."
+      },
+      {
+        "data_component": {
+          "id": "DC0013_security",
+          "name": "Security Object Access",
+          "_added": "데이터 기반 추가 — Security 채널 레지스트리 접근"
+        },
+        "source": "WinEventLog:Security",
+        "channel": {
+          "event_codes": [
+            4656,
+            4663
+          ]
+        },
+        "filters": {
+          "ProcessName": {
+            "contains": [
+              "powershell.exe"
+            ]
+          },
+          "ObjectType": "Key"
+        },
+        "description": "PowerShell의 레지스트리 객체 접근 — Security 채널. 실제 데이터에서 powershell.exe → HKLM\\...\\Session Manager\\Environment 접근(EID 4656, 4663) 관측. ProcessId로 Anchor와 연결 (Sysmon ProcessGuid 없음)."
+      }
+    ]
+  },
+  "mutable_elements": {
+    "grouping_logic": {
+      "primary_anchor_eids": [
+        4104
+      ],
+      "secondary_anchor": {
+        "event_codes": [
+          1,
+          4688,
+          7
+        ],
+        "required_filters": [
+          "powershell.exe",
+          "pwsh.exe"
+        ],
+        "priority_note": "EID 4104 우선. 없으면 EID 1(Sysmon) 시도. 없으면 EID 4688(Security) 시도. 둘 다 없으면 EID 7(DLL Load) fallback 사용.",
+        "fallback_note": "EID 7 fallback 시: 같은 ProcessGuid를 가진 첫 번째 EID 7 이벤트를 Anchor로 지정. EID 4688 fallback 시: ProcessId 기반으로 연결."
+      },
+      "correlation_key": {
+        "primary": [
+          "ProcessGuid"
+        ],
+        "secondary": [
+          "Hostname",
+          "norm_logon_id"
+        ],
+        "fallback": [
+          "Hostname"
+        ],
+        "note": "EID 10(Process Access)는 SourceProcessGUID, EID 12/13은 ProcessGuid, EID 22는 ProcessGuid로 Anchor와 연결. 자식 프로세스(EID 1)는 ParentProcessGuid로 역추적. Security 채널 이벤트는 ProcessId + Hostname으로 연결."
+      },
+      "time_window": {
+        "before_seconds": 30,
+        "after_seconds": 120,
+        "note": "PowerShell 실행 전 부모 프로세스 행위(EID 10 등) 포함. 실행 후 자식 프로세스(rundll32 등), 네트워크 연결, DNS 쿼리 등 후속 행위 포착."
+      }
+    },
+    "feature_extraction_filters": {
+      "command_line_patterns": [
+        "-enc",
+        "-encodedcommand",
+        "-nop",
+        "-noprofile",
+        "-w hidden",
+        "-windowstyle hidden",
+        "FromBase64String",
+        "Invoke-Expression",
+        "IEX",
+        "DownloadString",
+        "DownloadFile",
+        "HttpListener",
+        "Net.HttpListener"
+      ],
+      "suspicious_parent_processes": [
+        "winword.exe",
+        "excel.exe",
+        "powerpnt.exe",
+        "fodhelper.exe",
+        "mshta.exe",
+        "outlook.exe",
+        "wscript.exe",
+        "cscript.exe"
+      ],
+      "suspicious_child_processes": [
+        {
+          "image": "rundll32.exe",
+          "cmdline_contains": [
+            "comsvcs.dll",
+            "MiniDump"
+          ],
+          "technique": "T1218.011 + T1003.001",
+          "_added": "데이터 기반 추가 — 실제 관측된 체인: powershell.exe → rundll32.exe comsvcs.dll MiniDump {PID} {path}.dmp full"
+        },
+        {
+          "image": "wevtutil.exe",
+          "technique": "T1070.001",
+          "_added": "데이터 기반 추가 — 로그 삭제 후 자격증명 덤프 시나리오에서 사전 행위로 관측"
+        }
+      ],
+      "suspicious_loaded_modules": [
+        "httpapi.dll",
+        "System.Net.WebClient",
+        "System.Reflection",
+        "System.Management.Automation"
+      ],
+      "network_indicator_dlls": [
+        "httpapi.dll",
+        "dnsapi.dll",
+        "mswsock.dll",
+        "winhttp.dll",
+        "wininet.dll"
+      ],
+      "description": "command_line_patterns: 난독화/은닉 실행 탐지. suspicious_parent: 정상적이지 않은 부모 프로세스. suspicious_child: PowerShell이 생성하는 의심 자식 프로세스 (데이터 기반 추가). network_indicator_dlls: HTTP 리스너 또는 아웃바운드 C2 행위 시사 DLL 목록."
+    },
+    "semantic_templates": {
+      "encoded_execution": "계정({User})이 powershell.exe를 통해 Base64 인코딩된 명령을 실행함. 난독화로 정적 탐지 우회 시도.",
+      "http_listener": "PowerShell(ProcessGuid={ProcessGuid})이 httpapi.dll을 로드하고 포트({Port})에 HTTP 리스너를 개방함. C2 채널 또는 데이터 유출 서버 역할 가능.",
+      "process_injection": "PowerShell이 EID 10을 통해 {TargetImage} 프로세스 메모리에 접근함. 인메모리 코드 인젝션 행위 가능.",
+      "child_process_chain": "PowerShell({ProcessGuid})이 {ChildImage}를 자식 프로세스로 생성함 (CommandLine: {ChildCommandLine}). T1218.011 또는 T1003.001과 연계된 다단계 공격 체인 가능성."
+    }
+  }
+}

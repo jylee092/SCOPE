@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The System process connecting to ports 137 (NetBIOS) and 445 (SMB) is standard behavior for a Windows host and does not indicate suspicious activity without additional context.\"\n}"}

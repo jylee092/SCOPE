@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"Repeated connections to the 'lsass' named pipe, which is a common technique for credential access, and loading of 'dxgi.dll', which is unusual for a WMI provider host.\",\n  \"indicators\": [\n    \"WmiPrvSE.exe\",\n    \"PIPE[\\\\lsass]\",\n    \"dxgi.dll\",\n    \"credential access\"\n  ]\n}"}

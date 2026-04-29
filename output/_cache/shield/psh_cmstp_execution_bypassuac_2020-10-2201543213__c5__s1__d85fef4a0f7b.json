@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[cmstp.exe|{39e4a257-1e8]\",\n    \"P[dllhost.exe|{39e4a257-1e9]\",\n    \"P[cmd.exe|{39e4a257-1e9]\"\n  ],\n  \""}

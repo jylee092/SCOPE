@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed registry writes by svchost.exe and SearchProtocolHost.exe to the Windows Notifications data key are consistent with normal system operations and do not indicate any known attack patterns without additional context such as suspicious command lines or other malicious activity.\"\n}"}

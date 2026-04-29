@@ -1,0 +1,348 @@
+[
+  {
+    "group_id": "T1036_005_1691",
+    "technique_id": "T1036.005",
+    "technique_name": "Match Legitimate Name or Location",
+    "anchor_eid": 7,
+    "anchor_detail": {
+      "eid": 7,
+      "time": "2020-10-29 12:16:10.373000+00:00",
+      "image": "python.exe",
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": null,
+      "integrity": null
+    },
+    "confidence": 1.0,
+    "all_idxs": [
+      973,
+      1690,
+      1691,
+      1692,
+      1694,
+      1695,
+      1697,
+      1698,
+      1699,
+      1700,
+      1701,
+      1702,
+      1703,
+      1704,
+      1705,
+      1706,
+      1712,
+      1713,
+      1714,
+      1715,
+      1716,
+      1717,
+      1718,
+      1719,
+      1720,
+      1721,
+      1722,
+      1723,
+      1724,
+      1725,
+      1726,
+      1727,
+      1728,
+      1729,
+      1730,
+      1731,
+      1732,
+      1735,
+      1736,
+      1737,
+      1738,
+      1739,
+      1740,
+      1741,
+      1742,
+      1743,
+      1744,
+      1746,
+      1747,
+      1748,
+      1749,
+      1750,
+      1757,
+      2367,
+      2374
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "spawn",
+            "parent_image": "powershell.exe",
+            "child_image": "python.exe",
+            "integrity_level": "High",
+            "parent_guid": "{39e4a257-41e0-5f9a-3b36-000000000700}",
+            "child_guid": "{39e4a257-420a-5f9a-3f36-000000000700}",
+            "cmdline": "\"C:\\Users\\wardog\\AppData\\Local\\Programs\\Python\\Python39\\python.exe\" -m http.server 8000",
+            "source_eid": 1
+          }
+        ],
+        "chain_depth": 1
+      },
+      "command_script": {
+        "entries": [
+          {
+            "source_eid": 1,
+            "image": "python.exe",
+            "cmdline": "\"C:\\Users\\wardog\\AppData\\Local\\Programs\\Python\\Python39\\python.exe\" -m http.server 8000",
+            "cmdline_length": 87,
+            "has_obfuscation": false,
+            "special_chars": []
+          }
+        ],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 1,
+        "user": "WORKSTATION5\\wardog",
+        "domain": null,
+        "logon_id": "0xc61d9",
+        "integrity_level": "High",
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-10-29T12:16:10.373000+00:00",
+        "window_start_delta_sec": -0.07,
+        "window_end_delta_sec": 13.98,
+        "span_sec": 14.05,
+        "total_events": 55,
+        "event_density_per_10sec": 39.14,
+        "eid_counts": {
+          "7": 45,
+          "11": 4,
+          "12": 4,
+          "1": 1,
+          "22": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 7.797,
+          "mean_sec": 0.26
+        },
+        "burst_detected": [
+          {
+            "eid": 7,
+            "count": 45,
+            "window_sec": 0.0
+          },
+          {
+            "eid": 12,
+            "count": 4,
+            "window_sec": 0.0
+          }
+        ]
+      },
+      "network": {
+        "connections": [
+          {
+            "source_eid": 22,
+            "image": "python.exe",
+            "src_ip": null,
+            "dst_ip": null,
+            "src_port": null,
+            "dst_port": null,
+            "protocol": null,
+            "direction": "dns_query",
+            "service_hint": null,
+            "query_name": "0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa."
+          }
+        ]
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": [
+          {
+            "source_eid": 11,
+            "path": "C:\\Windows\\Prefetch\\NETSH.EXE-F1B6DA12.pf",
+            "image": "svchost.exe"
+          },
+          {
+            "source_eid": 11,
+            "path": "C:\\Windows\\Prefetch\\NETSH.EXE-F1B6DA12.pf",
+            "image": "svchost.exe"
+          },
+          {
+            "source_eid": 11,
+            "path": "C:\\Windows\\Prefetch\\PYTHON.EXE-F52F66E0.pf",
+            "image": "svchost.exe"
+          },
+          {
+            "source_eid": 11,
+            "path": "C:\\Windows\\ServiceState\\EventLog\\Data\\lastalive1.dat",
+            "image": "svchost.exe"
+          }
+        ]
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1070_001_2",
+    "technique_id": "T1070.001",
+    "technique_name": "Clear Windows Event Logs",
+    "anchor_eid": 1102,
+    "anchor_detail": {
+      "eid": 1102,
+      "time": "2020-10-29 12:16:07.900000+00:00",
+      "image": null,
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": null,
+      "integrity": null
+    },
+    "confidence": 0.5,
+    "all_idxs": [
+      2,
+      34,
+      35,
+      860,
+      861,
+      1688,
+      1690
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "spawn",
+            "parent_image": "powershell.exe",
+            "child_image": "netsh.exe",
+            "integrity_level": "High",
+            "parent_guid": "{39e4a257-41e0-5f9a-3b36-000000000700}",
+            "child_guid": "{39e4a257-4209-5f9a-3d36-000000000700}",
+            "cmdline": "\"C:\\windows\\system32\\netsh.exe\" advfirewall firewall add rule name=python.exe dir=in action=allow description=python.exe program=C:\\users\\wardog\\appdata\\local\\programs\\python\\python39\\python.exe enable=yes localport=any protocol=tcp remoteip=any",
+            "source_eid": 1
+          },
+          {
+            "relation": "spawn",
+            "parent_image": "powershell.exe",
+            "child_image": "python.exe",
+            "integrity_level": "High",
+            "parent_guid": "{39e4a257-41e0-5f9a-3b36-000000000700}",
+            "child_guid": "{39e4a257-420a-5f9a-3f36-000000000700}",
+            "cmdline": "\"C:\\Users\\wardog\\AppData\\Local\\Programs\\Python\\Python39\\python.exe\" -m http.server 8000",
+            "source_eid": 1
+          }
+        ],
+        "chain_depth": 2
+      },
+      "command_script": {
+        "entries": [
+          {
+            "source_eid": 4688,
+            "image": "netsh.exe",
+            "cmdline": "\"C:\\windows\\system32\\netsh.exe\" advfirewall firewall add rule name=python.exe dir=in action=allow description=python.exe program=C:\\users\\wardog\\appdata\\local\\programs\\python\\python39\\python.exe enable=yes localport=any protocol=tcp remoteip=any",
+            "cmdline_length": 245,
+            "has_obfuscation": false,
+            "special_chars": []
+          },
+          {
+            "source_eid": 4688,
+            "image": "netsh.exe",
+            "cmdline": "\"C:\\windows\\system32\\netsh.exe\" advfirewall firewall add rule name=python.exe dir=in action=allow description=python.exe program=C:\\users\\wardog\\appdata\\local\\programs\\python\\python39\\python.exe enable=yes localport=any protocol=udp remoteip=any",
+            "cmdline_length": 245,
+            "has_obfuscation": false,
+            "special_chars": []
+          },
+          {
+            "source_eid": 4688,
+            "image": "python.exe",
+            "cmdline": "\"C:\\Users\\wardog\\AppData\\Local\\Programs\\Python\\Python39\\python.exe\" -m http.server 8000",
+            "cmdline_length": 87,
+            "has_obfuscation": false,
+            "special_chars": []
+          }
+        ],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 1,
+        "user": "WORKSTATION5\\wardog",
+        "domain": null,
+        "logon_id": "0xc61d9",
+        "integrity_level": "High",
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-10-29T12:16:07.900000+00:00",
+        "window_start_delta_sec": 0.0,
+        "window_end_delta_sec": 2.47,
+        "span_sec": 2.47,
+        "total_events": 7,
+        "event_density_per_10sec": 28.32,
+        "eid_counts": {
+          "4688": 3,
+          "1": 3,
+          "1102": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.002,
+          "max_sec": 2.014,
+          "mean_sec": 0.412
+        },
+        "burst_detected": [
+          {
+            "eid": 4688,
+            "count": 3,
+            "window_sec": 0.45
+          },
+          {
+            "eid": 1,
+            "count": 3,
+            "window_sec": 0.45
+          }
+        ]
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [
+          {
+            "source_eid": 1102,
+            "message": "The audit log was cleared.",
+            "user": null
+          }
+        ],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  }
+]

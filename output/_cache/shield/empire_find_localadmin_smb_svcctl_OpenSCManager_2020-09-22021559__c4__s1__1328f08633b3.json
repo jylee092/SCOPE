@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed processes (WmiPrvSE.exe, NetworkWatcherAgent.exe, RuntimeBroker.exe) are legitimate Windows components, and their recorded activities, including DLL loads, registry modifications, DNS lookups, file operations, and named pipe connections, are consistent with their expected benign functions.\"\n}"}

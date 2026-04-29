@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities, including registry modifications and file writes, are consistent with the legitimate operations of the Windows Delivery Optimization service, which is hosted by svchost.exe, and no suspicious command lines or other indicators of compromise were found.\"\n}"}

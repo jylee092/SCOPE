@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[WmiPrvSE.exe|{b669e388-4a9]\",\n    \"P[svchost.exe|{6a910b9d-a3d]\"\n  ],\n  \"rationale\": \"The WmiPrvSE.exe process is performing extensive registry modifications related to"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is legitimately writing to prefetch files, which is a normal system operation reflecting the execution of other binaries, and no suspicious command lines or other attack patterns are observed for svchost.exe itself.\"\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": false,\n  \"deviation\": \"\",\n  \"indicators\": [\n    \"esentutl.exe\",\n    \"lsass\",\n    \"VSS\"\n  ]\n}"}

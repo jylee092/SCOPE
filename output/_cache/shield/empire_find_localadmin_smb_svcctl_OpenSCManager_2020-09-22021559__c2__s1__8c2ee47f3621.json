@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process loading samcli.dll, IDStore.dll, and wlidprov.dll is a common and legitimate behavior for various Windows services, and no other suspicious indicators like unusual command lines or network connections were observed.\"\n}"}

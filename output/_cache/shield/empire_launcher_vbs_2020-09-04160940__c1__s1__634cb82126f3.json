@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"While wscript.exe is frequently abused, the provided events lack specific indicators such as suspicious command-line arguments, unusual child processes, or malicious file/registry writes that would definitively mark this instance as suspicious.\"\n}"}

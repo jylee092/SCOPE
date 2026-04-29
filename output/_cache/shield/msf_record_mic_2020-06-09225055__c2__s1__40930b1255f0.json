@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[dns.exe|{b669e388-a0e]\"\n  ],\n  \"rationale\": \"The legitimate dns.exe process is making multiple outbound network connections to various high-numbered, non-standard ports, which is atypical behavior for a DNS server beyond its normal port 53 communications and could indicate compromise or misuse.\"\n}"}

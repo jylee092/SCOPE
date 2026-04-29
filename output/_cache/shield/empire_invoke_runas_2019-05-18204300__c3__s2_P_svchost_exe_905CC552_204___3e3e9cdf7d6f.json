@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": false,\n  \"deviation\": \"\",\n  \"indicators\": [\n    \"svchost.exe\",\n    \"Group Policy\",\n    \"gpprefcl.dll\",\n    \"auditcse.dll\",\n    \"LDAP\",\n    \"domain controller\",\n    \"pipe_connect\",\n    \"lsass\",\n    \"wkssvc\"\n  ]\n}"}

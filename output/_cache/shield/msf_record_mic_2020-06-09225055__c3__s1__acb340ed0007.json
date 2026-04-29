@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process loading perfos.dll and perfctrs.dll is a normal and expected behavior for Windows services related to performance monitoring, and no other suspicious indicators like notable command lines, unauthorized writes, or network connections were observed.\"\n}"}

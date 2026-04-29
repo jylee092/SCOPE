@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The process ApplicationFrameHost.exe is performing numerous registry operations and loading AppXDeploymentClient.dll, which are all consistent with the normal operation of a Universal Windows Platform (UWP) application and do not match any known attack patterns based on the provided data.\"\n}"}

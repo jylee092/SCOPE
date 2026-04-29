@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed activity of svchost.exe writing to prefetch files in C:\\\\Windows\\\\Prefetch\\\\ is normal and expected behavior for the Windows Prefetcher service, with no indicators of malicious activity such as unusual command lines, unauthorized writes, or network connections.\"\n}"}

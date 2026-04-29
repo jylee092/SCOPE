@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The community only shows a legitimate 'net.exe' process loading standard system DLLs, with no suspicious command-line arguments, child processes, file/registry writes, or network activity to indicate malicious intent.\"\n}"}

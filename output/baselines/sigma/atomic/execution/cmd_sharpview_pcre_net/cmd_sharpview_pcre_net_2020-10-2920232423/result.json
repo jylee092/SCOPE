@@ -1,0 +1,195 @@
+{
+  "scenario": "cmd_sharpview_pcre_net_2020-10-2920232423",
+  "tactic_sequence": [
+    "Discovery",
+    "Execution",
+    "Command and Control",
+    "Discovery"
+  ],
+  "technique_sequence": [
+    "T1049",
+    "T1059",
+    "T1001.003",
+    "T1482"
+  ],
+  "per_group_topk": [
+    [
+      "T1049",
+      "T1069.002",
+      "T1482",
+      "T1135",
+      "T1033"
+    ],
+    [
+      "T1059"
+    ],
+    [
+      "T1059"
+    ],
+    [
+      "T1059"
+    ],
+    [
+      "T1059"
+    ],
+    [
+      "T1001.003"
+    ],
+    [
+      "T1482"
+    ],
+    [
+      "T1482"
+    ]
+  ],
+  "notes": {
+    "n_events_evaluated": 195,
+    "n_alerts": 8,
+    "alerts": [
+      {
+        "ts": "2020-10-29 08:23:20.534000+00:00",
+        "event_index": 35,
+        "event_id": 1,
+        "topk_tids": [
+          "T1049",
+          "T1069.002",
+          "T1482",
+          "T1135",
+          "T1033"
+        ],
+        "topk_tactics": [
+          "Discovery",
+          "Discovery",
+          "Discovery",
+          "Discovery",
+          "Discovery"
+        ],
+        "top_rule": {
+          "rule_id": "b2317cfa-4a47-4ead-b3ff-297438c0bc2d",
+          "title": "HackTool - SharpView Execution",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-10-29 08:23:21.498000+00:00",
+        "event_index": 169,
+        "event_id": 11,
+        "topk_tids": [
+          "T1059"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "6e90ae7a-7cd3-473f-a035-4ebb72d961da",
+          "title": "PCRE.NET Package Temp Files",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-10-29 08:23:21.510000+00:00",
+        "event_index": 170,
+        "event_id": 7,
+        "topk_tids": [
+          "T1059"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "84b0a8f3-680b-4096-a45b-e9a89221727c",
+          "title": "PCRE.NET Package Image Load",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-10-29 08:23:21.510000+00:00",
+        "event_index": 171,
+        "event_id": 7,
+        "topk_tids": [
+          "T1059"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "84b0a8f3-680b-4096-a45b-e9a89221727c",
+          "title": "PCRE.NET Package Image Load",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-10-29 08:23:21.521000+00:00",
+        "event_index": 190,
+        "event_id": 7,
+        "topk_tids": [
+          "T1059"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "84b0a8f3-680b-4096-a45b-e9a89221727c",
+          "title": "PCRE.NET Package Image Load",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-10-29 08:23:21.622000+00:00",
+        "event_index": 236,
+        "event_id": 11,
+        "topk_tids": [
+          "T1001.003"
+        ],
+        "topk_tactics": [
+          "Command and Control"
+        ],
+        "top_rule": {
+          "rule_id": "75bf09fa-1dd7-4d18-9af9-dd9e492562eb",
+          "title": "ADSI-Cache File Creation By Uncommon Tool",
+          "level": "medium",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-10-29 08:23:22.558000+00:00",
+        "event_index": 259,
+        "event_id": 22,
+        "topk_tids": [
+          "T1482"
+        ],
+        "topk_tactics": [
+          "Discovery"
+        ],
+        "top_rule": {
+          "rule_id": "a21bcd7e-38ec-49ad-b69a-9ea17e69509e",
+          "title": "DNS Server Discovery Via LDAP Query",
+          "level": "low",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-10-29 08:23:22.558000+00:00",
+        "event_index": 260,
+        "event_id": 22,
+        "topk_tids": [
+          "T1482"
+        ],
+        "topk_tactics": [
+          "Discovery"
+        ],
+        "top_rule": {
+          "rule_id": "a21bcd7e-38ec-49ad-b69a-9ea17e69509e",
+          "title": "DNS Server Discovery Via LDAP Query",
+          "level": "low",
+          "status": "test"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The backgroundTaskHost.exe process is performing legitimate actions, loading expected Windows DLLs and modifying registry keys related to the ContentDeliveryManager, with no suspicious command-line arguments, child processes, or unauthorized file/registry writes observed.\"\n}"}

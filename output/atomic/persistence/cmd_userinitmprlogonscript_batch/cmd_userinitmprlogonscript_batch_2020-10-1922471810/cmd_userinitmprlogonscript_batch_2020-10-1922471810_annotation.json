@@ -1,0 +1,389 @@
+{
+  "scenario": "cmd_userinitmprlogonscript_batch_2020-10-1922471810",
+  "total_groups": 3,
+  "instruction": "각 그룹의 sample_logs와 anchor를 확인한 뒤 gt_ 필드를 채워주세요. gt_is_true_positive: 해당 그룹이 실제 공격 행위인지 (true/false). gt_technique_id: 실제 MITRE technique ID (예: T1059.001). gt_tactic: 실제 tactic 이름 (예: Execution). gt_notes: 판단 근거나 메모.",
+  "groups": [
+    {
+      "group_id": "T1037_001_75",
+      "rule_technique_id": "T1037.001",
+      "rule_technique_name": "Logon Script (Windows)",
+      "confidence": 0.6,
+      "anchor": {
+        "idx": 75,
+        "EventID": 4688,
+        "Image": "nan",
+        "CommandLine": "REG.exe  ADD HKCU\\Environment /v UserInitMprLogonScript /t REG_SZ /d C:\\Users\\wardog\\AppData\\Local\\Temp\\art.bat /f",
+        "TimeCreated": "2020-10-19 10:47:08.745000+00:00"
+      },
+      "num_events": 24,
+      "event_id_distribution": {
+        "7": 10,
+        "13": 9,
+        "4688": 1,
+        "1": 1,
+        "12": 1,
+        "5": 1,
+        "11": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 69,
+          "EventID": 13,
+          "TimeCreated": "2020-10-19 10:47:00.020000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\VFUProvider\\StartTime"
+        },
+        {
+          "idx": 74,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 10:47:08.743000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 75,
+          "EventID": 4688,
+          "TimeCreated": "2020-10-19 10:47:08.745000+00:00",
+          "Image": "nan",
+          "CommandLine": "REG.exe  ADD HKCU\\Environment /v UserInitMprLogonScript /t REG_SZ /d C:\\Users\\wardog\\AppData\\Local\\Temp\\art.bat /f",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 77,
+          "EventID": 1,
+          "TimeCreated": "2020-10-19 10:47:08.749000+00:00",
+          "Image": "C:\\Windows\\System32\\reg.exe",
+          "CommandLine": "REG.exe  ADD HKCU\\Environment /v UserInitMprLogonScript /t REG_SZ /d C:\\Users\\wardog\\AppData\\Local\\Temp\\art.bat /f",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 81,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 10:47:08.753000+00:00",
+          "Image": "C:\\Windows\\System32\\reg.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 85,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 10:47:08.761000+00:00",
+          "Image": "C:\\Windows\\System32\\reg.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 86,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 10:47:08.761000+00:00",
+          "Image": "C:\\Windows\\System32\\reg.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 87,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 10:47:08.762000+00:00",
+          "Image": "C:\\Windows\\System32\\reg.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 89,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 10:47:08.766000+00:00",
+          "Image": "C:\\Windows\\System32\\reg.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 90,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 10:47:08.767000+00:00",
+          "Image": "C:\\Windows\\System32\\reg.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 92,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 10:47:08.768000+00:00",
+          "Image": "C:\\Windows\\System32\\reg.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 91,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 10:47:08.768000+00:00",
+          "Image": "C:\\Windows\\System32\\reg.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 93,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 10:47:08.769000+00:00",
+          "Image": "C:\\Windows\\System32\\reg.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 95,
+          "EventID": 12,
+          "TimeCreated": "2020-10-19 10:47:08.771000+00:00",
+          "Image": "C:\\windows\\system32\\reg.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Environment"
+        },
+        {
+          "idx": 96,
+          "EventID": 13,
+          "TimeCreated": "2020-10-19 10:47:08.771000+00:00",
+          "Image": "C:\\windows\\system32\\reg.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Environment\\UserInitMprLogonScript"
+        }
+      ],
+      "gt_technique_id": "T1037.001",
+      "gt_technique_name": "Logon Script (Windows)",
+      "gt_tactic": "Persistence",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(userinitmprlogonscript,reg.exe,hkcu\\environment)"
+    },
+    {
+      "group_id": "T1070_001_0",
+      "rule_technique_id": "T1070.001",
+      "rule_technique_name": "Clear Windows Event Logs",
+      "confidence": 0.75,
+      "anchor": {
+        "idx": 0,
+        "EventID": 1102,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-19 10:46:42.027000+00:00"
+      },
+      "num_events": 4,
+      "event_id_distribution": {
+        "1102": 1,
+        "104": 1,
+        "4688": 1,
+        "1": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 0,
+          "EventID": 1102,
+          "TimeCreated": "2020-10-19 10:46:42.027000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1,
+          "EventID": 104,
+          "TimeCreated": "2020-10-19 10:46:42.074000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 75,
+          "EventID": 4688,
+          "TimeCreated": "2020-10-19 10:47:08.745000+00:00",
+          "Image": "nan",
+          "CommandLine": "REG.exe  ADD HKCU\\Environment /v UserInitMprLogonScript /t REG_SZ /d C:\\Users\\wardog\\AppData\\Local\\Temp\\art.bat /f",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 77,
+          "EventID": 1,
+          "TimeCreated": "2020-10-19 10:47:08.749000+00:00",
+          "Image": "C:\\Windows\\System32\\reg.exe",
+          "CommandLine": "REG.exe  ADD HKCU\\Environment /v UserInitMprLogonScript /t REG_SZ /d C:\\Users\\wardog\\AppData\\Local\\Temp\\art.bat /f",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1037.001",
+      "gt_technique_name": "Clear Windows Event Logs",
+      "gt_tactic": "Persistence",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: sample-kw+ctx(T1070.001,c=0.75)"
+    },
+    {
+      "group_id": "T1112_96",
+      "rule_technique_id": "T1112",
+      "rule_technique_name": "Modify Registry",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 96,
+        "EventID": 13,
+        "Image": "C:\\windows\\system32\\reg.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-19 10:47:08.771000+00:00"
+      },
+      "num_events": 14,
+      "event_id_distribution": {
+        "7": 10,
+        "1": 1,
+        "12": 1,
+        "13": 1,
+        "5": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 74,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 10:47:08.743000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 77,
+          "EventID": 1,
+          "TimeCreated": "2020-10-19 10:47:08.749000+00:00",
+          "Image": "C:\\Windows\\System32\\reg.exe",
+          "CommandLine": "REG.exe  ADD HKCU\\Environment /v UserInitMprLogonScript /t REG_SZ /d C:\\Users\\wardog\\AppData\\Local\\Temp\\art.bat /f",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 81,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 10:47:08.753000+00:00",
+          "Image": "C:\\Windows\\System32\\reg.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 85,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 10:47:08.761000+00:00",
+          "Image": "C:\\Windows\\System32\\reg.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 86,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 10:47:08.761000+00:00",
+          "Image": "C:\\Windows\\System32\\reg.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 87,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 10:47:08.762000+00:00",
+          "Image": "C:\\Windows\\System32\\reg.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 89,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 10:47:08.766000+00:00",
+          "Image": "C:\\Windows\\System32\\reg.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 90,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 10:47:08.767000+00:00",
+          "Image": "C:\\Windows\\System32\\reg.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 91,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 10:47:08.768000+00:00",
+          "Image": "C:\\Windows\\System32\\reg.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 92,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 10:47:08.768000+00:00",
+          "Image": "C:\\Windows\\System32\\reg.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 93,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 10:47:08.769000+00:00",
+          "Image": "C:\\Windows\\System32\\reg.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 95,
+          "EventID": 12,
+          "TimeCreated": "2020-10-19 10:47:08.771000+00:00",
+          "Image": "C:\\windows\\system32\\reg.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Environment"
+        },
+        {
+          "idx": 96,
+          "EventID": 13,
+          "TimeCreated": "2020-10-19 10:47:08.771000+00:00",
+          "Image": "C:\\windows\\system32\\reg.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Environment\\UserInitMprLogonScript"
+        },
+        {
+          "idx": 97,
+          "EventID": 5,
+          "TimeCreated": "2020-10-19 10:47:08.771000+00:00",
+          "Image": "C:\\Windows\\System32\\reg.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1037.001",
+      "gt_technique_name": "Modify Registry",
+      "gt_tactic": "Persistence",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(reg.exe)"
+    }
+  ]
+}

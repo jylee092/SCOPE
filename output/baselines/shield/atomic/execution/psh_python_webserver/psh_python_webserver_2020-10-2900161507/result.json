@@ -1,0 +1,52 @@
+{
+  "scenario": "psh_python_webserver_2020-10-2900161507",
+  "tactic_sequence": [
+    "Defense Evasion"
+  ],
+  "technique_sequence": [
+    "T1562.004"
+  ],
+  "per_group_topk": [
+    [
+      "T1562.004",
+      "T1071"
+    ]
+  ],
+  "notes": {
+    "n_total_events": 2395,
+    "n_filtered_events": 250,
+    "n_lof_anomalous": 34,
+    "n_communities": 5,
+    "n_alerts": 1,
+    "alerts": [
+      {
+        "ts": "2020-10-29 12:16:10",
+        "community_id": 3,
+        "n_members": 5,
+        "confidence": 0.95,
+        "topk_tids": [
+          "T1562.004",
+          "T1071"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Command and Control"
+        ],
+        "kill_chain_stages": [
+          "Defense Evasion",
+          "Command and Control"
+        ],
+        "summary": "A system svchost.exe process was observed modifying Windows Firewall rules to allow inbound TCP and UDP connections for a Python executable located in a user's AppData directory. This highly unusual activity indicates a compromised service attempting to establish a command and control channel and evade host defenses. The direct manipulation of firewall rules by svchost.exe for a non-system application is a strong indicator of malicious intent.",
+        "event_indices": [
+          183,
+          184,
+          193,
+          1011,
+          1012,
+          1017
+        ]
+      }
+    ],
+    "elapsed_sec": 83.4
+  }
+}

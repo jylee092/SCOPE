@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"cmd.exe executed 'whoami', which is a common command used for reconnaissance by attackers.\",\n  \"indicators\": [\n    \"whoami\",\n    \"reconnaissance\"\n  ]\n}"}

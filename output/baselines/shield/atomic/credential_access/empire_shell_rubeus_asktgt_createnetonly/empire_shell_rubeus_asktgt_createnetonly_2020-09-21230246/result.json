@@ -1,0 +1,101 @@
+{
+  "scenario": "empire_shell_rubeus_asktgt_createnetonly_2020-09-21230246",
+  "tactic_sequence": [
+    "Execution"
+  ],
+  "technique_sequence": [
+    "T1059.001",
+    "T1059"
+  ],
+  "per_group_topk": [
+    [
+      "T1059.001",
+      "T1558.003"
+    ],
+    [
+      "T1059",
+      "T1558.003"
+    ]
+  ],
+  "notes": {
+    "n_total_events": 3590,
+    "n_filtered_events": 1603,
+    "n_lof_anomalous": 117,
+    "n_communities": 20,
+    "n_alerts": 2,
+    "alerts": [
+      {
+        "ts": "2020-09-22 03:02:49",
+        "community_id": 0,
+        "n_members": 3,
+        "confidence": 0.95,
+        "topk_tids": [
+          "T1059.001",
+          "T1558.003"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Credential Access"
+        ],
+        "kill_chain_stages": [
+          "Execution",
+          "Credential Access"
+        ],
+        "summary": "A PowerShell process executed Rubeus.exe, a known credential access tool, to request Kerberos Ticket Granting Tickets (TGTs) using an RC4 hash. This activity indicates a clear attempt at credential theft or a Kerberos-based attack. The PowerShell process also engaged in numerous registry modifications and pipe operations, which could be related to the setup or execution of this malicious activity.",
+        "event_indices": [
+          2,
+          31,
+          50,
+          275,
+          637,
+          638,
+          639,
+          958,
+          1148,
+          1167,
+          1205,
+          1237,
+          1275,
+          1308,
+          1451,
+          1479,
+          1520,
+          1541,
+          3208,
+          3226,
+          3404,
+          3501
+        ]
+      },
+      {
+        "ts": "2020-09-22 03:03:08",
+        "community_id": 13,
+        "n_members": 8,
+        "confidence": 0.85,
+        "topk_tids": [
+          "T1059",
+          "T1558.003"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Credential Access"
+        ],
+        "kill_chain_stages": [
+          "Execution",
+          "Credential Access"
+        ],
+        "summary": "The system's svchost.exe process was observed creating a prefetch file for RUBEUS.EXE. This activity is highly suspicious as Rubeus is a well-known credential access tool, strongly indicating its execution on the system. This suggests an attacker deployed and executed Rubeus for the purpose of credential theft.",
+        "event_indices": [
+          959,
+          1165,
+          1166,
+          1925,
+          3240,
+          3241,
+          3242
+        ]
+      }
+    ],
+    "elapsed_sec": 222.0
+  }
+}

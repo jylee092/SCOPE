@@ -1,0 +1,273 @@
+{
+  "technique": {
+    "id": "T1003.001",
+    "name": "LSASS Memory"
+  },
+  "detection": {
+    "id": "DET0363"
+  },
+  "analysis": {
+    "id": "AN1030"
+  },
+  "_data_notes": {
+    "dataset": "psh_lsass_memory_dump_comsvcs_2020-10-18",
+    "attack_vector": "rundll32.exe C:\\Windows\\System32\\comsvcs.dll MiniDump {PID} {path}.dmp full",
+    "parent_of_rundll32": "powershell.exe (ParentProcessGuid: {39e4a257-d445-5f8c-2c03-000000000700})",
+    "dump_path_observed": "C:\\Users\\wardog\\AppData\\Local\\Temp\\lsass-comsvcs.dmp",
+    "timing": {
+      "EID_1_rundll32": "07:50:05.917",
+      "EID_10_lsass_first": "07:50:06.001 (GrantedAccess=0x1410)",
+      "EID_10_lsass_second": "07:50:06.025 (GrantedAccess=0x1fffff)",
+      "EID_11_dmp": "07:50:06.001",
+      "EID_4656_first": "07:50:05.978 (AccessMask=0x1410)",
+      "EID_4656_second": "07:50:06.009 (AccessMask=0x1fffff)",
+      "EID_4689_exit": "07:50:06.220",
+      "total_rundll32_lifetime_sec": 0.303
+    },
+    "observed_access_masks": ["0x1fffff", "0x1410"],
+    "observed_dlls_by_rundll32": ["comsvcs.dll", "dbgcore.dll", "dbghelp.dll", "imagehlp.dll", "verifier.dll", "psapi.dll"]
+  },
+  "log_sources": {
+    "Anchor Event": {
+      "_origin": "원본 보존 — 원본에서 Anchor 미지정이나 LSASS 접근 직접 이벤트로 Anchor 분류",
+      "data_component": {
+        "id": "DC0035",
+        "name": "Process Access"
+      },
+      "source": "WinEventLog:Sysmon",
+      "channel": {
+        "event_codes": [10]
+      },
+      "filters": {
+        "TargetImage": {
+          "endswith": "lsass.exe"
+        },
+        "GrantedAccess": {
+          "in": ["0x1fffff", "0x1F0FFF", "0x1410", "0x1010"],
+          "note": "mutable_elements.access_mask 목록 적용. 실제 데이터: 0x1fffff, 0x1410 관측."
+        },
+        "SourceImage_exclude": {
+          "not_contains": [
+            "MsMpEng.exe", "SenseIR.exe", "csrss.exe", "wininit.exe", "taskmgr.exe", "lsass.exe",
+            "svchost.exe", "services.exe", "SearchIndexer.exe", "WmiPrvSE.exe",
+            "dllhost.exe", "RuntimeBroker.exe", "SecurityHealthService.exe",
+            "SearchProtocolHost.exe", "SearchFilterHost.exe",
+            "dwm.exe", "winlogon.exe", "smss.exe",
+            "NisSrv.exe", "MpCmdRun.exe", "SecurityHealthSystray.exe",
+            "System", "Registry", "Memory Compression",
+            "sihost.exe", "fontdrvhost.exe", "conhost.exe",
+            "backgroundTaskHost.exe", "ShellExperienceHost.exe", "explorer.exe",
+            "vmtoolsd.exe", "TrustedInstaller.exe", "MsSense.exe"
+          ],
+          "note": "정상 Windows 서비스/보안 프로세스가 LSASS를 조회하는 이벤트 제외. 실제 덤프 도구(mimikatz/rundll32/procdump 등)만 남김."
+        }
+      },
+      "description": "LSASS 프로세스 메모리 접근. TargetImage=lsass.exe + GrantedAccess 조합이 핵심 시그니처. 실제 데이터: rundll32.exe → lsass.exe 2건 관측."
+    },
+    "Supporting Events": [
+      {
+        "_origin": "원본 보존",
+        "_role": "Supporting",
+        "data_component": {
+          "id": "DC0032",
+          "name": "Process Creation"
+        },
+        "source": "WinEventLog:Sysmon",
+        "channel": {
+          "event_codes": [1]
+        },
+        "filters": {
+          "CommandLine": {
+            "contains_any": ["comsvcs.dll", "MiniDump", "procdump", "-ma lsass", "Invoke-Mimikatz", "sekurlsa", "lsass"],
+            "note": "mutable_elements.command_line_pattern 목록 적용. 실제 데이터: 'rundll32.exe comsvcs.dll MiniDump 756 ...lsass-comsvcs.dmp full'."
+          }
+        },
+        "correlation": {
+          "key": "ProcessGuid",
+          "note": "EID 1의 ProcessGuid = EID 10의 SourceProcessGUID. 실제 데이터에서 직접 확인."
+        },
+        "description": "LSASS 덤프 실행 프로세스 생성. ParentImage=powershell.exe — T1059.001 연계 지표."
+      },
+      {
+        "_origin": "원본 보존",
+        "_role": "Supporting",
+        "data_component": {
+          "id": "DC0039",
+          "name": "File Creation"
+        },
+        "source": "WinEventLog:Sysmon",
+        "channel": {
+          "event_codes": [11]
+        },
+        "filters": {
+          "TargetFilename": {
+            "contains_any": [".dmp", "lsass"],
+            "note": "mutable_elements.dump_file_path 경로 패턴 적용. 실제 데이터: AppData\\Local\\Temp\\lsass-comsvcs.dmp."
+          }
+        },
+        "correlation": {
+          "key": "ProcessGuid",
+          "note": "실제 데이터: EID 10과 EID 11이 동일 타임스탬프(07:50:06.001)에 동시 발생."
+        },
+        "description": "메모리 덤프 파일 생성. '접근(EID 10) → 덤프(EID 11)' 체인으로 확신도 상승."
+      },
+      {
+        "_origin": "원본 보존",
+        "_role": "Supporting",
+        "_role_note": "원본에 Anchor/Supporting 미구분. EID 10 Anchor 기준, 4673은 간접 보강으로 Supporting 분류. 이 데이터셋에서 직접 관측 없음.",
+        "data_component": {
+          "id": "DC0013",
+          "name": "User Account Metadata"
+        },
+        "source": "WinEventLog:Security",
+        "channel": {
+          "event_codes": [4673]
+        },
+        "filters": {
+          "note": "원본에 필터 미정의. PrivilegeList에 SeDebugPrivilege 포함 여부로 필터링 권장. 조건 추후 보강 필요."
+        },
+        "description": "SeDebugPrivilege 사용 이벤트. LSASS 메모리 접근에 필수 권한. 덤프 도구 실행 시 전형적으로 발생. ProcessId로 Anchor와 연결."
+      },
+      {
+        "_origin": "원본 보존",
+        "_role": "Supporting",
+        "_role_note": "원본에 Anchor/Supporting 미구분. LSASS 접근 전후 레지스트리 변조 포착용으로 Supporting 분류. 이 데이터셋에서 rundll32의 EID 13/14는 직접 관측 없음 (Security 채널 EID 4656/4663에서 HKLM\\Control\\Lsa 접근은 관측).",
+        "data_component": {
+          "id": "DC0063",
+          "name": "Windows Registry Key Modification"
+        },
+        "source": "WinEventLog:Sysmon",
+        "channel": {
+          "event_codes": [13, 14]
+        },
+        "filters": {
+          "note": "원본에 필터 미정의. HKLM\\System\\CurrentControlSet\\Control\\Lsa 경로 필터 권장. 조건 추후 보강 필요."
+        },
+        "description": "LSASS 접근 전후 레지스트리 변조. Mimikatz 등이 LSA 보호 비활성화를 위해 레지스트리를 수정하는 패턴 포착."
+      },
+      {
+        "_origin": "데이터 기반 추가",
+        "_role": "Supporting",
+        "data_component": {
+          "id": "DC0016",
+          "name": "Module Load"
+        },
+        "source": "WinEventLog:Sysmon",
+        "channel": {
+          "event_codes": [7]
+        },
+        "filters": {
+          "Image": {
+            "endswith": "rundll32.exe"
+          },
+          "ImageLoaded": {
+            "contains_any": ["comsvcs.dll", "dbgcore.dll", "dbghelp.dll", "imagehlp.dll"]
+          }
+        },
+        "correlation": {
+          "key": "ProcessGuid"
+        },
+        "description": "덤프 관련 DLL 로드. 실제 데이터: rundll32.exe가 comsvcs.dll, dbgcore.dll, dbghelp.dll, imagehlp.dll 로드 관측. comsvcs.dll + dbghelp.dll 조합은 MiniDump 기법 핵심 시그니처."
+      },
+      {
+        "_origin": "데이터 기반 추가",
+        "_role": "Supporting",
+        "data_component": {
+          "id": "DC0035_security",
+          "name": "Process Access (Security fallback)"
+        },
+        "source": "WinEventLog:Security",
+        "channel": {
+          "event_codes": [4656, 4663]
+        },
+        "filters": {
+          "ObjectType": "Process",
+          "ObjectName": {
+            "endswith": "lsass.exe"
+          }
+        },
+        "description": "Security 채널 LSASS 핸들 요청/접근. Sysmon EID 10 없는 환경 fallback. 실제 데이터: rundll32.exe → lsass.exe EID 4656(0x1410, 0x1fffff) 및 EID 4663(0x10) 관측. Anchor로 격상 가능."
+      }
+    ]
+  },
+  "mutable_elements": {
+    "access_mask": {
+      "type": "array",
+      "description": "Access rights used to detect full memory access attempts to LSASS (e.g., 0x1F0FFF); can be scoped down to reduce noise",
+      "items": {
+        "type": "string",
+        "examples": [
+          "0x1F0FFF",
+          "0x1fffff",
+          "0x1410",
+          "PROCESS_VM_READ",
+          "PROCESS_QUERY_INFORMATION",
+          "PROCESS_VM_OPERATION"
+        ]
+      },
+      "min_items": 1
+    },
+    "time_window": {
+      "type": "object",
+      "description": "Time window between LSASS access and subsequent dump file creation or registry modification. 실제 데이터: EID 10 → EID 11 동시 발생(0초). before는 rundll32 생성 컨텍스트 포착용.",
+      "properties": {
+        "window_seconds": {
+          "type": "integer",
+          "minimum": 1,
+          "examples": [60, 300, 600]
+        }
+      },
+      "required": ["window_seconds"],
+      "additional_properties": false
+    },
+    "parent_process_name": {
+      "type": "array",
+      "description": "Allowlist of known legitimate tools (e.g., AV/EDR) that may access lsass.exe",
+      "items": {
+        "type": "string",
+        "examples": [
+          "MsMpEng.exe",
+          "SenseIR.exe",
+          "csrss.exe",
+          "wininit.exe",
+          "taskmgr.exe"
+        ]
+      },
+      "min_items": 1
+    },
+    "dump_file_path": {
+      "type": "array",
+      "description": "Common paths where memory dump files are written. 실제 데이터: C:\\Users\\wardog\\AppData\\Local\\Temp\\lsass-comsvcs.dmp",
+      "items": {
+        "type": "string",
+        "examples": [
+          "%TEMP%",
+          "C:\\Windows\\Temp\\",
+          "C:\\Users\\*\\AppData\\Local\\Temp\\",
+          "C:\\ProgramData\\"
+        ]
+      },
+      "min_items": 1
+    },
+    "command_line_pattern": {
+      "type": "array",
+      "description": "Common command-line patterns associated with credential dumping. 실제 데이터: 'rundll32.exe comsvcs.dll MiniDump 756 ...lsass-comsvcs.dmp full'",
+      "items": {
+        "type": "string",
+        "examples": [
+          "rundll32.exe comsvcs.dll, MiniDump",
+          "procdump.exe -ma lsass",
+          "Invoke-Mimikatz",
+          "comsvcs.dll",
+          "sekurlsa::logonpasswords"
+        ]
+      },
+      "min_items": 1
+    },
+    "semantic_templates": {
+      "comsvcs_minidump": "계정({User})이 rundll32.exe를 통해 comsvcs.dll MiniDump 함수로 LSASS({TargetProcessId}) 메모리를 덤프함. 덤프 파일: {TargetFilename}. Living-off-the-Land 자격증명 탈취 기법.",
+      "direct_access": "프로세스({SourceImage})가 LSASS 메모리에 접근함 (GrantedAccess={GrantedAccess}). 자격증명 탈취 도구 사용 가능성.",
+      "chain_detection": "T1059.001(powershell.exe) → T1218.011(rundll32.exe) → T1003.001(lsass.exe 접근 + .dmp 생성) 체인이 {Hostname}에서 탐지됨."
+    }
+  }
+}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"procdump64.exe was used to dump the memory of lsass.exe, a common technique for credential harvesting, and saved the dump file to a temporary directory.\",\n  \"indicators\": [\n    \"procdump\",\n    \"lsass.exe\",\n    \"memory dump\",\n    \"credential dumping\",\n    \"C:\\\\Windows\\\\Temp\"\n  ]\n}"}

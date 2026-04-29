@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities by svchost.exe, including registry modifications, DLL loads, and file writes, are consistent with the legitimate operations of the Windows Device Setup Manager service (DsmSvc) and device enumeration, with no notable command lines or other suspicious indicators present.\"\n}"}

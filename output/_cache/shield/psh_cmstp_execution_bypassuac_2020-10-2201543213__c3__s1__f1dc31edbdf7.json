@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The System process updating BAM (Background Activity Moderator) registry keys to record application execution (cmd.exe) is normal Windows behavior, and no suspicious command lines or other indicators were observed in this community.\"\n}"}

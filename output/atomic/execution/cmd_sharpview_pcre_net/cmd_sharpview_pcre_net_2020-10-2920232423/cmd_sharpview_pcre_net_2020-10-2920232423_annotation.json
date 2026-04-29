@@ -1,0 +1,237 @@
+{
+  "scenario": "cmd_sharpview_pcre_net_2020-10-2920232423",
+  "total_groups": 2,
+  "instruction": "각 그룹의 sample_logs와 anchor를 확인한 뒤 gt_ 필드를 채워주세요. gt_is_true_positive: 해당 그룹이 실제 공격 행위인지 (true/false). gt_technique_id: 실제 MITRE technique ID (예: T1059.001). gt_tactic: 실제 tactic 이름 (예: Execution). gt_notes: 판단 근거나 메모.",
+  "groups": [
+    {
+      "group_id": "T1070_001_10",
+      "rule_technique_id": "T1070.001",
+      "rule_technique_name": "Clear Windows Event Logs",
+      "confidence": 0.75,
+      "anchor": {
+        "idx": 10,
+        "EventID": 1102,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-29 08:23:18.073000+00:00"
+      },
+      "num_events": 4,
+      "event_id_distribution": {
+        "1102": 1,
+        "4688": 1,
+        "1": 1,
+        "23": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 10,
+          "EventID": 1102,
+          "TimeCreated": "2020-10-29 08:23:18.073000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 34,
+          "EventID": 4688,
+          "TimeCreated": "2020-10-29 08:23:20.533000+00:00",
+          "Image": "nan",
+          "CommandLine": "SharpView.exe  Get-ObjectAcl -SamAccountName \"Domain Admins\"",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 35,
+          "EventID": 1,
+          "TimeCreated": "2020-10-29 08:23:20.534000+00:00",
+          "Image": "C:\\ProgramData\\SharpView.exe",
+          "CommandLine": "SharpView.exe  Get-ObjectAcl -SamAccountName \"Domain Admins\"",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 235,
+          "EventID": 23,
+          "TimeCreated": "2020-10-29 08:23:21.622000+00:00",
+          "Image": "C:\\ProgramData\\SharpView.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1087.002",
+      "gt_technique_name": "Clear Windows Event Logs",
+      "gt_tactic": "Discovery",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: sample-kw+ctx(T1070.001,c=0.75)"
+    },
+    {
+      "group_id": "T1070_004_235",
+      "rule_technique_id": "T1070.004",
+      "rule_technique_name": "File Deletion",
+      "confidence": 0.5,
+      "anchor": {
+        "idx": 235,
+        "EventID": 23,
+        "Image": "C:\\ProgramData\\SharpView.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-29 08:23:21.622000+00:00"
+      },
+      "num_events": 115,
+      "event_id_distribution": {
+        "7": 85,
+        "12": 10,
+        "13": 10,
+        "11": 3,
+        "22": 3,
+        "1": 1,
+        "23": 1,
+        "5": 1,
+        "3": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 33,
+          "EventID": 7,
+          "TimeCreated": "2020-10-29 08:23:20.532000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 35,
+          "EventID": 1,
+          "TimeCreated": "2020-10-29 08:23:20.534000+00:00",
+          "Image": "C:\\ProgramData\\SharpView.exe",
+          "CommandLine": "SharpView.exe  Get-ObjectAcl -SamAccountName \"Domain Admins\"",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 38,
+          "EventID": 7,
+          "TimeCreated": "2020-10-29 08:23:20.535000+00:00",
+          "Image": "C:\\ProgramData\\SharpView.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 39,
+          "EventID": 7,
+          "TimeCreated": "2020-10-29 08:23:20.536000+00:00",
+          "Image": "C:\\ProgramData\\SharpView.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 40,
+          "EventID": 7,
+          "TimeCreated": "2020-10-29 08:23:20.541000+00:00",
+          "Image": "C:\\ProgramData\\SharpView.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 41,
+          "EventID": 7,
+          "TimeCreated": "2020-10-29 08:23:20.542000+00:00",
+          "Image": "C:\\ProgramData\\SharpView.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 42,
+          "EventID": 7,
+          "TimeCreated": "2020-10-29 08:23:20.542000+00:00",
+          "Image": "C:\\ProgramData\\SharpView.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 44,
+          "EventID": 7,
+          "TimeCreated": "2020-10-29 08:23:20.547000+00:00",
+          "Image": "C:\\ProgramData\\SharpView.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 45,
+          "EventID": 7,
+          "TimeCreated": "2020-10-29 08:23:20.547000+00:00",
+          "Image": "C:\\ProgramData\\SharpView.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 46,
+          "EventID": 7,
+          "TimeCreated": "2020-10-29 08:23:20.547000+00:00",
+          "Image": "C:\\ProgramData\\SharpView.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 47,
+          "EventID": 7,
+          "TimeCreated": "2020-10-29 08:23:20.547000+00:00",
+          "Image": "C:\\ProgramData\\SharpView.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 68,
+          "EventID": 7,
+          "TimeCreated": "2020-10-29 08:23:20.557000+00:00",
+          "Image": "C:\\ProgramData\\SharpView.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 72,
+          "EventID": 7,
+          "TimeCreated": "2020-10-29 08:23:20.558000+00:00",
+          "Image": "C:\\ProgramData\\SharpView.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 71,
+          "EventID": 7,
+          "TimeCreated": "2020-10-29 08:23:20.558000+00:00",
+          "Image": "C:\\ProgramData\\SharpView.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 74,
+          "EventID": 7,
+          "TimeCreated": "2020-10-29 08:23:20.559000+00:00",
+          "Image": "C:\\ProgramData\\SharpView.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1087.002",
+      "gt_technique_name": "File Deletion",
+      "gt_tactic": "Discovery",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(sharpview)"
+    }
+  ]
+}

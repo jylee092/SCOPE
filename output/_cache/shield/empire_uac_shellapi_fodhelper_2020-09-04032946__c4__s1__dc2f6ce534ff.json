@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed activity consists solely of svchost.exe processes creating registry keys under HKCR, which is a common and legitimate operation for services interacting with COM objects or file associations, and no specific command lines or other indicators of compromise were provided.\"\n}"}

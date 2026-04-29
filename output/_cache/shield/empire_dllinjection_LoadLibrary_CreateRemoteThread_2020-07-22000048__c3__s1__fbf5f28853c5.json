@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is observed repeatedly loading legitimate performance counter DLLs (perfctrs.dll and perfos.dll), which is normal system behavior and does not match any known attack patterns without additional context like unusual command lines or network activity.\"\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed activities for WmiPrvSE.exe, including registry operations, DLL loads, and pipe connections, are consistent with legitimate system management tasks and do not exhibit specific command-line arguments, child processes, or unusual resource access patterns that match known attack techniques.\"\n}"}

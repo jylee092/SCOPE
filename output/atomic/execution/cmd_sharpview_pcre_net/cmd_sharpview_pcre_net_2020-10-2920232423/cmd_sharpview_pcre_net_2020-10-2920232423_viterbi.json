@@ -1,0 +1,34 @@
+[
+  {
+    "step": 1,
+    "group_idx": 0,
+    "group_id": "T1070_001_10",
+    "technique_id": "T1207",
+    "technique_name": "Rogue Domain Controller",
+    "tactic": "Defense Evasion",
+    "similarity": 0.6335,
+    "log_emission": -4.2855,
+    "transition_from": null,
+    "transition_weight": null,
+    "transition_rule": null,
+    "transition_note": null,
+    "log_transition": null,
+    "skip_distance": 0
+  },
+  {
+    "step": 2,
+    "group_idx": 1,
+    "group_id": "T1070_004_235",
+    "technique_id": "T1207",
+    "technique_name": "Rogue Domain Controller",
+    "tactic": "Defense Evasion",
+    "similarity": 0.6804,
+    "log_emission": -4.2982,
+    "transition_from": "Defense Evasion",
+    "transition_weight": 0.6647,
+    "transition_rule": "R1",
+    "transition_note": "self-loop(Defense Evasion)",
+    "log_transition": -0.4085,
+    "skip_distance": 0
+  }
+]

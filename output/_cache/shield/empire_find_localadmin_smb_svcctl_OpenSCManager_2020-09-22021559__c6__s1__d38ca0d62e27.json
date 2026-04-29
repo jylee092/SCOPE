@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The OfficeClickToRun.exe process is performing expected registry operations related to Office telemetry configuration within its designated registry hive, with no suspicious command-line arguments, child processes, or writes to sensitive persistence keys observed.\"\n}"}

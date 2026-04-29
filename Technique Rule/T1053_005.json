@@ -1,0 +1,65 @@
+{
+  "technique": { "id": "T1053.005", "name": "Scheduled Task" },
+  "detection": { "id": "DET-T1053005" },
+  "analysis": { "id": "AN-T1053005" },
+  "log_sources": {
+    "Anchor Event": {
+      "data_component": { "id": "DC0001", "name": "Scheduled Job Creation" },
+      "description": "Scheduled Task 생성/등록 이벤트.",
+      "conditions": [
+        {
+          "type": "scheduled_task_security",
+          "source": "WinEventLog:Security",
+          "channel": { "event_codes": [4698, 4699, 4700, 4701, 4702] },
+          "description": "Security 채널 Scheduled Task 생성(4698)/삭제(4699)/활성화(4700)/비활성화(4701)/수정(4702)."
+        },
+        {
+          "type": "schtasks_cli",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [1] },
+          "filters": {
+            "Image": { "contains": "schtasks.exe" },
+            "CommandLine": { "contains_any": ["/create", "/change", "/run"] }
+          },
+          "description": "schtasks.exe로 태스크 생성/수정/실행."
+        },
+        {
+          "type": "schtasks_cli_security",
+          "source": "WinEventLog:Security",
+          "channel": { "event_codes": [4688] },
+          "filters": {
+            "NewProcessName": { "contains": "schtasks.exe" },
+            "CommandLine": { "contains_any": ["/create", "/change", "/run"] }
+          },
+          "description": "Sysmon 없는 환경 fallback."
+        },
+        {
+          "type": "task_scheduler_operational",
+          "source": "WinEventLog:TaskScheduler",
+          "channel": { "event_codes": [106, 140, 141, 200, 201] },
+          "description": "Microsoft-Windows-TaskScheduler/Operational 등록(106)/수정(140)/삭제(141)/실행(200)/완료(201)."
+        }
+      ]
+    },
+    "Supporting Events": [
+      { "data_component": { "id": "DC0039", "name": "File Creation" }, "source": "WinEventLog:Sysmon", "channel": { "event_codes": [11] }, "filters": { "TargetFilename": { "contains": "\\Windows\\System32\\Tasks\\" } }, "description": "\\Windows\\System32\\Tasks\\ 하위 XML 파일 생성" },
+      { "data_component": { "id": "DC0063", "name": "Registry Key Modification" }, "source": "WinEventLog:Sysmon", "channel": { "event_codes": [12, 13] }, "filters": { "TargetObject": { "contains": "\\Schedule\\TaskCache\\" } }, "description": "TaskCache 관련 레지스트리 변경" },
+      { "data_component": { "id": "DC0032", "name": "Process Creation" }, "source": "WinEventLog:Sysmon", "channel": { "event_codes": [1] }, "description": "Task 실행 시 생성된 자식 프로세스 (parent = svchost.exe 또는 taskhostw.exe)" }
+    ]
+  },
+  "mutable_elements": {
+    "grouping_logic": {
+      "primary_anchor_eids": [4698, 106],
+      "secondary_anchor": { "event_codes": [1, 4688], "required_filters": ["schtasks.exe"] },
+      "correlation_key": { "primary": ["Hostname", "ProcessGuid"], "secondary": ["norm_logon_id"], "fallback": ["Hostname"] },
+      "time_window": { "before_seconds": 30, "after_seconds": 300, "note": "태스크 등록과 첫 실행 간 지연 포함" }
+    },
+    "feature_extraction_filters": {
+      "suspicious_action_paths": ["\\AppData\\", "\\Temp\\", "\\ProgramData\\", "powershell.exe", "cmd.exe"],
+      "description": "태스크의 실행 대상이 임시 경로거나 인터프리터이면 가중치 증가."
+    },
+    "semantic_templates": {
+      "scheduled_task_create": "프로세스({Image})가 schtasks.exe로 태스크({TaskName})를 생성하여 {ActionPath}를 주기적 실행하도록 등록함."
+    }
+  }
+}

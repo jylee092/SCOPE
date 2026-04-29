@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The dns.exe process is a legitimate Windows service, and its network connections to high-numbered ports are not inherently suspicious without further context such as destination IP addresses or unusual traffic patterns.\"\n}"}

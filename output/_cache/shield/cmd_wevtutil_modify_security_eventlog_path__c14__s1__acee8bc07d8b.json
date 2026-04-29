@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[svchost.exe|{01e2a015-d09]\"\n  ],\n  \"rationale\": \"The svchost.exe process modified the registry key HKLM\\\\System\\\\CurrentControlSet\\\\Services\\\\EventLog\\\\Security\\\\File to point to a non-standard log file (Not-Important-Log.evtx), which is a common technique for log tampering or evasion.\"\n}"}

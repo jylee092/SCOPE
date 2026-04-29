@@ -1,0 +1,58 @@
+{
+  "technique": { "id": "T1083", "name": "File and Directory Discovery" },
+  "detection": { "id": "DET-T1083" },
+  "analysis": { "id": "AN-T1083" },
+  "log_sources": {
+    "Anchor Event": {
+      "data_component": { "id": "DC0055", "name": "File Access" },
+      "description": "파일/디렉토리 탐색 명령.",
+      "conditions": [
+        {
+          "type": "dir_enum",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [1] },
+          "filters": {
+            "CommandLine": {
+              "contains_any": [
+                "dir /s", "dir /b", "dir c:\\", "dir d:\\",
+                "tree ", "forfiles ", "where /r"
+              ]
+            }
+          },
+          "description": "dir / tree / forfiles / where 재귀 탐색."
+        },
+        {
+          "type": "ps_gci",
+          "source": "WinEventLog:PowerShell",
+          "channel": { "event_codes": [4104] },
+          "filters": {
+            "ScriptBlockText": {
+              "contains_any": [
+                "Get-ChildItem", "gci -r", "ls -r",
+                "[System.IO.Directory]::GetFiles",
+                "[System.IO.DirectoryInfo]"
+              ]
+            }
+          },
+          "description": "PowerShell Get-ChildItem / IO API 파일 열거."
+        }
+      ]
+    },
+    "Supporting Events": []
+  },
+  "mutable_elements": {
+    "grouping_logic": {
+      "primary_anchor_eids": [1, 4104],
+      "correlation_key": { "primary": ["Hostname", "ProcessGuid"], "fallback": ["Hostname"] },
+      "time_window": { "before_seconds": 10, "after_seconds": 60 }
+    },
+    "feature_extraction_filters": {
+      "sensitive_paths": ["\\Users\\", "\\Desktop\\", "\\Documents\\", "\\Downloads\\",
+                          "\\AppData\\Roaming\\", "\\ProgramData\\"],
+      "enum_tools": ["dir", "Get-ChildItem", "tree", "forfiles"]
+    },
+    "semantic_templates": {
+      "file_discovery": "계정({User})이 {Image}/{Cmdlet}으로 {TargetPath} 파일/디렉토리를 열거함."
+    }
+  }
+}

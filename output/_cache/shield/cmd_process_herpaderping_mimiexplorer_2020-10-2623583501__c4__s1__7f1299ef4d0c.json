@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The community only shows a legitimate conhost.exe process loading standard Windows system DLLs, with no other suspicious activities such as unusual command lines, child processes, file/registry writes, or network connections.\"\n}"}

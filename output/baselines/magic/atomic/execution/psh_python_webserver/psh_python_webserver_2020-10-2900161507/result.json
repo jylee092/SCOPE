@@ -1,0 +1,53 @@
+{
+  "scenario": "psh_python_webserver_2020-10-2900161507",
+  "tactic_sequence": [
+    "Defense Evasion"
+  ],
+  "technique_sequence": [
+    "T1562.004"
+  ],
+  "per_group_topk": [
+    [
+      "T1562.004"
+    ],
+    [
+      "T1562.004"
+    ]
+  ],
+  "notes": {
+    "n_graph_nodes": 160,
+    "n_graph_edges": 287,
+    "n_proc_nodes": 15,
+    "n_sigma_alerts": 2,
+    "n_alerts": 2,
+    "alerts": [
+      {
+        "ts": "2020-10-29 12:16:09.918000+00:00",
+        "event_index": 35,
+        "event_id": 1,
+        "process_guid": "{39e4a257-4209-5f9a-3d36-000000000700}",
+        "anomaly_score": 1.0,
+        "topk_tids": [
+          "T1562.004"
+        ],
+        "topk_tactics": [
+          "Defense Evasion"
+        ]
+      },
+      {
+        "ts": "2020-10-29 12:16:10.220000+00:00",
+        "event_index": 861,
+        "event_id": 1,
+        "process_guid": "{39e4a257-420a-5f9a-3e36-000000000700}",
+        "anomaly_score": 1.0,
+        "topk_tids": [
+          "T1562.004"
+        ],
+        "topk_tactics": [
+          "Defense Evasion"
+        ]
+      }
+    ],
+    "elapsed_sec": 0.8
+  }
+}

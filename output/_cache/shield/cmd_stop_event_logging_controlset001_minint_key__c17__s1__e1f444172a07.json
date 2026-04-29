@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed registry modifications by SearchIndexer.exe are consistent with its normal operation for configuring file change monitoring for legitimate Windows components like ContentDeliveryManager and RuntimeBroker.exe, and no other suspicious indicators were present.\"\n}"}

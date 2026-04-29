@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe processes are performing registry operations related to Windows Storage Sense and HKEY_CLASSES_ROOT, which are normal activities for system services, and no suspicious command lines or other indicators were observed.\"\n}"}

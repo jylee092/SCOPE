@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed svchost.exe activity, involving writes to 'lastaliveX.dat' files in a standard service profile directory, is consistent with normal Windows service operation and does not match any known attack patterns.\"\n}"}

@@ -1,0 +1,50 @@
+[
+  {
+    "step": 1,
+    "group_idx": 0,
+    "group_id": "T1070_001_0",
+    "technique_id": "T1037.001",
+    "technique_name": "Boot or Logon Initialization Scripts: Logon Script (Windows)",
+    "tactic": "Persistence",
+    "similarity": 0.7115,
+    "log_emission": -4.007,
+    "transition_from": null,
+    "transition_weight": null,
+    "transition_rule": null,
+    "transition_note": null,
+    "log_transition": null,
+    "skip_distance": 0
+  },
+  {
+    "step": 2,
+    "group_idx": 1,
+    "group_id": "T1037_001_75",
+    "technique_id": "T1037.001",
+    "technique_name": "Boot or Logon Initialization Scripts: Logon Script (Windows)",
+    "tactic": "Persistence",
+    "similarity": 0.7154,
+    "log_emission": -3.7828,
+    "transition_from": "Persistence",
+    "transition_weight": 0.6069,
+    "transition_rule": "R1",
+    "transition_note": "동일 Tactic 반복",
+    "log_transition": -0.4993,
+    "skip_distance": 0
+  },
+  {
+    "step": 3,
+    "group_idx": 2,
+    "group_id": "T1112_96",
+    "technique_id": "T1037.001",
+    "technique_name": "Boot or Logon Initialization Scripts: Logon Script (Windows)",
+    "tactic": "Persistence",
+    "similarity": 0.6472,
+    "log_emission": -4.1559,
+    "transition_from": "Persistence",
+    "transition_weight": 0.5927,
+    "transition_rule": "R1",
+    "transition_note": "동일 Tactic 반복",
+    "log_transition": -0.5231,
+    "skip_distance": 0
+  }
+]

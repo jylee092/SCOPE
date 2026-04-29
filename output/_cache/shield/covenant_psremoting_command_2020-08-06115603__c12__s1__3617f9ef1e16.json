@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is performing registry operations related to user profile management, cloud settings, and identity caching, which are normal and expected behaviors for this legitimate Windows process; no suspicious command lines, child processes, or unusual registry keys were observed.\"\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[GruntHTTP.exe|{297bc33e-7d2]\",\n    \"P[System|{49a15388-5c3]\"\n  ],\n  \"rationale\": \"GruntHTTP.exe is highly suspicious due to writing and deleting temporary PowerShell scripts, loading PowerShell-related DLLs, connecting to the"}

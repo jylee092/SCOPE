@@ -1,0 +1,212 @@
+{
+  "technique": {
+    "id": "T1037.001",
+    "name": "Logon Script (Windows)"
+  },
+  "detection": {
+    "id": "DET0072"
+  },
+  "analysis": {
+    "id": "AN0199"
+  },
+  "log_sources": {
+    "Anchor Event": {
+      "data_component": {
+        "id": "DC0029",
+        "name": "Script Registration or Execution"
+      },
+      "description": "로그온 스크립트 등록 또는 실행 이벤트. 두 가지 형태 중 하나라도 존재하면 Anchor로 인정.",
+      "conditions": [
+        {
+          "type": "execution",
+          "source": "WinEventLog:System",
+          "channel": {
+            "event_codes": [
+              1502,
+              1503
+            ]
+          },
+          "description": "스크립트 실행 완료 이벤트 (실행 시점 포착)"
+        },
+        {
+          "type": "registration_security",
+          "source": "WinEventLog:Security",
+          "channel": {
+            "event_codes": [
+              4688
+            ]
+          },
+          "filters": {
+            "NewProcessName": {
+              "contains": [
+                "reg.exe"
+              ]
+            },
+            "CommandLine": {
+              "contains": [
+                "UserInitMprLogonScript"
+              ]
+            }
+          },
+          "description": "reg.exe로 UserInitMprLogonScript 환경변수에 스크립트 경로 등록 (Security 채널)"
+        },
+        {
+          "type": "registration_sysmon",
+          "source": "WinEventLog:Sysmon",
+          "channel": {
+            "event_codes": [
+              1
+            ]
+          },
+          "filters": {
+            "Image": {
+              "contains": [
+                "reg.exe"
+              ]
+            },
+            "CommandLine": {
+              "contains": [
+                "UserInitMprLogonScript"
+              ]
+            }
+          },
+          "description": "reg.exe로 UserInitMprLogonScript 등록 (Sysmon 채널, Security 채널 없을 때 대체)"
+        }
+      ]
+    },
+    "Supporting Events": [
+      {
+        "data_component": {
+          "id": "DC0063",
+          "name": "Registry Key Modification"
+        },
+        "source": "WinEventLog:Sysmon",
+        "channel": {
+          "event_codes": [
+            13
+          ]
+        },
+        "filters": {
+          "TargetObject": {
+            "contains": [
+              "UserInitMprLogonScript"
+            ]
+          }
+        },
+        "description": "HKCU\\Environment\\UserInitMprLogonScript 레지스트리 키 실제 설정 확인 (등록 결과 검증)"
+      },
+      {
+        "data_component": {
+          "id": "DC0011",
+          "name": "File Creation"
+        },
+        "source": "WinEventLog:Sysmon",
+        "channel": {
+          "event_codes": [
+            11
+          ]
+        },
+        "filters": {
+          "TargetFilename": {
+            "contains": [
+              ".bat",
+              ".ps1",
+              ".vbs"
+            ]
+          },
+          "Image": {
+            "contains": [
+              "cmd.exe"
+            ]
+          }
+        },
+        "description": "Temp 경로에 실행될 스크립트 파일 드롭 (art.bat 등)"
+      },
+      {
+        "data_component": {
+          "id": "DC0032",
+          "name": "Process Creation"
+        },
+        "source": "WinEventLog:Security",
+        "channel": {
+          "event_codes": [
+            4688
+          ]
+        },
+        "description": "Anchor가 Sysmon EID 1일 때 Security 채널 프로세스 생성 이벤트로 교차 확인"
+      },
+      {
+        "data_component": {
+          "id": "DC0067",
+          "name": "Logon Session Creation"
+        },
+        "source": "WinEventLog:Security",
+        "channel": {
+          "event_codes": [
+            4624,
+            4648
+          ]
+        },
+        "description": "로그온 세션 생성 (Anchor가 실행 EID 1502/1503일 때 연관 세션 확인용)"
+      }
+    ]
+  },
+  "mutable_elements": {
+    "grouping_logic": {
+      "primary_anchor_eids": [
+        1502,
+        1503
+      ],
+      "secondary_anchor": {
+        "event_codes": [
+          4688,
+          1
+        ],
+        "required_filters": [
+          "UserInitMprLogonScript"
+        ],
+        "note": "EID만으로 Anchor 판별 불가. CommandLine 또는 TargetObject 필드값 필터 필수"
+      },
+      "correlation_key": {
+        "primary": [
+          "Hostname",
+          "norm_logon_id"
+        ],
+        "secondary": [
+          "ProcessGuid"
+        ],
+        "fallback": [
+          "Hostname"
+        ],
+        "note": "Anchor가 4688이면 SubjectLogonId, Sysmon 1이면 LogonId 사용 (norm_logon_id로 통일)"
+      },
+      "time_window": {
+        "before_seconds": 30,
+        "after_seconds": 60,
+        "note": "실제 데이터: art.bat 생성(EID 11) → reg.exe 실행(EID 4688) 간격 약 24초. 여유 포함."
+      }
+    },
+    "feature_extraction_filters": {
+      "script_path_keywords": [
+        "AppData\\Local\\Temp",
+        "NETLOGON",
+        "SYSVOL",
+        ".bat",
+        ".ps1"
+      ],
+      "registry_keys": [
+        "HKCU\\Environment\\UserInitMprLogonScript"
+      ],
+      "user_context": [
+        "Administrator",
+        "Domain Admins",
+        "Remote Desktop Users"
+      ],
+      "description": "그룹핑된 로그 중 스크립트 경로, 레지스트리 키, 계정 권한 포함 시 가중치 부여"
+    },
+    "semantic_templates": {
+      "registration_match": "계정({User})이 cmd.exe를 통해 reg.exe로 UserInitMprLogonScript에 스크립트({Details})를 등록함. 다음 로그인 시 자동 실행 예정.",
+      "execution_match": "로그온 시 userinit.exe가 등록된 스크립트({script_path})를 실행함 (로그온 스크립트 지속성 동작 확인)"
+    }
+  }
+}

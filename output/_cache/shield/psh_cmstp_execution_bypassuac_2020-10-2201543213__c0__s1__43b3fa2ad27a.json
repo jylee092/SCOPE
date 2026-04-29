@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed activity consists solely of Explorer.EXE writing to its own standard registry keys related to user activity and session management, which is normal behavior and does not match any known attack patterns.\"\n}"}

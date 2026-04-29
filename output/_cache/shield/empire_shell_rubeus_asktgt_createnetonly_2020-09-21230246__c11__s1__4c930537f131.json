@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed registry modifications by OfficeClickToRun.exe are confined to its own telemetry keys under HKU\\\\.DEFAULT and are consistent with normal operation for a Microsoft Office component; no suspicious command lines, file writes, or other attack patterns were identified.\"\n}"}

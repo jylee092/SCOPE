@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"The process, while performing a normal function of writing prefetch files, created a prefetch file for RUBEUS.EXE. Rubeus is a well-known credential access tool, and its execution on the system is highly suspicious.\",\n  \"indicators\": [\n    \"RUBEUS.EXE\",\n    \"prefetch file\"\n  ]\n}"}

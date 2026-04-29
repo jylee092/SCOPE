@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is performing typical Windows diagnostic and telemetry activities, including registry modifications under DiagTrack and IdentityCRL, loading a legitimate system DLL, and connecting to a Microsoft telemetry endpoint on port 443, with no other suspicious indicators.\"\n}"}

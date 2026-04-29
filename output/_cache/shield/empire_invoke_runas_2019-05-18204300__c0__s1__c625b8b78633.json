@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[powershell.exe|{03ba39f5-50b]\"\n  ],\n  \"rationale\": \"The powershell.exe process is repeatedly modifying the Internet Settings registry key and making frequent outbound connections to an external IP address on port 443, which is a common pattern for command and control (C2) communication and proxy manipulation.\"\n}"}

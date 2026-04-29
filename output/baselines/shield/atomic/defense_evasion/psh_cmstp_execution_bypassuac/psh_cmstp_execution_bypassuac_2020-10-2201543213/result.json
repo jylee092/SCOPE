@@ -1,0 +1,15 @@
+{
+  "scenario": "psh_cmstp_execution_bypassuac_2020-10-2201543213",
+  "tactic_sequence": [],
+  "technique_sequence": [],
+  "per_group_topk": [],
+  "notes": {
+    "n_total_events": 1166,
+    "n_filtered_events": 487,
+    "n_lof_anomalous": 48,
+    "n_communities": 6,
+    "n_alerts": 0,
+    "alerts": [],
+    "elapsed_sec": 67.4
+  }
+}

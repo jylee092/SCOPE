@@ -1,0 +1,1 @@
+{"text": "{\n  \"confidence_score\": 0.95,\n  \"attack_summary\": \"An attacker executed Rubeus.exe, a known Kerberos attack tool, to request a Ticket Granting Ticket (TGT) using a stolen NTLM hash. This activity indicates credential theft and an attempt to establish a 'netonly' logon session by creating a new cmd.exe process for potential lateral movement or"}

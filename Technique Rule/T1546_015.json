@@ -1,0 +1,50 @@
+{
+  "technique": { "id": "T1546.015", "name": "Component Object Model Hijacking" },
+  "detection": { "id": "DET0481" },
+  "analysis": { "id": "AN1323" },
+  "log_sources": {
+    "Anchor Event": {
+      "data_component": { "id": "DC0063", "name": "Windows Registry Key Modification" },
+      "description": "COM 객체 하이재킹을 위한 레지스트리 수정 및 실행 행위",
+      "conditions": [
+        {
+          "type": "security_registry_audit",
+          "source": "WinEvent_Log:Security",
+          "channel": { "event_codes": [4657] },
+          "filters": {
+            "ObjectName": {
+              "contains_any": ["\\CLSID\\{", "InprocServer32", "LocalServer32", "TreatAs"]
+            }
+          },
+          "description": "CLSID/InprocServer32/LocalServer32 경로 레지스트리 수정만 anchor."
+        },
+        {
+          "type": "sysmon_registry",
+          "source": "WinEvent_Log:Sysmon",
+          "channel": { "event_codes": [13] },
+          "filters": {
+            "TargetObject": {
+              "contains_any": ["\\CLSID\\{", "InprocServer32", "LocalServer32", "TreatAs"]
+            }
+          },
+          "description": "Sysmon registry modify on COM CLSID path."
+        }
+      ]
+    },
+    "Supporting Events": [
+      { "data_component": { "id": "DC0016", "name": "Module Load" }, "source": "WinEvent_Log:Sysmon", "channel": { "event_codes": [7] }, "description": "하이재킹된 COM 라이브러리(InprocServer32) 로드 행위" }
+    ]
+  },
+  "mutable_elements": {
+    "grouping_logic": {
+      "primary_anchor_eids": [4657, 1],
+      "correlation_key": { "primary": ["Hostname", "ProcessGuid"], "fallback": ["Hostname"] },
+      "time_window": { "window_seconds": 50 }
+    },
+    "feature_extraction_filters": {
+      "registry_path_scope": ["HKLM\\Software\\Classes\\CLSID\\{GUID}\\InprocServer32", "HKCU\\Software\\Classes\\CLSID\\{GUID}\\InprocServer32", "HKLM\\Software\\Classes\\CLSID\\{GUID}\\LocalServer32"],
+      "binary_path_anomaly_threshold": { "rarity_score_threshold": 0.8 },
+      "user_context_filter": ["S-1-5-18", "DOMAIN\\Administrator"]
+    }
+  }
+}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed activities for Explorer.EXE, including registry writes to a notification key, pipe connection to the workstation service, and loading of network-related DLLs, are consistent with normal system operations and do not match common attack patterns.\"\n}"}

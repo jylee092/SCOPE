@@ -1,0 +1,12 @@
+{
+  "scenario": "psh_powershell_httplistener_2020-11-0204130683",
+  "tactic_sequence": [],
+  "technique_sequence": [],
+  "per_group_topk": [],
+  "notes": {
+    "n_alerts": 0,
+    "n_sigma_alerts": 0,
+    "n_graph_nodes": 25,
+    "alerts": []
+  }
+}

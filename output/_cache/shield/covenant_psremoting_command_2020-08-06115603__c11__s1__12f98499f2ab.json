@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The System process connecting to standard WinRM and SMB ports and writing to an ETW log file in a legitimate log directory are all normal operating system activities without any suspicious command lines or other indicators.\"\n}"}

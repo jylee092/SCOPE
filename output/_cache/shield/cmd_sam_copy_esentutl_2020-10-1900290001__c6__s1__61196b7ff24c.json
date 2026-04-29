@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed activities, including svchost.exe loading fveapi.dll and writing to VSS diagnostic registry keys, are consistent with normal operation of the Volume Shadow Copy Service and do not indicate any known attack patterns.\"\n}"}

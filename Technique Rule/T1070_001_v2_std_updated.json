@@ -1,0 +1,233 @@
+{
+  "technique": {
+    "id": "T1070.001",
+    "name": "Clear Windows Event Logs"
+  },
+  "detection": {
+    "id": "DET0532"
+  },
+  "analysis": {
+    "id": "AN1472"
+  },
+  "_data_notes": {
+    "dataset": "psh_lsass_memory_dump_comsvcs_2020-10-18",
+    "observed_eid_1102": "07:49:39.776 — PowerShell 세션 활성 상태에서 로그 삭제 선행. 이후 26.1초 만에 rundll32로 LSASS 덤프 실행.",
+    "co_occurrence_context": "이 데이터셋에서 EID 104(System 로그 삭제)는 관측되지 않음. 1102 단독 발생. 함께 발생하면 신뢰도 High이나, 단독도 충분히 유의미.",
+    "attacker_sequence": "EID 1102(로그 삭제) → EID 1(rundll32 생성, ParentImage=powershell.exe) → EID 10(LSASS 접근) → EID 11(.dmp 생성)",
+    "missing_in_original": [
+      "EID 4688 (Security 프로세스 생성) — 실제 데이터에서 rundll32 4688 확인됨. Sysmon EID 1 없는 환경 fallback으로 추가 필요.",
+      "Security EID 4656/4663 (Object Access) — LSASS 핸들 요청이 Security 채널에서도 관측됨. T1003.001 연계 강화에 유용.",
+      "ParentImage 필터 — 데이터에서 ParentImage=powershell.exe 확인. 로그 삭제가 PowerShell 세션 중 발생하는 패턴 포착용.",
+      "PowerShell과의 캠페인 연계 — EID 1102 후 powershell.exe(T1059.001) → rundll32(T1218.011) → LSASS(T1003.001) 체인. campaign_hint 필드로 표현."
+    ]
+  },
+  "log_sources": {
+    "Anchor Event": {
+      "data_component": {
+        "id": "DC0038",
+        "name": "Application Log Content"
+      },
+      "description": "감사 로그(Security) 삭제 이벤트. SubjectLogonId 구조화 필드 없음 - Hostname만으로 연결.",
+      "conditions": [
+        {
+          "type": "default",
+          "source": "WinEventLog:Security",
+          "channel": {
+            "event_codes": [
+              1102
+            ]
+          },
+          "description": "감사 로그(Security) 삭제 이벤트. SubjectLogonId 구조화 필드 없음 - Hostname만으로 연결."
+        }
+      ]
+    },
+    "Supporting Events": [
+      {
+        "data_component": {
+          "id": "DC0038_1",
+          "name": "System Log Content"
+        },
+        "source": "WinEventLog:System",
+        "channel": {
+          "event_codes": [
+            104
+          ]
+        },
+        "description": "시스템 로그 삭제 이벤트. 1102와 거의 동시에 발생 (실제 데이터: 0.047초 차이). 함께 발생 시 신뢰도 상승. ※ 이 데이터셋에서는 관측되지 않았으나 co-occurrence 발생 시 High 신뢰도."
+      },
+      {
+        "data_component": {
+          "id": "DC0032",
+          "name": "Process Creation (Sysmon)"
+        },
+        "source": "WinEventLog:Sysmon",
+        "channel": {
+          "event_codes": [
+            1
+          ]
+        },
+        "filters": {
+          "CommandLine": {
+            "contains": [
+              "wevtutil",
+              "Clear-EventLog",
+              "Remove-EventLog",
+              "reg.exe"
+            ]
+          },
+          "ParentImage": {
+            "contains": [
+              "powershell.exe",
+              "cmd.exe"
+            ],
+            "relevance": "Medium",
+            "note": "실제 데이터 확인: EID 1102 발생 시점에 powershell.exe 세션 활성. 로그 삭제가 PowerShell 스크립트 내에서 수행되는 패턴 포착."
+          }
+        },
+        "description": "로그 삭제에 사용된 프로세스 (wevtutil 등). CommandLine 필터로 정상 프로세스 생성과 구분. ParentImage 추가: 공격자가 PowerShell 또는 cmd에서 wevtutil을 호출하는 패턴 보강."
+      },
+      {
+        "data_component": {
+          "id": "DC0032_security",
+          "name": "Process Creation (Security)",
+          "_added": "데이터 기반 추가 — Sysmon 미설치 환경 fallback"
+        },
+        "source": "WinEventLog:Security",
+        "channel": {
+          "event_codes": [
+            4688
+          ]
+        },
+        "filters": {
+          "NewProcessName": {
+            "contains": [
+              "wevtutil",
+              "reg.exe",
+              "powershell.exe"
+            ]
+          }
+        },
+        "description": "Security 채널 프로세스 생성 — Sysmon EID 1 없는 환경의 fallback. 실제 데이터에서 EID 4688(rundll32 생성)이 Security 채널에서 관측됨. wevtutil/reg.exe 생성 포착에 활용."
+      },
+      {
+        "data_component": {
+          "id": "DC0040",
+          "name": "File Deletion"
+        },
+        "source": "WinEventLog:Sysmon",
+        "channel": {
+          "event_codes": [
+            23
+          ]
+        },
+        "filters": {
+          "TargetFilename": {
+            "contains": [
+              ".evtx"
+            ]
+          }
+        },
+        "description": "이벤트 로그 파일(.evtx) 직접 삭제"
+      }
+    ]
+  },
+  "mutable_elements": {
+    "grouping_logic": {
+      "correlation_key": {
+        "primary": [
+          "Hostname"
+        ],
+        "secondary": [
+          "ProcessGuid"
+        ],
+        "fallback": [
+          "Hostname"
+        ],
+        "note": "1102는 LogonId 구조화 필드 없음. Hostname + time_window가 유일한 1차 그룹핑 수단. Supporting EID 1의 LogonId로 2차 보강."
+      },
+      "time_window": {
+        "before_seconds": 60,
+        "after_seconds": 60,
+        "note": "실제 데이터: 1102 발생 후 reg.exe(EID 4688/1) 실행까지 26.7초. after_seconds 60으로 충분히 포착 가능. before 300초는 삭제 전 준비 행위(cmd.exe 실행 등) 포착용."
+      },
+      "primary_anchor_eids": [
+        1102
+      ]
+    },
+    "feature_extraction_filters": {
+      "process_patterns": [
+        {
+          "field": "CommandLine",
+          "patterns": [
+            "wevtutil",
+            "reg.exe",
+            "Clear-EventLog",
+            "Remove-EventLog"
+          ],
+          "relevance": "High"
+        },
+        {
+          "field": "ParentImage",
+          "patterns": [
+            "cmd.exe",
+            "powershell.exe"
+          ],
+          "relevance": "Medium",
+          "_added": "데이터 기반 추가 — 이 시나리오에서 EID 1102 전후로 powershell.exe 세션 활성 확인"
+        }
+      ],
+      "file_patterns": {
+        "field": "TargetFilename",
+        "patterns": [
+          ".evtx",
+          ".bat",
+          "AppData\\Local\\Temp"
+        ],
+        "description": "삭제된 로그 파일이나 실행된 스크립트 경로 확인"
+      },
+      "co_occurrence": {
+        "description": "EID 1102와 EID 104가 동시 발생 시 의도적 로그 삭제로 판단 (신뢰도 High)",
+        "event_pair": [
+          1102,
+          104
+        ],
+        "max_gap_seconds": 5
+      },
+      "identity_context": {
+        "critical_users": [
+          "wardog",
+          "Administrator",
+          "SYSTEM"
+        ],
+        "field": "SubjectUserName",
+        "note": "SubjectUserName은 1102 Message 파싱으로 추출 가능 ('Account Name:' 패턴). SubjectLogonId는 구조화 필드 없음."
+      }
+    },
+    "campaign_hint": {
+      "_added": "데이터 기반 추가 — 이 시나리오에서 EID 1102는 독립 기법이 아닌 다단계 공격 선행 단계",
+      "description": "EID 1102가 탐지된 경우, 동일 Hostname에서 이후 60초 내 발생한 이벤트를 함께 검토하여 캠페인 연계 여부 확인",
+      "follow_on_ttps": [
+        {
+          "technique": "T1059.001",
+          "indicator": "powershell.exe 프로세스 활성 (EID 1 또는 EID 7, ParentProcessGuid 추적)",
+          "observed_gap_seconds": 26
+        },
+        {
+          "technique": "T1218.011",
+          "indicator": "rundll32.exe 실행 (EID 1, ParentImage=powershell.exe)",
+          "observed_gap_seconds": 26
+        },
+        {
+          "technique": "T1003.001",
+          "indicator": "lsass.exe 접근 (EID 10, GrantedAccess=0x1fffff 또는 0x1410) + .dmp 파일 생성 (EID 11)",
+          "observed_gap_seconds": 26
+        }
+      ]
+    },
+    "semantic_templates": {
+      "description": "Auto-generated template based on analysis",
+      "general_match": "Detection logic matched for Clear Windows Event Logs",
+      "campaign_match": "계정({SubjectUserName})이 보안 감사 로그를 삭제(EID 1102)한 후 {gap_seconds}초 내에 PowerShell → rundll32 → LSASS 덤프 체인 행위가 동일 호스트({Hostname})에서 관측됨. 자격증명 탈취 전 증거 인멸 시도로 판단."
+    }
+  }
+}

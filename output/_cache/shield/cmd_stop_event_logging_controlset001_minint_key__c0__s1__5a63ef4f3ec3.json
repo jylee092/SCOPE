@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is performing registry operations consistent with the creation and modification of legitimate Windows scheduled tasks related to UpdateOrchestrator and SoftwareProtectionPlatform, with no suspicious command-line arguments or other indicators of compromise observed.\"\n}"}

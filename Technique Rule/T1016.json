@@ -1,0 +1,55 @@
+{
+  "technique": { "id": "T1016", "name": "System Network Configuration Discovery" },
+  "detection": { "id": "DET-T1016" },
+  "analysis": { "id": "AN-T1016" },
+  "log_sources": {
+    "Anchor Event": {
+      "data_component": { "id": "DC0064", "name": "Command Execution" },
+      "description": "네트워크 설정 조회 커맨드.",
+      "conditions": [
+        {
+          "type": "net_config_cli",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [1] },
+          "filters": {
+            "Image": { "contains_any": ["ipconfig.exe", "route.exe", "arp.exe", "netstat.exe"] }
+          },
+          "description": "ipconfig / route / arp / netstat 실행."
+        },
+        {
+          "type": "netsh_show",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [1] },
+          "filters": {
+            "Image": { "contains": "netsh.exe" },
+            "CommandLine": { "contains_any": ["interface show", "wlan show", "advfirewall show"] }
+          },
+          "description": "netsh show 쿼리."
+        },
+        {
+          "type": "get_netadapter_psh",
+          "source": "WinEventLog:PowerShell",
+          "channel": { "event_codes": [4104] },
+          "filters": {
+            "ScriptBlockText": { "contains_any": ["Get-NetIPConfiguration", "Get-NetAdapter", "Get-DnsClientServerAddress"] }
+          },
+          "description": "PowerShell 네트워크 설정 cmdlet."
+        }
+      ]
+    },
+    "Supporting Events": []
+  },
+  "mutable_elements": {
+    "grouping_logic": {
+      "primary_anchor_eids": [1, 4104],
+      "correlation_key": { "primary": ["Hostname", "ProcessGuid"], "fallback": ["Hostname"] },
+      "time_window": { "before_seconds": 10, "after_seconds": 30 }
+    },
+    "feature_extraction_filters": {
+      "net_config_tools": ["ipconfig.exe", "route.exe", "arp.exe", "netstat.exe", "netsh.exe"]
+    },
+    "semantic_templates": {
+      "net_config_discovery": "계정({User})이 {Image}로 네트워크 설정을 조회함."
+    }
+  }
+}

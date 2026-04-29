@@ -1,0 +1,64 @@
+{
+  "canonical_thresholds": {
+    "mu": 0.02,
+    "tau2": 0.3
+  },
+  "scope": {
+    "method": "SCOPE",
+    "ttp_total_groups": 779,
+    "ttp_novel_groups": 281,
+    "ttp_novel_frac": 0.3607188703465982,
+    "chain_total_scenarios": 35,
+    "chain_novel_scenarios": 32,
+    "chain_novel_frac": 0.9142857142857143,
+    "chain_n_mean": 0.6786,
+    "mu": 0.02,
+    "tau2": 0.3
+  },
+  "baselines": [
+    {
+      "method": "Sigma",
+      "ttp_total_alerts": 2155,
+      "ttp_novel_alerts": 0,
+      "ttp_novel_alert_rate": 0.0,
+      "ttp_novel_frac": 0.0,
+      "common_denominator": 779,
+      "chain_total_scenarios": 35,
+      "chain_novel_scenarios": 26,
+      "chain_novel_frac": 0.7428571428571429
+    },
+    {
+      "method": "MAGIC",
+      "ttp_total_alerts": 2024,
+      "ttp_novel_alerts": 0,
+      "ttp_novel_alert_rate": 0.0,
+      "ttp_novel_frac": 0.0,
+      "common_denominator": 779,
+      "chain_total_scenarios": 35,
+      "chain_novel_scenarios": 24,
+      "chain_novel_frac": 0.6857142857142857
+    },
+    {
+      "method": "SHIELD",
+      "ttp_total_alerts": 17,
+      "ttp_novel_alerts": 9,
+      "ttp_novel_alert_rate": 0.5294117647058824,
+      "ttp_novel_frac": 0.011553273427471117,
+      "common_denominator": 779,
+      "chain_total_scenarios": 35,
+      "chain_novel_scenarios": 0,
+      "chain_novel_frac": 0.0
+    },
+    {
+      "method": "DeepAG",
+      "ttp_total_alerts": 2155,
+      "ttp_novel_alerts": 3,
+      "ttp_novel_alert_rate": 0.0013921113689095127,
+      "ttp_novel_frac": 0.0038510911424903724,
+      "common_denominator": 779,
+      "chain_total_scenarios": 35,
+      "chain_novel_scenarios": 26,
+      "chain_novel_frac": 0.7428571428571429
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed registry modifications by svchost.exe are related to the Windows Task Scheduler's cache for the 'SoftwareProtectionPlatform\\\\SvcRestartTask', which is a legitimate system task, and do not indicate any malicious activity or known attack patterns.\"\n}"}

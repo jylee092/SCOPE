@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is a legitimate Windows component, and while it created a new registry key (VFUProvider), this activity does not directly match a known attack pattern or common persistence mechanism without additional context or suspicious command-line arguments.\"\n}"}

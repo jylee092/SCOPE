@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"PowerShell is used to create a scheduled task for persistence, modify a registry key with obfuscated data, and initiate a system reboot, which are all highly unusual for standard PowerShell usage.\",\n  \"indicators\": [\n    \"reg_set HKLM\\\\SOFTWARE\\\\Microsoft\\\\Network\\\\debug with obfuscated data\",\n    \""}

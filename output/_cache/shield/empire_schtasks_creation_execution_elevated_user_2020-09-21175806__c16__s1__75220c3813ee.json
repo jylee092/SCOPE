@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed registry operations by svchost.exe are consistent with normal system activity related to Windows Error Reporting, Host Activity Manager, AppModel, and Network Service Triggers, and no suspicious command lines or other indicators were present.\"\n}"}

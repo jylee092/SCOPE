@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The process 'SearchIndexer.exe' is a legitimate Windows component, and its observed registry modifications are confined to its own configuration keys, showing no signs of malicious activity or deviation from normal behavior.\"\n}"}

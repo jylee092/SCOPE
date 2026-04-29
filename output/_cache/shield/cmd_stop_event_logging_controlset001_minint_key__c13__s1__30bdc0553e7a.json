@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed processes (Explorer.EXE, svchost.exe, smartscreen.exe) exhibit normal behavior, including file and registry operations, DLL loads, and network connections, consistent with legitimate Windows operating system functions, and no suspicious command lines were provided.\"\n}"}

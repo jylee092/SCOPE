@@ -1,0 +1,389 @@
+{
+  "scenario": "cmd_dumping_ntds_dit_file_ntdsutil",
+  "tactic_sequence": [
+    "Privilege Escalation",
+    "Defense Evasion",
+    "Impact",
+    "Privilege Escalation",
+    "Impact",
+    "Credential Access",
+    "Defense Evasion",
+    "Credential Access",
+    "Privilege Escalation",
+    "Impact",
+    "Privilege Escalation",
+    "Impact"
+  ],
+  "technique_sequence": [
+    "T1133",
+    "T1202",
+    "T1531",
+    "T1133",
+    "T1531",
+    "T1003.003",
+    "T1490",
+    "T1003.003",
+    "T1133",
+    "T1531",
+    "T1133",
+    "T1531"
+  ],
+  "per_group_topk": [
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1202"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1003.003"
+    ],
+    [
+      "T1003.003"
+    ],
+    [
+      "T1490"
+    ],
+    [
+      "T1490"
+    ],
+    [
+      "T1490"
+    ],
+    [
+      "T1003.003"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ]
+  ],
+  "notes": {
+    "n_events_evaluated": 9840,
+    "n_alerts": 16,
+    "alerts": [
+      {
+        "ts": "2023-07-19 09:02:19.922000+00:00",
+        "event_index": 157,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2023-07-19 09:02:24.155000+00:00",
+        "event_index": 710,
+        "event_id": 1,
+        "topk_tids": [
+          "T1202"
+        ],
+        "topk_tactics": [
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "3037d961-21e9-4732-b27a-637bcc7bf539",
+          "title": "Suspicious High IntegrityLevel Conhost Legacy Option",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2023-07-19 09:02:30.697000+00:00",
+        "event_index": 1396,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2023-07-19 09:03:07.123000+00:00",
+        "event_index": 3398,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2023-07-19 09:03:07.126000+00:00",
+        "event_index": 3399,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2023-07-19 09:03:37.257000+00:00",
+        "event_index": 5024,
+        "event_id": 4688,
+        "topk_tids": [
+          "T1003.003"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ],
+        "top_rule": {
+          "rule_id": "8bc64091-6875-4881-aaf9-7bd25b5dda08",
+          "title": "Suspicious Process Patterns NTDS.DIT Exfil",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2023-07-19 09:03:37.281000+00:00",
+        "event_index": 5025,
+        "event_id": 1,
+        "topk_tids": [
+          "T1003.003"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ],
+        "top_rule": {
+          "rule_id": "8bc64091-6875-4881-aaf9-7bd25b5dda08",
+          "title": "Suspicious Process Patterns NTDS.DIT Exfil",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2023-07-19 09:03:38.092000+00:00",
+        "event_index": 5169,
+        "event_id": 7,
+        "topk_tids": [
+          "T1490"
+        ],
+        "topk_tactics": [
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "333cdbe8-27bb-4246-bf82-b41a0dca4b70",
+          "title": "Suspicious Volume Shadow Copy VSS_PS.dll Load",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2023-07-19 09:03:38.261000+00:00",
+        "event_index": 5241,
+        "event_id": 7,
+        "topk_tids": [
+          "T1490"
+        ],
+        "topk_tactics": [
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "333cdbe8-27bb-4246-bf82-b41a0dca4b70",
+          "title": "Suspicious Volume Shadow Copy VSS_PS.dll Load",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2023-07-19 09:03:38.372000+00:00",
+        "event_index": 5332,
+        "event_id": 7,
+        "topk_tids": [
+          "T1490"
+        ],
+        "topk_tactics": [
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "333cdbe8-27bb-4246-bf82-b41a0dca4b70",
+          "title": "Suspicious Volume Shadow Copy VSS_PS.dll Load",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2023-07-19 09:03:49.620000+00:00",
+        "event_index": 7708,
+        "event_id": 11,
+        "topk_tids": [
+          "T1003.003"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ],
+        "top_rule": {
+          "rule_id": "0b8baa3f-575c-46ee-8715-d6f28cc7d33c",
+          "title": "NTDS.DIT Created",
+          "level": "low",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2023-07-19 09:04:51.171000+00:00",
+        "event_index": 8602,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2023-07-19 09:05:01.850000+00:00",
+        "event_index": 8924,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2023-07-19 09:05:33.913000+00:00",
+        "event_index": 8987,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2023-07-19 09:05:51.200000+00:00",
+        "event_index": 10009,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2023-07-19 09:05:51.204000+00:00",
+        "event_index": 10011,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      }
+    ]
+  }
+}

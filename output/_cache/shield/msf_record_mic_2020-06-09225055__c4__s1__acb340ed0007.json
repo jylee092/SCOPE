@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is loading legitimate performance counter DLLs (perfos.dll and perfctrs.dll) without any other suspicious indicators like unusual command lines, child processes, file writes, or network connections.\"\n}"}

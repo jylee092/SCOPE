@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities, including file writes/deletes to autosave directories and DLL loads, are consistent with the normal operation of PowerShell_ISE.exe and do not indicate any known attack patterns or suspicious behavior.\"\n}"}

@@ -1,0 +1,31 @@
+{
+  "technique": { "id": "T1059", "name": "Command and Scripting Interpreter" },
+  "detection": { "id": "DET0516" },
+  "analysis": { "id": "AN1428" },
+  "log_sources": {
+    "Anchor Event": {
+      "data_component": { "id": "DC0032", "name": "Process Creation" },
+      "description": "스크립트 해석기 실행 및 명령 줄 패턴 분석",
+      "conditions": [
+        {
+          "type": "interpreter_execution",
+          "source": "WinEvent_Log:Sysmon",
+          "channel": { "event_codes": [1] },
+          "filters": { "Image": { "contains_any": ["powershell.exe", "cmd.exe", "wscript.exe", "mshta.exe"] } },
+          "description": "알려진 스크립트 실행 엔진의 동작 탐지"
+        }
+      ]
+    }
+  },
+  "mutable_elements": {
+    "grouping_logic": {
+      "primary_anchor_eids": [1],
+      "correlation_key": { "primary": ["Hostname", "ProcessGuid"], "fallback": ["Hostname"] },
+      "time_window": { "allowed_hours": "09:00-18:00", "note": "업무 시간 외 비정상적 스크립트 실행 감시" }
+    },
+    "feature_extraction_filters": {
+      "command_line_pattern": ["-enc", "-encodedcommand", "FromBase64String", "IEX(", "Invoke-Expression", "cmd /c powershell"],
+      "parent_process_name": ["explorer.exe", "cmd.exe", "powershell.exe", "wscript.exe", "mshta.exe"]
+    }
+  }
+}

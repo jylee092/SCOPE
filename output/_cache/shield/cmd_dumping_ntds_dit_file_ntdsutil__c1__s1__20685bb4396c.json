@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is observed loading standard Windows performance-related DLLs (perfnet.dll, perfos.dll, pfclient.dll) without any other indicators of compromise such as unusual command-line arguments, child processes, file/registry modifications, or network connections.\"\n}"}

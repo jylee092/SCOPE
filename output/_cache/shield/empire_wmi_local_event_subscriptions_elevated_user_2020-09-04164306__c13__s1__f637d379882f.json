@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed processes (services.exe and svchost.exe) exhibit normal behavior related to Windows service management and Group Policy processing, with no command-line arguments, file/registry operations, or DLL loads matching known attack patterns.\"\n}"}

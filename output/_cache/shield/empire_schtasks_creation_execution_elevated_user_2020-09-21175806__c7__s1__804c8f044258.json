@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities by MsMpEng.exe, including file writes to Windows Defender's scan history and registry modifications to Windows Defender and AMSI keys, are consistent with the legitimate operation of the Microsoft Antimalware Service and do not indicate any suspicious behavior or attack patterns.\"\n}"}

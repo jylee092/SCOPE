@@ -1,0 +1,674 @@
+{
+  "scenario": "cmd_sam_copy_esentutl_2020-10-1900290001",
+  "tactic_sequence": [
+    "Credential Access",
+    "Defense Evasion",
+    "Credential Access"
+  ],
+  "technique_sequence": [
+    "T1003.002",
+    "T1490",
+    "T1003.002"
+  ],
+  "per_group_topk": [
+    [
+      "T1003.002",
+      "T1003.003"
+    ],
+    [
+      "T1490"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002"
+    ],
+    [
+      "T1003.002",
+      "T1218",
+      "T1105"
+    ]
+  ],
+  "notes": {
+    "n_graph_nodes": 269,
+    "n_graph_edges": 260,
+    "n_proc_nodes": 14,
+    "n_sigma_alerts": 40,
+    "n_alerts": 40,
+    "alerts": [
+      {
+        "ts": "2020-10-19 12:28:31.098000+00:00",
+        "event_index": 29,
+        "event_id": 1,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002",
+          "T1003.003"
+        ],
+        "topk_tactics": [
+          "Credential Access",
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:31.430000+00:00",
+        "event_index": 86,
+        "event_id": 7,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1490"
+        ],
+        "topk_tactics": [
+          "Defense Evasion"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:31.447000+00:00",
+        "event_index": 91,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:31.462000+00:00",
+        "event_index": 105,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:31.469000+00:00",
+        "event_index": 112,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:31.495000+00:00",
+        "event_index": 173,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:31.542000+00:00",
+        "event_index": 187,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:31.554000+00:00",
+        "event_index": 200,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:31.568000+00:00",
+        "event_index": 245,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:31.568000+00:00",
+        "event_index": 246,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:31.572000+00:00",
+        "event_index": 257,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:31.573000+00:00",
+        "event_index": 258,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:31.897000+00:00",
+        "event_index": 357,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:31.921000+00:00",
+        "event_index": 431,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:31.921000+00:00",
+        "event_index": 432,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:31.927000+00:00",
+        "event_index": 439,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:31.927000+00:00",
+        "event_index": 441,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:31.927000+00:00",
+        "event_index": 442,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:31.927000+00:00",
+        "event_index": 444,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:35.295000+00:00",
+        "event_index": 489,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:35.295000+00:00",
+        "event_index": 490,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:35.295000+00:00",
+        "event_index": 492,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:35.295000+00:00",
+        "event_index": 496,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:35.626000+00:00",
+        "event_index": 525,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:35.656000+00:00",
+        "event_index": 600,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:35.656000+00:00",
+        "event_index": 601,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:35.975000+00:00",
+        "event_index": 622,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:35.978000+00:00",
+        "event_index": 626,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:35.991000+00:00",
+        "event_index": 647,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:35.992000+00:00",
+        "event_index": 652,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:35.994000+00:00",
+        "event_index": 661,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:35.999000+00:00",
+        "event_index": 662,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:36.011000+00:00",
+        "event_index": 678,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:36.021000+00:00",
+        "event_index": 690,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:36.035000+00:00",
+        "event_index": 740,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:36.046000+00:00",
+        "event_index": 741,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:36.057000+00:00",
+        "event_index": 754,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:36.067000+00:00",
+        "event_index": 782,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:36.070000+00:00",
+        "event_index": 796,
+        "event_id": 13,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002"
+        ],
+        "topk_tactics": [
+          "Credential Access"
+        ]
+      },
+      {
+        "ts": "2020-10-19 12:28:36.083000+00:00",
+        "event_index": 800,
+        "event_id": 11,
+        "process_guid": "{39e4a257-15ef-5f8d-e704-000000000700}",
+        "anomaly_score": 0.5188752370710259,
+        "topk_tids": [
+          "T1003.002",
+          "T1218",
+          "T1105"
+        ],
+        "topk_tactics": [
+          "Credential Access",
+          "Defense Evasion",
+          "Defense Evasion"
+        ]
+      }
+    ],
+    "elapsed_sec": 0.4
+  }
+}

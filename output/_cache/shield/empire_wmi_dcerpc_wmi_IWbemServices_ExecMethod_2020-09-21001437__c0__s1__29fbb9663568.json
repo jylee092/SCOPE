@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The process OfficeClickToRun.exe is performing legitimate registry operations related to Office telemetry under HKU\\\\.DEFAULT, which is expected behavior for this Microsoft Office component, and no suspicious command-line arguments or other attack patterns are observed.\"\n}"}

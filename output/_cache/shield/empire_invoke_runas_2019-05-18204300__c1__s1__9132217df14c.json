@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[powershell.exe|{03ba39f5-6e7]\"\n  ],\n  \"rationale\": \"The powershell.exe process performed an unusually high volume of registry key creations related to SystemCertificates and Policies under both HKLM and HKU\\\\.DEFAULT, which can be indicative of attempts to manipulate system trust or security configurations.\"\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed activities for RuntimeBroker.exe and StartMenuExperienceHost.exe, including DLL loads and registry modifications, are consistent with their normal operating functions within the Windows operating system, and no suspicious command lines or other attack patterns were identified.\"\n}"}

@@ -1,0 +1,700 @@
+{
+  "scenario": "empire_mimikatz_logonpasswords_2020-08-07103224",
+  "tactic_sequence": [
+    "Initial Access",
+    "Impact",
+    "Credential Access",
+    "Impact",
+    "Initial Access",
+    "Impact",
+    "Initial Access",
+    "Impact",
+    "Initial Access",
+    "Impact",
+    "Initial Access",
+    "Impact"
+  ],
+  "technique_sequence": [
+    "T1133",
+    "T1531",
+    "T1003.001",
+    "T1531",
+    "T1133",
+    "T1531",
+    "T1133",
+    "T1531",
+    "T1133",
+    "T1531",
+    "T1133",
+    "T1531"
+  ],
+  "per_group_topk": [
+    [
+      "T1133",
+      "T1078",
+      "T1110",
+      "T1074.001",
+      "T1588.003"
+    ],
+    [
+      "T1133",
+      "T1074",
+      "T1059",
+      "T1594",
+      "T1074.001"
+    ],
+    [
+      "T1133",
+      "T1074",
+      "T1059",
+      "T1074.001",
+      "T1543.004"
+    ],
+    [
+      "T1133",
+      "T1059",
+      "T1074",
+      "T1074.001",
+      "T1071"
+    ],
+    [
+      "T1133",
+      "T1059",
+      "T1074",
+      "T1074.001",
+      "T1071"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110",
+      "T1074",
+      "T1074.001"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110",
+      "T1074.001",
+      "T1059"
+    ],
+    [
+      "T1531",
+      "T1074.001",
+      "T1059",
+      "T1074",
+      "T1071"
+    ],
+    [
+      "T1531",
+      "T1587.003",
+      "T1583",
+      "T1583.006",
+      "T1587"
+    ],
+    [
+      "T1531",
+      "T1574",
+      "T1543",
+      "T1589.002",
+      "T1587.003"
+    ],
+    [
+      "T1003.001",
+      "T1574",
+      "T1543",
+      "T1589.002",
+      "T1098"
+    ],
+    [
+      "T1531",
+      "T1036.008",
+      "T1543",
+      "T1629",
+      "T1136"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110",
+      "T0815",
+      "T1521.001"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110",
+      "T1098",
+      "T1629"
+    ],
+    [
+      "T1531",
+      "T1636.004",
+      "T1587",
+      "T1547.001",
+      "T1421"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110",
+      "T0815",
+      "T1521.001"
+    ],
+    [
+      "T1531",
+      "T1587",
+      "T1583.006",
+      "T1589",
+      "T1584"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110",
+      "T1421",
+      "T0815"
+    ],
+    [
+      "T1531",
+      "T1587",
+      "T1583.006",
+      "T1589",
+      "T1636.004"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110",
+      "T1629",
+      "T0815"
+    ],
+    [
+      "T1531",
+      "T1136",
+      "T1136.002",
+      "T1098",
+      "T1589"
+    ],
+    [
+      "T1531",
+      "T0815",
+      "T1629",
+      "T1098",
+      "T0838"
+    ]
+  ],
+  "notes": {
+    "n_alerts": 22,
+    "n_sigma_alerts": 22,
+    "n_deepag_top1_used": 4,
+    "alerts": [
+      {
+        "ts": "2020-08-07 14:32:29.369000+00:00",
+        "event_index": 27,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110",
+          "T1074.001",
+          "T1588.003"
+        ],
+        "topk_tactics": [
+          "Initial Access",
+          "Initial Access",
+          "Credential Access",
+          "Collection",
+          ""
+        ],
+        "deepag_top1": "T1074.001",
+        "deepag_prob": 8.479971438646317e-05,
+        "chosen_top1": "T1133",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-08-07 14:32:29.370000+00:00",
+        "event_index": 29,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1133",
+          "T1074",
+          "T1059",
+          "T1594",
+          "T1074.001"
+        ],
+        "topk_tactics": [
+          "Initial Access",
+          "Collection",
+          "Execution",
+          "",
+          "Collection"
+        ],
+        "deepag_top1": "T1133",
+        "deepag_prob": 0.540533721446991,
+        "chosen_top1": "T1133",
+        "chosen_src": "deepag"
+      },
+      {
+        "ts": "2020-08-07 14:32:47.591000+00:00",
+        "event_index": 281,
+        "event_id": 1,
+        "topk_tids": [
+          "T1133",
+          "T1074",
+          "T1059",
+          "T1074.001",
+          "T1543.004"
+        ],
+        "topk_tactics": [
+          "Initial Access",
+          "Collection",
+          "Execution",
+          "Collection",
+          "Persistence"
+        ],
+        "deepag_top1": "T1133",
+        "deepag_prob": 0.68858402967453,
+        "chosen_top1": "T1133",
+        "chosen_src": "deepag"
+      },
+      {
+        "ts": "2020-08-07 14:32:47.824000+00:00",
+        "event_index": 583,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1059",
+          "T1074",
+          "T1074.001",
+          "T1071"
+        ],
+        "topk_tactics": [
+          "Initial Access",
+          "Execution",
+          "Collection",
+          "Collection",
+          "Command and Control"
+        ],
+        "deepag_top1": "T1133",
+        "deepag_prob": 0.6930358409881592,
+        "chosen_top1": "T1133",
+        "chosen_src": "deepag"
+      },
+      {
+        "ts": "2020-08-07 14:32:47.826000+00:00",
+        "event_index": 588,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1059",
+          "T1074",
+          "T1074.001",
+          "T1071"
+        ],
+        "topk_tactics": [
+          "Initial Access",
+          "Execution",
+          "Collection",
+          "Collection",
+          "Command and Control"
+        ],
+        "deepag_top1": "T1133",
+        "deepag_prob": 0.5945689678192139,
+        "chosen_top1": "T1133",
+        "chosen_src": "deepag"
+      },
+      {
+        "ts": "2020-08-07 14:32:47.836000+00:00",
+        "event_index": 598,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110",
+          "T1074",
+          "T1074.001"
+        ],
+        "topk_tactics": [
+          "Initial Access",
+          "Initial Access",
+          "Credential Access",
+          "Collection",
+          "Collection"
+        ],
+        "deepag_top1": "T1074",
+        "deepag_prob": 0.3762211501598358,
+        "chosen_top1": "T1133",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-08-07 14:32:47.853000+00:00",
+        "event_index": 630,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110",
+          "T1074.001",
+          "T1059"
+        ],
+        "topk_tactics": [
+          "Initial Access",
+          "Initial Access",
+          "Credential Access",
+          "Collection",
+          "Execution"
+        ],
+        "deepag_top1": "T1074.001",
+        "deepag_prob": 0.3922328054904938,
+        "chosen_top1": "T1133",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-08-07 14:32:47.860000+00:00",
+        "event_index": 646,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531",
+          "T1074.001",
+          "T1059",
+          "T1074",
+          "T1071"
+        ],
+        "topk_tactics": [
+          "Impact",
+          "Collection",
+          "Execution",
+          "Collection",
+          "Command and Control"
+        ],
+        "deepag_top1": "T1074.001",
+        "deepag_prob": 0.4601373076438904,
+        "chosen_top1": "T1531",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-08-07 14:32:47.860000+00:00",
+        "event_index": 648,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531",
+          "T1587.003",
+          "T1583",
+          "T1583.006",
+          "T1587"
+        ],
+        "topk_tactics": [
+          "Impact",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "deepag_top1": "T1587.003",
+        "deepag_prob": 0.003789168316870928,
+        "chosen_top1": "T1531",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-08-07 14:32:47.870000+00:00",
+        "event_index": 660,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531",
+          "T1574",
+          "T1543",
+          "T1589.002",
+          "T1587.003"
+        ],
+        "topk_tactics": [
+          "Impact",
+          "Persistence",
+          "Persistence",
+          "",
+          ""
+        ],
+        "deepag_top1": "T1574",
+        "deepag_prob": 0.00037888294900767505,
+        "chosen_top1": "T1531",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-08-07 14:32:57.592000+00:00",
+        "event_index": 2457,
+        "event_id": 4663,
+        "topk_tids": [
+          "T1003.001",
+          "T1574",
+          "T1543",
+          "T1589.002",
+          "T1098"
+        ],
+        "topk_tactics": [
+          "Credential Access",
+          "Persistence",
+          "Persistence",
+          "",
+          "Persistence"
+        ],
+        "deepag_top1": "T1574",
+        "deepag_prob": 0.0007588869775645435,
+        "chosen_top1": "T1003.001",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-08-07 14:32:58.700000+00:00",
+        "event_index": 2633,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531",
+          "T1036.008",
+          "T1543",
+          "T1629",
+          "T1136"
+        ],
+        "topk_tactics": [
+          "Impact",
+          "Defense Evasion",
+          "Persistence",
+          "",
+          "Persistence"
+        ],
+        "deepag_top1": "T1036.008",
+        "deepag_prob": 0.0259848702698946,
+        "chosen_top1": "T1531",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-08-07 14:33:20.111000+00:00",
+        "event_index": 3843,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110",
+          "T0815",
+          "T1521.001"
+        ],
+        "topk_tactics": [
+          "Initial Access",
+          "Initial Access",
+          "Credential Access",
+          "",
+          ""
+        ],
+        "deepag_top1": "T0815",
+        "deepag_prob": 0.0013637188822031021,
+        "chosen_top1": "T1133",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-08-07 14:33:29.183000+00:00",
+        "event_index": 4143,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110",
+          "T1098",
+          "T1629"
+        ],
+        "topk_tactics": [
+          "Initial Access",
+          "Initial Access",
+          "Credential Access",
+          "Persistence",
+          ""
+        ],
+        "deepag_top1": "T1098",
+        "deepag_prob": 0.012476607225835323,
+        "chosen_top1": "T1133",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-08-07 14:33:29.183000+00:00",
+        "event_index": 4145,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531",
+          "T1636.004",
+          "T1587",
+          "T1547.001",
+          "T1421"
+        ],
+        "topk_tactics": [
+          "Impact",
+          "",
+          "",
+          "Persistence",
+          ""
+        ],
+        "deepag_top1": "T1636.004",
+        "deepag_prob": 0.33097946643829346,
+        "chosen_top1": "T1531",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-08-07 14:34:14.694000+00:00",
+        "event_index": 5502,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110",
+          "T0815",
+          "T1521.001"
+        ],
+        "topk_tactics": [
+          "Initial Access",
+          "Initial Access",
+          "Credential Access",
+          "",
+          ""
+        ],
+        "deepag_top1": "T0815",
+        "deepag_prob": 0.0017878011567518115,
+        "chosen_top1": "T1133",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-08-07 14:34:14.695000+00:00",
+        "event_index": 5507,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531",
+          "T1587",
+          "T1583.006",
+          "T1589",
+          "T1584"
+        ],
+        "topk_tactics": [
+          "Impact",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "deepag_top1": "T1587",
+        "deepag_prob": 0.05177333578467369,
+        "chosen_top1": "T1531",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-08-07 14:34:14.697000+00:00",
+        "event_index": 5514,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110",
+          "T1421",
+          "T0815"
+        ],
+        "topk_tactics": [
+          "Initial Access",
+          "Initial Access",
+          "Credential Access",
+          "",
+          ""
+        ],
+        "deepag_top1": "T1421",
+        "deepag_prob": 0.002219091635197401,
+        "chosen_top1": "T1133",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-08-07 14:34:14.697000+00:00",
+        "event_index": 5516,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531",
+          "T1587",
+          "T1583.006",
+          "T1589",
+          "T1636.004"
+        ],
+        "topk_tactics": [
+          "Impact",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "deepag_top1": "T1587",
+        "deepag_prob": 0.04966327175498009,
+        "chosen_top1": "T1531",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-08-07 14:34:28.751000+00:00",
+        "event_index": 5582,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110",
+          "T1629",
+          "T0815"
+        ],
+        "topk_tactics": [
+          "Initial Access",
+          "Initial Access",
+          "Credential Access",
+          "",
+          ""
+        ],
+        "deepag_top1": "T1629",
+        "deepag_prob": 0.010641883127391338,
+        "chosen_top1": "T1133",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-08-07 14:34:28.752000+00:00",
+        "event_index": 5584,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531",
+          "T1136",
+          "T1136.002",
+          "T1098",
+          "T1589"
+        ],
+        "topk_tactics": [
+          "Impact",
+          "Persistence",
+          "Persistence",
+          "Persistence",
+          ""
+        ],
+        "deepag_top1": "T1136",
+        "deepag_prob": 0.03980773687362671,
+        "chosen_top1": "T1531",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-08-07 14:34:56.958000+00:00",
+        "event_index": 5887,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531",
+          "T0815",
+          "T1629",
+          "T1098",
+          "T0838"
+        ],
+        "topk_tactics": [
+          "Impact",
+          "",
+          "",
+          "Persistence",
+          ""
+        ],
+        "deepag_top1": "T0815",
+        "deepag_prob": 0.01444974634796381,
+        "chosen_top1": "T1531",
+        "chosen_src": "sigma"
+      }
+    ]
+  }
+}

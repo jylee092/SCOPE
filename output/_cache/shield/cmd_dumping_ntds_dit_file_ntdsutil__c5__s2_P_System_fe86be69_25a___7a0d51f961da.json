@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": false,\n  \"deviation\": \"\",\n  \"indicators\": [\n    \"System process\",\n    \"SMB connection\",\n    \"Background Activity Moderator (BAM)\",\n    \"Volume Shadow Copy Service (VSS)\",\n    \"Volume snapshot creation\"\n  ]\n}"}

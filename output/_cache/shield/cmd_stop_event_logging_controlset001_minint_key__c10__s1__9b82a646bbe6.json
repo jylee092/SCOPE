@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The 'System' process is performing routine network connections to NetBIOS ports and making expected registry modifications to BAM (Background Activity Moderator) and ProductPolicy keys, with no notable command lines or other indicators of compromise.\"\n}"}

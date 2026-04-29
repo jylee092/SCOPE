@@ -1,0 +1,475 @@
+{
+  "scenario": "empire_shell_samr_EnumDomainUsers_2020-09-21193527",
+  "total_groups": 7,
+  "instruction": "각 그룹의 sample_logs와 anchor를 확인한 뒤 gt_ 필드를 채워주세요. gt_is_true_positive: 해당 그룹이 실제 공격 행위인지 (true/false). gt_technique_id: 실제 MITRE technique ID (예: T1059.001). gt_tactic: 실제 tactic 이름 (예: Execution). gt_notes: 판단 근거나 메모.",
+  "groups": [
+    {
+      "group_id": "T1021_002_173",
+      "rule_technique_id": "T1021.002",
+      "rule_technique_name": "SMB/Windows Admin Shares",
+      "confidence": 0.11,
+      "anchor": {
+        "idx": 173,
+        "EventID": 4624,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-21 23:35:38.963000+00:00"
+      },
+      "num_events": 6,
+      "event_id_distribution": {
+        "4624": 4,
+        "5140": 1,
+        "5145": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 173,
+          "EventID": 4624,
+          "TimeCreated": "2020-09-21 23:35:38.963000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 175,
+          "EventID": 5140,
+          "TimeCreated": "2020-09-21 23:35:38.964000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 179,
+          "EventID": 5145,
+          "TimeCreated": "2020-09-21 23:35:38.965000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 194,
+          "EventID": 4624,
+          "TimeCreated": "2020-09-21 23:35:41.985000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 203,
+          "EventID": 4624,
+          "TimeCreated": "2020-09-21 23:35:41.989000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 257,
+          "EventID": 4624,
+          "TimeCreated": "2020-09-21 23:35:50.020000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1087.002",
+      "gt_technique_name": "SMB/Windows Admin Shares",
+      "gt_tactic": "Discovery",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1021.002)"
+    },
+    {
+      "group_id": "T1049_77",
+      "rule_technique_id": "T1049",
+      "rule_technique_name": "System Network Connections Discovery",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 77,
+        "EventID": 1,
+        "Image": "C:\\Windows\\System32\\net.exe",
+        "CommandLine": "\"C:\\windows\\system32\\net.exe\" user /domain",
+        "TimeCreated": "2020-09-21 23:35:37.912000+00:00"
+      },
+      "num_events": 59,
+      "event_id_distribution": {
+        "7": 36,
+        "12": 9,
+        "18": 3,
+        "3": 3,
+        "1": 2,
+        "5": 2,
+        "4688": 2,
+        "17": 1,
+        "10": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 4,
+          "EventID": 12,
+          "TimeCreated": "2020-09-21 23:35:28.842000+00:00",
+          "Image": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-4228717743-1032521047-1810997296-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 31,
+          "EventID": 12,
+          "TimeCreated": "2020-09-21 23:35:34.870000+00:00",
+          "Image": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-4228717743-1032521047-1810997296-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 65,
+          "EventID": 12,
+          "TimeCreated": "2020-09-21 23:35:37.899000+00:00",
+          "Image": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-4228717743-1032521047-1810997296-1104\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections"
+        },
+        {
+          "idx": 73,
+          "EventID": 17,
+          "TimeCreated": "2020-09-21 23:35:37.908000+00:00",
+          "Image": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 76,
+          "EventID": 18,
+          "TimeCreated": "2020-09-21 23:35:37.912000+00:00",
+          "Image": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 77,
+          "EventID": 1,
+          "TimeCreated": "2020-09-21 23:35:37.912000+00:00",
+          "Image": "C:\\Windows\\System32\\net.exe",
+          "CommandLine": "\"C:\\windows\\system32\\net.exe\" user /domain",
+          "ParentImage": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 86,
+          "EventID": 7,
+          "TimeCreated": "2020-09-21 23:35:37.919000+00:00",
+          "Image": "C:\\Windows\\System32\\net.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 89,
+          "EventID": 7,
+          "TimeCreated": "2020-09-21 23:35:37.922000+00:00",
+          "Image": "C:\\Windows\\System32\\net.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 92,
+          "EventID": 7,
+          "TimeCreated": "2020-09-21 23:35:37.923000+00:00",
+          "Image": "C:\\Windows\\System32\\net.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 93,
+          "EventID": 7,
+          "TimeCreated": "2020-09-21 23:35:37.924000+00:00",
+          "Image": "C:\\Windows\\System32\\net.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 96,
+          "EventID": 7,
+          "TimeCreated": "2020-09-21 23:35:37.925000+00:00",
+          "Image": "C:\\Windows\\System32\\net.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 97,
+          "EventID": 7,
+          "TimeCreated": "2020-09-21 23:35:37.926000+00:00",
+          "Image": "C:\\Windows\\System32\\net.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 98,
+          "EventID": 7,
+          "TimeCreated": "2020-09-21 23:35:37.926000+00:00",
+          "Image": "C:\\Windows\\System32\\net.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 100,
+          "EventID": 7,
+          "TimeCreated": "2020-09-21 23:35:37.927000+00:00",
+          "Image": "C:\\Windows\\System32\\net.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 99,
+          "EventID": 7,
+          "TimeCreated": "2020-09-21 23:35:37.927000+00:00",
+          "Image": "C:\\Windows\\System32\\net.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1087.002",
+      "gt_technique_name": "System Network Connections Discovery",
+      "gt_tactic": "Discovery",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(net.exe)"
+    },
+    {
+      "group_id": "T1070_004_570",
+      "rule_technique_id": "T1070.004",
+      "rule_technique_name": "File Deletion",
+      "confidence": 0.0,
+      "anchor": {
+        "idx": 570,
+        "EventID": 23,
+        "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-21 23:36:10.279000+00:00"
+      },
+      "num_events": 3,
+      "event_id_distribution": {
+        "13": 2,
+        "23": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 387,
+          "EventID": 13,
+          "TimeCreated": "2020-09-21 23:36:09.179000+00:00",
+          "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\NdisCap\\Parameters\\RefCount"
+        },
+        {
+          "idx": 391,
+          "EventID": 13,
+          "TimeCreated": "2020-09-21 23:36:09.180000+00:00",
+          "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\.DEFAULT\\System\\CurrentControlSet\\Control\\NetTrace\\Session\\CaptureEnabled"
+        },
+        {
+          "idx": 570,
+          "EventID": 23,
+          "TimeCreated": "2020-09-21 23:36:10.279000+00:00",
+          "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1087.002",
+      "gt_technique_name": "File Deletion",
+      "gt_tactic": "Discovery",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:c=0,no-kw,rule!=fam(T1070.004)"
+    },
+    {
+      "group_id": "T1087_001_154",
+      "rule_technique_id": "T1087.001",
+      "rule_technique_name": "Local Account Discovery",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 154,
+        "EventID": 4688,
+        "Image": "nan",
+        "CommandLine": "\"C:\\windows\\system32\\net.exe\" user /domain",
+        "TimeCreated": "2020-09-21 23:35:38.956000+00:00"
+      },
+      "num_events": 2,
+      "event_id_distribution": {
+        "4688": 2
+      },
+      "sample_logs": [
+        {
+          "idx": 154,
+          "EventID": 4688,
+          "TimeCreated": "2020-09-21 23:35:38.956000+00:00",
+          "Image": "nan",
+          "CommandLine": "\"C:\\windows\\system32\\net.exe\" user /domain",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 155,
+          "EventID": 4688,
+          "TimeCreated": "2020-09-21 23:35:38.956000+00:00",
+          "Image": "nan",
+          "CommandLine": "C:\\windows\\system32\\net1 user /domain",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1087.002",
+      "gt_technique_name": "Local Account Discovery",
+      "gt_tactic": "Discovery",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(net.exe)"
+    },
+    {
+      "group_id": "T1087_001_155",
+      "rule_technique_id": "T1087.001",
+      "rule_technique_name": "Local Account Discovery",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 155,
+        "EventID": 4688,
+        "Image": "nan",
+        "CommandLine": "C:\\windows\\system32\\net1 user /domain",
+        "TimeCreated": "2020-09-21 23:35:38.956000+00:00"
+      },
+      "num_events": 2,
+      "event_id_distribution": {
+        "4688": 2
+      },
+      "sample_logs": [
+        {
+          "idx": 154,
+          "EventID": 4688,
+          "TimeCreated": "2020-09-21 23:35:38.956000+00:00",
+          "Image": "nan",
+          "CommandLine": "\"C:\\windows\\system32\\net.exe\" user /domain",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 155,
+          "EventID": 4688,
+          "TimeCreated": "2020-09-21 23:35:38.956000+00:00",
+          "Image": "nan",
+          "CommandLine": "C:\\windows\\system32\\net1 user /domain",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1087.002",
+      "gt_technique_name": "Local Account Discovery",
+      "gt_tactic": "Discovery",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: sample-kw+ctx(T1087.001,c=1.00)"
+    },
+    {
+      "group_id": "T1087_002_181",
+      "rule_technique_id": "T1087.002",
+      "rule_technique_name": "Domain Account Discovery",
+      "confidence": 0.0,
+      "anchor": {
+        "idx": 181,
+        "EventID": 4661,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-21 23:35:39.962000+00:00"
+      },
+      "num_events": 1,
+      "event_id_distribution": {
+        "4661": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 181,
+          "EventID": 4661,
+          "TimeCreated": "2020-09-21 23:35:39.962000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1087.002",
+      "gt_technique_name": "Domain Account Discovery",
+      "gt_tactic": "Discovery",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:c=0,no-kw"
+    },
+    {
+      "group_id": "T1112_387",
+      "rule_technique_id": "T1112",
+      "rule_technique_name": "Modify Registry",
+      "confidence": 0.0,
+      "anchor": {
+        "idx": 387,
+        "EventID": 13,
+        "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-09-21 23:36:09.179000+00:00"
+      },
+      "num_events": 3,
+      "event_id_distribution": {
+        "13": 2,
+        "23": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 387,
+          "EventID": 13,
+          "TimeCreated": "2020-09-21 23:36:09.179000+00:00",
+          "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\NdisCap\\Parameters\\RefCount"
+        },
+        {
+          "idx": 391,
+          "EventID": 13,
+          "TimeCreated": "2020-09-21 23:36:09.180000+00:00",
+          "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\.DEFAULT\\System\\CurrentControlSet\\Control\\NetTrace\\Session\\CaptureEnabled"
+        },
+        {
+          "idx": 570,
+          "EventID": 23,
+          "TimeCreated": "2020-09-21 23:36:10.279000+00:00",
+          "Image": "C:\\Packages\\Plugins\\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\\1.4.1654.1\\NetworkWatcherAgent\\NetworkWatc",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1087.002",
+      "gt_technique_name": "Modify Registry",
+      "gt_tactic": "Discovery",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:c=0,no-kw,rule!=fam(T1112)"
+    }
+  ]
+}

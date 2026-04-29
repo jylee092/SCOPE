@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[svchost.exe|{b34bc01c-227]\"\n  ],\n  \"rationale\": \"The svchost.exe process is creating or modifying registry keys related to Internet connection settings for both the default user and a specific user, which is a common technique used by malware to establish proxy configurations or redirect network traffic.\"\n}"}

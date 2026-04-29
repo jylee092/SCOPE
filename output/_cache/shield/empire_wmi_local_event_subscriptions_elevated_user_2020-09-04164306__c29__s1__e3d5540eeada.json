@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"Both smss.exe and autochk.exe are legitimate Windows system processes, and their observed command lines, child processes, and registry/file operations are consistent with normal system startup and maintenance activities, showing no signs of common attack patterns.\"\n}"}

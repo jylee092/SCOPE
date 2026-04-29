@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"dns.exe connecting to the \\\\lsass named pipe is highly unusual for a DNS server process and is often indicative of credential dumping attempts.\",\n  \"indicators\": [\n    \"lsass pipe\",\n    \"credential dumping\",\n    \"dns.exe unusual behavior\"\n  ]\n}"}

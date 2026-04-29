@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": false,\n  \"deviation\": \"\",\n  \"indicators\": [\n    \"System process\",\n    \"WinRM port 5985\",\n    \"Azure network capture\",\n    \"WMI logging\"\n  ]\n}"}

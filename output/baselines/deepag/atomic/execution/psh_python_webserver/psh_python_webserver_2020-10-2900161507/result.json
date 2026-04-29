@@ -1,0 +1,78 @@
+{
+  "scenario": "psh_python_webserver_2020-10-2900161507",
+  "tactic_sequence": [
+    "Defense Evasion"
+  ],
+  "technique_sequence": [
+    "T1562.004"
+  ],
+  "per_group_topk": [
+    [
+      "T1562.004",
+      "T1074.001",
+      "T1588.003",
+      "T0864",
+      "T1594"
+    ],
+    [
+      "T1562.004",
+      "T1027.002",
+      "T1562",
+      "T1036.008",
+      "T1140"
+    ]
+  ],
+  "notes": {
+    "n_alerts": 2,
+    "n_sigma_alerts": 2,
+    "n_deepag_top1_used": 0,
+    "alerts": [
+      {
+        "ts": "2020-10-29 12:16:09.918000+00:00",
+        "event_index": 35,
+        "event_id": 1,
+        "topk_tids": [
+          "T1562.004",
+          "T1074.001",
+          "T1588.003",
+          "T0864",
+          "T1594"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Collection",
+          "",
+          "",
+          ""
+        ],
+        "deepag_top1": "T1074.001",
+        "deepag_prob": 8.479971438646317e-05,
+        "chosen_top1": "T1562.004",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-10-29 12:16:10.220000+00:00",
+        "event_index": 861,
+        "event_id": 1,
+        "topk_tids": [
+          "T1562.004",
+          "T1027.002",
+          "T1562",
+          "T1036.008",
+          "T1140"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion",
+          "Defense Evasion",
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "deepag_top1": "T1027.002",
+        "deepag_prob": 0.2395685315132141,
+        "chosen_top1": "T1562.004",
+        "chosen_src": "sigma"
+      }
+    ]
+  }
+}

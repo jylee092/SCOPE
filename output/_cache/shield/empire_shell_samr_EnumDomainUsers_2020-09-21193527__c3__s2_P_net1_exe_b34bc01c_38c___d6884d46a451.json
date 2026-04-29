@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": false,\n  \"deviation\": \"\",\n  \"indicators\": [\n    \"net1.exe is a legitimate Windows utility\",\n    \"Parent process net.exe is expected\",\n    \"Command 'net1 user /domain' is a standard network enumeration command\",\n    \"Loaded modules and pipe connections are consistent with legitimate functionality\"\n  ]\n}"}

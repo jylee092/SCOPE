@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The process SearchUI.exe is performing normal registry operations related to its legitimate function, accessing expected Cortana/Search-related registry keys and paths within its own AppData package directory, with no unusual command lines or other suspicious indicators.\"\n}"}

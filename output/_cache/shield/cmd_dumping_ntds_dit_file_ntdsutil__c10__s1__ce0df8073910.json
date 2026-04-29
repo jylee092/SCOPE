@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[lsass.exe|{fe86be69-25c]\"\n  ],\n  \"rationale\": \"The lsass.exe process is performing extensive Volume Shadow Copy Service (VSS) diagnostic registry operations related to the NTDS database and writing a temporary file, which is a known technique for dumping Active Directory credentials.\"\n}"}

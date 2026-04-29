@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed registry modifications by LogonUI.exe and svchost.exe in Windows Error Reporting and Notifications paths are consistent with normal operating system behavior, and no suspicious command lines, file system changes, or network activities were identified.\"\n}"}

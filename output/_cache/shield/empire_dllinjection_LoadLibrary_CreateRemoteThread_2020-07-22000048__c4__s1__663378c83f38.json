@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is performing standard registry operations related to Group Policy processing, which is a legitimate function of the Group Policy Client service, and no other suspicious indicators like unusual command lines, child processes, or file writes are present.\"\n}"}

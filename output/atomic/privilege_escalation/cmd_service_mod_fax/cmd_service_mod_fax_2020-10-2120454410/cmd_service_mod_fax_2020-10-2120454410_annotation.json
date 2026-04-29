@@ -1,0 +1,621 @@
+{
+  "scenario": "cmd_service_mod_fax_2020-10-2120454410",
+  "total_groups": 4,
+  "instruction": "각 그룹의 sample_logs와 anchor를 확인한 뒤 gt_ 필드를 채워주세요. gt_is_true_positive: 해당 그룹이 실제 공격 행위인지 (true/false). gt_technique_id: 실제 MITRE technique ID (예: T1059.001). gt_tactic: 실제 tactic 이름 (예: Execution). gt_notes: 판단 근거나 메모.",
+  "groups": [
+    {
+      "group_id": "T1059_64",
+      "rule_technique_id": "T1059",
+      "rule_technique_name": "Command and Scripting Interpreter",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 64,
+        "EventID": 1,
+        "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "CommandLine": "C:\\windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe -noexit -c \"write-host 'T1543.003 Test'\"",
+        "TimeCreated": "2020-10-21 08:45:35.288000+00:00"
+      },
+      "num_events": 237,
+      "event_id_distribution": {
+        "12": 158,
+        "7": 73,
+        "13": 2,
+        "11": 2,
+        "1": 1,
+        "5": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 36,
+          "EventID": 13,
+          "TimeCreated": "2020-10-21 08:45:33.693000+00:00",
+          "Image": "C:\\windows\\system32\\services.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\Fax\\ImagePath"
+        },
+        {
+          "idx": 64,
+          "EventID": 1,
+          "TimeCreated": "2020-10-21 08:45:35.288000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "C:\\windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe -noexit -c \"write-host 'T1543.003 Test'\"",
+          "ParentImage": "C:\\Windows\\System32\\services.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 66,
+          "EventID": 7,
+          "TimeCreated": "2020-10-21 08:45:35.289000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 68,
+          "EventID": 7,
+          "TimeCreated": "2020-10-21 08:45:35.290000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 69,
+          "EventID": 7,
+          "TimeCreated": "2020-10-21 08:45:35.291000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 70,
+          "EventID": 7,
+          "TimeCreated": "2020-10-21 08:45:35.291000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 71,
+          "EventID": 7,
+          "TimeCreated": "2020-10-21 08:45:35.292000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 72,
+          "EventID": 7,
+          "TimeCreated": "2020-10-21 08:45:35.293000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 73,
+          "EventID": 7,
+          "TimeCreated": "2020-10-21 08:45:35.298000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 74,
+          "EventID": 7,
+          "TimeCreated": "2020-10-21 08:45:35.298000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 75,
+          "EventID": 7,
+          "TimeCreated": "2020-10-21 08:45:35.299000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 76,
+          "EventID": 7,
+          "TimeCreated": "2020-10-21 08:45:35.299000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 77,
+          "EventID": 7,
+          "TimeCreated": "2020-10-21 08:45:35.299000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 79,
+          "EventID": 7,
+          "TimeCreated": "2020-10-21 08:45:35.300000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 78,
+          "EventID": 7,
+          "TimeCreated": "2020-10-21 08:45:35.300000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1543.003",
+      "gt_technique_name": "Command and Scripting Interpreter",
+      "gt_tactic": "Persistence",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: sample-kw+ctx(T1059,c=1.00)"
+    },
+    {
+      "group_id": "T1059_001_62",
+      "rule_technique_id": "T1059.001",
+      "rule_technique_name": "PowerShell",
+      "confidence": 0.54,
+      "anchor": {
+        "idx": 62,
+        "EventID": 4688,
+        "Image": "nan",
+        "CommandLine": "C:\\windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe -noexit -c \"write-host 'T1543.003 Test'\"",
+        "TimeCreated": "2020-10-21 08:45:35.280000+00:00"
+      },
+      "num_events": 358,
+      "event_id_distribution": {
+        "12": 159,
+        "7": 97,
+        "10": 59,
+        "4656": 18,
+        "13": 14,
+        "4663": 6,
+        "1": 4,
+        "4688": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 2,
+          "EventID": 12,
+          "TimeCreated": "2020-10-21 08:45:32.940000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FeatureUsage\\AppSwitched"
+        },
+        {
+          "idx": 3,
+          "EventID": 13,
+          "TimeCreated": "2020-10-21 08:45:32.941000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FeatureUsage\\AppSwitched\\{1AC14E77-02E7-4E5D-B744-2"
+        },
+        {
+          "idx": 4,
+          "EventID": 10,
+          "TimeCreated": "2020-10-21 08:45:32.947000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 5,
+          "EventID": 10,
+          "TimeCreated": "2020-10-21 08:45:32.947000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 12,
+          "EventID": 10,
+          "TimeCreated": "2020-10-21 08:45:32.948000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 10,
+          "EventID": 13,
+          "TimeCreated": "2020-10-21 08:45:32.948000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\\C"
+        },
+        {
+          "idx": 9,
+          "EventID": 10,
+          "TimeCreated": "2020-10-21 08:45:32.948000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 11,
+          "EventID": 13,
+          "TimeCreated": "2020-10-21 08:45:32.948000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\\C"
+        },
+        {
+          "idx": 7,
+          "EventID": 10,
+          "TimeCreated": "2020-10-21 08:45:32.948000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6,
+          "EventID": 10,
+          "TimeCreated": "2020-10-21 08:45:32.948000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 8,
+          "EventID": 10,
+          "TimeCreated": "2020-10-21 08:45:32.948000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 13,
+          "EventID": 10,
+          "TimeCreated": "2020-10-21 08:45:32.950000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 14,
+          "EventID": 10,
+          "TimeCreated": "2020-10-21 08:45:32.950000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 15,
+          "EventID": 10,
+          "TimeCreated": "2020-10-21 08:45:32.950000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 16,
+          "EventID": 10,
+          "TimeCreated": "2020-10-21 08:45:32.951000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1543.003",
+      "gt_technique_name": "PowerShell",
+      "gt_tactic": "Persistence",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1059.001)"
+    },
+    {
+      "group_id": "T1059_001_68",
+      "rule_technique_id": "T1059.001",
+      "rule_technique_name": "PowerShell",
+      "confidence": 0.54,
+      "anchor": {
+        "idx": 68,
+        "EventID": 7,
+        "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-21 08:45:35.290000+00:00"
+      },
+      "num_events": 360,
+      "event_id_distribution": {
+        "12": 159,
+        "7": 97,
+        "10": 59,
+        "4656": 18,
+        "13": 14,
+        "4663": 6,
+        "1": 4,
+        "11": 2,
+        "5": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 2,
+          "EventID": 12,
+          "TimeCreated": "2020-10-21 08:45:32.940000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FeatureUsage\\AppSwitched"
+        },
+        {
+          "idx": 3,
+          "EventID": 13,
+          "TimeCreated": "2020-10-21 08:45:32.941000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FeatureUsage\\AppSwitched\\{1AC14E77-02E7-4E5D-B744-2"
+        },
+        {
+          "idx": 4,
+          "EventID": 10,
+          "TimeCreated": "2020-10-21 08:45:32.947000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 5,
+          "EventID": 10,
+          "TimeCreated": "2020-10-21 08:45:32.947000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 12,
+          "EventID": 10,
+          "TimeCreated": "2020-10-21 08:45:32.948000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 10,
+          "EventID": 13,
+          "TimeCreated": "2020-10-21 08:45:32.948000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\\C"
+        },
+        {
+          "idx": 9,
+          "EventID": 10,
+          "TimeCreated": "2020-10-21 08:45:32.948000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 11,
+          "EventID": 13,
+          "TimeCreated": "2020-10-21 08:45:32.948000+00:00",
+          "Image": "C:\\windows\\Explorer.EXE",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKU\\S-1-5-21-3940915590-64593676-1414006259-500\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\\C"
+        },
+        {
+          "idx": 7,
+          "EventID": 10,
+          "TimeCreated": "2020-10-21 08:45:32.948000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 6,
+          "EventID": 10,
+          "TimeCreated": "2020-10-21 08:45:32.948000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 8,
+          "EventID": 10,
+          "TimeCreated": "2020-10-21 08:45:32.948000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 13,
+          "EventID": 10,
+          "TimeCreated": "2020-10-21 08:45:32.950000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 14,
+          "EventID": 10,
+          "TimeCreated": "2020-10-21 08:45:32.950000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 15,
+          "EventID": 10,
+          "TimeCreated": "2020-10-21 08:45:32.950000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 16,
+          "EventID": 10,
+          "TimeCreated": "2020-10-21 08:45:32.951000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1543.003",
+      "gt_technique_name": "PowerShell",
+      "gt_tactic": "Persistence",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1059.001)"
+    },
+    {
+      "group_id": "T1070_001_0",
+      "rule_technique_id": "T1070.001",
+      "rule_technique_name": "Clear Windows Event Logs",
+      "confidence": 0.75,
+      "anchor": {
+        "idx": 0,
+        "EventID": 1102,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-21 08:45:31.791000+00:00"
+      },
+      "num_events": 10,
+      "event_id_distribution": {
+        "4688": 4,
+        "1": 4,
+        "1102": 1,
+        "104": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 0,
+          "EventID": 1102,
+          "TimeCreated": "2020-10-21 08:45:31.791000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1,
+          "EventID": 104,
+          "TimeCreated": "2020-10-21 08:45:31.837000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 24,
+          "EventID": 4688,
+          "TimeCreated": "2020-10-21 08:45:33.684000+00:00",
+          "Image": "nan",
+          "CommandLine": "sc  config Fax binPath= \"C:\\windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe -noexit -c \\\"write-host 'T1543.003 Test'\\\"\"",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 27,
+          "EventID": 1,
+          "TimeCreated": "2020-10-21 08:45:33.686000+00:00",
+          "Image": "C:\\Windows\\System32\\sc.exe",
+          "CommandLine": "sc  config Fax binPath= \"C:\\windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe -noexit -c \\\"write-host 'T1543.003 Test'\\\"\"",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 41,
+          "EventID": 4688,
+          "TimeCreated": "2020-10-21 08:45:35.266000+00:00",
+          "Image": "nan",
+          "CommandLine": "sc  start Fax",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 43,
+          "EventID": 1,
+          "TimeCreated": "2020-10-21 08:45:35.268000+00:00",
+          "Image": "C:\\Windows\\System32\\sc.exe",
+          "CommandLine": "sc  start Fax",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 62,
+          "EventID": 4688,
+          "TimeCreated": "2020-10-21 08:45:35.280000+00:00",
+          "Image": "nan",
+          "CommandLine": "C:\\windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe -noexit -c \"write-host 'T1543.003 Test'\"",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 64,
+          "EventID": 1,
+          "TimeCreated": "2020-10-21 08:45:35.288000+00:00",
+          "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "CommandLine": "C:\\windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe -noexit -c \"write-host 'T1543.003 Test'\"",
+          "ParentImage": "C:\\Windows\\System32\\services.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 402,
+          "EventID": 4688,
+          "TimeCreated": "2020-10-21 08:45:41.335000+00:00",
+          "Image": "nan",
+          "CommandLine": "sc  config Fax binPath= \"C:\\WINDOWS\\system32\\fxssvc.exe\" ",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 403,
+          "EventID": 1,
+          "TimeCreated": "2020-10-21 08:45:41.336000+00:00",
+          "Image": "C:\\Windows\\System32\\sc.exe",
+          "CommandLine": "sc  config Fax binPath= \"C:\\WINDOWS\\system32\\fxssvc.exe\" ",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1543.003",
+      "gt_technique_name": "Clear Windows Event Logs",
+      "gt_tactic": "Persistence",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: sample-kw+ctx(T1070.001,c=0.75)"
+    }
+  ]
+}

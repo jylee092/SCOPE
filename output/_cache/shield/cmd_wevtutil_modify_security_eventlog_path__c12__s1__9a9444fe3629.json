@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The process CompatTelRunner.exe is performing legitimate system inventory and compatibility assessment tasks, creating and setting registry keys related to device and driver inventory, and loading devinv.dll, all of which are expected behaviors for this Windows telemetry component.\"\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[lsass.exe|{469f82d3-8b4]\"\n  ],\n  \"rationale\": \"The lsass.exe process is performing unusual direct modifications to the W32Time service's secure time limit registry keys, which is not its typical function and could indicate compromise or an attempt to manipulate system time.\"\n}"}

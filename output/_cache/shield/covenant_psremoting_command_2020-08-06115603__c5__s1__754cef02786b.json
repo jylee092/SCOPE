@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[System|{49a15388-5c3]\"\n  ],\n  \"rationale\": \"The System process is observed making network connections to ports 5985 (WinRM) and 445 (SMB), which are commonly abused by attackers for lateral movement and remote execution.\"\n}"}

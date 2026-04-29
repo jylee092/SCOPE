@@ -1,0 +1,302 @@
+{
+  "scenario": "empire_shell_net_local_users_2020-09-21192606",
+  "tactic_sequence": [
+    "Discovery",
+    "Initial Access",
+    "Collection",
+    "Initial Access",
+    "Collection",
+    "Impact",
+    "Initial Access",
+    "Impact"
+  ],
+  "technique_sequence": [
+    "T1033",
+    "T1133",
+    "T1074",
+    "T1133",
+    "T1074",
+    "T1531",
+    "T1133",
+    "T1531"
+  ],
+  "per_group_topk": [
+    [
+      "T1033",
+      "T1087.001",
+      "T1074.001",
+      "T1588.003",
+      "T0864"
+    ],
+    [
+      "T1033",
+      "T1087.001",
+      "T1074.001",
+      "T1560.001",
+      "T1005"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110",
+      "T1560.001",
+      "T1074.001"
+    ],
+    [
+      "T1074",
+      "T1213.006",
+      "T1115",
+      "T1074.001",
+      "T1005"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110",
+      "T1074.001",
+      "T1560.001"
+    ],
+    [
+      "T1074",
+      "T1074.001",
+      "T1071",
+      "T1213.006",
+      "T1005"
+    ],
+    [
+      "T1531",
+      "T1005",
+      "T1074.001",
+      "T1074",
+      "T1560.001"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110",
+      "T1560.001",
+      "T1074"
+    ],
+    [
+      "T1531",
+      "T1665",
+      "T1105",
+      "T1074",
+      "T1071.001"
+    ]
+  ],
+  "notes": {
+    "n_alerts": 9,
+    "n_sigma_alerts": 9,
+    "n_deepag_top1_used": 2,
+    "alerts": [
+      {
+        "ts": "2020-09-21 23:26:21.517000+00:00",
+        "event_index": 143,
+        "event_id": 1,
+        "topk_tids": [
+          "T1033",
+          "T1087.001",
+          "T1074.001",
+          "T1588.003",
+          "T0864"
+        ],
+        "topk_tactics": [
+          "Discovery",
+          "Discovery",
+          "Collection",
+          "",
+          ""
+        ],
+        "deepag_top1": "T1074.001",
+        "deepag_prob": 8.479971438646317e-05,
+        "chosen_top1": "T1033",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-09-21 23:26:21.541000+00:00",
+        "event_index": 183,
+        "event_id": 1,
+        "topk_tids": [
+          "T1033",
+          "T1087.001",
+          "T1074.001",
+          "T1560.001",
+          "T1005"
+        ],
+        "topk_tactics": [
+          "Discovery",
+          "Discovery",
+          "Collection",
+          "Collection",
+          "Collection"
+        ],
+        "deepag_top1": "T1074.001",
+        "deepag_prob": 0.0019783410243690014,
+        "chosen_top1": "T1033",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-09-21 23:26:50.694000+00:00",
+        "event_index": 350,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110",
+          "T1560.001",
+          "T1074.001"
+        ],
+        "topk_tactics": [
+          "Initial Access",
+          "Initial Access",
+          "Credential Access",
+          "Collection",
+          "Collection"
+        ],
+        "deepag_top1": "T1560.001",
+        "deepag_prob": 0.09379147738218307,
+        "chosen_top1": "T1133",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-09-21 23:26:50.695000+00:00",
+        "event_index": 352,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1074",
+          "T1213.006",
+          "T1115",
+          "T1074.001",
+          "T1005"
+        ],
+        "topk_tactics": [
+          "Collection",
+          "Collection",
+          "Collection",
+          "Collection",
+          "Collection"
+        ],
+        "deepag_top1": "T1074",
+        "deepag_prob": 0.8547391295433044,
+        "chosen_top1": "T1074",
+        "chosen_src": "deepag"
+      },
+      {
+        "ts": "2020-09-21 23:27:03.986000+00:00",
+        "event_index": 881,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110",
+          "T1074.001",
+          "T1560.001"
+        ],
+        "topk_tactics": [
+          "Initial Access",
+          "Initial Access",
+          "Credential Access",
+          "Collection",
+          "Collection"
+        ],
+        "deepag_top1": "T1074.001",
+        "deepag_prob": 0.3569622337818146,
+        "chosen_top1": "T1133",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-09-21 23:27:03.991000+00:00",
+        "event_index": 897,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1074",
+          "T1074.001",
+          "T1071",
+          "T1213.006",
+          "T1005"
+        ],
+        "topk_tactics": [
+          "Collection",
+          "Collection",
+          "Command and Control",
+          "Collection",
+          "Collection"
+        ],
+        "deepag_top1": "T1074",
+        "deepag_prob": 0.8223615288734436,
+        "chosen_top1": "T1074",
+        "chosen_src": "deepag"
+      },
+      {
+        "ts": "2020-09-21 23:27:03.992000+00:00",
+        "event_index": 899,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531",
+          "T1005",
+          "T1074.001",
+          "T1074",
+          "T1560.001"
+        ],
+        "topk_tactics": [
+          "Impact",
+          "Collection",
+          "Collection",
+          "Collection",
+          "Collection"
+        ],
+        "deepag_top1": "T1005",
+        "deepag_prob": 0.30321604013442993,
+        "chosen_top1": "T1531",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-09-21 23:27:03.993000+00:00",
+        "event_index": 901,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110",
+          "T1560.001",
+          "T1074"
+        ],
+        "topk_tactics": [
+          "Initial Access",
+          "Initial Access",
+          "Credential Access",
+          "Collection",
+          "Collection"
+        ],
+        "deepag_top1": "T1560.001",
+        "deepag_prob": 0.08771058171987534,
+        "chosen_top1": "T1133",
+        "chosen_src": "sigma"
+      },
+      {
+        "ts": "2020-09-21 23:27:14.385000+00:00",
+        "event_index": 1754,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531",
+          "T1665",
+          "T1105",
+          "T1074",
+          "T1071.001"
+        ],
+        "topk_tactics": [
+          "Impact",
+          "Command and Control",
+          "Command and Control",
+          "Collection",
+          "Command and Control"
+        ],
+        "deepag_top1": "T1665",
+        "deepag_prob": 0.09733803570270538,
+        "chosen_top1": "T1531",
+        "chosen_src": "sigma"
+      }
+    ]
+  }
+}

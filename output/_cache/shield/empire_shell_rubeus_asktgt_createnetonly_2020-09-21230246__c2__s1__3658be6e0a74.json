@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The community shows two svchost.exe processes creating and setting values in the HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\VFUProvider registry key, which appears to be normal system service activity without any notable command lines or other suspicious indicators.\"\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed processes, command lines, file/registry interactions, and network connections appear to be legitimate activities associated with a Windows system, likely an Azure VM, and do not match known attack patterns or indicators of compromise.\"\n}"}

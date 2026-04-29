@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed registry modifications by svchost.exe are related to audio configuration and do not match any known attack patterns or suspicious indicators, and no command-line arguments were provided to suggest malicious activity.\"\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[dllhost.exe|{39e4a257-1e9]\"\n  ],\n  \"rationale\": \"The dllhost.exe process wrote a suspiciously named file 'malcorp' into a system directory and created an App Paths registry entry, which are strong indicators of malware dropping and potential persistence.\"\n}"}

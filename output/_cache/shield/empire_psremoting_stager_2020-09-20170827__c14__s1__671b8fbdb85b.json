@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed registry modifications by lsass.exe to HKLM\\\\System\\\\CurrentControlSet\\\\Services\\\\W32Time\\\\SecureTimeLimits keys are consistent with normal system operations related to time synchronization and do not exhibit any known attack patterns or suspicious indicators.\"\n}"}

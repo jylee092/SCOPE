@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities, including the command line for WmiPrvSE.exe, its parent process (svchost.exe), loaded modules, and registry interactions, are consistent with normal Windows operating system behavior and do not indicate any known attack patterns.\"\n}"}

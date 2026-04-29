@@ -1,0 +1,179 @@
+{
+  "scenario": "cmd_stop_event_logging_controlset001_minint_key",
+  "tactic_sequence": [
+    "Defense Evasion",
+    "Privilege Escalation",
+    "Impact",
+    "Execution",
+    "Defense Evasion",
+    "Persistence"
+  ],
+  "technique_sequence": [
+    "T1036",
+    "T1078",
+    "T1531",
+    "T1204.002",
+    "T1202",
+    "T1562.002"
+  ],
+  "per_group_topk": [
+    [
+      "T1036"
+    ],
+    [
+      "T1078",
+      "T1190",
+      "T1133"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1204.002"
+    ],
+    [
+      "T1202"
+    ],
+    [
+      "T1562.002",
+      "T1112"
+    ],
+    [
+      "T1562.002",
+      "T1112"
+    ]
+  ],
+  "notes": {
+    "n_events_evaluated": 15772,
+    "n_alerts": 7,
+    "alerts": [
+      {
+        "ts": "2022-08-03 07:30:15.546000+00:00",
+        "event_index": 3329,
+        "event_id": 11,
+        "topk_tids": [
+          "T1036"
+        ],
+        "topk_tactics": [
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "b8fd0e93-ff58-4cbd-8f48-1c114e342e62",
+          "title": "Windows Binaries Write Suspicious Extensions",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2022-08-03 07:30:20.441000+00:00",
+        "event_index": 5152,
+        "event_id": 4625,
+        "topk_tids": [
+          "T1078",
+          "T1190",
+          "T1133"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "f88e112a-21aa-44bd-9b01-6ee2a2bbbed1",
+          "title": "Failed Logon From Public IP",
+          "level": "medium",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2022-08-03 07:30:20.449000+00:00",
+        "event_index": 5179,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2022-08-03 07:30:21.110000+00:00",
+        "event_index": 5402,
+        "event_id": 13,
+        "topk_tids": [
+          "T1204.002"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "60936b49-fca0-4f32-993d-7415edcf9a5d",
+          "title": "New Application in AppCompat",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2022-08-03 07:30:40.132000+00:00",
+        "event_index": 10784,
+        "event_id": 1,
+        "topk_tids": [
+          "T1202"
+        ],
+        "topk_tactics": [
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "3037d961-21e9-4732-b27a-637bcc7bf539",
+          "title": "Suspicious High IntegrityLevel Conhost Legacy Option",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2022-08-03 07:31:26.797000+00:00",
+        "event_index": 14645,
+        "event_id": 12,
+        "topk_tids": [
+          "T1562.002",
+          "T1112"
+        ],
+        "topk_tactics": [
+          "Persistence",
+          "Persistence"
+        ],
+        "top_rule": {
+          "rule_id": "919f2ef0-be2d-4a7a-b635-eb2b41fde044",
+          "title": "Disable Security Events Logging Adding Reg Key MiniNt",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2022-08-03 07:31:26.797000+00:00",
+        "event_index": 14646,
+        "event_id": 13,
+        "topk_tids": [
+          "T1562.002",
+          "T1112"
+        ],
+        "topk_tactics": [
+          "Persistence",
+          "Persistence"
+        ],
+        "top_rule": {
+          "rule_id": "8839e550-52d7-4958-9f2f-e13c1e736838",
+          "title": "Security Event Logging Disabled via MiniNt Registry Key - Registry Set",
+          "level": "high",
+          "status": "experimental"
+        }
+      }
+    ]
+  }
+}

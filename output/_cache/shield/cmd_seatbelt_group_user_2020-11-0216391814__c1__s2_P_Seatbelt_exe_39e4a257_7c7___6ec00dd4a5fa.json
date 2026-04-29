@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"Execution of Seatbelt.exe, a known offensive security and enumeration tool, which is not a standard Windows binary and is often used in post-exploitation scenarios.\",\n  \"indicators\": [\n    \"Seatbelt.exe\",\n    \"Enumeration tool\",\n    \"Red team tool\",\n    \"Post-exploitation\"\n  ]\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed process activities, command lines, DLL loads, and registry operations are consistent with normal Windows service management by services.exe and svchost.exe, specifically for the legitimate SmsRouter service and other per-user services.\"\n}"}

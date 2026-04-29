@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The powershell.exe process is performing numerous registry operations related to system certificates and writing temporary script policy test files, which are common legitimate system activities, and no suspicious command-line arguments were observed.\"\n}"}

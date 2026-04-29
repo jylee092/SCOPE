@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The process P[Microsoft.Photos.exe|{19de6d3b-0b1] exhibits normal behavior, loading standard Windows DLLs and performing registry operations within its own application-specific LocalState, with no suspicious command lines, child processes, file writes, or network connections observed.\"\n}"}

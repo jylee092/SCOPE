@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities for svchost.exe and SearchUI.exe, including registry operations, DLL loads, pipe creations, and network connections to Microsoft domains, are consistent with normal Windows system and application behavior, with no notable command lines provided to indicate otherwise.\"\n}"}

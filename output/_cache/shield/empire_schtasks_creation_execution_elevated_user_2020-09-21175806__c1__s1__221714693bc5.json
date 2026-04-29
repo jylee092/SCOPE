@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[svchost.exe|{b34bc01c-1f9]\"\n  ],\n  \"rationale\": \"The process P[svchost.exe|{b34bc01c-1f9] created a scheduled task named 'MordorElevated' in C:\\\\Windows\\\\System32\\\\Tasks, which is a highly unusual and non-standard task name indicative of malicious persistence or privilege escalation.\"\n}"}

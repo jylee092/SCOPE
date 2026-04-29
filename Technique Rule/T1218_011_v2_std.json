@@ -1,0 +1,276 @@
+{
+  "technique": {
+    "id": "T1218.011",
+    "name": "Rundll32"
+  },
+  "detection": {
+    "id": "DET0475"
+  },
+  "analysis": {
+    "id": "AN1308"
+  },
+  "_data_notes": {
+    "dataset": "psh_lsass_memory_dump_comsvcs_2020-10-18",
+    "attack_vector": "\"C:\\Windows\\System32\\rundll32.exe\" C:\\windows\\System32\\comsvcs.dll MiniDump 756 C:\\Users\\wardog\\AppData\\Local\\Temp\\lsass-comsvcs.dmp full",
+    "parent_process": "powershell.exe (ParentProcessGuid: {39e4a257-d445-5f8c-2c03-000000000700})",
+    "rundll32_processguid": "{39e4a257-d4ad-5f8c-3303-000000000700}",
+    "integrity_level": "High",
+    "timing": {
+      "EID_1_create": "07:50:05.917",
+      "EID_7_first_dll": "07:50:05.918 (EID 1 이후 0.001초)",
+      "EID_10_lsass": "07:50:06.001 (EID 1 이후 0.084초)",
+      "EID_11_dmp": "07:50:06.001",
+      "EID_4689_exit": "07:50:06.220 (총 실행시간 0.303초)"
+    },
+    "dlls_loaded_total": 29,
+    "key_dlls_observed": ["comsvcs.dll", "dbgcore.dll", "dbghelp.dll", "imagehlp.dll", "verifier.dll", "psapi.dll"],
+    "process_access_TO_rundll32_observed": [
+      "csrss.exe → rundll32.exe (0x1fffff, 정상 시스템)",
+      "powershell.exe → rundll32.exe (0x1fffff, 부모-자식)",
+      "svchost.exe → rundll32.exe (0x1400, 0x1478)",
+      "Explorer.EXE → rundll32.exe (0x1000)"
+    ],
+    "process_access_FROM_rundll32_observed": [
+      "rundll32.exe → lsass.exe (0x1410, T1003.001 직접 연계)",
+      "rundll32.exe → lsass.exe (0x1fffff)"
+    ]
+  },
+  "log_sources": {
+    "Anchor Event": {
+      "_origin": "원본 보존 — 원본에서 Anchor 미지정이나 rundll32 프로세스 생성이 탐지 시작점으로 Anchor 분류",
+      "data_component": {
+        "id": "DC0032",
+        "name": "Process Creation"
+      },
+      "source": "WinEventLog:Sysmon",
+      "channel": {
+        "event_codes": [1]
+      },
+      "conditions": [
+        {
+          "type": "suspicious_cmdline",
+          "filters": {
+            "Image": {"endswith": "rundll32.exe"},
+            "CommandLine": {
+              "contains_any": ["comsvcs.dll", "MiniDump", "javascript:", "vbscript:", ".dll,#"],
+              "note": "실제 데이터: 'comsvcs.dll MiniDump {PID} {path} full' 패턴. mutable_elements.allowed_dlls와 대조."
+            }
+          },
+          "description": "CommandLine에 의심 DLL/함수명 포함 — 가장 강한 시그니처."
+        },
+        {
+          "type": "suspicious_parent",
+          "filters": {
+            "Image": {"endswith": "rundll32.exe"},
+            "ParentImage": {
+              "contains_any": ["powershell.exe", "pwsh.exe", "cmd.exe", "wscript.exe", "cscript.exe", "mshta.exe", "winword.exe", "excel.exe", "outlook.exe"],
+              "note": "실제 데이터: ParentImage=powershell.exe 확인. mutable_elements.parent_process_filter 목록 적용."
+            }
+          },
+          "description": "의심 부모에서 rundll32 생성. CommandLine 불확실 시 보조 Anchor 조건."
+        }
+      ],
+      "description": "rundll32.exe 프로세스 생성. CommandLine 또는 ParentImage 기반으로 악용 여부 판단."
+    },
+    "Supporting Events": [
+      {
+        "_origin": "원본 보존",
+        "_role": "Supporting",
+        "data_component": {
+          "id": "DC0016",
+          "name": "Module Load"
+        },
+        "source": "WinEventLog:Sysmon",
+        "channel": {
+          "event_codes": [7]
+        },
+        "filters": {
+          "Image": {"endswith": "rundll32.exe"},
+          "ImageLoaded": {
+            "not_in": ["shell32.dll", "appwiz.cpl", "sysdm.cpl", "inetcpl.cpl"],
+            "note": "mutable_elements.allowed_dlls 목록과 대조하여 비정상 DLL 로드 식별. 실제 데이터에서 comsvcs.dll, dbghelp.dll 등 29개 DLL 로드 관측."
+          }
+        },
+        "correlation": {
+          "key": "ProcessGuid",
+          "note": "실제 데이터: EID 1 이후 0.001초에 첫 DLL 로드 시작."
+        },
+        "description": "rundll32이 로드한 DLL. comsvcs.dll → 덤프, mshtml.dll/jscript.dll → 스크립트 실행, winhttp.dll → 네트워크. mutable_elements.allowed_dlls 목록 대조 필수."
+      },
+      {
+        "_origin": "원본 보존",
+        "_role": "Supporting",
+        "data_component": {
+          "id": "DC0039",
+          "name": "File Creation"
+        },
+        "source": "WinEventLog:Sysmon",
+        "channel": {
+          "event_codes": [11]
+        },
+        "filters": {
+          "Image": {"endswith": "rundll32.exe"},
+          "TargetFilename": {
+            "contains_any": [".dmp", ".dll", "AppData\\Local\\Temp", "C:\\Windows\\Temp", "C:\\ProgramData"],
+            "note": "실제 데이터: rundll32.exe → lsass-comsvcs.dmp 생성 (EID 10과 동일 타임스탬프)."
+          }
+        },
+        "correlation": {
+          "key": "ProcessGuid"
+        },
+        "description": "rundll32이 생성한 파일. .dmp 파일 생성은 T1003.001의 직접 증거. EID 10(lsass 접근)과 함께 발생 시 신뢰도 High."
+      },
+      {
+        "_origin": "원본 보존",
+        "_role": "Supporting",
+        "_role_note": "원본에 Anchor/Supporting 미구분. rundll32의 네트워크 행위는 C2/다운로드 시나리오 포착용으로 Supporting 분류. 이 데이터셋에서는 관측 없음.",
+        "data_component": {
+          "id": "DC0082",
+          "name": "Network Connection Creation"
+        },
+        "source": "WinEventLog:Sysmon",
+        "channel": {
+          "event_codes": [3, 22]
+        },
+        "filters": {
+          "Image": {"endswith": "rundll32.exe"},
+          "note": "원본에 필터 미정의. mutable_elements.external_ip_range와 대조하여 아웃바운드 연결 필터링 권장. 이 데이터셋 미관측."
+        },
+        "correlation": {
+          "key": "ProcessGuid"
+        },
+        "description": "rundll32의 네트워크 연결/DNS 쿼리. C2 또는 원격 DLL 다운로드 시나리오. mutable_elements.external_ip_range 목록 적용."
+      },
+      {
+        "_origin": "원본 보존",
+        "_role": "Supporting",
+        "_role_note": "원본에 Anchor/Supporting 미구분. 레지스트리 변조는 rundll32 악용 후속 행위로 Supporting 분류. 이 데이터셋에서 Sysmon EID 13/14는 관측 없음 (Security EID 4656/4663에서 HKLM\\Control\\Lsa 접근은 관측).",
+        "data_component": {
+          "id": "DC0063",
+          "name": "Windows Registry Key Modification"
+        },
+        "source": "WinEventLog:Sysmon",
+        "channel": {
+          "event_codes": [13, 14]
+        },
+        "filters": {
+          "Image": {"endswith": "rundll32.exe"},
+          "note": "원본에 필터 미정의. TargetObject 경로 기반 필터 추후 보강 필요. 이 데이터셋에서 Security 채널 EID 4656/4663(HKLM\\Control\\Lsa)은 관측되었으나 Sysmon EID 13/14는 미관측."
+        },
+        "correlation": {
+          "key": "ProcessGuid"
+        },
+        "description": "rundll32이 수행한 레지스트리 변조. 지속성 확보(Run 키) 또는 보안 설정 변경(LSA) 행위 포착."
+      },
+      {
+        "_origin": "데이터 기반 추가",
+        "_role": "Supporting",
+        "data_component": {
+          "id": "DC0035",
+          "name": "Process Access — rundll32 as Source"
+        },
+        "source": "WinEventLog:Sysmon",
+        "channel": {
+          "event_codes": [10]
+        },
+        "filters": {
+          "SourceProcessGUID": {
+            "equals": "Anchor.ProcessGuid"
+          },
+          "TargetImage": {
+            "contains_any": ["lsass.exe", "winlogon.exe", "svchost.exe"]
+          },
+          "direction_note": "rundll32 → TargetImage 방향만 유효. 반대 방향(csrss/powershell/svchost/Explorer → rundll32)은 정상 시스템 모니터링 행위 — Supporting 제외."
+        },
+        "description": "rundll32이 다른 프로세스 메모리에 접근. 실제 데이터: rundll32.exe → lsass.exe (0x1410, 0x1fffff) — T1003.001 직접 연계 지표."
+      },
+      {
+        "_origin": "데이터 기반 추가",
+        "_role": "Supporting",
+        "data_component": {
+          "id": "DC0063_security",
+          "name": "Registry Key Access (Security, LSA)"
+        },
+        "source": "WinEventLog:Security",
+        "channel": {
+          "event_codes": [4656, 4663]
+        },
+        "filters": {
+          "ProcessName": {"endswith": "rundll32.exe"},
+          "ObjectType": "Key",
+          "ObjectName": {"contains": "\\Control\\Lsa"}
+        },
+        "description": "rundll32의 LSA 레지스트리 키 접근. 실제 데이터: EID 4656/4663에서 rundll32.exe → HKLM\\ControlSet001\\Control\\Lsa 접근 관측. 자격증명 관련 설정 조회 시사."
+      }
+    ]
+  },
+  "mutable_elements": {
+    "time_window": {
+      "type": "object",
+      "description": "Correlate rundll32 invocation with DLL load or network activity within a configurable time window. 실제 데이터: EID 1 → EID 10 → EID 11이 0.08초 내 완료. EID 7은 EID 1 이후 즉시 발생.",
+      "properties": {
+        "window_seconds": {
+          "type": "integer",
+          "minimum": 1,
+          "examples": [10, 30, 60, 120]
+        }
+      },
+      "required": ["window_seconds"],
+      "additional_properties": false
+    },
+    "parent_process_filter": {
+      "type": "array",
+      "description": "List of suspicious parent processes used to scope detection. 실제 데이터: powershell.exe 확인.",
+      "items": {
+        "type": "string",
+        "examples": [
+          "powershell.exe",
+          "pwsh.exe",
+          "explorer.exe",
+          "winword.exe",
+          "excel.exe",
+          "outlook.exe",
+          "mshta.exe",
+          "cmd.exe"
+        ]
+      },
+      "min_items": 1
+    },
+    "allowed_dlls": {
+      "type": "array",
+      "description": "Baseline list of legitimate DLLs frequently executed by rundll32 in the environment. 이 목록에 없는 DLL 로드 시 탐지.",
+      "items": {
+        "type": "string",
+        "examples": [
+          "shell32.dll",
+          "appwiz.cpl",
+          "sysdm.cpl",
+          "inetcpl.cpl",
+          "comsvcs.dll"
+        ]
+      },
+      "min_items": 1
+    },
+    "external_ip_range": {
+      "type": "array",
+      "description": "External IP ranges considered anomalous when contacted by rundll32.exe",
+      "items": {
+        "type": "string",
+        "examples": [
+          "0.0.0.0/0",
+          "8.8.8.0/24",
+          "185.0.0.0/8",
+          "Unknown-ASN",
+          "Non-Corporate-IP"
+        ]
+      },
+      "min_items": 1
+    },
+    "semantic_templates": {
+      "lsass_dump": "계정({User})이 rundll32.exe를 통해 comsvcs.dll MiniDump 함수로 LSASS 메모리 덤프를 실행함. 부모 프로세스: {ParentImage}. 덤프 파일: {TargetFilename}. Living-off-the-Land 자격증명 탈취 기법.",
+      "suspicious_parent": "프로세스({ParentImage})가 rundll32.exe를 생성함 (CommandLine: {CommandLine}). LOLBin 악용 또는 우회 실행 가능성.",
+      "dll_load_anomaly": "rundll32.exe({ProcessGuid})가 비정상 DLL({ImageLoaded})을 로드함. allowed_dlls 목록 미포함.",
+      "chain_detection": "T1059.001(powershell.exe) → T1218.011(rundll32.exe comsvcs.dll MiniDump) → T1003.001(lsass.exe 접근 + .dmp 생성) 공격 체인이 {Hostname}에서 탐지됨."
+    }
+  }
+}

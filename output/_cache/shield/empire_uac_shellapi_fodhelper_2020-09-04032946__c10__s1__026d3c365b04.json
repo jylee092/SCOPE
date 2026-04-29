@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe processes are interacting with a non-standard registry key (VFUProvider), but without command-line arguments, child processes, network activity, or interaction with known malicious registry locations, the observed behavior does not definitively match a known attack pattern.\"\n}"}

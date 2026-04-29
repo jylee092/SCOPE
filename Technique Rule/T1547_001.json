@@ -1,0 +1,61 @@
+{
+  "technique": { "id": "T1547.001", "name": "Registry Run Keys / Startup Folder" },
+  "detection": { "id": "DET-T1547001" },
+  "analysis": { "id": "AN-T1547001" },
+  "log_sources": {
+    "Anchor Event": {
+      "data_component": { "id": "DC0063", "name": "Windows Registry Key Modification" },
+      "description": "Autostart Run/RunOnce/RunOnceEx 키에 프로그램 경로를 쓰는 이벤트.",
+      "conditions": [
+        {
+          "type": "registry_run_key_write",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [12, 13, 14] },
+          "filters": {
+            "TargetObject": {
+              "contains_any": [
+                "\\CurrentVersion\\Run\\",
+                "\\CurrentVersion\\RunOnce\\",
+                "\\CurrentVersion\\RunOnceEx\\",
+                "\\CurrentVersion\\RunServices\\",
+                "\\CurrentVersion\\RunServicesOnce\\",
+                "\\Explorer\\Run\\",
+                "\\Explorer\\StartupApproved\\Run"
+              ]
+            }
+          },
+          "description": "Run/RunOnce 등 자동 실행 레지스트리 키 쓰기. fodhelper와 구분되는 직접 persistence."
+        },
+        {
+          "type": "registry_run_key_security",
+          "source": "WinEventLog:Security",
+          "channel": { "event_codes": [4657] },
+          "filters": {
+            "ObjectName": { "contains_any": ["\\Run", "\\RunOnce"] }
+          },
+          "description": "Security 채널 레지스트리 값 변경 이벤트 fallback."
+        }
+      ]
+    },
+    "Supporting Events": [
+      { "data_component": { "id": "DC0039", "name": "File Creation" }, "source": "WinEventLog:Sysmon", "channel": { "event_codes": [11] }, "description": "Run 키에 등록될 페이로드 파일 드롭" },
+      { "data_component": { "id": "DC0032", "name": "Process Creation" }, "source": "WinEventLog:Sysmon", "channel": { "event_codes": [1] }, "description": "Run 키를 쓰는 주체 프로세스" },
+      { "data_component": { "id": "DC0032", "name": "Process Creation" }, "source": "WinEventLog:Security", "channel": { "event_codes": [4688] } }
+    ]
+  },
+  "mutable_elements": {
+    "grouping_logic": {
+      "primary_anchor_eids": [12, 13, 14],
+      "correlation_key": { "primary": ["Hostname", "ProcessGuid"], "secondary": ["norm_logon_id"], "fallback": ["Hostname"] },
+      "time_window": { "before_seconds": 30, "after_seconds": 60, "note": "파일 드롭 후 레지스트리 쓰기까지의 간격 포함" }
+    },
+    "feature_extraction_filters": {
+      "suspicious_payload_paths": ["\\AppData\\", "\\Temp\\", "\\ProgramData\\", "\\Public\\", "\\Users\\Public\\"],
+      "legitimate_value_allowlist": ["OneDrive", "SecurityHealth", "Adobe", "Microsoft Edge"],
+      "description": "쓰기된 값(Details)의 경로가 suspicious_payload_paths에 포함되면 가중치 증가."
+    },
+    "semantic_templates": {
+      "run_key_persistence": "프로세스({Image})가 자동 실행 레지스트리 키({TargetObject})에 페이로드 경로({Details})를 등록함. 다음 로그온 시 자동 실행 예정."
+    }
+  }
+}

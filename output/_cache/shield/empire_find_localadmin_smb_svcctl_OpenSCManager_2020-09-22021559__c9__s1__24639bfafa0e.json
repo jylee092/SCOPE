@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities, including DLL loads, registry modifications, and named pipe connections, are consistent with the legitimate functions of RuntimeBroker.exe, and no suspicious command lines, unusual child processes, or persistence attempts were identified.\"\n}"}

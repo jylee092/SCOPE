@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[lsass.exe|{b34bc01c-226]\"\n  ],\n  \"rationale\": \"The lsass.exe process, a critical system component, made an unusual registry modification and initiated an outbound network connection to port 88 (Kerberos), which is highly indicative of credential theft or other post-exploitation activity.\"\n}"}

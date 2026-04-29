@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The System process connecting to port 445 and writing to an ETW log file in a standard WMI/ETW directory are normal system behaviors, and no suspicious command lines or other indicators were observed.\"\n}"}

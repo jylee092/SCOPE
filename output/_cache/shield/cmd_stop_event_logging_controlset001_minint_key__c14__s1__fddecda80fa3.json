@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[System|{625b42a0-6b1]\"\n  ],\n  \"rationale\": \"The System process performed an unusual modification to the HKLM\\\\System\\\\CurrentControlSet\\\\Control\\\\ProductOptions\\\\ProductPolicy registry key, which is critical for Windows licensing and system integrity.\"\n}"}

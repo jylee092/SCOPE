@@ -1,0 +1,1 @@
+{"text": "{\n  \"confidence_score\": 0.95,\n  \"attack_summary\": \"Multiple WmiPrvSE.exe processes and an associated svchost.exe process were observed repeatedly connecting to the 'lsass' named pipe, a known technique for credential dumping. One WmiPrvSE.exe instance also loaded 'dxgi.dll', an unusual module for a WMI provider host, indicating potential"}

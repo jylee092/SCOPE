@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities for Explorer.EXE, including registry modifications, file writes to the themes cache, and DLL loads, are consistent with normal user interaction and legitimate Windows operating system functions, with no suspicious command lines or unusual resource access patterns identified.\"\n}"}

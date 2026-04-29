@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[dns.exe|{47b21e2e-953]\"\n  ],\n  \"rationale\": \"The dns.exe process, a legitimate Windows service, is making an unusually high number of outbound network connections to various high-numbered ports, which is atypical behavior for a DNS server and suggests potential data exfiltration or command-and-control communication.\"\n}"}

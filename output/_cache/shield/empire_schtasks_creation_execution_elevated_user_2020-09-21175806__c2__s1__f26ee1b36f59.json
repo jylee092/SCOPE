@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[wevtutil.exe|{b34bc01c-225]\",\n    \"P[logman.exe|{b34bc01c-228]\"\n  ],\n  \"rationale\": \"The 'wevtutil.exe um' command is suspicious as it can be used to uninstall event manifests,"}

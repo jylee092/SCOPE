@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed processes exhibit normal behavior, with standard command lines, DLL loads, registry interactions, and named pipe connections typical for legitimate Windows system operations, and no explicit execution events or command lines are provided for 'whoami.exe' or 'cmd.exe'.\"\n}"}

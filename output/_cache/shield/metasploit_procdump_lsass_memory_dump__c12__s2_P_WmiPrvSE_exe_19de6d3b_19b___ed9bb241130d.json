@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": false,\n  \"deviation\": \"\",\n  \"indicators\": [\n    \"WmiPrvSE.exe\",\n    \"svchost.exe\",\n    \"WMI\",\n    \"system process\",\n    \"standard command line\",\n    \"legitimate DLLs\",\n    \"normal registry access\",\n    \"standard pipe connections\"\n  ]\n}"}

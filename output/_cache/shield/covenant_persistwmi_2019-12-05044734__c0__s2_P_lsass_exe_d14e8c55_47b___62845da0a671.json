@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": false,\n  \"deviation\": \"\",\n  \"indicators\": [\n    \"lsass.exe\",\n    \"HFDC01.shire.com:389\",\n    \"HFDC01.shire.com:88\",\n    \"ip-172-18-39-105.ec2.internal:49346\"\n  ]\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"fodhelper.exe is a legitimate Windows binary, but its launch by powershell.exe is a known technique for UAC bypass.\",\n  \"indicators\": [\n    \"UAC bypass\",\n    \"fodhelper.exe\",\n    \"powershell.exe\"\n  ]\n}"}

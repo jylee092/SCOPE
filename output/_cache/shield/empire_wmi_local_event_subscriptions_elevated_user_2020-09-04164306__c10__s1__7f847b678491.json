@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed processes, command lines, file/registry operations, and pipe creations are consistent with normal Windows system startup and service initialization, including Superfetch activity and the setup of legitimate user-mode services. No known attack patterns or indicators of compromise were identified.\"\n}"}

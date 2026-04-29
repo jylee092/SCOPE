@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process creating registry keys under HKU\\\\...\\\\StorageSense\\\\Parameters is normal behavior for a legitimate Windows service managing storage settings, and no other suspicious indicators like notable command lines or unusual child processes were observed.\"\n}"}

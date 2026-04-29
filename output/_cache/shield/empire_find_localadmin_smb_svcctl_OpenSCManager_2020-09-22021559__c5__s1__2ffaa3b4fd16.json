@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed activities of lsass.exe, including connecting to port 389 (LDAP) and modifying W32Time service registry keys, are consistent with its normal operation for authentication and time synchronization, and do not match common attack patterns.\"\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[dns.exe|{fddc55f3-b93]\"\n  ],\n  \"rationale\": \"The dns.exe process, typically a DNS server, is making multiple outbound network connections to high-numbered, non-standard ports, which is atypical behavior and could indicate compromise or command-and-control communication.\"\n}"}

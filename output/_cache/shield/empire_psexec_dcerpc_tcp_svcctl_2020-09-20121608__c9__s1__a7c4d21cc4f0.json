@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The provided events only show module loads for legitimate Windows utilities and common system DLLs, and without command-line arguments or other behavioral indicators like process creation relationships, file writes, or network connections, no suspicious activity can be identified.\"\n}"}

@@ -1,0 +1,15 @@
+{
+  "scenario": "empire_schtasks_creation_execution_elevated_user_2020-09-21175806",
+  "tactic_sequence": [],
+  "technique_sequence": [],
+  "per_group_topk": [],
+  "notes": {
+    "n_total_events": 59399,
+    "n_filtered_events": 31300,
+    "n_lof_anomalous": 2390,
+    "n_communities": 20,
+    "n_alerts": 0,
+    "alerts": [],
+    "elapsed_sec": 257.3
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "scenario": "empire_shell_samr_EnumDomainUsers_2020-09-21193527",
+  "tactic_sequence": [
+    "Execution"
+  ],
+  "technique_sequence": [
+    "T1059.001"
+  ],
+  "per_group_topk": [
+    [
+      "T1059.001",
+      "T1087.002"
+    ]
+  ],
+  "notes": {
+    "n_total_events": 633,
+    "n_filtered_events": 633,
+    "n_lof_anomalous": 19,
+    "n_communities": 7,
+    "n_alerts": 1,
+    "alerts": [
+      {
+        "ts": "2020-09-21 23:35:28",
+        "community_id": 4,
+        "n_members": 3,
+        "confidence": 0.75,
+        "topk_tids": [
+          "T1059.001",
+          "T1087.002"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Discovery"
+        ],
+        "kill_chain_stages": [
+          "Execution",
+          "Discovery"
+        ],
+        "summary": "A PowerShell process was observed executing `net.exe` with the `user /domain` argument, indicating reconnaissance activity to enumerate domain users. This is a common technique used by attackers for discovery. Additionally, the PowerShell process made multiple modifications to registry keys related to Internet settings and created an anonymous pipe, which could be related to further network activity or inter-process communication.",
+        "event_indices": [
+          4,
+          31,
+          65,
+          73,
+          76,
+          148,
+          219,
+          249,
+          271,
+          293,
+          362,
+          388
+        ]
+      }
+    ],
+    "elapsed_sec": 92.3
+  }
+}

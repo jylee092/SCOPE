@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The community shows SearchIndexer.exe modifying its own configuration registry keys related to file change monitoring, including setting a scope to a legitimate Windows Content Delivery Manager path, which is normal behavior for the Windows Search service and does not exhibit any known attack patterns.\"\n}"}

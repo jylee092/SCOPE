@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[wevtutil.exe|{860ba2e3-a73]\"\n  ],\n  \"rationale\": \"The process 'wevtutil.exe' is performing extensive registry modifications on event logging configuration keys (WINEVT Publishers, WMI Autologger for EventLog-Application), which is a common technique for log"}

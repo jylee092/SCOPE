@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": false,\n  \"deviation\": \"\",\n  \"indicators\": [\n    \"System process\",\n    \"Port 5985 (WinRM)\",\n    \"Port 445 (SMB)\"\n  ]\n}"}

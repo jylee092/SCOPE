@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[reg.exe|{19de6d3b-1af]\",\n    \"P[tasklist.exe|{19de6d3b-1af]\",\n    \"P[reg.exe|{19de6d3b-1ae]\",\n    \"P[gpresult.exe|{1"}

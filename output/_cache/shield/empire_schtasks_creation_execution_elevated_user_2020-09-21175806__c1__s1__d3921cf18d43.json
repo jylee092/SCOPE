@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed processes (mscorsvw.exe, ngen.exe, ngentask.exe) are legitimate .NET Framework components, and their command lines, file writes, and registry modifications are consistent with normal system optimization and Microsoft Office operations, showing no signs of known attack patterns or abuse.\"\n}"}

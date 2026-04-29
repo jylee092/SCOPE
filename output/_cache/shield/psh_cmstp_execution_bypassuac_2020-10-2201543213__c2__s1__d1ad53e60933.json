@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[powershell.exe|{39e4a257-1e6]\"\n  ],\n  \"rationale\": \"The PowerShell process made suspicious modifications to system certificate stores and established an external network connection to raw.githubusercontent.com, a common domain for hosting malicious scripts and payloads.\"\n}"}

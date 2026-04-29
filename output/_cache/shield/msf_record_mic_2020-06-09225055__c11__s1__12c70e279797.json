@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The System process connecting to standard Windows networking ports (137 for NetBIOS Name Service and 445 for SMB) is normal behavior and does not indicate suspicious activity without additional context such as unusual command lines, destination IPs, or other related events.\"\n}"}

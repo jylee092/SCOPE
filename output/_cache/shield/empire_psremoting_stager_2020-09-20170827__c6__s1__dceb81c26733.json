@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process creating registry keys under 'StorageSense\\\\Parameters' is a normal operation related to Windows Storage Sense functionality and does not indicate suspicious activity.\"\n}"}

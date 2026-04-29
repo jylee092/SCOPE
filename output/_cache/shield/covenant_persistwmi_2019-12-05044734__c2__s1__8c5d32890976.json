@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities, including DLL loads, pipe connections to \\\\wkssvc, and writes to Group Policy history files, are consistent with the legitimate operation of svchost.exe hosting standard Windows services like the Group Policy Client or Workstation service.\"\n}"}

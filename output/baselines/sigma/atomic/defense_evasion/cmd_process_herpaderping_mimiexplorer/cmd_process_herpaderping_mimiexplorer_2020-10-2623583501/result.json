@@ -1,0 +1,103 @@
+{
+  "scenario": "cmd_process_herpaderping_mimiexplorer_2020-10-2623583501",
+  "tactic_sequence": [
+    "Credential Access",
+    "Defense Evasion"
+  ],
+  "technique_sequence": [
+    "T1003.001",
+    "T1202"
+  ],
+  "per_group_topk": [
+    [
+      "T1003.001",
+      "T1003.002",
+      "T1003.004",
+      "T1003.005",
+      "T1003.006"
+    ],
+    [
+      "T1003.001",
+      "T1003.002",
+      "T1003.004",
+      "T1003.005",
+      "T1003.006"
+    ],
+    [
+      "T1202"
+    ]
+  ],
+  "notes": {
+    "n_events_evaluated": 254,
+    "n_alerts": 3,
+    "alerts": [
+      {
+        "ts": "2020-10-26 11:58:30.366000+00:00",
+        "event_index": 28,
+        "event_id": 4688,
+        "topk_tids": [
+          "T1003.001",
+          "T1003.002",
+          "T1003.004",
+          "T1003.005",
+          "T1003.006"
+        ],
+        "topk_tactics": [
+          "Credential Access",
+          "Credential Access",
+          "Credential Access",
+          "Credential Access",
+          "Credential Access"
+        ],
+        "top_rule": {
+          "rule_id": "a642964e-bead-4bed-8910-1bb4d63e3b4d",
+          "title": "HackTool - Mimikatz Execution",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-10-26 11:58:30.396000+00:00",
+        "event_index": 31,
+        "event_id": 1,
+        "topk_tids": [
+          "T1003.001",
+          "T1003.002",
+          "T1003.004",
+          "T1003.005",
+          "T1003.006"
+        ],
+        "topk_tactics": [
+          "Credential Access",
+          "Credential Access",
+          "Credential Access",
+          "Credential Access",
+          "Credential Access"
+        ],
+        "top_rule": {
+          "rule_id": "a642964e-bead-4bed-8910-1bb4d63e3b4d",
+          "title": "HackTool - Mimikatz Execution",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-10-26 11:58:30.634000+00:00",
+        "event_index": 55,
+        "event_id": 1,
+        "topk_tids": [
+          "T1202"
+        ],
+        "topk_tactics": [
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "3037d961-21e9-4732-b27a-637bcc7bf539",
+          "title": "Suspicious High IntegrityLevel Conhost Legacy Option",
+          "level": "informational",
+          "status": "test"
+        }
+      }
+    ]
+  }
+}

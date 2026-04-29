@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed activity consists solely of legitimate svchost.exe processes writing to prefetch files in the C:\\\\Windows\\\\Prefetch directory, which is normal system behavior and does not indicate any known attack patterns.\"\n}"}

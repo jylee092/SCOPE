@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The WmiPrvSE.exe process exhibits normal behavior, loading standard system DLLs, interacting with common registry paths, and connecting to legitimate named pipes (wkssvc, srvsvc), with no suspicious command-line arguments or other anomalous activities observed.\"\n}"}

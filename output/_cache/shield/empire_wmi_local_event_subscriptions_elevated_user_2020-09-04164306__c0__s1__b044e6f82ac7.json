@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[powershell.exe|{860ba2e3-a69]\",\n    \"P[WmiPrvSE.exe|{ee23f965-8a4]\"\n  ],\n  \"rationale\": \"The powershell.exe process is performing multiple registry creations in user and system network configuration paths"}

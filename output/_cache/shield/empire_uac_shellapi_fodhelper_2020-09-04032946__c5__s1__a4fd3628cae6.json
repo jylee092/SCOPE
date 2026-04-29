@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[fodhelper.exe|{3ddc5665-ed0]\"\n  ],\n  \"rationale\": \"The 'fodhelper.exe' process, a known UAC bypass binary, wrote to the BAM service's user settings registry key (HKLM\\\\System\\\\CurrentControlSet\\\\Services\\\\bam\\\\State\\\\"}

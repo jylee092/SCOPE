@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[powershell.exe|{d273d0f0-c4f]\",\n    \"P[wsmprovhost.exe|{d273d0f0-c4f]\"\n  ],\n  \"rationale\": \"The wsmprovhost.exe process launched powershell.exe with an encoded command (-enc) and created/deleted temporary PowerShell scripts, which are common techniques used by adversaries for malicious execution and evasion.\"\n}"}

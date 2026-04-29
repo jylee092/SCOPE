@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[dns.exe|{9f85ce58-59e]\",\n    \"P[svchost.exe|{297bc33e-5c3]\"\n  ],\n  \"rationale\": \"Both dns.exe and svchost.exe connected to the highly sensitive \\\\lsass named pipe, which is a strong indicator of credential dumping, and dns.exe also made multiple suspicious outbound network connections.\"\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"The process name 'happy_image.jpeg.exe' uses a deceptive double extension, masquerading as a JPEG image file while being an executable. This is a common social engineering tactic used by malware.\",\n  \"indicators\": [\n    \"double extension\",\n    \"masquerading\",\n    \"downloads folder\"\n  ]\n}"}

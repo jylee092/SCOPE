@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed processes exhibit normal behavior for their respective roles, including expected command lines, registry interactions related to Group Policy and service management, and network connections to standard ports (LDAP, Kerberos, SMB, DNS) or LSASS named pipes.\"\n}"}

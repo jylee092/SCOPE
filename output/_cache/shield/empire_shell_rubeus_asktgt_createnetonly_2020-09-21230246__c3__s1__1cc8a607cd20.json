@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The process 'usocoreworker.exe' is a legitimate Windows component, and all observed file, registry, and module loading activities are consistent with its role in managing Windows Updates and related policies, showing no signs of common attack patterns.\"\n}"}

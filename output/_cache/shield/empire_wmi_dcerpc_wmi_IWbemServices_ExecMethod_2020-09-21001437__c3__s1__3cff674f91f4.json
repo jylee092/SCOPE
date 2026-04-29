@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is modifying registry keys related to the Software Protection Platform's SvcRestartTask, which is a legitimate system activity for managing Windows activation and licensing, and no suspicious command-line arguments or other indicators were observed.\"\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[<unknown process>|{00000000-000]\"\n  ],\n  \"rationale\": \"The process is labeled as '<unknown process>', indicating a lack of visibility, and it makes an external network connection to port 135 (RPC) after querying the domain controller, which is a common behavior observed in reconnaissance"}

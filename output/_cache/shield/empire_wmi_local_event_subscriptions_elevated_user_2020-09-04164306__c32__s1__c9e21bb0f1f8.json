@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed processes and their activities, including command lines, file operations in temporary directories, registry modifications, and network connections to Azure Blob Storage, are consistent with the legitimate operation of the Azure Guest Agent and its extensions within an Azure virtual machine.\"\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed activities, including deleting a network capture file in a temporary directory and setting network tracing registry keys to zero, are consistent with the normal operation and cleanup of the legitimate Azure Network Watcher Agent and do not indicate malicious behavior.\"\n}"}

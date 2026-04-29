@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The Microsoft.Photos.exe process is performing typical application-related registry operations and loading legitimate system DLLs; no suspicious command lines, child processes, file writes, or network activity indicative of common attack patterns were observed.\"\n}"}

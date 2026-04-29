@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The provided events show svchost.exe processes performing registry creations in HKCR, which is a common and legitimate activity for services, and without notable command lines or other contextual indicators, there is insufficient evidence to label them as suspicious.\"\n}"}

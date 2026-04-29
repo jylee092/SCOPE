@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"Both lsass.exe and svchost.exe exhibit normal behavior for Windows system processes, including standard network connections (Kerberos, LDAP, RPC, HTTP) and registry interactions related to network configuration, time synchronization, and certificate management, with no unusual command lines or DLL loads.\"\n}"}

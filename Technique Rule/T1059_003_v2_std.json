@@ -1,0 +1,166 @@
+{
+  "technique": {
+    "id": "T1059.003",
+    "name": "Windows Command Shell"
+  },
+  "detection": {
+    "id": "DET0202"
+  },
+  "analysis": {
+    "id": "AN0578"
+  },
+  "log_sources": {
+    "Anchor Event": {
+      "data_component": {
+        "id": "DC0032",
+        "name": "Process Creation"
+      },
+      "description": "cmd.exe 생성 이벤트. EID 4688 전체가 아닌 cmd.exe 생성 건만 Anchor로 사용.",
+      "conditions": [
+        {
+          "type": "default",
+          "source": "WinEventLog:Security",
+          "channel": {
+            "event_codes": [
+              4688
+            ]
+          },
+          "description": "cmd.exe 생성 이벤트. EID 4688 전체가 아닌 cmd.exe 생성 건만 Anchor로 사용.",
+          "filters": {
+            "NewProcessName": {
+              "contains": [
+                "cmd.exe"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "Supporting Events": [
+      {
+        "data_component": {
+          "id": "DC0016",
+          "name": "Module Load"
+        },
+        "source": "WinEventLog:Sysmon",
+        "channel": {
+          "event_codes": [
+            7
+          ]
+        },
+        "description": "cmd.exe가 로드한 DLL (sechost.dll 등). cmd.exe ProcessGuid 기준으로 연결."
+      },
+      {
+        "data_component": {
+          "id": "DC0032_1",
+          "name": "Child Process Creation"
+        },
+        "source": "WinEventLog:Sysmon",
+        "channel": {
+          "event_codes": [
+            1
+          ]
+        },
+        "description": "cmd.exe 자식 프로세스 (reg.exe 등). ParentProcessGuid == cmd.exe ProcessGuid로 연결."
+      },
+      {
+        "data_component": {
+          "id": "DC0011",
+          "name": "File Creation"
+        },
+        "source": "WinEventLog:Sysmon",
+        "channel": {
+          "event_codes": [
+            11
+          ]
+        },
+        "filters": {
+          "Image": {
+            "contains": [
+              "cmd.exe"
+            ]
+          },
+          "TargetFilename": {
+            "contains": [
+              ".bat",
+              ".ps1",
+              "Temp",
+              "Public"
+            ]
+          }
+        },
+        "description": "cmd.exe가 Temp 등 비정상 경로에 스크립트 파일 생성 (art.bat 드롭 행위)"
+      }
+    ]
+  },
+  "mutable_elements": {
+    "grouping_logic": {
+      "correlation_key": {
+        "primary": [
+          "Hostname",
+          "norm_logon_id"
+        ],
+        "secondary": [
+          "ProcessGuid"
+        ],
+        "fallback": [
+          "Hostname"
+        ],
+        "note": "4688.SubjectLogonId → norm_logon_id. cmd.exe ProcessGuid는 Sysmon EID 1/7/11과 ParentProcessGuid로 연결."
+      },
+      "time_window": {
+        "before_seconds": 60,
+        "after_seconds": 180,
+        "note": "실제 데이터: cmd.exe가 art.bat 생성(EID 11, +0초) 후 reg.exe 실행(EID 4688 자식, +24초). after 180초면 충분."
+      },
+      "primary_anchor_eids": [
+        4688
+      ],
+      "secondary_anchor": {
+        "event_codes": [
+          4688
+        ],
+        "required_filters": [
+          "NewProcessName: ['cmd.exe']"
+        ],
+        "note": "4688 전체를 Anchor로 쓰면 모든 프로세스 생성이 포함됨. cmd.exe 한정 필수."
+      },
+      "note": "Chain Link Info: {'method': 'ParentProcessGuid', 'anchor_guid_field': 'NewProcessId_int', 'child_field': 'ParentProcessId_int', 'trusted_eids': [1], 'note': '4688.NewProcessId_int == Sysmon1.ParentProcessId_int 일치로 cmd.exe → reg.exe 체인 연결 확인됨'}"
+    },
+    "feature_extraction_filters": {
+      "parent_process_suspicious": [
+        "winword.exe",
+        "excel.exe",
+        "mshta.exe",
+        "powershell.exe"
+      ],
+      "parent_process_normal": [
+        "explorer.exe",
+        "services.exe"
+      ],
+      "command_line_pattern": [
+        "/c",
+        "/k",
+        "&&",
+        "^",
+        "||",
+        "reg add"
+      ],
+      "script_storage_path": [
+        "%TEMP%",
+        "AppData\\Local\\Temp",
+        "C:\\Users\\Public\\"
+      ],
+      "user_context": [
+        "Administrator",
+        "Domain Admins",
+        "LocalSystem"
+      ],
+      "description": "그룹핑된 cmd 행위 중 부모 프로세스, 특수 기호, 경로, 권한으로 이상 징후 필터링"
+    },
+    "semantic_templates": {
+      "full_match": "cmd.exe({User})가 {script_storage_path}에 스크립트를 생성하고 {CommandLine} 명령을 실행함",
+      "child_process_match": "cmd.exe의 자식 프로세스({Image})가 레지스트리 조작 또는 페이로드 실행을 수행함"
+    }
+  }
+}

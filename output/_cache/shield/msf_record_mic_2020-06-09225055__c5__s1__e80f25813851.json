@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The RuntimeBroker.exe process is performing routine operations, such as deleting files within its own application data directory and loading standard system DLLs, with no suspicious command-line arguments or interactions with sensitive system resources observed.\"\n}"}

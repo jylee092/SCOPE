@@ -1,0 +1,1340 @@
+{
+  "scenario": "empire_invoke_runas_2019-05-18204300",
+  "tactic_sequence": [
+    "Privilege Escalation",
+    "Impact",
+    "Privilege Escalation",
+    "Defense Evasion",
+    "Execution",
+    "Defense Evasion",
+    "Execution",
+    "Privilege Escalation",
+    "Execution",
+    "Privilege Escalation",
+    "Impact",
+    "Privilege Escalation",
+    "Impact",
+    "Privilege Escalation",
+    "Impact",
+    "Privilege Escalation",
+    "Impact",
+    "Privilege Escalation",
+    "Impact",
+    "Privilege Escalation"
+  ],
+  "technique_sequence": [
+    "T1055",
+    "T1133",
+    "T1531",
+    "T1055",
+    "T1112",
+    "T1059.001",
+    "T1112",
+    "T1059.001",
+    "T1055",
+    "T1059.001",
+    "T1055",
+    "T1133",
+    "T1531",
+    "T1133",
+    "T1531",
+    "T1133",
+    "T1531",
+    "T1055",
+    "T1531",
+    "T1055",
+    "T1133",
+    "T1531",
+    "T1055"
+  ],
+  "per_group_topk": [
+    [
+      "T1055"
+    ],
+    [
+      "T1055"
+    ],
+    [
+      "T1055"
+    ],
+    [
+      "T1055"
+    ],
+    [
+      "T1055"
+    ],
+    [
+      "T1055"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1055"
+    ],
+    [
+      "T1055"
+    ],
+    [
+      "T1112",
+      "T1059.005"
+    ],
+    [
+      "T1112",
+      "T1059.005"
+    ],
+    [
+      "T1112",
+      "T1059.005"
+    ],
+    [
+      "T1112",
+      "T1059.005"
+    ],
+    [
+      "T1112",
+      "T1059.005"
+    ],
+    [
+      "T1112",
+      "T1059.005"
+    ],
+    [
+      "T1112",
+      "T1059.005"
+    ],
+    [
+      "T1112",
+      "T1059.005"
+    ],
+    [
+      "T1112",
+      "T1059.005"
+    ],
+    [
+      "T1112",
+      "T1059.005"
+    ],
+    [
+      "T1112",
+      "T1059.005"
+    ],
+    [
+      "T1112",
+      "T1059.005"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1112",
+      "T1059.005"
+    ],
+    [
+      "T1112",
+      "T1059.005"
+    ],
+    [
+      "T1112",
+      "T1059.005"
+    ],
+    [
+      "T1112",
+      "T1059.005"
+    ],
+    [
+      "T1112",
+      "T1059.005"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1055"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001",
+      "T1562.001"
+    ],
+    [
+      "T1055"
+    ],
+    [
+      "T1055"
+    ],
+    [
+      "T1055"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1055"
+    ],
+    [
+      "T1055"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1055"
+    ],
+    [
+      "T1055"
+    ],
+    [
+      "T1055"
+    ],
+    [
+      "T1055"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1055"
+    ],
+    [
+      "T1055"
+    ],
+    [
+      "T1055"
+    ],
+    [
+      "T1055"
+    ]
+  ],
+  "notes": {
+    "n_events_evaluated": 1964,
+    "n_alerts": 59,
+    "alerts": [
+      {
+        "ts": "2019-05-18 20:42:59.831000+00:00",
+        "event_index": 14,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "e81528db-fc02-45e8-8e98-4e84aba1f10b",
+          "title": "Network Connection Initiated Via Notepad.EXE",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:05.019000+00:00",
+        "event_index": 68,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "e81528db-fc02-45e8-8e98-4e84aba1f10b",
+          "title": "Network Connection Initiated Via Notepad.EXE",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:10.159000+00:00",
+        "event_index": 99,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "e81528db-fc02-45e8-8e98-4e84aba1f10b",
+          "title": "Network Connection Initiated Via Notepad.EXE",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:15.113000+00:00",
+        "event_index": 136,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "e81528db-fc02-45e8-8e98-4e84aba1f10b",
+          "title": "Network Connection Initiated Via Notepad.EXE",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:20.285000+00:00",
+        "event_index": 186,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "e81528db-fc02-45e8-8e98-4e84aba1f10b",
+          "title": "Network Connection Initiated Via Notepad.EXE",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:25.503000+00:00",
+        "event_index": 245,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "e81528db-fc02-45e8-8e98-4e84aba1f10b",
+          "title": "Network Connection Initiated Via Notepad.EXE",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:27.288000+00:00",
+        "event_index": 255,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:27.289000+00:00",
+        "event_index": 257,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:30.425000+00:00",
+        "event_index": 294,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "e81528db-fc02-45e8-8e98-4e84aba1f10b",
+          "title": "Network Connection Initiated Via Notepad.EXE",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:35.606000+00:00",
+        "event_index": 417,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "e81528db-fc02-45e8-8e98-4e84aba1f10b",
+          "title": "Network Connection Initiated Via Notepad.EXE",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:36.925000+00:00",
+        "event_index": 573,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "7f4c43f9-b1a5-4c7d-b24a-b41bf3a3ebf2",
+          "title": "Registry Tampering by Potentially Suspicious Processes",
+          "level": "medium",
+          "status": "experimental"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:36.925000+00:00",
+        "event_index": 574,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "7f4c43f9-b1a5-4c7d-b24a-b41bf3a3ebf2",
+          "title": "Registry Tampering by Potentially Suspicious Processes",
+          "level": "medium",
+          "status": "experimental"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:36.966000+00:00",
+        "event_index": 580,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "7f4c43f9-b1a5-4c7d-b24a-b41bf3a3ebf2",
+          "title": "Registry Tampering by Potentially Suspicious Processes",
+          "level": "medium",
+          "status": "experimental"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:37.266000+00:00",
+        "event_index": 593,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "7f4c43f9-b1a5-4c7d-b24a-b41bf3a3ebf2",
+          "title": "Registry Tampering by Potentially Suspicious Processes",
+          "level": "medium",
+          "status": "experimental"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:37.765000+00:00",
+        "event_index": 608,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "7f4c43f9-b1a5-4c7d-b24a-b41bf3a3ebf2",
+          "title": "Registry Tampering by Potentially Suspicious Processes",
+          "level": "medium",
+          "status": "experimental"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:37.765000+00:00",
+        "event_index": 609,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "7f4c43f9-b1a5-4c7d-b24a-b41bf3a3ebf2",
+          "title": "Registry Tampering by Potentially Suspicious Processes",
+          "level": "medium",
+          "status": "experimental"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:37.766000+00:00",
+        "event_index": 610,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "7f4c43f9-b1a5-4c7d-b24a-b41bf3a3ebf2",
+          "title": "Registry Tampering by Potentially Suspicious Processes",
+          "level": "medium",
+          "status": "experimental"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:37.849000+00:00",
+        "event_index": 615,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "7f4c43f9-b1a5-4c7d-b24a-b41bf3a3ebf2",
+          "title": "Registry Tampering by Potentially Suspicious Processes",
+          "level": "medium",
+          "status": "experimental"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:37.849000+00:00",
+        "event_index": 616,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "7f4c43f9-b1a5-4c7d-b24a-b41bf3a3ebf2",
+          "title": "Registry Tampering by Potentially Suspicious Processes",
+          "level": "medium",
+          "status": "experimental"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:37.849000+00:00",
+        "event_index": 618,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "7f4c43f9-b1a5-4c7d-b24a-b41bf3a3ebf2",
+          "title": "Registry Tampering by Potentially Suspicious Processes",
+          "level": "medium",
+          "status": "experimental"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:37.849000+00:00",
+        "event_index": 619,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "7f4c43f9-b1a5-4c7d-b24a-b41bf3a3ebf2",
+          "title": "Registry Tampering by Potentially Suspicious Processes",
+          "level": "medium",
+          "status": "experimental"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:37.849000+00:00",
+        "event_index": 622,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "7f4c43f9-b1a5-4c7d-b24a-b41bf3a3ebf2",
+          "title": "Registry Tampering by Potentially Suspicious Processes",
+          "level": "medium",
+          "status": "experimental"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:37.866000+00:00",
+        "event_index": 627,
+        "event_id": 4688,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "79f4ede3-402e-41c8-bc3e-ebbf5f162581",
+          "title": "HackTool - Empire PowerShell Launch Parameters",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:37.885000+00:00",
+        "event_index": 631,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "7f4c43f9-b1a5-4c7d-b24a-b41bf3a3ebf2",
+          "title": "Registry Tampering by Potentially Suspicious Processes",
+          "level": "medium",
+          "status": "experimental"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:37.885000+00:00",
+        "event_index": 632,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "7f4c43f9-b1a5-4c7d-b24a-b41bf3a3ebf2",
+          "title": "Registry Tampering by Potentially Suspicious Processes",
+          "level": "medium",
+          "status": "experimental"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:37.885000+00:00",
+        "event_index": 634,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "7f4c43f9-b1a5-4c7d-b24a-b41bf3a3ebf2",
+          "title": "Registry Tampering by Potentially Suspicious Processes",
+          "level": "medium",
+          "status": "experimental"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:37.885000+00:00",
+        "event_index": 635,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "7f4c43f9-b1a5-4c7d-b24a-b41bf3a3ebf2",
+          "title": "Registry Tampering by Potentially Suspicious Processes",
+          "level": "medium",
+          "status": "experimental"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:37.885000+00:00",
+        "event_index": 637,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "7f4c43f9-b1a5-4c7d-b24a-b41bf3a3ebf2",
+          "title": "Registry Tampering by Potentially Suspicious Processes",
+          "level": "medium",
+          "status": "experimental"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:37.895000+00:00",
+        "event_index": 638,
+        "event_id": 1,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "c86133ad-4725-4bd0-8170-210788e0a7ba",
+          "title": "Net WebClient Casing Anomalies",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:40.589000+00:00",
+        "event_index": 746,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "e81528db-fc02-45e8-8e98-4e84aba1f10b",
+          "title": "Network Connection Initiated Via Notepad.EXE",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:42.536000+00:00",
+        "event_index": 1025,
+        "event_id": 17,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "ac7102b4-9e1e-4802-9b4f-17c5524c015c",
+          "title": "New PowerShell Instance Created",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:42.991000+00:00",
+        "event_index": 1051,
+        "event_id": 4104,
+        "topk_tids": [
+          "T1059.001",
+          "T1562.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "ae7fbf8e-f3cb-49fd-8db4-5f3bed522c71",
+          "title": "Suspicious PowerShell Invocations - Specific",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:45.765000+00:00",
+        "event_index": 1280,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "e81528db-fc02-45e8-8e98-4e84aba1f10b",
+          "title": "Network Connection Initiated Via Notepad.EXE",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:50.988000+00:00",
+        "event_index": 1480,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "e81528db-fc02-45e8-8e98-4e84aba1f10b",
+          "title": "Network Connection Initiated Via Notepad.EXE",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:55.909000+00:00",
+        "event_index": 1545,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "e81528db-fc02-45e8-8e98-4e84aba1f10b",
+          "title": "Network Connection Initiated Via Notepad.EXE",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:56.869000+00:00",
+        "event_index": 1564,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:56.874000+00:00",
+        "event_index": 1567,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:56.877000+00:00",
+        "event_index": 1572,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:56.981000+00:00",
+        "event_index": 1580,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:56.986000+00:00",
+        "event_index": 1594,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:56.986000+00:00",
+        "event_index": 1595,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:57.014000+00:00",
+        "event_index": 1655,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:57.024000+00:00",
+        "event_index": 1657,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:57.025000+00:00",
+        "event_index": 1663,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:57.036000+00:00",
+        "event_index": 1664,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:43:57.116000+00:00",
+        "event_index": 1716,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:44:01.066000+00:00",
+        "event_index": 1796,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "e81528db-fc02-45e8-8e98-4e84aba1f10b",
+          "title": "Network Connection Initiated Via Notepad.EXE",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:44:06.003000+00:00",
+        "event_index": 1865,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "e81528db-fc02-45e8-8e98-4e84aba1f10b",
+          "title": "Network Connection Initiated Via Notepad.EXE",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:44:07.724000+00:00",
+        "event_index": 1893,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:44:11.144000+00:00",
+        "event_index": 1911,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "e81528db-fc02-45e8-8e98-4e84aba1f10b",
+          "title": "Network Connection Initiated Via Notepad.EXE",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:44:16.284000+00:00",
+        "event_index": 1976,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "e81528db-fc02-45e8-8e98-4e84aba1f10b",
+          "title": "Network Connection Initiated Via Notepad.EXE",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:44:21.441000+00:00",
+        "event_index": 2023,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "e81528db-fc02-45e8-8e98-4e84aba1f10b",
+          "title": "Network Connection Initiated Via Notepad.EXE",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:44:26.394000+00:00",
+        "event_index": 2068,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "e81528db-fc02-45e8-8e98-4e84aba1f10b",
+          "title": "Network Connection Initiated Via Notepad.EXE",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:44:27.288000+00:00",
+        "event_index": 2087,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:44:27.289000+00:00",
+        "event_index": 2089,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:44:31.581000+00:00",
+        "event_index": 2156,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "e81528db-fc02-45e8-8e98-4e84aba1f10b",
+          "title": "Network Connection Initiated Via Notepad.EXE",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:44:36.550000+00:00",
+        "event_index": 2227,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "e81528db-fc02-45e8-8e98-4e84aba1f10b",
+          "title": "Network Connection Initiated Via Notepad.EXE",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:44:41.762000+00:00",
+        "event_index": 2490,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "e81528db-fc02-45e8-8e98-4e84aba1f10b",
+          "title": "Network Connection Initiated Via Notepad.EXE",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2019-05-18 20:44:46.691000+00:00",
+        "event_index": 2551,
+        "event_id": 3,
+        "topk_tids": [
+          "T1055"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "e81528db-fc02-45e8-8e98-4e84aba1f10b",
+          "title": "Network Connection Initiated Via Notepad.EXE",
+          "level": "high",
+          "status": "test"
+        }
+      }
+    ]
+  }
+}

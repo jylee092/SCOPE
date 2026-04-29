@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The lsass.exe process is performing registry operations related to the Windows Time service and connecting to port 88, which is standard behavior for Kerberos authentication and time synchronization on a Windows system, with no other indicators of compromise.\"\n}"}

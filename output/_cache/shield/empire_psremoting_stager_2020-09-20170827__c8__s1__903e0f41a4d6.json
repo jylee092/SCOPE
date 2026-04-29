@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The svchost.exe process is a legitimate Windows binary, and while it created new registry keys, these keys are not recognized as standard persistence mechanisms or known indicators of compromise without additional context such as a suspicious command line or associated malicious activity.\"\n}"}

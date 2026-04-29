@@ -1,0 +1,15 @@
+{
+  "scenario": "empire_psremoting_stager_2020-09-20170827",
+  "tactic_sequence": [],
+  "technique_sequence": [],
+  "per_group_topk": [],
+  "notes": {
+    "n_total_events": 2744,
+    "n_filtered_events": 1134,
+    "n_lof_anomalous": 96,
+    "n_communities": 14,
+    "n_alerts": 0,
+    "alerts": [],
+    "elapsed_sec": 244.7
+  }
+}

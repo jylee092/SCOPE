@@ -1,0 +1,2425 @@
+{
+  "scenario": "empire_uac_shellapi_fodhelper_2020-09-04032946",
+  "tactic_sequence": [
+    "Discovery",
+    "Persistence",
+    "Defense Evasion",
+    "Execution",
+    "Persistence",
+    "Execution",
+    "Impact",
+    "Execution",
+    "Privilege Escalation",
+    "Impact",
+    "Execution",
+    "Discovery",
+    "Privilege Escalation",
+    "Execution",
+    "Impact",
+    "Execution"
+  ],
+  "technique_sequence": [
+    "T1033",
+    "T1548.002",
+    "T1112",
+    "T1548.002",
+    "T1202",
+    "T1059.001",
+    "T1112",
+    "T1059.001",
+    "T1531",
+    "T1059.001",
+    "T1133",
+    "T1531",
+    "T1059.001",
+    "T1033",
+    "T1133",
+    "T1059.001",
+    "T1531",
+    "T1059.001"
+  ],
+  "per_group_topk": [
+    [
+      "T1033",
+      "T1087.001"
+    ],
+    [
+      "T1033",
+      "T1087.001"
+    ],
+    [
+      "T1548.002",
+      "T1546.001"
+    ],
+    [
+      "T1548.002",
+      "T1546.001"
+    ],
+    [
+      "T1112"
+    ],
+    [
+      "T1548.002",
+      "T1059.001"
+    ],
+    [
+      "T1548.002",
+      "T1059.001"
+    ],
+    [
+      "T1202"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001",
+      "T1562.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1112"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1033",
+      "T1087.001"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ]
+  ],
+  "notes": {
+    "n_events_evaluated": 3355,
+    "n_alerts": 117,
+    "alerts": [
+      {
+        "ts": "2020-09-04 07:30:13.766000+00:00",
+        "event_index": 304,
+        "event_id": 1,
+        "topk_tids": [
+          "T1033",
+          "T1087.001"
+        ],
+        "topk_tactics": [
+          "Discovery",
+          "Discovery"
+        ],
+        "top_rule": {
+          "rule_id": "bd8b828d-0dca-48e1-8a63-8a58ecf2644f",
+          "title": "Group Membership Reconnaissance Via Whoami.EXE",
+          "level": "medium",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:13.795000+00:00",
+        "event_index": 350,
+        "event_id": 1,
+        "topk_tids": [
+          "T1033",
+          "T1087.001"
+        ],
+        "topk_tactics": [
+          "Discovery",
+          "Discovery"
+        ],
+        "top_rule": {
+          "rule_id": "bd8b828d-0dca-48e1-8a63-8a58ecf2644f",
+          "title": "Group Membership Reconnaissance Via Whoami.EXE",
+          "level": "medium",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:13.833000+00:00",
+        "event_index": 409,
+        "event_id": 13,
+        "topk_tids": [
+          "T1548.002",
+          "T1546.001"
+        ],
+        "topk_tactics": [
+          "Persistence",
+          "Persistence"
+        ],
+        "top_rule": {
+          "rule_id": "152f3630-77c1-4284-bcc0-4cc68ab2f6e7",
+          "title": "Shell Open Registry Keys Manipulation",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:13.833000+00:00",
+        "event_index": 410,
+        "event_id": 13,
+        "topk_tids": [
+          "T1548.002",
+          "T1546.001"
+        ],
+        "topk_tactics": [
+          "Persistence",
+          "Persistence"
+        ],
+        "top_rule": {
+          "rule_id": "152f3630-77c1-4284-bcc0-4cc68ab2f6e7",
+          "title": "Shell Open Registry Keys Manipulation",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:13.833000+00:00",
+        "event_index": 413,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112"
+        ],
+        "topk_tactics": [
+          "Persistence"
+        ],
+        "top_rule": {
+          "rule_id": "96f697b0-b499-4e5d-9908-a67bec11cdb6",
+          "title": "Removal of Potential COM Hijacking Registry Keys",
+          "level": "medium",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:15.133000+00:00",
+        "event_index": 1019,
+        "event_id": 4688,
+        "topk_tids": [
+          "T1548.002",
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "3268b746-88d8-4cd3-bffc-30077d02c787",
+          "title": "HackTool - Empire PowerShell UAC Bypass",
+          "level": "critical",
+          "status": "stable"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:16.209000+00:00",
+        "event_index": 1185,
+        "event_id": 1,
+        "topk_tids": [
+          "T1548.002",
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "3268b746-88d8-4cd3-bffc-30077d02c787",
+          "title": "HackTool - Empire PowerShell UAC Bypass",
+          "level": "critical",
+          "status": "stable"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:16.215000+00:00",
+        "event_index": 1198,
+        "event_id": 1,
+        "topk_tids": [
+          "T1202"
+        ],
+        "topk_tactics": [
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "3037d961-21e9-4732-b27a-637bcc7bf539",
+          "title": "Suspicious High IntegrityLevel Conhost Legacy Option",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:17.397000+00:00",
+        "event_index": 1536,
+        "event_id": 4104,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "ed965133-513f-41d9-a441-e38076a0798f",
+          "title": "Suspicious PowerShell Invocations - Generic",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:17.398000+00:00",
+        "event_index": 1539,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:17.432000+00:00",
+        "event_index": 1613,
+        "event_id": 4688,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "79f4ede3-402e-41c8-bc3e-ebbf5f162581",
+          "title": "HackTool - Empire PowerShell Launch Parameters",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:17.487000+00:00",
+        "event_index": 1735,
+        "event_id": 17,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "ac7102b4-9e1e-4802-9b4f-17c5524c015c",
+          "title": "New PowerShell Instance Created",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:17.521000+00:00",
+        "event_index": 1811,
+        "event_id": 1,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "c86133ad-4725-4bd0-8170-210788e0a7ba",
+          "title": "Net WebClient Casing Anomalies",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:17.566000+00:00",
+        "event_index": 1895,
+        "event_id": 4104,
+        "topk_tids": [
+          "T1059.001",
+          "T1562.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "ae7fbf8e-f3cb-49fd-8db4-5f3bed522c71",
+          "title": "Suspicious PowerShell Invocations - Specific",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:17.569000+00:00",
+        "event_index": 1898,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:17.646000+00:00",
+        "event_index": 2020,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:17.682000+00:00",
+        "event_index": 2052,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:17.685000+00:00",
+        "event_index": 2054,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:18.717000+00:00",
+        "event_index": 2112,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:18.718000+00:00",
+        "event_index": 2114,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:18.719000+00:00",
+        "event_index": 2116,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:18.721000+00:00",
+        "event_index": 2119,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:18.725000+00:00",
+        "event_index": 2127,
+        "event_id": 17,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "ac7102b4-9e1e-4802-9b4f-17c5524c015c",
+          "title": "New PowerShell Instance Created",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:18.728000+00:00",
+        "event_index": 2132,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:18.730000+00:00",
+        "event_index": 2135,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:18.735000+00:00",
+        "event_index": 2139,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:18.787000+00:00",
+        "event_index": 2242,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:18.816000+00:00",
+        "event_index": 2300,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:18.837000+00:00",
+        "event_index": 2335,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:18.839000+00:00",
+        "event_index": 2338,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:18.840000+00:00",
+        "event_index": 2340,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:18.870000+00:00",
+        "event_index": 2392,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:18.871000+00:00",
+        "event_index": 2395,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:18.872000+00:00",
+        "event_index": 2397,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:18.874000+00:00",
+        "event_index": 2400,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:18.926000+00:00",
+        "event_index": 2496,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112"
+        ],
+        "topk_tactics": [
+          "Persistence"
+        ],
+        "top_rule": {
+          "rule_id": "96f697b0-b499-4e5d-9908-a67bec11cdb6",
+          "title": "Removal of Potential COM Hijacking Registry Keys",
+          "level": "medium",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:20.945000+00:00",
+        "event_index": 2543,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:23.964000+00:00",
+        "event_index": 2576,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:23.965000+00:00",
+        "event_index": 2578,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:23.968000+00:00",
+        "event_index": 2581,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:23.968000+00:00",
+        "event_index": 2582,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:25.970000+00:00",
+        "event_index": 2597,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:25.971000+00:00",
+        "event_index": 2598,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:28.987000+00:00",
+        "event_index": 2622,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:29.072000+00:00",
+        "event_index": 2789,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:29.073000+00:00",
+        "event_index": 2790,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:29.078000+00:00",
+        "event_index": 2795,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:29.083000+00:00",
+        "event_index": 2798,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:30.136000+00:00",
+        "event_index": 2913,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:30.138000+00:00",
+        "event_index": 2916,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:34.450000+00:00",
+        "event_index": 3482,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:34.453000+00:00",
+        "event_index": 3485,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:34.455000+00:00",
+        "event_index": 3487,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:34.457000+00:00",
+        "event_index": 3490,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:34.460000+00:00",
+        "event_index": 3494,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:34.461000+00:00",
+        "event_index": 3496,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:39.529000+00:00",
+        "event_index": 3559,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:39.530000+00:00",
+        "event_index": 3560,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:39.533000+00:00",
+        "event_index": 3563,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:39.533000+00:00",
+        "event_index": 3564,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:39.535000+00:00",
+        "event_index": 3566,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:40.549000+00:00",
+        "event_index": 3568,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:43.560000+00:00",
+        "event_index": 3591,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:43.560000+00:00",
+        "event_index": 3592,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:44.582000+00:00",
+        "event_index": 3623,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:44.583000+00:00",
+        "event_index": 3624,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:44.587000+00:00",
+        "event_index": 3626,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:45.575000+00:00",
+        "event_index": 3628,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:45.576000+00:00",
+        "event_index": 3630,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:45.579000+00:00",
+        "event_index": 3634,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:49.635000+00:00",
+        "event_index": 3720,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:49.636000+00:00",
+        "event_index": 3722,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:49.638000+00:00",
+        "event_index": 3723,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:49.638000+00:00",
+        "event_index": 3724,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:49.641000+00:00",
+        "event_index": 3728,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:49.642000+00:00",
+        "event_index": 3730,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:54.700000+00:00",
+        "event_index": 3796,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:54.700000+00:00",
+        "event_index": 3798,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:54.703000+00:00",
+        "event_index": 3800,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:54.703000+00:00",
+        "event_index": 3801,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:54.705000+00:00",
+        "event_index": 3803,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:54.706000+00:00",
+        "event_index": 3805,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:54.713000+00:00",
+        "event_index": 3814,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:54.714000+00:00",
+        "event_index": 3816,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:54.722000+00:00",
+        "event_index": 3823,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:54.725000+00:00",
+        "event_index": 3826,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:54.726000+00:00",
+        "event_index": 3828,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:54.727000+00:00",
+        "event_index": 3829,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:54.729000+00:00",
+        "event_index": 3831,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:54.732000+00:00",
+        "event_index": 3834,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:54.733000+00:00",
+        "event_index": 3836,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:54.734000+00:00",
+        "event_index": 3838,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:55.749000+00:00",
+        "event_index": 3839,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:55.749000+00:00",
+        "event_index": 3842,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:55.751000+00:00",
+        "event_index": 3844,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:55.752000+00:00",
+        "event_index": 3846,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:55.754000+00:00",
+        "event_index": 3849,
+        "event_id": 1,
+        "topk_tids": [
+          "T1033",
+          "T1087.001"
+        ],
+        "topk_tactics": [
+          "Discovery",
+          "Discovery"
+        ],
+        "top_rule": {
+          "rule_id": "502b42de-4306-40b4-9596-6f590c81f073",
+          "title": "Local Accounts Discovery",
+          "level": "low",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:30:56.767000+00:00",
+        "event_index": 3897,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:31:00.810000+00:00",
+        "event_index": 3939,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:31:00.812000+00:00",
+        "event_index": 3940,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:31:00.815000+00:00",
+        "event_index": 3944,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:31:00.815000+00:00",
+        "event_index": 3945,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:31:00.818000+00:00",
+        "event_index": 3951,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:31:00.820000+00:00",
+        "event_index": 3953,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:31:05.877000+00:00",
+        "event_index": 4048,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:31:05.879000+00:00",
+        "event_index": 4050,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:31:05.881000+00:00",
+        "event_index": 4053,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:31:05.882000+00:00",
+        "event_index": 4055,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:31:05.884000+00:00",
+        "event_index": 4057,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:31:05.886000+00:00",
+        "event_index": 4060,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:31:06.892000+00:00",
+        "event_index": 4064,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:31:10.931000+00:00",
+        "event_index": 4099,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:31:10.933000+00:00",
+        "event_index": 4102,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:31:10.937000+00:00",
+        "event_index": 4105,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:31:10.937000+00:00",
+        "event_index": 4108,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:31:10.938000+00:00",
+        "event_index": 4109,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 07:31:10.940000+00:00",
+        "event_index": 4111,
+        "event_id": 4103,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "bbb80e91-5746-4fbe-8898-122e2cafdbf4",
+          "title": "Suspicious PowerShell Invocations - Generic - PowerShell Module",
+          "level": "high",
+          "status": "test"
+        }
+      }
+    ]
+  }
+}

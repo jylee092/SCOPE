@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed registry modifications by lsass.exe to W32Time service keys, while involving a critical process, do not align with common attack patterns for lsass.exe compromise (e.g., credential dumping) and appear to be within the scope of normal system operations related to secure time synchronization.\"\n}"}

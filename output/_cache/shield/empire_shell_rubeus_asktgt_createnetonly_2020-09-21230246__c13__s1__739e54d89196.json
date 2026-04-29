@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The process lsass.exe is legitimately interacting with registry keys related to the Windows Time service (W32Time), which is a normal system behavior for a security-critical process involved in authentication and time synchronization, and no suspicious command lines or other indicators are present.\"\n}"}

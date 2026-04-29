@@ -1,0 +1,1 @@
+{"text": "{\n  \"confidence_score\": 0.95,\n  \"attack_summary\": \"A PowerShell process executed Rubeus.exe, a known Kerberos attack tool, with arguments indicative of credential access. The use of 'asktgt', 'rc4 hash', and 'createnetonly' suggests an attempt to steal or forge Kerberos tickets, likely for privilege escalation or lateral movement. This activity is a clear and"}

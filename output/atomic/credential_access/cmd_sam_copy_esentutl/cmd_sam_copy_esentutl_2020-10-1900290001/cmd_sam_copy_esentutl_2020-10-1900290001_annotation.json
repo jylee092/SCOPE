@@ -1,0 +1,1384 @@
+{
+  "scenario": "cmd_sam_copy_esentutl_2020-10-1900290001",
+  "total_groups": 9,
+  "instruction": "각 그룹의 sample_logs와 anchor를 확인한 뒤 gt_ 필드를 채워주세요. gt_is_true_positive: 해당 그룹이 실제 공격 행위인지 (true/false). gt_technique_id: 실제 MITRE technique ID (예: T1059.001). gt_tactic: 실제 tactic 이름 (예: Execution). gt_notes: 판단 근거나 메모.",
+  "groups": [
+    {
+      "group_id": "T1003_29",
+      "rule_technique_id": "T1003",
+      "rule_technique_name": "OS Credential Dumping",
+      "confidence": 0.5,
+      "anchor": {
+        "idx": 29,
+        "EventID": 1,
+        "Image": "C:\\Windows\\System32\\esentutl.exe",
+        "CommandLine": "esentutl.exe  /y /vss C:\\windows/system32/config/SAM /d C:\\ProgramData\\SAM",
+        "TimeCreated": "2020-10-19 12:28:31.098000+00:00"
+      },
+      "num_events": 86,
+      "event_id_distribution": {
+        "7": 43,
+        "13": 37,
+        "1": 1,
+        "4656": 1,
+        "4663": 1,
+        "18": 1,
+        "11": 1,
+        "5": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 26,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.085000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 29,
+          "EventID": 1,
+          "TimeCreated": "2020-10-19 12:28:31.098000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "esentutl.exe  /y /vss C:\\windows/system32/config/SAM /d C:\\ProgramData\\SAM",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 31,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.099000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 35,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.121000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 36,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.157000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 37,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.157000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 39,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.159000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 40,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.296000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 41,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.296000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 43,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.298000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 42,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.298000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 44,
+          "EventID": 4656,
+          "TimeCreated": "2020-10-19 12:28:31.327000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 47,
+          "EventID": 4663,
+          "TimeCreated": "2020-10-19 12:28:31.327000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 49,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.335000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 50,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.338000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1003.002",
+      "gt_technique_name": "OS Credential Dumping",
+      "gt_tactic": "Credential Access",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(esentutl,\\sam,\\system)"
+    },
+    {
+      "group_id": "T1070_001_0",
+      "rule_technique_id": "T1070.001",
+      "rule_technique_name": "Clear Windows Event Logs",
+      "confidence": 0.75,
+      "anchor": {
+        "idx": 0,
+        "EventID": 1102,
+        "Image": "nan",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-19 12:28:23.942000+00:00"
+      },
+      "num_events": 4,
+      "event_id_distribution": {
+        "1102": 1,
+        "104": 1,
+        "4688": 1,
+        "1": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 0,
+          "EventID": 1102,
+          "TimeCreated": "2020-10-19 12:28:23.942000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 1,
+          "EventID": 104,
+          "TimeCreated": "2020-10-19 12:28:23.974000+00:00",
+          "Image": "nan",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 27,
+          "EventID": 4688,
+          "TimeCreated": "2020-10-19 12:28:31.089000+00:00",
+          "Image": "nan",
+          "CommandLine": "esentutl.exe  /y /vss C:\\windows/system32/config/SAM /d C:\\ProgramData\\SAM",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 29,
+          "EventID": 1,
+          "TimeCreated": "2020-10-19 12:28:31.098000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "esentutl.exe  /y /vss C:\\windows/system32/config/SAM /d C:\\ProgramData\\SAM",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1003.002",
+      "gt_technique_name": "Clear Windows Event Logs",
+      "gt_tactic": "Credential Access",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: sample-kw+ctx(T1070.001,c=0.75)"
+    },
+    {
+      "group_id": "T1112_91",
+      "rule_technique_id": "T1112",
+      "rule_technique_name": "Modify Registry",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 91,
+        "EventID": 13,
+        "Image": "C:\\windows\\system32\\esentutl.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-19 12:28:31.447000+00:00"
+      },
+      "num_events": 84,
+      "event_id_distribution": {
+        "7": 43,
+        "13": 37,
+        "1": 1,
+        "18": 1,
+        "11": 1,
+        "5": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 26,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.085000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 29,
+          "EventID": 1,
+          "TimeCreated": "2020-10-19 12:28:31.098000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "esentutl.exe  /y /vss C:\\windows/system32/config/SAM /d C:\\ProgramData\\SAM",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 31,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.099000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 35,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.121000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 36,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.157000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 37,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.157000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 39,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.159000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 41,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.296000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 40,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.296000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 42,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.298000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 43,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.298000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 49,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.335000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 50,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.338000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 54,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.339000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 51,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.339000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1003.002",
+      "gt_technique_name": "Modify Registry",
+      "gt_tactic": "Credential Access",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(esentutl,\\system)"
+    },
+    {
+      "group_id": "T1112_128",
+      "rule_technique_id": "T1112",
+      "rule_technique_name": "Modify Registry",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 128,
+        "EventID": 13,
+        "Image": "C:\\windows\\system32\\vssvc.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-19 12:28:31.479000+00:00"
+      },
+      "num_events": 135,
+      "event_id_distribution": {
+        "13": 91,
+        "9": 33,
+        "12": 8,
+        "1": 1,
+        "18": 1,
+        "10": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 29,
+          "EventID": 1,
+          "TimeCreated": "2020-10-19 12:28:31.098000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "esentutl.exe  /y /vss C:\\windows/system32/config/SAM /d C:\\ProgramData\\SAM",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 109,
+          "EventID": 13,
+          "TimeCreated": "2020-10-19 12:28:31.466000+00:00",
+          "Image": "C:\\windows\\system32\\vssvc.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\ASR Writer\\IDENTIFY (Enter)"
+        },
+        {
+          "idx": 111,
+          "EventID": 13,
+          "TimeCreated": "2020-10-19 12:28:31.466000+00:00",
+          "Image": "C:\\windows\\system32\\vssvc.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Registry Writer\\IDENTIFY (Enter)"
+        },
+        {
+          "idx": 113,
+          "EventID": 9,
+          "TimeCreated": "2020-10-19 12:28:31.469000+00:00",
+          "Image": "C:\\Windows\\System32\\VSSVC.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 114,
+          "EventID": 9,
+          "TimeCreated": "2020-10-19 12:28:31.469000+00:00",
+          "Image": "C:\\Windows\\System32\\VSSVC.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 121,
+          "EventID": 13,
+          "TimeCreated": "2020-10-19 12:28:31.476000+00:00",
+          "Image": "C:\\windows\\system32\\vssvc.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Shadow Copy Optimization Writer\\IDENTIFY (Enter)"
+        },
+        {
+          "idx": 119,
+          "EventID": 9,
+          "TimeCreated": "2020-10-19 12:28:31.476000+00:00",
+          "Image": "C:\\Windows\\System32\\VSSVC.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 120,
+          "EventID": 9,
+          "TimeCreated": "2020-10-19 12:28:31.476000+00:00",
+          "Image": "C:\\Windows\\System32\\VSSVC.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 117,
+          "EventID": 18,
+          "TimeCreated": "2020-10-19 12:28:31.476000+00:00",
+          "Image": "C:\\windows\\system32\\vssvc.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 118,
+          "EventID": 9,
+          "TimeCreated": "2020-10-19 12:28:31.476000+00:00",
+          "Image": "C:\\Windows\\System32\\VSSVC.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 128,
+          "EventID": 13,
+          "TimeCreated": "2020-10-19 12:28:31.479000+00:00",
+          "Image": "C:\\windows\\system32\\vssvc.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\COM+ REGDB Writer\\IDENTIFY (Enter)"
+        },
+        {
+          "idx": 137,
+          "EventID": 13,
+          "TimeCreated": "2020-10-19 12:28:31.483000+00:00",
+          "Image": "C:\\windows\\system32\\vssvc.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\Shadow Copy Optimization Writer\\IDENTIFY (Leave)"
+        },
+        {
+          "idx": 139,
+          "EventID": 13,
+          "TimeCreated": "2020-10-19 12:28:31.484000+00:00",
+          "Image": "C:\\windows\\system32\\vssvc.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\VSS\\Diag\\COM+ REGDB Writer\\IDENTIFY (Leave)"
+        },
+        {
+          "idx": 143,
+          "EventID": 12,
+          "TimeCreated": "2020-10-19 12:28:31.486000+00:00",
+          "Image": "C:\\windows\\system32\\vssvc.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Enum\\IDE\\DiskVirtual_HD______________________________1.1.0___\\5&35dc7040&0&0.0.0\\Device Parameters\\Partmgr"
+        },
+        {
+          "idx": 146,
+          "EventID": 13,
+          "TimeCreated": "2020-10-19 12:28:31.487000+00:00",
+          "Image": "C:\\windows\\system32\\vssvc.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Enum\\IDE\\DiskVirtual_HD______________________________1.1.0___\\5&35dc7040&0&0.0.0\\Device Parameters\\Partmgr\\PartitionTabl"
+        }
+      ],
+      "gt_technique_id": "T1003.002",
+      "gt_technique_name": "Modify Registry",
+      "gt_tactic": "Credential Access",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(\\system,vss)"
+    },
+    {
+      "group_id": "T1112_246",
+      "rule_technique_id": "T1112",
+      "rule_technique_name": "Modify Registry",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 246,
+        "EventID": 13,
+        "Image": "C:\\windows\\system32\\esentutl.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-19 12:28:31.568000+00:00"
+      },
+      "num_events": 84,
+      "event_id_distribution": {
+        "7": 43,
+        "13": 37,
+        "1": 1,
+        "18": 1,
+        "11": 1,
+        "5": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 26,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.085000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 29,
+          "EventID": 1,
+          "TimeCreated": "2020-10-19 12:28:31.098000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "esentutl.exe  /y /vss C:\\windows/system32/config/SAM /d C:\\ProgramData\\SAM",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 31,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.099000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 35,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.121000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 36,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.157000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 37,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.157000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 39,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.159000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 41,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.296000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 40,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.296000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 42,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.298000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 43,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.298000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 49,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.335000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 50,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.338000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 54,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.339000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 51,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.339000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1003.002",
+      "gt_technique_name": "Modify Registry",
+      "gt_tactic": "Credential Access",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(esentutl,\\system)"
+    },
+    {
+      "group_id": "T1112_431",
+      "rule_technique_id": "T1112",
+      "rule_technique_name": "Modify Registry",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 431,
+        "EventID": 13,
+        "Image": "C:\\windows\\system32\\esentutl.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-19 12:28:31.921000+00:00"
+      },
+      "num_events": 84,
+      "event_id_distribution": {
+        "7": 43,
+        "13": 37,
+        "1": 1,
+        "18": 1,
+        "11": 1,
+        "5": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 26,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.085000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 29,
+          "EventID": 1,
+          "TimeCreated": "2020-10-19 12:28:31.098000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "esentutl.exe  /y /vss C:\\windows/system32/config/SAM /d C:\\ProgramData\\SAM",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 31,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.099000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 35,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.121000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 36,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.157000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 37,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.157000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 39,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.159000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 41,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.296000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 40,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.296000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 42,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.298000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 43,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.298000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 49,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.335000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 50,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.338000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 54,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.339000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 51,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.339000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1003.002",
+      "gt_technique_name": "Modify Registry",
+      "gt_tactic": "Credential Access",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(esentutl,\\system)"
+    },
+    {
+      "group_id": "T1112_626",
+      "rule_technique_id": "T1112",
+      "rule_technique_name": "Modify Registry",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 626,
+        "EventID": 13,
+        "Image": "C:\\windows\\system32\\esentutl.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-19 12:28:35.978000+00:00"
+      },
+      "num_events": 84,
+      "event_id_distribution": {
+        "7": 43,
+        "13": 37,
+        "1": 1,
+        "18": 1,
+        "11": 1,
+        "5": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 26,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.085000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 29,
+          "EventID": 1,
+          "TimeCreated": "2020-10-19 12:28:31.098000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "esentutl.exe  /y /vss C:\\windows/system32/config/SAM /d C:\\ProgramData\\SAM",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 31,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.099000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 35,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.121000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 36,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.157000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 37,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.157000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 39,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.159000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 41,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.296000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 40,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.296000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 42,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.298000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 43,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.298000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 49,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.335000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 50,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.338000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 54,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.339000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 51,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.339000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1003.002",
+      "gt_technique_name": "Modify Registry",
+      "gt_tactic": "Credential Access",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(esentutl,\\system)"
+    },
+    {
+      "group_id": "T1112_662",
+      "rule_technique_id": "T1112",
+      "rule_technique_name": "Modify Registry",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 662,
+        "EventID": 13,
+        "Image": "C:\\windows\\system32\\esentutl.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-19 12:28:35.999000+00:00"
+      },
+      "num_events": 84,
+      "event_id_distribution": {
+        "7": 43,
+        "13": 37,
+        "1": 1,
+        "18": 1,
+        "11": 1,
+        "5": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 26,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.085000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 29,
+          "EventID": 1,
+          "TimeCreated": "2020-10-19 12:28:31.098000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "esentutl.exe  /y /vss C:\\windows/system32/config/SAM /d C:\\ProgramData\\SAM",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 31,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.099000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 35,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.121000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 36,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.157000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 37,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.157000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 39,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.159000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 41,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.296000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 40,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.296000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 42,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.298000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 43,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.298000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 49,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.335000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 50,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.338000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 54,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.339000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 51,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.339000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1003.002",
+      "gt_technique_name": "Modify Registry",
+      "gt_tactic": "Credential Access",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(esentutl,\\system)"
+    },
+    {
+      "group_id": "T1112_741",
+      "rule_technique_id": "T1112",
+      "rule_technique_name": "Modify Registry",
+      "confidence": 1.0,
+      "anchor": {
+        "idx": 741,
+        "EventID": 13,
+        "Image": "C:\\windows\\system32\\esentutl.exe",
+        "CommandLine": "nan",
+        "TimeCreated": "2020-10-19 12:28:36.046000+00:00"
+      },
+      "num_events": 84,
+      "event_id_distribution": {
+        "7": 43,
+        "13": 37,
+        "1": 1,
+        "18": 1,
+        "11": 1,
+        "5": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 26,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.085000+00:00",
+          "Image": "C:\\Windows\\System32\\cmd.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 29,
+          "EventID": 1,
+          "TimeCreated": "2020-10-19 12:28:31.098000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "esentutl.exe  /y /vss C:\\windows/system32/config/SAM /d C:\\ProgramData\\SAM",
+          "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 31,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.099000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 35,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.121000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 36,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.157000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 37,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.157000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 39,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.159000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 41,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.296000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 40,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.296000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 42,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.298000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 43,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.298000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 49,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.335000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 50,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.338000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 54,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.339000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 51,
+          "EventID": 7,
+          "TimeCreated": "2020-10-19 12:28:31.339000+00:00",
+          "Image": "C:\\Windows\\System32\\esentutl.exe",
+          "CommandLine": "nan",
+          "ParentImage": "nan",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1003.002",
+      "gt_technique_name": "Modify Registry",
+      "gt_tactic": "Credential Access",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: anchor-kw(esentutl,\\system)"
+    }
+  ]
+}

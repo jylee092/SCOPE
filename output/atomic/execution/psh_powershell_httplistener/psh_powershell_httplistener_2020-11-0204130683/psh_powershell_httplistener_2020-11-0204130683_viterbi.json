@@ -1,0 +1,34 @@
+[
+  {
+    "step": 1,
+    "group_idx": 0,
+    "group_id": "T1070_001_4",
+    "technique_id": "T1070",
+    "technique_name": "Indicator Removal",
+    "tactic": "Defense Evasion",
+    "similarity": 0.7366,
+    "log_emission": -3.8234,
+    "transition_from": null,
+    "transition_weight": null,
+    "transition_rule": null,
+    "transition_note": null,
+    "log_transition": null,
+    "skip_distance": 0
+  },
+  {
+    "step": 2,
+    "group_idx": 1,
+    "group_id": "T1059_001_60",
+    "technique_id": "T1059.001",
+    "technique_name": "Command and Scripting Interpreter: PowerShell",
+    "tactic": "Execution",
+    "similarity": 0.7733,
+    "log_emission": -3.8296,
+    "transition_from": "Defense Evasion",
+    "transition_weight": 0.4733,
+    "transition_rule": "R5B",
+    "transition_note": "Defense Evasion → 이전 단계 (역방향)",
+    "log_transition": -0.748,
+    "skip_distance": 0
+  }
+]

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[svchost.exe|{19de6d3b-7bd]\"\n  ],\n  \"rationale\": \"The svchost.exe process is suspicious because it is creating prefetch files for executables named 'WINX64_PAYLOAD.EXE' and 'HAPPY_IMAGE.JPEG.EXE', which strongly suggest the execution of"}

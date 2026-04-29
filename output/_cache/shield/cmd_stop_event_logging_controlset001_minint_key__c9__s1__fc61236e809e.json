@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"Both HxTsr.exe and svchost.exe exhibit normal behavior, interacting with expected files, registry keys, and loading legitimate DLLs consistent with their known functions, without any suspicious command-line arguments or attack patterns.\"\n}"}

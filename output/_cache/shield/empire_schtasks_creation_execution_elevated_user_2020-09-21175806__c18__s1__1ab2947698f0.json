@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed registry operations by svchost.exe instances and the 'Registry' entity are consistent with routine system functions related to network configuration caching and system information updates, with no notable command lines, file writes, or persistence attempts indicative of malicious activity.\"\n}"}

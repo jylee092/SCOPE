@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The process lsass.exe is legitimately modifying registry keys related to the Windows Time service (W32Time\\\\SecureTimeLimits), which is a normal system operation and does not indicate malicious activity based on the provided events.\"\n}"}

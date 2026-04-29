@@ -1,0 +1,4677 @@
+[
+  {
+    "scenario": "msf_record_mic_2020-06-09225055",
+    "ttp": {
+      "n": 0,
+      "hit_at_1": 0,
+      "hit_at_5": 0,
+      "mrr": 0,
+      "hit_at_1_lenient": 0,
+      "hit_at_5_lenient": 0,
+      "mrr_lenient": 0,
+      "details": []
+    },
+    "chain": {
+      "ref_steps": 3,
+      "pred_steps": 15,
+      "step_coverage": 0.6667,
+      "tactic_jaccard": 0.3333,
+      "tactic_lcs_norm": 0.6667,
+      "technique_lcs_norm": 0.3333,
+      "order_accuracy": 0.0,
+      "matched_pairs": [
+        {
+          "ref_step": 1,
+          "ref_tid": "T1059",
+          "ref_tactic": "Execution",
+          "pred_idx": 10,
+          "pred_tid": "T1059.003"
+        },
+        {
+          "ref_step": 2,
+          "ref_tid": "T1055",
+          "ref_tactic": "Defense Evasion",
+          "pred_idx": 6,
+          "pred_tid": "T1055.011"
+        },
+        {
+          "ref_step": 3,
+          "ref_tid": "T1123",
+          "ref_tactic": "Collection",
+          "pred_idx": null,
+          "pred_tid": null
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "cmd_dumping_ntds_dit_file_ntdsutil",
+    "ttp": {
+      "n": 6,
+      "hit_at_1": 0.6666666666666666,
+      "hit_at_5": 1.0,
+      "mrr": 0.7833333333333333,
+      "hit_at_1_lenient": 0.8333333333333334,
+      "hit_at_5_lenient": 1.0,
+      "mrr_lenient": 0.8888888888888888,
+      "details": [
+        {
+          "group_id": "T1003_3948",
+          "gt_technique_id": "T1003.003",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1003.003",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1021_003_5094",
+          "gt_technique_id": "T1003.003",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1003.003",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1069_002_5138",
+          "gt_technique_id": "T1003.003",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1003.001",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1070_004_8112",
+          "gt_technique_id": "T1003.003",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1003.003",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1087_002_5139",
+          "gt_technique_id": "T1003.003",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1482",
+          "pred_tactic": "Discovery",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.2,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.3333333333333333
+        },
+        {
+          "group_id": "T1112_5250",
+          "gt_technique_id": "T1003.003",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1003.003",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        }
+      ]
+    },
+    "chain": {
+      "ref_steps": 2,
+      "pred_steps": 31,
+      "step_coverage": 1.0,
+      "tactic_jaccard": 0.4,
+      "tactic_lcs_norm": 1.0,
+      "technique_lcs_norm": 1.0,
+      "order_accuracy": 0.0,
+      "matched_pairs": [
+        {
+          "ref_step": 1,
+          "ref_tid": "T1059.003",
+          "ref_tactic": "Execution",
+          "pred_idx": 3,
+          "pred_tid": "T1059.001"
+        },
+        {
+          "ref_step": 2,
+          "ref_tid": "T1003.003",
+          "ref_tactic": "Credential Access",
+          "pred_idx": 0,
+          "pred_tid": "T1003.001"
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "cmd_sam_copy_esentutl_2020-10-1900290001",
+    "ttp": {
+      "n": 9,
+      "hit_at_1": 1.0,
+      "hit_at_5": 1.0,
+      "mrr": 1.0,
+      "hit_at_1_lenient": 1.0,
+      "hit_at_5_lenient": 1.0,
+      "mrr_lenient": 1.0,
+      "details": [
+        {
+          "group_id": "T1003_29",
+          "gt_technique_id": "T1003.002",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1003.002",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1070_001_0",
+          "gt_technique_id": "T1003.002",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1003.002",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1112_91",
+          "gt_technique_id": "T1003.002",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1003.002",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1112_128",
+          "gt_technique_id": "T1003.002",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1003.002",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1112_246",
+          "gt_technique_id": "T1003.002",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1003.002",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1112_431",
+          "gt_technique_id": "T1003.002",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1003.002",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1112_626",
+          "gt_technique_id": "T1003.002",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1003.002",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1112_662",
+          "gt_technique_id": "T1003.002",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1003.002",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1112_741",
+          "gt_technique_id": "T1003.002",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1003.002",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        }
+      ]
+    },
+    "chain": {
+      "ref_steps": 2,
+      "pred_steps": 9,
+      "step_coverage": 0.5,
+      "tactic_jaccard": 0.3333,
+      "tactic_lcs_norm": 0.5,
+      "technique_lcs_norm": 0.5,
+      "order_accuracy": 1.0,
+      "matched_pairs": [
+        {
+          "ref_step": 1,
+          "ref_tid": "T1059.003",
+          "ref_tactic": "Execution",
+          "pred_idx": null,
+          "pred_tid": null
+        },
+        {
+          "ref_step": 2,
+          "ref_tid": "T1003.002",
+          "ref_tactic": "Credential Access",
+          "pred_idx": 0,
+          "pred_tid": "T1003.002"
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "empire_mimikatz_logonpasswords_2020-08-07103224",
+    "ttp": {
+      "n": 7,
+      "hit_at_1": 0.2857142857142857,
+      "hit_at_5": 0.7142857142857143,
+      "mrr": 0.5,
+      "hit_at_1_lenient": 0.2857142857142857,
+      "hit_at_5_lenient": 0.7142857142857143,
+      "mrr_lenient": 0.5,
+      "details": [
+        {
+          "group_id": "T1003_001_2450",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1003.001",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1033_281",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1087",
+          "pred_tactic": "Discovery",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1047_532",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1047",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1059_001_201",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.5
+        },
+        {
+          "group_id": "T1071_001_6",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.5
+        },
+        {
+          "group_id": "T1071_001_2726",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.5
+        },
+        {
+          "group_id": "T1134_2455",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1003.001",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        }
+      ]
+    },
+    "chain": {
+      "ref_steps": 2,
+      "pred_steps": 15,
+      "step_coverage": 1.0,
+      "tactic_jaccard": 0.4,
+      "tactic_lcs_norm": 1.0,
+      "technique_lcs_norm": 1.0,
+      "order_accuracy": 1.0,
+      "matched_pairs": [
+        {
+          "ref_step": 1,
+          "ref_tid": "T1059.001",
+          "ref_tactic": "Execution",
+          "pred_idx": 0,
+          "pred_tid": "T1059.001"
+        },
+        {
+          "ref_step": 2,
+          "ref_tid": "T1003.001",
+          "ref_tactic": "Credential Access",
+          "pred_idx": 2,
+          "pred_tid": "T1003.001"
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "empire_shell_rubeus_asktgt_createnetonly_2020-09-21230246",
+    "ttp": {
+      "n": 6,
+      "hit_at_1": 0.6666666666666666,
+      "hit_at_5": 0.8333333333333334,
+      "mrr": 0.75,
+      "hit_at_1_lenient": 0.8333333333333334,
+      "hit_at_5_lenient": 0.8333333333333334,
+      "mrr_lenient": 0.8333333333333334,
+      "details": [
+        {
+          "group_id": "T1558_003_640",
+          "gt_technique_id": "T1558",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1558.003",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1021_003_1006",
+          "gt_technique_id": "T1558",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1558",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1053_005_1986",
+          "gt_technique_id": "T1558",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1053.005",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1059_708",
+          "gt_technique_id": "T1558",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1558",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1059_003_1014",
+          "gt_technique_id": "T1558",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1558",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1134_1035",
+          "gt_technique_id": "T1558",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1558",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        }
+      ]
+    },
+    "chain": {
+      "ref_steps": 2,
+      "pred_steps": 21,
+      "step_coverage": 0.5,
+      "tactic_jaccard": 0.4,
+      "tactic_lcs_norm": 1.0,
+      "technique_lcs_norm": 0.5,
+      "order_accuracy": 1.0,
+      "matched_pairs": [
+        {
+          "ref_step": 1,
+          "ref_tid": "T1059.001",
+          "ref_tactic": "Execution",
+          "pred_idx": null,
+          "pred_tid": null
+        },
+        {
+          "ref_step": 2,
+          "ref_tid": "T1558",
+          "ref_tactic": "Credential Access",
+          "pred_idx": 7,
+          "pred_tid": "T1558.003"
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "psh_lsass_memory_dump_comsvcs_2020-10-18T19500924",
+    "ttp": {
+      "n": 4,
+      "hit_at_1": 1.0,
+      "hit_at_5": 1.0,
+      "mrr": 1.0,
+      "hit_at_1_lenient": 1.0,
+      "hit_at_5_lenient": 1.0,
+      "mrr_lenient": 1.0,
+      "details": [
+        {
+          "group_id": "T1218_011_97",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1003.001",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1055_136",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1003.001",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1059_001_115",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1003.001",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1070_001_0",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1003.001",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        }
+      ]
+    },
+    "chain": {
+      "ref_steps": 2,
+      "pred_steps": 4,
+      "step_coverage": 0.5,
+      "tactic_jaccard": 0.5,
+      "tactic_lcs_norm": 0.5,
+      "technique_lcs_norm": 0.5,
+      "order_accuracy": 1.0,
+      "matched_pairs": [
+        {
+          "ref_step": 1,
+          "ref_tid": "T1059.001",
+          "ref_tactic": "Execution",
+          "pred_idx": null,
+          "pred_tid": null
+        },
+        {
+          "ref_step": 2,
+          "ref_tid": "T1003.001",
+          "ref_tactic": "Credential Access",
+          "pred_idx": 0,
+          "pred_tid": "T1003.001"
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "cmd_process_herpaderping_mimiexplorer_2020-10-2623583501",
+    "ttp": {
+      "n": 4,
+      "hit_at_1": 0.25,
+      "hit_at_5": 0.5,
+      "mrr": 0.375,
+      "hit_at_1_lenient": 0.75,
+      "hit_at_5_lenient": 1.0,
+      "mrr_lenient": 0.8125,
+      "details": [
+        {
+          "group_id": "T1036_005_31",
+          "gt_technique_id": "T1055",
+          "gt_tactic": "Defense Evasion",
+          "pred_technique_id": "T1055",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1070_001_2",
+          "gt_technique_id": "T1055",
+          "gt_tactic": "Defense Evasion",
+          "pred_technique_id": "T1003.001",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.25
+        },
+        {
+          "group_id": "T1112_41",
+          "gt_technique_id": "T1055",
+          "gt_tactic": "Defense Evasion",
+          "pred_technique_id": "T1055.011",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1112_52",
+          "gt_technique_id": "T1055",
+          "gt_tactic": "Defense Evasion",
+          "pred_technique_id": "T1055.011",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        }
+      ]
+    },
+    "chain": {
+      "ref_steps": 2,
+      "pred_steps": 5,
+      "step_coverage": 0.5,
+      "tactic_jaccard": 0.3333,
+      "tactic_lcs_norm": 0.5,
+      "technique_lcs_norm": 0.5,
+      "order_accuracy": 1.0,
+      "matched_pairs": [
+        {
+          "ref_step": 1,
+          "ref_tid": "T1059.003",
+          "ref_tactic": "Execution",
+          "pred_idx": null,
+          "pred_tid": null
+        },
+        {
+          "ref_step": 2,
+          "ref_tid": "T1036.005",
+          "ref_tactic": "Defense Evasion",
+          "pred_idx": 1,
+          "pred_tid": "T1055"
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "cmd_stop_event_logging_controlset001_minint_key",
+    "ttp": {
+      "n": 0,
+      "hit_at_1": 0,
+      "hit_at_5": 0,
+      "mrr": 0,
+      "hit_at_1_lenient": 0,
+      "hit_at_5_lenient": 0,
+      "mrr_lenient": 0,
+      "details": []
+    },
+    "chain": {
+      "ref_steps": 2,
+      "pred_steps": 31,
+      "step_coverage": 0.5,
+      "tactic_jaccard": 0.3333,
+      "tactic_lcs_norm": 1.0,
+      "technique_lcs_norm": 0.5,
+      "order_accuracy": 1.0,
+      "matched_pairs": [
+        {
+          "ref_step": 1,
+          "ref_tid": "T1059.003",
+          "ref_tactic": "Execution",
+          "pred_idx": 13,
+          "pred_tid": "T1059.003"
+        },
+        {
+          "ref_step": 2,
+          "ref_tid": "T1562.002",
+          "ref_tactic": "Defense Evasion",
+          "pred_idx": null,
+          "pred_tid": null
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "cmd_wevtutil_modify_security_eventlog_path",
+    "ttp": {
+      "n": 1,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "mrr": 0.0,
+      "hit_at_1_lenient": 0.0,
+      "hit_at_5_lenient": 0.0,
+      "mrr_lenient": 0.0,
+      "details": [
+        {
+          "group_id": "T1112_24256",
+          "gt_technique_id": "T1562.002",
+          "gt_tactic": "Defense Evasion",
+          "pred_technique_id": "T1546.003",
+          "pred_tactic": "Persistence",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        }
+      ]
+    },
+    "chain": {
+      "ref_steps": 2,
+      "pred_steps": 36,
+      "step_coverage": 1.0,
+      "tactic_jaccard": 0.2857,
+      "tactic_lcs_norm": 1.0,
+      "technique_lcs_norm": 1.0,
+      "order_accuracy": 1.0,
+      "matched_pairs": [
+        {
+          "ref_step": 1,
+          "ref_tid": "T1059.003",
+          "ref_tactic": "Execution",
+          "pred_idx": 0,
+          "pred_tid": "T1059.003"
+        },
+        {
+          "ref_step": 2,
+          "ref_tid": "T1562.002",
+          "ref_tactic": "Defense Evasion",
+          "pred_idx": 20,
+          "pred_tid": "T1562.002"
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "empire_dllinjection_LoadLibrary_CreateRemoteThread_2020-07-22000048",
+    "ttp": {
+      "n": 5,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "mrr": 0.0,
+      "hit_at_1_lenient": 0.2,
+      "hit_at_5_lenient": 0.2,
+      "mrr_lenient": 0.2,
+      "details": [
+        {
+          "group_id": "T1047_323",
+          "gt_technique_id": "T1055.001",
+          "gt_tactic": "Defense Evasion",
+          "pred_technique_id": "T1047",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1055_11110",
+          "gt_technique_id": "T1055.001",
+          "gt_tactic": "Defense Evasion",
+          "pred_technique_id": "T1055.011",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1071_001_67",
+          "gt_technique_id": "T1055.001",
+          "gt_tactic": "Defense Evasion",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1071_001_716",
+          "gt_technique_id": "T1055.001",
+          "gt_tactic": "Defense Evasion",
+          "pred_technique_id": "T1021.006",
+          "pred_tactic": "Lateral Movement",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1071_001_10781",
+          "gt_technique_id": "T1055.001",
+          "gt_tactic": "Defense Evasion",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        }
+      ]
+    },
+    "chain": {
+      "ref_steps": 2,
+      "pred_steps": 22,
+      "step_coverage": 1.0,
+      "tactic_jaccard": 0.3333,
+      "tactic_lcs_norm": 1.0,
+      "technique_lcs_norm": 1.0,
+      "order_accuracy": 1.0,
+      "matched_pairs": [
+        {
+          "ref_step": 1,
+          "ref_tid": "T1059.001",
+          "ref_tactic": "Execution",
+          "pred_idx": 0,
+          "pred_tid": "T1059.001"
+        },
+        {
+          "ref_step": 2,
+          "ref_tid": "T1055.001",
+          "ref_tactic": "Defense Evasion",
+          "pred_idx": 2,
+          "pred_tid": "T1055.011"
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "psh_cmstp_execution_bypassuac_2020-10-2201543213",
+    "ttp": {
+      "n": 6,
+      "hit_at_1": 0.8333333333333334,
+      "hit_at_5": 1.0,
+      "mrr": 0.9166666666666666,
+      "hit_at_1_lenient": 0.8333333333333334,
+      "hit_at_5_lenient": 1.0,
+      "mrr_lenient": 0.9166666666666666,
+      "details": [
+        {
+          "group_id": "T1059_001_45",
+          "gt_technique_id": "T1218.003",
+          "gt_tactic": "Defense Evasion",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.5
+        },
+        {
+          "group_id": "T1059_003_635",
+          "gt_technique_id": "T1218.003",
+          "gt_tactic": "Defense Evasion",
+          "pred_technique_id": "T1218.003",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1070_001_3",
+          "gt_technique_id": "T1218.003",
+          "gt_tactic": "Defense Evasion",
+          "pred_technique_id": "T1218.003",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1071_001_121",
+          "gt_technique_id": "T1218.003",
+          "gt_tactic": "Defense Evasion",
+          "pred_technique_id": "T1218.003",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1112_648",
+          "gt_technique_id": "T1218.003",
+          "gt_tactic": "Defense Evasion",
+          "pred_technique_id": "T1218.003",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1218_003_313",
+          "gt_technique_id": "T1218.003",
+          "gt_tactic": "Defense Evasion",
+          "pred_technique_id": "T1218.003",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        }
+      ]
+    },
+    "chain": {
+      "ref_steps": 2,
+      "pred_steps": 10,
+      "step_coverage": 1.0,
+      "tactic_jaccard": 0.5,
+      "tactic_lcs_norm": 1.0,
+      "technique_lcs_norm": 1.0,
+      "order_accuracy": 0.0,
+      "matched_pairs": [
+        {
+          "ref_step": 1,
+          "ref_tid": "T1059.001",
+          "ref_tactic": "Execution",
+          "pred_idx": 1,
+          "pred_tid": "T1059.001"
+        },
+        {
+          "ref_step": 2,
+          "ref_tid": "T1218.003",
+          "ref_tactic": "Defense Evasion",
+          "pred_idx": 0,
+          "pred_tid": "T1218.003"
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "cmd_seatbelt_group_user_2020-11-0216391814",
+    "ttp": {
+      "n": 2,
+      "hit_at_1": 0.5,
+      "hit_at_5": 0.5,
+      "mrr": 0.5,
+      "hit_at_1_lenient": 0.5,
+      "hit_at_5_lenient": 0.5,
+      "mrr_lenient": 0.5,
+      "details": [
+        {
+          "group_id": "T1070_001_3",
+          "gt_technique_id": "T1082",
+          "gt_tactic": "Discovery",
+          "pred_technique_id": "T1070",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1082_44",
+          "gt_technique_id": "T1082",
+          "gt_tactic": "Discovery",
+          "pred_technique_id": "T1082",
+          "pred_tactic": "Discovery",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        }
+      ]
+    },
+    "chain": {
+      "ref_steps": 2,
+      "pred_steps": 2,
+      "step_coverage": 0.5,
+      "tactic_jaccard": 0.3333,
+      "tactic_lcs_norm": 0.5,
+      "technique_lcs_norm": 0.5,
+      "order_accuracy": 1.0,
+      "matched_pairs": [
+        {
+          "ref_step": 1,
+          "ref_tid": "T1059.003",
+          "ref_tactic": "Execution",
+          "pred_idx": null,
+          "pred_tid": null
+        },
+        {
+          "ref_step": 2,
+          "ref_tid": "T1082",
+          "ref_tactic": "Discovery",
+          "pred_idx": 1,
+          "pred_tid": "T1082"
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "empire_find_localadmin_smb_svcctl_OpenSCManager_2020-09-22021559",
+    "ttp": {
+      "n": 1,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "mrr": 0.0,
+      "hit_at_1_lenient": 0.0,
+      "hit_at_5_lenient": 0.0,
+      "mrr_lenient": 0.0,
+      "details": [
+        {
+          "group_id": "T1047_554",
+          "gt_technique_id": "T1069.001",
+          "gt_tactic": "Discovery",
+          "pred_technique_id": "T1047",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        }
+      ]
+    },
+    "chain": {
+      "ref_steps": 2,
+      "pred_steps": 11,
+      "step_coverage": 0.0,
+      "tactic_jaccard": 0.4,
+      "tactic_lcs_norm": 1.0,
+      "technique_lcs_norm": 0.0,
+      "order_accuracy": 0.0,
+      "matched_pairs": [
+        {
+          "ref_step": 1,
+          "ref_tid": "T1059.001",
+          "ref_tactic": "Execution",
+          "pred_idx": null,
+          "pred_tid": null
+        },
+        {
+          "ref_step": 2,
+          "ref_tid": "T1069.001",
+          "ref_tactic": "Discovery",
+          "pred_idx": null,
+          "pred_tid": null
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "empire_getsession_dcerpc_smb_srvsvc_NetSessEnum_2020-09-22034513",
+    "ttp": {
+      "n": 1,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "mrr": 0.0,
+      "hit_at_1_lenient": 0.0,
+      "hit_at_5_lenient": 0.0,
+      "mrr_lenient": 0.0,
+      "details": [
+        {
+          "group_id": "T1049_3978",
+          "gt_technique_id": "T1049",
+          "gt_tactic": "Discovery",
+          "pred_technique_id": "T1039",
+          "pred_tactic": "Collection",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        }
+      ]
+    },
+    "chain": {
+      "ref_steps": 2,
+      "pred_steps": 14,
+      "step_coverage": 0.5,
+      "tactic_jaccard": 0.2,
+      "tactic_lcs_norm": 0.5,
+      "technique_lcs_norm": 0.5,
+      "order_accuracy": 1.0,
+      "matched_pairs": [
+        {
+          "ref_step": 1,
+          "ref_tid": "T1059.001",
+          "ref_tactic": "Execution",
+          "pred_idx": 3,
+          "pred_tid": "T1059.001"
+        },
+        {
+          "ref_step": 2,
+          "ref_tid": "T1049",
+          "ref_tactic": "Discovery",
+          "pred_idx": null,
+          "pred_tid": null
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "empire_shell_net_local_users_2020-09-21192606",
+    "ttp": {
+      "n": 3,
+      "hit_at_1": 0.6666666666666666,
+      "hit_at_5": 1.0,
+      "mrr": 0.8333333333333334,
+      "hit_at_1_lenient": 1.0,
+      "hit_at_5_lenient": 1.0,
+      "mrr_lenient": 1.0,
+      "details": [
+        {
+          "group_id": "T1049_143",
+          "gt_technique_id": "T1087.001",
+          "gt_tactic": "Discovery",
+          "pred_technique_id": "T1087.001",
+          "pred_tactic": "Discovery",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1087_001_222",
+          "gt_technique_id": "T1087.001",
+          "gt_tactic": "Discovery",
+          "pred_technique_id": "T1087",
+          "pred_tactic": "Discovery",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1087_001_224",
+          "gt_technique_id": "T1087.001",
+          "gt_tactic": "Discovery",
+          "pred_technique_id": "T1087.001",
+          "pred_tactic": "Discovery",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        }
+      ]
+    },
+    "chain": {
+      "ref_steps": 2,
+      "pred_steps": 10,
+      "step_coverage": 0.5,
+      "tactic_jaccard": 0.5,
+      "tactic_lcs_norm": 1.0,
+      "technique_lcs_norm": 0.5,
+      "order_accuracy": 1.0,
+      "matched_pairs": [
+        {
+          "ref_step": 1,
+          "ref_tid": "T1059.001",
+          "ref_tactic": "Execution",
+          "pred_idx": null,
+          "pred_tid": null
+        },
+        {
+          "ref_step": 2,
+          "ref_tid": "T1087.001",
+          "ref_tactic": "Discovery",
+          "pred_idx": 0,
+          "pred_tid": "T1087.001"
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "empire_shell_samr_EnumDomainUsers_2020-09-21193527",
+    "ttp": {
+      "n": 3,
+      "hit_at_1": 0.6666666666666666,
+      "hit_at_5": 1.0,
+      "mrr": 0.8333333333333334,
+      "hit_at_1_lenient": 0.6666666666666666,
+      "hit_at_5_lenient": 1.0,
+      "mrr_lenient": 0.8333333333333334,
+      "details": [
+        {
+          "group_id": "T1049_77",
+          "gt_technique_id": "T1087.002",
+          "gt_tactic": "Discovery",
+          "pred_technique_id": "T1482",
+          "pred_tactic": "Discovery",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.5
+        },
+        {
+          "group_id": "T1087_001_154",
+          "gt_technique_id": "T1087.002",
+          "gt_tactic": "Discovery",
+          "pred_technique_id": "T1087.002",
+          "pred_tactic": "Discovery",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1087_001_155",
+          "gt_technique_id": "T1087.002",
+          "gt_tactic": "Discovery",
+          "pred_technique_id": "T1087.002",
+          "pred_tactic": "Discovery",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        }
+      ]
+    },
+    "chain": {
+      "ref_steps": 2,
+      "pred_steps": 7,
+      "step_coverage": 0.5,
+      "tactic_jaccard": 0.25,
+      "tactic_lcs_norm": 0.5,
+      "technique_lcs_norm": 0.5,
+      "order_accuracy": 1.0,
+      "matched_pairs": [
+        {
+          "ref_step": 1,
+          "ref_tid": "T1059.001",
+          "ref_tactic": "Execution",
+          "pred_idx": null,
+          "pred_tid": null
+        },
+        {
+          "ref_step": 2,
+          "ref_tid": "T1087.002",
+          "ref_tactic": "Discovery",
+          "pred_idx": 1,
+          "pred_tid": "T1087.002"
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "cmd_sharpview_pcre_net_2020-10-2920232423",
+    "ttp": {
+      "n": 2,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "mrr": 0.0,
+      "hit_at_1_lenient": 0.0,
+      "hit_at_5_lenient": 0.0,
+      "mrr_lenient": 0.0,
+      "details": [
+        {
+          "group_id": "T1070_001_10",
+          "gt_technique_id": "T1087.002",
+          "gt_tactic": "Discovery",
+          "pred_technique_id": "T1207",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1070_004_235",
+          "gt_technique_id": "T1087.002",
+          "gt_tactic": "Discovery",
+          "pred_technique_id": "T1207",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        }
+      ]
+    },
+    "chain": {
+      "ref_steps": 2,
+      "pred_steps": 2,
+      "step_coverage": 0.0,
+      "tactic_jaccard": 0.0,
+      "tactic_lcs_norm": 0.0,
+      "technique_lcs_norm": 0.0,
+      "order_accuracy": 0.0,
+      "matched_pairs": [
+        {
+          "ref_step": 1,
+          "ref_tid": "T1059.003",
+          "ref_tactic": "Execution",
+          "pred_idx": null,
+          "pred_tid": null
+        },
+        {
+          "ref_step": 2,
+          "ref_tid": "T1087.002",
+          "ref_tactic": "Discovery",
+          "pred_idx": null,
+          "pred_tid": null
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "empire_launcher_vbs_2020-09-04160940",
+    "ttp": {
+      "n": 10,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.5,
+      "mrr": 0.21666666666666665,
+      "hit_at_1_lenient": 0.8,
+      "hit_at_5_lenient": 0.9,
+      "mrr_lenient": 0.85,
+      "details": [
+        {
+          "group_id": "T1027_259",
+          "gt_technique_id": "T1059.005",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1003.001",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.5
+        },
+        {
+          "group_id": "T1027_327",
+          "gt_technique_id": "T1059.005",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1027_917",
+          "gt_technique_id": "T1059.005",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.3333333333333333,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1033_1819",
+          "gt_technique_id": "T1059.005",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1033",
+          "pred_tactic": "Discovery",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1047_1508",
+          "gt_technique_id": "T1059.005",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1059_72",
+          "gt_technique_id": "T1059.005",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1059_001_433",
+          "gt_technique_id": "T1059.005",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1059_005_166",
+          "gt_technique_id": "T1059.005",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1070_004_1094",
+          "gt_technique_id": "T1059.005",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1071_001_1470",
+          "gt_technique_id": "T1059.005",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.3333333333333333,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        }
+      ]
+    },
+    "chain": {
+      "ref_steps": 2,
+      "pred_steps": 13,
+      "step_coverage": 1.0,
+      "tactic_jaccard": 0.25,
+      "tactic_lcs_norm": 1.0,
+      "technique_lcs_norm": 1.0,
+      "order_accuracy": 0.0,
+      "matched_pairs": [
+        {
+          "ref_step": 1,
+          "ref_tid": "T1059.005",
+          "ref_tactic": "Execution",
+          "pred_idx": 2,
+          "pred_tid": "T1059.001"
+        },
+        {
+          "ref_step": 2,
+          "ref_tid": "T1059.001",
+          "ref_tactic": "Execution",
+          "pred_idx": 2,
+          "pred_tid": "T1059.001"
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "psh_powershell_httplistener_2020-11-0204130683",
+    "ttp": {
+      "n": 1,
+      "hit_at_1": 1.0,
+      "hit_at_5": 1.0,
+      "mrr": 1.0,
+      "hit_at_1_lenient": 1.0,
+      "hit_at_5_lenient": 1.0,
+      "mrr_lenient": 1.0,
+      "details": [
+        {
+          "group_id": "T1059_001_60",
+          "gt_technique_id": "T1059.001",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        }
+      ]
+    },
+    "chain": {
+      "ref_steps": 2,
+      "pred_steps": 2,
+      "step_coverage": 0.5,
+      "tactic_jaccard": 0.3333,
+      "tactic_lcs_norm": 0.5,
+      "technique_lcs_norm": 0.5,
+      "order_accuracy": 1.0,
+      "matched_pairs": [
+        {
+          "ref_step": 1,
+          "ref_tid": "T1059.001",
+          "ref_tactic": "Execution",
+          "pred_idx": 1,
+          "pred_tid": "T1059.001"
+        },
+        {
+          "ref_step": 2,
+          "ref_tid": "T1071.001",
+          "ref_tactic": "Command and Control",
+          "pred_idx": null,
+          "pred_tid": null
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "psh_python_webserver_2020-10-2900161507",
+    "ttp": {
+      "n": 2,
+      "hit_at_1": 0.5,
+      "hit_at_5": 1.0,
+      "mrr": 0.6,
+      "hit_at_1_lenient": 1.0,
+      "hit_at_5_lenient": 1.0,
+      "mrr_lenient": 1.0,
+      "details": [
+        {
+          "group_id": "T1036_005_1691",
+          "gt_technique_id": "T1059.006",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1059.006",
+          "pred_tactic": "Execution",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1070_001_2",
+          "gt_technique_id": "T1059.006",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.2,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        }
+      ]
+    },
+    "chain": {
+      "ref_steps": 2,
+      "pred_steps": 2,
+      "step_coverage": 1.0,
+      "tactic_jaccard": 1.0,
+      "tactic_lcs_norm": 1.0,
+      "technique_lcs_norm": 1.0,
+      "order_accuracy": 0.0,
+      "matched_pairs": [
+        {
+          "ref_step": 1,
+          "ref_tid": "T1059.001",
+          "ref_tactic": "Execution",
+          "pred_idx": 0,
+          "pred_tid": "T1059.001"
+        },
+        {
+          "ref_step": 2,
+          "ref_tid": "T1059.006",
+          "ref_tactic": "Execution",
+          "pred_idx": 0,
+          "pred_tid": "T1059.001"
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "covenant_psremoting_command_2020-08-06115603",
+    "ttp": {
+      "n": 8,
+      "hit_at_1": 0.625,
+      "hit_at_5": 0.625,
+      "mrr": 0.625,
+      "hit_at_1_lenient": 0.625,
+      "hit_at_5_lenient": 0.625,
+      "mrr_lenient": 0.625,
+      "details": [
+        {
+          "group_id": "T1021_003_195",
+          "gt_technique_id": "T1021.006",
+          "gt_tactic": "Lateral Movement",
+          "pred_technique_id": "T1021.006",
+          "pred_tactic": "Lateral Movement",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1021_003_567",
+          "gt_technique_id": "T1021.006",
+          "gt_tactic": "Lateral Movement",
+          "pred_technique_id": "T1021.006",
+          "pred_tactic": "Lateral Movement",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1021_003_3383",
+          "gt_technique_id": "T1021.006",
+          "gt_tactic": "Lateral Movement",
+          "pred_technique_id": "T1505.003",
+          "pred_tactic": "Persistence",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1021_006_1257",
+          "gt_technique_id": "T1021.006",
+          "gt_tactic": "Lateral Movement",
+          "pred_technique_id": "T1021.006",
+          "pred_tactic": "Lateral Movement",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1021_006_1259",
+          "gt_technique_id": "T1021.006",
+          "gt_tactic": "Lateral Movement",
+          "pred_technique_id": "T1021.006",
+          "pred_tactic": "Lateral Movement",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1021_006_1488",
+          "gt_technique_id": "T1021.006",
+          "gt_tactic": "Lateral Movement",
+          "pred_technique_id": "T1021.006",
+          "pred_tactic": "Lateral Movement",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1070_004_456",
+          "gt_technique_id": "T1021.006",
+          "gt_tactic": "Lateral Movement",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1070_004_457",
+          "gt_technique_id": "T1021.006",
+          "gt_tactic": "Lateral Movement",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        }
+      ]
+    },
+    "chain": {
+      "ref_steps": 2,
+      "pred_steps": 19,
+      "step_coverage": 1.0,
+      "tactic_jaccard": 0.3333,
+      "tactic_lcs_norm": 1.0,
+      "technique_lcs_norm": 1.0,
+      "order_accuracy": 1.0,
+      "matched_pairs": [
+        {
+          "ref_step": 1,
+          "ref_tid": "T1059.001",
+          "ref_tactic": "Execution",
+          "pred_idx": 5,
+          "pred_tid": "T1059.001"
+        },
+        {
+          "ref_step": 2,
+          "ref_tid": "T1021.006",
+          "ref_tactic": "Lateral Movement",
+          "pred_idx": 10,
+          "pred_tid": "T1021.006"
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "empire_psexec_dcerpc_tcp_svcctl_2020-09-20121608",
+    "ttp": {
+      "n": 14,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "mrr": 0.0,
+      "hit_at_1_lenient": 0.07142857142857142,
+      "hit_at_5_lenient": 0.14285714285714285,
+      "mrr_lenient": 0.08928571428571429,
+      "details": [
+        {
+          "group_id": "T1021_003_362",
+          "gt_technique_id": "T1021.002",
+          "gt_tactic": "Lateral Movement",
+          "pred_technique_id": "T1021.003",
+          "pred_tactic": "Lateral Movement",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1059_1056",
+          "gt_technique_id": "T1021.002",
+          "gt_tactic": "Lateral Movement",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1059_1072",
+          "gt_technique_id": "T1021.002",
+          "gt_tactic": "Lateral Movement",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1059_003_1225",
+          "gt_technique_id": "T1021.002",
+          "gt_tactic": "Lateral Movement",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1027_1239",
+          "gt_technique_id": "T1021.002",
+          "gt_tactic": "Lateral Movement",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1105_1826",
+          "gt_technique_id": "T1021.002",
+          "gt_tactic": "Lateral Movement",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1033_2900",
+          "gt_technique_id": "T1021.002",
+          "gt_tactic": "Lateral Movement",
+          "pred_technique_id": "T1033",
+          "pred_tactic": "Discovery",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1047_2450",
+          "gt_technique_id": "T1021.002",
+          "gt_tactic": "Lateral Movement",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.25
+        },
+        {
+          "group_id": "T1059_001_1109",
+          "gt_technique_id": "T1021.002",
+          "gt_tactic": "Lateral Movement",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1059_001_1150",
+          "gt_technique_id": "T1021.002",
+          "gt_tactic": "Lateral Movement",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1070_004_1673",
+          "gt_technique_id": "T1021.002",
+          "gt_tactic": "Lateral Movement",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1071_001_2512",
+          "gt_technique_id": "T1021.002",
+          "gt_tactic": "Lateral Movement",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1071_001_2637",
+          "gt_technique_id": "T1021.002",
+          "gt_tactic": "Lateral Movement",
+          "pred_technique_id": "T1071.001",
+          "pred_tactic": "Command and Control",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1543_003_1212",
+          "gt_technique_id": "T1021.002",
+          "gt_tactic": "Lateral Movement",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        }
+      ]
+    },
+    "chain": {
+      "ref_steps": 2,
+      "pred_steps": 26,
+      "step_coverage": 1.0,
+      "tactic_jaccard": 0.3333,
+      "tactic_lcs_norm": 1.0,
+      "technique_lcs_norm": 0.5,
+      "order_accuracy": 0.0,
+      "matched_pairs": [
+        {
+          "ref_step": 1,
+          "ref_tid": "T1059.001",
+          "ref_tactic": "Execution",
+          "pred_idx": 4,
+          "pred_tid": "T1059.001"
+        },
+        {
+          "ref_step": 2,
+          "ref_tid": "T1021.002",
+          "ref_tactic": "Lateral Movement",
+          "pred_idx": 1,
+          "pred_tid": "T1021.003"
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "empire_psremoting_stager_2020-09-20170827",
+    "ttp": {
+      "n": 13,
+      "hit_at_1": 0.3076923076923077,
+      "hit_at_5": 0.6923076923076923,
+      "mrr": 0.42948717948717946,
+      "hit_at_1_lenient": 0.3076923076923077,
+      "hit_at_5_lenient": 0.6923076923076923,
+      "mrr_lenient": 0.42948717948717946,
+      "details": [
+        {
+          "group_id": "T1021_003_482",
+          "gt_technique_id": "T1021.006",
+          "gt_tactic": "Lateral Movement",
+          "pred_technique_id": "T1021.006",
+          "pred_tactic": "Lateral Movement",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1021_003_516",
+          "gt_technique_id": "T1021.006",
+          "gt_tactic": "Lateral Movement",
+          "pred_technique_id": "T1021.006",
+          "pred_tactic": "Lateral Movement",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1021_006_689",
+          "gt_technique_id": "T1021.006",
+          "gt_tactic": "Lateral Movement",
+          "pred_technique_id": "T1021.006",
+          "pred_tactic": "Lateral Movement",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1059_843",
+          "gt_technique_id": "T1021.006",
+          "gt_tactic": "Lateral Movement",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.25,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.25
+        },
+        {
+          "group_id": "T1027_867",
+          "gt_technique_id": "T1021.006",
+          "gt_tactic": "Lateral Movement",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1033_2171",
+          "gt_technique_id": "T1021.006",
+          "gt_tactic": "Lateral Movement",
+          "pred_technique_id": "T1546.013",
+          "pred_tactic": "Persistence",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1047_1491",
+          "gt_technique_id": "T1021.006",
+          "gt_tactic": "Lateral Movement",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.5
+        },
+        {
+          "group_id": "T1059_001_604",
+          "gt_technique_id": "T1021.006",
+          "gt_tactic": "Lateral Movement",
+          "pred_technique_id": "T1021.006",
+          "pred_tactic": "Lateral Movement",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1059_001_1295",
+          "gt_technique_id": "T1021.006",
+          "gt_tactic": "Lateral Movement",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.25,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.25
+        },
+        {
+          "group_id": "T1070_004_784",
+          "gt_technique_id": "T1021.006",
+          "gt_tactic": "Lateral Movement",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.3333333333333333,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.3333333333333333
+        },
+        {
+          "group_id": "T1070_004_2070",
+          "gt_technique_id": "T1021.006",
+          "gt_tactic": "Lateral Movement",
+          "pred_technique_id": "T1546.013",
+          "pred_tactic": "Persistence",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1071_001_1986",
+          "gt_technique_id": "T1021.006",
+          "gt_tactic": "Lateral Movement",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1112_842",
+          "gt_technique_id": "T1021.006",
+          "gt_tactic": "Lateral Movement",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.25,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.25
+        }
+      ]
+    },
+    "chain": {
+      "ref_steps": 2,
+      "pred_steps": 22,
+      "step_coverage": 1.0,
+      "tactic_jaccard": 0.4,
+      "tactic_lcs_norm": 1.0,
+      "technique_lcs_norm": 1.0,
+      "order_accuracy": 0.0,
+      "matched_pairs": [
+        {
+          "ref_step": 1,
+          "ref_tid": "T1059.001",
+          "ref_tactic": "Execution",
+          "pred_idx": 7,
+          "pred_tid": "T1059.001"
+        },
+        {
+          "ref_step": 2,
+          "ref_tid": "T1021.006",
+          "ref_tactic": "Lateral Movement",
+          "pred_idx": 1,
+          "pred_tid": "T1021.006"
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod_2020-09-21001437",
+    "ttp": {
+      "n": 11,
+      "hit_at_1": 0.36363636363636365,
+      "hit_at_5": 0.9090909090909091,
+      "mrr": 0.5757575757575757,
+      "hit_at_1_lenient": 0.36363636363636365,
+      "hit_at_5_lenient": 0.9090909090909091,
+      "mrr_lenient": 0.5757575757575757,
+      "details": [
+        {
+          "group_id": "T1021_003_491",
+          "gt_technique_id": "T1047",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1021.003",
+          "pred_tactic": "Lateral Movement",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.25,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.25
+        },
+        {
+          "group_id": "T1047_368",
+          "gt_technique_id": "T1047",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1047",
+          "pred_tactic": "Execution",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1047_492",
+          "gt_technique_id": "T1047",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1047",
+          "pred_tactic": "Execution",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1027_551",
+          "gt_technique_id": "T1047",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.5
+        },
+        {
+          "group_id": "T1105_940",
+          "gt_technique_id": "T1047",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1047",
+          "pred_tactic": "Execution",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1033_1583",
+          "gt_technique_id": "T1047",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1033",
+          "pred_tactic": "Discovery",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.25,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.25
+        },
+        {
+          "group_id": "T1053_005_211",
+          "gt_technique_id": "T1047",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1053.005",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1059_001_414",
+          "gt_technique_id": "T1047",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1047",
+          "pred_tactic": "Execution",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1070_004_894",
+          "gt_technique_id": "T1047",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.5
+        },
+        {
+          "group_id": "T1070_004_896",
+          "gt_technique_id": "T1047",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.3333333333333333,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.3333333333333333
+        },
+        {
+          "group_id": "T1071_001_1226",
+          "gt_technique_id": "T1047",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.5
+        }
+      ]
+    },
+    "chain": {
+      "ref_steps": 2,
+      "pred_steps": 29,
+      "step_coverage": 1.0,
+      "tactic_jaccard": 0.1667,
+      "tactic_lcs_norm": 1.0,
+      "technique_lcs_norm": 1.0,
+      "order_accuracy": 0.0,
+      "matched_pairs": [
+        {
+          "ref_step": 1,
+          "ref_tid": "T1059.001",
+          "ref_tactic": "Execution",
+          "pred_idx": 7,
+          "pred_tid": "T1059.001"
+        },
+        {
+          "ref_step": 2,
+          "ref_tid": "T1047",
+          "ref_tactic": "Execution",
+          "pred_idx": 4,
+          "pred_tid": "T1021.006"
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "purplesharp_ad_playbook_I_2020-10-22042947",
+    "ttp": {
+      "n": 19,
+      "hit_at_1": 0.3684210526315789,
+      "hit_at_5": 0.7894736842105263,
+      "mrr": 0.5526315789473685,
+      "hit_at_1_lenient": 0.3684210526315789,
+      "hit_at_5_lenient": 0.7894736842105263,
+      "mrr_lenient": 0.5526315789473685,
+      "details": [
+        {
+          "group_id": "T1016_18",
+          "gt_technique_id": "T1059.001",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1482",
+          "pred_tactic": "Discovery",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1021_003_3600",
+          "gt_technique_id": "T1059.001",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1021.006",
+          "pred_tactic": "Lateral Movement",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.5
+        },
+        {
+          "group_id": "T1021_003_3831",
+          "gt_technique_id": "T1059.001",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1021.006",
+          "pred_tactic": "Lateral Movement",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.3333333333333333,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.3333333333333333
+        },
+        {
+          "group_id": "T1021_002_2118",
+          "gt_technique_id": "T1059.001",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1021.002",
+          "pred_tactic": "Lateral Movement",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1021_006_2794",
+          "gt_technique_id": "T1059.001",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1021.006",
+          "pred_tactic": "Lateral Movement",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1021_006_23780",
+          "gt_technique_id": "T1059.001",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1021.006",
+          "pred_tactic": "Lateral Movement",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.3333333333333333,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.3333333333333333
+        },
+        {
+          "group_id": "T1059_4352",
+          "gt_technique_id": "T1059.001",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1059_4430",
+          "gt_technique_id": "T1059.001",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1059_24048",
+          "gt_technique_id": "T1059.001",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1059_001_607",
+          "gt_technique_id": "T1059.001",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1047",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.5
+        },
+        {
+          "group_id": "T1059_001_5173",
+          "gt_technique_id": "T1059.001",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1059_001_5696",
+          "gt_technique_id": "T1059.001",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1059_001_24055",
+          "gt_technique_id": "T1059.001",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1047",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.3333333333333333,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.3333333333333333
+        },
+        {
+          "group_id": "T1070_004_460",
+          "gt_technique_id": "T1059.001",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1021.002",
+          "pred_tactic": "Lateral Movement",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1070_004_4180",
+          "gt_technique_id": "T1059.001",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1021.006",
+          "pred_tactic": "Lateral Movement",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.5
+        },
+        {
+          "group_id": "T1070_004_4258",
+          "gt_technique_id": "T1059.001",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1070_004_8817",
+          "gt_technique_id": "T1059.001",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1546.013",
+          "pred_tactic": "Persistence",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.5
+        },
+        {
+          "group_id": "T1070_004_9883",
+          "gt_technique_id": "T1059.001",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1546.013",
+          "pred_tactic": "Persistence",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.5
+        },
+        {
+          "group_id": "T1070_004_24021",
+          "gt_technique_id": "T1059.001",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        }
+      ]
+    },
+    "chain": {
+      "ref_steps": 4,
+      "pred_steps": 37,
+      "step_coverage": 0.75,
+      "tactic_jaccard": 0.8,
+      "tactic_lcs_norm": 1.0,
+      "technique_lcs_norm": 0.75,
+      "order_accuracy": 0.5,
+      "matched_pairs": [
+        {
+          "ref_step": 1,
+          "ref_tid": "T1059.003",
+          "ref_tactic": "Execution",
+          "pred_idx": 13,
+          "pred_tid": "T1059.001"
+        },
+        {
+          "ref_step": 2,
+          "ref_tid": "T1087.002",
+          "ref_tactic": "Discovery",
+          "pred_idx": null,
+          "pred_tid": null
+        },
+        {
+          "ref_step": 3,
+          "ref_tid": "T1021.006",
+          "ref_tactic": "Lateral Movement",
+          "pred_idx": 0,
+          "pred_tid": "T1021.002"
+        },
+        {
+          "ref_step": 4,
+          "ref_tid": "T1003.001",
+          "ref_tactic": "Credential Access",
+          "pred_idx": 4,
+          "pred_tid": "T1003.001"
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "cmd_userinitmprlogonscript_batch_2020-10-1922471810",
+    "ttp": {
+      "n": 3,
+      "hit_at_1": 0.6666666666666666,
+      "hit_at_5": 1.0,
+      "mrr": 0.8333333333333334,
+      "hit_at_1_lenient": 0.6666666666666666,
+      "hit_at_5_lenient": 1.0,
+      "mrr_lenient": 0.8333333333333334,
+      "details": [
+        {
+          "group_id": "T1037_001_75",
+          "gt_technique_id": "T1037.001",
+          "gt_tactic": "Persistence",
+          "pred_technique_id": "T1037.001",
+          "pred_tactic": "Persistence",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1070_001_0",
+          "gt_technique_id": "T1037.001",
+          "gt_tactic": "Persistence",
+          "pred_technique_id": "T1037.001",
+          "pred_tactic": "Persistence",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1112_96",
+          "gt_technique_id": "T1037.001",
+          "gt_tactic": "Persistence",
+          "pred_technique_id": "T1112",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.5
+        }
+      ]
+    },
+    "chain": {
+      "ref_steps": 2,
+      "pred_steps": 3,
+      "step_coverage": 0.5,
+      "tactic_jaccard": 0.5,
+      "tactic_lcs_norm": 0.5,
+      "technique_lcs_norm": 0.5,
+      "order_accuracy": 1.0,
+      "matched_pairs": [
+        {
+          "ref_step": 1,
+          "ref_tid": "T1059.003",
+          "ref_tactic": "Execution",
+          "pred_idx": null,
+          "pred_tid": null
+        },
+        {
+          "ref_step": 2,
+          "ref_tid": "T1037.001",
+          "ref_tactic": "Persistence",
+          "pred_idx": 0,
+          "pred_tid": "T1037.001"
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "covenant_persistwmi_2019-12-05044734",
+    "ttp": {
+      "n": 2,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "mrr": 0.0,
+      "hit_at_1_lenient": 0.0,
+      "hit_at_5_lenient": 0.0,
+      "mrr_lenient": 0.0,
+      "details": [
+        {
+          "group_id": "T1021_003_352",
+          "gt_technique_id": "T1546.003",
+          "gt_tactic": "Persistence",
+          "pred_technique_id": "T1021.006",
+          "pred_tactic": "Lateral Movement",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1021_002_349",
+          "gt_technique_id": "T1546.003",
+          "gt_tactic": "Persistence",
+          "pred_technique_id": "T1003.004",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        }
+      ]
+    },
+    "chain": {
+      "ref_steps": 2,
+      "pred_steps": 12,
+      "step_coverage": 0.5,
+      "tactic_jaccard": 0.1667,
+      "tactic_lcs_norm": 0.5,
+      "technique_lcs_norm": 0.5,
+      "order_accuracy": 1.0,
+      "matched_pairs": [
+        {
+          "ref_step": 1,
+          "ref_tid": "T1059.001",
+          "ref_tactic": "Execution",
+          "pred_idx": null,
+          "pred_tid": null
+        },
+        {
+          "ref_step": 2,
+          "ref_tid": "T1546.003",
+          "ref_tactic": "Persistence",
+          "pred_idx": 7,
+          "pred_tid": "T1546.003"
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "empire_persistence_registry_modification_run_keys_elevated_user_2020-07-22001847",
+    "ttp": {
+      "n": 2,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "mrr": 0.0,
+      "hit_at_1_lenient": 0.0,
+      "hit_at_5_lenient": 0.5,
+      "mrr_lenient": 0.125,
+      "details": [
+        {
+          "group_id": "T1071_001_87",
+          "gt_technique_id": "T1547.001",
+          "gt_tactic": "Persistence",
+          "pred_technique_id": "T1112",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1547_001_284",
+          "gt_technique_id": "T1547.001",
+          "gt_tactic": "Persistence",
+          "pred_technique_id": "T1546.007",
+          "pred_tactic": "Persistence",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.25
+        }
+      ]
+    },
+    "chain": {
+      "ref_steps": 2,
+      "pred_steps": 7,
+      "step_coverage": 0.5,
+      "tactic_jaccard": 0.1667,
+      "tactic_lcs_norm": 0.5,
+      "technique_lcs_norm": 0.5,
+      "order_accuracy": 1.0,
+      "matched_pairs": [
+        {
+          "ref_step": 1,
+          "ref_tid": "T1059.001",
+          "ref_tactic": "Execution",
+          "pred_idx": 5,
+          "pred_tid": "T1059.001"
+        },
+        {
+          "ref_step": 2,
+          "ref_tid": "T1547.001",
+          "ref_tactic": "Persistence",
+          "pred_idx": null,
+          "pred_tid": null
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "empire_schtasks_creation_execution_elevated_user_2020-09-21175806",
+    "ttp": {
+      "n": 14,
+      "hit_at_1": 0.07142857142857142,
+      "hit_at_5": 0.5,
+      "mrr": 0.25,
+      "hit_at_1_lenient": 0.14285714285714285,
+      "hit_at_5_lenient": 0.5,
+      "mrr_lenient": 0.2857142857142857,
+      "details": [
+        {
+          "group_id": "T1053_005_47",
+          "gt_technique_id": "T1053.005",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1546.013",
+          "pred_tactic": "Persistence",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.5
+        },
+        {
+          "group_id": "T1027_43272",
+          "gt_technique_id": "T1053.005",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1047_608",
+          "gt_technique_id": "T1053.005",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1529",
+          "pred_tactic": "Impact",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1059_25291",
+          "gt_technique_id": "T1053.005",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1112",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1070_004_6066",
+          "gt_technique_id": "T1053.005",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1070",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1134_44",
+          "gt_technique_id": "T1053.005",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1003.001",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.5
+        },
+        {
+          "group_id": "T1053_005_3844",
+          "gt_technique_id": "T1053.005",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1574.011",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.5
+        },
+        {
+          "group_id": "T1027_43273",
+          "gt_technique_id": "T1053.005",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1112_12901",
+          "gt_technique_id": "T1053.005",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1574.011",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1053_005_12378",
+          "gt_technique_id": "T1053.005",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1053.005",
+          "pred_tactic": "Execution",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1053_005_17097",
+          "gt_technique_id": "T1053.005",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1003.001",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.25,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.25
+        },
+        {
+          "group_id": "T1053_005_31276",
+          "gt_technique_id": "T1053.005",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1047",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.25,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.25
+        },
+        {
+          "group_id": "T1053_005_36917",
+          "gt_technique_id": "T1053.005",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1574.011",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1053_005_42188",
+          "gt_technique_id": "T1053.005",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1053",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        }
+      ]
+    },
+    "chain": {
+      "ref_steps": 3,
+      "pred_steps": 80,
+      "step_coverage": 1.0,
+      "tactic_jaccard": 0.2857,
+      "tactic_lcs_norm": 1.0,
+      "technique_lcs_norm": 1.0,
+      "order_accuracy": 0.0,
+      "matched_pairs": [
+        {
+          "ref_step": 1,
+          "ref_tid": "T1059.001",
+          "ref_tactic": "Execution",
+          "pred_idx": 3,
+          "pred_tid": "T1059.001"
+        },
+        {
+          "ref_step": 2,
+          "ref_tid": "T1053.005",
+          "ref_tactic": "Persistence",
+          "pred_idx": 0,
+          "pred_tid": "T1053.005"
+        },
+        {
+          "ref_step": 3,
+          "ref_tid": "T1053.005",
+          "ref_tactic": "Execution",
+          "pred_idx": 0,
+          "pred_tid": "T1053.005"
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "empire_wmi_local_event_subscriptions_elevated_user_2020-09-04164306",
+    "ttp": {
+      "n": 16,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.5625,
+      "mrr": 0.19791666666666666,
+      "hit_at_1_lenient": 0.0,
+      "hit_at_5_lenient": 0.8125,
+      "mrr_lenient": 0.26979166666666665,
+      "details": [
+        {
+          "group_id": "T1027_77303",
+          "gt_technique_id": "T1546.003",
+          "gt_tactic": "Persistence",
+          "pred_technique_id": "T1047",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.25,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.25
+        },
+        {
+          "group_id": "T1033_79473",
+          "gt_technique_id": "T1546.003",
+          "gt_tactic": "Persistence",
+          "pred_technique_id": "T1033",
+          "pred_tactic": "Discovery",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1047_877",
+          "gt_technique_id": "T1546.003",
+          "gt_tactic": "Persistence",
+          "pred_technique_id": "T1654",
+          "pred_tactic": "Discovery",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.3333333333333333,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.3333333333333333
+        },
+        {
+          "group_id": "T1059_001_77321",
+          "gt_technique_id": "T1546.003",
+          "gt_tactic": "Persistence",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.3333333333333333
+        },
+        {
+          "group_id": "T1112_2130",
+          "gt_technique_id": "T1546.003",
+          "gt_tactic": "Persistence",
+          "pred_technique_id": "T1574.011",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.25,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.25
+        },
+        {
+          "group_id": "T1546_003_5424",
+          "gt_technique_id": "T1546.003",
+          "gt_tactic": "Persistence",
+          "pred_technique_id": "T1047",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.5
+        },
+        {
+          "group_id": "T1027_77312",
+          "gt_technique_id": "T1546.003",
+          "gt_tactic": "Persistence",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.3333333333333333,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.3333333333333333
+        },
+        {
+          "group_id": "T1055_64352",
+          "gt_technique_id": "T1546.003",
+          "gt_tactic": "Persistence",
+          "pred_technique_id": "T1055.011",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1059_003_30078",
+          "gt_technique_id": "T1546.003",
+          "gt_tactic": "Persistence",
+          "pred_technique_id": "T1059.003",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.2
+        },
+        {
+          "group_id": "T1071_001_78599",
+          "gt_technique_id": "T1546.003",
+          "gt_tactic": "Persistence",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.3333333333333333
+        },
+        {
+          "group_id": "T1546_003_447",
+          "gt_technique_id": "T1546.003",
+          "gt_tactic": "Persistence",
+          "pred_technique_id": "T1047",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.5
+        },
+        {
+          "group_id": "T1021_002_1045",
+          "gt_technique_id": "T1546.003",
+          "gt_tactic": "Persistence",
+          "pred_technique_id": "T1047",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.5
+        },
+        {
+          "group_id": "T1546_003_8808",
+          "gt_technique_id": "T1546.003",
+          "gt_tactic": "Persistence",
+          "pred_technique_id": "T1654",
+          "pred_tactic": "Discovery",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.25,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.25
+        },
+        {
+          "group_id": "T1016_56745",
+          "gt_technique_id": "T1546.003",
+          "gt_tactic": "Persistence",
+          "pred_technique_id": "T1016",
+          "pred_tactic": "Discovery",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1016_58649",
+          "gt_technique_id": "T1546.003",
+          "gt_tactic": "Persistence",
+          "pred_technique_id": "T1016",
+          "pred_tactic": "Discovery",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.2
+        },
+        {
+          "group_id": "T1112_77216",
+          "gt_technique_id": "T1546.003",
+          "gt_tactic": "Persistence",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.25,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.3333333333333333
+        }
+      ]
+    },
+    "chain": {
+      "ref_steps": 2,
+      "pred_steps": 80,
+      "step_coverage": 1.0,
+      "tactic_jaccard": 0.3333,
+      "tactic_lcs_norm": 1.0,
+      "technique_lcs_norm": 1.0,
+      "order_accuracy": 0.0,
+      "matched_pairs": [
+        {
+          "ref_step": 1,
+          "ref_tid": "T1059.001",
+          "ref_tactic": "Execution",
+          "pred_idx": 15,
+          "pred_tid": "T1059.003"
+        },
+        {
+          "ref_step": 2,
+          "ref_tid": "T1546.003",
+          "ref_tactic": "Persistence",
+          "pred_idx": 0,
+          "pred_tid": "T1047"
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "cmd_service_mod_fax_2020-10-2120454410",
+    "ttp": {
+      "n": 2,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.5,
+      "mrr": 0.125,
+      "hit_at_1_lenient": 0.0,
+      "hit_at_5_lenient": 0.5,
+      "mrr_lenient": 0.125,
+      "details": [
+        {
+          "group_id": "T1059_64",
+          "gt_technique_id": "T1543.003",
+          "gt_tactic": "Persistence",
+          "pred_technique_id": "T1574.011",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1070_001_0",
+          "gt_technique_id": "T1543.003",
+          "gt_tactic": "Persistence",
+          "pred_technique_id": "T1574.011",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.25,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.25
+        }
+      ]
+    },
+    "chain": {
+      "ref_steps": 3,
+      "pred_steps": 4,
+      "step_coverage": 0.3333,
+      "tactic_jaccard": 0.2,
+      "tactic_lcs_norm": 0.3333,
+      "technique_lcs_norm": 0.3333,
+      "order_accuracy": 1.0,
+      "matched_pairs": [
+        {
+          "ref_step": 1,
+          "ref_tid": "T1059.003",
+          "ref_tactic": "Execution",
+          "pred_idx": null,
+          "pred_tid": null
+        },
+        {
+          "ref_step": 2,
+          "ref_tid": "T1543.003",
+          "ref_tactic": "Persistence",
+          "pred_idx": 2,
+          "pred_tid": "T1574.011"
+        },
+        {
+          "ref_step": 3,
+          "ref_tid": "T1543.003",
+          "ref_tactic": "Privilege Escalation",
+          "pred_idx": null,
+          "pred_tid": null
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "empire_invoke_runas_2019-05-18204300",
+    "ttp": {
+      "n": 13,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.3076923076923077,
+      "mrr": 0.15384615384615385,
+      "hit_at_1_lenient": 0.38461538461538464,
+      "hit_at_5_lenient": 0.46153846153846156,
+      "mrr_lenient": 0.4230769230769231,
+      "details": [
+        {
+          "group_id": "T1021_003_404",
+          "gt_technique_id": "T1134.002",
+          "gt_tactic": "Privilege Escalation",
+          "pred_technique_id": "T1021.006",
+          "pred_tactic": "Lateral Movement",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1027_627",
+          "gt_technique_id": "T1027",
+          "gt_tactic": "Defense Evasion",
+          "pred_technique_id": "T1003.001",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1059_638",
+          "gt_technique_id": "T1059.001",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1059.005",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1059_415",
+          "gt_technique_id": "T1059.003",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1059_539",
+          "gt_technique_id": "T1059.005",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1140_1051",
+          "gt_technique_id": "T1140",
+          "gt_tactic": "Defense Evasion",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1059_001_645",
+          "gt_technique_id": "T1059.001",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1003.001",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.5
+        },
+        {
+          "group_id": "T1059_003_410",
+          "gt_technique_id": "T1059.003",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1059_005_585",
+          "gt_technique_id": "T1059.005",
+          "gt_tactic": "Execution",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1071_001_8",
+          "gt_technique_id": "T1071.001",
+          "gt_tactic": "Command and Control",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1071_001_100",
+          "gt_technique_id": "T1071.001",
+          "gt_tactic": "Command and Control",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1071_001_185",
+          "gt_technique_id": "T1071.001",
+          "gt_tactic": "Command and Control",
+          "pred_technique_id": "T1059.003",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1071_001_495",
+          "gt_technique_id": "T1071.001",
+          "gt_tactic": "Command and Control",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        }
+      ]
+    },
+    "chain": {
+      "ref_steps": 2,
+      "pred_steps": 21,
+      "step_coverage": 0.5,
+      "tactic_jaccard": 0.1667,
+      "tactic_lcs_norm": 0.5,
+      "technique_lcs_norm": 0.5,
+      "order_accuracy": 1.0,
+      "matched_pairs": [
+        {
+          "ref_step": 1,
+          "ref_tid": "T1059.001",
+          "ref_tactic": "Execution",
+          "pred_idx": 0,
+          "pred_tid": "T1059.001"
+        },
+        {
+          "ref_step": 2,
+          "ref_tid": "T1134.002",
+          "ref_tactic": "Privilege Escalation",
+          "pred_idx": null,
+          "pred_tid": null
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "empire_uac_shellapi_fodhelper_2020-09-04032946",
+    "ttp": {
+      "n": 12,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.5,
+      "mrr": 0.18055555555555555,
+      "hit_at_1_lenient": 0.0,
+      "hit_at_5_lenient": 0.5,
+      "mrr_lenient": 0.18055555555555555,
+      "details": [
+        {
+          "group_id": "T1021_003_2667",
+          "gt_technique_id": "T1548.002",
+          "gt_tactic": "Defense Evasion",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1027_1019",
+          "gt_technique_id": "T1548.002",
+          "gt_tactic": "Defense Evasion",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1033_304",
+          "gt_technique_id": "T1548.002",
+          "gt_tactic": "Defense Evasion",
+          "pred_technique_id": "T1112",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.5
+        },
+        {
+          "group_id": "T1033_350",
+          "gt_technique_id": "T1548.002",
+          "gt_tactic": "Defense Evasion",
+          "pred_technique_id": "T1112",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.5
+        },
+        {
+          "group_id": "T1033_3849",
+          "gt_technique_id": "T1548.002",
+          "gt_tactic": "Defense Evasion",
+          "pred_technique_id": "T1033",
+          "pred_tactic": "Discovery",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.3333333333333333,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.3333333333333333
+        },
+        {
+          "group_id": "T1047_2305",
+          "gt_technique_id": "T1548.002",
+          "gt_tactic": "Defense Evasion",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1055_3101",
+          "gt_technique_id": "T1548.002",
+          "gt_tactic": "Defense Evasion",
+          "pred_technique_id": "T1055.011",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1059_001_296",
+          "gt_technique_id": "T1548.002",
+          "gt_tactic": "Defense Evasion",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1070_004_1350",
+          "gt_technique_id": "T1548.002",
+          "gt_tactic": "Defense Evasion",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.3333333333333333,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.3333333333333333
+        },
+        {
+          "group_id": "T1071_001_2452",
+          "gt_technique_id": "T1548.002",
+          "gt_tactic": "Defense Evasion",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1112_409",
+          "gt_technique_id": "T1548.002",
+          "gt_tactic": "Defense Evasion",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.25,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.25
+        },
+        {
+          "group_id": "T1112_1184",
+          "gt_technique_id": "T1548.002",
+          "gt_tactic": "Defense Evasion",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.25,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.25
+        }
+      ]
+    },
+    "chain": {
+      "ref_steps": 2,
+      "pred_steps": 17,
+      "step_coverage": 1.0,
+      "tactic_jaccard": 0.2,
+      "tactic_lcs_norm": 0.5,
+      "technique_lcs_norm": 1.0,
+      "order_accuracy": 1.0,
+      "matched_pairs": [
+        {
+          "ref_step": 1,
+          "ref_tid": "T1059.001",
+          "ref_tactic": "Execution",
+          "pred_idx": 0,
+          "pred_tid": "T1059.001"
+        },
+        {
+          "ref_step": 2,
+          "ref_tid": "T1548.002",
+          "ref_tactic": "Privilege Escalation",
+          "pred_idx": 1,
+          "pred_tid": "T1548.002"
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "metasploit_logonpasswords_lsass_memory_dump",
+    "ttp": {
+      "n": 34,
+      "hit_at_1": 0.29411764705882354,
+      "hit_at_5": 0.3235294117647059,
+      "mrr": 0.3088235294117647,
+      "hit_at_1_lenient": 0.29411764705882354,
+      "hit_at_5_lenient": 0.3235294117647059,
+      "mrr_lenient": 0.3088235294117647,
+      "details": [
+        {
+          "group_id": "T1003_4124",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1003.001",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1003_001_30861",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1003.001",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1016_41699",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1016.002",
+          "pred_tactic": "Discovery",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1059_11211",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1202",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1059_001_17732",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.5,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.5
+        },
+        {
+          "group_id": "T1059_003_11207",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1059_005_37398",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1012",
+          "pred_tactic": "Discovery",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1071_001_7799",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1003.001",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1082_11752",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1082",
+          "pred_tactic": "Discovery",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1543_003_26399",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1218.011",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1003_7837",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1003.001",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1016_43321",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1016",
+          "pred_tactic": "Discovery",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1057_40613",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1057",
+          "pred_tactic": "Discovery",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1070_004_18337",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1071_001_26818",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1218.010",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1082_39880",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1082",
+          "pred_tactic": "Discovery",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1003_10707",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1003.001",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1016_43502",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1016",
+          "pred_tactic": "Discovery",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1059_003_32489",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1070_004_22618",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1059.001",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1123_7038",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1003.001",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1003_19423",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1003.001",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1055_20821",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1003.001",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1123_10085",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1003.001",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1003_21537",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1003.001",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1070_004_11151",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1070.004",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1112_37990",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1012",
+          "pred_tactic": "Discovery",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1123_24011",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1218.011",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1033_28953",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1033",
+          "pred_tactic": "Discovery",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1070_004_26433",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1574.001",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1112_40561",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1016",
+          "pred_tactic": "Discovery",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1059_39838",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1059.003",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1123_31264",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1123",
+          "pred_tactic": "Collection",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1059_40569",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1057",
+          "pred_tactic": "Discovery",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        }
+      ]
+    },
+    "chain": {
+      "ref_steps": 3,
+      "pred_steps": 80,
+      "step_coverage": 1.0,
+      "tactic_jaccard": 0.5,
+      "tactic_lcs_norm": 1.0,
+      "technique_lcs_norm": 1.0,
+      "order_accuracy": 0.5,
+      "matched_pairs": [
+        {
+          "ref_step": 1,
+          "ref_tid": "T1059.005",
+          "ref_tactic": "Execution",
+          "pred_idx": 23,
+          "pred_tid": "T1059.001"
+        },
+        {
+          "ref_step": 2,
+          "ref_tid": "T1055",
+          "ref_tactic": "Defense Evasion",
+          "pred_idx": 1,
+          "pred_tid": "T1055.011"
+        },
+        {
+          "ref_step": 3,
+          "ref_tid": "T1003.001",
+          "ref_tactic": "Credential Access",
+          "pred_idx": 4,
+          "pred_tid": "T1003.001"
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "metasploit_procdump_lsass_memory_dump",
+    "ttp": {
+      "n": 15,
+      "hit_at_1": 0.26666666666666666,
+      "hit_at_5": 0.4,
+      "mrr": 0.3055555555555555,
+      "hit_at_1_lenient": 0.26666666666666666,
+      "hit_at_5_lenient": 0.4,
+      "mrr_lenient": 0.3055555555555555,
+      "details": [
+        {
+          "group_id": "T1036_005_10271",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1574.005",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1053_005_22378",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1003.001",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1070_004_669",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1070",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1082_12811",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1569.002",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1112_1018",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1027",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1123_8936",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1569.002",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.3333333333333333,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.3333333333333333
+        },
+        {
+          "group_id": "T1070_004_2423",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1083",
+          "pred_tactic": "Discovery",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1112_12401",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1059.003",
+          "pred_tactic": "Execution",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1070_004_29740",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1127.002",
+          "pred_tactic": "Defense Evasion",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1123_18257",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1003.001",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1070_004_32051",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1546.007",
+          "pred_tactic": "Persistence",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1055_23084",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1003.001",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1070_004_32842",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1012",
+          "pred_tactic": "Discovery",
+          "hit_at_1": 0,
+          "hit_at_5": 0,
+          "reciprocal_rank": 0.0,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 0,
+          "rr_lenient": 0.0
+        },
+        {
+          "group_id": "T1123_21983",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1003.001",
+          "pred_tactic": "Credential Access",
+          "hit_at_1": 1,
+          "hit_at_5": 1,
+          "reciprocal_rank": 1.0,
+          "hit_at_1_lenient": 1,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 1.0
+        },
+        {
+          "group_id": "T1123_29375",
+          "gt_technique_id": "T1003.001",
+          "gt_tactic": "Credential Access",
+          "pred_technique_id": "T1123",
+          "pred_tactic": "Collection",
+          "hit_at_1": 0,
+          "hit_at_5": 1,
+          "reciprocal_rank": 0.25,
+          "hit_at_1_lenient": 0,
+          "hit_at_5_lenient": 1,
+          "rr_lenient": 0.25
+        }
+      ]
+    },
+    "chain": {
+      "ref_steps": 3,
+      "pred_steps": 80,
+      "step_coverage": 1.0,
+      "tactic_jaccard": 0.5,
+      "tactic_lcs_norm": 1.0,
+      "technique_lcs_norm": 1.0,
+      "order_accuracy": 0.0,
+      "matched_pairs": [
+        {
+          "ref_step": 1,
+          "ref_tid": "T1059",
+          "ref_tactic": "Execution",
+          "pred_idx": 16,
+          "pred_tid": "T1059.003"
+        },
+        {
+          "ref_step": 2,
+          "ref_tid": "T1055",
+          "ref_tactic": "Defense Evasion",
+          "pred_idx": 5,
+          "pred_tid": "T1055.011"
+        },
+        {
+          "ref_step": 3,
+          "ref_tid": "T1003.001",
+          "ref_tactic": "Credential Access",
+          "pred_idx": 0,
+          "pred_tid": "T1003.001"
+        }
+      ]
+    }
+  }
+]

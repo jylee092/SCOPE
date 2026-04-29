@@ -1,0 +1,13 @@
+{
+  "deepag": {
+    "n_test_campaigns": 10,
+    "n_predictions": 261,
+    "top1_acc": 0.1839080459770115,
+    "top5_acc": 0.4367816091954023
+  },
+  "magic": {
+    "n_scenarios_evaluated": 31,
+    "n_scenarios_skipped": 4,
+    "macro_AUC": 0.6285897166554031
+  }
+}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": false,\n  \"deviation\": \"\",\n  \"indicators\": [\n    \"svchost.exe\",\n    \"Task Scheduler\",\n    \"Software Protection Platform\",\n    \"sppc.dll\"\n  ]\n}"}

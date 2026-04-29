@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed processes and their actions, including the use of wevtutil.exe to install/uninstall event manifests from the Azure Guest Agent directory, are consistent with legitimate system and Azure VM agent operations, with no indicators of known attack patterns.\"\n}"}

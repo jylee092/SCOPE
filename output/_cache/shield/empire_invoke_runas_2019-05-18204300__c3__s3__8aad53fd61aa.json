@@ -1,0 +1,1 @@
+{"text": "{\n  \"confidence_score\": 0.95,\n  \"attack_summary\": \"An attacker used cmd.exe to launch wscript.exe, executing a malicious VBScript named 'autoupdate.vbs' from the C:\\\\windows\\\\system32 directory. This activity is highly suspicious due to the unusual location for a VBScript and the masquerading filename, indicating an attempt at defense evasion and"}

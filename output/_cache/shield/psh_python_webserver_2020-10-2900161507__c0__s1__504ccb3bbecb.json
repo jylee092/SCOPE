@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed registry writes by Explorer.EXE to UserAssist and ActivityDataModel keys are consistent with normal user activity tracking and do not indicate any suspicious behavior or known attack patterns.\"\n}"}

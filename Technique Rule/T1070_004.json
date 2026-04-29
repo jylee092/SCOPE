@@ -1,0 +1,61 @@
+{
+  "technique": { "id": "T1070.004", "name": "File Deletion" },
+  "detection": { "id": "DET-T1070004" },
+  "analysis": { "id": "AN-T1070004" },
+  "log_sources": {
+    "Anchor Event": {
+      "data_component": { "id": "DC0040", "name": "File Deletion" },
+      "description": "악성 도구/페이로드/산출물 삭제를 통한 증거 인멸.",
+      "conditions": [
+        {
+          "type": "sysmon_file_delete_sensitive",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [23, 26] },
+          "filters": {
+            "TargetFilename": {
+              "contains_any": [
+                ".exe", ".dll", ".ps1", ".bat", ".vbs", ".dmp", ".hive",
+                ".evtx", ".log", ".tmp", "\\Temp\\", "\\AppData\\", "\\ProgramData\\",
+                "\\Public\\", "Prefetch"
+              ]
+            }
+          },
+          "description": "Sysmon EID 23/26 중 의심 확장자 또는 공격자가 흔적 제거할 만한 경로만 anchor."
+        },
+        {
+          "type": "delete_cli",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [1] },
+          "filters": {
+            "CommandLine": {
+              "contains_any": [
+                "del /q", "del /f", "del /s", "erase /",
+                "rmdir /s", "rd /s", "Remove-Item -Force", "Remove-Item -Recurse",
+                "cipher /w", "sdelete"
+              ]
+            }
+          },
+          "description": "del/erase/Remove-Item/cipher/sdelete 실행."
+        }
+      ]
+    },
+    "Supporting Events": [
+      { "data_component": { "id": "DC0032", "name": "Process Creation" }, "source": "WinEventLog:Sysmon", "channel": { "event_codes": [1] }, "description": "삭제를 수행한 프로세스 컨텍스트" },
+      { "data_component": { "id": "DC0059", "name": "File Metadata" }, "source": "WinEventLog:Sysmon", "channel": { "event_codes": [2] }, "description": "파일 타임스톰프 변경 (timestomping과 함께)" }
+    ]
+  },
+  "mutable_elements": {
+    "grouping_logic": {
+      "primary_anchor_eids": [23, 26, 1],
+      "correlation_key": { "primary": ["Hostname", "ProcessGuid"], "fallback": ["Hostname"] },
+      "time_window": { "before_seconds": 30, "after_seconds": 60 }
+    },
+    "feature_extraction_filters": {
+      "suspicious_deletion_paths": ["\\Temp\\", "\\AppData\\", "\\ProgramData\\", "\\Public\\", "Prefetch"],
+      "payload_extensions": [".exe", ".dll", ".ps1", ".bat", ".vbs", ".tmp", ".dmp"]
+    },
+    "semantic_templates": {
+      "file_deletion": "프로세스({Image})가 {TargetFilename} 파일을 삭제하여 흔적을 지움."
+    }
+  }
+}

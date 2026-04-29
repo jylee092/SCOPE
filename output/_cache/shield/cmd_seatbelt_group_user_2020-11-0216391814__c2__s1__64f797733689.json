@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed process activities, command lines, DLL loads, registry operations, and named pipe connections are consistent with the normal operation of WMI Provider Host (WmiPrvSE.exe) and do not indicate any known attack patterns.\"\n}"}

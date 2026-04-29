@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[powershell.exe|{d273d0f0-28b]\"\n  ],\n  \"rationale\": \"The PowerShell process wrote temporary scripts to a user's AppData\\\\Local\\\\Temp directory and extensively created system certificate registry keys, which are common indicators of malicious activity often used for persistence or trust manipulation.\"\n}"}

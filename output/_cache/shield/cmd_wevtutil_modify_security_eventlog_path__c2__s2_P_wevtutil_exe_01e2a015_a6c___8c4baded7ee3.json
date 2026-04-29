@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"wevtutil.exe is used to change the log file path for the 'Security' event log, which is a common technique for defense evasion to hide malicious activity.\",\n  \"indicators\": [\n    \"wevtutil.exe\",\n    \"set-log Security\",\n    \"/logfilename\",\n    \"Not-Important-Log.evtx\"\n  ]\n}"}

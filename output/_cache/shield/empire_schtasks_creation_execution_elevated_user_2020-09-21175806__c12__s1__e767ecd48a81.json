@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed processes (ngen.exe, mscorsvw.exe, ngentask.exe) are legitimate .NET Native Image Generator components, and their command lines, file/registry interactions, and process relationships are consistent with normal system operation, showing no signs of common attack patterns.\"\n}"}

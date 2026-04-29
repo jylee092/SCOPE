@@ -1,0 +1,1 @@
+{"text": "{\n  \"isSuspicious\": true,\n  \"deviation\": \"cmd.exe spawned 'ProcessHerpaderping.exe', a known evasion technique, with command-line arguments referencing 'mimikatz.exe' and 'wardog.exe', both associated with malicious activity.\",\n  \"indicators\": [\n    \"ProcessHerpaderping\",\n    \"mimikatz\",\n    \"wardog\"\n  ]\n}"}

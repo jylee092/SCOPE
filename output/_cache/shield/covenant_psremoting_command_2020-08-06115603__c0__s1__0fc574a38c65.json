@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[wsmprovhost.exe|{49a15388-282]\"\n  ],\n  \"rationale\": \"The wsmprovhost.exe process, a known LOLBIN, is interacting with PowerShell by creating and deleting temporary script policy test files, and performing extensive registry modifications related to certificate stores, which could indicate abuse for execution"}

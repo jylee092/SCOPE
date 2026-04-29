@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[powershell.exe|{3ddc5665-e80]\"\n  ],\n  \"rationale\": \"The powershell.exe process modified the 'ms-settings\\\\Shell\\\\Open\\\\command' registry key to execute an obfuscated PowerShell command, which is a common technique for persistence and privilege escalation via handler hijacking.\"\n}"}

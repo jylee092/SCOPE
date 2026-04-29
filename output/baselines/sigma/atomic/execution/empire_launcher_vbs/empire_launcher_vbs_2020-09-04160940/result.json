@@ -1,0 +1,457 @@
+{
+  "scenario": "empire_launcher_vbs_2020-09-04160940",
+  "tactic_sequence": [
+    "Privilege Escalation",
+    "Impact",
+    "Defense Evasion",
+    "Execution",
+    "Discovery",
+    "Privilege Escalation",
+    "Impact"
+  ],
+  "technique_sequence": [
+    "T1133",
+    "T1531",
+    "T1112",
+    "T1059.001",
+    "T1033",
+    "T1133",
+    "T1531"
+  ],
+  "per_group_topk": [
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ],
+    [
+      "T1112",
+      "T1059.005"
+    ],
+    [
+      "T1112",
+      "T1059.005"
+    ],
+    [
+      "T1112",
+      "T1059.005"
+    ],
+    [
+      "T1112",
+      "T1059.005"
+    ],
+    [
+      "T1112",
+      "T1059.005"
+    ],
+    [
+      "T1112",
+      "T1059.005"
+    ],
+    [
+      "T1112",
+      "T1059.005"
+    ],
+    [
+      "T1112",
+      "T1059.005"
+    ],
+    [
+      "T1112",
+      "T1059.005"
+    ],
+    [
+      "T1112",
+      "T1059.005"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1059.001",
+      "T1562.001"
+    ],
+    [
+      "T1059.001"
+    ],
+    [
+      "T1033",
+      "T1087.001"
+    ],
+    [
+      "T1133",
+      "T1078",
+      "T1110"
+    ],
+    [
+      "T1531"
+    ]
+  ],
+  "notes": {
+    "n_events_evaluated": 1466,
+    "n_alerts": 19,
+    "alerts": [
+      {
+        "ts": "2020-09-04 20:09:40.850000+00:00",
+        "event_index": 14,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 20:09:40.852000+00:00",
+        "event_index": 17,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 20:09:55.985000+00:00",
+        "event_index": 135,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "7f4c43f9-b1a5-4c7d-b24a-b41bf3a3ebf2",
+          "title": "Registry Tampering by Potentially Suspicious Processes",
+          "level": "medium",
+          "status": "experimental"
+        }
+      },
+      {
+        "ts": "2020-09-04 20:09:55.985000+00:00",
+        "event_index": 136,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "7f4c43f9-b1a5-4c7d-b24a-b41bf3a3ebf2",
+          "title": "Registry Tampering by Potentially Suspicious Processes",
+          "level": "medium",
+          "status": "experimental"
+        }
+      },
+      {
+        "ts": "2020-09-04 20:09:55.986000+00:00",
+        "event_index": 137,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "7f4c43f9-b1a5-4c7d-b24a-b41bf3a3ebf2",
+          "title": "Registry Tampering by Potentially Suspicious Processes",
+          "level": "medium",
+          "status": "experimental"
+        }
+      },
+      {
+        "ts": "2020-09-04 20:09:55.988000+00:00",
+        "event_index": 138,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "7f4c43f9-b1a5-4c7d-b24a-b41bf3a3ebf2",
+          "title": "Registry Tampering by Potentially Suspicious Processes",
+          "level": "medium",
+          "status": "experimental"
+        }
+      },
+      {
+        "ts": "2020-09-04 20:09:55.989000+00:00",
+        "event_index": 139,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "7f4c43f9-b1a5-4c7d-b24a-b41bf3a3ebf2",
+          "title": "Registry Tampering by Potentially Suspicious Processes",
+          "level": "medium",
+          "status": "experimental"
+        }
+      },
+      {
+        "ts": "2020-09-04 20:09:56.005000+00:00",
+        "event_index": 155,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "7f4c43f9-b1a5-4c7d-b24a-b41bf3a3ebf2",
+          "title": "Registry Tampering by Potentially Suspicious Processes",
+          "level": "medium",
+          "status": "experimental"
+        }
+      },
+      {
+        "ts": "2020-09-04 20:09:57.040000+00:00",
+        "event_index": 218,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "7f4c43f9-b1a5-4c7d-b24a-b41bf3a3ebf2",
+          "title": "Registry Tampering by Potentially Suspicious Processes",
+          "level": "medium",
+          "status": "experimental"
+        }
+      },
+      {
+        "ts": "2020-09-04 20:09:57.040000+00:00",
+        "event_index": 219,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "7f4c43f9-b1a5-4c7d-b24a-b41bf3a3ebf2",
+          "title": "Registry Tampering by Potentially Suspicious Processes",
+          "level": "medium",
+          "status": "experimental"
+        }
+      },
+      {
+        "ts": "2020-09-04 20:09:57.041000+00:00",
+        "event_index": 220,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "7f4c43f9-b1a5-4c7d-b24a-b41bf3a3ebf2",
+          "title": "Registry Tampering by Potentially Suspicious Processes",
+          "level": "medium",
+          "status": "experimental"
+        }
+      },
+      {
+        "ts": "2020-09-04 20:09:57.042000+00:00",
+        "event_index": 223,
+        "event_id": 12,
+        "topk_tids": [
+          "T1112",
+          "T1059.005"
+        ],
+        "topk_tactics": [
+          "Defense Evasion",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "7f4c43f9-b1a5-4c7d-b24a-b41bf3a3ebf2",
+          "title": "Registry Tampering by Potentially Suspicious Processes",
+          "level": "medium",
+          "status": "experimental"
+        }
+      },
+      {
+        "ts": "2020-09-04 20:09:57.060000+00:00",
+        "event_index": 259,
+        "event_id": 1,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "c86133ad-4725-4bd0-8170-210788e0a7ba",
+          "title": "Net WebClient Casing Anomalies",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 20:09:57.091000+00:00",
+        "event_index": 327,
+        "event_id": 4688,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "79f4ede3-402e-41c8-bc3e-ebbf5f162581",
+          "title": "HackTool - Empire PowerShell Launch Parameters",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 20:10:00.327000+00:00",
+        "event_index": 917,
+        "event_id": 4104,
+        "topk_tids": [
+          "T1059.001",
+          "T1562.001"
+        ],
+        "topk_tactics": [
+          "Execution",
+          "Defense Evasion"
+        ],
+        "top_rule": {
+          "rule_id": "ae7fbf8e-f3cb-49fd-8db4-5f3bed522c71",
+          "title": "Suspicious PowerShell Invocations - Specific",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 20:10:00.419000+00:00",
+        "event_index": 1106,
+        "event_id": 17,
+        "topk_tids": [
+          "T1059.001"
+        ],
+        "topk_tactics": [
+          "Execution"
+        ],
+        "top_rule": {
+          "rule_id": "ac7102b4-9e1e-4802-9b4f-17c5524c015c",
+          "title": "New PowerShell Instance Created",
+          "level": "informational",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 20:10:24.933000+00:00",
+        "event_index": 1819,
+        "event_id": 1,
+        "topk_tids": [
+          "T1033",
+          "T1087.001"
+        ],
+        "topk_tactics": [
+          "Discovery",
+          "Discovery"
+        ],
+        "top_rule": {
+          "rule_id": "502b42de-4306-40b4-9596-6f590c81f073",
+          "title": "Local Accounts Discovery",
+          "level": "low",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 20:10:41.065000+00:00",
+        "event_index": 1996,
+        "event_id": 4624,
+        "topk_tids": [
+          "T1133",
+          "T1078",
+          "T1110"
+        ],
+        "topk_tactics": [
+          "Privilege Escalation",
+          "Privilege Escalation",
+          "Privilege Escalation"
+        ],
+        "top_rule": {
+          "rule_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+          "title": "External Remote SMB Logon from Public IP",
+          "level": "high",
+          "status": "test"
+        }
+      },
+      {
+        "ts": "2020-09-04 20:10:41.067000+00:00",
+        "event_index": 2000,
+        "event_id": 4634,
+        "topk_tids": [
+          "T1531"
+        ],
+        "topk_tactics": [
+          "Impact"
+        ],
+        "top_rule": {
+          "rule_id": "0badd08f-c6a3-4630-90d3-6875cca440be",
+          "title": "User Logoff Event",
+          "level": "informational",
+          "status": "test"
+        }
+      }
+    ]
+  }
+}

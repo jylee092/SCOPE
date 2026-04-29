@@ -1,0 +1,69 @@
+{
+  "technique": { "id": "T1021.002", "name": "SMB/Windows Admin Shares" },
+  "detection": { "id": "DET-T1021002" },
+  "analysis": { "id": "AN-T1021002" },
+  "log_sources": {
+    "Anchor Event": {
+      "data_component": { "id": "DC0102", "name": "Network Share Access" },
+      "description": "관리 공유(ADMIN$, C$, IPC$) 접근 이벤트.",
+      "conditions": [
+        {
+          "type": "admin_share_access",
+          "source": "WinEventLog:Security",
+          "channel": { "event_codes": [5140, 5145] },
+          "filters": {
+            "ShareName": { "contains_any": ["\\\\*\\ADMIN$", "\\\\*\\C$", "\\\\*\\IPC$"] }
+          },
+          "description": "Security 채널 관리 공유 접근 이벤트 (5140: 공유 액세스, 5145: 객체 체크)."
+        },
+        {
+          "type": "network_logon",
+          "source": "WinEventLog:Security",
+          "channel": { "event_codes": [4624] },
+          "filters": {
+            "LogonType": { "in": ["3", "10"] }
+          },
+          "description": "네트워크/원격 로그온 (타입 3 = SMB, 10 = RDP)."
+        },
+        {
+          "type": "smb_connect_sysmon",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [3] },
+          "filters": {
+            "DestinationPort": { "in": ["445", "139"] }
+          },
+          "description": "SMB 포트 445/139 아웃바운드 연결."
+        },
+        {
+          "type": "psexec_process",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [1] },
+          "filters": {
+            "Image": { "contains_any": ["psexec.exe", "paexec.exe", "psexesvc.exe"] }
+          },
+          "description": "PsExec 계열 원격 실행 도구 프로세스."
+        }
+      ]
+    },
+    "Supporting Events": [
+      { "data_component": { "id": "DC0067", "name": "Logon Session Creation" }, "source": "WinEventLog:Security", "channel": { "event_codes": [4624, 4625, 4648] }, "description": "네트워크 로그온 세션 생성" },
+      { "data_component": { "id": "DC0039", "name": "File Creation" }, "source": "WinEventLog:Sysmon", "channel": { "event_codes": [11] }, "filters": { "TargetFilename": { "contains": "ADMIN$" } }, "description": "원격 관리 공유에 파일 드롭" },
+      { "data_component": { "id": "DC0048", "name": "Named Pipe Metadata" }, "source": "WinEventLog:Sysmon", "channel": { "event_codes": [17, 18] }, "description": "\\\\.\\pipe\\svcctl, \\\\.\\pipe\\lsass 등 SMB 원격 제어 파이프" }
+    ]
+  },
+  "mutable_elements": {
+    "grouping_logic": {
+      "primary_anchor_eids": [5140, 5145, 4624],
+      "secondary_anchor": { "event_codes": [1, 3], "required_filters": ["445", "psexec"] },
+      "correlation_key": { "primary": ["Hostname", "norm_logon_id"], "secondary": ["SourceAddress", "IpAddress"], "fallback": ["Hostname"] },
+      "time_window": { "before_seconds": 60, "after_seconds": 300, "note": "원격 공유 접근 후 원격 프로세스 실행까지 포함" }
+    },
+    "feature_extraction_filters": {
+      "suspicious_share_targets": ["ADMIN$", "C$", "IPC$"],
+      "remote_exec_tools": ["psexec", "paexec", "wmic /node", "Invoke-WmiMethod"]
+    },
+    "semantic_templates": {
+      "smb_lateral": "계정({SubjectUserName})이 {SourceAddress}에서 {ObjectServer}\\{ShareName}에 접근하여 원격 실행을 수행함."
+    }
+  }
+}

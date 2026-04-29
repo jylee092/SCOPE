@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The community only contains netsh.exe performing registry writes to PeerDist and NetTrace related keys, which are legitimate configuration actions for this utility; without the command line arguments, there is insufficient evidence to identify a known attack pattern.\"\n}"}

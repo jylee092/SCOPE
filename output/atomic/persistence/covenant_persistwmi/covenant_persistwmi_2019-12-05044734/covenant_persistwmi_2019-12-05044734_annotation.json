@@ -1,0 +1,1493 @@
+{
+  "scenario": "covenant_persistwmi_2019-12-05044734",
+  "total_groups": 12,
+  "instruction": "각 그룹의 sample_logs와 anchor를 확인한 뒤 gt_ 필드를 채워주세요. gt_is_true_positive: 해당 그룹이 실제 공격 행위인지 (true/false). gt_technique_id: 실제 MITRE technique ID (예: T1059.001). gt_tactic: 실제 tactic 이름 (예: Execution). gt_notes: 판단 근거나 메모.",
+  "groups": [
+    {
+      "group_id": "T1021_003_107",
+      "rule_technique_id": "T1021.003",
+      "rule_technique_name": "Distributed Component Object Model",
+      "confidence": 0.56,
+      "anchor": {
+        "idx": 107,
+        "EventID": 4624,
+        "Image": "nan",
+        "CommandLine": "",
+        "TimeCreated": "2019-12-05 04:47:40.113000+00:00"
+      },
+      "num_events": 74,
+      "event_id_distribution": {
+        "3": 27,
+        "7": 22,
+        "11": 13,
+        "4624": 9,
+        "18": 3
+      },
+      "sample_logs": [
+        {
+          "idx": 43,
+          "EventID": 3,
+          "TimeCreated": "2019-12-05 04:47:39.082000+00:00",
+          "Image": "C:\\Windows\\System32\\dns.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 44,
+          "EventID": 3,
+          "TimeCreated": "2019-12-05 04:47:39.082000+00:00",
+          "Image": "C:\\Windows\\System32\\dns.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 59,
+          "EventID": 18,
+          "TimeCreated": "2019-12-05 04:47:39.088000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 66,
+          "EventID": 7,
+          "TimeCreated": "2019-12-05 04:47:39.090000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 67,
+          "EventID": 7,
+          "TimeCreated": "2019-12-05 04:47:39.090000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 68,
+          "EventID": 7,
+          "TimeCreated": "2019-12-05 04:47:39.090000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 69,
+          "EventID": 7,
+          "TimeCreated": "2019-12-05 04:47:39.090000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 70,
+          "EventID": 7,
+          "TimeCreated": "2019-12-05 04:47:39.091000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 71,
+          "EventID": 7,
+          "TimeCreated": "2019-12-05 04:47:39.091000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 72,
+          "EventID": 7,
+          "TimeCreated": "2019-12-05 04:47:39.091000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 73,
+          "EventID": 7,
+          "TimeCreated": "2019-12-05 04:47:39.091000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 74,
+          "EventID": 7,
+          "TimeCreated": "2019-12-05 04:47:39.092000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 75,
+          "EventID": 7,
+          "TimeCreated": "2019-12-05 04:47:39.092000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 76,
+          "EventID": 7,
+          "TimeCreated": "2019-12-05 04:47:39.092000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 79,
+          "EventID": 7,
+          "TimeCreated": "2019-12-05 04:47:39.093000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1546.003",
+      "gt_technique_name": "Distributed Component Object Model",
+      "gt_tactic": "Persistence",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1021.003)"
+    },
+    {
+      "group_id": "T1021_003_587",
+      "rule_technique_id": "T1021.003",
+      "rule_technique_name": "Distributed Component Object Model",
+      "confidence": 0.67,
+      "anchor": {
+        "idx": 587,
+        "EventID": 4624,
+        "Image": "nan",
+        "CommandLine": "",
+        "TimeCreated": "2019-12-05 04:48:15.516000+00:00"
+      },
+      "num_events": 12,
+      "event_id_distribution": {
+        "3": 6,
+        "7": 3,
+        "4624": 1,
+        "18": 1,
+        "11": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 542,
+          "EventID": 7,
+          "TimeCreated": "2019-12-05 04:48:07.423000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 543,
+          "EventID": 7,
+          "TimeCreated": "2019-12-05 04:48:07.423000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 544,
+          "EventID": 7,
+          "TimeCreated": "2019-12-05 04:48:07.423000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 587,
+          "EventID": 4624,
+          "TimeCreated": "2019-12-05 04:48:15.516000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 597,
+          "EventID": 3,
+          "TimeCreated": "2019-12-05 04:48:16.531000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 601,
+          "EventID": 3,
+          "TimeCreated": "2019-12-05 04:48:16.531000+00:00",
+          "Image": "C:\\Windows\\ADWS\\Microsoft.ActiveDirectory.WebServices.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 631,
+          "EventID": 18,
+          "TimeCreated": "2019-12-05 04:48:21.594000+00:00",
+          "Image": "C:\\Windows\\system32\\dns.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 708,
+          "EventID": 3,
+          "TimeCreated": "2019-12-05 04:48:29.689000+00:00",
+          "Image": "C:\\Windows\\System32\\dns.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 710,
+          "EventID": 3,
+          "TimeCreated": "2019-12-05 04:48:29.690000+00:00",
+          "Image": "C:\\Windows\\System32\\dns.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 719,
+          "EventID": 3,
+          "TimeCreated": "2019-12-05 04:48:31.702000+00:00",
+          "Image": "C:\\Windows\\System32\\dns.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 748,
+          "EventID": 3,
+          "TimeCreated": "2019-12-05 04:48:39.796000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 765,
+          "EventID": 11,
+          "TimeCreated": "2019-12-05 04:48:43.858000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1546.003",
+      "gt_technique_name": "Distributed Component Object Model",
+      "gt_tactic": "Persistence",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1021.003)"
+    },
+    {
+      "group_id": "T1021_003_846",
+      "rule_technique_id": "T1021.003",
+      "rule_technique_name": "Distributed Component Object Model",
+      "confidence": 0.67,
+      "anchor": {
+        "idx": 846,
+        "EventID": 4624,
+        "Image": "nan",
+        "CommandLine": "",
+        "TimeCreated": "2019-12-05 04:49:00.051000+00:00"
+      },
+      "num_events": 8,
+      "event_id_distribution": {
+        "7": 4,
+        "3": 3,
+        "4624": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 846,
+          "EventID": 4624,
+          "TimeCreated": "2019-12-05 04:49:00.051000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 853,
+          "EventID": 3,
+          "TimeCreated": "2019-12-05 04:49:00.053000+00:00",
+          "Image": "C:\\Windows\\System32\\dns.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 904,
+          "EventID": 7,
+          "TimeCreated": "2019-12-05 04:49:01.076000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 910,
+          "EventID": 3,
+          "TimeCreated": "2019-12-05 04:49:01.078000+00:00",
+          "Image": "C:\\Windows\\System32\\dns.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 913,
+          "EventID": 3,
+          "TimeCreated": "2019-12-05 04:49:01.078000+00:00",
+          "Image": "System",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 993,
+          "EventID": 7,
+          "TimeCreated": "2019-12-05 04:49:08.142000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 994,
+          "EventID": 7,
+          "TimeCreated": "2019-12-05 04:49:08.142000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 997,
+          "EventID": 7,
+          "TimeCreated": "2019-12-05 04:49:08.143000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1546.003",
+      "gt_technique_name": "Distributed Component Object Model",
+      "gt_tactic": "Persistence",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1021.003)"
+    },
+    {
+      "group_id": "T1021_003_352",
+      "rule_technique_id": "T1021.003",
+      "rule_technique_name": "Distributed Component Object Model",
+      "confidence": 0.67,
+      "anchor": {
+        "idx": 352,
+        "EventID": 4648,
+        "Image": "nan",
+        "CommandLine": "",
+        "TimeCreated": "2019-12-05 04:47:56.287000+00:00"
+      },
+      "num_events": 16,
+      "event_id_distribution": {
+        "7": 8,
+        "3": 4,
+        "4648": 4
+      },
+      "sample_logs": [
+        {
+          "idx": 295,
+          "EventID": 3,
+          "TimeCreated": "2019-12-05 04:47:49.188000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 333,
+          "EventID": 7,
+          "TimeCreated": "2019-12-05 04:47:56.283000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 339,
+          "EventID": 7,
+          "TimeCreated": "2019-12-05 04:47:56.285000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\unsecapp.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 344,
+          "EventID": 7,
+          "TimeCreated": "2019-12-05 04:47:56.286000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\unsecapp.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 347,
+          "EventID": 7,
+          "TimeCreated": "2019-12-05 04:47:56.286000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\unsecapp.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 352,
+          "EventID": 4648,
+          "TimeCreated": "2019-12-05 04:47:56.287000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 357,
+          "EventID": 7,
+          "TimeCreated": "2019-12-05 04:47:56.288000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\unsecapp.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 364,
+          "EventID": 7,
+          "TimeCreated": "2019-12-05 04:47:56.291000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 368,
+          "EventID": 7,
+          "TimeCreated": "2019-12-05 04:47:56.292000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 369,
+          "EventID": 4648,
+          "TimeCreated": "2019-12-05 04:47:56.292000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 379,
+          "EventID": 7,
+          "TimeCreated": "2019-12-05 04:47:56.295000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 380,
+          "EventID": 4648,
+          "TimeCreated": "2019-12-05 04:47:56.295000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 424,
+          "EventID": 4648,
+          "TimeCreated": "2019-12-05 04:47:57.320000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 443,
+          "EventID": 3,
+          "TimeCreated": "2019-12-05 04:47:58.329000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 444,
+          "EventID": 3,
+          "TimeCreated": "2019-12-05 04:47:58.329000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1546.003",
+      "gt_technique_name": "Distributed Component Object Model",
+      "gt_tactic": "Persistence",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: sample-kw+ctx(T1021.003,c=0.67)"
+    },
+    {
+      "group_id": "T1021_002_349",
+      "rule_technique_id": "T1021.002",
+      "rule_technique_name": "SMB/Windows Admin Shares",
+      "confidence": 0.67,
+      "anchor": {
+        "idx": 349,
+        "EventID": 4624,
+        "Image": "nan",
+        "CommandLine": "",
+        "TimeCreated": "2019-12-05 04:47:56.287000+00:00"
+      },
+      "num_events": 22,
+      "event_id_distribution": {
+        "7": 8,
+        "3": 4,
+        "4624": 4,
+        "4648": 4,
+        "18": 1,
+        "11": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 295,
+          "EventID": 3,
+          "TimeCreated": "2019-12-05 04:47:49.188000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 333,
+          "EventID": 7,
+          "TimeCreated": "2019-12-05 04:47:56.283000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 334,
+          "EventID": 18,
+          "TimeCreated": "2019-12-05 04:47:56.283000+00:00",
+          "Image": "C:\\Windows\\system32\\svchost.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 339,
+          "EventID": 7,
+          "TimeCreated": "2019-12-05 04:47:56.285000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\unsecapp.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 344,
+          "EventID": 7,
+          "TimeCreated": "2019-12-05 04:47:56.286000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\unsecapp.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 347,
+          "EventID": 7,
+          "TimeCreated": "2019-12-05 04:47:56.286000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\unsecapp.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 349,
+          "EventID": 4624,
+          "TimeCreated": "2019-12-05 04:47:56.287000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 352,
+          "EventID": 4648,
+          "TimeCreated": "2019-12-05 04:47:56.287000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 357,
+          "EventID": 7,
+          "TimeCreated": "2019-12-05 04:47:56.288000+00:00",
+          "Image": "C:\\Windows\\System32\\wbem\\unsecapp.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 364,
+          "EventID": 7,
+          "TimeCreated": "2019-12-05 04:47:56.291000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 369,
+          "EventID": 4648,
+          "TimeCreated": "2019-12-05 04:47:56.292000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 367,
+          "EventID": 4624,
+          "TimeCreated": "2019-12-05 04:47:56.292000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 368,
+          "EventID": 7,
+          "TimeCreated": "2019-12-05 04:47:56.292000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 374,
+          "EventID": 11,
+          "TimeCreated": "2019-12-05 04:47:56.294000+00:00",
+          "Image": "System",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 379,
+          "EventID": 7,
+          "TimeCreated": "2019-12-05 04:47:56.295000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1546.003",
+      "gt_technique_name": "SMB/Windows Admin Shares",
+      "gt_tactic": "Persistence",
+      "gt_is_true_positive": true,
+      "gt_notes": "auto: sample-kw+ctx(T1021.002,c=0.67)"
+    },
+    {
+      "group_id": "T1021_002_849",
+      "rule_technique_id": "T1021.002",
+      "rule_technique_name": "SMB/Windows Admin Shares",
+      "confidence": 0.17,
+      "anchor": {
+        "idx": 849,
+        "EventID": 5140,
+        "Image": "nan",
+        "CommandLine": "",
+        "TimeCreated": "2019-12-05 04:49:00.051000+00:00"
+      },
+      "num_events": 2,
+      "event_id_distribution": {
+        "4624": 1,
+        "5140": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 846,
+          "EventID": 4624,
+          "TimeCreated": "2019-12-05 04:49:00.051000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 849,
+          "EventID": 5140,
+          "TimeCreated": "2019-12-05 04:49:00.051000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1546.003",
+      "gt_technique_name": "SMB/Windows Admin Shares",
+      "gt_tactic": "Persistence",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1021.002)"
+    },
+    {
+      "group_id": "T1047_431",
+      "rule_technique_id": "T1047",
+      "rule_technique_name": "Windows Management Instrumentation",
+      "confidence": 0.5,
+      "anchor": {
+        "idx": 431,
+        "EventID": 5861,
+        "Image": "nan",
+        "CommandLine": "",
+        "TimeCreated": "2019-12-05 04:47:57.321000+00:00"
+      },
+      "num_events": 7,
+      "event_id_distribution": {
+        "3": 4,
+        "5861": 1,
+        "5857": 1,
+        "5859": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 295,
+          "EventID": 3,
+          "TimeCreated": "2019-12-05 04:47:49.188000+00:00",
+          "Image": "C:\\Windows\\System32\\svchost.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 431,
+          "EventID": 5861,
+          "TimeCreated": "2019-12-05 04:47:57.321000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 432,
+          "EventID": 5857,
+          "TimeCreated": "2019-12-05 04:47:57.322000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 433,
+          "EventID": 5859,
+          "TimeCreated": "2019-12-05 04:47:57.323000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 443,
+          "EventID": 3,
+          "TimeCreated": "2019-12-05 04:47:58.329000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 444,
+          "EventID": 3,
+          "TimeCreated": "2019-12-05 04:47:58.329000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 446,
+          "EventID": 3,
+          "TimeCreated": "2019-12-05 04:47:58.329000+00:00",
+          "Image": "C:\\Windows\\System32\\lsass.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1546.003",
+      "gt_technique_name": "Windows Management Instrumentation",
+      "gt_tactic": "Persistence",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1047)"
+    },
+    {
+      "group_id": "T1112_268",
+      "rule_technique_id": "T1112",
+      "rule_technique_name": "Modify Registry",
+      "confidence": 0.0,
+      "anchor": {
+        "idx": 268,
+        "EventID": 13,
+        "Image": "C:\\Windows\\system32\\DFSRs.exe",
+        "CommandLine": "",
+        "TimeCreated": "2019-12-05 04:47:47.190000+00:00"
+      },
+      "num_events": 12,
+      "event_id_distribution": {
+        "12": 3,
+        "13": 3,
+        "3": 3,
+        "11": 2,
+        "18": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 265,
+          "EventID": 11,
+          "TimeCreated": "2019-12-05 04:47:47.189000+00:00",
+          "Image": "C:\\Windows\\system32\\DFSRs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 266,
+          "EventID": 12,
+          "TimeCreated": "2019-12-05 04:47:47.189000+00:00",
+          "Image": "C:\\Windows\\system32\\DFSRs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\DFSR\\Parameters\\Replication Groups\\23EE0F75-A719-4963-BC3A-9CB385279D9B"
+        },
+        {
+          "idx": 268,
+          "EventID": 13,
+          "TimeCreated": "2019-12-05 04:47:47.190000+00:00",
+          "Image": "C:\\Windows\\system32\\DFSRs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\DFSR\\Parameters\\Replication Groups\\23EE0F75-A719-4963-BC3A-9CB385279D9B\\Replica Set Configuration File"
+        },
+        {
+          "idx": 269,
+          "EventID": 12,
+          "TimeCreated": "2019-12-05 04:47:47.190000+00:00",
+          "Image": "C:\\Windows\\system32\\DFSRs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\DFSR\\Access Checks\\Replication Groups\\23EE0F75-A719-4963-BC3A-9CB385279D9B"
+        },
+        {
+          "idx": 270,
+          "EventID": 13,
+          "TimeCreated": "2019-12-05 04:47:47.190000+00:00",
+          "Image": "C:\\Windows\\system32\\DFSRs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\DFSR\\Parameters\\Replication Groups\\23EE0F75-A719-4963-BC3A-9CB385279D9B\\Config Source"
+        },
+        {
+          "idx": 274,
+          "EventID": 12,
+          "TimeCreated": "2019-12-05 04:47:47.191000+00:00",
+          "Image": "C:\\Windows\\system32\\DFSRs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\DFSR\\Parameters\\Volumes\\59E89FD7-0000-0000-0000-100000000000"
+        },
+        {
+          "idx": 275,
+          "EventID": 11,
+          "TimeCreated": "2019-12-05 04:47:47.191000+00:00",
+          "Image": "C:\\Windows\\system32\\DFSRs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 277,
+          "EventID": 18,
+          "TimeCreated": "2019-12-05 04:47:47.192000+00:00",
+          "Image": "C:\\Windows\\system32\\DFSRs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 279,
+          "EventID": 13,
+          "TimeCreated": "2019-12-05 04:47:47.192000+00:00",
+          "Image": "C:\\Windows\\system32\\DFSRs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\DFSR\\Parameters\\Volumes\\59E89FD7-0000-0000-0000-100000000000\\Volume Configuration File"
+        },
+        {
+          "idx": 293,
+          "EventID": 3,
+          "TimeCreated": "2019-12-05 04:47:49.188000+00:00",
+          "Image": "C:\\Windows\\System32\\dfsrs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 298,
+          "EventID": 3,
+          "TimeCreated": "2019-12-05 04:47:49.189000+00:00",
+          "Image": "C:\\Windows\\System32\\dfsrs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 301,
+          "EventID": 3,
+          "TimeCreated": "2019-12-05 04:47:49.190000+00:00",
+          "Image": "C:\\Windows\\System32\\dfsrs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1546.003",
+      "gt_technique_name": "Modify Registry",
+      "gt_tactic": "Persistence",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:c=0,no-kw,rule!=fam(T1112)"
+    },
+    {
+      "group_id": "T1112_270",
+      "rule_technique_id": "T1112",
+      "rule_technique_name": "Modify Registry",
+      "confidence": 0.0,
+      "anchor": {
+        "idx": 270,
+        "EventID": 13,
+        "Image": "C:\\Windows\\system32\\DFSRs.exe",
+        "CommandLine": "",
+        "TimeCreated": "2019-12-05 04:47:47.190000+00:00"
+      },
+      "num_events": 12,
+      "event_id_distribution": {
+        "12": 3,
+        "13": 3,
+        "3": 3,
+        "11": 2,
+        "18": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 265,
+          "EventID": 11,
+          "TimeCreated": "2019-12-05 04:47:47.189000+00:00",
+          "Image": "C:\\Windows\\system32\\DFSRs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 266,
+          "EventID": 12,
+          "TimeCreated": "2019-12-05 04:47:47.189000+00:00",
+          "Image": "C:\\Windows\\system32\\DFSRs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\DFSR\\Parameters\\Replication Groups\\23EE0F75-A719-4963-BC3A-9CB385279D9B"
+        },
+        {
+          "idx": 268,
+          "EventID": 13,
+          "TimeCreated": "2019-12-05 04:47:47.190000+00:00",
+          "Image": "C:\\Windows\\system32\\DFSRs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\DFSR\\Parameters\\Replication Groups\\23EE0F75-A719-4963-BC3A-9CB385279D9B\\Replica Set Configuration File"
+        },
+        {
+          "idx": 269,
+          "EventID": 12,
+          "TimeCreated": "2019-12-05 04:47:47.190000+00:00",
+          "Image": "C:\\Windows\\system32\\DFSRs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\DFSR\\Access Checks\\Replication Groups\\23EE0F75-A719-4963-BC3A-9CB385279D9B"
+        },
+        {
+          "idx": 270,
+          "EventID": 13,
+          "TimeCreated": "2019-12-05 04:47:47.190000+00:00",
+          "Image": "C:\\Windows\\system32\\DFSRs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\DFSR\\Parameters\\Replication Groups\\23EE0F75-A719-4963-BC3A-9CB385279D9B\\Config Source"
+        },
+        {
+          "idx": 274,
+          "EventID": 12,
+          "TimeCreated": "2019-12-05 04:47:47.191000+00:00",
+          "Image": "C:\\Windows\\system32\\DFSRs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\DFSR\\Parameters\\Volumes\\59E89FD7-0000-0000-0000-100000000000"
+        },
+        {
+          "idx": 275,
+          "EventID": 11,
+          "TimeCreated": "2019-12-05 04:47:47.191000+00:00",
+          "Image": "C:\\Windows\\system32\\DFSRs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 277,
+          "EventID": 18,
+          "TimeCreated": "2019-12-05 04:47:47.192000+00:00",
+          "Image": "C:\\Windows\\system32\\DFSRs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 279,
+          "EventID": 13,
+          "TimeCreated": "2019-12-05 04:47:47.192000+00:00",
+          "Image": "C:\\Windows\\system32\\DFSRs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\DFSR\\Parameters\\Volumes\\59E89FD7-0000-0000-0000-100000000000\\Volume Configuration File"
+        },
+        {
+          "idx": 293,
+          "EventID": 3,
+          "TimeCreated": "2019-12-05 04:47:49.188000+00:00",
+          "Image": "C:\\Windows\\System32\\dfsrs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 298,
+          "EventID": 3,
+          "TimeCreated": "2019-12-05 04:47:49.189000+00:00",
+          "Image": "C:\\Windows\\System32\\dfsrs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 301,
+          "EventID": 3,
+          "TimeCreated": "2019-12-05 04:47:49.190000+00:00",
+          "Image": "C:\\Windows\\System32\\dfsrs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1546.003",
+      "gt_technique_name": "Modify Registry",
+      "gt_tactic": "Persistence",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:c=0,no-kw,rule!=fam(T1112)"
+    },
+    {
+      "group_id": "T1112_279",
+      "rule_technique_id": "T1112",
+      "rule_technique_name": "Modify Registry",
+      "confidence": 0.0,
+      "anchor": {
+        "idx": 279,
+        "EventID": 13,
+        "Image": "C:\\Windows\\system32\\DFSRs.exe",
+        "CommandLine": "",
+        "TimeCreated": "2019-12-05 04:47:47.192000+00:00"
+      },
+      "num_events": 12,
+      "event_id_distribution": {
+        "12": 3,
+        "13": 3,
+        "3": 3,
+        "11": 2,
+        "18": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 265,
+          "EventID": 11,
+          "TimeCreated": "2019-12-05 04:47:47.189000+00:00",
+          "Image": "C:\\Windows\\system32\\DFSRs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 266,
+          "EventID": 12,
+          "TimeCreated": "2019-12-05 04:47:47.189000+00:00",
+          "Image": "C:\\Windows\\system32\\DFSRs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\DFSR\\Parameters\\Replication Groups\\23EE0F75-A719-4963-BC3A-9CB385279D9B"
+        },
+        {
+          "idx": 268,
+          "EventID": 13,
+          "TimeCreated": "2019-12-05 04:47:47.190000+00:00",
+          "Image": "C:\\Windows\\system32\\DFSRs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\DFSR\\Parameters\\Replication Groups\\23EE0F75-A719-4963-BC3A-9CB385279D9B\\Replica Set Configuration File"
+        },
+        {
+          "idx": 269,
+          "EventID": 12,
+          "TimeCreated": "2019-12-05 04:47:47.190000+00:00",
+          "Image": "C:\\Windows\\system32\\DFSRs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\DFSR\\Access Checks\\Replication Groups\\23EE0F75-A719-4963-BC3A-9CB385279D9B"
+        },
+        {
+          "idx": 270,
+          "EventID": 13,
+          "TimeCreated": "2019-12-05 04:47:47.190000+00:00",
+          "Image": "C:\\Windows\\system32\\DFSRs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\DFSR\\Parameters\\Replication Groups\\23EE0F75-A719-4963-BC3A-9CB385279D9B\\Config Source"
+        },
+        {
+          "idx": 274,
+          "EventID": 12,
+          "TimeCreated": "2019-12-05 04:47:47.191000+00:00",
+          "Image": "C:\\Windows\\system32\\DFSRs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\DFSR\\Parameters\\Volumes\\59E89FD7-0000-0000-0000-100000000000"
+        },
+        {
+          "idx": 275,
+          "EventID": 11,
+          "TimeCreated": "2019-12-05 04:47:47.191000+00:00",
+          "Image": "C:\\Windows\\system32\\DFSRs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 277,
+          "EventID": 18,
+          "TimeCreated": "2019-12-05 04:47:47.192000+00:00",
+          "Image": "C:\\Windows\\system32\\DFSRs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 279,
+          "EventID": 13,
+          "TimeCreated": "2019-12-05 04:47:47.192000+00:00",
+          "Image": "C:\\Windows\\system32\\DFSRs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\DFSR\\Parameters\\Volumes\\59E89FD7-0000-0000-0000-100000000000\\Volume Configuration File"
+        },
+        {
+          "idx": 293,
+          "EventID": 3,
+          "TimeCreated": "2019-12-05 04:47:49.188000+00:00",
+          "Image": "C:\\Windows\\System32\\dfsrs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 298,
+          "EventID": 3,
+          "TimeCreated": "2019-12-05 04:47:49.189000+00:00",
+          "Image": "C:\\Windows\\System32\\dfsrs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 301,
+          "EventID": 3,
+          "TimeCreated": "2019-12-05 04:47:49.190000+00:00",
+          "Image": "C:\\Windows\\System32\\dfsrs.exe",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1546.003",
+      "gt_technique_name": "Modify Registry",
+      "gt_tactic": "Persistence",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:c=0,no-kw,rule!=fam(T1112)"
+    },
+    {
+      "group_id": "T1134_330",
+      "rule_technique_id": "T1134",
+      "rule_technique_name": "Access Token Manipulation",
+      "confidence": 0.33,
+      "anchor": {
+        "idx": 330,
+        "EventID": 4673,
+        "Image": "nan",
+        "CommandLine": "",
+        "TimeCreated": "2019-12-05 04:47:56.282000+00:00"
+      },
+      "num_events": 25,
+      "event_id_distribution": {
+        "10": 21,
+        "4673": 4
+      },
+      "sample_logs": [
+        {
+          "idx": 260,
+          "EventID": 10,
+          "TimeCreated": "2019-12-05 04:47:47.188000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 262,
+          "EventID": 10,
+          "TimeCreated": "2019-12-05 04:47:47.188000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 330,
+          "EventID": 4673,
+          "TimeCreated": "2019-12-05 04:47:56.282000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 362,
+          "EventID": 4673,
+          "TimeCreated": "2019-12-05 04:47:56.291000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 376,
+          "EventID": 4673,
+          "TimeCreated": "2019-12-05 04:47:56.294000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 378,
+          "EventID": 10,
+          "TimeCreated": "2019-12-05 04:47:56.295000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 381,
+          "EventID": 10,
+          "TimeCreated": "2019-12-05 04:47:56.295000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 410,
+          "EventID": 4673,
+          "TimeCreated": "2019-12-05 04:47:57.319000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 500,
+          "EventID": 10,
+          "TimeCreated": "2019-12-05 04:48:01.367000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 501,
+          "EventID": 10,
+          "TimeCreated": "2019-12-05 04:48:01.367000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 503,
+          "EventID": 10,
+          "TimeCreated": "2019-12-05 04:48:01.367000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 506,
+          "EventID": 10,
+          "TimeCreated": "2019-12-05 04:48:01.368000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 505,
+          "EventID": 10,
+          "TimeCreated": "2019-12-05 04:48:01.368000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 504,
+          "EventID": 10,
+          "TimeCreated": "2019-12-05 04:48:01.368000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 507,
+          "EventID": 10,
+          "TimeCreated": "2019-12-05 04:48:01.369000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1546.003",
+      "gt_technique_name": "Access Token Manipulation",
+      "gt_tactic": "Persistence",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw,rule!=fam(T1134)"
+    },
+    {
+      "group_id": "T1546_003_351",
+      "rule_technique_id": "T1546.003",
+      "rule_technique_name": "Windows Management Instrumentation Event Subscription",
+      "confidence": 0.2,
+      "anchor": {
+        "idx": 351,
+        "EventID": 19,
+        "Image": "nan",
+        "CommandLine": "",
+        "TimeCreated": "2019-12-05 04:47:56.287000+00:00"
+      },
+      "num_events": 4,
+      "event_id_distribution": {
+        "19": 1,
+        "20": 1,
+        "21": 1,
+        "5861": 1
+      },
+      "sample_logs": [
+        {
+          "idx": 351,
+          "EventID": 19,
+          "TimeCreated": "2019-12-05 04:47:56.287000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 358,
+          "EventID": 20,
+          "TimeCreated": "2019-12-05 04:47:56.289000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 373,
+          "EventID": 21,
+          "TimeCreated": "2019-12-05 04:47:56.293000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        },
+        {
+          "idx": 431,
+          "EventID": 5861,
+          "TimeCreated": "2019-12-05 04:47:57.321000+00:00",
+          "Image": "nan",
+          "CommandLine": "",
+          "ParentImage": "",
+          "TargetObject": "nan"
+        }
+      ],
+      "gt_technique_id": "T1546.003",
+      "gt_technique_name": "Windows Management Instrumentation Event Subscription",
+      "gt_tactic": "Persistence",
+      "gt_is_true_positive": false,
+      "gt_notes": "auto: noise:no-kw"
+    }
+  ]
+}

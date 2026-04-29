@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed processes, command lines, file writes, registry modifications, and pipe connections are consistent with normal Windows operating system behavior and do not match known attack patterns.\"\n}"}

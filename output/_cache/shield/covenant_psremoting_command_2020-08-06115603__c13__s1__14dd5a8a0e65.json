@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [\n    \"P[dns.exe|{9f85ce58-59e]\",\n    \"P[svchost.exe|{297bc33e-5c3]\",\n    \"P[svchost.exe|{9f85ce58-59d]\"\n  ],\n  \"rationale\": \""}

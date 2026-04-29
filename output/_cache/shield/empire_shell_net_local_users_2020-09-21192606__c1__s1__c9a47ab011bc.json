@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities for sppsvc.exe and services.exe, including command lines, DLL loads, and registry operations, are consistent with their legitimate functions as core Windows services and do not exhibit any known attack patterns.\"\n}"}

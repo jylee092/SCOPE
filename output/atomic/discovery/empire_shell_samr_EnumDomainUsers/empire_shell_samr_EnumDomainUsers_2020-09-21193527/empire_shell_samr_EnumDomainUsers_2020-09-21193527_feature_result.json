@@ -1,0 +1,857 @@
+[
+  {
+    "group_id": "T1021_002_173",
+    "technique_id": "T1021.002",
+    "technique_name": "SMB/Windows Admin Shares",
+    "anchor_eid": 4624,
+    "anchor_detail": {
+      "eid": 4624,
+      "time": "2020-09-21 23:35:38.963000+00:00",
+      "image": null,
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": "-",
+      "integrity": null
+    },
+    "confidence": 0.11,
+    "all_idxs": [
+      173,
+      175,
+      179,
+      194,
+      203,
+      257
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [],
+        "chain_depth": 0
+      },
+      "command_script": {
+        "entries": [],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 4624,
+        "user": "-",
+        "domain": "-",
+        "logon_id": "0x0",
+        "integrity_level": null,
+        "user_sid": "S-1-0-0",
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-09-21T23:35:38.963000+00:00",
+        "window_start_delta_sec": 0.0,
+        "window_end_delta_sec": 11.06,
+        "span_sec": 11.06,
+        "total_events": 6,
+        "event_density_per_10sec": 5.43,
+        "eid_counts": {
+          "4624": 4,
+          "5140": 1,
+          "5145": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.001,
+          "max_sec": 8.031,
+          "mean_sec": 2.211
+        },
+        "burst_detected": [
+          {
+            "eid": 4624,
+            "count": 4,
+            "window_sec": 3.03
+          }
+        ]
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1049_77",
+    "technique_id": "T1049",
+    "technique_name": "System Network Connections Discovery",
+    "anchor_eid": 1,
+    "anchor_detail": {
+      "eid": 1,
+      "time": "2020-09-21 23:35:37.912000+00:00",
+      "image": "net.exe",
+      "parent_image": "powershell.exe",
+      "cmdline": "\"C:\\windows\\system32\\net.exe\" user /domain",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": "THESHIRE\\pgustavo",
+      "integrity": "High"
+    },
+    "confidence": 1.0,
+    "all_idxs": [
+      4,
+      31,
+      65,
+      73,
+      76,
+      77,
+      86,
+      89,
+      92,
+      93,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      112,
+      114,
+      115,
+      116,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      135,
+      136,
+      137,
+      138,
+      148,
+      154,
+      155,
+      185,
+      186,
+      187,
+      219,
+      249,
+      271,
+      293,
+      362
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "spawn",
+            "parent_image": "powershell.exe",
+            "child_image": "net.exe",
+            "integrity_level": "High",
+            "parent_guid": "{b34bc01c-2f95-5f69-5f01-000000000900}",
+            "child_guid": "{b34bc01c-38c9-5f69-8201-000000000900}",
+            "cmdline": "\"C:\\windows\\system32\\net.exe\" user /domain",
+            "source_eid": 1
+          },
+          {
+            "relation": "spawn",
+            "parent_image": "net.exe",
+            "child_image": "net1.exe",
+            "integrity_level": "High",
+            "parent_guid": "{b34bc01c-38c9-5f69-8201-000000000900}",
+            "child_guid": "{b34bc01c-38c9-5f69-8301-000000000900}",
+            "cmdline": "C:\\windows\\system32\\net1 user /domain",
+            "source_eid": 1
+          },
+          {
+            "relation": "access",
+            "parent_image": "net.exe",
+            "child_image": "net1.exe",
+            "granted_access": "0x1fffff",
+            "source_guid": "{b34bc01c-38c9-5f69-8201-000000000900}",
+            "target_guid": "{b34bc01c-38c9-5f69-8301-000000000900}",
+            "source_eid": 10
+          }
+        ],
+        "chain_depth": 3
+      },
+      "command_script": {
+        "entries": [
+          {
+            "source_eid": 1,
+            "image": "net.exe",
+            "cmdline": "\"C:\\windows\\system32\\net.exe\" user /domain",
+            "cmdline_length": 42,
+            "has_obfuscation": false,
+            "special_chars": []
+          },
+          {
+            "source_eid": 1,
+            "image": "net1.exe",
+            "cmdline": "C:\\windows\\system32\\net1 user /domain",
+            "cmdline_length": 37,
+            "has_obfuscation": false,
+            "special_chars": []
+          }
+        ],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 1,
+        "user": "THESHIRE\\pgustavo",
+        "domain": "NT AUTHORITY",
+        "logon_id": "0x10a7df",
+        "integrity_level": "High",
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-09-21T23:35:37.912000+00:00",
+        "window_start_delta_sec": -9.07,
+        "window_end_delta_sec": 27.21,
+        "span_sec": 36.28,
+        "total_events": 59,
+        "event_density_per_10sec": 16.26,
+        "eid_counts": {
+          "7": 36,
+          "12": 9,
+          "18": 3,
+          "3": 3,
+          "1": 2,
+          "5": 2,
+          "4688": 2,
+          "17": 1,
+          "10": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 6.028,
+          "mean_sec": 0.626
+        },
+        "burst_detected": [
+          {
+            "eid": 7,
+            "count": 36,
+            "window_sec": 0.0
+          },
+          {
+            "eid": 12,
+            "count": 9,
+            "window_sec": 9.06
+          },
+          {
+            "eid": 18,
+            "count": 3,
+            "window_sec": 1.03
+          },
+          {
+            "eid": 3,
+            "count": 3,
+            "window_sec": 0.0
+          }
+        ]
+      },
+      "network": {
+        "connections": [
+          {
+            "source_eid": 3,
+            "image": "System",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "172.18.38.5",
+            "src_port": 50767,
+            "dst_port": 445,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": "SMB"
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "172.18.38.5",
+            "src_port": 50768,
+            "dst_port": 88,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          },
+          {
+            "source_eid": 3,
+            "image": "lsass.exe",
+            "src_ip": "172.18.39.5",
+            "dst_ip": "172.18.38.5",
+            "src_port": 50769,
+            "dst_port": 88,
+            "protocol": "tcp",
+            "direction": "outbound",
+            "service_hint": null
+          }
+        ]
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1070_004_570",
+    "technique_id": "T1070.004",
+    "technique_name": "File Deletion",
+    "anchor_eid": 23,
+    "anchor_detail": {
+      "eid": 23,
+      "time": "2020-09-21 23:36:10.279000+00:00",
+      "image": "NetworkWatcherAgent.exe",
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "C:\\Windows\\Temp\\Azure_AZNetCapture_GuestPacketCapture_Session_Cache\\I_AFADD6D4-2BE5-4AC5-8D57-50BFE5187E66\\30BB9014-F9B2-4EDC-BF5E-75B9D491AD1A.cap",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": "NT AUTHORITY\\SYSTEM",
+      "integrity": null
+    },
+    "confidence": 0.0,
+    "all_idxs": [
+      387,
+      391,
+      570
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "observed",
+            "child_image": "NetworkWatcherAgent.exe",
+            "parent_image": null,
+            "source_eid": 13
+          }
+        ],
+        "chain_depth": 1
+      },
+      "command_script": {
+        "entries": [],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 23,
+        "user": "NT AUTHORITY\\SYSTEM",
+        "domain": "NT AUTHORITY",
+        "logon_id": null,
+        "integrity_level": null,
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-09-21T23:36:10.279000+00:00",
+        "window_start_delta_sec": -1.1,
+        "window_end_delta_sec": 0.0,
+        "span_sec": 1.1,
+        "total_events": 3,
+        "event_density_per_10sec": 27.27,
+        "eid_counts": {
+          "13": 2,
+          "23": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.001,
+          "max_sec": 1.099,
+          "mean_sec": 0.55
+        },
+        "burst_detected": []
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\NdisCap\\Parameters\\RefCount",
+            "details": "DWORD (0x00000000)",
+            "process_guid": "{b34bc01c-2271-5f69-4600-000000000900}",
+            "image": "NetworkWatcherAgent.exe"
+          }
+        ],
+        "registry_noise": [
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\.DEFAULT\\System\\CurrentControlSet\\Control\\NetTrace\\Session\\CaptureEnabled",
+            "details": "DWORD (0x00000000)",
+            "process_guid": "{b34bc01c-2271-5f69-4600-000000000900}",
+            "image": "NetworkWatcherAgent.exe"
+          }
+        ],
+        "registry_noise_count": 1,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [
+          {
+            "source_eid": 23,
+            "path": "C:\\Windows\\Temp\\Azure_AZNetCapture_GuestPacketCapture_Session_Cache\\I_AFADD6D4-2BE5-4AC5-8D57-50BFE5187E66\\30BB9014-F9B2-4EDC-BF5E-75B9D491AD1A.cap",
+            "image": "NetworkWatcherAgent.exe"
+          }
+        ],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1087_001_154",
+    "technique_id": "T1087.001",
+    "technique_name": "Local Account Discovery",
+    "anchor_eid": 4688,
+    "anchor_detail": {
+      "eid": 4688,
+      "time": "2020-09-21 23:35:38.956000+00:00",
+      "image": "net.exe",
+      "parent_image": "powershell.exe",
+      "cmdline": "\"C:\\windows\\system32\\net.exe\" user /domain",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": "pgustavo",
+      "integrity": null
+    },
+    "confidence": 1.0,
+    "all_idxs": [
+      154,
+      155
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "spawn",
+            "parent_image": "powershell.exe",
+            "child_image": "net.exe",
+            "integrity_level": null,
+            "parent_guid": null,
+            "child_guid": null,
+            "cmdline": "\"C:\\windows\\system32\\net.exe\" user /domain",
+            "source_eid": 4688
+          },
+          {
+            "relation": "spawn",
+            "parent_image": "net.exe",
+            "child_image": "net1.exe",
+            "integrity_level": null,
+            "parent_guid": null,
+            "child_guid": null,
+            "cmdline": "C:\\windows\\system32\\net1 user /domain",
+            "source_eid": 4688
+          }
+        ],
+        "chain_depth": 2
+      },
+      "command_script": {
+        "entries": [
+          {
+            "source_eid": 4688,
+            "image": "net.exe",
+            "cmdline": "\"C:\\windows\\system32\\net.exe\" user /domain",
+            "cmdline_length": 42,
+            "has_obfuscation": false,
+            "special_chars": []
+          },
+          {
+            "source_eid": 4688,
+            "image": "net1.exe",
+            "cmdline": "C:\\windows\\system32\\net1 user /domain",
+            "cmdline_length": 37,
+            "has_obfuscation": false,
+            "special_chars": []
+          }
+        ],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 4688,
+        "user": "pgustavo",
+        "domain": "THESHIRE",
+        "logon_id": "0x10a7df",
+        "integrity_level": null,
+        "user_sid": "S-1-5-21-4228717743-1032521047-1810997296-1104",
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-09-21T23:35:38.956000+00:00",
+        "window_start_delta_sec": 0.0,
+        "window_end_delta_sec": 0.0,
+        "span_sec": 0.0,
+        "total_events": 2,
+        "event_density_per_10sec": null,
+        "eid_counts": {
+          "4688": 2
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 0.0,
+          "mean_sec": 0.0
+        },
+        "burst_detected": []
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1087_001_155",
+    "technique_id": "T1087.001",
+    "technique_name": "Local Account Discovery",
+    "anchor_eid": 4688,
+    "anchor_detail": {
+      "eid": 4688,
+      "time": "2020-09-21 23:35:38.956000+00:00",
+      "image": "net1.exe",
+      "parent_image": "net.exe",
+      "cmdline": "C:\\windows\\system32\\net1 user /domain",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": "pgustavo",
+      "integrity": null
+    },
+    "confidence": 1.0,
+    "all_idxs": [
+      154,
+      155
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "spawn",
+            "parent_image": "powershell.exe",
+            "child_image": "net.exe",
+            "integrity_level": null,
+            "parent_guid": null,
+            "child_guid": null,
+            "cmdline": "\"C:\\windows\\system32\\net.exe\" user /domain",
+            "source_eid": 4688
+          },
+          {
+            "relation": "spawn",
+            "parent_image": "net.exe",
+            "child_image": "net1.exe",
+            "integrity_level": null,
+            "parent_guid": null,
+            "child_guid": null,
+            "cmdline": "C:\\windows\\system32\\net1 user /domain",
+            "source_eid": 4688
+          }
+        ],
+        "chain_depth": 2
+      },
+      "command_script": {
+        "entries": [
+          {
+            "source_eid": 4688,
+            "image": "net.exe",
+            "cmdline": "\"C:\\windows\\system32\\net.exe\" user /domain",
+            "cmdline_length": 42,
+            "has_obfuscation": false,
+            "special_chars": []
+          },
+          {
+            "source_eid": 4688,
+            "image": "net1.exe",
+            "cmdline": "C:\\windows\\system32\\net1 user /domain",
+            "cmdline_length": 37,
+            "has_obfuscation": false,
+            "special_chars": []
+          }
+        ],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 4688,
+        "user": "pgustavo",
+        "domain": "THESHIRE",
+        "logon_id": "0x10a7df",
+        "integrity_level": null,
+        "user_sid": "S-1-5-21-4228717743-1032521047-1810997296-1104",
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-09-21T23:35:38.956000+00:00",
+        "window_start_delta_sec": 0.0,
+        "window_end_delta_sec": 0.0,
+        "span_sec": 0.0,
+        "total_events": 2,
+        "event_density_per_10sec": null,
+        "eid_counts": {
+          "4688": 2
+        },
+        "inter_event_gap": {
+          "min_sec": 0.0,
+          "max_sec": 0.0,
+          "mean_sec": 0.0
+        },
+        "burst_detected": []
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1087_002_181",
+    "technique_id": "T1087.002",
+    "technique_name": "Domain Account Discovery",
+    "anchor_eid": 4661,
+    "anchor_detail": {
+      "eid": 4661,
+      "time": "2020-09-21 23:35:39.962000+00:00",
+      "image": null,
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": "pgustavo",
+      "integrity": null
+    },
+    "confidence": 0.0,
+    "all_idxs": [
+      181
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [],
+        "chain_depth": 0
+      },
+      "command_script": {
+        "entries": [],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 4661,
+        "user": "pgustavo",
+        "domain": "THESHIRE",
+        "logon_id": "0x69a2695",
+        "integrity_level": null,
+        "user_sid": "S-1-5-21-4228717743-1032521047-1810997296-1104",
+        "privilege_list": "-"
+      },
+      "temporal": {
+        "anchor_time": "2020-09-21T23:35:39.962000+00:00",
+        "window_start_delta_sec": 0.0,
+        "window_end_delta_sec": 0.0,
+        "span_sec": 0.0,
+        "total_events": 1,
+        "event_density_per_10sec": null,
+        "eid_counts": {
+          "4661": 1
+        },
+        "inter_event_gap": {
+          "min_sec": null,
+          "max_sec": null,
+          "mean_sec": null
+        },
+        "burst_detected": []
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [],
+        "registry_noise": [],
+        "registry_noise_count": 0,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [],
+        "obfuscated_cmdlines": []
+      }
+    }
+  },
+  {
+    "group_id": "T1112_387",
+    "technique_id": "T1112",
+    "technique_name": "Modify Registry",
+    "anchor_eid": 13,
+    "anchor_detail": {
+      "eid": 13,
+      "time": "2020-09-21 23:36:09.179000+00:00",
+      "image": "NetworkWatcherAgent.exe",
+      "parent_image": null,
+      "cmdline": "",
+      "target_object": "HKLM\\System\\CurrentControlSet\\Services\\NdisCap\\Parameters\\RefCount",
+      "target_image": null,
+      "target_file": "",
+      "granted_access": null,
+      "query_name": null,
+      "dst_ip": null,
+      "dst_port": null,
+      "user": null,
+      "integrity": null
+    },
+    "confidence": 0.0,
+    "all_idxs": [
+      387,
+      391,
+      570
+    ],
+    "features": {
+      "execution_context": {
+        "process_chains": [
+          {
+            "relation": "observed",
+            "child_image": "NetworkWatcherAgent.exe",
+            "parent_image": null,
+            "source_eid": 13
+          }
+        ],
+        "chain_depth": 1
+      },
+      "command_script": {
+        "entries": [],
+        "has_obfuscation": false
+      },
+      "identity": {
+        "source_eid": 23,
+        "user": "NT AUTHORITY\\SYSTEM",
+        "domain": "NT AUTHORITY",
+        "logon_id": null,
+        "integrity_level": null,
+        "user_sid": null,
+        "privilege_list": null
+      },
+      "temporal": {
+        "anchor_time": "2020-09-21T23:36:09.179000+00:00",
+        "window_start_delta_sec": 0.0,
+        "window_end_delta_sec": 1.1,
+        "span_sec": 1.1,
+        "total_events": 3,
+        "event_density_per_10sec": 27.27,
+        "eid_counts": {
+          "13": 2,
+          "23": 1
+        },
+        "inter_event_gap": {
+          "min_sec": 0.001,
+          "max_sec": 1.099,
+          "mean_sec": 0.55
+        },
+        "burst_detected": []
+      },
+      "network": {
+        "connections": []
+      },
+      "persistence": {
+        "registry_signals": [
+          {
+            "source_eid": 13,
+            "target_object": "HKLM\\System\\CurrentControlSet\\Services\\NdisCap\\Parameters\\RefCount",
+            "details": "DWORD (0x00000000)",
+            "process_guid": "{b34bc01c-2271-5f69-4600-000000000900}",
+            "image": "NetworkWatcherAgent.exe"
+          }
+        ],
+        "registry_noise": [
+          {
+            "source_eid": 13,
+            "target_object": "HKU\\.DEFAULT\\System\\CurrentControlSet\\Control\\NetTrace\\Session\\CaptureEnabled",
+            "details": "DWORD (0x00000000)",
+            "process_guid": "{b34bc01c-2271-5f69-4600-000000000900}",
+            "image": "NetworkWatcherAgent.exe"
+          }
+        ],
+        "registry_noise_count": 1,
+        "dropped_files": []
+      },
+      "evasion": {
+        "log_cleared": [],
+        "deleted_files": [
+          {
+            "source_eid": 23,
+            "path": "C:\\Windows\\Temp\\Azure_AZNetCapture_GuestPacketCapture_Session_Cache\\I_AFADD6D4-2BE5-4AC5-8D57-50BFE5187E66\\30BB9014-F9B2-4EDC-BF5E-75B9D491AD1A.cap",
+            "image": "NetworkWatcherAgent.exe"
+          }
+        ],
+        "obfuscated_cmdlines": []
+      }
+    }
+  }
+]

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"No processes exhibit suspicious command lines, unusual child processes, unauthorized file/registry writes, or network behavior that deviates from normal system operation for DNS and service host processes, and the 'Notable command lines' section was not provided.\"\n}"}

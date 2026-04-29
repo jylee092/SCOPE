@@ -1,0 +1,67 @@
+{
+  "technique": { "id": "T1087.002", "name": "Domain Account Discovery" },
+  "detection": { "id": "DET-T1087002" },
+  "analysis": { "id": "AN-T1087002" },
+  "log_sources": {
+    "Anchor Event": {
+      "data_component": { "id": "DC0064", "name": "Command Execution" },
+      "description": "도메인 계정 열거.",
+      "conditions": [
+        {
+          "type": "net_user_domain",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [1] },
+          "filters": {
+            "Image": { "contains_any": ["net.exe", "net1.exe"] },
+            "CommandLine": { "contains": "/domain" }
+          },
+          "description": "net user /domain, net group /domain."
+        },
+        {
+          "type": "dsquery_cli",
+          "source": "WinEventLog:Sysmon",
+          "channel": { "event_codes": [1] },
+          "filters": {
+            "Image": { "contains_any": ["dsquery.exe", "dsget.exe"] }
+          },
+          "description": "AD dsquery/dsget 바이너리 실행."
+        },
+        {
+          "type": "powerview_adcmdlet",
+          "source": "WinEventLog:PowerShell",
+          "channel": { "event_codes": [4104] },
+          "filters": {
+            "ScriptBlockText": { "contains_any": ["Get-ADUser", "Get-ADGroup", "Get-DomainUser", "Get-DomainGroup", "Get-NetUser", "Get-NetGroup", "SearchRequest"] }
+          },
+          "description": "PowerView / Active Directory cmdlet."
+        },
+        {
+          "type": "samr_enum",
+          "source": "WinEventLog:Security",
+          "channel": { "event_codes": [4661] },
+          "filters": {
+            "ObjectType": { "contains_any": ["SAM_DOMAIN", "SAM_USER"] }
+          },
+          "description": "SAMR EnumDomainUsers 등 RPC 호출."
+        }
+      ]
+    },
+    "Supporting Events": [
+      { "data_component": { "id": "DC0082", "name": "Network Connection Creation" }, "source": "WinEventLog:Sysmon", "channel": { "event_codes": [3] }, "filters": { "DestinationPort": { "in": ["389", "636", "3268"] } }, "description": "LDAP/LDAPS/Global Catalog 연결" }
+    ]
+  },
+  "mutable_elements": {
+    "grouping_logic": {
+      "primary_anchor_eids": [1, 4104, 4661],
+      "correlation_key": { "primary": ["Hostname", "ProcessGuid"], "fallback": ["Hostname"] },
+      "time_window": { "before_seconds": 30, "after_seconds": 120 }
+    },
+    "feature_extraction_filters": {
+      "ad_query_cmdlets": ["Get-ADUser", "Get-DomainUser", "Get-NetUser", "dsquery"],
+      "ldap_ports": ["389", "636", "3268"]
+    },
+    "semantic_templates": {
+      "domain_discovery": "계정({User})이 {Image}/{Cmdlet}으로 AD 도메인 계정/그룹을 열거함."
+    }
+  }
+}

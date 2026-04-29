@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The observed registry operations by SecurityHealthService.exe and svchost.exe are consistent with the normal functioning of legitimate Windows services, and no suspicious command lines or other indicators of compromise were present in the provided events.\"\n}"}

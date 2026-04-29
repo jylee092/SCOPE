@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The process taskhostw.exe is performing routine maintenance and corruption handling for the browser's WebCache database, which involves deleting old cache files, writing new ones, and setting a registry key indicating database corruption, all of which are legitimate system behaviors.\"\n}"}

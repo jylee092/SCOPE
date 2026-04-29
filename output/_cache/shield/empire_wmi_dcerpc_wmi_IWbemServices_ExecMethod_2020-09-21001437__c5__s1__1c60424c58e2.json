@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"All observed activities are performed by the legitimate System process and involve standard system operations such as registry hive management, NetBIOS communication, and Event Tracing for Windows (ETW) logging, with no indicators matching known attack patterns.\"\n}"}

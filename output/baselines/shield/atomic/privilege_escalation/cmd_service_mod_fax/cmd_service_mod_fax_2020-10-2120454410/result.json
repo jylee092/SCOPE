@@ -1,0 +1,15 @@
+{
+  "scenario": "cmd_service_mod_fax_2020-10-2120454410",
+  "tactic_sequence": [],
+  "technique_sequence": [],
+  "per_group_topk": [],
+  "notes": {
+    "n_total_events": 437,
+    "n_filtered_events": 437,
+    "n_lof_anomalous": 18,
+    "n_communities": 5,
+    "n_alerts": 0,
+    "alerts": [],
+    "elapsed_sec": 52.1
+  }
+}

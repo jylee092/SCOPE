@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The process SearchIndexer.exe is performing legitimate registry operations related to configuring the Windows Search service, monitoring standard Windows application paths (ContentDeliveryManager, RuntimeBroker.exe, explorer.exe), and no other suspicious indicators are present.\"\n}"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"suspicious_processes\": [],\n  \"rationale\": \"The lsass.exe process connecting to standard Kerberos (port 88) and LDAP (port 389) ports on a local IP address is normal behavior for a domain-joined Windows system and does not indicate suspicious activity without further context or unusual command-line arguments.\"\n}"}
