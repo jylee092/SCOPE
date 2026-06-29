@@ -1,0 +1,43 @@
+{
+  "n_tp_groups": 251,
+  "n_scenarios": 33,
+  "n_techniques": 30,
+  "scope_emission": {
+    "model": "SCOPE_emission(R7)",
+    "strict_h1": 0.3785,
+    "plausible_h1": 0.6614,
+    "plausible_h5": 0.8645
+  },
+  "supervised": [
+    {
+      "model": "LinearSVM_tfidf",
+      "realistic": {
+        "n": 251,
+        "strict_h1": 0.3347,
+        "plausible_h1": 0.494,
+        "plausible_h5": 0.8685
+      },
+      "seen_only": {
+        "n": 183,
+        "strict_h1": 0.459,
+        "plausible_h1": 0.6011,
+        "plausible_h5": 0.9126
+      }
+    },
+    {
+      "model": "CatBoost_features",
+      "realistic": {
+        "n": 251,
+        "strict_h1": 0.2151,
+        "plausible_h1": 0.3586,
+        "plausible_h5": 0.8167
+      },
+      "seen_only": {
+        "n": 183,
+        "strict_h1": 0.2951,
+        "plausible_h1": 0.4153,
+        "plausible_h5": 0.8852
+      }
+    }
+  ]
+}

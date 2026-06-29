@@ -1,0 +1,2040 @@
+{
+  "tactics": [
+    "Reconnaissance",
+    "Resource Development",
+    "Initial Access",
+    "Execution",
+    "Persistence",
+    "Privilege Escalation",
+    "Defense Evasion",
+    "Credential Access",
+    "Discovery",
+    "Lateral Movement",
+    "Collection",
+    "Command and Control",
+    "Exfiltration",
+    "Impact"
+  ],
+  "weights": {
+    "Reconnaissance": {
+      "Reconnaissance": 0.5,
+      "Resource Development": 1.0,
+      "Initial Access": 0.5,
+      "Execution": 0.3,
+      "Persistence": 0.3,
+      "Privilege Escalation": 0.8,
+      "Defense Evasion": 0.7,
+      "Credential Access": 0.3,
+      "Discovery": 0.3,
+      "Lateral Movement": 0.3,
+      "Collection": 0.3,
+      "Command and Control": 0.3,
+      "Exfiltration": 0.3,
+      "Impact": 0.3
+    },
+    "Resource Development": {
+      "Reconnaissance": 0.1,
+      "Resource Development": 0.5,
+      "Initial Access": 1.0,
+      "Execution": 0.5,
+      "Persistence": 0.3,
+      "Privilege Escalation": 0.8,
+      "Defense Evasion": 0.7,
+      "Credential Access": 0.3,
+      "Discovery": 0.3,
+      "Lateral Movement": 0.3,
+      "Collection": 0.3,
+      "Command and Control": 0.3,
+      "Exfiltration": 0.3,
+      "Impact": 0.3
+    },
+    "Initial Access": {
+      "Reconnaissance": 0.1,
+      "Resource Development": 0.1,
+      "Initial Access": 0.5,
+      "Execution": 1.0,
+      "Persistence": 0.5,
+      "Privilege Escalation": 0.8,
+      "Defense Evasion": 0.7,
+      "Credential Access": 0.3,
+      "Discovery": 0.3,
+      "Lateral Movement": 0.3,
+      "Collection": 0.3,
+      "Command and Control": 0.3,
+      "Exfiltration": 0.3,
+      "Impact": 0.3
+    },
+    "Execution": {
+      "Reconnaissance": 0.05,
+      "Resource Development": 0.1,
+      "Initial Access": 0.1,
+      "Execution": 0.4,
+      "Persistence": 1.0,
+      "Privilege Escalation": 1.0,
+      "Defense Evasion": 1.0,
+      "Credential Access": 1.0,
+      "Discovery": 0.3,
+      "Lateral Movement": 0.3,
+      "Collection": 0.3,
+      "Command and Control": 0.3,
+      "Exfiltration": 0.3,
+      "Impact": 0.3
+    },
+    "Persistence": {
+      "Reconnaissance": 0.05,
+      "Resource Development": 0.05,
+      "Initial Access": 0.1,
+      "Execution": 0.1,
+      "Persistence": 0.5,
+      "Privilege Escalation": 1.0,
+      "Defense Evasion": 0.7,
+      "Credential Access": 0.3,
+      "Discovery": 0.3,
+      "Lateral Movement": 0.3,
+      "Collection": 0.3,
+      "Command and Control": 0.3,
+      "Exfiltration": 0.3,
+      "Impact": 0.3
+    },
+    "Privilege Escalation": {
+      "Reconnaissance": 0.4,
+      "Resource Development": 0.4,
+      "Initial Access": 0.4,
+      "Execution": 0.4,
+      "Persistence": 0.4,
+      "Privilege Escalation": 0.5,
+      "Defense Evasion": 1.0,
+      "Credential Access": 0.7,
+      "Discovery": 0.7,
+      "Lateral Movement": 0.7,
+      "Collection": 0.7,
+      "Command and Control": 0.7,
+      "Exfiltration": 0.7,
+      "Impact": 0.7
+    },
+    "Defense Evasion": {
+      "Reconnaissance": 0.4,
+      "Resource Development": 0.4,
+      "Initial Access": 0.4,
+      "Execution": 0.4,
+      "Persistence": 0.4,
+      "Privilege Escalation": 0.1,
+      "Defense Evasion": 0.6,
+      "Credential Access": 0.7,
+      "Discovery": 0.7,
+      "Lateral Movement": 0.7,
+      "Collection": 0.7,
+      "Command and Control": 0.7,
+      "Exfiltration": 0.7,
+      "Impact": 0.7
+    },
+    "Credential Access": {
+      "Reconnaissance": 0.05,
+      "Resource Development": 0.05,
+      "Initial Access": 0.05,
+      "Execution": 0.05,
+      "Persistence": 0.05,
+      "Privilege Escalation": 0.8,
+      "Defense Evasion": 0.7,
+      "Credential Access": 0.5,
+      "Discovery": 0.9,
+      "Lateral Movement": 0.9,
+      "Collection": 0.8,
+      "Command and Control": 0.3,
+      "Exfiltration": 0.3,
+      "Impact": 0.3
+    },
+    "Discovery": {
+      "Reconnaissance": 0.05,
+      "Resource Development": 0.05,
+      "Initial Access": 0.05,
+      "Execution": 0.05,
+      "Persistence": 0.05,
+      "Privilege Escalation": 0.8,
+      "Defense Evasion": 0.7,
+      "Credential Access": 0.9,
+      "Discovery": 0.5,
+      "Lateral Movement": 0.9,
+      "Collection": 0.8,
+      "Command and Control": 0.3,
+      "Exfiltration": 0.3,
+      "Impact": 0.3
+    },
+    "Lateral Movement": {
+      "Reconnaissance": 0.05,
+      "Resource Development": 0.05,
+      "Initial Access": 0.05,
+      "Execution": 0.05,
+      "Persistence": 0.05,
+      "Privilege Escalation": 0.8,
+      "Defense Evasion": 0.7,
+      "Credential Access": 0.9,
+      "Discovery": 0.9,
+      "Lateral Movement": 0.5,
+      "Collection": 1.0,
+      "Command and Control": 0.5,
+      "Exfiltration": 0.3,
+      "Impact": 0.3
+    },
+    "Collection": {
+      "Reconnaissance": 0.05,
+      "Resource Development": 0.05,
+      "Initial Access": 0.05,
+      "Execution": 0.05,
+      "Persistence": 0.05,
+      "Privilege Escalation": 0.8,
+      "Defense Evasion": 0.7,
+      "Credential Access": 0.05,
+      "Discovery": 0.1,
+      "Lateral Movement": 0.1,
+      "Collection": 0.5,
+      "Command and Control": 1.0,
+      "Exfiltration": 0.5,
+      "Impact": 0.3
+    },
+    "Command and Control": {
+      "Reconnaissance": 0.05,
+      "Resource Development": 0.05,
+      "Initial Access": 0.05,
+      "Execution": 0.05,
+      "Persistence": 0.05,
+      "Privilege Escalation": 0.8,
+      "Defense Evasion": 0.7,
+      "Credential Access": 0.05,
+      "Discovery": 0.05,
+      "Lateral Movement": 0.1,
+      "Collection": 0.1,
+      "Command and Control": 0.5,
+      "Exfiltration": 1.0,
+      "Impact": 0.5
+    },
+    "Exfiltration": {
+      "Reconnaissance": 0.02,
+      "Resource Development": 0.02,
+      "Initial Access": 0.02,
+      "Execution": 0.02,
+      "Persistence": 0.02,
+      "Privilege Escalation": 0.02,
+      "Defense Evasion": 0.02,
+      "Credential Access": 0.05,
+      "Discovery": 0.05,
+      "Lateral Movement": 0.05,
+      "Collection": 0.1,
+      "Command and Control": 0.1,
+      "Exfiltration": 0.5,
+      "Impact": 1.0
+    },
+    "Impact": {
+      "Reconnaissance": 0.02,
+      "Resource Development": 0.02,
+      "Initial Access": 0.02,
+      "Execution": 0.02,
+      "Persistence": 0.02,
+      "Privilege Escalation": 0.02,
+      "Defense Evasion": 0.02,
+      "Credential Access": 0.02,
+      "Discovery": 0.02,
+      "Lateral Movement": 0.02,
+      "Collection": 0.02,
+      "Command and Control": 0.02,
+      "Exfiltration": 0.02,
+      "Impact": 0.5
+    }
+  },
+  "rules": {
+    "Reconnaissance": {
+      "Reconnaissance": "R1",
+      "Resource Development": "R2",
+      "Initial Access": "R6",
+      "Execution": "R7",
+      "Persistence": "R7",
+      "Privilege Escalation": "R4",
+      "Defense Evasion": "R4",
+      "Credential Access": "R7",
+      "Discovery": "R7",
+      "Lateral Movement": "R7",
+      "Collection": "R7",
+      "Command and Control": "R7",
+      "Exfiltration": "R7",
+      "Impact": "R7"
+    },
+    "Resource Development": {
+      "Reconnaissance": "R8A",
+      "Resource Development": "R1",
+      "Initial Access": "R2",
+      "Execution": "R6",
+      "Persistence": "R7",
+      "Privilege Escalation": "R4",
+      "Defense Evasion": "R4",
+      "Credential Access": "R7",
+      "Discovery": "R7",
+      "Lateral Movement": "R7",
+      "Collection": "R7",
+      "Command and Control": "R7",
+      "Exfiltration": "R7",
+      "Impact": "R7"
+    },
+    "Initial Access": {
+      "Reconnaissance": "R8A",
+      "Resource Development": "R8A",
+      "Initial Access": "R1",
+      "Execution": "R2",
+      "Persistence": "R6",
+      "Privilege Escalation": "R4",
+      "Defense Evasion": "R4",
+      "Credential Access": "R7",
+      "Discovery": "R7",
+      "Lateral Movement": "R7",
+      "Collection": "R7",
+      "Command and Control": "R7",
+      "Exfiltration": "R7",
+      "Impact": "R7"
+    },
+    "Execution": {
+      "Reconnaissance": "R8B",
+      "Resource Development": "R8A",
+      "Initial Access": "R8A",
+      "Execution": "R1",
+      "Persistence": "R2",
+      "Privilege Escalation": "R2",
+      "Defense Evasion": "R2",
+      "Credential Access": "R2",
+      "Discovery": "R7",
+      "Lateral Movement": "R7",
+      "Collection": "R7",
+      "Command and Control": "R7",
+      "Exfiltration": "R7",
+      "Impact": "R7"
+    },
+    "Persistence": {
+      "Reconnaissance": "R8B",
+      "Resource Development": "R8B",
+      "Initial Access": "R8A",
+      "Execution": "R8A",
+      "Persistence": "R1",
+      "Privilege Escalation": "R2",
+      "Defense Evasion": "R4",
+      "Credential Access": "R7",
+      "Discovery": "R7",
+      "Lateral Movement": "R7",
+      "Collection": "R7",
+      "Command and Control": "R7",
+      "Exfiltration": "R7",
+      "Impact": "R7"
+    },
+    "Privilege Escalation": {
+      "Reconnaissance": "R5B",
+      "Resource Development": "R5B",
+      "Initial Access": "R5B",
+      "Execution": "R5B",
+      "Persistence": "R5B",
+      "Privilege Escalation": "R1",
+      "Defense Evasion": "R2",
+      "Credential Access": "R5",
+      "Discovery": "R5",
+      "Lateral Movement": "R5",
+      "Collection": "R5",
+      "Command and Control": "R5",
+      "Exfiltration": "R5",
+      "Impact": "R5"
+    },
+    "Defense Evasion": {
+      "Reconnaissance": "R5B",
+      "Resource Development": "R5B",
+      "Initial Access": "R5B",
+      "Execution": "R5B",
+      "Persistence": "R5B",
+      "Privilege Escalation": "R8A",
+      "Defense Evasion": "R1",
+      "Credential Access": "R5",
+      "Discovery": "R5",
+      "Lateral Movement": "R5",
+      "Collection": "R5",
+      "Command and Control": "R5",
+      "Exfiltration": "R5",
+      "Impact": "R5"
+    },
+    "Credential Access": {
+      "Reconnaissance": "R8B",
+      "Resource Development": "R8B",
+      "Initial Access": "R8B",
+      "Execution": "R8B",
+      "Persistence": "R8B",
+      "Privilege Escalation": "R4",
+      "Defense Evasion": "R4",
+      "Credential Access": "R1",
+      "Discovery": "R3A",
+      "Lateral Movement": "R3A",
+      "Collection": "R3B",
+      "Command and Control": "R7",
+      "Exfiltration": "R7",
+      "Impact": "R7"
+    },
+    "Discovery": {
+      "Reconnaissance": "R8B",
+      "Resource Development": "R8B",
+      "Initial Access": "R8B",
+      "Execution": "R8B",
+      "Persistence": "R8B",
+      "Privilege Escalation": "R4",
+      "Defense Evasion": "R4",
+      "Credential Access": "R3A",
+      "Discovery": "R1",
+      "Lateral Movement": "R3A",
+      "Collection": "R3B",
+      "Command and Control": "R7",
+      "Exfiltration": "R7",
+      "Impact": "R7"
+    },
+    "Lateral Movement": {
+      "Reconnaissance": "R8B",
+      "Resource Development": "R8B",
+      "Initial Access": "R8B",
+      "Execution": "R8B",
+      "Persistence": "R8B",
+      "Privilege Escalation": "R4",
+      "Defense Evasion": "R4",
+      "Credential Access": "R3A",
+      "Discovery": "R3A",
+      "Lateral Movement": "R1",
+      "Collection": "R2",
+      "Command and Control": "R6",
+      "Exfiltration": "R7",
+      "Impact": "R7"
+    },
+    "Collection": {
+      "Reconnaissance": "R8B",
+      "Resource Development": "R8B",
+      "Initial Access": "R8B",
+      "Execution": "R8B",
+      "Persistence": "R8B",
+      "Privilege Escalation": "R4",
+      "Defense Evasion": "R4",
+      "Credential Access": "R8B",
+      "Discovery": "R8A",
+      "Lateral Movement": "R8A",
+      "Collection": "R1",
+      "Command and Control": "R2",
+      "Exfiltration": "R6",
+      "Impact": "R7"
+    },
+    "Command and Control": {
+      "Reconnaissance": "R8B",
+      "Resource Development": "R8B",
+      "Initial Access": "R8B",
+      "Execution": "R8B",
+      "Persistence": "R8B",
+      "Privilege Escalation": "R4",
+      "Defense Evasion": "R4",
+      "Credential Access": "R8B",
+      "Discovery": "R8B",
+      "Lateral Movement": "R8A",
+      "Collection": "R8A",
+      "Command and Control": "R1",
+      "Exfiltration": "R2",
+      "Impact": "R6"
+    },
+    "Exfiltration": {
+      "Reconnaissance": "R9",
+      "Resource Development": "R9",
+      "Initial Access": "R9",
+      "Execution": "R9",
+      "Persistence": "R9",
+      "Privilege Escalation": "R9",
+      "Defense Evasion": "R9",
+      "Credential Access": "R8B",
+      "Discovery": "R8B",
+      "Lateral Movement": "R8B",
+      "Collection": "R8A",
+      "Command and Control": "R8A",
+      "Exfiltration": "R1",
+      "Impact": "R2"
+    },
+    "Impact": {
+      "Reconnaissance": "R9",
+      "Resource Development": "R9",
+      "Initial Access": "R9",
+      "Execution": "R9",
+      "Persistence": "R9",
+      "Privilege Escalation": "R9",
+      "Defense Evasion": "R9",
+      "Credential Access": "R9",
+      "Discovery": "R9",
+      "Lateral Movement": "R9",
+      "Collection": "R9",
+      "Command and Control": "R9",
+      "Exfiltration": "R9",
+      "Impact": "R1"
+    }
+  },
+  "pairs": [
+    {
+      "from": "Reconnaissance",
+      "to": "Reconnaissance",
+      "weight": 0.5,
+      "rule": "R1",
+      "rule_name": "Self-Loop",
+      "note": "...Tactic ..."
+    },
+    {
+      "from": "Reconnaissance",
+      "to": "Resource Development",
+      "weight": 1.0,
+      "rule": "R2",
+      "rule_name": "Primary Flow",
+      "note": "ATT&CK Kill Chain ..."
+    },
+    {
+      "from": "Reconnaissance",
+      "to": "Initial Access",
+      "weight": 0.5,
+      "rule": "R6",
+      "rule_name": "Forward Skip",
+      "note": "...2..."
+    },
+    {
+      "from": "Reconnaissance",
+      "to": "Execution",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...3..."
+    },
+    {
+      "from": "Reconnaissance",
+      "to": "Persistence",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...4..."
+    },
+    {
+      "from": "Reconnaissance",
+      "to": "Privilege Escalation",
+      "weight": 0.8,
+      "rule": "R4",
+      "rule_name": "Wildcard IN",
+      "note": "...Privilege Escalation..."
+    },
+    {
+      "from": "Reconnaissance",
+      "to": "Defense Evasion",
+      "weight": 0.7,
+      "rule": "R4",
+      "rule_name": "Wildcard IN",
+      "note": "wildcard-in→Defense Evasion"
+    },
+    {
+      "from": "Reconnaissance",
+      "to": "Credential Access",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...7..."
+    },
+    {
+      "from": "Reconnaissance",
+      "to": "Discovery",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...8..."
+    },
+    {
+      "from": "Reconnaissance",
+      "to": "Lateral Movement",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...9..."
+    },
+    {
+      "from": "Reconnaissance",
+      "to": "Collection",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...10..."
+    },
+    {
+      "from": "Reconnaissance",
+      "to": "Command and Control",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...11..."
+    },
+    {
+      "from": "Reconnaissance",
+      "to": "Exfiltration",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...12..."
+    },
+    {
+      "from": "Reconnaissance",
+      "to": "Impact",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...13..."
+    },
+    {
+      "from": "Resource Development",
+      "to": "Reconnaissance",
+      "weight": 0.1,
+      "rule": "R8A",
+      "rule_name": "Backward Short",
+      "note": "...1..."
+    },
+    {
+      "from": "Resource Development",
+      "to": "Resource Development",
+      "weight": 0.5,
+      "rule": "R1",
+      "rule_name": "Self-Loop",
+      "note": "...Tactic ..."
+    },
+    {
+      "from": "Resource Development",
+      "to": "Initial Access",
+      "weight": 1.0,
+      "rule": "R2",
+      "rule_name": "Primary Flow",
+      "note": "ATT&CK Kill Chain ..."
+    },
+    {
+      "from": "Resource Development",
+      "to": "Execution",
+      "weight": 0.5,
+      "rule": "R6",
+      "rule_name": "Forward Skip",
+      "note": "...2..."
+    },
+    {
+      "from": "Resource Development",
+      "to": "Persistence",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...3..."
+    },
+    {
+      "from": "Resource Development",
+      "to": "Privilege Escalation",
+      "weight": 0.8,
+      "rule": "R4",
+      "rule_name": "Wildcard IN",
+      "note": "...Privilege Escalation..."
+    },
+    {
+      "from": "Resource Development",
+      "to": "Defense Evasion",
+      "weight": 0.7,
+      "rule": "R4",
+      "rule_name": "Wildcard IN",
+      "note": "wildcard-in→Defense Evasion"
+    },
+    {
+      "from": "Resource Development",
+      "to": "Credential Access",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...6..."
+    },
+    {
+      "from": "Resource Development",
+      "to": "Discovery",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...7..."
+    },
+    {
+      "from": "Resource Development",
+      "to": "Lateral Movement",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...8..."
+    },
+    {
+      "from": "Resource Development",
+      "to": "Collection",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...9..."
+    },
+    {
+      "from": "Resource Development",
+      "to": "Command and Control",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...10..."
+    },
+    {
+      "from": "Resource Development",
+      "to": "Exfiltration",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...11..."
+    },
+    {
+      "from": "Resource Development",
+      "to": "Impact",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...12..."
+    },
+    {
+      "from": "Initial Access",
+      "to": "Reconnaissance",
+      "weight": 0.1,
+      "rule": "R8A",
+      "rule_name": "Backward Short",
+      "note": "...2..."
+    },
+    {
+      "from": "Initial Access",
+      "to": "Resource Development",
+      "weight": 0.1,
+      "rule": "R8A",
+      "rule_name": "Backward Short",
+      "note": "...1..."
+    },
+    {
+      "from": "Initial Access",
+      "to": "Initial Access",
+      "weight": 0.5,
+      "rule": "R1",
+      "rule_name": "Self-Loop",
+      "note": "...Tactic ..."
+    },
+    {
+      "from": "Initial Access",
+      "to": "Execution",
+      "weight": 1.0,
+      "rule": "R2",
+      "rule_name": "Primary Flow",
+      "note": "ATT&CK Kill Chain ..."
+    },
+    {
+      "from": "Initial Access",
+      "to": "Persistence",
+      "weight": 0.5,
+      "rule": "R6",
+      "rule_name": "Forward Skip",
+      "note": "...2..."
+    },
+    {
+      "from": "Initial Access",
+      "to": "Privilege Escalation",
+      "weight": 0.8,
+      "rule": "R4",
+      "rule_name": "Wildcard IN",
+      "note": "...Privilege Escalation..."
+    },
+    {
+      "from": "Initial Access",
+      "to": "Defense Evasion",
+      "weight": 0.7,
+      "rule": "R4",
+      "rule_name": "Wildcard IN",
+      "note": "wildcard-in→Defense Evasion"
+    },
+    {
+      "from": "Initial Access",
+      "to": "Credential Access",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...5..."
+    },
+    {
+      "from": "Initial Access",
+      "to": "Discovery",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...6..."
+    },
+    {
+      "from": "Initial Access",
+      "to": "Lateral Movement",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...7..."
+    },
+    {
+      "from": "Initial Access",
+      "to": "Collection",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...8..."
+    },
+    {
+      "from": "Initial Access",
+      "to": "Command and Control",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...9..."
+    },
+    {
+      "from": "Initial Access",
+      "to": "Exfiltration",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...10..."
+    },
+    {
+      "from": "Initial Access",
+      "to": "Impact",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...11..."
+    },
+    {
+      "from": "Execution",
+      "to": "Reconnaissance",
+      "weight": 0.05,
+      "rule": "R8B",
+      "rule_name": "Backward Long",
+      "note": "...3..."
+    },
+    {
+      "from": "Execution",
+      "to": "Resource Development",
+      "weight": 0.1,
+      "rule": "R8A",
+      "rule_name": "Backward Short",
+      "note": "...2..."
+    },
+    {
+      "from": "Execution",
+      "to": "Initial Access",
+      "weight": 0.1,
+      "rule": "R8A",
+      "rule_name": "Backward Short",
+      "note": "...1..."
+    },
+    {
+      "from": "Execution",
+      "to": "Execution",
+      "weight": 0.4,
+      "rule": "R1",
+      "rule_name": "Self-Loop",
+      "note": "self-loop(Execution)"
+    },
+    {
+      "from": "Execution",
+      "to": "Persistence",
+      "weight": 1.0,
+      "rule": "R2",
+      "rule_name": "Primary Flow",
+      "note": "ATT&CK Kill Chain ..."
+    },
+    {
+      "from": "Execution",
+      "to": "Privilege Escalation",
+      "weight": 1.0,
+      "rule": "R2",
+      "rule_name": "Primary Flow",
+      "note": "R2/R4 ...R2 ..."
+    },
+    {
+      "from": "Execution",
+      "to": "Defense Evasion",
+      "weight": 1.0,
+      "rule": "R2",
+      "rule_name": "Primary Flow",
+      "note": "R2/R4 ...R2 ..."
+    },
+    {
+      "from": "Execution",
+      "to": "Credential Access",
+      "weight": 1.0,
+      "rule": "R2",
+      "rule_name": "Primary Flow",
+      "note": "ATT&CK Kill Chain ..."
+    },
+    {
+      "from": "Execution",
+      "to": "Discovery",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...5..."
+    },
+    {
+      "from": "Execution",
+      "to": "Lateral Movement",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...6..."
+    },
+    {
+      "from": "Execution",
+      "to": "Collection",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...7..."
+    },
+    {
+      "from": "Execution",
+      "to": "Command and Control",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...8..."
+    },
+    {
+      "from": "Execution",
+      "to": "Exfiltration",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...9..."
+    },
+    {
+      "from": "Execution",
+      "to": "Impact",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...10..."
+    },
+    {
+      "from": "Persistence",
+      "to": "Reconnaissance",
+      "weight": 0.05,
+      "rule": "R8B",
+      "rule_name": "Backward Long",
+      "note": "...4..."
+    },
+    {
+      "from": "Persistence",
+      "to": "Resource Development",
+      "weight": 0.05,
+      "rule": "R8B",
+      "rule_name": "Backward Long",
+      "note": "...3..."
+    },
+    {
+      "from": "Persistence",
+      "to": "Initial Access",
+      "weight": 0.1,
+      "rule": "R8A",
+      "rule_name": "Backward Short",
+      "note": "...2..."
+    },
+    {
+      "from": "Persistence",
+      "to": "Execution",
+      "weight": 0.1,
+      "rule": "R8A",
+      "rule_name": "Backward Short",
+      "note": "...1..."
+    },
+    {
+      "from": "Persistence",
+      "to": "Persistence",
+      "weight": 0.5,
+      "rule": "R1",
+      "rule_name": "Self-Loop",
+      "note": "...Tactic ..."
+    },
+    {
+      "from": "Persistence",
+      "to": "Privilege Escalation",
+      "weight": 1.0,
+      "rule": "R2",
+      "rule_name": "Primary Flow",
+      "note": "R2/R4 ...R2 ..."
+    },
+    {
+      "from": "Persistence",
+      "to": "Defense Evasion",
+      "weight": 0.7,
+      "rule": "R4",
+      "rule_name": "Wildcard IN",
+      "note": "wildcard-in→Defense Evasion"
+    },
+    {
+      "from": "Persistence",
+      "to": "Credential Access",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...3..."
+    },
+    {
+      "from": "Persistence",
+      "to": "Discovery",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...4..."
+    },
+    {
+      "from": "Persistence",
+      "to": "Lateral Movement",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...5..."
+    },
+    {
+      "from": "Persistence",
+      "to": "Collection",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...6..."
+    },
+    {
+      "from": "Persistence",
+      "to": "Command and Control",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...7..."
+    },
+    {
+      "from": "Persistence",
+      "to": "Exfiltration",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...8..."
+    },
+    {
+      "from": "Persistence",
+      "to": "Impact",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...9..."
+    },
+    {
+      "from": "Privilege Escalation",
+      "to": "Reconnaissance",
+      "weight": 0.4,
+      "rule": "R5B",
+      "rule_name": "Wildcard OUT Rev",
+      "note": "Privilege Escalation → ..."
+    },
+    {
+      "from": "Privilege Escalation",
+      "to": "Resource Development",
+      "weight": 0.4,
+      "rule": "R5B",
+      "rule_name": "Wildcard OUT Rev",
+      "note": "Privilege Escalation → ..."
+    },
+    {
+      "from": "Privilege Escalation",
+      "to": "Initial Access",
+      "weight": 0.4,
+      "rule": "R5B",
+      "rule_name": "Wildcard OUT Rev",
+      "note": "Privilege Escalation → ..."
+    },
+    {
+      "from": "Privilege Escalation",
+      "to": "Execution",
+      "weight": 0.4,
+      "rule": "R5B",
+      "rule_name": "Wildcard OUT Rev",
+      "note": "Privilege Escalation → ..."
+    },
+    {
+      "from": "Privilege Escalation",
+      "to": "Persistence",
+      "weight": 0.4,
+      "rule": "R5B",
+      "rule_name": "Wildcard OUT Rev",
+      "note": "Privilege Escalation → ..."
+    },
+    {
+      "from": "Privilege Escalation",
+      "to": "Privilege Escalation",
+      "weight": 0.5,
+      "rule": "R1",
+      "rule_name": "Self-Loop",
+      "note": "...Tactic ..."
+    },
+    {
+      "from": "Privilege Escalation",
+      "to": "Defense Evasion",
+      "weight": 1.0,
+      "rule": "R2",
+      "rule_name": "Primary Flow",
+      "note": "ATT&CK Kill Chain ..."
+    },
+    {
+      "from": "Privilege Escalation",
+      "to": "Credential Access",
+      "weight": 0.7,
+      "rule": "R5",
+      "rule_name": "Wildcard OUT",
+      "note": "Privilege Escalation → ..."
+    },
+    {
+      "from": "Privilege Escalation",
+      "to": "Discovery",
+      "weight": 0.7,
+      "rule": "R5",
+      "rule_name": "Wildcard OUT",
+      "note": "Privilege Escalation → ..."
+    },
+    {
+      "from": "Privilege Escalation",
+      "to": "Lateral Movement",
+      "weight": 0.7,
+      "rule": "R5",
+      "rule_name": "Wildcard OUT",
+      "note": "Privilege Escalation → ..."
+    },
+    {
+      "from": "Privilege Escalation",
+      "to": "Collection",
+      "weight": 0.7,
+      "rule": "R5",
+      "rule_name": "Wildcard OUT",
+      "note": "Privilege Escalation → ..."
+    },
+    {
+      "from": "Privilege Escalation",
+      "to": "Command and Control",
+      "weight": 0.7,
+      "rule": "R5",
+      "rule_name": "Wildcard OUT",
+      "note": "Privilege Escalation → ..."
+    },
+    {
+      "from": "Privilege Escalation",
+      "to": "Exfiltration",
+      "weight": 0.7,
+      "rule": "R5",
+      "rule_name": "Wildcard OUT",
+      "note": "Privilege Escalation → ..."
+    },
+    {
+      "from": "Privilege Escalation",
+      "to": "Impact",
+      "weight": 0.7,
+      "rule": "R5",
+      "rule_name": "Wildcard OUT",
+      "note": "Privilege Escalation → ..."
+    },
+    {
+      "from": "Defense Evasion",
+      "to": "Reconnaissance",
+      "weight": 0.4,
+      "rule": "R5B",
+      "rule_name": "Wildcard OUT Rev",
+      "note": "Defense Evasion → ..."
+    },
+    {
+      "from": "Defense Evasion",
+      "to": "Resource Development",
+      "weight": 0.4,
+      "rule": "R5B",
+      "rule_name": "Wildcard OUT Rev",
+      "note": "Defense Evasion → ..."
+    },
+    {
+      "from": "Defense Evasion",
+      "to": "Initial Access",
+      "weight": 0.4,
+      "rule": "R5B",
+      "rule_name": "Wildcard OUT Rev",
+      "note": "Defense Evasion → ..."
+    },
+    {
+      "from": "Defense Evasion",
+      "to": "Execution",
+      "weight": 0.4,
+      "rule": "R5B",
+      "rule_name": "Wildcard OUT Rev",
+      "note": "Defense Evasion → ..."
+    },
+    {
+      "from": "Defense Evasion",
+      "to": "Persistence",
+      "weight": 0.4,
+      "rule": "R5B",
+      "rule_name": "Wildcard OUT Rev",
+      "note": "Defense Evasion → ..."
+    },
+    {
+      "from": "Defense Evasion",
+      "to": "Privilege Escalation",
+      "weight": 0.1,
+      "rule": "R8A",
+      "rule_name": "Backward Short",
+      "note": "...1..."
+    },
+    {
+      "from": "Defense Evasion",
+      "to": "Defense Evasion",
+      "weight": 0.6,
+      "rule": "R1",
+      "rule_name": "Self-Loop",
+      "note": "self-loop(Defense Evasion)"
+    },
+    {
+      "from": "Defense Evasion",
+      "to": "Credential Access",
+      "weight": 0.7,
+      "rule": "R5",
+      "rule_name": "Wildcard OUT",
+      "note": "Defense Evasion → ..."
+    },
+    {
+      "from": "Defense Evasion",
+      "to": "Discovery",
+      "weight": 0.7,
+      "rule": "R5",
+      "rule_name": "Wildcard OUT",
+      "note": "Defense Evasion → ..."
+    },
+    {
+      "from": "Defense Evasion",
+      "to": "Lateral Movement",
+      "weight": 0.7,
+      "rule": "R5",
+      "rule_name": "Wildcard OUT",
+      "note": "Defense Evasion → ..."
+    },
+    {
+      "from": "Defense Evasion",
+      "to": "Collection",
+      "weight": 0.7,
+      "rule": "R5",
+      "rule_name": "Wildcard OUT",
+      "note": "Defense Evasion → ..."
+    },
+    {
+      "from": "Defense Evasion",
+      "to": "Command and Control",
+      "weight": 0.7,
+      "rule": "R5",
+      "rule_name": "Wildcard OUT",
+      "note": "Defense Evasion → ..."
+    },
+    {
+      "from": "Defense Evasion",
+      "to": "Exfiltration",
+      "weight": 0.7,
+      "rule": "R5",
+      "rule_name": "Wildcard OUT",
+      "note": "Defense Evasion → ..."
+    },
+    {
+      "from": "Defense Evasion",
+      "to": "Impact",
+      "weight": 0.7,
+      "rule": "R5",
+      "rule_name": "Wildcard OUT",
+      "note": "Defense Evasion → ..."
+    },
+    {
+      "from": "Credential Access",
+      "to": "Reconnaissance",
+      "weight": 0.05,
+      "rule": "R8B",
+      "rule_name": "Backward Long",
+      "note": "...7..."
+    },
+    {
+      "from": "Credential Access",
+      "to": "Resource Development",
+      "weight": 0.05,
+      "rule": "R8B",
+      "rule_name": "Backward Long",
+      "note": "...6..."
+    },
+    {
+      "from": "Credential Access",
+      "to": "Initial Access",
+      "weight": 0.05,
+      "rule": "R8B",
+      "rule_name": "Backward Long",
+      "note": "...5..."
+    },
+    {
+      "from": "Credential Access",
+      "to": "Execution",
+      "weight": 0.05,
+      "rule": "R8B",
+      "rule_name": "Backward Long",
+      "note": "...4..."
+    },
+    {
+      "from": "Credential Access",
+      "to": "Persistence",
+      "weight": 0.05,
+      "rule": "R8B",
+      "rule_name": "Backward Long",
+      "note": "...3..."
+    },
+    {
+      "from": "Credential Access",
+      "to": "Privilege Escalation",
+      "weight": 0.8,
+      "rule": "R4",
+      "rule_name": "Wildcard IN",
+      "note": "...Privilege Escalation..."
+    },
+    {
+      "from": "Credential Access",
+      "to": "Defense Evasion",
+      "weight": 0.7,
+      "rule": "R4",
+      "rule_name": "Wildcard IN",
+      "note": "wildcard-in→Defense Evasion"
+    },
+    {
+      "from": "Credential Access",
+      "to": "Credential Access",
+      "weight": 0.5,
+      "rule": "R1",
+      "rule_name": "Self-Loop",
+      "note": "...Tactic ..."
+    },
+    {
+      "from": "Credential Access",
+      "to": "Discovery",
+      "weight": 0.9,
+      "rule": "R3A",
+      "rule_name": "Post-Exploit Loop A",
+      "note": "CA / Discovery / Lateral Movement ..."
+    },
+    {
+      "from": "Credential Access",
+      "to": "Lateral Movement",
+      "weight": 0.9,
+      "rule": "R3A",
+      "rule_name": "Post-Exploit Loop A",
+      "note": "CA / Discovery / Lateral Movement ..."
+    },
+    {
+      "from": "Credential Access",
+      "to": "Collection",
+      "weight": 0.8,
+      "rule": "R3B",
+      "rule_name": "Post-Exploit Loop B",
+      "note": "Post-Exploit Loop → Collection ..."
+    },
+    {
+      "from": "Credential Access",
+      "to": "Command and Control",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...4..."
+    },
+    {
+      "from": "Credential Access",
+      "to": "Exfiltration",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...5..."
+    },
+    {
+      "from": "Credential Access",
+      "to": "Impact",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...6..."
+    },
+    {
+      "from": "Discovery",
+      "to": "Reconnaissance",
+      "weight": 0.05,
+      "rule": "R8B",
+      "rule_name": "Backward Long",
+      "note": "...8..."
+    },
+    {
+      "from": "Discovery",
+      "to": "Resource Development",
+      "weight": 0.05,
+      "rule": "R8B",
+      "rule_name": "Backward Long",
+      "note": "...7..."
+    },
+    {
+      "from": "Discovery",
+      "to": "Initial Access",
+      "weight": 0.05,
+      "rule": "R8B",
+      "rule_name": "Backward Long",
+      "note": "...6..."
+    },
+    {
+      "from": "Discovery",
+      "to": "Execution",
+      "weight": 0.05,
+      "rule": "R8B",
+      "rule_name": "Backward Long",
+      "note": "...5..."
+    },
+    {
+      "from": "Discovery",
+      "to": "Persistence",
+      "weight": 0.05,
+      "rule": "R8B",
+      "rule_name": "Backward Long",
+      "note": "...4..."
+    },
+    {
+      "from": "Discovery",
+      "to": "Privilege Escalation",
+      "weight": 0.8,
+      "rule": "R4",
+      "rule_name": "Wildcard IN",
+      "note": "...Privilege Escalation..."
+    },
+    {
+      "from": "Discovery",
+      "to": "Defense Evasion",
+      "weight": 0.7,
+      "rule": "R4",
+      "rule_name": "Wildcard IN",
+      "note": "wildcard-in→Defense Evasion"
+    },
+    {
+      "from": "Discovery",
+      "to": "Credential Access",
+      "weight": 0.9,
+      "rule": "R3A",
+      "rule_name": "Post-Exploit Loop A",
+      "note": "CA / Discovery / Lateral Movement ..."
+    },
+    {
+      "from": "Discovery",
+      "to": "Discovery",
+      "weight": 0.5,
+      "rule": "R1",
+      "rule_name": "Self-Loop",
+      "note": "...Tactic ..."
+    },
+    {
+      "from": "Discovery",
+      "to": "Lateral Movement",
+      "weight": 0.9,
+      "rule": "R3A",
+      "rule_name": "Post-Exploit Loop A",
+      "note": "CA / Discovery / Lateral Movement ..."
+    },
+    {
+      "from": "Discovery",
+      "to": "Collection",
+      "weight": 0.8,
+      "rule": "R3B",
+      "rule_name": "Post-Exploit Loop B",
+      "note": "Post-Exploit Loop → Collection ..."
+    },
+    {
+      "from": "Discovery",
+      "to": "Command and Control",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...3..."
+    },
+    {
+      "from": "Discovery",
+      "to": "Exfiltration",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...4..."
+    },
+    {
+      "from": "Discovery",
+      "to": "Impact",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...5..."
+    },
+    {
+      "from": "Lateral Movement",
+      "to": "Reconnaissance",
+      "weight": 0.05,
+      "rule": "R8B",
+      "rule_name": "Backward Long",
+      "note": "...9..."
+    },
+    {
+      "from": "Lateral Movement",
+      "to": "Resource Development",
+      "weight": 0.05,
+      "rule": "R8B",
+      "rule_name": "Backward Long",
+      "note": "...8..."
+    },
+    {
+      "from": "Lateral Movement",
+      "to": "Initial Access",
+      "weight": 0.05,
+      "rule": "R8B",
+      "rule_name": "Backward Long",
+      "note": "...7..."
+    },
+    {
+      "from": "Lateral Movement",
+      "to": "Execution",
+      "weight": 0.05,
+      "rule": "R8B",
+      "rule_name": "Backward Long",
+      "note": "...6..."
+    },
+    {
+      "from": "Lateral Movement",
+      "to": "Persistence",
+      "weight": 0.05,
+      "rule": "R8B",
+      "rule_name": "Backward Long",
+      "note": "...5..."
+    },
+    {
+      "from": "Lateral Movement",
+      "to": "Privilege Escalation",
+      "weight": 0.8,
+      "rule": "R4",
+      "rule_name": "Wildcard IN",
+      "note": "...Privilege Escalation..."
+    },
+    {
+      "from": "Lateral Movement",
+      "to": "Defense Evasion",
+      "weight": 0.7,
+      "rule": "R4",
+      "rule_name": "Wildcard IN",
+      "note": "wildcard-in→Defense Evasion"
+    },
+    {
+      "from": "Lateral Movement",
+      "to": "Credential Access",
+      "weight": 0.9,
+      "rule": "R3A",
+      "rule_name": "Post-Exploit Loop A",
+      "note": "CA / Discovery / Lateral Movement ..."
+    },
+    {
+      "from": "Lateral Movement",
+      "to": "Discovery",
+      "weight": 0.9,
+      "rule": "R3A",
+      "rule_name": "Post-Exploit Loop A",
+      "note": "CA / Discovery / Lateral Movement ..."
+    },
+    {
+      "from": "Lateral Movement",
+      "to": "Lateral Movement",
+      "weight": 0.5,
+      "rule": "R1",
+      "rule_name": "Self-Loop",
+      "note": "...Tactic ..."
+    },
+    {
+      "from": "Lateral Movement",
+      "to": "Collection",
+      "weight": 1.0,
+      "rule": "R2",
+      "rule_name": "Primary Flow",
+      "note": "ATT&CK Kill Chain ..."
+    },
+    {
+      "from": "Lateral Movement",
+      "to": "Command and Control",
+      "weight": 0.5,
+      "rule": "R6",
+      "rule_name": "Forward Skip",
+      "note": "...2..."
+    },
+    {
+      "from": "Lateral Movement",
+      "to": "Exfiltration",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...3..."
+    },
+    {
+      "from": "Lateral Movement",
+      "to": "Impact",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...4..."
+    },
+    {
+      "from": "Collection",
+      "to": "Reconnaissance",
+      "weight": 0.05,
+      "rule": "R8B",
+      "rule_name": "Backward Long",
+      "note": "...10..."
+    },
+    {
+      "from": "Collection",
+      "to": "Resource Development",
+      "weight": 0.05,
+      "rule": "R8B",
+      "rule_name": "Backward Long",
+      "note": "...9..."
+    },
+    {
+      "from": "Collection",
+      "to": "Initial Access",
+      "weight": 0.05,
+      "rule": "R8B",
+      "rule_name": "Backward Long",
+      "note": "...8..."
+    },
+    {
+      "from": "Collection",
+      "to": "Execution",
+      "weight": 0.05,
+      "rule": "R8B",
+      "rule_name": "Backward Long",
+      "note": "...7..."
+    },
+    {
+      "from": "Collection",
+      "to": "Persistence",
+      "weight": 0.05,
+      "rule": "R8B",
+      "rule_name": "Backward Long",
+      "note": "...6..."
+    },
+    {
+      "from": "Collection",
+      "to": "Privilege Escalation",
+      "weight": 0.8,
+      "rule": "R4",
+      "rule_name": "Wildcard IN",
+      "note": "...Privilege Escalation..."
+    },
+    {
+      "from": "Collection",
+      "to": "Defense Evasion",
+      "weight": 0.7,
+      "rule": "R4",
+      "rule_name": "Wildcard IN",
+      "note": "wildcard-in→Defense Evasion"
+    },
+    {
+      "from": "Collection",
+      "to": "Credential Access",
+      "weight": 0.05,
+      "rule": "R8B",
+      "rule_name": "Backward Long",
+      "note": "...3..."
+    },
+    {
+      "from": "Collection",
+      "to": "Discovery",
+      "weight": 0.1,
+      "rule": "R8A",
+      "rule_name": "Backward Short",
+      "note": "...2..."
+    },
+    {
+      "from": "Collection",
+      "to": "Lateral Movement",
+      "weight": 0.1,
+      "rule": "R8A",
+      "rule_name": "Backward Short",
+      "note": "...1..."
+    },
+    {
+      "from": "Collection",
+      "to": "Collection",
+      "weight": 0.5,
+      "rule": "R1",
+      "rule_name": "Self-Loop",
+      "note": "...Tactic ..."
+    },
+    {
+      "from": "Collection",
+      "to": "Command and Control",
+      "weight": 1.0,
+      "rule": "R2",
+      "rule_name": "Primary Flow",
+      "note": "ATT&CK Kill Chain ..."
+    },
+    {
+      "from": "Collection",
+      "to": "Exfiltration",
+      "weight": 0.5,
+      "rule": "R6",
+      "rule_name": "Forward Skip",
+      "note": "...2..."
+    },
+    {
+      "from": "Collection",
+      "to": "Impact",
+      "weight": 0.3,
+      "rule": "R7",
+      "rule_name": "Far Skip",
+      "note": "...3..."
+    },
+    {
+      "from": "Command and Control",
+      "to": "Reconnaissance",
+      "weight": 0.05,
+      "rule": "R8B",
+      "rule_name": "Backward Long",
+      "note": "...11..."
+    },
+    {
+      "from": "Command and Control",
+      "to": "Resource Development",
+      "weight": 0.05,
+      "rule": "R8B",
+      "rule_name": "Backward Long",
+      "note": "...10..."
+    },
+    {
+      "from": "Command and Control",
+      "to": "Initial Access",
+      "weight": 0.05,
+      "rule": "R8B",
+      "rule_name": "Backward Long",
+      "note": "...9..."
+    },
+    {
+      "from": "Command and Control",
+      "to": "Execution",
+      "weight": 0.05,
+      "rule": "R8B",
+      "rule_name": "Backward Long",
+      "note": "...8..."
+    },
+    {
+      "from": "Command and Control",
+      "to": "Persistence",
+      "weight": 0.05,
+      "rule": "R8B",
+      "rule_name": "Backward Long",
+      "note": "...7..."
+    },
+    {
+      "from": "Command and Control",
+      "to": "Privilege Escalation",
+      "weight": 0.8,
+      "rule": "R4",
+      "rule_name": "Wildcard IN",
+      "note": "...Privilege Escalation..."
+    },
+    {
+      "from": "Command and Control",
+      "to": "Defense Evasion",
+      "weight": 0.7,
+      "rule": "R4",
+      "rule_name": "Wildcard IN",
+      "note": "wildcard-in→Defense Evasion"
+    },
+    {
+      "from": "Command and Control",
+      "to": "Credential Access",
+      "weight": 0.05,
+      "rule": "R8B",
+      "rule_name": "Backward Long",
+      "note": "...4..."
+    },
+    {
+      "from": "Command and Control",
+      "to": "Discovery",
+      "weight": 0.05,
+      "rule": "R8B",
+      "rule_name": "Backward Long",
+      "note": "...3..."
+    },
+    {
+      "from": "Command and Control",
+      "to": "Lateral Movement",
+      "weight": 0.1,
+      "rule": "R8A",
+      "rule_name": "Backward Short",
+      "note": "...2..."
+    },
+    {
+      "from": "Command and Control",
+      "to": "Collection",
+      "weight": 0.1,
+      "rule": "R8A",
+      "rule_name": "Backward Short",
+      "note": "...1..."
+    },
+    {
+      "from": "Command and Control",
+      "to": "Command and Control",
+      "weight": 0.5,
+      "rule": "R1",
+      "rule_name": "Self-Loop",
+      "note": "...Tactic ..."
+    },
+    {
+      "from": "Command and Control",
+      "to": "Exfiltration",
+      "weight": 1.0,
+      "rule": "R2",
+      "rule_name": "Primary Flow",
+      "note": "ATT&CK Kill Chain ..."
+    },
+    {
+      "from": "Command and Control",
+      "to": "Impact",
+      "weight": 0.5,
+      "rule": "R6",
+      "rule_name": "Forward Skip",
+      "note": "...2..."
+    },
+    {
+      "from": "Exfiltration",
+      "to": "Reconnaissance",
+      "weight": 0.02,
+      "rule": "R9",
+      "rule_name": "Forbidden",
+      "note": "Exfiltration ..."
+    },
+    {
+      "from": "Exfiltration",
+      "to": "Resource Development",
+      "weight": 0.02,
+      "rule": "R9",
+      "rule_name": "Forbidden",
+      "note": "Exfiltration ..."
+    },
+    {
+      "from": "Exfiltration",
+      "to": "Initial Access",
+      "weight": 0.02,
+      "rule": "R9",
+      "rule_name": "Forbidden",
+      "note": "Exfiltration ..."
+    },
+    {
+      "from": "Exfiltration",
+      "to": "Execution",
+      "weight": 0.02,
+      "rule": "R9",
+      "rule_name": "Forbidden",
+      "note": "Exfiltration ..."
+    },
+    {
+      "from": "Exfiltration",
+      "to": "Persistence",
+      "weight": 0.02,
+      "rule": "R9",
+      "rule_name": "Forbidden",
+      "note": "Exfiltration ..."
+    },
+    {
+      "from": "Exfiltration",
+      "to": "Privilege Escalation",
+      "weight": 0.02,
+      "rule": "R9",
+      "rule_name": "Forbidden",
+      "note": "Exfiltration ..."
+    },
+    {
+      "from": "Exfiltration",
+      "to": "Defense Evasion",
+      "weight": 0.02,
+      "rule": "R9",
+      "rule_name": "Forbidden",
+      "note": "Exfiltration ..."
+    },
+    {
+      "from": "Exfiltration",
+      "to": "Credential Access",
+      "weight": 0.05,
+      "rule": "R8B",
+      "rule_name": "Backward Long",
+      "note": "...5..."
+    },
+    {
+      "from": "Exfiltration",
+      "to": "Discovery",
+      "weight": 0.05,
+      "rule": "R8B",
+      "rule_name": "Backward Long",
+      "note": "...4..."
+    },
+    {
+      "from": "Exfiltration",
+      "to": "Lateral Movement",
+      "weight": 0.05,
+      "rule": "R8B",
+      "rule_name": "Backward Long",
+      "note": "...3..."
+    },
+    {
+      "from": "Exfiltration",
+      "to": "Collection",
+      "weight": 0.1,
+      "rule": "R8A",
+      "rule_name": "Backward Short",
+      "note": "...2..."
+    },
+    {
+      "from": "Exfiltration",
+      "to": "Command and Control",
+      "weight": 0.1,
+      "rule": "R8A",
+      "rule_name": "Backward Short",
+      "note": "...1..."
+    },
+    {
+      "from": "Exfiltration",
+      "to": "Exfiltration",
+      "weight": 0.5,
+      "rule": "R1",
+      "rule_name": "Self-Loop",
+      "note": "...Tactic ..."
+    },
+    {
+      "from": "Exfiltration",
+      "to": "Impact",
+      "weight": 1.0,
+      "rule": "R2",
+      "rule_name": "Primary Flow",
+      "note": "ATT&CK Kill Chain ..."
+    },
+    {
+      "from": "Impact",
+      "to": "Reconnaissance",
+      "weight": 0.02,
+      "rule": "R9",
+      "rule_name": "Forbidden",
+      "note": "Impact ..."
+    },
+    {
+      "from": "Impact",
+      "to": "Resource Development",
+      "weight": 0.02,
+      "rule": "R9",
+      "rule_name": "Forbidden",
+      "note": "Impact ..."
+    },
+    {
+      "from": "Impact",
+      "to": "Initial Access",
+      "weight": 0.02,
+      "rule": "R9",
+      "rule_name": "Forbidden",
+      "note": "Impact ..."
+    },
+    {
+      "from": "Impact",
+      "to": "Execution",
+      "weight": 0.02,
+      "rule": "R9",
+      "rule_name": "Forbidden",
+      "note": "Impact ..."
+    },
+    {
+      "from": "Impact",
+      "to": "Persistence",
+      "weight": 0.02,
+      "rule": "R9",
+      "rule_name": "Forbidden",
+      "note": "Impact ..."
+    },
+    {
+      "from": "Impact",
+      "to": "Privilege Escalation",
+      "weight": 0.02,
+      "rule": "R9",
+      "rule_name": "Forbidden",
+      "note": "Impact ..."
+    },
+    {
+      "from": "Impact",
+      "to": "Defense Evasion",
+      "weight": 0.02,
+      "rule": "R9",
+      "rule_name": "Forbidden",
+      "note": "Impact ..."
+    },
+    {
+      "from": "Impact",
+      "to": "Credential Access",
+      "weight": 0.02,
+      "rule": "R9",
+      "rule_name": "Forbidden",
+      "note": "Impact ..."
+    },
+    {
+      "from": "Impact",
+      "to": "Discovery",
+      "weight": 0.02,
+      "rule": "R9",
+      "rule_name": "Forbidden",
+      "note": "Impact ..."
+    },
+    {
+      "from": "Impact",
+      "to": "Lateral Movement",
+      "weight": 0.02,
+      "rule": "R9",
+      "rule_name": "Forbidden",
+      "note": "Impact ..."
+    },
+    {
+      "from": "Impact",
+      "to": "Collection",
+      "weight": 0.02,
+      "rule": "R9",
+      "rule_name": "Forbidden",
+      "note": "Impact ..."
+    },
+    {
+      "from": "Impact",
+      "to": "Command and Control",
+      "weight": 0.02,
+      "rule": "R9",
+      "rule_name": "Forbidden",
+      "note": "Impact ..."
+    },
+    {
+      "from": "Impact",
+      "to": "Exfiltration",
+      "weight": 0.02,
+      "rule": "R9",
+      "rule_name": "Forbidden",
+      "note": "Impact ..."
+    },
+    {
+      "from": "Impact",
+      "to": "Impact",
+      "weight": 0.5,
+      "rule": "R1",
+      "rule_name": "Self-Loop",
+      "note": "...Tactic ..."
+    }
+  ]
+}

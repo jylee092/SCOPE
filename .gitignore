@@ -88,3 +88,17 @@ output/technique_io_cache.v*.json.bak
 .env.*
 *.key
 secrets.json
+
+# --- Secrets (API keys) -- never commit -----------------------
+.secrets/
+*.key
+.env
+
+# --- CCS revision: heavy R10 per-scenario intermediates (regenerable via
+#     experiments/ccs_revision/r10_*.py); keep summaries + GPT description cache
+output/_ccs_revision/R10_llm_swap/template/
+output/_ccs_revision/R10_llm_swap/gpt/atomic/
+output/_ccs_revision/R10_llm_swap/gpt/compound/
+
+# --- CatBoost training logs (auto-generated) ---
+catboost_info/

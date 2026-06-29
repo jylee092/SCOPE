@@ -1,0 +1,57 @@
+{
+  "SCOPE": {
+    "n": 35,
+    "chain_recall_LCS": 0.6833,
+    "chain_strict_LCS": 0.1127,
+    "chain_lenpen_LCS": 0.1491,
+    "chain_F1_strict": 0.2528,
+    "chain_F1_plaus": 0.3283,
+    "chain_false_rate": 0.0571,
+    "map_hit5_macro": 0.8393,
+    "map_hit5_micro": 0.8645
+  },
+  "sigma": {
+    "n": 35,
+    "chain_recall_LCS": 0.4024,
+    "chain_strict_LCS": 0.0987,
+    "chain_lenpen_LCS": 0.1084,
+    "chain_F1_strict": 0.229,
+    "chain_F1_plaus": 0.2826,
+    "chain_false_rate": 0.2286,
+    "map_hit5_macro": 0.5692,
+    "map_hit5_micro": 0.6494
+  },
+  "shield": {
+    "n": 35,
+    "chain_recall_LCS": 0.1286,
+    "chain_strict_LCS": 0.1143,
+    "chain_lenpen_LCS": 0.1286,
+    "chain_F1_strict": 0.1086,
+    "chain_F1_plaus": 0.1495,
+    "chain_false_rate": 0.7429,
+    "map_hit5_macro": 0.2323,
+    "map_hit5_micro": 0.1554
+  },
+  "deepag": {
+    "n": 35,
+    "chain_recall_LCS": 0.3929,
+    "chain_strict_LCS": 0.1011,
+    "chain_lenpen_LCS": 0.1108,
+    "chain_F1_strict": 0.2346,
+    "chain_F1_plaus": 0.2907,
+    "chain_false_rate": 0.2286,
+    "map_hit5_macro": 0.5543,
+    "map_hit5_micro": 0.5936
+  },
+  "magic": {
+    "n": 35,
+    "chain_recall_LCS": 0.3929,
+    "chain_strict_LCS": 0.1019,
+    "chain_lenpen_LCS": 0.1219,
+    "chain_F1_strict": 0.2317,
+    "chain_F1_plaus": 0.283,
+    "chain_false_rate": 0.2286,
+    "map_hit5_macro": 0.5692,
+    "map_hit5_micro": 0.6494
+  }
+}

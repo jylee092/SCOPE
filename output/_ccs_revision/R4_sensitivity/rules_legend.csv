@@ -1,0 +1,16 @@
+rule,name,weight
+R9,Forbidden,0.02
+R2,Primary Flow,1.0
+R3A,Post-Exploit Loop A,0.9
+R3B,Post-Exploit Loop B,0.8
+R4,Wildcard IN,0.8
+R5,Wildcard OUT,0.7
+R5B,Wildcard OUT Rev,0.4
+R1,Self-Loop,0.5
+R6,Forward Skip,0.5
+R7,Far Skip,0.3
+R8A,Backward Short,0.1
+R8B,Backward Long,0.05
+R1[Execution],Self-Loop (Execution),0.4
+R1[Defense Evasion],Self-Loop (Defense Evasion),0.6
+R4[Defense Evasion],Wildcard-IN (Defense Evasion),0.7

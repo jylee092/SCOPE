@@ -1,0 +1,15 @@
+from\to,Reconnaissance,Resource Development,Initial Access,Execution,Persistence,Privilege Escalation,Defense Evasion,Credential Access,Discovery,Lateral Movement,Collection,Command and Control,Exfiltration,Impact
+Reconnaissance,R1,R2,R6,R7,R7,R4,R4,R7,R7,R7,R7,R7,R7,R7
+Resource Development,R8A,R1,R2,R6,R7,R4,R4,R7,R7,R7,R7,R7,R7,R7
+Initial Access,R8A,R8A,R1,R2,R6,R4,R4,R7,R7,R7,R7,R7,R7,R7
+Execution,R8B,R8A,R8A,R1,R2,R2,R2,R2,R7,R7,R7,R7,R7,R7
+Persistence,R8B,R8B,R8A,R8A,R1,R2,R4,R7,R7,R7,R7,R7,R7,R7
+Privilege Escalation,R5B,R5B,R5B,R5B,R5B,R1,R2,R5,R5,R5,R5,R5,R5,R5
+Defense Evasion,R5B,R5B,R5B,R5B,R5B,R8A,R1,R5,R5,R5,R5,R5,R5,R5
+Credential Access,R8B,R8B,R8B,R8B,R8B,R4,R4,R1,R3A,R3A,R3B,R7,R7,R7
+Discovery,R8B,R8B,R8B,R8B,R8B,R4,R4,R3A,R1,R3A,R3B,R7,R7,R7
+Lateral Movement,R8B,R8B,R8B,R8B,R8B,R4,R4,R3A,R3A,R1,R2,R6,R7,R7
+Collection,R8B,R8B,R8B,R8B,R8B,R4,R4,R8B,R8A,R8A,R1,R2,R6,R7
+Command and Control,R8B,R8B,R8B,R8B,R8B,R4,R4,R8B,R8B,R8A,R8A,R1,R2,R6
+Exfiltration,R9,R9,R9,R9,R9,R9,R9,R8B,R8B,R8B,R8A,R8A,R1,R2
+Impact,R9,R9,R9,R9,R9,R9,R9,R9,R9,R9,R9,R9,R9,R1
