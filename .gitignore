@@ -102,3 +102,6 @@ output/_ccs_revision/R10_llm_swap/gpt/compound/
 
 # --- CatBoost training logs (auto-generated) ---
 catboost_info/
+
+# local restore backups (not for public repo)
+experiments/ccs_revision/_backup_orig/

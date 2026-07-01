@@ -1188,6 +1188,11 @@ def apply_emission_confidence_bypass(
     """
     groups = vit.groups
     path = list(vit.best_path)
+    # Safety: positional re-pairing below assumes a contiguous full-length path.
+    # With the structural skip removed this always holds; guard against any
+    # non-contiguous path (would otherwise mis-map candidates to groups).
+    if len(path) != len(groups):
+        return vit
     adjusted: list["Candidate"] = []
     for s, c in enumerate(path):
         node = groups[s]

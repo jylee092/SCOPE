@@ -99,7 +99,11 @@ VITERBI_ALPHA_LOW_SIM        = 0.5
 VITERBI_ALPHA_HIGH_SIM       = 0.1
 
 
-USE_SEMANTIC_SCORING = True
+# P_sem removed (CCS->C&S revision): bi-encoder cosine is symmetric and its
+# contribution is exactly zero on this corpus (0.6833 with vs without). The
+# transition model is now two principled, directional axes: tactical (P_tac)
+# and causal (P_cau). See experiments/ccs_revision/_nopsem_check.py.
+USE_SEMANTIC_SCORING = False
 USE_CAUSAL_SCORING = True
 SEMANTIC_BACKEND     = "bi-encoder"
 SEMANTIC_MODEL       = "basel/ATTACK-BERT"
@@ -110,7 +114,7 @@ SEM_CALIBRATION        = "linear"
 SEM_SIGMOID_CENTER     = 0.5
 SEM_SIGMOID_SCALE      = 8.0
 W_TAC = 0.5
-W_SEM = 0.3
+W_SEM = 0.0   # P_sem removed (zero contribution; symmetric). Renormalizes to tac/cau.
 W_CAU = 0.2
 USE_CE_EMISSION_RERANK = False
 CE_RERANK_WIDTH = 20

@@ -240,9 +240,13 @@ def run_scope(drop: float, seed: int) -> dict[str, float]:
     pct = int(round(drop * 100))
     out_root = config.OUTPUT_BASE_DIR / "_robustness" / f"scope_drop{pct}_seed{seed}"
 
-    # Override VITERBI_MAX_SKIP for this run; keep other config as-is.
+    # Structural skip removed (CCS->C&S revision): the skip operator exploited
+    # the length-biased path score to drop genuine steps (D=0 beats D=2 on
+    # complete data 0.68 vs 0.49 AND at 25% drop 0.58 vs 0.49). Robustness now
+    # uses the same D=0 config as the main comparison. Missing logs are handled
+    # by linking surviving groups in time order with M_tac forward-skip discounts.
     prev_max_skip = config.VITERBI_MAX_SKIP
-    config.VITERBI_MAX_SKIP = 2
+    config.VITERBI_MAX_SKIP = 0
 
     try:
         out: dict[str, float] = {}
