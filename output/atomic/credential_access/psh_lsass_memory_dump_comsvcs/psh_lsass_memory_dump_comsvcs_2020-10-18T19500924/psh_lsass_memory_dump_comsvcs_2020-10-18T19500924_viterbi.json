@@ -25,10 +25,10 @@
     "similarity": 0.7726,
     "log_emission": -3.3288,
     "transition_from": "Credential Access",
-    "transition_weight": 0.6107,
+    "transition_weight": 0.5,
     "transition_rule": "R1",
-    "transition_note": "동일 Tactic 반복",
-    "log_transition": -0.4931,
+    "transition_note": "...Tactic ...",
+    "log_transition": -0.6931,
     "skip_distance": 0
   },
   {
@@ -41,10 +41,10 @@
     "similarity": 0.7996,
     "log_emission": -2.9717,
     "transition_from": "Credential Access",
-    "transition_weight": 0.6097,
+    "transition_weight": 0.5,
     "transition_rule": "R1",
-    "transition_note": "동일 Tactic 반복",
-    "log_transition": -0.4948,
+    "transition_note": "...Tactic ...",
+    "log_transition": -0.6931,
     "skip_distance": 0
   },
   {
@@ -57,10 +57,10 @@
     "similarity": 0.8038,
     "log_emission": -3.1194,
     "transition_from": "Credential Access",
-    "transition_weight": 0.6116,
+    "transition_weight": 0.5,
     "transition_rule": "R1",
-    "transition_note": "동일 Tactic 반복",
-    "log_transition": -0.4917,
+    "transition_note": "...Tactic ...",
+    "log_transition": -0.6931,
     "skip_distance": 0
   }
 ]

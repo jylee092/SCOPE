@@ -8,14 +8,14 @@
   },
   "template": {
     "n": 35,
-    "tech_lcs": 0.3071,
-    "tac_lcs": 0.4595,
-    "step_cov": 0.3357,
-    "order": 0.4143
+    "tech_lcs": 0.3738,
+    "tac_lcs": 0.5119,
+    "step_cov": 0.4024,
+    "order": 0.4714
   },
   "gpt": {
     "n": 35,
-    "tech_lcs": 0.669,
+    "tech_lcs": 0.6595,
     "tac_lcs": 0.7667,
     "step_cov": 0.7,
     "order": 0.5667

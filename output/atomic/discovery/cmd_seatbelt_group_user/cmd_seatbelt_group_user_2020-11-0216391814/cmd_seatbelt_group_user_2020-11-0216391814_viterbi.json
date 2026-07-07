@@ -25,10 +25,10 @@
     "similarity": 0.5602,
     "log_emission": -4.5769,
     "transition_from": "Defense Evasion",
-    "transition_weight": 0.7542,
+    "transition_weight": 0.7751,
     "transition_rule": "R5",
-    "transition_note": "Defense Evasion → 이후 단계 (순방향)",
-    "log_transition": -0.2821,
+    "transition_note": "Defense Evasion → ...",
+    "log_transition": -0.2548,
     "skip_distance": 0
   }
 ]

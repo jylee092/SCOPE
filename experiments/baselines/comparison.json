@@ -1,0 +1,3193 @@
+{
+  "per_scenario": {
+    "glide_full": [
+      {
+        "scenario": "cmd_dumping_ntds_dit_file_ntdsutil",
+        "num_gt_steps": 6,
+        "num_pred_steps": 31,
+        "tactic": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f1": 0.3333,
+          "jaccard": 0.2,
+          "lcs_norm": 0.1935
+        },
+        "technique": {
+          "precision": 0.0833,
+          "recall": 1.0,
+          "f1": 0.1538,
+          "jaccard": 0.0833,
+          "lcs_norm": 0.0323
+        }
+      },
+      {
+        "scenario": "cmd_sam_copy_esentutl_2020-10-1900290001",
+        "num_gt_steps": 9,
+        "num_pred_steps": 9,
+        "tactic": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "jaccard": 0.5,
+          "lcs_norm": 0.6667
+        },
+        "technique": {
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "jaccard": 0.25,
+          "lcs_norm": 0.1111
+        }
+      },
+      {
+        "scenario": "empire_mimikatz_logonpasswords_2020-08-07103224",
+        "num_gt_steps": 7,
+        "num_pred_steps": 15,
+        "tactic": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f1": 0.3333,
+          "jaccard": 0.2,
+          "lcs_norm": 0.4667
+        },
+        "technique": {
+          "precision": 0.125,
+          "recall": 1.0,
+          "f1": 0.2222,
+          "jaccard": 0.125,
+          "lcs_norm": 0.4
+        }
+      },
+      {
+        "scenario": "empire_shell_rubeus_asktgt_createnetonly_2020-09-21230246",
+        "num_gt_steps": 6,
+        "num_pred_steps": 21,
+        "tactic": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f1": 0.3333,
+          "jaccard": 0.2,
+          "lcs_norm": 0.2857
+        },
+        "technique": {
+          "precision": 0.0714,
+          "recall": 1.0,
+          "f1": 0.1333,
+          "jaccard": 0.0714,
+          "lcs_norm": 0.0476
+        }
+      },
+      {
+        "scenario": "psh_lsass_memory_dump_comsvcs_2020-10-18T19500924",
+        "num_gt_steps": 4,
+        "num_pred_steps": 4,
+        "tactic": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "jaccard": 1.0,
+          "lcs_norm": 1.0
+        },
+        "technique": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "jaccard": 1.0,
+          "lcs_norm": 1.0
+        }
+      },
+      {
+        "scenario": "cmd_process_herpaderping_mimiexplorer_2020-10-2623583501",
+        "num_gt_steps": 4,
+        "num_pred_steps": 5,
+        "tactic": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "jaccard": 0.5,
+          "lcs_norm": 0.6
+        },
+        "technique": {
+          "precision": 0.3333,
+          "recall": 1.0,
+          "f1": 0.5,
+          "jaccard": 0.3333,
+          "lcs_norm": 0.2
+        }
+      },
+      {
+        "scenario": "cmd_wevtutil_modify_security_eventlog_path",
+        "num_gt_steps": 1,
+        "num_pred_steps": 36,
+        "tactic": {
+          "precision": 0.1429,
+          "recall": 1.0,
+          "f1": 0.25,
+          "jaccard": 0.1429,
+          "lcs_norm": 0.0278
+        },
+        "technique": {
+          "precision": 0.0588,
+          "recall": 1.0,
+          "f1": 0.1111,
+          "jaccard": 0.0588,
+          "lcs_norm": 0.0278
+        }
+      },
+      {
+        "scenario": "empire_dllinjection_LoadLibrary_CreateRemoteThread_2020-07-22000048",
+        "num_gt_steps": 5,
+        "num_pred_steps": 22,
+        "tactic": {
+          "precision": 0.1667,
+          "recall": 1.0,
+          "f1": 0.2857,
+          "jaccard": 0.1667,
+          "lcs_norm": 0.1818
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "psh_cmstp_execution_bypassuac_2020-10-2201543213",
+        "num_gt_steps": 6,
+        "num_pred_steps": 10,
+        "tactic": {
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "jaccard": 0.25,
+          "lcs_norm": 0.6
+        },
+        "technique": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f1": 0.3333,
+          "jaccard": 0.2,
+          "lcs_norm": 0.6
+        }
+      },
+      {
+        "scenario": "cmd_seatbelt_group_user_2020-11-0216391814",
+        "num_gt_steps": 2,
+        "num_pred_steps": 2,
+        "tactic": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "jaccard": 0.5,
+          "lcs_norm": 0.5
+        },
+        "technique": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "jaccard": 0.5,
+          "lcs_norm": 0.5
+        }
+      },
+      {
+        "scenario": "empire_find_localadmin_smb_svcctl_OpenSCManager_2020-09-22021559",
+        "num_gt_steps": 1,
+        "num_pred_steps": 11,
+        "tactic": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f1": 0.3333,
+          "jaccard": 0.2,
+          "lcs_norm": 0.0909
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_getsession_dcerpc_smb_srvsvc_NetSessEnum_2020-09-22034513",
+        "num_gt_steps": 1,
+        "num_pred_steps": 14,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_shell_net_local_users_2020-09-21192606",
+        "num_gt_steps": 3,
+        "num_pred_steps": 10,
+        "tactic": {
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "jaccard": 0.25,
+          "lcs_norm": 0.3
+        },
+        "technique": {
+          "precision": 0.1429,
+          "recall": 1.0,
+          "f1": 0.25,
+          "jaccard": 0.1429,
+          "lcs_norm": 0.1
+        }
+      },
+      {
+        "scenario": "empire_shell_samr_EnumDomainUsers_2020-09-21193527",
+        "num_gt_steps": 3,
+        "num_pred_steps": 7,
+        "tactic": {
+          "precision": 0.3333,
+          "recall": 1.0,
+          "f1": 0.5,
+          "jaccard": 0.3333,
+          "lcs_norm": 0.4286
+        },
+        "technique": {
+          "precision": 0.1667,
+          "recall": 1.0,
+          "f1": 0.2857,
+          "jaccard": 0.1667,
+          "lcs_norm": 0.2857
+        }
+      },
+      {
+        "scenario": "cmd_sharpview_pcre_net_2020-10-2920232423",
+        "num_gt_steps": 2,
+        "num_pred_steps": 2,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_launcher_vbs_2020-09-04160940",
+        "num_gt_steps": 10,
+        "num_pred_steps": 13,
+        "tactic": {
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "jaccard": 0.25,
+          "lcs_norm": 0.3846
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "psh_powershell_httplistener_2020-11-0204130683",
+        "num_gt_steps": 1,
+        "num_pred_steps": 2,
+        "tactic": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "jaccard": 0.5,
+          "lcs_norm": 0.5
+        },
+        "technique": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "jaccard": 0.5,
+          "lcs_norm": 0.5
+        }
+      },
+      {
+        "scenario": "psh_python_webserver_2020-10-2900161507",
+        "num_gt_steps": 2,
+        "num_pred_steps": 2,
+        "tactic": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "jaccard": 1.0,
+          "lcs_norm": 1.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "covenant_psremoting_command_2020-08-06115603",
+        "num_gt_steps": 8,
+        "num_pred_steps": 19,
+        "tactic": {
+          "precision": 0.1667,
+          "recall": 1.0,
+          "f1": 0.2857,
+          "jaccard": 0.1667,
+          "lcs_norm": 0.2105
+        },
+        "technique": {
+          "precision": 0.0909,
+          "recall": 1.0,
+          "f1": 0.1667,
+          "jaccard": 0.0909,
+          "lcs_norm": 0.1053
+        }
+      },
+      {
+        "scenario": "empire_psexec_dcerpc_tcp_svcctl_2020-09-20121608",
+        "num_gt_steps": 14,
+        "num_pred_steps": 26,
+        "tactic": {
+          "precision": 0.1667,
+          "recall": 1.0,
+          "f1": 0.2857,
+          "jaccard": 0.1667,
+          "lcs_norm": 0.0769
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_psremoting_stager_2020-09-20170827",
+        "num_gt_steps": 13,
+        "num_pred_steps": 22,
+        "tactic": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f1": 0.3333,
+          "jaccard": 0.2,
+          "lcs_norm": 0.2273
+        },
+        "technique": {
+          "precision": 0.0769,
+          "recall": 1.0,
+          "f1": 0.1429,
+          "jaccard": 0.0769,
+          "lcs_norm": 0.1364
+        }
+      },
+      {
+        "scenario": "empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod_2020-09-21001437",
+        "num_gt_steps": 11,
+        "num_pred_steps": 29,
+        "tactic": {
+          "precision": 0.1667,
+          "recall": 1.0,
+          "f1": 0.2857,
+          "jaccard": 0.1667,
+          "lcs_norm": 0.3793
+        },
+        "technique": {
+          "precision": 0.0588,
+          "recall": 1.0,
+          "f1": 0.1111,
+          "jaccard": 0.0588,
+          "lcs_norm": 0.1724
+        }
+      },
+      {
+        "scenario": "purplesharp_ad_playbook_I_2020-10-22042947",
+        "num_gt_steps": 19,
+        "num_pred_steps": 37,
+        "tactic": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f1": 0.3333,
+          "jaccard": 0.2,
+          "lcs_norm": 0.3514
+        },
+        "technique": {
+          "precision": 0.0769,
+          "recall": 1.0,
+          "f1": 0.1429,
+          "jaccard": 0.0769,
+          "lcs_norm": 0.2973
+        }
+      },
+      {
+        "scenario": "cmd_userinitmprlogonscript_batch_2020-10-1922471810",
+        "num_gt_steps": 3,
+        "num_pred_steps": 3,
+        "tactic": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "jaccard": 1.0,
+          "lcs_norm": 1.0
+        },
+        "technique": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "jaccard": 1.0,
+          "lcs_norm": 1.0
+        }
+      },
+      {
+        "scenario": "covenant_persistwmi_2019-12-05044734",
+        "num_gt_steps": 2,
+        "num_pred_steps": 12,
+        "tactic": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f1": 0.3333,
+          "jaccard": 0.2,
+          "lcs_norm": 0.0833
+        },
+        "technique": {
+          "precision": 0.1111,
+          "recall": 1.0,
+          "f1": 0.2,
+          "jaccard": 0.1111,
+          "lcs_norm": 0.0833
+        }
+      },
+      {
+        "scenario": "empire_persistence_registry_modification_run_keys_elevated_user_2020-07-22001847",
+        "num_gt_steps": 2,
+        "num_pred_steps": 7,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_schtasks_creation_execution_elevated_user_2020-09-21175806",
+        "num_gt_steps": 14,
+        "num_pred_steps": 80,
+        "tactic": {
+          "precision": 0.1429,
+          "recall": 1.0,
+          "f1": 0.25,
+          "jaccard": 0.1429,
+          "lcs_norm": 0.175
+        },
+        "technique": {
+          "precision": 0.0278,
+          "recall": 1.0,
+          "f1": 0.0541,
+          "jaccard": 0.0278,
+          "lcs_norm": 0.0375
+        }
+      },
+      {
+        "scenario": "empire_wmi_local_event_subscriptions_elevated_user_2020-09-04164306",
+        "num_gt_steps": 16,
+        "num_pred_steps": 80,
+        "tactic": {
+          "precision": 0.1667,
+          "recall": 1.0,
+          "f1": 0.2857,
+          "jaccard": 0.1667,
+          "lcs_norm": 0.0375
+        },
+        "technique": {
+          "precision": 0.04,
+          "recall": 1.0,
+          "f1": 0.0769,
+          "jaccard": 0.04,
+          "lcs_norm": 0.0375
+        }
+      },
+      {
+        "scenario": "cmd_service_mod_fax_2020-10-2120454410",
+        "num_gt_steps": 2,
+        "num_pred_steps": 4,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_invoke_runas_2019-05-18204300",
+        "num_gt_steps": 13,
+        "num_pred_steps": 21,
+        "tactic": {
+          "precision": 0.4,
+          "recall": 0.5,
+          "f1": 0.4444,
+          "jaccard": 0.2857,
+          "lcs_norm": 0.381
+        },
+        "technique": {
+          "precision": 0.3333,
+          "recall": 0.4286,
+          "f1": 0.375,
+          "jaccard": 0.2308,
+          "lcs_norm": 0.1905
+        }
+      },
+      {
+        "scenario": "empire_uac_shellapi_fodhelper_2020-09-04032946",
+        "num_gt_steps": 12,
+        "num_pred_steps": 17,
+        "tactic": {
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "jaccard": 0.25,
+          "lcs_norm": 0.2941
+        },
+        "technique": {
+          "precision": 0.1667,
+          "recall": 1.0,
+          "f1": 0.2857,
+          "jaccard": 0.1667,
+          "lcs_norm": 0.1176
+        }
+      },
+      {
+        "scenario": "metasploit_logonpasswords_lsass_memory_dump",
+        "num_gt_steps": 34,
+        "num_pred_steps": 80,
+        "tactic": {
+          "precision": 0.1667,
+          "recall": 1.0,
+          "f1": 0.2857,
+          "jaccard": 0.1667,
+          "lcs_norm": 0.225
+        },
+        "technique": {
+          "precision": 0.0455,
+          "recall": 1.0,
+          "f1": 0.087,
+          "jaccard": 0.0455,
+          "lcs_norm": 0.2
+        }
+      },
+      {
+        "scenario": "metasploit_procdump_lsass_memory_dump",
+        "num_gt_steps": 15,
+        "num_pred_steps": 80,
+        "tactic": {
+          "precision": 0.1667,
+          "recall": 1.0,
+          "f1": 0.2857,
+          "jaccard": 0.1667,
+          "lcs_norm": 0.1875
+        },
+        "technique": {
+          "precision": 0.0385,
+          "recall": 1.0,
+          "f1": 0.0741,
+          "jaccard": 0.0385,
+          "lcs_norm": 0.1875
+        }
+      }
+    ],
+    "sigma": [
+      {
+        "scenario": "cmd_dumping_ntds_dit_file_ntdsutil",
+        "num_gt_steps": 6,
+        "num_pred_steps": 12,
+        "tactic": {
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "jaccard": 0.25,
+          "lcs_norm": 0.1667
+        },
+        "technique": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f1": 0.3333,
+          "jaccard": 0.2,
+          "lcs_norm": 0.1667
+        }
+      },
+      {
+        "scenario": "cmd_sam_copy_esentutl_2020-10-1900290001",
+        "num_gt_steps": 9,
+        "num_pred_steps": 3,
+        "tactic": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "jaccard": 0.5,
+          "lcs_norm": 0.2222
+        },
+        "technique": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "jaccard": 0.5,
+          "lcs_norm": 0.2222
+        }
+      },
+      {
+        "scenario": "empire_mimikatz_logonpasswords_2020-08-07103224",
+        "num_gt_steps": 7,
+        "num_pred_steps": 15,
+        "tactic": {
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "jaccard": 0.25,
+          "lcs_norm": 0.0667
+        },
+        "technique": {
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "jaccard": 0.25,
+          "lcs_norm": 0.0667
+        }
+      },
+      {
+        "scenario": "empire_shell_rubeus_asktgt_createnetonly_2020-09-21230246",
+        "num_gt_steps": 6,
+        "num_pred_steps": 15,
+        "tactic": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f1": 0.3333,
+          "jaccard": 0.2,
+          "lcs_norm": 0.0667
+        },
+        "technique": {
+          "precision": 0.125,
+          "recall": 1.0,
+          "f1": 0.2222,
+          "jaccard": 0.125,
+          "lcs_norm": 0.0588
+        }
+      },
+      {
+        "scenario": "psh_lsass_memory_dump_comsvcs_2020-10-18T19500924",
+        "num_gt_steps": 4,
+        "num_pred_steps": 2,
+        "tactic": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "jaccard": 0.5,
+          "lcs_norm": 0.25
+        },
+        "technique": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "jaccard": 0.5,
+          "lcs_norm": 0.25
+        }
+      },
+      {
+        "scenario": "cmd_process_herpaderping_mimiexplorer_2020-10-2623583501",
+        "num_gt_steps": 4,
+        "num_pred_steps": 2,
+        "tactic": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "jaccard": 0.5,
+          "lcs_norm": 0.25
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "cmd_wevtutil_modify_security_eventlog_path",
+        "num_gt_steps": 1,
+        "num_pred_steps": 5,
+        "tactic": {
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "jaccard": 0.25,
+          "lcs_norm": 0.2
+        },
+        "technique": {
+          "precision": 0.1667,
+          "recall": 1.0,
+          "f1": 0.2857,
+          "jaccard": 0.1667,
+          "lcs_norm": 0.1667
+        }
+      },
+      {
+        "scenario": "empire_dllinjection_LoadLibrary_CreateRemoteThread_2020-07-22000048",
+        "num_gt_steps": 5,
+        "num_pred_steps": 20,
+        "tactic": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f1": 0.3333,
+          "jaccard": 0.2,
+          "lcs_norm": 0.1
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "psh_cmstp_execution_bypassuac_2020-10-2201543213",
+        "num_gt_steps": 6,
+        "num_pred_steps": 5,
+        "tactic": {
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "jaccard": 0.25,
+          "lcs_norm": 0.3333
+        },
+        "technique": {
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "jaccard": 0.25,
+          "lcs_norm": 0.1667
+        }
+      },
+      {
+        "scenario": "cmd_seatbelt_group_user_2020-11-0216391814",
+        "num_gt_steps": 2,
+        "num_pred_steps": 1,
+        "tactic": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "jaccard": 1.0,
+          "lcs_norm": 0.5
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_find_localadmin_smb_svcctl_OpenSCManager_2020-09-22021559",
+        "num_gt_steps": 1,
+        "num_pred_steps": 14,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_getsession_dcerpc_smb_srvsvc_NetSessEnum_2020-09-22034513",
+        "num_gt_steps": 1,
+        "num_pred_steps": 17,
+        "tactic": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f1": 0.3333,
+          "jaccard": 0.2,
+          "lcs_norm": 0.0588
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_shell_net_local_users_2020-09-21192606",
+        "num_gt_steps": 3,
+        "num_pred_steps": 7,
+        "tactic": {
+          "precision": 0.3333,
+          "recall": 1.0,
+          "f1": 0.5,
+          "jaccard": 0.3333,
+          "lcs_norm": 0.1429
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_shell_samr_EnumDomainUsers_2020-09-21193527",
+        "num_gt_steps": 3,
+        "num_pred_steps": 8,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "cmd_sharpview_pcre_net_2020-10-2920232423",
+        "num_gt_steps": 2,
+        "num_pred_steps": 4,
+        "tactic": {
+          "precision": 0.3333,
+          "recall": 1.0,
+          "f1": 0.5,
+          "jaccard": 0.3333,
+          "lcs_norm": 0.5
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_launcher_vbs_2020-09-04160940",
+        "num_gt_steps": 10,
+        "num_pred_steps": 7,
+        "tactic": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f1": 0.3333,
+          "jaccard": 0.2,
+          "lcs_norm": 0.1
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "psh_powershell_httplistener_2020-11-0204130683",
+        "num_gt_steps": 1,
+        "num_pred_steps": 0,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "psh_python_webserver_2020-10-2900161507",
+        "num_gt_steps": 2,
+        "num_pred_steps": 1,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "covenant_psremoting_command_2020-08-06115603",
+        "num_gt_steps": 8,
+        "num_pred_steps": 22,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_psexec_dcerpc_tcp_svcctl_2020-09-20121608",
+        "num_gt_steps": 14,
+        "num_pred_steps": 10,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.1429,
+          "recall": 1.0,
+          "f1": 0.25,
+          "jaccard": 0.1429,
+          "lcs_norm": 0.0714
+        }
+      },
+      {
+        "scenario": "empire_psremoting_stager_2020-09-20170827",
+        "num_gt_steps": 13,
+        "num_pred_steps": 14,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod_2020-09-21001437",
+        "num_gt_steps": 11,
+        "num_pred_steps": 15,
+        "tactic": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f1": 0.3333,
+          "jaccard": 0.2,
+          "lcs_norm": 0.1333
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "purplesharp_ad_playbook_I_2020-10-22042947",
+        "num_gt_steps": 19,
+        "num_pred_steps": 44,
+        "tactic": {
+          "precision": 0.1,
+          "recall": 1.0,
+          "f1": 0.1818,
+          "jaccard": 0.1,
+          "lcs_norm": 0.25
+        },
+        "technique": {
+          "precision": 0.0833,
+          "recall": 1.0,
+          "f1": 0.1538,
+          "jaccard": 0.0833,
+          "lcs_norm": 0.2444
+        }
+      },
+      {
+        "scenario": "cmd_userinitmprlogonscript_batch_2020-10-1922471810",
+        "num_gt_steps": 3,
+        "num_pred_steps": 1,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "jaccard": 0.5,
+          "lcs_norm": 0.3333
+        }
+      },
+      {
+        "scenario": "covenant_persistwmi_2019-12-05044734",
+        "num_gt_steps": 2,
+        "num_pred_steps": 18,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "jaccard": 0.25,
+          "lcs_norm": 0.1111
+        }
+      },
+      {
+        "scenario": "empire_persistence_registry_modification_run_keys_elevated_user_2020-07-22001847",
+        "num_gt_steps": 2,
+        "num_pred_steps": 6,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.3333,
+          "recall": 1.0,
+          "f1": 0.5,
+          "jaccard": 0.3333,
+          "lcs_norm": 0.1429
+        }
+      },
+      {
+        "scenario": "empire_schtasks_creation_execution_elevated_user_2020-09-21175806",
+        "num_gt_steps": 14,
+        "num_pred_steps": 56,
+        "tactic": {
+          "precision": 0.1667,
+          "recall": 1.0,
+          "f1": 0.2857,
+          "jaccard": 0.1667,
+          "lcs_norm": 0.0179
+        },
+        "technique": {
+          "precision": 0.0833,
+          "recall": 1.0,
+          "f1": 0.1538,
+          "jaccard": 0.0833,
+          "lcs_norm": 0.0167
+        }
+      },
+      {
+        "scenario": "empire_wmi_local_event_subscriptions_elevated_user_2020-09-04164306",
+        "num_gt_steps": 16,
+        "num_pred_steps": 113,
+        "tactic": {
+          "precision": 0.1429,
+          "recall": 1.0,
+          "f1": 0.25,
+          "jaccard": 0.1429,
+          "lcs_norm": 0.0177
+        },
+        "technique": {
+          "precision": 0.0714,
+          "recall": 1.0,
+          "f1": 0.1333,
+          "jaccard": 0.0714,
+          "lcs_norm": 0.0424
+        }
+      },
+      {
+        "scenario": "cmd_service_mod_fax_2020-10-2120454410",
+        "num_gt_steps": 2,
+        "num_pred_steps": 5,
+        "tactic": {
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "jaccard": 0.25,
+          "lcs_norm": 0.2
+        },
+        "technique": {
+          "precision": 0.3333,
+          "recall": 1.0,
+          "f1": 0.5,
+          "jaccard": 0.3333,
+          "lcs_norm": 0.5
+        }
+      },
+      {
+        "scenario": "empire_invoke_runas_2019-05-18204300",
+        "num_gt_steps": 13,
+        "num_pred_steps": 20,
+        "tactic": {
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75,
+          "jaccard": 0.6,
+          "lcs_norm": 0.3
+        },
+        "technique": {
+          "precision": 0.2,
+          "recall": 0.1429,
+          "f1": 0.1667,
+          "jaccard": 0.0909,
+          "lcs_norm": 0.087
+        }
+      },
+      {
+        "scenario": "empire_uac_shellapi_fodhelper_2020-09-04032946",
+        "num_gt_steps": 12,
+        "num_pred_steps": 16,
+        "tactic": {
+          "precision": 0.1667,
+          "recall": 1.0,
+          "f1": 0.2857,
+          "jaccard": 0.1667,
+          "lcs_norm": 0.0625
+        },
+        "technique": {
+          "precision": 0.1429,
+          "recall": 1.0,
+          "f1": 0.25,
+          "jaccard": 0.1429,
+          "lcs_norm": 0.1111
+        }
+      },
+      {
+        "scenario": "metasploit_logonpasswords_lsass_memory_dump",
+        "num_gt_steps": 34,
+        "num_pred_steps": 41,
+        "tactic": {
+          "precision": 0.1429,
+          "recall": 1.0,
+          "f1": 0.25,
+          "jaccard": 0.1429,
+          "lcs_norm": 0.0488
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "metasploit_procdump_lsass_memory_dump",
+        "num_gt_steps": 15,
+        "num_pred_steps": 23,
+        "tactic": {
+          "precision": 0.1429,
+          "recall": 1.0,
+          "f1": 0.25,
+          "jaccard": 0.1429,
+          "lcs_norm": 0.2174
+        },
+        "technique": {
+          "precision": 0.0667,
+          "recall": 1.0,
+          "f1": 0.125,
+          "jaccard": 0.0667,
+          "lcs_norm": 0.0462
+        }
+      }
+    ],
+    "shield": [
+      {
+        "scenario": "cmd_dumping_ntds_dit_file_ntdsutil",
+        "num_gt_steps": 6,
+        "num_pred_steps": 1,
+        "tactic": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "jaccard": 1.0,
+          "lcs_norm": 0.1667
+        },
+        "technique": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "jaccard": 1.0,
+          "lcs_norm": 0.1667
+        }
+      },
+      {
+        "scenario": "cmd_sam_copy_esentutl_2020-10-1900290001",
+        "num_gt_steps": 9,
+        "num_pred_steps": 1,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_mimikatz_logonpasswords_2020-08-07103224",
+        "num_gt_steps": 7,
+        "num_pred_steps": 1,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_shell_rubeus_asktgt_createnetonly_2020-09-21230246",
+        "num_gt_steps": 6,
+        "num_pred_steps": 1,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "psh_lsass_memory_dump_comsvcs_2020-10-18T19500924",
+        "num_gt_steps": 4,
+        "num_pred_steps": 2,
+        "tactic": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "jaccard": 0.5,
+          "lcs_norm": 0.25
+        },
+        "technique": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "jaccard": 0.5,
+          "lcs_norm": 0.25
+        }
+      },
+      {
+        "scenario": "cmd_process_herpaderping_mimiexplorer_2020-10-2623583501",
+        "num_gt_steps": 4,
+        "num_pred_steps": 0,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "cmd_wevtutil_modify_security_eventlog_path",
+        "num_gt_steps": 1,
+        "num_pred_steps": 1,
+        "tactic": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "jaccard": 1.0,
+          "lcs_norm": 1.0
+        },
+        "technique": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "jaccard": 1.0,
+          "lcs_norm": 1.0
+        }
+      },
+      {
+        "scenario": "empire_dllinjection_LoadLibrary_CreateRemoteThread_2020-07-22000048",
+        "num_gt_steps": 5,
+        "num_pred_steps": 0,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "psh_cmstp_execution_bypassuac_2020-10-2201543213",
+        "num_gt_steps": 6,
+        "num_pred_steps": 0,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "cmd_seatbelt_group_user_2020-11-0216391814",
+        "num_gt_steps": 2,
+        "num_pred_steps": 1,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_find_localadmin_smb_svcctl_OpenSCManager_2020-09-22021559",
+        "num_gt_steps": 1,
+        "num_pred_steps": 0,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_getsession_dcerpc_smb_srvsvc_NetSessEnum_2020-09-22034513",
+        "num_gt_steps": 1,
+        "num_pred_steps": 0,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_shell_net_local_users_2020-09-21192606",
+        "num_gt_steps": 3,
+        "num_pred_steps": 0,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_shell_samr_EnumDomainUsers_2020-09-21193527",
+        "num_gt_steps": 3,
+        "num_pred_steps": 1,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "cmd_sharpview_pcre_net_2020-10-2920232423",
+        "num_gt_steps": 2,
+        "num_pred_steps": 0,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_launcher_vbs_2020-09-04160940",
+        "num_gt_steps": 10,
+        "num_pred_steps": 1,
+        "tactic": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "jaccard": 1.0,
+          "lcs_norm": 0.1
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "psh_powershell_httplistener_2020-11-0204130683",
+        "num_gt_steps": 1,
+        "num_pred_steps": 0,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "psh_python_webserver_2020-10-2900161507",
+        "num_gt_steps": 2,
+        "num_pred_steps": 1,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "covenant_psremoting_command_2020-08-06115603",
+        "num_gt_steps": 8,
+        "num_pred_steps": 0,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_psexec_dcerpc_tcp_svcctl_2020-09-20121608",
+        "num_gt_steps": 14,
+        "num_pred_steps": 0,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_psremoting_stager_2020-09-20170827",
+        "num_gt_steps": 13,
+        "num_pred_steps": 0,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod_2020-09-21001437",
+        "num_gt_steps": 11,
+        "num_pred_steps": 0,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "purplesharp_ad_playbook_I_2020-10-22042947",
+        "num_gt_steps": 19,
+        "num_pred_steps": 0,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "cmd_userinitmprlogonscript_batch_2020-10-1922471810",
+        "num_gt_steps": 3,
+        "num_pred_steps": 1,
+        "tactic": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "jaccard": 1.0,
+          "lcs_norm": 0.3333
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "covenant_persistwmi_2019-12-05044734",
+        "num_gt_steps": 2,
+        "num_pred_steps": 1,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_persistence_registry_modification_run_keys_elevated_user_2020-07-22001847",
+        "num_gt_steps": 2,
+        "num_pred_steps": 0,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_schtasks_creation_execution_elevated_user_2020-09-21175806",
+        "num_gt_steps": 14,
+        "num_pred_steps": 0,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_wmi_local_event_subscriptions_elevated_user_2020-09-04164306",
+        "num_gt_steps": 16,
+        "num_pred_steps": 0,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "cmd_service_mod_fax_2020-10-2120454410",
+        "num_gt_steps": 2,
+        "num_pred_steps": 0,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_invoke_runas_2019-05-18204300",
+        "num_gt_steps": 13,
+        "num_pred_steps": 0,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_uac_shellapi_fodhelper_2020-09-04032946",
+        "num_gt_steps": 12,
+        "num_pred_steps": 1,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "metasploit_logonpasswords_lsass_memory_dump",
+        "num_gt_steps": 34,
+        "num_pred_steps": 0,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "metasploit_procdump_lsass_memory_dump",
+        "num_gt_steps": 15,
+        "num_pred_steps": 0,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      }
+    ],
+    "event_level": [],
+    "magic": [
+      {
+        "scenario": "cmd_dumping_ntds_dit_file_ntdsutil",
+        "num_gt_steps": 6,
+        "num_pred_steps": 12,
+        "tactic": {
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "jaccard": 0.25,
+          "lcs_norm": 0.1667
+        },
+        "technique": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f1": 0.3333,
+          "jaccard": 0.2,
+          "lcs_norm": 0.1667
+        }
+      },
+      {
+        "scenario": "cmd_sam_copy_esentutl_2020-10-1900290001",
+        "num_gt_steps": 9,
+        "num_pred_steps": 3,
+        "tactic": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "jaccard": 0.5,
+          "lcs_norm": 0.2222
+        },
+        "technique": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "jaccard": 0.5,
+          "lcs_norm": 0.2222
+        }
+      },
+      {
+        "scenario": "empire_mimikatz_logonpasswords_2020-08-07103224",
+        "num_gt_steps": 7,
+        "num_pred_steps": 15,
+        "tactic": {
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "jaccard": 0.25,
+          "lcs_norm": 0.0667
+        },
+        "technique": {
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "jaccard": 0.25,
+          "lcs_norm": 0.0667
+        }
+      },
+      {
+        "scenario": "empire_shell_rubeus_asktgt_createnetonly_2020-09-21230246",
+        "num_gt_steps": 6,
+        "num_pred_steps": 15,
+        "tactic": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f1": 0.3333,
+          "jaccard": 0.2,
+          "lcs_norm": 0.0667
+        },
+        "technique": {
+          "precision": 0.125,
+          "recall": 1.0,
+          "f1": 0.2222,
+          "jaccard": 0.125,
+          "lcs_norm": 0.0588
+        }
+      },
+      {
+        "scenario": "psh_lsass_memory_dump_comsvcs_2020-10-18T19500924",
+        "num_gt_steps": 4,
+        "num_pred_steps": 2,
+        "tactic": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "jaccard": 0.5,
+          "lcs_norm": 0.25
+        },
+        "technique": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "jaccard": 0.5,
+          "lcs_norm": 0.25
+        }
+      },
+      {
+        "scenario": "cmd_process_herpaderping_mimiexplorer_2020-10-2623583501",
+        "num_gt_steps": 4,
+        "num_pred_steps": 2,
+        "tactic": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "jaccard": 0.5,
+          "lcs_norm": 0.25
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "cmd_wevtutil_modify_security_eventlog_path",
+        "num_gt_steps": 1,
+        "num_pred_steps": 3,
+        "tactic": {
+          "precision": 0.3333,
+          "recall": 1.0,
+          "f1": 0.5,
+          "jaccard": 0.3333,
+          "lcs_norm": 0.3333
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_dllinjection_LoadLibrary_CreateRemoteThread_2020-07-22000048",
+        "num_gt_steps": 5,
+        "num_pred_steps": 20,
+        "tactic": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f1": 0.3333,
+          "jaccard": 0.2,
+          "lcs_norm": 0.1
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "psh_cmstp_execution_bypassuac_2020-10-2201543213",
+        "num_gt_steps": 6,
+        "num_pred_steps": 4,
+        "tactic": {
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "jaccard": 0.25,
+          "lcs_norm": 0.1667
+        },
+        "technique": {
+          "precision": 0.3333,
+          "recall": 1.0,
+          "f1": 0.5,
+          "jaccard": 0.3333,
+          "lcs_norm": 0.1667
+        }
+      },
+      {
+        "scenario": "cmd_seatbelt_group_user_2020-11-0216391814",
+        "num_gt_steps": 2,
+        "num_pred_steps": 1,
+        "tactic": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "jaccard": 1.0,
+          "lcs_norm": 0.5
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_find_localadmin_smb_svcctl_OpenSCManager_2020-09-22021559",
+        "num_gt_steps": 1,
+        "num_pred_steps": 14,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_getsession_dcerpc_smb_srvsvc_NetSessEnum_2020-09-22034513",
+        "num_gt_steps": 1,
+        "num_pred_steps": 17,
+        "tactic": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f1": 0.3333,
+          "jaccard": 0.2,
+          "lcs_norm": 0.0588
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_shell_net_local_users_2020-09-21192606",
+        "num_gt_steps": 3,
+        "num_pred_steps": 7,
+        "tactic": {
+          "precision": 0.3333,
+          "recall": 1.0,
+          "f1": 0.5,
+          "jaccard": 0.3333,
+          "lcs_norm": 0.1429
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_shell_samr_EnumDomainUsers_2020-09-21193527",
+        "num_gt_steps": 3,
+        "num_pred_steps": 8,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "cmd_sharpview_pcre_net_2020-10-2920232423",
+        "num_gt_steps": 2,
+        "num_pred_steps": 4,
+        "tactic": {
+          "precision": 0.3333,
+          "recall": 1.0,
+          "f1": 0.5,
+          "jaccard": 0.3333,
+          "lcs_norm": 0.5
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_launcher_vbs_2020-09-04160940",
+        "num_gt_steps": 10,
+        "num_pred_steps": 7,
+        "tactic": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f1": 0.3333,
+          "jaccard": 0.2,
+          "lcs_norm": 0.1
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "psh_powershell_httplistener_2020-11-0204130683",
+        "num_gt_steps": 1,
+        "num_pred_steps": 0,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "psh_python_webserver_2020-10-2900161507",
+        "num_gt_steps": 2,
+        "num_pred_steps": 1,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "covenant_psremoting_command_2020-08-06115603",
+        "num_gt_steps": 8,
+        "num_pred_steps": 22,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_psexec_dcerpc_tcp_svcctl_2020-09-20121608",
+        "num_gt_steps": 14,
+        "num_pred_steps": 10,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.1429,
+          "recall": 1.0,
+          "f1": 0.25,
+          "jaccard": 0.1429,
+          "lcs_norm": 0.0714
+        }
+      },
+      {
+        "scenario": "empire_psremoting_stager_2020-09-20170827",
+        "num_gt_steps": 13,
+        "num_pred_steps": 14,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod_2020-09-21001437",
+        "num_gt_steps": 11,
+        "num_pred_steps": 15,
+        "tactic": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f1": 0.3333,
+          "jaccard": 0.2,
+          "lcs_norm": 0.1333
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "purplesharp_ad_playbook_I_2020-10-22042947",
+        "num_gt_steps": 19,
+        "num_pred_steps": 44,
+        "tactic": {
+          "precision": 0.1,
+          "recall": 1.0,
+          "f1": 0.1818,
+          "jaccard": 0.1,
+          "lcs_norm": 0.25
+        },
+        "technique": {
+          "precision": 0.0833,
+          "recall": 1.0,
+          "f1": 0.1538,
+          "jaccard": 0.0833,
+          "lcs_norm": 0.2444
+        }
+      },
+      {
+        "scenario": "cmd_userinitmprlogonscript_batch_2020-10-1922471810",
+        "num_gt_steps": 3,
+        "num_pred_steps": 1,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "jaccard": 0.5,
+          "lcs_norm": 0.3333
+        }
+      },
+      {
+        "scenario": "covenant_persistwmi_2019-12-05044734",
+        "num_gt_steps": 2,
+        "num_pred_steps": 18,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "jaccard": 0.25,
+          "lcs_norm": 0.1111
+        }
+      },
+      {
+        "scenario": "empire_persistence_registry_modification_run_keys_elevated_user_2020-07-22001847",
+        "num_gt_steps": 2,
+        "num_pred_steps": 6,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.3333,
+          "recall": 1.0,
+          "f1": 0.5,
+          "jaccard": 0.3333,
+          "lcs_norm": 0.1429
+        }
+      },
+      {
+        "scenario": "empire_schtasks_creation_execution_elevated_user_2020-09-21175806",
+        "num_gt_steps": 14,
+        "num_pred_steps": 56,
+        "tactic": {
+          "precision": 0.1667,
+          "recall": 1.0,
+          "f1": 0.2857,
+          "jaccard": 0.1667,
+          "lcs_norm": 0.0179
+        },
+        "technique": {
+          "precision": 0.0833,
+          "recall": 1.0,
+          "f1": 0.1538,
+          "jaccard": 0.0833,
+          "lcs_norm": 0.0167
+        }
+      },
+      {
+        "scenario": "empire_wmi_local_event_subscriptions_elevated_user_2020-09-04164306",
+        "num_gt_steps": 16,
+        "num_pred_steps": 112,
+        "tactic": {
+          "precision": 0.1429,
+          "recall": 1.0,
+          "f1": 0.25,
+          "jaccard": 0.1429,
+          "lcs_norm": 0.0179
+        },
+        "technique": {
+          "precision": 0.0714,
+          "recall": 1.0,
+          "f1": 0.1333,
+          "jaccard": 0.0714,
+          "lcs_norm": 0.0342
+        }
+      },
+      {
+        "scenario": "cmd_service_mod_fax_2020-10-2120454410",
+        "num_gt_steps": 2,
+        "num_pred_steps": 4,
+        "tactic": {
+          "precision": 0.3333,
+          "recall": 1.0,
+          "f1": 0.5,
+          "jaccard": 0.3333,
+          "lcs_norm": 0.25
+        },
+        "technique": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "jaccard": 0.5,
+          "lcs_norm": 0.6667
+        }
+      },
+      {
+        "scenario": "empire_invoke_runas_2019-05-18204300",
+        "num_gt_steps": 13,
+        "num_pred_steps": 20,
+        "tactic": {
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75,
+          "jaccard": 0.6,
+          "lcs_norm": 0.3
+        },
+        "technique": {
+          "precision": 0.2,
+          "recall": 0.1429,
+          "f1": 0.1667,
+          "jaccard": 0.0909,
+          "lcs_norm": 0.087
+        }
+      },
+      {
+        "scenario": "empire_uac_shellapi_fodhelper_2020-09-04032946",
+        "num_gt_steps": 12,
+        "num_pred_steps": 16,
+        "tactic": {
+          "precision": 0.1667,
+          "recall": 1.0,
+          "f1": 0.2857,
+          "jaccard": 0.1667,
+          "lcs_norm": 0.0625
+        },
+        "technique": {
+          "precision": 0.1429,
+          "recall": 1.0,
+          "f1": 0.25,
+          "jaccard": 0.1429,
+          "lcs_norm": 0.1111
+        }
+      },
+      {
+        "scenario": "metasploit_logonpasswords_lsass_memory_dump",
+        "num_gt_steps": 34,
+        "num_pred_steps": 21,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "metasploit_procdump_lsass_memory_dump",
+        "num_gt_steps": 15,
+        "num_pred_steps": 18,
+        "tactic": {
+          "precision": 0.1667,
+          "recall": 1.0,
+          "f1": 0.2857,
+          "jaccard": 0.1667,
+          "lcs_norm": 0.1667
+        },
+        "technique": {
+          "precision": 0.0769,
+          "recall": 1.0,
+          "f1": 0.1429,
+          "jaccard": 0.0769,
+          "lcs_norm": 0.1364
+        }
+      }
+    ],
+    "deepag": [
+      {
+        "scenario": "cmd_dumping_ntds_dit_file_ntdsutil",
+        "num_gt_steps": 6,
+        "num_pred_steps": 8,
+        "tactic": {
+          "precision": 0.3333,
+          "recall": 1.0,
+          "f1": 0.5,
+          "jaccard": 0.3333,
+          "lcs_norm": 0.25
+        },
+        "technique": {
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "jaccard": 0.25,
+          "lcs_norm": 0.25
+        }
+      },
+      {
+        "scenario": "cmd_sam_copy_esentutl_2020-10-1900290001",
+        "num_gt_steps": 9,
+        "num_pred_steps": 3,
+        "tactic": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "jaccard": 0.5,
+          "lcs_norm": 0.2222
+        },
+        "technique": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "jaccard": 0.5,
+          "lcs_norm": 0.2222
+        }
+      },
+      {
+        "scenario": "empire_mimikatz_logonpasswords_2020-08-07103224",
+        "num_gt_steps": 7,
+        "num_pred_steps": 12,
+        "tactic": {
+          "precision": 0.3333,
+          "recall": 1.0,
+          "f1": 0.5,
+          "jaccard": 0.3333,
+          "lcs_norm": 0.0833
+        },
+        "technique": {
+          "precision": 0.3333,
+          "recall": 1.0,
+          "f1": 0.5,
+          "jaccard": 0.3333,
+          "lcs_norm": 0.0833
+        }
+      },
+      {
+        "scenario": "empire_shell_rubeus_asktgt_createnetonly_2020-09-21230246",
+        "num_gt_steps": 6,
+        "num_pred_steps": 11,
+        "tactic": {
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "jaccard": 0.25,
+          "lcs_norm": 0.2727
+        },
+        "technique": {
+          "precision": 0.125,
+          "recall": 1.0,
+          "f1": 0.2222,
+          "jaccard": 0.125,
+          "lcs_norm": 0.0769
+        }
+      },
+      {
+        "scenario": "psh_lsass_memory_dump_comsvcs_2020-10-18T19500924",
+        "num_gt_steps": 4,
+        "num_pred_steps": 2,
+        "tactic": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "jaccard": 0.5,
+          "lcs_norm": 0.25
+        },
+        "technique": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "jaccard": 0.5,
+          "lcs_norm": 0.25
+        }
+      },
+      {
+        "scenario": "cmd_process_herpaderping_mimiexplorer_2020-10-2623583501",
+        "num_gt_steps": 4,
+        "num_pred_steps": 2,
+        "tactic": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "jaccard": 0.5,
+          "lcs_norm": 0.25
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "cmd_wevtutil_modify_security_eventlog_path",
+        "num_gt_steps": 1,
+        "num_pred_steps": 5,
+        "tactic": {
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "jaccard": 0.25,
+          "lcs_norm": 0.2
+        },
+        "technique": {
+          "precision": 0.1667,
+          "recall": 1.0,
+          "f1": 0.2857,
+          "jaccard": 0.1667,
+          "lcs_norm": 0.1667
+        }
+      },
+      {
+        "scenario": "empire_dllinjection_LoadLibrary_CreateRemoteThread_2020-07-22000048",
+        "num_gt_steps": 5,
+        "num_pred_steps": 20,
+        "tactic": {
+          "precision": 0.1667,
+          "recall": 1.0,
+          "f1": 0.2857,
+          "jaccard": 0.1667,
+          "lcs_norm": 0.05
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "psh_cmstp_execution_bypassuac_2020-10-2201543213",
+        "num_gt_steps": 6,
+        "num_pred_steps": 5,
+        "tactic": {
+          "precision": 0.3333,
+          "recall": 1.0,
+          "f1": 0.5,
+          "jaccard": 0.3333,
+          "lcs_norm": 0.3333
+        },
+        "technique": {
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "jaccard": 0.25,
+          "lcs_norm": 0.1667
+        }
+      },
+      {
+        "scenario": "cmd_seatbelt_group_user_2020-11-0216391814",
+        "num_gt_steps": 2,
+        "num_pred_steps": 0,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_find_localadmin_smb_svcctl_OpenSCManager_2020-09-22021559",
+        "num_gt_steps": 1,
+        "num_pred_steps": 11,
+        "tactic": {
+          "precision": 0.3333,
+          "recall": 1.0,
+          "f1": 0.5,
+          "jaccard": 0.3333,
+          "lcs_norm": 0.0909
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_getsession_dcerpc_smb_srvsvc_NetSessEnum_2020-09-22034513",
+        "num_gt_steps": 1,
+        "num_pred_steps": 18,
+        "tactic": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f1": 0.3333,
+          "jaccard": 0.2,
+          "lcs_norm": 0.0556
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_shell_net_local_users_2020-09-21192606",
+        "num_gt_steps": 3,
+        "num_pred_steps": 8,
+        "tactic": {
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "jaccard": 0.25,
+          "lcs_norm": 0.125
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_shell_samr_EnumDomainUsers_2020-09-21193527",
+        "num_gt_steps": 3,
+        "num_pred_steps": 4,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "cmd_sharpview_pcre_net_2020-10-2920232423",
+        "num_gt_steps": 2,
+        "num_pred_steps": 4,
+        "tactic": {
+          "precision": 0.3333,
+          "recall": 1.0,
+          "f1": 0.5,
+          "jaccard": 0.3333,
+          "lcs_norm": 0.5
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_launcher_vbs_2020-09-04160940",
+        "num_gt_steps": 10,
+        "num_pred_steps": 6,
+        "tactic": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f1": 0.3333,
+          "jaccard": 0.2,
+          "lcs_norm": 0.1
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "psh_powershell_httplistener_2020-11-0204130683",
+        "num_gt_steps": 1,
+        "num_pred_steps": 0,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "psh_python_webserver_2020-10-2900161507",
+        "num_gt_steps": 2,
+        "num_pred_steps": 1,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "covenant_psremoting_command_2020-08-06115603",
+        "num_gt_steps": 8,
+        "num_pred_steps": 17,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_psexec_dcerpc_tcp_svcctl_2020-09-20121608",
+        "num_gt_steps": 14,
+        "num_pred_steps": 11,
+        "tactic": {
+          "precision": 0.1667,
+          "recall": 1.0,
+          "f1": 0.2857,
+          "jaccard": 0.1667,
+          "lcs_norm": 0.0714
+        },
+        "technique": {
+          "precision": 0.1429,
+          "recall": 1.0,
+          "f1": 0.25,
+          "jaccard": 0.1429,
+          "lcs_norm": 0.0714
+        }
+      },
+      {
+        "scenario": "empire_psremoting_stager_2020-09-20170827",
+        "num_gt_steps": 13,
+        "num_pred_steps": 13,
+        "tactic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "empire_wmi_dcerpc_wmi_IWbemServices_ExecMethod_2020-09-21001437",
+        "num_gt_steps": 11,
+        "num_pred_steps": 11,
+        "tactic": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f1": 0.3333,
+          "jaccard": 0.2,
+          "lcs_norm": 0.1818
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "purplesharp_ad_playbook_I_2020-10-22042947",
+        "num_gt_steps": 19,
+        "num_pred_steps": 43,
+        "tactic": {
+          "precision": 0.125,
+          "recall": 1.0,
+          "f1": 0.2222,
+          "jaccard": 0.125,
+          "lcs_norm": 0.2558
+        },
+        "technique": {
+          "precision": 0.0833,
+          "recall": 1.0,
+          "f1": 0.1538,
+          "jaccard": 0.0833,
+          "lcs_norm": 0.2444
+        }
+      },
+      {
+        "scenario": "cmd_userinitmprlogonscript_batch_2020-10-1922471810",
+        "num_gt_steps": 3,
+        "num_pred_steps": 1,
+        "tactic": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "jaccard": 1.0,
+          "lcs_norm": 0.3333
+        },
+        "technique": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "jaccard": 0.5,
+          "lcs_norm": 0.3333
+        }
+      },
+      {
+        "scenario": "covenant_persistwmi_2019-12-05044734",
+        "num_gt_steps": 2,
+        "num_pred_steps": 18,
+        "tactic": {
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "jaccard": 0.25,
+          "lcs_norm": 0.1111
+        },
+        "technique": {
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "jaccard": 0.25,
+          "lcs_norm": 0.1111
+        }
+      },
+      {
+        "scenario": "empire_persistence_registry_modification_run_keys_elevated_user_2020-07-22001847",
+        "num_gt_steps": 2,
+        "num_pred_steps": 5,
+        "tactic": {
+          "precision": 0.3333,
+          "recall": 1.0,
+          "f1": 0.5,
+          "jaccard": 0.3333,
+          "lcs_norm": 0.2
+        },
+        "technique": {
+          "precision": 0.3333,
+          "recall": 1.0,
+          "f1": 0.5,
+          "jaccard": 0.3333,
+          "lcs_norm": 0.2
+        }
+      },
+      {
+        "scenario": "empire_schtasks_creation_execution_elevated_user_2020-09-21175806",
+        "num_gt_steps": 14,
+        "num_pred_steps": 59,
+        "tactic": {
+          "precision": 0.1429,
+          "recall": 1.0,
+          "f1": 0.25,
+          "jaccard": 0.1429,
+          "lcs_norm": 0.0339
+        },
+        "technique": {
+          "precision": 0.0833,
+          "recall": 1.0,
+          "f1": 0.1538,
+          "jaccard": 0.0833,
+          "lcs_norm": 0.0167
+        }
+      },
+      {
+        "scenario": "empire_wmi_local_event_subscriptions_elevated_user_2020-09-04164306",
+        "num_gt_steps": 16,
+        "num_pred_steps": 115,
+        "tactic": {
+          "precision": 0.125,
+          "recall": 1.0,
+          "f1": 0.2222,
+          "jaccard": 0.125,
+          "lcs_norm": 0.0609
+        },
+        "technique": {
+          "precision": 0.0714,
+          "recall": 1.0,
+          "f1": 0.1333,
+          "jaccard": 0.0714,
+          "lcs_norm": 0.0413
+        }
+      },
+      {
+        "scenario": "cmd_service_mod_fax_2020-10-2120454410",
+        "num_gt_steps": 2,
+        "num_pred_steps": 1,
+        "tactic": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "jaccard": 1.0,
+          "lcs_norm": 0.5
+        },
+        "technique": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "jaccard": 1.0,
+          "lcs_norm": 0.5
+        }
+      },
+      {
+        "scenario": "empire_invoke_runas_2019-05-18204300",
+        "num_gt_steps": 13,
+        "num_pred_steps": 22,
+        "tactic": {
+          "precision": 0.4,
+          "recall": 0.5,
+          "f1": 0.4444,
+          "jaccard": 0.2857,
+          "lcs_norm": 0.1818
+        },
+        "technique": {
+          "precision": 0.2,
+          "recall": 0.1429,
+          "f1": 0.1667,
+          "jaccard": 0.0909,
+          "lcs_norm": 0.0909
+        }
+      },
+      {
+        "scenario": "empire_uac_shellapi_fodhelper_2020-09-04032946",
+        "num_gt_steps": 12,
+        "num_pred_steps": 17,
+        "tactic": {
+          "precision": 0.1429,
+          "recall": 1.0,
+          "f1": 0.25,
+          "jaccard": 0.1429,
+          "lcs_norm": 0.0588
+        },
+        "technique": {
+          "precision": 0.1429,
+          "recall": 1.0,
+          "f1": 0.25,
+          "jaccard": 0.1429,
+          "lcs_norm": 0.1176
+        }
+      },
+      {
+        "scenario": "metasploit_logonpasswords_lsass_memory_dump",
+        "num_gt_steps": 34,
+        "num_pred_steps": 181,
+        "tactic": {
+          "precision": 0.125,
+          "recall": 1.0,
+          "f1": 0.2222,
+          "jaccard": 0.125,
+          "lcs_norm": 0.011
+        },
+        "technique": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "jaccard": 0.0,
+          "lcs_norm": 0.0
+        }
+      },
+      {
+        "scenario": "metasploit_procdump_lsass_memory_dump",
+        "num_gt_steps": 15,
+        "num_pred_steps": 60,
+        "tactic": {
+          "precision": 0.1429,
+          "recall": 1.0,
+          "f1": 0.25,
+          "jaccard": 0.1429,
+          "lcs_norm": 0.0833
+        },
+        "technique": {
+          "precision": 0.0667,
+          "recall": 1.0,
+          "f1": 0.125,
+          "jaccard": 0.0667,
+          "lcs_norm": 0.0462
+        }
+      }
+    ]
+  },
+  "summary": {
+    "glide_full": {
+      "n": 33,
+      "tactic_f1": 0.3953,
+      "tactic_jaccard": 0.287,
+      "tactic_lcs_norm": 0.3289,
+      "technique_f1": 0.2254,
+      "technique_lcs": 0.193
+    },
+    "sigma": {
+      "n": 33,
+      "tactic_f1": 0.3006,
+      "tactic_jaccard": 0.2084,
+      "tactic_lcs_norm": 0.1274,
+      "technique_f1": 0.1901,
+      "technique_lcs": 0.085
+    },
+    "shield": {
+      "n": 33,
+      "tactic_f1": 0.1414,
+      "tactic_jaccard": 0.1364,
+      "tactic_lcs_norm": 0.0561,
+      "technique_f1": 0.0808,
+      "technique_lcs": 0.0429
+    },
+    "event_level": {},
+    "magic": {
+      "n": 33,
+      "tactic_f1": 0.3002,
+      "tactic_jaccard": 0.2099,
+      "tactic_lcs_norm": 0.1249,
+      "technique_f1": 0.1901,
+      "technique_lcs": 0.0875
+    },
+    "deepag": {
+      "n": 33,
+      "tactic_f1": 0.3646,
+      "tactic_jaccard": 0.2583,
+      "tactic_lcs_norm": 0.1475,
+      "technique_f1": 0.2103,
+      "technique_lcs": 0.0906
+    }
+  }
+}

@@ -25,10 +25,10 @@
     "similarity": 0.7134,
     "log_emission": -3.8073,
     "transition_from": "Discovery",
-    "transition_weight": 0.6051,
+    "transition_weight": 0.5,
     "transition_rule": "R1",
-    "transition_note": "동일 Tactic 반복",
-    "log_transition": -0.5023,
+    "transition_note": "...Tactic ...",
+    "log_transition": -0.6931,
     "skip_distance": 0
   },
   {
@@ -41,10 +41,10 @@
     "similarity": 0.6578,
     "log_emission": -4.019,
     "transition_from": "Discovery",
-    "transition_weight": 0.612,
+    "transition_weight": 0.5,
     "transition_rule": "R1",
-    "transition_note": "동일 Tactic 반복",
-    "log_transition": -0.4911,
+    "transition_note": "...Tactic ...",
+    "log_transition": -0.6931,
     "skip_distance": 0
   },
   {
@@ -57,10 +57,10 @@
     "similarity": 0.6834,
     "log_emission": -4.222,
     "transition_from": "Discovery",
-    "transition_weight": 0.0532,
+    "transition_weight": 0.0179,
     "transition_rule": "R3A",
-    "transition_note": "CA / Discovery / Lateral Movement 삼각 루프",
-    "log_transition": -2.9346,
+    "transition_note": "CA / Discovery / Lateral Movement ...",
+    "log_transition": -4.0225,
     "skip_distance": 0
   },
   {
@@ -73,10 +73,10 @@
     "similarity": 0.5488,
     "log_emission": -4.9472,
     "transition_from": "Lateral Movement",
-    "transition_weight": 0.6298,
+    "transition_weight": 0.6358,
     "transition_rule": "R4",
     "transition_note": "wildcard-in→Defense Evasion",
-    "log_transition": -0.4624,
+    "log_transition": -0.4528,
     "skip_distance": 0
   },
   {
@@ -89,10 +89,10 @@
     "similarity": 0.6958,
     "log_emission": -4.2666,
     "transition_from": "Defense Evasion",
-    "transition_weight": 0.0444,
+    "transition_weight": 0.0134,
     "transition_rule": "R1",
     "transition_note": "self-loop(Defense Evasion)",
-    "log_transition": -3.1148,
+    "log_transition": -4.3122,
     "skip_distance": 0
   },
   {
@@ -105,10 +105,10 @@
     "similarity": 0.5453,
     "log_emission": -4.9908,
     "transition_from": "Defense Evasion",
-    "transition_weight": 0.7513,
+    "transition_weight": 0.6943,
     "transition_rule": "R1",
     "transition_note": "self-loop(Defense Evasion)",
-    "log_transition": -0.2859,
+    "log_transition": -0.3649,
     "skip_distance": 0
   }
 ]

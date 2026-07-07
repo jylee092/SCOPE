@@ -25,10 +25,10 @@
     "similarity": 0.6804,
     "log_emission": -4.2982,
     "transition_from": "Defense Evasion",
-    "transition_weight": 0.6647,
+    "transition_weight": 0.5695,
     "transition_rule": "R1",
     "transition_note": "self-loop(Defense Evasion)",
-    "log_transition": -0.4085,
+    "log_transition": -0.5629,
     "skip_distance": 0
   }
 ]

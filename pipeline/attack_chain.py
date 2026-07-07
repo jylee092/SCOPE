@@ -113,10 +113,10 @@ class TacticalScorer:
         "R8B": {"name": "Backward Long",       "weight": 0.05},
     }
     # fallback = _RULES['R1'] weight 0.5
-    _SELF_LOOP_WEIGHTS = {
-        "Execution":       0.40,
-        "Defense Evasion": 0.60,
-    }
+    # Per-tactic self-loop refinement removed: verified inert on the OTRF
+    # corpus (unifying to the default 0.5 changes tech/tac/step/order by 0.0000)
+    # and lacked a literature basis. All self-loops now use the default R1=0.5.
+    _SELF_LOOP_WEIGHTS: dict = {}
     _WILDCARD_IN_WEIGHTS = {
         "Defense Evasion": 0.70,
     }

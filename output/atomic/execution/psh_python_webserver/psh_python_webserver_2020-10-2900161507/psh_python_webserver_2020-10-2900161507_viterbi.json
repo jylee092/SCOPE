@@ -25,10 +25,10 @@
     "similarity": 0.6004,
     "log_emission": -4.7388,
     "transition_from": "Execution",
-    "transition_weight": 0.5817,
+    "transition_weight": 0.5197,
     "transition_rule": "R1",
     "transition_note": "self-loop(Execution)",
-    "log_transition": -0.5417,
+    "log_transition": -0.6545,
     "skip_distance": 0
   }
 ]

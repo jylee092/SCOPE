@@ -25,10 +25,10 @@
     "similarity": 0.7529,
     "log_emission": -3.772,
     "transition_from": "Defense Evasion",
-    "transition_weight": 0.4801,
+    "transition_weight": 0.4,
     "transition_rule": "R5B",
-    "transition_note": "Defense Evasion → 이전 단계 (역방향)",
-    "log_transition": -0.7338,
+    "transition_note": "Defense Evasion → ...",
+    "log_transition": -0.9163,
     "skip_distance": 0
   },
   {
@@ -41,10 +41,10 @@
     "similarity": 0.5948,
     "log_emission": -4.9038,
     "transition_from": "Execution",
-    "transition_weight": 0.833,
+    "transition_weight": 1.0,
     "transition_rule": "R2",
-    "transition_note": "R2/R4 충돌 → R2 우선",
-    "log_transition": -0.1827,
+    "transition_note": "R2/R4 ...R2 ...",
+    "log_transition": 0.0,
     "skip_distance": 0
   },
   {
@@ -57,10 +57,10 @@
     "similarity": 0.5916,
     "log_emission": -4.6652,
     "transition_from": "Defense Evasion",
-    "transition_weight": 0.5507,
+    "transition_weight": 0.5197,
     "transition_rule": "R5B",
-    "transition_note": "Defense Evasion → 이전 단계 (역방향)",
-    "log_transition": -0.5965,
+    "transition_note": "Defense Evasion → ...",
+    "log_transition": -0.6545,
     "skip_distance": 0
   },
   {
@@ -73,10 +73,10 @@
     "similarity": 0.7529,
     "log_emission": -3.772,
     "transition_from": "Execution",
-    "transition_weight": 0.4579,
+    "transition_weight": 0.4,
     "transition_rule": "R1",
     "transition_note": "self-loop(Execution)",
-    "log_transition": -0.7812,
+    "log_transition": -0.9163,
     "skip_distance": 0
   },
   {
@@ -89,10 +89,10 @@
     "similarity": 0.7529,
     "log_emission": -3.772,
     "transition_from": "Execution",
-    "transition_weight": 0.564,
+    "transition_weight": 0.4,
     "transition_rule": "R1",
     "transition_note": "self-loop(Execution)",
-    "log_transition": -0.5727,
+    "log_transition": -0.9163,
     "skip_distance": 0
   },
   {
@@ -105,10 +105,10 @@
     "similarity": 0.7096,
     "log_emission": -3.7493,
     "transition_from": "Execution",
-    "transition_weight": 0.5273,
+    "transition_weight": 0.4,
     "transition_rule": "R1",
     "transition_note": "self-loop(Execution)",
-    "log_transition": -0.64,
+    "log_transition": -0.9163,
     "skip_distance": 0
   },
   {
@@ -121,10 +121,10 @@
     "similarity": 0.6344,
     "log_emission": -4.4034,
     "transition_from": "Execution",
-    "transition_weight": 0.3955,
+    "transition_weight": 0.3,
     "transition_rule": "R7",
-    "transition_note": "순방향 6단계 점프 (원거리)",
-    "log_transition": -0.9277,
+    "transition_note": "...6...",
+    "log_transition": -1.204,
     "skip_distance": 0
   },
   {
@@ -137,10 +137,10 @@
     "similarity": 0.6317,
     "log_emission": -4.4095,
     "transition_from": "Lateral Movement",
-    "transition_weight": 0.6632,
+    "transition_weight": 0.6358,
     "transition_rule": "R4",
     "transition_note": "wildcard-in→Defense Evasion",
-    "log_transition": -0.4106,
+    "log_transition": -0.4528,
     "skip_distance": 0
   },
   {
@@ -153,10 +153,10 @@
     "similarity": 0.6987,
     "log_emission": -4.3012,
     "transition_from": "Defense Evasion",
-    "transition_weight": 0.0447,
+    "transition_weight": 0.015,
     "transition_rule": "R5",
-    "transition_note": "Defense Evasion → 이후 단계 (순방향)",
-    "log_transition": -3.1085,
+    "transition_note": "Defense Evasion → ...",
+    "log_transition": -4.2021,
     "skip_distance": 0
   },
   {
@@ -169,10 +169,10 @@
     "similarity": 0.6062,
     "log_emission": -4.3133,
     "transition_from": "Collection",
-    "transition_weight": 0.0451,
+    "transition_weight": 0.015,
     "transition_rule": "R4",
     "transition_note": "wildcard-in→Defense Evasion",
-    "log_transition": -3.0993,
+    "log_transition": -4.2021,
     "skip_distance": 0
   },
   {
@@ -185,10 +185,10 @@
     "similarity": 0.6201,
     "log_emission": -4.7173,
     "transition_from": "Defense Evasion",
-    "transition_weight": 0.7361,
+    "transition_weight": 0.7751,
     "transition_rule": "R5",
-    "transition_note": "Defense Evasion → 이후 단계 (순방향)",
-    "log_transition": -0.3064,
+    "transition_note": "Defense Evasion → ...",
+    "log_transition": -0.2548,
     "skip_distance": 0
   },
   {
@@ -201,10 +201,10 @@
     "similarity": 0.6578,
     "log_emission": -4.4767,
     "transition_from": "Lateral Movement",
-    "transition_weight": 0.6512,
+    "transition_weight": 0.6095,
     "transition_rule": "R1",
-    "transition_note": "동일 Tactic 반복",
-    "log_transition": -0.4289,
+    "transition_note": "...Tactic ...",
+    "log_transition": -0.4951,
     "skip_distance": 0
   },
   {
@@ -217,10 +217,10 @@
     "similarity": 0.6666,
     "log_emission": -4.399,
     "transition_from": "Lateral Movement",
-    "transition_weight": 0.6595,
+    "transition_weight": 0.6095,
     "transition_rule": "R1",
-    "transition_note": "동일 Tactic 반복",
-    "log_transition": -0.4163,
+    "transition_note": "...Tactic ...",
+    "log_transition": -0.4951,
     "skip_distance": 0
   }
 ]

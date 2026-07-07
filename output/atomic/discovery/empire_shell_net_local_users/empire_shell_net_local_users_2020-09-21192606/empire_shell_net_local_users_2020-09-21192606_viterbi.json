@@ -25,10 +25,10 @@
     "similarity": 0.6287,
     "log_emission": -4.7566,
     "transition_from": "Discovery",
-    "transition_weight": 0.6922,
+    "transition_weight": 0.6095,
     "transition_rule": "R1",
-    "transition_note": "동일 Tactic 반복",
-    "log_transition": -0.3679,
+    "transition_note": "...Tactic ...",
+    "log_transition": -0.4951,
     "skip_distance": 0
   },
   {
@@ -41,10 +41,10 @@
     "similarity": 0.6555,
     "log_emission": -4.6216,
     "transition_from": "Discovery",
-    "transition_weight": 0.6931,
+    "transition_weight": 0.6095,
     "transition_rule": "R1",
-    "transition_note": "동일 Tactic 반복",
-    "log_transition": -0.3666,
+    "transition_note": "...Tactic ...",
+    "log_transition": -0.4951,
     "skip_distance": 0
   },
   {
@@ -57,10 +57,10 @@
     "similarity": 0.6436,
     "log_emission": -4.4174,
     "transition_from": "Discovery",
-    "transition_weight": 0.0537,
+    "transition_weight": 0.0179,
     "transition_rule": "R3A",
-    "transition_note": "CA / Discovery / Lateral Movement 삼각 루프",
-    "log_transition": -2.924,
+    "transition_note": "CA / Discovery / Lateral Movement ...",
+    "log_transition": -4.0225,
     "skip_distance": 0
   },
   {
@@ -73,10 +73,10 @@
     "similarity": 0.8015,
     "log_emission": -3.7705,
     "transition_from": "Lateral Movement",
-    "transition_weight": 0.013,
+    "transition_weight": 0.0023,
     "transition_rule": "R8B",
-    "transition_note": "역방향 6단계 (원거리)",
-    "log_transition": -4.3456,
+    "transition_note": "...6...",
+    "log_transition": -6.0871,
     "skip_distance": 0
   },
   {
@@ -89,10 +89,10 @@
     "similarity": 0.822,
     "log_emission": -3.6172,
     "transition_from": "Execution",
-    "transition_weight": 0.7985,
+    "transition_weight": 0.8203,
     "transition_rule": "R2",
-    "transition_note": "ATT&CK Kill Chain 표준 인접 전이",
-    "log_transition": -0.225,
+    "transition_note": "ATT&CK Kill Chain ...",
+    "log_transition": -0.198,
     "skip_distance": 0
   },
   {
@@ -105,10 +105,10 @@
     "similarity": 0.6266,
     "log_emission": -4.9294,
     "transition_from": "Credential Access",
-    "transition_weight": 0.0411,
+    "transition_weight": 0.0118,
     "transition_rule": "R1",
-    "transition_note": "동일 Tactic 반복",
-    "log_transition": -3.1917,
+    "transition_note": "...Tactic ...",
+    "log_transition": -4.4424,
     "skip_distance": 0
   },
   {
@@ -121,10 +121,10 @@
     "similarity": 0.6266,
     "log_emission": -4.9294,
     "transition_from": "Credential Access",
-    "transition_weight": 0.0446,
+    "transition_weight": 0.0118,
     "transition_rule": "R1",
-    "transition_note": "동일 Tactic 반복",
-    "log_transition": -3.1097,
+    "transition_note": "...Tactic ...",
+    "log_transition": -4.4424,
     "skip_distance": 0
   },
   {
@@ -137,10 +137,10 @@
     "similarity": 0.6188,
     "log_emission": -4.7761,
     "transition_from": "Credential Access",
-    "transition_weight": 0.0558,
+    "transition_weight": 0.0179,
     "transition_rule": "R3A",
-    "transition_note": "CA / Discovery / Lateral Movement 삼각 루프",
-    "log_transition": -2.8854,
+    "transition_note": "CA / Discovery / Lateral Movement ...",
+    "log_transition": -4.0225,
     "skip_distance": 0
   },
   {
@@ -153,10 +153,10 @@
     "similarity": 0.6266,
     "log_emission": -4.9294,
     "transition_from": "Discovery",
-    "transition_weight": 0.0558,
+    "transition_weight": 0.0179,
     "transition_rule": "R3A",
-    "transition_note": "CA / Discovery / Lateral Movement 삼각 루프",
-    "log_transition": -2.8854,
+    "transition_note": "CA / Discovery / Lateral Movement ...",
+    "log_transition": -4.0225,
     "skip_distance": 0
   }
 ]

@@ -25,10 +25,10 @@
     "similarity": 0.7564,
     "log_emission": -4.0139,
     "transition_from": "Execution",
-    "transition_weight": 0.8178,
+    "transition_weight": 0.8203,
     "transition_rule": "R2",
-    "transition_note": "ATT&CK Kill Chain 표준 인접 전이",
-    "log_transition": -0.2011,
+    "transition_note": "ATT&CK Kill Chain ...",
+    "log_transition": -0.198,
     "skip_distance": 0
   },
   {
@@ -41,10 +41,10 @@
     "similarity": 0.7752,
     "log_emission": -4.0585,
     "transition_from": "Credential Access",
-    "transition_weight": 0.0496,
+    "transition_weight": 0.015,
     "transition_rule": "R4",
     "transition_note": "wildcard-in→Defense Evasion",
-    "log_transition": -3.0042,
+    "log_transition": -4.2021,
     "skip_distance": 0
   },
   {
@@ -57,10 +57,10 @@
     "similarity": 0.678,
     "log_emission": -4.3264,
     "transition_from": "Defense Evasion",
-    "transition_weight": 0.7135,
+    "transition_weight": 0.6358,
     "transition_rule": "R5",
-    "transition_note": "Defense Evasion → 이후 단계 (순방향)",
-    "log_transition": -0.3376,
+    "transition_note": "Defense Evasion → ...",
+    "log_transition": -0.4528,
     "skip_distance": 0
   }
 ]

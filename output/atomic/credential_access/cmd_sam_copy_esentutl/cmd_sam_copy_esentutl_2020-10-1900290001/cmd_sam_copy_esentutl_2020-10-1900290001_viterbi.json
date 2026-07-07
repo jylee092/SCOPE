@@ -25,10 +25,10 @@
     "similarity": 0.6743,
     "log_emission": -4.2114,
     "transition_from": "Credential Access",
-    "transition_weight": 0.6978,
+    "transition_weight": 0.6095,
     "transition_rule": "R1",
-    "transition_note": "동일 Tactic 반복",
-    "log_transition": -0.3599,
+    "transition_note": "...Tactic ...",
+    "log_transition": -0.4951,
     "skip_distance": 0
   },
   {
@@ -41,10 +41,10 @@
     "similarity": 0.6044,
     "log_emission": -4.6197,
     "transition_from": "Credential Access",
-    "transition_weight": 0.8265,
+    "transition_weight": 0.7751,
     "transition_rule": "R4",
     "transition_note": "wildcard-in→Defense Evasion",
-    "log_transition": -0.1906,
+    "log_transition": -0.2548,
     "skip_distance": 0
   },
   {
@@ -57,10 +57,10 @@
     "similarity": 0.6353,
     "log_emission": -4.3853,
     "transition_from": "Defense Evasion",
-    "transition_weight": 0.831,
+    "transition_weight": 0.7751,
     "transition_rule": "R5",
-    "transition_note": "Defense Evasion → 이후 단계 (순방향)",
-    "log_transition": -0.1851,
+    "transition_note": "Defense Evasion → ...",
+    "log_transition": -0.2548,
     "skip_distance": 0
   },
   {
@@ -73,10 +73,10 @@
     "similarity": 0.68,
     "log_emission": -4.1746,
     "transition_from": "Credential Access",
-    "transition_weight": 0.6091,
+    "transition_weight": 0.5,
     "transition_rule": "R1",
-    "transition_note": "동일 Tactic 반복",
-    "log_transition": -0.4958,
+    "transition_note": "...Tactic ...",
+    "log_transition": -0.6931,
     "skip_distance": 0
   },
   {
@@ -89,10 +89,10 @@
     "similarity": 0.628,
     "log_emission": -4.3722,
     "transition_from": "Credential Access",
-    "transition_weight": 0.8218,
+    "transition_weight": 0.7751,
     "transition_rule": "R4",
     "transition_note": "wildcard-in→Defense Evasion",
-    "log_transition": -0.1963,
+    "log_transition": -0.2548,
     "skip_distance": 0
   },
   {
@@ -105,10 +105,10 @@
     "similarity": 0.6303,
     "log_emission": -4.4111,
     "transition_from": "Defense Evasion",
-    "transition_weight": 0.8215,
+    "transition_weight": 0.7751,
     "transition_rule": "R5",
-    "transition_note": "Defense Evasion → 이후 단계 (순방향)",
-    "log_transition": -0.1966,
+    "transition_note": "Defense Evasion → ...",
+    "log_transition": -0.2548,
     "skip_distance": 0
   },
   {
@@ -121,10 +121,10 @@
     "similarity": 0.6044,
     "log_emission": -4.6197,
     "transition_from": "Credential Access",
-    "transition_weight": 0.826,
+    "transition_weight": 0.7751,
     "transition_rule": "R4",
     "transition_note": "wildcard-in→Defense Evasion",
-    "log_transition": -0.1912,
+    "log_transition": -0.2548,
     "skip_distance": 0
   },
   {
@@ -137,10 +137,10 @@
     "similarity": 0.6085,
     "log_emission": -4.3555,
     "transition_from": "Defense Evasion",
-    "transition_weight": 0.8285,
+    "transition_weight": 0.7751,
     "transition_rule": "R5",
-    "transition_note": "Defense Evasion → 이후 단계 (순방향)",
-    "log_transition": -0.1881,
+    "transition_note": "Defense Evasion → ...",
+    "log_transition": -0.2548,
     "skip_distance": 0
   }
 ]

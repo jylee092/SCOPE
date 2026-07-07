@@ -36,7 +36,7 @@ from experiments.chain_align import evaluate_chain_alignment
 
 import os as _os
 DROP_RATES = [float(x) for x in _os.environ.get("D0_DROPS", "0.25").split(",")]
-SEED = 0
+SEED = int(_os.environ.get("D0_SEED", "0"))
 MAX_SKIP = 0
 
 _DN = open(os.devnull, "w", encoding="utf-8", errors="replace")

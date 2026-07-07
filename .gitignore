@@ -105,3 +105,13 @@ catboost_info/
 
 # local restore backups (not for public repo)
 experiments/ccs_revision/_backup_orig/
+
+# --- Follow-up work (belongs to a separate study, not this paper) ---
+experiments/_entity_shapley.py
+output/_entity_shapley/
+
+# --- Large regenerable per-scenario structured dumps -----------------
+# _structured_drop_run.py rewrites the full per-scenario event tree
+# (individual JSONs reach tens of MB). Regenerable on demand; only the
+# small aggregate summaries under output/_ccs_revision/ are kept.
+output/_structured/
